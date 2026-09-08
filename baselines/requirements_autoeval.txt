@@ -1,0 +1,8 @@
+# Install in a separate CUDA environment; these are the runtime dependencies
+# used by the official VideoPhy-2 inference implementation.
+transformers==4.28.1
+accelerate
+decord
+einops
+sentencepiece
+Pillow

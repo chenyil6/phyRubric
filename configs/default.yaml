@@ -1,0 +1,76 @@
+# Default configuration for the agentic physical-plausibility judge.
+#
+# Fill in `llm.base_url` and export the key named by `llm.api_key_env`
+# before running anything. See .env.example.
+
+llm:
+  # OpenAI-compatible endpoint. Works for the official API and for relay
+  # services; both expose /chat/completions.
+  base_url: "https://prompt-pilot.cn-beijing.volces.com/ark-router/v1"
+  api_key_env: "PJUDGE_API_KEY"
+
+  # One model for every agent -- this is the paper's main setting. Overriding a
+  # single role below is how the backbone ablation is run; it must never happen
+  # silently in the main results.
+  default_model: "gpt-5.5-2026-04-24"
+  roles:
+    inspection: null         # Agent 1: plans tools, sees frames, decides rubric items
+    judge: null              # Agent 2: scores, audits, summarises, writes feedback
+
+  # Determinism. temperature/seed are dropped automatically if the endpoint
+  # rejects them (reasoning models often do); the disk cache is what actually
+  # guarantees identical reruns.
+  temperature: 0.0
+  seed: 1234
+  max_tokens: 4096
+  reasoning_effort: null     # null | low | medium | high, passed only if set
+  timeout: 180.0
+  max_retries: 5
+  cache_dir: ".pjudge_cache/llm"
+
+  # Image payload sent to the inspection agent. `detail: high` costs more tokens but
+  # small/short violations are exactly what low detail destroys.
+  image_detail: "high"
+  jpeg_quality: 92
+
+# Development preset: copy over `llm` while iterating on prompts.
+llm_dev:
+  default_model: "gpt-5.4-mini-2026-03-17"
+
+# Passive baselines to compare the adaptive judge against.
+baselines:
+  single_pass:
+    n_frames: 16             # uniform sampling, one forward pass
+    model: "gpt-5.5-2026-04-24"
+  native_video:
+    # Strongest passive observer: a model that ingests the whole clip natively.
+    model: "gemini-3-pro-preview-new"
+    base_url: "https://prompt-pilot.cn-beijing.volces.com/ark-router/v1"
+    api_key_env: "PJUDGE_GEMINI_API_KEY"
+
+perception:
+  frame_cache_dir: ".pjudge_cache/frames"
+  overview_fps: 1.0          # low-rate pass used to ground/refute priors
+  overview_max_frames: 16
+  overview_long_side: 512    # cheap; only for existence checks
+  zoom_long_side: 1024       # crops are upsampled, not just cropped
+  clip_long_side: 768
+  max_frames_per_observation: 32
+  save_artifacts: true
+
+budget:
+  max_rounds: 12             # hard cap on evidence-gathering iterations
+  max_frames: 120            # observation budget, the quantity we report
+  max_output_tokens: 60000
+
+data:
+  videophy2:
+    test_csv: "data/videophy2/videophy2_test__videophy2_test.csv"
+    train_csv: "data/videophy2/videophy2_train__videophy2_training.csv"
+    videos_root: "data/videophy2/videos"
+    # Measured: 3396/3397 test rows resolve to a file. Luma-hosted rows (ray2)
+    # live under dream_machine/<leaf-uuid>_result.mp4; S3 rows use the URL path
+    # verbatim, including the 204 whose captions were truncated without .mp4.
+
+paths:
+  runs_dir: "runs"           # one directory per video, holds the full trace

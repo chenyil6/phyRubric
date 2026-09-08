@@ -1,0 +1,36 @@
+# secrets
+.env
+
+# caches / bytecode
+.pjudge_cache/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# run artifacts & logs
+runs/
+results/
+*.log
+*.out
+*.err
+
+# generated videos / model weights / review pages
+gen_videos/outputs/
+gen_videos/logs/
+gen_videos/review/
+*.mp4
+models/
+
+# reference material & drafts (not for the repo)
+ref-prompts/
+ref-rubrics/
+data-zh/
+data/drafts/
+Proposal.md
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+.venv/
+venv/

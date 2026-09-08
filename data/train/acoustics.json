@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "ACOU-0001",
+    "caption": "A drummer hits a snare drum once with a stick, and the drum skin shivers visibly and then settles.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The skin starts moving at the moment of the strike, the shiver fades within a second or two, and the skin is still before and after; it does not keep growing or start before the stick lands."
+  },
+  {
+    "id": "ACOU-0002",
+    "caption": "A guitarist plucks the low string of an acoustic guitar, and the string blurs into a wide band before slowly sharpening to a line again.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "Only the plucked string blurs, the blur is widest right after the pluck and narrows steadily; the other strings stay sharp."
+  },
+  {
+    "id": "ACOU-0003",
+    "caption": "A woman strikes a hanging gong with a padded mallet, and the gong's face trembles and its edges go fuzzy before calming.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The trembling begins at the strike, the gong swings slightly on its cord, and the shimmer fades gradually; it does not shake before being hit."
+  },
+  {
+    "id": "ACOU-0004",
+    "caption": "A boy holds a steel ruler flat on a desk with part sticking over the edge, flicks the free end, and it waggles up and down before coming to rest.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The free end vibrates fast right after the flick with the tip blurring, the swings get smaller, and it stops within seconds; the part under his hand stays still."
+  },
+  {
+    "id": "ACOU-0005",
+    "caption": "A child flicks a taut rubber band stretched between two nails, and the band blurs and hums before going still.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The band becomes a fuzzy band right after the flick and narrows back to a line; it does not start moving on its own."
+  },
+  {
+    "id": "ACOU-0006",
+    "caption": "A diner taps the rim of a wine glass with a spoon, and the glass rings while its rim shimmers faintly.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shimmer appears at the tap and fades; touching the rim with a finger stops it at once; the glass does not shatter from a light tap."
+  },
+  {
+    "id": "ACOU-0007",
+    "caption": "A musician strikes a tuning fork against her knee, and the prongs blur into a soft haze that slowly clears.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The prongs blur only after the strike and sharpen over a few seconds; the handle stays sharp throughout."
+  },
+  {
+    "id": "ACOU-0008",
+    "caption": "A man plucks a single string on an upright bass, and the thick string swings visibly from side to side before settling.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The swing is widest right after the pluck and shrinks steadily; the string stops when he lays a finger on it."
+  },
+  {
+    "id": "ACOU-0009",
+    "caption": "A percussionist strikes a large cymbal, and the cymbal wobbles on its stand and its edge blurs before it steadies.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The wobble and blur begin at the strike and die away over several seconds; the cymbal does not move before the stick reaches it."
+  },
+  {
+    "id": "ACOU-0010",
+    "caption": "A child bangs a metal pot lid with a wooden spoon, and the lid rings and quivers in her other hand.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The quiver starts at the bang and fades within a second or two; the lid is still before the spoon lands."
+  },
+  {
+    "id": "ACOU-0011",
+    "caption": "A pianist presses a key on a grand piano with the lid open, and one string inside blurs while the hammer falls back.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "Only the struck string blurs, right after the hammer hits; the blur fades when the key is released and the damper falls."
+  },
+  {
+    "id": "ACOU-0012",
+    "caption": "A boy strikes a xylophone bar with a mallet, and the bar shivers on its cord for a moment.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "Only the struck bar moves, starting at the hit and settling quickly; the neighbouring bars stay still."
+  },
+  {
+    "id": "ACOU-0013",
+    "caption": "A woman plucks the string of a harp, and the string vibrates in a blur that narrows as the note fades.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blur appears at the pluck and shrinks steadily to a sharp line; the other strings remain still."
+  },
+  {
+    "id": "ACOU-0014",
+    "caption": "A man knocks on a thin sheet-metal door, and the panel visibly flexes and rattles under his knuckles before going quiet.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The panel moves at each knock and the rattle dies out between knocks; the door does not keep shaking after the knocking stops."
+  },
+  {
+    "id": "ACOU-0015",
+    "caption": "A cook strikes a hanging metal triangle with a rod, and the triangle swings on its loop and its sides shimmer.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shimmer begins at the strike and fades; the swinging is small and dies down; nothing moves before the rod touches it."
+  },
+  {
+    "id": "ACOU-0016",
+    "caption": "A child flicks the tines of a fork held by its handle, and the tines blur briefly and then are still.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blur starts at the flick and is gone within a second; the handle in the hand stays sharp."
+  },
+  {
+    "id": "ACOU-0017",
+    "caption": "A woman taps a long wooden fishing rod against a post, and the tip whips back and forth in a blur before settling.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The tip's swings are large right after the tap and shrink steadily; the handle end barely moves."
+  },
+  {
+    "id": "ACOU-0018",
+    "caption": "A boy slaps the surface of a taut trampoline mat with his hand, and the mat ripples outward and shivers before going flat.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The ripples spread from the slap and the shiver fades within a second or two; the mat is flat before the slap."
+  },
+  {
+    "id": "ACOU-0019",
+    "caption": "A man plucks a stretched washing line, and the line blurs along its length and slowly sharpens.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blur begins at the pluck and shrinks toward stillness; the clothes on the line sway slightly and settle."
+  },
+  {
+    "id": "ACOU-0020",
+    "caption": "A child hits a suspended metal wind-chime tube with a stick, and the tube swings and its outline shimmers.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The struck tube swings and shimmers; neighbouring tubes move only if it bumps them; the motion dies down over a few seconds."
+  },
+  {
+    "id": "ACOU-0021",
+    "caption": "A carpenter drops a long steel saw blade flat onto a bench, and the blade twangs and flutters for a moment before lying still.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The flutter starts at the impact and fades quickly; the blade does not keep quivering."
+  },
+  {
+    "id": "ACOU-0022",
+    "caption": "A woman thumps the top of a large empty cardboard box, and the lid panel bounces and quivers before settling.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The panel moves at the thump and the quiver fades within a second; the box's sides barely move."
+  },
+  {
+    "id": "ACOU-0023",
+    "caption": "A boy flicks a metal spring doorstop mounted on the wall, and it wobbles wildly and then slows to a stop.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The wobble is largest right after the flick and shrinks steadily; the base on the wall does not move."
+  },
+  {
+    "id": "ACOU-0024",
+    "caption": "A musician taps the body of an acoustic guitar with her palm, and the strings tremble faintly in response before going still.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The tremble follows the tap and dies out; the strings do not move before the tap."
+  },
+  {
+    "id": "ACOU-0025",
+    "caption": "A child strikes a hanging saucepan with a spoon, and the pan swings and its bottom shimmers.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shimmer and swing begin at the strike and decay over a few seconds; the pan is still before."
+  },
+  {
+    "id": "ACOU-0026",
+    "caption": "A man slaps a taut drumhead of a large bass drum, and the head visibly dips and rebounds several times, each time smaller.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The first dip is deepest, each rebound is smaller, and the head is flat within a couple of seconds."
+  },
+  {
+    "id": "ACOU-0027",
+    "caption": "A woman plucks the wire of a garden fence, and the wire blurs and hums along its span before settling.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blur is greatest at the plucked point and fades along the wire; it stops when the wire is gripped."
+  },
+  {
+    "id": "ACOU-0028",
+    "caption": "A boy bangs a metal garbage-can lid against the can, and the lid rings and quivers in his hand.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The quiver starts at the bang and dies within a second or two; the lid is still before and after."
+  },
+  {
+    "id": "ACOU-0029",
+    "caption": "A percussionist runs a mallet across the bars of a marimba, and each bar shivers in turn as it is struck.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "Each bar moves only when the mallet reaches it and settles after; bars not yet struck stay still."
+  },
+  {
+    "id": "ACOU-0030",
+    "caption": "A child plucks the thin elastic cord of a paddle ball toy, and the cord blurs and the ball bounces lightly before both go still.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blur and bounce begin at the pluck and decay within a couple of seconds."
+  },
+  {
+    "id": "ACOU-0031",
+    "caption": "A man strikes a hanging church-style handbell with its clapper, and the bell swings and its rim shimmers.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shimmer begins as the clapper hits and fades; the swing settles; nothing moves before the clapper strikes."
+  },
+  {
+    "id": "ACOU-0032",
+    "caption": "A woman flicks a strip of thin sheet metal clamped at one end in a vise, and the free end vibrates in a blur that slowly stops.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The free end blurs widest at the tip right after the flick and narrows to stillness; the clamped end does not move."
+  },
+  {
+    "id": "ACOU-0033",
+    "caption": "A child strikes the taut skin of a tambourine, and the skin shivers and the metal jingles rattle before quieting.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The skin shiver and the jingle rattle both begin at the strike and fade together within a second or two."
+  },
+  {
+    "id": "ACOU-0034",
+    "caption": "A man taps a thin metal lampshade with a pen, and the shade rings and its edge blurs faintly before settling.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blur appears at the tap and fades within seconds; the lamp itself does not sway unless bumped."
+  },
+  {
+    "id": "ACOU-0035",
+    "caption": "A glass of water sits on top of a large subwoofer, and when the music starts the water's surface breaks into fine ripples.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The ripples appear only when the music plays, pulse with the bass, and the surface goes flat when the music stops; the glass does not slide off."
+  },
+  {
+    "id": "ACOU-0036",
+    "caption": "A heavy truck rumbles past a house, and the plates on a shelf by the window rattle against each other.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The rattling starts as the truck approaches, is strongest as it passes, and stops after it has gone; the plates do not rattle in a quiet street."
+  },
+  {
+    "id": "ACOU-0037",
+    "caption": "A man slams a heavy door shut, and a picture frame on the nearby wall swings from side to side before hanging still.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The frame starts swinging at the slam, the swings grow smaller, and it stops within a few seconds; it does not move before the slam."
+  },
+  {
+    "id": "ACOU-0038",
+    "caption": "Thunder rolls over a house, and the loose window panes buzz in their frames.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The buzzing coincides with the thunder and stops when it dies away; the panes are still in between."
+  },
+  {
+    "id": "ACOU-0039",
+    "caption": "A washing machine spins up to full speed, and the bottle of detergent standing on top of it shakes and creeps toward the edge.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "trajectory_momentum"
+    ],
+    "expectation": "The shaking begins as the machine spins up, the bottle inches along in small jumps, and it stops moving when the spin cycle ends."
+  },
+  {
+    "id": "ACOU-0040",
+    "caption": "A marching band passes close by, and the bass drum's beats make a shop's plate-glass window shiver with each hit.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The window's reflection wobbles in time with the drumbeats and steadies as the band moves away."
+  },
+  {
+    "id": "ACOU-0041",
+    "caption": "A subway train roars through a station, and a hanging sign on the platform trembles on its chains.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The trembling starts with the train's arrival, is strongest as it passes, and fades after it leaves."
+  },
+  {
+    "id": "ACOU-0042",
+    "caption": "A speaker on a table plays a loud bass track, and a handful of grains of rice scattered on the table jump and dance around it.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The grains hop in time with the beats, most strongly nearest the speaker, and lie still when the track stops."
+  },
+  {
+    "id": "ACOU-0043",
+    "caption": "Fireworks explode overhead during a display, and the loose glass in a greenhouse below rattles with each bang.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "Each rattle follows a burst and dies away before the next; the glass is still between bursts."
+  },
+  {
+    "id": "ACOU-0044",
+    "caption": "A jackhammer starts up on a street, and the coffee in cups on a café terrace table shows rings of tiny ripples.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The ripples appear when the hammer runs and vanish when it pauses; cups farther away ripple less."
+  },
+  {
+    "id": "ACOU-0045",
+    "caption": "A car with a booming stereo pulls up at a light, and its own rear-view mirror shakes visibly with the bass.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The mirror's image jitters in time with the beats and steadies when the music is turned down."
+  },
+  {
+    "id": "ACOU-0046",
+    "caption": "A church bell rings in a tower, and the small loose panes of the belfry window quiver with each stroke.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "Each quiver comes with a stroke of the bell and settles between strokes."
+  },
+  {
+    "id": "ACOU-0047",
+    "caption": "A man switches on a loud table saw in a workshop, and the screws in a jar on the bench begin to rattle and shift.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The rattling begins when the saw starts and stops when it is switched off; the screws settle in a slightly different arrangement."
+  },
+  {
+    "id": "ACOU-0048",
+    "caption": "A low-flying jet passes over a house, and a hanging light fitting in the hallway swings gently.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The swing starts as the jet passes and dies down over several seconds; the fitting is still beforehand."
+  },
+  {
+    "id": "ACOU-0049",
+    "caption": "A subwoofer is turned up in a living room, and the picture frames on the wall behind it buzz and tilt slightly with the bass.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The buzzing follows the bass notes and stops when the music is cut; frames nearest the speaker move most."
+  },
+  {
+    "id": "ACOU-0050",
+    "caption": "A drummer plays a hard rhythm in a small room, and a glass of water on a nearby amplifier ripples with each hit.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "Each ripple ring appears with a drum hit and fades before the next; the surface is calm when the drumming stops."
+  },
+  {
+    "id": "ACOU-0051",
+    "caption": "A stack of dry pasta sheets stands on a shelf above a running dishwasher, and the sheets buzz against each other while the machine runs.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The buzzing lasts as long as the machine runs and stops at the end of the cycle."
+  },
+  {
+    "id": "ACOU-0052",
+    "caption": "A door slams in a hallway, and a set of keys hanging on a hook beside it swings and jingles.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The keys start swinging at the slam and settle within a few seconds; they hang still before."
+  },
+  {
+    "id": "ACOU-0053",
+    "caption": "A powerful motorcycle revs its engine at a kerb, and the leaves of a potted plant on the pavement beside it quiver.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The leaves shake while the engine revs and go still when it idles down."
+  },
+  {
+    "id": "ACOU-0054",
+    "caption": "A concert speaker stack blasts a bass note, and the fabric grille on its front visibly pulses in and out.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The grille flutters in time with the low notes and lies flat when the music stops."
+  },
+  {
+    "id": "ACOU-0055",
+    "caption": "A man drops a heavy weight onto a gym floor, and the metal plates on a nearby rack ring and shiver.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shiver starts at the impact and fades within a second or two; the plates are still before."
+  },
+  {
+    "id": "ACOU-0056",
+    "caption": "A helicopter hovers low over a field, and the surface of a pond beneath it shivers into fine ripples.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The ripples appear while the helicopter is overhead and fade after it flies away; the water is calm before."
+  },
+  {
+    "id": "ACOU-0057",
+    "caption": "Someone bangs a bass drum in a school gym, and a row of basketballs on a rack gently rock in their cradles.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The rocking begins with the drum hits and dies down after they stop."
+  },
+  {
+    "id": "ACOU-0058",
+    "caption": "A loud speaker plays a rising bass tone next to a tray of sand, and the sand grains jump and shift into patterns.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The grains move only while the tone plays and stop when it stops; grains nearest the speaker move most."
+  },
+  {
+    "id": "ACOU-0059",
+    "caption": "An excavator drops a load of rubble into a steel skip, and a nearby chain-link fence shivers along its length.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shiver starts at the crash and fades within seconds; the fence is still before."
+  },
+  {
+    "id": "ACOU-0060",
+    "caption": "A phone on vibrate buzzes on a glass table, and a spoon lying next to it rattles against the glass.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The spoon rattles in bursts with the phone's buzzes and lies still between them."
+  },
+  {
+    "id": "ACOU-0061",
+    "caption": "A train crosses a metal bridge, and the water in a puddle on the road below shows shivering rings.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The rings appear as the train crosses and fade after it has passed; the puddle is still before."
+  },
+  {
+    "id": "ACOU-0062",
+    "caption": "A stadium crowd stamps in unison, and the beer in a cup on a railing shows a steady wobble in time with the stamps.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The wobble matches the rhythm of the stamping and settles when the crowd stops."
+  },
+  {
+    "id": "ACOU-0063",
+    "caption": "A large clock strikes the hour in a hallway, and a nearby vase of flowers trembles faintly with each chime.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The tremble comes with each chime and dies between chimes; the flowers are still when the clock is silent."
+  },
+  {
+    "id": "ACOU-0064",
+    "caption": "A cook drops a heavy cast-iron pan onto a stovetop, and the lids of neighbouring pots rattle for a moment.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The rattle starts at the impact and stops within a second or two; the lids are still before."
+  },
+  {
+    "id": "ACOU-0065",
+    "caption": "A speaker on the floor of a room plays a deep bass note, and a lit candle on the same floor flickers in time with the beats.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The flame flutters with each beat and burns steady when the music stops."
+  },
+  {
+    "id": "ACOU-0066",
+    "caption": "A man revs a chainsaw in a garage, and the tools hanging on the pegboard behind him sway and tap against the board.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The tools move while the saw runs and hang still when it is shut off."
+  },
+  {
+    "id": "ACOU-0067",
+    "caption": "A giant firework shell bursts over a lake, and the reflection on the water shivers into fragments a moment after the bang.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The reflection breaks up briefly after each burst and reforms as the surface settles."
+  },
+  {
+    "id": "ACOU-0068",
+    "caption": "A large speaker's cone pumps in and out as a bass-heavy track plays, and it stops moving when the music is paused.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The cone moves in time with the beats, more on the low notes, and is still the instant the music pauses; it does not move in silence."
+  },
+  {
+    "id": "ACOU-0069",
+    "caption": "A phone set to vibrate buzzes on a wooden table and creeps slowly across the surface until the buzzing stops.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "trajectory_momentum"
+    ],
+    "expectation": "The phone shivers and moves only while it buzzes, in small jerks; it stops dead when the vibration ends."
+  },
+  {
+    "id": "ACOU-0070",
+    "caption": "An electric toothbrush is switched on and left lying on a bathroom counter, and it buzzes and slowly turns in circles.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The brush moves only while switched on and stops as soon as it is turned off."
+  },
+  {
+    "id": "ACOU-0071",
+    "caption": "A man strikes a tuning fork and holds it up, and the prongs blur; he touches them to the table and the blur stops at once.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The prongs vibrate only after the strike and stop instantly when touched to a solid surface."
+  },
+  {
+    "id": "ACOU-0072",
+    "caption": "A car engine idles roughly, and the whole hood trembles faintly until the driver switches off the engine.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The tremble lasts as long as the engine runs and stops within a moment of the ignition being turned off."
+  },
+  {
+    "id": "ACOU-0073",
+    "caption": "A cellist draws her bow across a string, and the string blurs under the bow and sharpens the moment she lifts it.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The blur exists only while the bow moves on the string; the other strings stay sharp."
+  },
+  {
+    "id": "ACOU-0074",
+    "caption": "A wind-up alarm clock rings, and its little hammer hammers between the two bells and the clock shivers on the table.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The hammer swings rapidly and the clock shakes only while it rings; both stop when the button is pressed."
+  },
+  {
+    "id": "ACOU-0075",
+    "caption": "A hand-held massager is switched on and set on a bed, and it shudders and wanders across the sheet.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The shudder and wandering start with the switch and stop with it; the massager is still when off."
+  },
+  {
+    "id": "ACOU-0076",
+    "caption": "A guitarist strums a chord, and all the strings blur together and then sharpen one by one as she damps them with her palm.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blur begins at the strum and each string stops the instant the palm touches it."
+  },
+  {
+    "id": "ACOU-0077",
+    "caption": "A blender runs on a kitchen counter, and its base vibrates and inches slightly across the counter until it is switched off.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "trajectory_momentum"
+    ],
+    "expectation": "The movement happens only while the motor runs and stops when it is turned off."
+  },
+  {
+    "id": "ACOU-0078",
+    "caption": "A woman blows into a harmonica, and the reeds inside can be seen quivering through the openings while she plays.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The reeds move only while air is blown and are still between breaths."
+  },
+  {
+    "id": "ACOU-0079",
+    "caption": "A lawnmower is started, and its handle shakes visibly in the operator's hands until the engine is cut.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The shaking lasts as long as the engine runs and stops when it is switched off."
+  },
+  {
+    "id": "ACOU-0080",
+    "caption": "A drummer presses the bass drum pedal repeatedly, and the beater swings into the drumhead with each press and the head dips each time.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The beater moves only when the pedal is pressed and the head dips only when the beater lands; nothing moves between presses."
+  },
+  {
+    "id": "ACOU-0081",
+    "caption": "A ringing old-fashioned telephone shakes slightly on its table, and the shaking stops when the handset is lifted.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The shaking coincides with the ringing bursts and ends the moment the handset is picked up."
+  },
+  {
+    "id": "ACOU-0082",
+    "caption": "A violinist plays a long note, and the string under the bow is a blur that clears the instant the bow stops.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "Only the bowed string blurs; the blur is present exactly while the bow moves."
+  },
+  {
+    "id": "ACOU-0083",
+    "caption": "A washing machine on its spin cycle rocks and shudders on the floor, and it settles still as the drum slows to a stop.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shuddering is strongest at full spin and dies away as the drum slows; the machine is still once the drum stops."
+  },
+  {
+    "id": "ACOU-0084",
+    "caption": "A boy holds a running electric razor against his palm, and the razor's head buzzes and blurs until he switches it off.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The head blurs only while the razor runs and is sharp when it is off."
+  },
+  {
+    "id": "ACOU-0085",
+    "caption": "A large bell in a tower is rung by a rope, and it swings back and forth with the clapper striking it on each swing.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The bell swings only while the rope is pulled and its swings die down once the pulling stops."
+  },
+  {
+    "id": "ACOU-0086",
+    "caption": "A desk fan with a loose blade rattles and shakes on its base while running, and stops shaking when it is switched off.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The shaking lasts as long as the blades spin and stops as they come to rest."
+  },
+  {
+    "id": "ACOU-0087",
+    "caption": "A trumpet player blows a note, and the bell of the trumpet trembles faintly while the note sounds.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The tremble appears while he blows and is gone when he stops."
+  },
+  {
+    "id": "ACOU-0088",
+    "caption": "A pager on vibrate goes off on a nightstand and rattles against the wood until the owner picks it up.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The rattling and small movements happen only while it vibrates and end when it is lifted."
+  },
+  {
+    "id": "ACOU-0089",
+    "caption": "A man plays a bowed cymbal with a violin bow, and the cymbal's edge shimmers while the bow moves and stills when he lifts it.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The shimmer exists exactly while the bow is drawn across the edge."
+  },
+  {
+    "id": "ACOU-0090",
+    "caption": "A generator runs on a building site, and its frame shakes and the loose bolts on it rattle until it is shut down.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The shaking lasts as long as the engine runs and stops within a moment of shutdown."
+  },
+  {
+    "id": "ACOU-0091",
+    "caption": "A child bangs on a toy piano, and the small hammers inside can be seen jumping up with each key press.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "Each hammer moves only when its key is pressed and falls back after; hammers of unpressed keys stay down."
+  },
+  {
+    "id": "ACOU-0092",
+    "caption": "A woman turns on a paint shaker at a hardware store, and the paint can clamped in it blurs with the shaking until the timer stops it.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The can blurs only while the machine runs and is sharp and still when it stops."
+  },
+  {
+    "id": "ACOU-0093",
+    "caption": "A man plucks a single note on a banjo, and the banjo's head visibly quivers beneath the strings and then stills.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The quiver begins at the pluck and fades within a second or two."
+  },
+  {
+    "id": "ACOU-0094",
+    "caption": "A dentist's drill is switched on and held up, and its tip becomes a blur until the pedal is released.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The tip blurs only while the drill runs and is sharp when it stops."
+  },
+  {
+    "id": "ACOU-0095",
+    "caption": "A hand-cranked siren is wound faster and faster, and its casing vibrates more as the pitch climbs, then settles as the crank slows.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The vibration rises and falls with the cranking speed and stops when the crank stops."
+  },
+  {
+    "id": "ACOU-0096",
+    "caption": "A cook uses a stand mixer on high, and the whole mixer trembles on the counter until she turns it down.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The trembling is strongest on high and eases as the speed is lowered; it stops when the mixer is off."
+  },
+  {
+    "id": "ACOU-0097",
+    "caption": "A man taps a microphone on a stand, and the mic head jiggles on its clip with each tap.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The jiggle begins with each tap and settles before the next; the mic is still without tapping."
+  },
+  {
+    "id": "ACOU-0098",
+    "caption": "An old refrigerator compressor kicks on, and the fridge shudders briefly and a magnet on its door quivers.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shudder happens as the compressor starts and settles into a faint hum; it stops when the compressor cuts out."
+  },
+  {
+    "id": "ACOU-0099",
+    "caption": "A bagpiper plays, and the drones resting on his shoulder tremble faintly while the note holds.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The drones tremble only while air flows through them and are still when he stops."
+  },
+  {
+    "id": "ACOU-0100",
+    "caption": "A child sets a wind-up music box going, and the metal comb inside can be seen plucked tooth by tooth as the cylinder turns, until the spring runs down.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The teeth flick only as the pins pass them, the cylinder slows gradually, and everything stops when the spring is spent."
+  }
+]

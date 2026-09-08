@@ -1,0 +1,222 @@
+[
+  {
+    "id": "ACOU-0101",
+    "caption": "A child strikes a large temple bell with a wooden beam, and the bell's rim shimmers and the bell sways on its hanger.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shimmer and sway begin at the strike and die away over several seconds; the bell is still before."
+  },
+  {
+    "id": "ACOU-0102",
+    "caption": "A boy strikes a horseshoe hanging from a string with a nail, and the horseshoe rings and quivers on its string.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The quiver and swing begin at the strike and fade over a few seconds; the horseshoe is still before."
+  },
+  {
+    "id": "ACOU-0103",
+    "caption": "A cook bangs a wok with a ladle, and the wok rings and quivers on its stand.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The quiver starts at the bang and fades within a second or two."
+  },
+  {
+    "id": "ACOU-0104",
+    "caption": "A gymnast dismounts from a balance beam, and the beam shivers along its length before settling.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shiver starts as she pushes off and dies away quickly; the beam is still before and after."
+  },
+  {
+    "id": "ACOU-0105",
+    "caption": "A man flicks the blade of a handsaw held by its handle, and the blade wobbles in a blur before going still.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blur is widest at the tip right after the flick and shrinks to stillness; the handle stays sharp."
+  },
+  {
+    "id": "ACOU-0106",
+    "caption": "A drummer hits a hanging tom-tom, and the head dips and shivers before returning flat.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The first dip is deepest and the rebounds shrink; the head is flat within a couple of seconds."
+  },
+  {
+    "id": "ACOU-0107",
+    "caption": "A child kicks a chain-link fence, and the mesh shivers outward from the kick along the panel.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shiver spreads from the kick point and dies away within seconds; the fence is still before."
+  },
+  {
+    "id": "ACOU-0108",
+    "caption": "A bass guitarist plays a low note through an amplifier, and the water in a glass on the amp shivers into ripples.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The ripples appear with the note and vanish when it stops; the glass does not slide off."
+  },
+  {
+    "id": "ACOU-0109",
+    "caption": "A garbage truck idles outside a house, and a hanging wind chime by the door trembles and tinkles while the engine runs.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The trembling lasts while the truck idles and stops after it drives away; the chime is still in quiet air."
+  },
+  {
+    "id": "ACOU-0110",
+    "caption": "A door is slammed in a hallway, and a framed mirror on the adjacent wall rocks on its hook before hanging still.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The rocking begins at the slam and dies out over a few seconds; the mirror does not move before."
+  },
+  {
+    "id": "ACOU-0111",
+    "caption": "A brass band plays in a square, and the loose glass of a nearby café window buzzes with the tuba notes.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The buzzing appears on the low notes and stops between them; the window is still when the band stops."
+  },
+  {
+    "id": "ACOU-0112",
+    "caption": "A cement mixer rumbles beside a garden wall, and pebbles on the wall's top shiver and shift.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The pebbles move only while the mixer runs and settle when it stops."
+  },
+  {
+    "id": "ACOU-0113",
+    "caption": "A church organ plays a deep pedal note, and a hymn book on a nearby pew shivers and slides to the edge.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The book moves only while the low note sounds and stops when it ends."
+  },
+  {
+    "id": "ACOU-0114",
+    "caption": "A heavy freight train passes a level crossing, and the coins in a cup holder of a waiting car rattle.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The rattling starts as the train arrives, is strongest as it passes, and stops once it has gone."
+  },
+  {
+    "id": "ACOU-0115",
+    "caption": "A moped idles at a kerb, and its exhaust pipe quivers visibly until the engine is switched off.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The quiver lasts as long as the engine runs and stops within a moment of it being cut."
+  },
+  {
+    "id": "ACOU-0116",
+    "caption": "A phone on vibrate buzzes on a nightstand and works its way to the edge before the alarm is silenced.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "trajectory_momentum"
+    ],
+    "expectation": "The phone moves in small jerks only while buzzing and stops the moment it is silenced."
+  },
+  {
+    "id": "ACOU-0117",
+    "caption": "A violinist plays a fast passage, and the bowed strings blur under the bow and sharpen as the bow lifts.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "Only the strings under the moving bow blur; they are sharp when the bow is off them."
+  },
+  {
+    "id": "ACOU-0118",
+    "caption": "A cook runs a hand-held blender in a jug of soup, and the shaft blurs and the jug trembles until she releases the button.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The blur and trembling exist only while the button is held and stop when it is released."
+  },
+  {
+    "id": "ACOU-0119",
+    "caption": "A carillon bell in a tower is struck by its hammer, and the hammer swings back while the bell's rim quivers.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The hammer moves only to strike and retreat; the quiver begins at the strike and fades."
+  },
+  {
+    "id": "ACOU-0120",
+    "caption": "A jackhammer is started on a pavement, and its bit blurs and the whole tool shudders in the worker's hands until he releases the trigger.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The shuddering lasts as long as the trigger is held and stops when it is released."
+  }
+]

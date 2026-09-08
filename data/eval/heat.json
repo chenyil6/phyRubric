@@ -1,0 +1,556 @@
+[
+  {
+    "id": "HEAT-0251",
+    "caption": "A slice of cheese is laid on a hot dog straight off the grill, and the cheese softens and slumps over the sides.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "material_response"
+    ],
+    "expectation": "The slice loses its stiff edges and drapes down over the sausage; it does not stay square or re-harden on the hot surface."
+  },
+  {
+    "id": "HEAT-0252",
+    "caption": "A child presses a warm cookie fresh from the oven, and the chocolate chips inside squash and smear under her finger.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "material_response"
+    ],
+    "expectation": "The chips are soft and spread under pressure; they do not crack or stay hard while the cookie is warm."
+  },
+  {
+    "id": "HEAT-0253",
+    "caption": "A woman drops an ice cube into a cup of hot tea, and the cube shrinks and disappears within moments.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The cube floats, rounds off, and gets smaller until it is gone; it does not grow or sink while still whole."
+  },
+  {
+    "id": "HEAT-0254",
+    "caption": "A snowball thrown against a warm sunlit window sticks for a moment, then slides down the glass as it melts, leaving a wet streak.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction"
+    ],
+    "expectation": "The snow softens, slides downward, and leaves water behind; it does not climb or refreeze on the warm glass."
+  },
+  {
+    "id": "HEAT-0255",
+    "caption": "A car's heater blows on a frost-covered side mirror, and the frost turns to droplets that run down the mirror.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction"
+    ],
+    "expectation": "The frost clears where the warm air reaches first and the water runs downward; the frost does not re-form while the heater runs."
+  },
+  {
+    "id": "HEAT-0256",
+    "caption": "A lollipop left on a car dashboard in the sun sags and bends over on its stick.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "material_response",
+      "gravity_direction"
+    ],
+    "expectation": "The candy softens and droops downward under its own weight; it does not stand back up while warm."
+  },
+  {
+    "id": "HEAT-0257",
+    "caption": "A cook dips an apple into hot caramel and sets it on a cold plate, and the caramel coating firms up into a glossy shell.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "material_response"
+    ],
+    "expectation": "The caramel drips a little, slows, and stops running as it cools; the shell is firm and does not become liquid again."
+  },
+  {
+    "id": "HEAT-0258",
+    "caption": "Melted chocolate from a fondue pot drips onto a chilled plate and sets into raised drops.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "material_response"
+    ],
+    "expectation": "Each drop spreads slightly on landing, then stops and dulls as it sets; the drops do not keep flowing across the cold plate."
+  },
+  {
+    "id": "HEAT-0259",
+    "caption": "A child's snow cone sits in the sun and melts into a puddle of coloured syrup in the paper cup.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The mound of ice shrinks and the liquid rises in the cup, keeping the colour; the ice does not re-form."
+  },
+  {
+    "id": "HEAT-0260",
+    "caption": "A chocolate bunny left on a shelf beside a radiator slumps, and its ears droop and bend over.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "material_response",
+      "gravity_direction"
+    ],
+    "expectation": "The parts nearest the heat soften first and sag downward under their own weight; the bunny does not stand back up while warm."
+  },
+  {
+    "id": "HEAT-0261",
+    "caption": "A cook stir-fries vegetables in a wok, and a cloud of steam rises with each toss.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "Steam rises from the hot food and thins above the wok; each toss releases a fresh burst; it does not sink."
+  },
+  {
+    "id": "HEAT-0262",
+    "caption": "A hot tub sits outside on a cold night, and steam drifts up from its surface into the dark.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "The steam rises from the whole surface and drifts with any breeze, thinning as it rises; it does not settle downward."
+  },
+  {
+    "id": "HEAT-0263",
+    "caption": "A woman runs a hot bath, and steam rises from the falling water and fills the bathroom.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "The steam rises from the tap stream and the bath surface and collects near the ceiling; the mirror may fog."
+  },
+  {
+    "id": "HEAT-0264",
+    "caption": "A man pours boiling water into a glass French press, and steam rises from the top while the coffee grounds swirl up through the water.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "Steam rises from the open top and thins; the grounds churn up with the pour and settle afterwards; steam does not sink."
+  },
+  {
+    "id": "HEAT-0265",
+    "caption": "A tenant opens the bleed valve on an old radiator, and a hiss of steam escapes until water spurts out and he shuts it.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The steam jet rises from the valve while it is open and stops when the water arrives and the valve is closed."
+  },
+  {
+    "id": "HEAT-0266",
+    "caption": "A cleaner presses a steam cleaner nozzle to a carpet, and steam puffs out around the nozzle and the carpet darkens with damp.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "missing_consequence"
+    ],
+    "expectation": "Steam rises from around the nozzle only while the trigger is pressed and the carpet is wet where the nozzle has been."
+  },
+  {
+    "id": "HEAT-0267",
+    "caption": "A pot of jam boils on a stove, and the surface foams up and bubbles thickly.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "process_direction",
+      "material_response"
+    ],
+    "expectation": "The foam rises while the heat is on and sinks back when the pot is pulled off; the bubbles burst slowly on the thick surface."
+  },
+  {
+    "id": "HEAT-0268",
+    "caption": "A pot of potatoes boils with its lid on, and the lid rattles and lifts as steam escapes around its edge.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The lid jumps in time with the puffs of steam and steam rises from the gap; the rattling stops when the heat is turned down."
+  },
+  {
+    "id": "HEAT-0269",
+    "caption": "A man pours hot water from a thermos onto a frozen car door lock, and steam rises from the lock as the ice runs off.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "Steam rises where the hot water hits and the water runs downward off the door; the ice does not re-form while the water is hot."
+  },
+  {
+    "id": "HEAT-0270",
+    "caption": "A barber unrolls a hot towel for a shave, and steam rises from the cloth as it opens.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "Steam rises from the whole unfolded towel, thickest as it is first opened, and fades as the towel cools."
+  },
+  {
+    "id": "HEAT-0271",
+    "caption": "A woman lifts cold cans of drink out of an ice bucket at a picnic, and the cans sweat and drip in the sun.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction"
+    ],
+    "expectation": "Moisture appears on the cans, gathers into drops, and runs down; the cans stay wet while cold."
+  },
+  {
+    "id": "HEAT-0272",
+    "caption": "A snorkeler's mask fogs on the inside as she breathes while floating in warm water.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "attribute_drift"
+    ],
+    "expectation": "The fog forms on the inner surface and thickens with each breath; rinsing the mask clears it."
+  },
+  {
+    "id": "HEAT-0273",
+    "caption": "A takeaway coffee cup with a plastic lid is set on a desk, and the underside of the lid clouds with droplets.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction"
+    ],
+    "expectation": "Droplets form on the inner face of the lid and drip back into the coffee; the outside of the lid stays dry."
+  },
+  {
+    "id": "HEAT-0274",
+    "caption": "A chilled cocktail glass is set on a bar in a warm room, and a film of mist forms on it and turns into running drops.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction"
+    ],
+    "expectation": "The mist appears evenly on the cold glass and beads run down to wet the bar mat; the glass does not dry while cold."
+  },
+  {
+    "id": "HEAT-0275",
+    "caption": "A metal water bottle packed with ice sits on a gym bench, and a wet patch spreads on the bench beneath it.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction"
+    ],
+    "expectation": "Droplets form on the cold metal and run down to the base, and the patch grows while the bottle stays cold."
+  },
+  {
+    "id": "HEAT-0276",
+    "caption": "A shop worker opens the glass door of a walk-in freezer, and the door's glass fogs over as warm air hits it.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "attribute_drift"
+    ],
+    "expectation": "The fog forms on the cold glass within moments of opening and clears slowly once the door is shut and the glass warms."
+  },
+  {
+    "id": "HEAT-0277",
+    "caption": "A cold yogurt tub taken from the fridge sits on a sunny windowsill, and the lid and sides bead with water.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "Moisture appears on the cold plastic and forms drops that run down; the tub does not dry off while cold."
+  },
+  {
+    "id": "HEAT-0278",
+    "caption": "A man exhales onto his cold sunglasses to clean them, and the lenses fog and then clear as he wipes.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The fog appears with the breath and vanishes where the cloth passes; the wiped part stays clear."
+  },
+  {
+    "id": "HEAT-0279",
+    "caption": "A dentist puts a small cold mirror into a patient's mouth, and the mirror fogs over at once; she wipes it and it clears.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The fog appears the moment the cold mirror meets the warm breath and clears where wiped; it re-fogs if left in."
+  },
+  {
+    "id": "HEAT-0280",
+    "caption": "A cyclist stops at a light on a frosty morning, and his glasses fog with his heavy breathing; they clear again as he rides on.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "attribute_drift"
+    ],
+    "expectation": "The lenses cloud while he breathes hard standing still and clear once moving air passes over them."
+  },
+  {
+    "id": "HEAT-0281",
+    "caption": "A man opens the door of a wood stove, and the flames inside lean out toward the opening and flare up.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The flames grow and lean as the door opens and settle back when it shuts; they always point upward from the logs."
+  },
+  {
+    "id": "HEAT-0282",
+    "caption": "A birthday cake with lit candles is carried across a room, and the flames lean backward as it moves and stand up when it is set down.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The flames trail opposite to the direction of motion, flicker, and return to pointing upward when the cake stops; none goes out unless blown."
+  },
+  {
+    "id": "HEAT-0283",
+    "caption": "A farmer burns stubble in a field, and a line of flame advances across the field with the wind, smoke drifting ahead of it.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "process_direction",
+      "causeless_motion"
+    ],
+    "expectation": "The fire line moves downwind, blackened ground is left behind it, and the smoke leans the same way as the flames."
+  },
+  {
+    "id": "HEAT-0284",
+    "caption": "A man uses a small blowtorch to light charcoal in a barbecue, and the coals begin to glow where the flame touches them.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "process_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The glow appears only where the torch is aimed and spreads slowly to neighbouring coals; the flame points where the torch points."
+  },
+  {
+    "id": "HEAT-0285",
+    "caption": "A boy tosses a dry pine cone into a fireplace, and it catches, glows, and crumbles into embers.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The cone lights where it touches the flames, burns from that side, and shrinks into glowing pieces that fade; it does not return whole."
+  },
+  {
+    "id": "HEAT-0286",
+    "caption": "A candle burns inside a glass lantern hung outdoors, and its flame flickers as gusts pass but stays lit.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The flame leans and dances with each gust and stands upright between gusts; the glass protects it from going out."
+  },
+  {
+    "id": "HEAT-0287",
+    "caption": "A man drops a lit match into a puddle, and it goes out with a tiny hiss and floats dark on the water.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The flame dies the instant the match hits the water and does not relight; a wisp of smoke rises."
+  },
+  {
+    "id": "HEAT-0288",
+    "caption": "Bread left too long in a toaster smokes, and a grey plume rises from the slots.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "The smoke rises straight up from the slots and spreads near the ceiling; it does not pour out sideways along the counter."
+  },
+  {
+    "id": "HEAT-0289",
+    "caption": "A cook fans the glowing coals of a grill with a piece of cardboard, and the coals brighten with each wave.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The glow intensifies during each wave and eases between them; sparks may lift with the air and fade."
+  },
+  {
+    "id": "HEAT-0290",
+    "caption": "A child pokes a campfire with a stick until its tip catches fire, then pulls it out and blows it out, leaving a glowing ember that slowly fades.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "process_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The tip lights only while in the flames, the flame dies at the puff of breath, and the ember dims steadily; it does not reflame on its own."
+  },
+  {
+    "id": "HEAT-0291",
+    "caption": "A sealed yogurt pot left in a hot car bulges until its foil lid domes upward.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "shape_identity",
+      "process_direction"
+    ],
+    "expectation": "The lid rises gradually as the car heats and stays domed in the heat; it does not sink inward."
+  },
+  {
+    "id": "HEAT-0292",
+    "caption": "A hot-air popcorn machine is switched on, and popped kernels burst out of the chute into a bowl.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "process_direction",
+      "permanence_count",
+      "shape_identity"
+    ],
+    "expectation": "Kernels pop into much larger pieces and are blown out only after the machine has heated; the flow stops when it is switched off."
+  },
+  {
+    "id": "HEAT-0293",
+    "caption": "A camper's inflatable pillow left in a tent under the midday sun swells until it is taut and firm.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "shape_identity",
+      "process_direction"
+    ],
+    "expectation": "The pillow grows firmer and rounder as the tent heats and softens again in the evening; it does not shrink in the heat."
+  },
+  {
+    "id": "HEAT-0294",
+    "caption": "Candles are lit beneath a wooden Christmas pyramid, and its fan blades start turning and the figures rotate.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The blades turn only after the candles are lit and slow to a stop when they are blown out."
+  },
+  {
+    "id": "HEAT-0295",
+    "caption": "Heat shimmer rises off the black roof of a car parked in the sun, and the building behind the car wavers through it.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "The shimmer rises from the hot roof and fades with height; the building itself does not move."
+  },
+  {
+    "id": "HEAT-0296",
+    "caption": "A hot dog on a grill sizzles, and its skin splits open along its length with a pop.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "process_direction",
+      "shape_identity"
+    ],
+    "expectation": "The split appears suddenly along one line and gapes open; it does not close again."
+  },
+  {
+    "id": "HEAT-0297",
+    "caption": "A cook drops a papadum into hot oil, and it puffs up and doubles in size within seconds.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "shape_identity",
+      "process_direction"
+    ],
+    "expectation": "The flat disc blisters and expands as soon as it hits the oil and keeps its puffed shape when lifted out; it does not shrink back."
+  },
+  {
+    "id": "HEAT-0298",
+    "caption": "A cook sets a pan straight from the stove onto a thin plastic cutting board, and the board warps and its edges lift.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "material_response",
+      "process_direction"
+    ],
+    "expectation": "The board bends under and around the hot pan and keeps some of the warp after the pan is removed; it does not stay perfectly flat."
+  },
+  {
+    "id": "HEAT-0299",
+    "caption": "A sealed bag of chips left on a hot dashboard puffs up tight like a pillow.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "shape_identity",
+      "process_direction"
+    ],
+    "expectation": "The bag swells gradually in the heat and stays swollen; it does not shrink in the hot car."
+  },
+  {
+    "id": "HEAT-0300",
+    "caption": "A cook slides rice crackers into hot oil, and they swell and float to the surface.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "shape_identity",
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "The crackers puff up within moments of entering the oil and rise to float; they do not sink once puffed or shrink back."
+  }
+]

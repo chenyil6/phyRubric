@@ -1,0 +1,2434 @@
+[
+  {
+    "id": "MECH-0289",
+    "caption": "A cyclist riding along a flat street stops pedalling and rests both feet on the pedals, and the bicycle coasts on down the street, gradually slowing.",
+    "category": "Mechanics",
+    "subcategory": "inertia",
+    "violation_types": [
+      "causeless_motion",
+      "trajectory_momentum"
+    ],
+    "expectation": "The bicycle keeps rolling forward after the legs stop, with no pause or jolt at the moment pedalling ends; the path stays straight and the wheels keep turning; it slows only gently, never speeding up, stopping dead, or rolling backward while the feet stay still."
+  },
+  {
+    "id": "MECH-0290",
+    "caption": "A girl spinning on an office chair grabs the edge of the desk to stop, and her ponytail swings on around her head after the chair has stopped.",
+    "category": "Mechanics",
+    "subcategory": "inertia",
+    "violation_types": [
+      "causeless_motion",
+      "trajectory_momentum"
+    ],
+    "expectation": "The hair continues in the direction of the spin for a moment after the chair halts and then falls; it does not stop with the chair or swing the other way first."
+  },
+  {
+    "id": "MECH-0291",
+    "caption": "A stack of newspapers rides a conveyor belt in a printing plant, and when the belt is stopped the stack slides on a little before halting.",
+    "category": "Mechanics",
+    "subcategory": "inertia",
+    "violation_types": [
+      "causeless_motion",
+      "trajectory_momentum"
+    ],
+    "expectation": "The slide is in the belt's former direction and starts as the belt stops; the stack stops within a short distance and does not slide backward."
+  },
+  {
+    "id": "MECH-0292",
+    "caption": "The cord holding a hanging flowerpot on a porch snaps, and the pot falls and breaks on the boards below.",
+    "category": "Mechanics",
+    "subcategory": "gravity_fall",
+    "violation_types": [
+      "gravity_direction",
+      "material_response"
+    ],
+    "expectation": "The pot drops straight down the moment the cord parts, speeding up, and breaks on impact with soil spilling; it does not hover or fall sideways."
+  },
+  {
+    "id": "MECH-0293",
+    "caption": "A gymnast hanging from a pair of rings lets go and drops onto the mat below.",
+    "category": "Mechanics",
+    "subcategory": "gravity_fall",
+    "violation_types": [
+      "gravity_direction",
+      "trajectory_momentum"
+    ],
+    "expectation": "She falls straight down as soon as her hands open, bending her knees on landing; the empty rings swing after she leaves them."
+  },
+  {
+    "id": "MECH-0294",
+    "caption": "A man leaning over a balcony rail fumbles his phone, and it falls into the swimming pool below with a splash.",
+    "category": "Mechanics",
+    "subcategory": "gravity_fall",
+    "violation_types": [
+      "gravity_direction",
+      "trajectory_momentum"
+    ],
+    "expectation": "The phone falls straight down, faster as it goes, and enters the water with a splash then sinks; it does not drift outward or float."
+  },
+  {
+    "id": "MECH-0295",
+    "caption": "A boy running through a shopping mall mistakes a closed glass door for an open one, runs into it, and bounces back onto the floor.",
+    "category": "Mechanics",
+    "subcategory": "collision",
+    "violation_types": [
+      "solidity",
+      "trajectory_momentum"
+    ],
+    "expectation": "He stops dead at the glass and is thrown back; the door stays closed and intact; no part of him passes through the pane."
+  },
+  {
+    "id": "MECH-0296",
+    "caption": "A footballer's shot hits the crossbar and the ball drops down onto the goal line.",
+    "category": "Mechanics",
+    "subcategory": "collision",
+    "violation_types": [
+      "trajectory_momentum",
+      "gravity_direction"
+    ],
+    "expectation": "The ball rebounds off the bar at the moment of contact and falls under gravity; the bar does not bend and the ball does not pass through it."
+  },
+  {
+    "id": "MECH-0297",
+    "caption": "A pool player breaks a tight triangle of balls with the cue ball, and the balls scatter across the table in all directions.",
+    "category": "Mechanics",
+    "subcategory": "collision",
+    "violation_types": [
+      "trajectory_momentum",
+      "missing_consequence",
+      "solidity"
+    ],
+    "expectation": "The balls move only after being struck, spread outward from the impact, and none overlaps another; the cue ball slows sharply."
+  },
+  {
+    "id": "MECH-0298",
+    "caption": "A boy kicks a ball against a tree trunk, and it bounces back to him.",
+    "category": "Mechanics",
+    "subcategory": "collision",
+    "violation_types": [
+      "trajectory_momentum",
+      "solidity"
+    ],
+    "expectation": "The rebound begins at contact and comes back slower than the kick; the tree does not move and the ball does not go into it."
+  },
+  {
+    "id": "MECH-0299",
+    "caption": "A bottle cap spun on a kitchen counter spins in place, slows, and rattles to a stop.",
+    "category": "Mechanics",
+    "subcategory": "friction_rolling",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The spin slows steadily and the cap wobbles more as it slows; it does not speed up or stop instantly."
+  },
+  {
+    "id": "MECH-0300",
+    "caption": "A woman squeezes a wet bar of soap in her hand in the bath, and it slips out of her grip and skids across the bottom of the tub.",
+    "category": "Mechanics",
+    "subcategory": "friction_rolling",
+    "violation_types": [
+      "trajectory_momentum",
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The soap leaves the hand as the fingers close on it and shoots out in one direction, not straight up or back into the hand; it skids across the wet surface in a straight line and slows to a stop or stops against the side of the tub; it does not hover, change direction on its own, or stay stuck to the hand."
+  },
+  {
+    "id": "MECH-0301",
+    "caption": "A man shoves a cardboard box across a smooth garage floor, and it slides out onto the gravel driveway and stops almost at once.",
+    "category": "Mechanics",
+    "subcategory": "friction_rolling",
+    "violation_types": [
+      "causeless_motion",
+      "trajectory_momentum",
+      "material_response"
+    ],
+    "expectation": "The box slides freely in a straight line on the smooth floor, and its sharp slowing begins exactly where the gravel starts, not before; it does not glide on across the gravel as it did indoors, stop dead while still on the smooth floor, or speed up; it stays flat on the ground the whole way."
+  },
+  {
+    "id": "MECH-0302",
+    "caption": "A woman lobs a water balloon over a garden fence to a friend, and it arcs over and lands in the friend's hands.",
+    "category": "Mechanics",
+    "subcategory": "projectile",
+    "violation_types": [
+      "trajectory_momentum",
+      "gravity_direction"
+    ],
+    "expectation": "The balloon rises, clears the fence at the top of its arc, and falls into the hands, wobbling in flight; it does not travel flat or hang above the fence."
+  },
+  {
+    "id": "MECH-0303",
+    "caption": "An angler swings a rod and casts a weighted line far out over a lake, and the weight splashes into the water.",
+    "category": "Mechanics",
+    "subcategory": "projectile",
+    "violation_types": [
+      "trajectory_momentum",
+      "gravity_direction"
+    ],
+    "expectation": "The weight flies in an arc, pulling line behind it, and drops into the water; it does not stop in the air or fly straight."
+  },
+  {
+    "id": "MECH-0304",
+    "caption": "A boy crumples a page into a ball and tosses it across the office toward a bin, and it drops into the bin.",
+    "category": "Mechanics",
+    "subcategory": "projectile",
+    "violation_types": [
+      "trajectory_momentum",
+      "gravity_direction"
+    ],
+    "expectation": "The paper ball follows an arc, slowing near its peak, and falls into the bin; it does not float or change direction midway."
+  },
+  {
+    "id": "MECH-0305",
+    "caption": "A child builds a house of playing cards on a table, and when someone bumps the table the house collapses into a heap.",
+    "category": "Mechanics",
+    "subcategory": "balance_topple",
+    "violation_types": [
+      "gravity_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The collapse begins at the bump and runs through the structure in under a second; every card ends flat or leaning on the table; none stays balanced in the air."
+  },
+  {
+    "id": "MECH-0306",
+    "caption": "A toddler stacks sofa cushions into a tower and pushes it, and the tower topples over onto the rug.",
+    "category": "Mechanics",
+    "subcategory": "balance_topple",
+    "violation_types": [
+      "gravity_direction",
+      "trajectory_momentum"
+    ],
+    "expectation": "The tower leans away from the push and the top cushions fall first; the cushions land on the side away from the toddler."
+  },
+  {
+    "id": "MECH-0307",
+    "caption": "A man carrying a long ladder turns around in a yard, and the far end of the ladder knocks over a bin.",
+    "category": "Mechanics",
+    "subcategory": "balance_topple",
+    "violation_types": [
+      "trajectory_momentum",
+      "gravity_direction"
+    ],
+    "expectation": "The bin tips at the moment the ladder end hits it and falls in the direction of the swing, spilling; it does not move before contact."
+  },
+  {
+    "id": "MECH-0308",
+    "caption": "A woman pulls the cord of a window blind, and the blind gathers upward as the cord runs down through her hands.",
+    "category": "Mechanics",
+    "subcategory": "tension",
+    "violation_types": [
+      "material_response",
+      "missing_consequence"
+    ],
+    "expectation": "The blind rises only as fast as the cord is pulled and stops when she stops; the cord stays taut on the pulled side and does not stretch."
+  },
+  {
+    "id": "MECH-0309",
+    "caption": "A puppeteer lifts a marionette off the stage by its control bar, and the strings go taut and the puppet's limbs hang from them.",
+    "category": "Mechanics",
+    "subcategory": "tension",
+    "violation_types": [
+      "material_response",
+      "gravity_direction"
+    ],
+    "expectation": "The strings straighten as the bar lifts, the limbs rise only when their strings tighten, and the strings go slack when the puppet is set down."
+  },
+  {
+    "id": "MECH-0310",
+    "caption": "A sailor hauls in the anchor rope of a small boat, and the rope comes up taut and dripping until the anchor breaks the surface.",
+    "category": "Mechanics",
+    "subcategory": "tension",
+    "violation_types": [
+      "material_response",
+      "gravity_direction"
+    ],
+    "expectation": "The rope runs straight down into the water under load and stays taut while pulled; water drips from it; the anchor appears only when enough rope is in."
+  },
+  {
+    "id": "MECH-0311",
+    "caption": "A yoga student sits on a foam block, and the block compresses under her and springs back when she stands.",
+    "category": "Mechanics",
+    "subcategory": "deformation",
+    "violation_types": [
+      "material_response",
+      "process_direction"
+    ],
+    "expectation": "The block flattens only while she sits and recovers its shape within a second or two of her standing; it does not stay squashed."
+  },
+  {
+    "id": "MECH-0312",
+    "caption": "A child squeezes a rubber duck under the bathwater and lets go, and the duck squirts water and puffs back to shape.",
+    "category": "Mechanics",
+    "subcategory": "deformation",
+    "violation_types": [
+      "material_response",
+      "process_direction"
+    ],
+    "expectation": "The duck flattens while squeezed, a jet of water comes out of its hole, and it refills and rounds out when released."
+  },
+  {
+    "id": "MECH-0313",
+    "caption": "A potter presses a thumb into the side of a soft clay pot on the wheel, and the pot keeps the dent.",
+    "category": "Mechanics",
+    "subcategory": "deformation",
+    "violation_types": [
+      "material_response",
+      "process_direction"
+    ],
+    "expectation": "The wall dents inward under the thumb and stays dented after it lifts; the clay does not spring back."
+  },
+  {
+    "id": "MECH-0314",
+    "caption": "A hairdresser snips a lock of hair with scissors, and the cut hair falls to the floor.",
+    "category": "Mechanics",
+    "subcategory": "cut_tear",
+    "violation_types": [
+      "missing_consequence",
+      "gravity_direction"
+    ],
+    "expectation": "The lock separates exactly where the blades close and drops straight down; the hair on the head is shorter where it was cut and does not regrow."
+  },
+  {
+    "id": "MECH-0315",
+    "caption": "A carpenter saws through a plank on a sawhorse, and the cut end drops to the ground as the saw comes through.",
+    "category": "Mechanics",
+    "subcategory": "cut_tear",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The kerf deepens with each stroke, sawdust falls, and the piece parts only when the saw is through; the two pieces do not rejoin."
+  },
+  {
+    "id": "MECH-0316",
+    "caption": "An office worker feeds a sheet of paper into a shredder, and it comes out the bottom as a bundle of thin strips.",
+    "category": "Mechanics",
+    "subcategory": "cut_tear",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The sheet is drawn in at the top and strips emerge below as it passes; the sheet does not reappear whole."
+  },
+  {
+    "id": "MECH-0317",
+    "caption": "A cook ladles pancake batter onto a hot griddle, and the batter spreads into a round puddle and stops.",
+    "category": "Mechanics",
+    "subcategory": "fluid",
+    "violation_types": [
+      "material_response",
+      "process_direction"
+    ],
+    "expectation": "The batter flows outward from where it lands, slows as it spreads, and settles into a round; it does not keep spreading or climb back into the ladle."
+  },
+  {
+    "id": "MECH-0318",
+    "caption": "A gardener drops a large stone into a bucket full of water, and water spills over the rim onto the ground.",
+    "category": "Mechanics",
+    "subcategory": "fluid",
+    "violation_types": [
+      "material_response",
+      "missing_consequence",
+      "solidity"
+    ],
+    "expectation": "The splash and overflow happen as the stone enters, the level stays at the rim afterward, and the stone sinks to the bottom; the stone does not pass through the bucket."
+  },
+  {
+    "id": "MECH-0319",
+    "caption": "A child stomps a foot in a full bathtub, and water sloshes up the sides and splashes over the edge onto the floor.",
+    "category": "Mechanics",
+    "subcategory": "fluid",
+    "violation_types": [
+      "material_response",
+      "gravity_direction"
+    ],
+    "expectation": "The wave rises where the foot lands and travels outward, spilling at the rim; the water settles back level afterwards."
+  },
+  {
+    "id": "MECH-0320",
+    "caption": "A bucket with a hole near its bottom is filled from a tap, and a thin stream squirts out of the hole and arcs onto the ground.",
+    "category": "Mechanics",
+    "subcategory": "fluid",
+    "violation_types": [
+      "material_response",
+      "gravity_direction"
+    ],
+    "expectation": "The stream comes only from the hole, arcs outward and down, and gets weaker as the level in the bucket falls; it does not squirt upward."
+  },
+  {
+    "id": "MECH-0321",
+    "caption": "A barista pours coffee beans from a bag into a grinder hopper, and the beans rattle down and fill the hopper in a heap.",
+    "category": "Mechanics",
+    "subcategory": "granular",
+    "violation_types": [
+      "material_response",
+      "gravity_direction"
+    ],
+    "expectation": "The beans fall in a stream and pile up from the bottom, settling into a rough cone; a few bounce out onto the counter."
+  },
+  {
+    "id": "MECH-0322",
+    "caption": "A child pours sand through a plastic funnel into a bottle, and sand runs through the neck in a steady stream while a cone builds inside the bottle.",
+    "category": "Mechanics",
+    "subcategory": "granular",
+    "violation_types": [
+      "material_response",
+      "gravity_direction"
+    ],
+    "expectation": "The stream is thin and steady, the cone grows inside the bottle, and the funnel empties from the bottom; the sand does not stop in the funnel."
+  },
+  {
+    "id": "MECH-0323",
+    "caption": "A farmer tips a sack of potatoes onto a barn floor, and the potatoes tumble out and roll apart into a loose spread.",
+    "category": "Mechanics",
+    "subcategory": "granular",
+    "violation_types": [
+      "material_response",
+      "trajectory_momentum"
+    ],
+    "expectation": "The potatoes fall and roll away from the pile, coming to rest scattered; they do not stack or stay in the sack's shape."
+  },
+  {
+    "id": "MECH-0324",
+    "caption": "A skydiver pulls the ripcord, and the parachute unfolds and snaps open into a canopy above her.",
+    "category": "Mechanics",
+    "subcategory": "gas_wind",
+    "violation_types": [
+      "material_response",
+      "trajectory_momentum"
+    ],
+    "expectation": "The canopy fills with air and rounds out above her, and her fall slows sharply the moment it opens; the lines go taut."
+  },
+  {
+    "id": "MECH-0325",
+    "caption": "A sailor lets the sail of a small boat loose in a breeze, and the sail fills and bellies out to one side.",
+    "category": "Mechanics",
+    "subcategory": "gas_wind",
+    "violation_types": [
+      "causeless_motion",
+      "material_response"
+    ],
+    "expectation": "The sail bulges away from the wind and flaps when the wind drops; it does not belly toward the wind."
+  },
+  {
+    "id": "MECH-0326",
+    "caption": "A gust of wind reaches a row of wind turbines on a hill, and the blades start turning and speed up.",
+    "category": "Mechanics",
+    "subcategory": "gas_wind",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blades begin turning only when the wind arrives and slow when it drops; all turbines turn the same way."
+  },
+  {
+    "id": "MECH-0327",
+    "caption": "A gymnast performs a cartwheel across a mat, hands then feet touching the ground in turn.",
+    "category": "Mechanics",
+    "subcategory": "biomechanics",
+    "violation_types": [
+      "shape_identity",
+      "gravity_direction"
+    ],
+    "expectation": "Her hands and feet touch the mat one after another in sequence, her body stays whole and bends only at the joints, and she lands upright."
+  },
+  {
+    "id": "MECH-0328",
+    "caption": "A window cleaner climbs a ladder rung by rung to reach a second-floor window.",
+    "category": "Mechanics",
+    "subcategory": "biomechanics",
+    "violation_types": [
+      "shape_identity",
+      "solidity"
+    ],
+    "expectation": "Hands and feet alternate on the rungs and rest on top of them, not through them; the ladder stays against the wall."
+  },
+  {
+    "id": "MECH-0329",
+    "caption": "Two teammates run toward each other and high-five, their hands slapping together and stopping.",
+    "category": "Mechanics",
+    "subcategory": "biomechanics",
+    "violation_types": [
+      "solidity",
+      "shape_identity"
+    ],
+    "expectation": "The hands stop at contact and rebound slightly; they do not pass through each other; each hand keeps five fingers."
+  },
+  {
+    "id": "MECH-0330",
+    "caption": "A baby crawls across a living-room rug toward a toy.",
+    "category": "Mechanics",
+    "subcategory": "biomechanics",
+    "violation_types": [
+      "shape_identity",
+      "permanence_count"
+    ],
+    "expectation": "Hands and knees move in alternation, the body stays whole with two arms and two legs, and the baby moves forward only as the limbs move."
+  },
+  {
+    "id": "MECH-0331",
+    "caption": "A nurse folds a bedsheet in half lengthwise and then in half again, smoothing the folds flat.",
+    "category": "Mechanics",
+    "subcategory": "soft_material",
+    "violation_types": [
+      "shape_identity",
+      "material_response"
+    ],
+    "expectation": "The sheet bends along each fold and lies flat on itself; it gets smaller with each fold and does not stiffen or fold by itself."
+  },
+  {
+    "id": "MECH-0332",
+    "caption": "A man pulls a sock over his foot, stretching the opening and drawing the fabric up over his heel and ankle.",
+    "category": "Mechanics",
+    "subcategory": "soft_material",
+    "violation_types": [
+      "shape_identity",
+      "solidity"
+    ],
+    "expectation": "The sock stretches around the foot and follows its shape; the foot goes into the opening, not through the fabric."
+  },
+  {
+    "id": "MECH-0333",
+    "caption": "A florist wraps a bouquet in a sheet of cellophane, folding the sheet around the stems and creasing it at the corners.",
+    "category": "Mechanics",
+    "subcategory": "soft_material",
+    "violation_types": [
+      "shape_identity",
+      "solidity"
+    ],
+    "expectation": "The sheet bends around the stems and keeps the creases where pressed; it does not pass through the stems or unfold on its own."
+  },
+  {
+    "id": "MECH-0334",
+    "caption": "A deckhand throws a coil of rope onto the dock, and it lands in a loose tangle of loops.",
+    "category": "Mechanics",
+    "subcategory": "soft_material",
+    "violation_types": [
+      "shape_identity",
+      "solidity"
+    ],
+    "expectation": "The rope bends into loops that lie on top of one another; it does not pass through itself or land in a straight line."
+  },
+  {
+    "id": "MECH-0335",
+    "caption": "A boy pushes a coin under the edge of a rug with his finger, and when he lifts the rug the coin lies where he pushed it.",
+    "category": "Mechanics",
+    "subcategory": "occlusion_containment",
+    "violation_types": [
+      "permanence_count",
+      "solidity"
+    ],
+    "expectation": "A small bump shows in the rug where the coin is; the coin is hidden while covered and is the same coin, in that spot, when the rug is lifted."
+  },
+  {
+    "id": "MECH-0336",
+    "caption": "A bus drives behind a tall building and emerges from the other side a moment later.",
+    "category": "Mechanics",
+    "subcategory": "occlusion_containment",
+    "violation_types": [
+      "permanence_count",
+      "trajectory_momentum"
+    ],
+    "expectation": "The bus is hidden for a time matching its speed and the building's width, and reappears at the same speed and heading; it does not show through the building."
+  },
+  {
+    "id": "MECH-0337",
+    "caption": "A boy drops a marble into the top of a long cardboard tube held upright, and the marble comes out of the bottom and rolls away.",
+    "category": "Mechanics",
+    "subcategory": "occlusion_containment",
+    "violation_types": [
+      "permanence_count",
+      "gravity_direction"
+    ],
+    "expectation": "The marble is hidden inside the tube and exits at the bottom after a short delay; the same marble comes out, and nothing exits before it enters."
+  },
+  {
+    "id": "MECH-0338",
+    "caption": "A cat crawls under a blanket on a bed, and a moving lump travels across the blanket to the far edge, where the cat comes out.",
+    "category": "Mechanics",
+    "subcategory": "occlusion_containment",
+    "violation_types": [
+      "permanence_count",
+      "solidity"
+    ],
+    "expectation": "The lump is the cat's size and moves continuously; the cat is not visible through the blanket and emerges only at the edge."
+  },
+  {
+    "id": "HEAT-0251",
+    "caption": "A slice of cheese is laid on a hot dog straight off the grill, and the cheese softens and slumps over the sides.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "material_response"
+    ],
+    "expectation": "The slice loses its stiff edges and drapes down over the sausage; it does not stay square or re-harden on the hot surface."
+  },
+  {
+    "id": "HEAT-0252",
+    "caption": "A child presses a warm cookie fresh from the oven, and the chocolate chips inside squash and smear under her finger.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "material_response"
+    ],
+    "expectation": "The chips are soft and spread under pressure; they do not crack or stay hard while the cookie is warm."
+  },
+  {
+    "id": "HEAT-0253",
+    "caption": "A woman drops an ice cube into a cup of hot tea, and the cube shrinks and disappears within moments.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The cube floats, rounds off, and gets smaller until it is gone; it does not grow or sink while still whole."
+  },
+  {
+    "id": "HEAT-0254",
+    "caption": "A snowball thrown against a warm sunlit window sticks for a moment, then slides down the glass as it melts, leaving a wet streak.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction"
+    ],
+    "expectation": "The snow softens, slides downward, and leaves water behind; it does not climb or refreeze on the warm glass."
+  },
+  {
+    "id": "HEAT-0255",
+    "caption": "A car's heater blows on a frost-covered side mirror, and the frost turns to droplets that run down the mirror.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction"
+    ],
+    "expectation": "The frost clears where the warm air reaches first and the water runs downward; the frost does not re-form while the heater runs."
+  },
+  {
+    "id": "HEAT-0256",
+    "caption": "A lollipop left on a car dashboard in the sun sags and bends over on its stick.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "material_response",
+      "gravity_direction"
+    ],
+    "expectation": "The candy softens and droops downward under its own weight; it does not stand back up while warm."
+  },
+  {
+    "id": "HEAT-0257",
+    "caption": "A cook dips an apple into hot caramel and sets it on a cold plate, and the caramel coating firms up into a glossy shell.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "material_response"
+    ],
+    "expectation": "The caramel drips a little, slows, and stops running as it cools; the shell is firm and does not become liquid again."
+  },
+  {
+    "id": "HEAT-0258",
+    "caption": "Melted chocolate from a fondue pot drips onto a chilled plate and sets into raised drops.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "material_response"
+    ],
+    "expectation": "Each drop spreads slightly on landing, then stops and dulls as it sets; the drops do not keep flowing across the cold plate."
+  },
+  {
+    "id": "HEAT-0259",
+    "caption": "A child's snow cone sits in the sun and melts into a puddle of coloured syrup in the paper cup.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The mound of ice shrinks and the liquid rises in the cup, keeping the colour; the ice does not re-form."
+  },
+  {
+    "id": "HEAT-0260",
+    "caption": "A chocolate bunny left on a shelf beside a radiator slumps, and its ears droop and bend over.",
+    "category": "Heat",
+    "subcategory": "melt_freeze",
+    "violation_types": [
+      "process_direction",
+      "material_response",
+      "gravity_direction"
+    ],
+    "expectation": "The parts nearest the heat soften first and sag downward under their own weight; the bunny does not stand back up while warm."
+  },
+  {
+    "id": "HEAT-0261",
+    "caption": "A cook stir-fries vegetables in a wok, and a cloud of steam rises with each toss.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "Steam rises from the hot food and thins above the wok; each toss releases a fresh burst; it does not sink."
+  },
+  {
+    "id": "HEAT-0262",
+    "caption": "A hot tub sits outside on a cold night, and steam drifts up from its surface into the dark.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "The steam rises from the whole surface and drifts with any breeze, thinning as it rises; it does not settle downward."
+  },
+  {
+    "id": "HEAT-0263",
+    "caption": "A woman runs a hot bath, and steam rises from the falling water and fills the bathroom.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "The steam rises from the tap stream and the bath surface and collects near the ceiling; the mirror may fog."
+  },
+  {
+    "id": "HEAT-0264",
+    "caption": "A man pours boiling water into a glass French press, and steam rises from the top while the coffee grounds swirl up through the water.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "Steam rises from the open top and thins; the grounds churn up with the pour and settle afterwards; steam does not sink."
+  },
+  {
+    "id": "HEAT-0265",
+    "caption": "A tenant opens the bleed valve on an old radiator, and a hiss of steam escapes until water spurts out and he shuts it.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The steam jet rises from the valve while it is open and stops when the water arrives and the valve is closed."
+  },
+  {
+    "id": "HEAT-0266",
+    "caption": "A cleaner presses a steam cleaner nozzle to a carpet, and steam puffs out around the nozzle and the carpet darkens with damp.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "missing_consequence"
+    ],
+    "expectation": "Steam rises from around the nozzle only while the trigger is pressed and the carpet is wet where the nozzle has been."
+  },
+  {
+    "id": "HEAT-0267",
+    "caption": "A pot of jam boils on a stove, and the surface foams up and bubbles thickly.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "process_direction",
+      "material_response"
+    ],
+    "expectation": "The foam rises while the heat is on and sinks back when the pot is pulled off; the bubbles burst slowly on the thick surface."
+  },
+  {
+    "id": "HEAT-0268",
+    "caption": "A pot of potatoes boils with its lid on, and the lid rattles and lifts as steam escapes around its edge.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The lid jumps in time with the puffs of steam and steam rises from the gap; the rattling stops when the heat is turned down."
+  },
+  {
+    "id": "HEAT-0269",
+    "caption": "A man pours hot water from a thermos onto a frozen car door lock, and steam rises from the lock as the ice runs off.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "Steam rises where the hot water hits and the water runs downward off the door; the ice does not re-form while the water is hot."
+  },
+  {
+    "id": "HEAT-0270",
+    "caption": "A barber unrolls a hot towel for a shave, and steam rises from the cloth as it opens.",
+    "category": "Heat",
+    "subcategory": "boil_steam",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "Steam rises from the whole unfolded towel, thickest as it is first opened, and fades as the towel cools."
+  },
+  {
+    "id": "HEAT-0271",
+    "caption": "A woman lifts cold cans of drink out of an ice bucket at a picnic, and the cans sweat and drip in the sun.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction"
+    ],
+    "expectation": "Moisture appears on the cans, gathers into drops, and runs down; the cans stay wet while cold."
+  },
+  {
+    "id": "HEAT-0272",
+    "caption": "A snorkeler's mask fogs on the inside as she breathes while floating in warm water.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "attribute_drift"
+    ],
+    "expectation": "The fog forms on the inner surface and thickens with each breath; rinsing the mask clears it."
+  },
+  {
+    "id": "HEAT-0273",
+    "caption": "A takeaway coffee cup with a plastic lid is set on a desk, and the underside of the lid clouds with droplets.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction"
+    ],
+    "expectation": "Droplets form on the inner face of the lid and drip back into the coffee; the outside of the lid stays dry."
+  },
+  {
+    "id": "HEAT-0274",
+    "caption": "A chilled cocktail glass is set on a bar in a warm room, and a film of mist forms on it and turns into running drops.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction"
+    ],
+    "expectation": "The mist appears evenly on the cold glass and beads run down to wet the bar mat; the glass does not dry while cold."
+  },
+  {
+    "id": "HEAT-0275",
+    "caption": "A metal water bottle packed with ice sits on a gym bench, and a wet patch spreads on the bench beneath it.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction"
+    ],
+    "expectation": "Droplets form on the cold metal and run down to the base, and the patch grows while the bottle stays cold."
+  },
+  {
+    "id": "HEAT-0276",
+    "caption": "A shop worker opens the glass door of a walk-in freezer, and the door's glass fogs over as warm air hits it.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "attribute_drift"
+    ],
+    "expectation": "The fog forms on the cold glass within moments of opening and clears slowly once the door is shut and the glass warms."
+  },
+  {
+    "id": "HEAT-0277",
+    "caption": "A cold yogurt tub taken from the fridge sits on a sunny windowsill, and the lid and sides bead with water.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "Moisture appears on the cold plastic and forms drops that run down; the tub does not dry off while cold."
+  },
+  {
+    "id": "HEAT-0278",
+    "caption": "A man exhales onto his cold sunglasses to clean them, and the lenses fog and then clear as he wipes.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The fog appears with the breath and vanishes where the cloth passes; the wiped part stays clear."
+  },
+  {
+    "id": "HEAT-0279",
+    "caption": "A dentist puts a small cold mirror into a patient's mouth, and the mirror fogs over at once; she wipes it and it clears.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The fog appears the moment the cold mirror meets the warm breath and clears where wiped; it re-fogs if left in."
+  },
+  {
+    "id": "HEAT-0280",
+    "caption": "A cyclist stops at a light on a frosty morning, and his glasses fog with his heavy breathing; they clear again as he rides on.",
+    "category": "Heat",
+    "subcategory": "condensation",
+    "violation_types": [
+      "process_direction",
+      "attribute_drift"
+    ],
+    "expectation": "The lenses cloud while he breathes hard standing still and clear once moving air passes over them."
+  },
+  {
+    "id": "HEAT-0281",
+    "caption": "A man opens the door of a wood stove, and the flames inside lean out toward the opening and flare up.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The flames grow and lean as the door opens and settle back when it shuts; they always point upward from the logs."
+  },
+  {
+    "id": "HEAT-0282",
+    "caption": "A birthday cake with lit candles is carried across a room, and the flames lean backward as it moves and stand up when it is set down.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The flames trail opposite to the direction of motion, flicker, and return to pointing upward when the cake stops; none goes out unless blown."
+  },
+  {
+    "id": "HEAT-0283",
+    "caption": "A farmer burns stubble in a field, and a line of flame advances across the field with the wind, smoke drifting ahead of it.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "process_direction",
+      "causeless_motion"
+    ],
+    "expectation": "The fire line moves downwind, blackened ground is left behind it, and the smoke leans the same way as the flames."
+  },
+  {
+    "id": "HEAT-0284",
+    "caption": "A man uses a small blowtorch to light charcoal in a barbecue, and the coals begin to glow where the flame touches them.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "process_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The glow appears only where the torch is aimed and spreads slowly to neighbouring coals; the flame points where the torch points."
+  },
+  {
+    "id": "HEAT-0285",
+    "caption": "A boy tosses a dry pine cone into a fireplace, and it catches, glows, and crumbles into embers.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The cone lights where it touches the flames, burns from that side, and shrinks into glowing pieces that fade; it does not return whole."
+  },
+  {
+    "id": "HEAT-0286",
+    "caption": "A candle burns inside a glass lantern hung outdoors, and its flame flickers as gusts pass but stays lit.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The flame leans and dances with each gust and stands upright between gusts; the glass protects it from going out."
+  },
+  {
+    "id": "HEAT-0287",
+    "caption": "A man drops a lit match into a puddle, and it goes out with a tiny hiss and floats dark on the water.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The flame dies the instant the match hits the water and does not relight; a wisp of smoke rises."
+  },
+  {
+    "id": "HEAT-0288",
+    "caption": "Bread left too long in a toaster smokes, and a grey plume rises from the slots.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "The smoke rises straight up from the slots and spreads near the ceiling; it does not pour out sideways along the counter."
+  },
+  {
+    "id": "HEAT-0289",
+    "caption": "A cook fans the glowing coals of a grill with a piece of cardboard, and the coals brighten with each wave.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The glow intensifies during each wave and eases between them; sparks may lift with the air and fade."
+  },
+  {
+    "id": "HEAT-0290",
+    "caption": "A child pokes a campfire with a stick until its tip catches fire, then pulls it out and blows it out, leaving a glowing ember that slowly fades.",
+    "category": "Heat",
+    "subcategory": "burn_smoke",
+    "violation_types": [
+      "process_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The tip lights only while in the flames, the flame dies at the puff of breath, and the ember dims steadily; it does not reflame on its own."
+  },
+  {
+    "id": "HEAT-0291",
+    "caption": "A sealed yogurt pot left in a hot car bulges until its foil lid domes upward.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "shape_identity",
+      "process_direction"
+    ],
+    "expectation": "The lid rises gradually as the car heats and stays domed in the heat; it does not sink inward."
+  },
+  {
+    "id": "HEAT-0292",
+    "caption": "A hot-air popcorn machine is switched on, and popped kernels burst out of the chute into a bowl.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "process_direction",
+      "permanence_count",
+      "shape_identity"
+    ],
+    "expectation": "Kernels pop into much larger pieces and are blown out only after the machine has heated; the flow stops when it is switched off."
+  },
+  {
+    "id": "HEAT-0293",
+    "caption": "A camper's inflatable pillow left in a tent under the midday sun swells until it is taut and firm.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "shape_identity",
+      "process_direction"
+    ],
+    "expectation": "The pillow grows firmer and rounder as the tent heats and softens again in the evening; it does not shrink in the heat."
+  },
+  {
+    "id": "HEAT-0294",
+    "caption": "Candles are lit beneath a wooden Christmas pyramid, and its fan blades start turning and the figures rotate.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The blades turn only after the candles are lit and slow to a stop when they are blown out."
+  },
+  {
+    "id": "HEAT-0295",
+    "caption": "Heat shimmer rises off the black roof of a car parked in the sun, and the building behind the car wavers through it.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "The shimmer rises from the hot roof and fades with height; the building itself does not move."
+  },
+  {
+    "id": "HEAT-0296",
+    "caption": "A hot dog on a grill sizzles, and its skin splits open along its length with a pop.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "process_direction",
+      "shape_identity"
+    ],
+    "expectation": "The split appears suddenly along one line and gapes open; it does not close again."
+  },
+  {
+    "id": "HEAT-0297",
+    "caption": "A cook drops a papadum into hot oil, and it puffs up and doubles in size within seconds.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "shape_identity",
+      "process_direction"
+    ],
+    "expectation": "The flat disc blisters and expands as soon as it hits the oil and keeps its puffed shape when lifted out; it does not shrink back."
+  },
+  {
+    "id": "HEAT-0298",
+    "caption": "A cook sets a pan straight from the stove onto a thin plastic cutting board, and the board warps and its edges lift.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "material_response",
+      "process_direction"
+    ],
+    "expectation": "The board bends under and around the hot pan and keeps some of the warp after the pan is removed; it does not stay perfectly flat."
+  },
+  {
+    "id": "HEAT-0299",
+    "caption": "A sealed bag of chips left on a hot dashboard puffs up tight like a pillow.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "shape_identity",
+      "process_direction"
+    ],
+    "expectation": "The bag swells gradually in the heat and stays swollen; it does not shrink in the hot car."
+  },
+  {
+    "id": "HEAT-0300",
+    "caption": "A cook slides rice crackers into hot oil, and they swell and float to the surface.",
+    "category": "Heat",
+    "subcategory": "heat_response",
+    "violation_types": [
+      "shape_identity",
+      "gravity_direction",
+      "process_direction"
+    ],
+    "expectation": "The crackers puff up within moments of entering the oil and rise to float; they do not sink once puffed or shrink back."
+  },
+  {
+    "id": "OPT-0251",
+    "caption": "A street performer juggles three balls in the afternoon sun, and the shadows of the balls dance across the pavement beneath him.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "Each ball has one shadow that moves with it on the ground, offset away from the sun; the shadows meet the balls only when they are caught low."
+  },
+  {
+    "id": "OPT-0252",
+    "caption": "A woman walks her dog past a floodlit sports field at night, and their shadows stretch long across the grass away from the lights.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "Both shadows lie on the side away from the floodlights, move with the walkers, and stay attached at their feet."
+  },
+  {
+    "id": "OPT-0253",
+    "caption": "A child holds a toy plane up in the sun and swoops it around, and the plane's shadow swoops across the sandpit below.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow moves in step with the toy, grows larger as the toy is lowered toward the sand, and lies away from the sun."
+  },
+  {
+    "id": "OPT-0254",
+    "caption": "A cook holds a whisk between a lamp and a kitchen wall, and the shadow of the whisk's wires appears on the wall and spins as she twirls it.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The shadow shows the wire outline, turns as the whisk turns, and disappears when she moves the whisk out of the light."
+  },
+  {
+    "id": "OPT-0255",
+    "caption": "A parked bicycle casts a sharp shadow on a sunny wall, and a passing cloud makes the shadow fade and then return.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The shadow softens and vanishes as the cloud covers the sun and comes back in the same place when the sun returns; the bike does not move."
+  },
+  {
+    "id": "OPT-0256",
+    "caption": "A tennis player serves at night under stadium floodlights, and several faint shadows fan out from her feet in different directions.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "Each shadow points away from one of the floodlights; they all move with her and none points toward a light."
+  },
+  {
+    "id": "OPT-0257",
+    "caption": "A hiker holds a map up in bright sun, and the shadow of the map falls across her body and the ground.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The shadow has the map's rectangular outline, lies on the side away from the sun, and moves when the map moves."
+  },
+  {
+    "id": "OPT-0258",
+    "caption": "A cat sits on a sunny fence, jumps down, and its shadow leaves the fence and lands with it on the ground.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "gravity_direction"
+    ],
+    "expectation": "The shadow stays on the surfaces below the cat, separates during the jump, and rejoins at the paws on landing."
+  },
+  {
+    "id": "OPT-0259",
+    "caption": "A stage technician moves a spotlight across a dancer, and the dancer's shadow on the backdrop swings the opposite way.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow moves in the direction opposite to the light's movement and always falls away from the spotlight."
+  },
+  {
+    "id": "OPT-0260",
+    "caption": "A jogger runs across a bridge at sunset, and her long shadow runs along the bridge deck beside her.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow is much longer than she is tall, lies on the side away from the low sun, and keeps pace with her."
+  },
+  {
+    "id": "OPT-0261",
+    "caption": "A woman applies lipstick using the reflection in a car's side mirror, and the reflected hand moves the lipstick in step with hers.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection moves at the same instant and is mirrored; it shows her face at the size the small mirror allows."
+  },
+  {
+    "id": "OPT-0262",
+    "caption": "A family stands on a jetty over a still lake, and their upside-down reflections stand beneath them in the water.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The reflections are inverted, joined at the jetty's waterline, and move with the people; they blur where a ripple passes."
+  },
+  {
+    "id": "OPT-0263",
+    "caption": "A child sticks her tongue out at a shop window, and her reflection in the glass sticks its tongue out back.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflected face moves at the same instant and is faint over the goods displayed behind the glass; it is mirrored."
+  },
+  {
+    "id": "OPT-0264",
+    "caption": "A boy wipes a fogged bus window with his sleeve at night, and his reflection appears in the clear patch.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The reflection appears only in the wiped patch and moves with him; the fogged parts stay blurred."
+  },
+  {
+    "id": "OPT-0265",
+    "caption": "A child looks into a puddle as a bird flies overhead, and the bird's reflection crosses the puddle upside down and leaves at its edge.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflected bird appears only within the puddle, inverted, and moves in step with the real bird."
+  },
+  {
+    "id": "OPT-0266",
+    "caption": "A woman swings a wardrobe's mirrored door closed, and the reflected room sweeps across the mirror until it shows only the wall.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The scene in the mirror slides smoothly as the door turns and changes to whatever the mirror faces; it does not stay fixed on one view."
+  },
+  {
+    "id": "OPT-0267",
+    "caption": "A man adjusts a mirror in a hallway so that the front door appears in it, and the door's reflection shifts as he tilts the mirror.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The reflected door slides across the mirror as it tilts and leaves the mirror when the angle is too great."
+  },
+  {
+    "id": "OPT-0268",
+    "caption": "A dog drinks from a still pond, and its reflection breaks into ripples where its tongue touches the water.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection is inverted and sharp until the tongue touches; it fragments where ripples spread and settles when the dog stops."
+  },
+  {
+    "id": "OPT-0269",
+    "caption": "A car drives past a puddle at night, and the reflections of its headlights slide across the puddle's surface.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The reflected lights move with the car and appear only within the puddle's edges; they vanish when the car has passed."
+  },
+  {
+    "id": "OPT-0270",
+    "caption": "A woman polishes a brass doorknob until her face appears in it, small and warped.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection appears as the surface is polished, is curved by the knob, and moves when she moves."
+  },
+  {
+    "id": "OPT-0271",
+    "caption": "A boy stands a pencil in a glass of water, and the pencil appears to break at the waterline.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The apparent break is at the surface and vanishes when the pencil is lifted out; the pencil itself is straight."
+  },
+  {
+    "id": "OPT-0272",
+    "caption": "A woman peers through the glass door of an oven at a cake inside, and the cake is visible until the glass steams over and hides it.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The cake is seen clearly through the clear glass and becomes a blur as the fog forms from the inside; wiping the outside does not clear it."
+  },
+  {
+    "id": "OPT-0273",
+    "caption": "A man reads a menu through the clear glass top of a café table, and the menu is legible through the glass.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "solidity"
+    ],
+    "expectation": "The menu is seen sharply through the glass with a faint reflection over it; the glass does not hide it."
+  },
+  {
+    "id": "OPT-0274",
+    "caption": "A child watches a goldfish through a curved bowl, and the fish appears to swell and shrink as it swims around the curve.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The size change happens only through the curved glass and water; the fish keeps its true size and shape."
+  },
+  {
+    "id": "OPT-0275",
+    "caption": "A woman holds a magnifying glass over a map, and the streets under the lens appear enlarged and shift as she moves it.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "Only the area under the lens is enlarged and it moves with the lens; the map outside is normal."
+  },
+  {
+    "id": "OPT-0276",
+    "caption": "A cat sits behind a glass patio door watching a bird on the lawn, paws at the glass, and cannot reach the bird.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "solidity"
+    ],
+    "expectation": "The bird is visible through the glass and the paw stops at the pane; the cat does not pass through and the bird is not hidden."
+  },
+  {
+    "id": "OPT-0277",
+    "caption": "A boy looks at a lamp through a clear glass bottle of water, and the lamp appears stretched and doubled through the bottle.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The distortion is confined to the view through the water and changes as the bottle turns; the lamp itself is unchanged."
+  },
+  {
+    "id": "OPT-0278",
+    "caption": "A child looks at the street lights through a glass of fizzy water, and the lights wobble and sparkle as bubbles rise through the glass.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "causeless_motion"
+    ],
+    "expectation": "The distortion changes with the rising bubbles and the lights are steady when seen past the glass; the lights themselves do not move."
+  },
+  {
+    "id": "OPT-0279",
+    "caption": "A motorcyclist's visor is speckled with rain, and the road lights ahead smear into streaks until he wipes the visor with his glove.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The smearing follows the drops and clears where the glove passes; the lights are sharp through the wiped area."
+  },
+  {
+    "id": "OPT-0280",
+    "caption": "A child looks at a flower through a clear glass paperweight, and the flower appears bloated and curved through the glass.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The distortion appears only through the glass and moves as the paperweight moves; the flower is normal beside it."
+  },
+  {
+    "id": "OPT-0281",
+    "caption": "A woman enters a dark garage and pulls the cord of a bare bulb, and the garage is lit.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The room goes from dark to lit at the pull and stays lit; sharp shadows of the tools appear away from the bulb."
+  },
+  {
+    "id": "OPT-0282",
+    "caption": "A camper points a headlamp at a tent wall and turns his head slowly, and the bright patch slides across the canvas.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The patch moves with his head and the canvas he looks away from darkens; the light is brightest at the patch's centre."
+  },
+  {
+    "id": "OPT-0283",
+    "caption": "A man lights a lantern in a dark barn, and the nearby hay and beams brighten while the far end stays in shadow.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "Brightness is greatest near the lantern and falls off with distance; shadows fall away from it."
+  },
+  {
+    "id": "OPT-0284",
+    "caption": "A woman turns off a floor lamp in a living room, and the corner of the room goes dark while the rest stays lit by the ceiling light.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "Only the lamp's light disappears; the corner it lit darkens while other areas are unchanged."
+  },
+  {
+    "id": "OPT-0285",
+    "caption": "A car with its headlights on turns a corner at night, and the beams sweep across a row of parked cars.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "Each parked car brightens as the beams cross it and darkens after; the lit area moves with the turning car."
+  },
+  {
+    "id": "OPT-0286",
+    "caption": "A boy holds a flashlight against his palm in a dark room, and his fingers glow red at the edges.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The glow appears only where the flesh is thin and disappears when the light is turned off; little light passes through the palm."
+  },
+  {
+    "id": "OPT-0287",
+    "caption": "A projector is switched on in a dark classroom, and the screen lights up while the faces in the front row glow in its light.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The screen is bright and the nearby faces are lit from the screen's direction; the back of the room stays dim."
+  },
+  {
+    "id": "OPT-0288",
+    "caption": "A woman opens a laptop in a dark bedroom, and the screen's glow lights her face and the pillow beside her.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The glow appears when the screen lights, is strongest on surfaces facing it, and changes with the picture."
+  },
+  {
+    "id": "OPT-0289",
+    "caption": "A watchman walks along a dark corridor with a torch, and the doors ahead are lit one by one as he approaches and darken behind him.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The lit area travels with the torch; doors brighten as the beam reaches them and darken once it has passed."
+  },
+  {
+    "id": "OPT-0290",
+    "caption": "The sun comes out from behind a cloud over a beach, and the sand and sea brighten all at once.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The whole scene brightens together and sharp shadows appear; it dims again when the next cloud passes."
+  },
+  {
+    "id": "OPT-0291",
+    "caption": "A child kneads a lump of red play-dough together with a lump of blue, and the mixture turns purple.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "Purple appears where the two colours fold together and spreads until no streaks remain; the colours do not separate again."
+  },
+  {
+    "id": "OPT-0292",
+    "caption": "A child drops a blue bath tablet into a bathtub, and blue spreads through the water until it is evenly tinted.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "process_direction",
+      "attribute_drift"
+    ],
+    "expectation": "The colour spreads from the tablet in plumes and evens out; the water does not become clear again."
+  },
+  {
+    "id": "OPT-0293",
+    "caption": "A green spotlight is aimed at a white marble statue in a garden at night, and the statue appears green.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The statue takes the light's colour only where the beam falls and returns to white when the light is switched off."
+  },
+  {
+    "id": "OPT-0294",
+    "caption": "Afternoon sun shines through a stained-glass lampshade on a windowsill, and coloured patches of light appear on the ceiling above it.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "Each patch matches the colour of the glass it came through and lies on the side away from the sun; the patches fade when the sun is covered."
+  },
+  {
+    "id": "OPT-0295",
+    "caption": "A rainbow appears in the mist at the foot of a waterfall on a sunny day, and fades when a cloud covers the sun.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The rainbow sits within the mist opposite the sun, keeps its arc while the sun shines, and disappears when the sun is hidden."
+  },
+  {
+    "id": "OPT-0296",
+    "caption": "A cook stirs a spoonful of cocoa into a glass of white milk, and the milk turns brown.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "Brown swirls spread from the spoon and even out; the milk does not return to white."
+  },
+  {
+    "id": "OPT-0297",
+    "caption": "A cyclist in a white jacket rides under an orange streetlamp and the jacket looks amber, then looks white again under a white LED lamp further on.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The jacket's colour follows the light falling on it and changes as she passes from one lamp to the next."
+  },
+  {
+    "id": "OPT-0298",
+    "caption": "A child holds a piece of green glass up to the sky, and the clouds seen through it look green.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "Only the view through the glass is tinted; the sky around it is unchanged."
+  },
+  {
+    "id": "OPT-0299",
+    "caption": "A crystal vase on a sunny table throws small rainbow flecks onto the wall, and they move as someone bumps the table.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The flecks appear only while the sun hits the vase, shift when the vase moves, and vanish when a cloud covers the sun."
+  },
+  {
+    "id": "OPT-0300",
+    "caption": "A bartender pours blue liqueur into a glass of orange juice and stirs, and the drink turns a murky green-brown.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "The colour changes where the liquids meet and evens out with stirring; the layers do not separate back."
+  },
+  {
+    "id": "ELEC-0251",
+    "caption": "A janitor flips a bank of switches in a school gym, and rows of ceiling lights come on one bank at a time.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "Each row lights at its own switch and only then; rows whose switch is untouched stay dark."
+  },
+  {
+    "id": "ELEC-0252",
+    "caption": "A woman turns the key on a desk lamp's base, and the lamp lights; she turns it again and it goes dark.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The light changes state exactly at each click and never on its own."
+  },
+  {
+    "id": "ELEC-0253",
+    "caption": "A man presses the button on a bicycle's front light, and it starts to flash; he holds the button and it switches to a steady beam.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The light responds only to the presses, flashing then steady; it does not change mode by itself."
+  },
+  {
+    "id": "ELEC-0254",
+    "caption": "A woman taps the touch panel of an induction hob, and the ring's indicator light comes on and the pan begins to warm.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The indicator lights at the tap; nothing lights before; tapping off darkens it."
+  },
+  {
+    "id": "ELEC-0255",
+    "caption": "A boy pulls the trigger of a battery-powered toy gun, and its barrel lights up and its motor whirs.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The light and whir start at the trigger pull and stop when it is released."
+  },
+  {
+    "id": "ELEC-0256",
+    "caption": "A shopkeeper presses the switch on a rotating display stand, and the stand begins to turn with its lights on.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The stand turns and lights only after the switch; it stops and darkens when switched off."
+  },
+  {
+    "id": "ELEC-0257",
+    "caption": "A man switches on a bathroom extractor fan with the light switch, and the fan blades spin up as the light comes on.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The fan starts with the light and stops a while after it is switched off; it does not spin with the switch off."
+  },
+  {
+    "id": "ELEC-0258",
+    "caption": "A child presses the big red button on a toy fire engine, and its roof lights flash.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The flashing starts at the press and stops after a set time or another press; the lights are dark before."
+  },
+  {
+    "id": "ELEC-0259",
+    "caption": "A woman flips the switch for a porch light at dusk, and the porch is lit while the garden beyond stays dark.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The light comes on at the switch, lights the porch, and goes off at the switch; nothing else changes."
+  },
+  {
+    "id": "ELEC-0260",
+    "caption": "A man unplugs a running desk fan, and the blades slow and stop.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The blades coast to a stop within a couple of seconds of the plug coming out even though the switch is still on."
+  },
+  {
+    "id": "ELEC-0261",
+    "caption": "A child inserts batteries into a toy keyboard and presses a key, and the key lights and the speaker cone twitches.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The toy works only after the batteries are in; before that pressing keys does nothing."
+  },
+  {
+    "id": "ELEC-0262",
+    "caption": "A woman plugs in a slow cooker and turns its dial to high, and the indicator light comes on; she unplugs it and the light goes out.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The light comes on only once plugged in and switched on, and goes off the instant the plug is pulled."
+  },
+  {
+    "id": "ELEC-0263",
+    "caption": "A man's electric shaver dies mid-shave as its battery runs out, and it will not restart when he presses the button.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The buzzing stops and stays stopped despite presses; it works again only after charging."
+  },
+  {
+    "id": "ELEC-0264",
+    "caption": "A power cut hits a restaurant, and every light and the neon sign in the window go dark at once while the candles on the tables keep burning.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "All electric lights fail at the same instant; the candle flames are unaffected."
+  },
+  {
+    "id": "ELEC-0265",
+    "caption": "A worker connects a floodlight to a running generator, and the floodlight comes on.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The lamp lights once plugged into the running generator and goes out if the generator is stopped."
+  },
+  {
+    "id": "ELEC-0266",
+    "caption": "A child's remote-control boat slows and stops in the middle of a pond as its battery runs flat.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The boat loses speed gradually and drifts to a stop; the controller no longer moves it."
+  },
+  {
+    "id": "ELEC-0267",
+    "caption": "A man drops a wireless earbud into its charging case, and a small light on the case begins to blink.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The light starts only when the earbud is seated in the case and stops when it is taken out."
+  },
+  {
+    "id": "ELEC-0268",
+    "caption": "A runner on a treadmill pulls out the safety key, and the belt slows and stops; it starts again only when the key is reinserted.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The belt coasts to a stop within a second or two of the key coming out and does not move until the key is back and the start pressed."
+  },
+  {
+    "id": "ELEC-0269",
+    "caption": "Lightning flashes over a vineyard at night, and the rows of vines are lit for an instant before the dark returns.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The flash is brief and lights everything at once; the vines are dark again immediately."
+  },
+  {
+    "id": "ELEC-0270",
+    "caption": "A lightning bolt strikes a hilltop radio mast, and the mast is outlined in a bright flash.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The bolt ends at the mast's tip, the flash lasts a fraction of a second, and the mast stands unchanged afterwards."
+  },
+  {
+    "id": "ELEC-0271",
+    "caption": "A family watches a storm from a covered porch, and a flash lights their faces before they flinch at the thunder.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The flash comes first and the reaction after; the light is gone before the reaction."
+  },
+  {
+    "id": "ELEC-0272",
+    "caption": "Lightning flashes over a snowy village at night, and the snow-covered roofs and street flash white for an instant.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The whole scene brightens together for a fraction of a second and returns to dark; the house lights stay steady."
+  },
+  {
+    "id": "ELEC-0273",
+    "caption": "A bolt of lightning forks from a cloud to a lone barn in a field, and smoke rises from the barn roof after the flash.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The bolt is brief and ends at the barn; the smoke appears after and rises; the roof does not glow."
+  },
+  {
+    "id": "ELEC-0274",
+    "caption": "Lightning flickers inside a thunderhead over a desert highway, lighting the cloud from within again and again.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "Each flicker is brief and lights the cloud, not the ground directly; no bolt reaches the road."
+  },
+  {
+    "id": "ELEC-0275",
+    "caption": "A lightning flash lights a hospital room through the blinds, throwing the blinds' striped shadow across the bed for an instant.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The stripes appear on the side away from the window only during the flash and vanish with it."
+  },
+  {
+    "id": "ELEC-0276",
+    "caption": "Lightning strikes the sea near a fishing boat at night, and the water around the strike is lit for an instant.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The bolt comes down to the water, the flash reflects on the surface, and darkness returns at once."
+  },
+  {
+    "id": "ELEC-0277",
+    "caption": "A rescue crew cuts a car roof with a power saw, and sparks spray from the blade across the wet road.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "gravity_direction",
+      "permanence_count",
+      "process_direction"
+    ],
+    "expectation": "Sparks fly out along the blade's direction, arc down onto the road, and die; they appear only while the blade is cutting."
+  },
+  {
+    "id": "ELEC-0278",
+    "caption": "A mechanic grinds a rusty bolt with a bench grinder, and a fan of sparks shoots off the wheel toward the floor.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "trajectory_momentum",
+      "gravity_direction",
+      "permanence_count"
+    ],
+    "expectation": "The sparks leave tangent to the wheel, arc down, and fade; they stop when the bolt is lifted away."
+  },
+  {
+    "id": "ELEC-0279",
+    "caption": "A skier's metal ski edges scrape across an exposed rock, and sparks flash from under the skis.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The sparks appear only during the scrape and go dark instantly; none appear on snow."
+  },
+  {
+    "id": "ELEC-0280",
+    "caption": "A trolleybus turns a corner on a wet evening, and its poles flash sparks against the overhead wires.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The sparks appear at the contact points and move with the bus; each flash is brief and no burning drops fall."
+  },
+  {
+    "id": "ELEC-0281",
+    "caption": "A hiker strikes a flint and steel over a pile of dry grass, and sparks fall onto the grass and one catches into a glow.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "gravity_direction",
+      "permanence_count",
+      "missing_consequence"
+    ],
+    "expectation": "The sparks fall downward and most die in the air; the glow appears where a spark landed, after the strike."
+  },
+  {
+    "id": "ELEC-0282",
+    "caption": "A car's exhaust pipe scrapes a speed bump at night, and a brief spray of sparks shoots out behind the car.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "trajectory_momentum",
+      "permanence_count"
+    ],
+    "expectation": "The sparks appear only during the scrape, trail backward, and fade at once."
+  },
+  {
+    "id": "ELEC-0283",
+    "caption": "A mechanic accidentally lays a wrench across both terminals of a car battery, and it sparks and jumps.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The spark flashes at the moment of contact and the wrench twitches; the spark is gone as soon as contact breaks."
+  },
+  {
+    "id": "ELEC-0284",
+    "caption": "A neon sign's box shorts in the rain, and sparks drop from beneath the sign onto the wet pavement.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "gravity_direction",
+      "permanence_count",
+      "process_direction"
+    ],
+    "expectation": "The sparks fall downward from the sign box and go dark before or as they land; the sign flickers with each spark."
+  },
+  {
+    "id": "ELEC-0285",
+    "caption": "A child sticks a magnet to a steel locker door, and it holds a drawing in place.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "gravity_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The magnet stays on the vertical steel with the paper under it and does not slide down."
+  },
+  {
+    "id": "ELEC-0286",
+    "caption": "A mechanic drops a screw into a narrow gap and fishes it out with a magnet on a stick, the screw jumping to the magnet.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The screw leaps only when the magnet is close and hangs from it as it is lifted out."
+  },
+  {
+    "id": "ELEC-0287",
+    "caption": "A teacher slides a magnet under a sheet of card, and a steel ball on top of the card rolls to follow it.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "causeless_motion",
+      "solidity"
+    ],
+    "expectation": "The ball moves only where the magnet moves beneath and stays on top of the card; it stops when the magnet stops."
+  },
+  {
+    "id": "ELEC-0288",
+    "caption": "A woman drops a steel spoon toward a knife rack's magnetic strip, and the spoon swerves and clicks onto the strip.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "trajectory_momentum",
+      "causeless_motion"
+    ],
+    "expectation": "The spoon's fall bends toward the strip only when close and it stops dead on contact."
+  },
+  {
+    "id": "ELEC-0289",
+    "caption": "A boy holds two toy train cars end to end and turns one around, and the ends that repelled now snap together.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "With one orientation the cars push apart; after turning one, they pull together over the last gap and stay joined."
+  },
+  {
+    "id": "ELEC-0290",
+    "caption": "A teacher tosses a whiteboard eraser with a magnetic back at the whiteboard, and it sticks where it hits.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "gravity_direction",
+      "trajectory_momentum"
+    ],
+    "expectation": "The eraser stops dead on contact and stays on the vertical board; it does not bounce off or slide down."
+  },
+  {
+    "id": "ELEC-0291",
+    "caption": "A child sweeps a magnet through a sandbox and lifts it out coated in dark grains while the sand falls away.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "Only the dark iron grains cling to the magnet; the ordinary sand drops back into the box."
+  },
+  {
+    "id": "ELEC-0292",
+    "caption": "A shopper sticks a magnetic phone holder to a steel shelf and hangs a phone on it, and both hold.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "gravity_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The holder stays on the vertical steel with the phone's weight and does not slide."
+  },
+  {
+    "id": "ELEC-0293",
+    "caption": "A child pulls two plastic cups apart from a stack, and one cup clings to her fingers and has to be shaken off.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "missing_consequence",
+      "gravity_direction"
+    ],
+    "expectation": "The cup stays on her hand when she opens her fingers and drops only after a shake; the other cups in the stack stay put."
+  },
+  {
+    "id": "ELEC-0294",
+    "caption": "A woman pulls a fleece hat off a toddler, and the toddler's fine hair stands straight up.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The hair rises as the hat comes off and settles slowly; it is flat before the hat moves."
+  },
+  {
+    "id": "ELEC-0295",
+    "caption": "A man unloads laundry from a dryer, and a dryer sheet clings to the back of his shirt without his noticing.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "missing_consequence",
+      "gravity_direction"
+    ],
+    "expectation": "The sheet stays stuck to the fabric as he moves and does not fall until pulled off."
+  },
+  {
+    "id": "ELEC-0296",
+    "caption": "A girl slides down a plastic slide and reaches for the metal ladder at the bottom, and she jerks her hand back at the shock.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The jerk happens at the moment of contact with the metal, not before."
+  },
+  {
+    "id": "ELEC-0297",
+    "caption": "A man peels the protective film off a new television screen, and the film clings to his arm and crackles.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "missing_consequence",
+      "material_response"
+    ],
+    "expectation": "The film sticks to skin and to itself where it touches and has to be pulled free; it does not drop straight down."
+  },
+  {
+    "id": "ELEC-0298",
+    "caption": "A boy rubs a plastic pen on his sleeve and holds it over a scattering of pepper on a plate, and the pepper grains jump onto the pen.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "Grains leap only when the rubbed pen is close and cling to it; an unrubbed pen does nothing."
+  },
+  {
+    "id": "ELEC-0299",
+    "caption": "A cat rubs against a wool blanket in a dark room, and tiny sparks crackle in its fur.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The sparks appear only where the fur moves against the wool and vanish instantly; nothing glows when the cat is still."
+  },
+  {
+    "id": "ELEC-0300",
+    "caption": "A woman rubs a balloon on her sleeve and holds it near a length of curling ribbon hanging from a gift, and the ribbon leans toward the balloon.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The ribbon swings toward the balloon only when it is close and hangs straight again when it is moved away."
+  },
+  {
+    "id": "ACOU-0101",
+    "caption": "A child strikes a large temple bell with a wooden beam, and the bell's rim shimmers and the bell sways on its hanger.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shimmer and sway begin at the strike and die away over several seconds; the bell is still before."
+  },
+  {
+    "id": "ACOU-0102",
+    "caption": "A boy strikes a horseshoe hanging from a string with a nail, and the horseshoe rings and quivers on its string.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The quiver and swing begin at the strike and fade over a few seconds; the horseshoe is still before."
+  },
+  {
+    "id": "ACOU-0103",
+    "caption": "A cook bangs a wok with a ladle, and the wok rings and quivers on its stand.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The quiver starts at the bang and fades within a second or two."
+  },
+  {
+    "id": "ACOU-0104",
+    "caption": "A gymnast dismounts from a balance beam, and the beam shivers along its length before settling.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shiver starts as she pushes off and dies away quickly; the beam is still before and after."
+  },
+  {
+    "id": "ACOU-0105",
+    "caption": "A man flicks the blade of a handsaw held by its handle, and the blade wobbles in a blur before going still.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blur is widest at the tip right after the flick and shrinks to stillness; the handle stays sharp."
+  },
+  {
+    "id": "ACOU-0106",
+    "caption": "A drummer hits a hanging tom-tom, and the head dips and shivers before returning flat.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The first dip is deepest and the rebounds shrink; the head is flat within a couple of seconds."
+  },
+  {
+    "id": "ACOU-0107",
+    "caption": "A child kicks a chain-link fence, and the mesh shivers outward from the kick along the panel.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shiver spreads from the kick point and dies away within seconds; the fence is still before."
+  },
+  {
+    "id": "ACOU-0108",
+    "caption": "A bass guitarist plays a low note through an amplifier, and the water in a glass on the amp shivers into ripples.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The ripples appear with the note and vanish when it stops; the glass does not slide off."
+  },
+  {
+    "id": "ACOU-0109",
+    "caption": "A garbage truck idles outside a house, and a hanging wind chime by the door trembles and tinkles while the engine runs.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The trembling lasts while the truck idles and stops after it drives away; the chime is still in quiet air."
+  },
+  {
+    "id": "ACOU-0110",
+    "caption": "A door is slammed in a hallway, and a framed mirror on the adjacent wall rocks on its hook before hanging still.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The rocking begins at the slam and dies out over a few seconds; the mirror does not move before."
+  },
+  {
+    "id": "ACOU-0111",
+    "caption": "A brass band plays in a square, and the loose glass of a nearby café window buzzes with the tuba notes.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The buzzing appears on the low notes and stops between them; the window is still when the band stops."
+  },
+  {
+    "id": "ACOU-0112",
+    "caption": "A cement mixer rumbles beside a garden wall, and pebbles on the wall's top shiver and shift.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The pebbles move only while the mixer runs and settle when it stops."
+  },
+  {
+    "id": "ACOU-0113",
+    "caption": "A church organ plays a deep pedal note, and a hymn book on a nearby pew shivers and slides to the edge.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The book moves only while the low note sounds and stops when it ends."
+  },
+  {
+    "id": "ACOU-0114",
+    "caption": "A heavy freight train passes a level crossing, and the coins in a cup holder of a waiting car rattle.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The rattling starts as the train arrives, is strongest as it passes, and stops once it has gone."
+  },
+  {
+    "id": "ACOU-0115",
+    "caption": "A moped idles at a kerb, and its exhaust pipe quivers visibly until the engine is switched off.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The quiver lasts as long as the engine runs and stops within a moment of it being cut."
+  },
+  {
+    "id": "ACOU-0116",
+    "caption": "A phone on vibrate buzzes on a nightstand and works its way to the edge before the alarm is silenced.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "trajectory_momentum"
+    ],
+    "expectation": "The phone moves in small jerks only while buzzing and stops the moment it is silenced."
+  },
+  {
+    "id": "ACOU-0117",
+    "caption": "A violinist plays a fast passage, and the bowed strings blur under the bow and sharpen as the bow lifts.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "Only the strings under the moving bow blur; they are sharp when the bow is off them."
+  },
+  {
+    "id": "ACOU-0118",
+    "caption": "A cook runs a hand-held blender in a jug of soup, and the shaft blurs and the jug trembles until she releases the button.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The blur and trembling exist only while the button is held and stop when it is released."
+  },
+  {
+    "id": "ACOU-0119",
+    "caption": "A carillon bell in a tower is struck by its hammer, and the hammer swings back while the bell's rim quivers.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The hammer moves only to strike and retreat; the quiver begins at the strike and fades."
+  },
+  {
+    "id": "ACOU-0120",
+    "caption": "A jackhammer is started on a pavement, and its bit blurs and the whole tool shudders in the worker's hands until he releases the trigger.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The shuddering lasts as long as the trigger is held and stops when it is released."
+  }
+]

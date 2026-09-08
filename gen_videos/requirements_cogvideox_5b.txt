@@ -1,0 +1,11 @@
+# Minimal Diffusers runtime for CogVideoX-5B inference.
+# PyTorch is installed separately from the CUDA wheel index.
+numpy==1.26.0
+diffusers==0.35.2
+accelerate==1.11.0
+transformers==4.57.1
+sentencepiece==0.2.1
+imageio==2.37.0
+imageio-ffmpeg==0.6.0
+huggingface-hub>=0.34,<1
+safetensors>=0.4

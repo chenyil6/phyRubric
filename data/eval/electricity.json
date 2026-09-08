@@ -1,0 +1,556 @@
+[
+  {
+    "id": "ELEC-0251",
+    "caption": "A janitor flips a bank of switches in a school gym, and rows of ceiling lights come on one bank at a time.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "Each row lights at its own switch and only then; rows whose switch is untouched stay dark."
+  },
+  {
+    "id": "ELEC-0252",
+    "caption": "A woman turns the key on a desk lamp's base, and the lamp lights; she turns it again and it goes dark.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The light changes state exactly at each click and never on its own."
+  },
+  {
+    "id": "ELEC-0253",
+    "caption": "A man presses the button on a bicycle's front light, and it starts to flash; he holds the button and it switches to a steady beam.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The light responds only to the presses, flashing then steady; it does not change mode by itself."
+  },
+  {
+    "id": "ELEC-0254",
+    "caption": "A woman taps the touch panel of an induction hob, and the ring's indicator light comes on and the pan begins to warm.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The indicator lights at the tap; nothing lights before; tapping off darkens it."
+  },
+  {
+    "id": "ELEC-0255",
+    "caption": "A boy pulls the trigger of a battery-powered toy gun, and its barrel lights up and its motor whirs.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The light and whir start at the trigger pull and stop when it is released."
+  },
+  {
+    "id": "ELEC-0256",
+    "caption": "A shopkeeper presses the switch on a rotating display stand, and the stand begins to turn with its lights on.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The stand turns and lights only after the switch; it stops and darkens when switched off."
+  },
+  {
+    "id": "ELEC-0257",
+    "caption": "A man switches on a bathroom extractor fan with the light switch, and the fan blades spin up as the light comes on.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The fan starts with the light and stops a while after it is switched off; it does not spin with the switch off."
+  },
+  {
+    "id": "ELEC-0258",
+    "caption": "A child presses the big red button on a toy fire engine, and its roof lights flash.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The flashing starts at the press and stops after a set time or another press; the lights are dark before."
+  },
+  {
+    "id": "ELEC-0259",
+    "caption": "A woman flips the switch for a porch light at dusk, and the porch is lit while the garden beyond stays dark.",
+    "category": "Electricity",
+    "subcategory": "switch_light",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The light comes on at the switch, lights the porch, and goes off at the switch; nothing else changes."
+  },
+  {
+    "id": "ELEC-0260",
+    "caption": "A man unplugs a running desk fan, and the blades slow and stop.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The blades coast to a stop within a couple of seconds of the plug coming out even though the switch is still on."
+  },
+  {
+    "id": "ELEC-0261",
+    "caption": "A child inserts batteries into a toy keyboard and presses a key, and the key lights and the speaker cone twitches.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The toy works only after the batteries are in; before that pressing keys does nothing."
+  },
+  {
+    "id": "ELEC-0262",
+    "caption": "A woman plugs in a slow cooker and turns its dial to high, and the indicator light comes on; she unplugs it and the light goes out.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The light comes on only once plugged in and switched on, and goes off the instant the plug is pulled."
+  },
+  {
+    "id": "ELEC-0263",
+    "caption": "A man's electric shaver dies mid-shave as its battery runs out, and it will not restart when he presses the button.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The buzzing stops and stays stopped despite presses; it works again only after charging."
+  },
+  {
+    "id": "ELEC-0264",
+    "caption": "A power cut hits a restaurant, and every light and the neon sign in the window go dark at once while the candles on the tables keep burning.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "All electric lights fail at the same instant; the candle flames are unaffected."
+  },
+  {
+    "id": "ELEC-0265",
+    "caption": "A worker connects a floodlight to a running generator, and the floodlight comes on.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The lamp lights once plugged into the running generator and goes out if the generator is stopped."
+  },
+  {
+    "id": "ELEC-0266",
+    "caption": "A child's remote-control boat slows and stops in the middle of a pond as its battery runs flat.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The boat loses speed gradually and drifts to a stop; the controller no longer moves it."
+  },
+  {
+    "id": "ELEC-0267",
+    "caption": "A man drops a wireless earbud into its charging case, and a small light on the case begins to blink.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The light starts only when the earbud is seated in the case and stops when it is taken out."
+  },
+  {
+    "id": "ELEC-0268",
+    "caption": "A runner on a treadmill pulls out the safety key, and the belt slows and stops; it starts again only when the key is reinserted.",
+    "category": "Electricity",
+    "subcategory": "plug_power",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The belt coasts to a stop within a second or two of the key coming out and does not move until the key is back and the start pressed."
+  },
+  {
+    "id": "ELEC-0269",
+    "caption": "Lightning flashes over a vineyard at night, and the rows of vines are lit for an instant before the dark returns.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The flash is brief and lights everything at once; the vines are dark again immediately."
+  },
+  {
+    "id": "ELEC-0270",
+    "caption": "A lightning bolt strikes a hilltop radio mast, and the mast is outlined in a bright flash.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The bolt ends at the mast's tip, the flash lasts a fraction of a second, and the mast stands unchanged afterwards."
+  },
+  {
+    "id": "ELEC-0271",
+    "caption": "A family watches a storm from a covered porch, and a flash lights their faces before they flinch at the thunder.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The flash comes first and the reaction after; the light is gone before the reaction."
+  },
+  {
+    "id": "ELEC-0272",
+    "caption": "Lightning flashes over a snowy village at night, and the snow-covered roofs and street flash white for an instant.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The whole scene brightens together for a fraction of a second and returns to dark; the house lights stay steady."
+  },
+  {
+    "id": "ELEC-0273",
+    "caption": "A bolt of lightning forks from a cloud to a lone barn in a field, and smoke rises from the barn roof after the flash.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The bolt is brief and ends at the barn; the smoke appears after and rises; the roof does not glow."
+  },
+  {
+    "id": "ELEC-0274",
+    "caption": "Lightning flickers inside a thunderhead over a desert highway, lighting the cloud from within again and again.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "Each flicker is brief and lights the cloud, not the ground directly; no bolt reaches the road."
+  },
+  {
+    "id": "ELEC-0275",
+    "caption": "A lightning flash lights a hospital room through the blinds, throwing the blinds' striped shadow across the bed for an instant.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The stripes appear on the side away from the window only during the flash and vanish with it."
+  },
+  {
+    "id": "ELEC-0276",
+    "caption": "Lightning strikes the sea near a fishing boat at night, and the water around the strike is lit for an instant.",
+    "category": "Electricity",
+    "subcategory": "lightning",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The bolt comes down to the water, the flash reflects on the surface, and darkness returns at once."
+  },
+  {
+    "id": "ELEC-0277",
+    "caption": "A rescue crew cuts a car roof with a power saw, and sparks spray from the blade across the wet road.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "gravity_direction",
+      "permanence_count",
+      "process_direction"
+    ],
+    "expectation": "Sparks fly out along the blade's direction, arc down onto the road, and die; they appear only while the blade is cutting."
+  },
+  {
+    "id": "ELEC-0278",
+    "caption": "A mechanic grinds a rusty bolt with a bench grinder, and a fan of sparks shoots off the wheel toward the floor.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "trajectory_momentum",
+      "gravity_direction",
+      "permanence_count"
+    ],
+    "expectation": "The sparks leave tangent to the wheel, arc down, and fade; they stop when the bolt is lifted away."
+  },
+  {
+    "id": "ELEC-0279",
+    "caption": "A skier's metal ski edges scrape across an exposed rock, and sparks flash from under the skis.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The sparks appear only during the scrape and go dark instantly; none appear on snow."
+  },
+  {
+    "id": "ELEC-0280",
+    "caption": "A trolleybus turns a corner on a wet evening, and its poles flash sparks against the overhead wires.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The sparks appear at the contact points and move with the bus; each flash is brief and no burning drops fall."
+  },
+  {
+    "id": "ELEC-0281",
+    "caption": "A hiker strikes a flint and steel over a pile of dry grass, and sparks fall onto the grass and one catches into a glow.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "gravity_direction",
+      "permanence_count",
+      "missing_consequence"
+    ],
+    "expectation": "The sparks fall downward and most die in the air; the glow appears where a spark landed, after the strike."
+  },
+  {
+    "id": "ELEC-0282",
+    "caption": "A car's exhaust pipe scrapes a speed bump at night, and a brief spray of sparks shoots out behind the car.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "trajectory_momentum",
+      "permanence_count"
+    ],
+    "expectation": "The sparks appear only during the scrape, trail backward, and fade at once."
+  },
+  {
+    "id": "ELEC-0283",
+    "caption": "A mechanic accidentally lays a wrench across both terminals of a car battery, and it sparks and jumps.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The spark flashes at the moment of contact and the wrench twitches; the spark is gone as soon as contact breaks."
+  },
+  {
+    "id": "ELEC-0284",
+    "caption": "A neon sign's box shorts in the rain, and sparks drop from beneath the sign onto the wet pavement.",
+    "category": "Electricity",
+    "subcategory": "spark",
+    "violation_types": [
+      "gravity_direction",
+      "permanence_count",
+      "process_direction"
+    ],
+    "expectation": "The sparks fall downward from the sign box and go dark before or as they land; the sign flickers with each spark."
+  },
+  {
+    "id": "ELEC-0285",
+    "caption": "A child sticks a magnet to a steel locker door, and it holds a drawing in place.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "gravity_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The magnet stays on the vertical steel with the paper under it and does not slide down."
+  },
+  {
+    "id": "ELEC-0286",
+    "caption": "A mechanic drops a screw into a narrow gap and fishes it out with a magnet on a stick, the screw jumping to the magnet.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The screw leaps only when the magnet is close and hangs from it as it is lifted out."
+  },
+  {
+    "id": "ELEC-0287",
+    "caption": "A teacher slides a magnet under a sheet of card, and a steel ball on top of the card rolls to follow it.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "causeless_motion",
+      "solidity"
+    ],
+    "expectation": "The ball moves only where the magnet moves beneath and stays on top of the card; it stops when the magnet stops."
+  },
+  {
+    "id": "ELEC-0288",
+    "caption": "A woman drops a steel spoon toward a knife rack's magnetic strip, and the spoon swerves and clicks onto the strip.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "trajectory_momentum",
+      "causeless_motion"
+    ],
+    "expectation": "The spoon's fall bends toward the strip only when close and it stops dead on contact."
+  },
+  {
+    "id": "ELEC-0289",
+    "caption": "A boy holds two toy train cars end to end and turns one around, and the ends that repelled now snap together.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "With one orientation the cars push apart; after turning one, they pull together over the last gap and stay joined."
+  },
+  {
+    "id": "ELEC-0290",
+    "caption": "A teacher tosses a whiteboard eraser with a magnetic back at the whiteboard, and it sticks where it hits.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "gravity_direction",
+      "trajectory_momentum"
+    ],
+    "expectation": "The eraser stops dead on contact and stays on the vertical board; it does not bounce off or slide down."
+  },
+  {
+    "id": "ELEC-0291",
+    "caption": "A child sweeps a magnet through a sandbox and lifts it out coated in dark grains while the sand falls away.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "Only the dark iron grains cling to the magnet; the ordinary sand drops back into the box."
+  },
+  {
+    "id": "ELEC-0292",
+    "caption": "A shopper sticks a magnetic phone holder to a steel shelf and hangs a phone on it, and both hold.",
+    "category": "Electricity",
+    "subcategory": "magnet",
+    "violation_types": [
+      "gravity_direction",
+      "missing_consequence"
+    ],
+    "expectation": "The holder stays on the vertical steel with the phone's weight and does not slide."
+  },
+  {
+    "id": "ELEC-0293",
+    "caption": "A child pulls two plastic cups apart from a stack, and one cup clings to her fingers and has to be shaken off.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "missing_consequence",
+      "gravity_direction"
+    ],
+    "expectation": "The cup stays on her hand when she opens her fingers and drops only after a shake; the other cups in the stack stay put."
+  },
+  {
+    "id": "ELEC-0294",
+    "caption": "A woman pulls a fleece hat off a toddler, and the toddler's fine hair stands straight up.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The hair rises as the hat comes off and settles slowly; it is flat before the hat moves."
+  },
+  {
+    "id": "ELEC-0295",
+    "caption": "A man unloads laundry from a dryer, and a dryer sheet clings to the back of his shirt without his noticing.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "missing_consequence",
+      "gravity_direction"
+    ],
+    "expectation": "The sheet stays stuck to the fabric as he moves and does not fall until pulled off."
+  },
+  {
+    "id": "ELEC-0296",
+    "caption": "A girl slides down a plastic slide and reaches for the metal ladder at the bottom, and she jerks her hand back at the shock.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The jerk happens at the moment of contact with the metal, not before."
+  },
+  {
+    "id": "ELEC-0297",
+    "caption": "A man peels the protective film off a new television screen, and the film clings to his arm and crackles.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "missing_consequence",
+      "material_response"
+    ],
+    "expectation": "The film sticks to skin and to itself where it touches and has to be pulled free; it does not drop straight down."
+  },
+  {
+    "id": "ELEC-0298",
+    "caption": "A boy rubs a plastic pen on his sleeve and holds it over a scattering of pepper on a plate, and the pepper grains jump onto the pen.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "Grains leap only when the rubbed pen is close and cling to it; an unrubbed pen does nothing."
+  },
+  {
+    "id": "ELEC-0299",
+    "caption": "A cat rubs against a wool blanket in a dark room, and tiny sparks crackle in its fur.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The sparks appear only where the fur moves against the wool and vanish instantly; nothing glows when the cat is still."
+  },
+  {
+    "id": "ELEC-0300",
+    "caption": "A woman rubs a balloon on her sleeve and holds it near a length of curling ribbon hanging from a gift, and the ribbon leans toward the balloon.",
+    "category": "Electricity",
+    "subcategory": "static",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The ribbon swings toward the balloon only when it is close and hangs straight again when it is moved away."
+  }
+]

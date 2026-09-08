@@ -1,0 +1,2753 @@
+[
+  {
+    "id": "OPT-0001",
+    "caption": "A boy stands on a sunny playground and raises one arm, and his shadow on the ground raises its arm too.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The shadow's arm moves at the same instant and in the same direction as the real arm; the shadow stays joined to his feet and falls on the side away from the sun."
+  },
+  {
+    "id": "OPT-0002",
+    "caption": "A woman walks past a streetlamp at night, and her shadow swings around her as she passes under the light.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "trajectory_momentum"
+    ],
+    "expectation": "The shadow points away from the lamp: it trails behind her as she approaches, shortens under the lamp, and stretches out ahead once she has passed; it never points toward the lamp."
+  },
+  {
+    "id": "OPT-0003",
+    "caption": "A dog runs across a sunlit lawn, and its shadow runs along the grass beside it.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow keeps pace with the dog, touches it at the paws, and lies on the side away from the sun; it does not lag, lead, or detach."
+  },
+  {
+    "id": "OPT-0004",
+    "caption": "A man moves a desk lamp from the left side of a vase to the right side, and the vase's shadow swings from the right side of the vase to the left.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow always falls on the side opposite the lamp and moves smoothly as the lamp moves; it does not stay put or move with the lamp."
+  },
+  {
+    "id": "OPT-0005",
+    "caption": "A child holds her hands in front of a flashlight beam pointed at a wall and makes a bird shape, and a bird-shaped shadow appears on the wall.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The shadow matches the outline of her hands and changes the instant her fingers move; it is larger than her hands and appears only where the beam hits the wall."
+  },
+  {
+    "id": "OPT-0006",
+    "caption": "A man walks in front of a projector during a presentation, and his dark silhouette appears on the screen over the slides.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The silhouette appears where he blocks the beam and moves with him; the slide image is missing inside the silhouette and returns when he steps aside."
+  },
+  {
+    "id": "OPT-0007",
+    "caption": "A woman stands with the low sun behind her on a beach, and her long shadow stretches out in front of her across the sand.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "gravity_direction"
+    ],
+    "expectation": "The shadow lies on the ground away from the sun, starts at her feet, and is longer than she is tall; it does not float or point toward the sun."
+  },
+  {
+    "id": "OPT-0008",
+    "caption": "A child brings a flashlight closer to a toy dinosaur standing in front of a wall, and the dinosaur's shadow on the wall grows larger.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The shadow grows as the light approaches and shrinks as it backs away, keeping the dinosaur's outline; it does not stay the same size."
+  },
+  {
+    "id": "OPT-0009",
+    "caption": "A cloud drifts across the sun over a park, and the sharp shadows of the trees and people fade away, then return when the cloud passes.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The shadows soften and disappear as the sun is covered and come back in the same places when it is uncovered; they do not vanish while the sun is still out."
+  },
+  {
+    "id": "OPT-0010",
+    "caption": "A girl jumps straight up on a sunny path, and her shadow stays on the ground and separates from her feet while she is in the air.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "gravity_direction"
+    ],
+    "expectation": "The shadow remains on the ground the whole time; the gap between her feet and the shadow opens as she rises and closes when she lands."
+  },
+  {
+    "id": "OPT-0011",
+    "caption": "A cyclist rides along a sunlit road, and the shadow of the bike and rider rolls along the tarmac next to them.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow moves at the same speed as the bike, touches it at the wheels, and shows the wheels turning; it stays on the side away from the sun."
+  },
+  {
+    "id": "OPT-0012",
+    "caption": "A boy throws a ball across a sunlit yard, and the ball's shadow slides along the ground beneath it and meets the ball where it lands.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "trajectory_momentum"
+    ],
+    "expectation": "The shadow tracks the ball's path on the ground, separating from it while it is high and rejoining at the landing spot; it does not lag or vanish in flight."
+  },
+  {
+    "id": "OPT-0013",
+    "caption": "A woman opens an umbrella against the sun, and a round shadow appears on the ground around her feet.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The shadow appears as the umbrella opens, matches its round outline, and lies on the side away from the sun; it moves when she tilts the umbrella."
+  },
+  {
+    "id": "OPT-0014",
+    "caption": "A car drives under a highway bridge on a sunny day, and its shadow disappears in the bridge's shade and reappears on the far side.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The car's own shadow vanishes while the car is in the larger shadow and comes back as soon as the car is in sunlight again."
+  },
+  {
+    "id": "OPT-0015",
+    "caption": "A man steps from a sunlit pavement into the shade of a building, and his shadow disappears.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The shadow is visible only while he is in the sun and fades as he enters the shade; it returns when he steps back out."
+  },
+  {
+    "id": "OPT-0016",
+    "caption": "A woman carries a lit candle in a circle around a vase on a table, and the vase's shadow sweeps around the table opposite the candle.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow always points away from the candle, rotating as the candle circles; its length changes as the candle moves closer or further."
+  },
+  {
+    "id": "OPT-0017",
+    "caption": "A flock of birds flies over a sunlit field, and their shadows race across the grass below them.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "Each shadow moves at the same speed and direction as its bird, offset toward the side away from the sun; the shadows do not appear where no bird passes."
+  },
+  {
+    "id": "OPT-0018",
+    "caption": "A kite flies high over a beach in the sun, and its small shadow moves across the sand as the kite sways.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow moves in step with the kite's motion, far from where the child stands; it does not stay still while the kite moves."
+  },
+  {
+    "id": "OPT-0019",
+    "caption": "Two children stand side by side in the sun, and one steps onto the other's shadow, whose shape then appears on his legs.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The friend's shadow climbs onto the boy's legs where he stands in it, and his own shadow continues beyond him on the ground."
+  },
+  {
+    "id": "OPT-0020",
+    "caption": "A pedestrian is lit from behind by a car's headlights at night, and a long shadow of the pedestrian stretches down the road ahead.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow points away from the headlights, grows sharper and shorter as the car approaches, and swings as the car passes."
+  },
+  {
+    "id": "OPT-0021",
+    "caption": "A man reaches across a table toward a lamp, and the shadow of his arm sweeps across the table on the far side of the lamp from the arm.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The arm's shadow lies away from the lamp and moves as the arm moves; it is not cast toward the lamp."
+  },
+  {
+    "id": "OPT-0022",
+    "caption": "A ceiling fan is switched on under a bright bulb, and the spinning blades throw moving shadows across the room.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadows sweep around as fast as the blades and stop when the fan stops; they appear on the surfaces below and beside the fan, away from the bulb."
+  },
+  {
+    "id": "OPT-0023",
+    "caption": "A ball bounces on a sunny court, and its shadow on the ground meets the ball at each bounce and separates as it rises.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "trajectory_momentum"
+    ],
+    "expectation": "The shadow stays on the ground under the ball's path; the ball touches its shadow only at the bounce; the two never swap places."
+  },
+  {
+    "id": "OPT-0024",
+    "caption": "A child swings on a playground swing in the afternoon sun, and her shadow swings back and forth across the ground.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow moves in time with the swing, stretching and shortening as she rises and falls; it lies on the side away from the sun."
+  },
+  {
+    "id": "OPT-0025",
+    "caption": "A drone hovers over a sunlit parking lot and then flies to one side, and its small shadow on the asphalt moves with it.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow stays beneath the drone offset away from the sun, moves when the drone moves, and shows the shape of the drone's arms."
+  },
+  {
+    "id": "OPT-0026",
+    "caption": "A pigeon lands on a sunny square, and as it touches down its shadow on the paving joins it at its feet.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "gravity_direction"
+    ],
+    "expectation": "The shadow is on the ground before the bird lands and the two meet at the moment of landing; the shadow lies away from the sun."
+  },
+  {
+    "id": "OPT-0027",
+    "caption": "A woman opens the curtains of a sunny window, and the shadow of the window frame appears as a cross on the floor.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The bright patch and the dark bars of the frame appear together as the curtains open and lie on the floor away from the window; they vanish when the curtains close."
+  },
+  {
+    "id": "OPT-0028",
+    "caption": "A person holds a hand in front of a projector lens, and a dark hand shape covers part of the picture on the screen.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The dark shape matches the hand, is much larger than the hand, and disappears the moment the hand is withdrawn."
+  },
+  {
+    "id": "OPT-0029",
+    "caption": "A boy walks toward a streetlamp at night, and his shadow behind him shrinks until he is directly under the light.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "trajectory_momentum"
+    ],
+    "expectation": "The shadow trails behind him on the side away from the lamp and shortens steadily as he approaches; it does not grow or move ahead of him."
+  },
+  {
+    "id": "OPT-0030",
+    "caption": "A flag flutters on a pole in the sun, and its shadow flutters on the wall behind it.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow moves in time with the cloth, on the wall away from the sun, and stops when the flag hangs still."
+  },
+  {
+    "id": "OPT-0031",
+    "caption": "A cat walks along a sunlit windowsill inside a house, and its shadow moves across the floor of the room.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow moves with the cat, falls on the room side away from the window, and shows the cat's outline including the tail."
+  },
+  {
+    "id": "OPT-0032",
+    "caption": "A man holds a book up between a lamp and a wall, and a rectangular shadow appears on the wall; he tilts the book and the shadow narrows.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The shadow appears where the book blocks the light and changes shape as the book turns; it does not remain a full rectangle when the book is edge-on."
+  },
+  {
+    "id": "OPT-0033",
+    "caption": "A woman walks the length of a corridor lit by a single ceiling light, and her shadow on the floor changes side as she passes beneath the light.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow is ahead of her before the light and behind her after it, always pointing away from the bulb."
+  },
+  {
+    "id": "OPT-0034",
+    "caption": "A skateboarder jumps his board over a gap in the sun, and the shadows of both rider and board leave the ground and rejoin it on landing.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "gravity_direction"
+    ],
+    "expectation": "The shadows stay on the ground while the skater is in the air, separated from him, and meet his wheels and feet at the moment of landing."
+  },
+  {
+    "id": "OPT-0035",
+    "caption": "A child lifts a toy car off a sunlit table, and its shadow stays on the table and grows fainter as the car is raised higher.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "gravity_direction"
+    ],
+    "expectation": "The shadow separates from the car as it lifts and remains on the surface; it does not rise with the car."
+  },
+  {
+    "id": "OPT-0036",
+    "caption": "A gardener waters plants in the evening sun, and the shadow of the arc of water falls on the soil beside it.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The shadow follows the curve of the stream and lands on the side away from the sun; it flickers as the water moves and disappears when the tap is closed."
+  },
+  {
+    "id": "OPT-0037",
+    "caption": "Two lamps light a statue on a table from different sides, and the statue casts two shadows in different directions.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "Each shadow points away from one lamp; when one lamp is switched off its shadow vanishes and the other remains."
+  },
+  {
+    "id": "OPT-0038",
+    "caption": "A man stands beside a wall at dusk as the streetlights come on, and a shadow of him appears on the wall away from the nearest light.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow appears only when the lights come on and points away from the lamp that lit up; it does not appear before the light."
+  },
+  {
+    "id": "OPT-0039",
+    "caption": "A horse trots across a sunlit paddock, and its shadow trots along the grass beside it, legs moving in step.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow's legs move in time with the horse's, it stays attached at the hooves, and it lies away from the sun."
+  },
+  {
+    "id": "OPT-0040",
+    "caption": "A child waves a stick in the sunlight, and the stick's shadow waves across the ground in the same rhythm.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The shadow of the stick is a line that moves as the stick moves, joined to the shadow of the hand; it never moves before the stick."
+  },
+  {
+    "id": "OPT-0041",
+    "caption": "A person walks between a campfire and a tent at night, and a huge shadow of the person sweeps across the tent wall.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The shadow is on the tent side away from the fire, is larger than the person, and moves in the opposite sense to a walker approaching the fire; it flickers with the flames."
+  },
+  {
+    "id": "OPT-0042",
+    "caption": "A bus passes a row of parked cars on a sunny street, and its shadow slides over the cars one after another.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow moves at the bus's speed and darkens each car as it passes; it does not appear on the sunlit side of the bus."
+  },
+  {
+    "id": "OPT-0043",
+    "caption": "A girl holds a leaf up against the sun, and the shadow of the leaf appears on her arm below.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The shadow has the leaf's outline, lies on the surface below and away from the sun, and moves when the leaf moves."
+  },
+  {
+    "id": "OPT-0044",
+    "caption": "A jogger runs along a path with the morning sun to her left, and her shadow runs along on the ground to her right.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow stays on her right, attached at her feet, and its legs move with hers; it does not switch sides while the sun stays put."
+  },
+  {
+    "id": "OPT-0045",
+    "caption": "A woman turns off the lamp beside a bookshelf and turns on one on the other side of the room, and the shelf's shadow jumps from one wall to the other.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "Each shadow falls away from whichever lamp is on; when both lamps are off there is no shadow."
+  },
+  {
+    "id": "OPT-0046",
+    "caption": "A tree sways in the wind on a sunny day, and the pattern of leaf shadows on the ground beneath it shifts and dances.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow pattern moves in time with the branches and settles when the wind drops; it lies on the ground away from the sun."
+  },
+  {
+    "id": "OPT-0047",
+    "caption": "A boy stands on a pier in the sun, and his shadow falls onto the water below and rides the ripples.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The shadow lies on the water surface away from the sun and wobbles with the waves; it moves when he moves."
+  },
+  {
+    "id": "OPT-0048",
+    "caption": "A person walks along a sunlit wall, and their shadow walks along the wall beside them at the same height.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadow on the wall keeps pace, its feet at ground level and its head at about head height; it lies on the side away from the sun."
+  },
+  {
+    "id": "OPT-0049",
+    "caption": "A camper turns a lantern up to full brightness inside a tent, and sharp shadows of the tent poles appear on the canvas.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The shadows appear as the lantern brightens and fall away from it; they shift when the lantern is moved and fade when it is dimmed."
+  },
+  {
+    "id": "OPT-0050",
+    "caption": "A man holds a wide-brimmed hat over his face in bright sun, and the shadow of the brim covers his eyes and nose.",
+    "category": "Optics",
+    "subcategory": "shadow",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The shaded area appears under the brim on the side away from the sun and moves down his face as he tilts the hat; it does not appear on the sunlit side."
+  },
+  {
+    "id": "OPT-0051",
+    "caption": "A woman stands in front of a bathroom mirror and raises her right hand, and her reflection raises the hand on the opposite side.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflected hand rises at the same instant and mirrored left-right; the reflection faces her and wears the same clothes; it does not lag or move differently."
+  },
+  {
+    "id": "OPT-0052",
+    "caption": "A man walks along a street past a row of shop windows, and his reflection walks along in the glass beside him.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The reflection keeps pace and disappears where the glass ends; it is mirrored and shows the same movements at the same time."
+  },
+  {
+    "id": "OPT-0053",
+    "caption": "A boy stands at the edge of a calm pond and looks down at his reflection, then throws a pebble in and the reflection breaks into ripples.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection is upside down and clear while the water is still, shatters into wavering pieces when the pebble lands, and settles back as the ripples fade."
+  },
+  {
+    "id": "OPT-0054",
+    "caption": "A mountain stands beside a still lake at dawn, and an upside-down image of the mountain lies on the water.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The image is inverted and meets the real mountain at the shoreline; its peak points downward; it blurs where the surface is disturbed."
+  },
+  {
+    "id": "OPT-0055",
+    "caption": "A cat walks up to a floor-length mirror and sees another cat approaching it in the glass.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The reflected cat approaches as the real cat does, mirrored, and their noses meet at the glass; the reflection cannot step out of the mirror."
+  },
+  {
+    "id": "OPT-0056",
+    "caption": "A woman walks past a puddle on a pavement, and her reflection passes across the puddle upside down.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection appears only within the puddle's edges, moves with her, and is inverted with her head pointing down; it does not extend onto dry pavement."
+  },
+  {
+    "id": "OPT-0057",
+    "caption": "A car drives past an office building with a glass front, and the car's reflection glides across the windows.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The reflection moves in step with the car and is mirrored; it jumps slightly at the frames between panes and disappears where the glass ends."
+  },
+  {
+    "id": "OPT-0058",
+    "caption": "A child waves at herself in a hallway mirror, and the reflection waves back with the other hand.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflected wave is simultaneous and mirrored; the reflection stops when she stops."
+  },
+  {
+    "id": "OPT-0059",
+    "caption": "A dancer practises in front of a studio mirror, and the reflection performs each move in time with her.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "Every step and arm movement is matched instantly and mirrored; the reflection never gets ahead or shows a different pose."
+  },
+  {
+    "id": "OPT-0060",
+    "caption": "A man tilts a hand mirror downward, and the reflection in it shifts from the ceiling to the floor.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The scene in the mirror sweeps smoothly as the mirror tilts; it shows what lies in the direction the mirror faces, not the same view throughout."
+  },
+  {
+    "id": "OPT-0061",
+    "caption": "A woman drapes a cloth over a wall mirror, and the reflection of the room disappears behind the cloth.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The reflected room is visible until the cloth covers the glass and is gone wherever the cloth hangs; it returns when the cloth is pulled off."
+  },
+  {
+    "id": "OPT-0062",
+    "caption": "A driver looks in the rear-view mirror as a car behind approaches, and the reflected car grows larger in the mirror.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The reflected car grows as the real one closes in and shrinks if it falls back; it is seen behind, not ahead."
+  },
+  {
+    "id": "OPT-0063",
+    "caption": "A man walks out of a room past a wall mirror, and his reflection leaves the mirror at the same time.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The reflection slides out of the frame as he passes its edge and the mirror shows only the empty room afterwards; the reflection does not remain."
+  },
+  {
+    "id": "OPT-0064",
+    "caption": "A candle burns on a table by a dark window at night, and a second flame appears in the glass beside the real one.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The reflected flame flickers in step with the real one and is mirrored; it vanishes if the candle is blown out or the room light is turned up."
+  },
+  {
+    "id": "OPT-0065",
+    "caption": "A woman in heels walks across a polished marble lobby floor, and her reflection walks upside down beneath her.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection meets her at her shoes, is inverted, and moves exactly with her; it is dimmer than she is."
+  },
+  {
+    "id": "OPT-0066",
+    "caption": "A duck paddles across a calm pond, and its reflection glides along under it, breaking up in the wake it leaves.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection is inverted, stays directly beneath the duck, and wavers in the ripples behind it; the water ahead shows a clear image."
+  },
+  {
+    "id": "OPT-0067",
+    "caption": "Traffic lights change from red to green above a wet street at night, and their reflections on the road change colour at the same moment.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The coloured streaks on the wet road match the lights and switch colour when they do; they lie below the lights and stretch toward the viewer."
+  },
+  {
+    "id": "OPT-0068",
+    "caption": "A woman steps into an elevator with mirrored walls and turns around, and her reflections turn with her in every wall.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "All reflections move at the same instant, each mirrored relative to its wall; none stays facing the old way."
+  },
+  {
+    "id": "OPT-0069",
+    "caption": "A boy steps into a puddle showing the reflection of a building, and the image shatters into ripples around his boot.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection breaks up at the moment his boot enters and reforms as the ripples die; it does not stay sharp while the water moves."
+  },
+  {
+    "id": "OPT-0070",
+    "caption": "A cyclist approaches from behind a parked car, and the cyclist's image appears in the car's side mirror and grows larger.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The image appears in the mirror before the cyclist passes the car and grows as he nears; it leaves the mirror as he draws alongside."
+  },
+  {
+    "id": "OPT-0071",
+    "caption": "A man turns his wrist so his watch face catches the sunlight, and a bright spot of light appears on the wall and slides across it as he moves his arm.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The spot appears when the watch faces the sun, moves with the wrist, and disappears when the angle is lost; it does not move on its own."
+  },
+  {
+    "id": "OPT-0072",
+    "caption": "A child holds a hand mirror in a sunny doorway and tilts it, sending a patch of sunlight dancing across the shaded room.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The bright patch moves as the mirror tilts, in the direction opposite to the tilt, and vanishes when the mirror is turned from the sun."
+  },
+  {
+    "id": "OPT-0073",
+    "caption": "A woman reads at a window at night, and when she switches on the lamp beside her, her reflection appears in the dark glass.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The reflection appears with the lamp and moves with her; when she turns the lamp off it fades from the glass."
+  },
+  {
+    "id": "OPT-0074",
+    "caption": "A dog sits in front of a glossy black oven door and tilts its head, and its reflection tilts its head the other way.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflected dog moves at the same time, mirrored, and is dimmer than the real dog; it stays inside the door's surface."
+  },
+  {
+    "id": "OPT-0075",
+    "caption": "A breeze crosses a lake that has been reflecting a boathouse, and the reflection wobbles and blurs, then sharpens again as the water calms.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The image distorts exactly where ripples pass and returns to a clear inverted image when the surface is still; the boathouse itself is unaffected."
+  },
+  {
+    "id": "OPT-0076",
+    "caption": "A barber holds a hand mirror behind a customer's head so the customer can see the back of his haircut in the wall mirror.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The small mirror shows the back of the head, and that image appears in the big mirror; the view changes as the barber tilts the hand mirror."
+  },
+  {
+    "id": "OPT-0077",
+    "caption": "A jogger runs alongside a canal, and her reflection runs upside down along the water beside her.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection keeps pace, is inverted, and wavers with the water; it is missing where reeds or a boat break the surface."
+  },
+  {
+    "id": "OPT-0078",
+    "caption": "A man polishes a large silver tray until his face appears in it, then breathes on it and the image fogs and returns.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The image gets clearer as the tray is polished, blurs under the breath, and comes back as the fog clears; it moves when he moves."
+  },
+  {
+    "id": "OPT-0079",
+    "caption": "A swan glides across a still lake at sunset, and its reflection glides beneath it with the orange sky behind both.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflected swan is inverted and directly under the real one; it moves with the swan and breaks up only in the ripples the swan makes."
+  },
+  {
+    "id": "OPT-0080",
+    "caption": "A woman tries on a hat in a shop mirror and turns her head from side to side, and the reflection turns its head in mirror image.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection turns at the same time, to the mirrored side, wearing the same hat; it does not turn the same way as she does."
+  },
+  {
+    "id": "OPT-0081",
+    "caption": "A boy points a flashlight at a mirror on the wall, and a spot of light appears on the opposite wall.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The spot appears when the beam hits the mirror and moves the opposite way when the flashlight is angled; it vanishes when the beam leaves the mirror."
+  },
+  {
+    "id": "OPT-0082",
+    "caption": "A woman walks across a wet beach at low tide, and her reflection stretches beneath her on the thin sheet of water.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The inverted reflection appears only where the sand is covered by water and follows her steps; it breaks up in her footprints."
+  },
+  {
+    "id": "OPT-0083",
+    "caption": "A man looks at his reflection in the bowl of a shiny spoon and turns the spoon slowly, and his face in the spoon stretches and shifts as it turns.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The reflected face is small and warped by the curve and changes with the spoon's angle; it moves when he moves and stays inside the metal."
+  },
+  {
+    "id": "OPT-0084",
+    "caption": "A skater glides across a frozen pond, and a faint reflection glides beneath her on the ice.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection is inverted, dim, and moves with her; it disappears where the ice is scratched or snow-covered."
+  },
+  {
+    "id": "OPT-0085",
+    "caption": "A car passes a shop with a mirrored sign, and the car's headlights flash in the mirror as it goes by.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The flash appears as the lights line up with the mirror and disappears as the car moves on; it moves across the mirror with the car."
+  },
+  {
+    "id": "OPT-0086",
+    "caption": "A woman drops a coin into a fountain whose still water reflects the sky, and rings spread out that break up the reflected clouds.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The rings start where the coin enters, distort the reflected sky as they pass, and the image settles when the surface is still again."
+  },
+  {
+    "id": "OPT-0087",
+    "caption": "A child stands between two facing mirrors in a fun house and sees a line of copies of herself stretching away in both directions.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The copies get smaller and dimmer further along the line and all move when she moves; none moves independently."
+  },
+  {
+    "id": "OPT-0088",
+    "caption": "A man wipes a steamy mirror with his hand, and his face appears in the clear streak he has made.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The reflection appears only where the fog is wiped away and is blurred elsewhere; the streak slowly fogs over again."
+  },
+  {
+    "id": "OPT-0089",
+    "caption": "A heron stands in shallow water on a still morning, and its reflection stands upside down beneath it; when it steps forward the reflection ripples.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection is inverted and joined at the legs; it wavers when the bird moves and is sharp when the bird is still."
+  },
+  {
+    "id": "OPT-0090",
+    "caption": "A woman adjusts a car's side mirror from inside, and the view in the mirror sweeps from the sky down to the road behind.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The view moves smoothly as the mirror tilts and shows the scene behind the car, not in front; it stops changing when she stops adjusting."
+  },
+  {
+    "id": "OPT-0091",
+    "caption": "A child blows a soap bubble and it floats past a window, and a tiny reflection of the room curves across the bubble's surface.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The bright window is visible as a small curved highlight that moves across the bubble as it drifts; it vanishes when the bubble pops."
+  },
+  {
+    "id": "OPT-0092",
+    "caption": "A man in sunglasses faces a friend, and the friend's face shows as two small images in the man's lenses.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The small images move when the friend moves and are curved to the lenses; they show the friend, not the wearer."
+  },
+  {
+    "id": "OPT-0093",
+    "caption": "A rower pulls a boat across a glassy lake, and the boat's reflection travels with it, broken only by the oar splashes.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection is inverted and attached at the waterline; it distorts where the oars dip and in the wake behind."
+  },
+  {
+    "id": "OPT-0094",
+    "caption": "A woman opens a compact mirror and angles it to look at the back of her earring, and the earring appears in the little mirror.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The earring comes into view when the mirror is angled toward it and slides out of view when the angle changes; the image is mirrored."
+  },
+  {
+    "id": "OPT-0095",
+    "caption": "A neon sign glows above a rain-soaked street at night, and its coloured reflection streaks down the wet pavement toward the viewer.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The reflection has the same colours as the sign, lies below it on the wet surface, and shimmers where puddles ripple; it fades where the pavement is dry."
+  },
+  {
+    "id": "OPT-0096",
+    "caption": "A cat bats at its reflection in a shiny chrome kettle, and the reflected paw bats back from inside the metal.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflection moves at the same time, mirrored and warped by the curve of the kettle; the reflected paw cannot leave the surface."
+  },
+  {
+    "id": "OPT-0097",
+    "caption": "A boy looks over the side of a rowing boat into clear still water and sees his own face looking back, then the boat rocks and the face breaks apart.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The face is inverted and clear while the water is flat; it wavers and fragments as the boat rocks and returns when the water calms."
+  },
+  {
+    "id": "OPT-0098",
+    "caption": "A dancer's sequinned dress catches the stage lights, and dozens of small bright spots sweep across the walls as she turns.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The spots move when she moves and stop when she is still; they appear on the walls away from the lights."
+  },
+  {
+    "id": "OPT-0099",
+    "caption": "A man holds a glass tabletop at an angle to a window, and the garden outside appears faintly in the glass over the room behind it.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The reflected garden is dim and mirrored, shifts as the glass tilts, and disappears when the glass is laid flat away from the window."
+  },
+  {
+    "id": "OPT-0100",
+    "caption": "A woman walks along a hallway of polished steel panels, and a blurry reflection of her walks alongside in each panel.",
+    "category": "Optics",
+    "subcategory": "reflection",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "Each panel shows a mirrored, slightly warped copy of her moving in step; the copies vanish at the gaps between panels."
+  },
+  {
+    "id": "OPT-0101",
+    "caption": "A woman puts a drinking straw into a glass of water, and the straw looks bent where it enters the water.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The part of the straw under water appears shifted relative to the part above, with the break exactly at the waterline; the straw itself stays straight when lifted out."
+  },
+  {
+    "id": "OPT-0102",
+    "caption": "A man stands waist-deep in a clear swimming pool, and his legs seen through the water look shorter and slightly bent at the surface.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The underwater part appears foreshortened and offset at the waterline; when he climbs out his legs look normal again."
+  },
+  {
+    "id": "OPT-0103",
+    "caption": "A child watches goldfish through the glass of an aquarium, and the fish swim clearly visible behind the glass.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "solidity"
+    ],
+    "expectation": "The fish are visible through the glass and water at all times and stay inside the tank; the glass does not hide them or let them pass through."
+  },
+  {
+    "id": "OPT-0104",
+    "caption": "A woman looks out through a clear window at a garden, and a gardener walking past is seen through the glass.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The gardener is fully visible through the pane, undistorted, and moves continuously behind it; the glass does not make him vanish or appear inside."
+  },
+  {
+    "id": "OPT-0105",
+    "caption": "Rain streams down a window, and the trees outside seen through the wet glass wobble and blur where the water runs.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The view is distorted only along the running water and clear elsewhere; the distortion moves downward with the drops."
+  },
+  {
+    "id": "OPT-0106",
+    "caption": "A man holds a magnifying glass over a page of small print, and the letters under the lens appear much larger.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "Only the letters seen through the lens are enlarged and they shift as the lens moves; the print outside the lens stays small."
+  },
+  {
+    "id": "OPT-0107",
+    "caption": "A woman puts on her reading glasses to look at a menu, and the text she is looking at through the lenses appears slightly larger and sharper than around the frames.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The change happens only in the area seen through the lenses and moves with the glasses; the menu itself does not change."
+  },
+  {
+    "id": "OPT-0108",
+    "caption": "A swimmer wearing goggles looks down at the pool floor, and the tiles below appear clear through the goggles and water.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The tiles are visible and their grid wavers slightly with the water surface; they do not disappear or move on their own."
+  },
+  {
+    "id": "OPT-0109",
+    "caption": "A glass of water is set in front of a card printed with a straight vertical line, and the line seen through the glass looks shifted and wider.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The line appears displaced only behind the water-filled part of the glass and returns to normal when the glass is moved away."
+  },
+  {
+    "id": "OPT-0110",
+    "caption": "A drop of water lands on a phone screen, and the tiny pixels under the drop appear magnified.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The enlarged pattern shows only within the drop and moves if the drop slides; the screen beyond the drop is unchanged."
+  },
+  {
+    "id": "OPT-0111",
+    "caption": "A man holds a clear ice cube up to a window, and the scene outside is visible through the ice, slightly blurred.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "Light and shapes come through the cube; the view is distorted at its edges and where it has cracks; the cube does not block the view like a stone."
+  },
+  {
+    "id": "OPT-0112",
+    "caption": "A person stands behind a frosted glass door, and only a blurred silhouette of them is visible through it.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "permanence_count"
+    ],
+    "expectation": "The blur moves as the person moves and sharpens as they come closer to the glass; details of the face never become clear through the frosting."
+  },
+  {
+    "id": "OPT-0113",
+    "caption": "A driver switches on the windshield wipers in heavy rain, and each sweep clears a sharp view of the road that blurs again as rain lands.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The view is clear immediately behind each wiper stroke and degrades between strokes; the rain does not clear itself."
+  },
+  {
+    "id": "OPT-0114",
+    "caption": "A child looks through a round fishbowl at her brother on the other side, and his face appears stretched and warped through the bowl.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The distortion appears only through the water-filled bowl and changes as either child moves; his face is normal when seen past the bowl's edge."
+  },
+  {
+    "id": "OPT-0115",
+    "caption": "A boy dips his hand into a clear pond, and the underwater part of his arm looks displaced from the part above the surface.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The break appears exactly at the waterline and disappears when the hand is lifted out; the arm is not actually bent."
+  },
+  {
+    "id": "OPT-0116",
+    "caption": "A diver looks up from under the water and sees the wavering shapes of people standing at the pool edge through the surface.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The people are visible but their outlines ripple with the surface; they steady when the water is calm."
+  },
+  {
+    "id": "OPT-0117",
+    "caption": "A shopper looks through a bakery's front window, and the cakes inside are clearly visible through the glass.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "solidity"
+    ],
+    "expectation": "The cakes appear sharp and in place behind the glass; the reflection of the street is faint over them; nothing is hidden by the pane."
+  },
+  {
+    "id": "OPT-0118",
+    "caption": "A cook pours water into a clear jug standing in front of a patterned tile wall, and the pattern seen through the jug shifts as the water rises.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The pattern looks different behind the filled part than behind the empty part, with the boundary at the water level; the wall itself does not change."
+  },
+  {
+    "id": "OPT-0119",
+    "caption": "A person walks up to a clear glass door and pushes it open, having been fully visible through it as they approached.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "solidity"
+    ],
+    "expectation": "They are seen through the glass the whole way; the door opens on its hinges when pushed and they walk through the opening, not through the glass."
+  },
+  {
+    "id": "OPT-0120",
+    "caption": "A woman looks at coins lying on the bottom of a clear fountain, and the coins appear to shimmer and shift as the surface ripples.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "causeless_motion"
+    ],
+    "expectation": "The coins are visible through the water and their apparent position wobbles with the ripples while they lie still; they do not actually move."
+  },
+  {
+    "id": "OPT-0121",
+    "caption": "A boy holds a clear plastic ruler over a line of text, and the text is readable through the ruler.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The letters are seen through the plastic with at most a slight shift at the ruler's edges; the ruler does not hide them."
+  },
+  {
+    "id": "OPT-0122",
+    "caption": "Sunlight passes through a clear glass of water on a table, and a bright patch of light appears on the table on the far side of the glass.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The bright patch lies on the side of the glass away from the sun and moves when the glass is moved; it disappears when the glass is taken away."
+  },
+  {
+    "id": "OPT-0123",
+    "caption": "A cook looks at a spoon standing in a clear glass jar of oil, and the spoon looks kinked where it enters the oil.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The kink appears at the surface of the oil and vanishes when the spoon is lifted out; the spoon is straight."
+  },
+  {
+    "id": "OPT-0124",
+    "caption": "A child presses her face to a window covered in raindrops, and the street outside appears as many tiny warped pictures within the drops.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "Each drop shows a small distorted picture of the scene; the pictures move as the drops run down; the view between drops is normal."
+  },
+  {
+    "id": "OPT-0125",
+    "caption": "A snorkeler puts his mask underwater and the blurred rocks below suddenly come into sharp view through the mask.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The rocks are clear through the mask and look nearer and larger than they are; the view blurs again when the mask is lifted out."
+  },
+  {
+    "id": "OPT-0126",
+    "caption": "A man holds a clear glass jar full of water in front of his face, and his eyes seen through the jar look stretched wide.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The stretching appears only in the part of the face seen through the water and changes as the jar moves; his face is normal beside the jar."
+  },
+  {
+    "id": "OPT-0127",
+    "caption": "A woman looks at a garden through a pane of old wavy glass, and the plants seem to bend and shift as she moves her head.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "causeless_motion"
+    ],
+    "expectation": "The distortion changes with her viewpoint while the plants stay still; through a flat pane beside it the view is undistorted."
+  },
+  {
+    "id": "OPT-0128",
+    "caption": "A child holds a clear glass marble up to one eye and looks at a lamp, and the room appears tiny and warped inside the marble.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The small distorted image is inside the marble and moves as the child moves; the room around the marble is normal."
+  },
+  {
+    "id": "OPT-0129",
+    "caption": "A woman points through a bakery's glass counter at a pastry, and the assistant reaches in from the open back and lifts out the same pastry.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "solidity"
+    ],
+    "expectation": "The pastry is clearly visible through the glass, the hand enters from behind rather than through the pane, and the pastry lifted is the one that was seen."
+  },
+  {
+    "id": "OPT-0130",
+    "caption": "A passenger looks out of a train window at a passing field, and the field is clearly visible through the glass as it slides past.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The view moves continuously past the window and stays visible; the glass does not turn opaque or freeze the scene."
+  },
+  {
+    "id": "OPT-0131",
+    "caption": "A woman drops a coin into a tall clear vase of water, and the coin appears to jump sideways as it passes through the surface.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "trajectory_momentum"
+    ],
+    "expectation": "The apparent shift happens at the waterline; underneath, the coin sinks straight to the bottom and is visible through the glass."
+  },
+  {
+    "id": "OPT-0132",
+    "caption": "A boy peers through a glass paperweight at a newspaper, and the letters under it look swollen and bent.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The distortion is confined to the area under the glass and shifts as the paperweight is slid; the letters outside it are normal."
+  },
+  {
+    "id": "OPT-0133",
+    "caption": "A woman looks at her feet standing in a clear rock pool, and they appear closer and larger than they feel.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The feet are visible through the water, enlarged and displaced at the surface; when she lifts a foot out it looks normal."
+  },
+  {
+    "id": "OPT-0134",
+    "caption": "A bathroom window is fogged after a shower, and as the glass dries the view of the yard outside sharpens patch by patch.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "process_direction",
+      "shape_identity"
+    ],
+    "expectation": "The view goes from blurred to clear where the moisture dries; it does not blur again while the glass is dry."
+  },
+  {
+    "id": "OPT-0135",
+    "caption": "A jeweller looks at a ring through a loupe held to her eye, and the ring's details appear greatly enlarged.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The enlargement applies only to what is seen through the loupe; the rest of the ring and the desk look normal size."
+  },
+  {
+    "id": "OPT-0136",
+    "caption": "A child looks at her hand through a glass of water, and her fingers appear fatter through the glass than beside it.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The widening shows only behind the water; the fingers seen past the glass edge are normal; the hand itself is unchanged."
+  },
+  {
+    "id": "OPT-0137",
+    "caption": "A diver in a clear sea looks up and sees the underside of a boat as a wavering dark shape through the surface.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The shape is visible but its edges ripple with the surface; it steadies as the water calms."
+  },
+  {
+    "id": "OPT-0138",
+    "caption": "A cook looks into a pot of clear water with vegetables at the bottom, and the pieces seem to shift and swim as the water is stirred.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "causeless_motion"
+    ],
+    "expectation": "The pieces on the bottom stay put while the moving water makes their images wobble; they look still again when the stirring stops."
+  },
+  {
+    "id": "OPT-0139",
+    "caption": "A woman holds a clear glass bottle of water sideways in front of a lit sign, and the letters seen through the bottle appear stretched.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The stretching happens only where the sign is seen through the water-filled bottle and changes as the bottle turns; the sign itself is unchanged."
+  },
+  {
+    "id": "OPT-0140",
+    "caption": "A child looks through a wet window and then wipes a patch dry with a sleeve, and the view through the patch becomes sharp.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The clear patch matches the wiped area and the view outside it stays blurred by the water; the outside scene does not change."
+  },
+  {
+    "id": "OPT-0141",
+    "caption": "A man wearing new glasses looks over the top of the frames and then through them, and the room appears sharper through the lenses than over them.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The difference appears exactly at the frame edges and moves with the glasses; the room itself does not change."
+  },
+  {
+    "id": "OPT-0142",
+    "caption": "A boy drops a stone into a clear stream and watches it sink, its image wavering with the current until it rests on the bed.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "trajectory_momentum"
+    ],
+    "expectation": "The stone is visible through the moving water and appears to waver while its actual path is a steady sink; it stays visible on the bottom."
+  },
+  {
+    "id": "OPT-0143",
+    "caption": "A lab worker holds a clear glass beaker of water in front of a ruled sheet, and the lines behind the beaker appear closer together and shifted.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The change is confined to the view through the water and vanishes when the beaker is emptied or moved aside."
+  },
+  {
+    "id": "OPT-0144",
+    "caption": "A woman looks at a shop display through a window streaked with rain, and the mannequins appear smeared where the water runs.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The smearing follows the water tracks and moves downward with them; the mannequins are clear through dry parts of the glass."
+  },
+  {
+    "id": "OPT-0145",
+    "caption": "A child holds a clear glass of water up to the light and sees the room through it flipped left-to-right and squeezed thin.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The flipped, narrowed image appears only through the water and shifts as the glass moves; the room seen around the glass is normal."
+  },
+  {
+    "id": "OPT-0146",
+    "caption": "Someone lowers a straight stick into a clear pond and the underwater part appears to angle away from the part above the surface.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The apparent bend is at the surface and its size changes with the stick's angle; the stick is straight when lifted out."
+  },
+  {
+    "id": "OPT-0147",
+    "caption": "A woman looks out through a car's side window at the passing city; the window fogs and the view goes blurry until she wipes a patch clear.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "process_direction"
+    ],
+    "expectation": "The blur grows with the fog and the view becomes sharp only where she wipes; the city outside does not change."
+  },
+  {
+    "id": "OPT-0148",
+    "caption": "A child places a glass of water on a line drawn on a piece of paper, and the line under the glass appears broken from the line outside it.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "shape_identity",
+      "missing_consequence"
+    ],
+    "expectation": "The apparent break is at the glass edges and the line returns to one straight line when the glass is lifted."
+  },
+  {
+    "id": "OPT-0149",
+    "caption": "A man holds a pair of binoculars to his eyes and looks at a distant bird, and the bird appears large and close through the lenses.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "shape_identity"
+    ],
+    "expectation": "The enlarged view appears only through the eyepieces and follows where the binoculars point; the bird seen without them is small."
+  },
+  {
+    "id": "OPT-0150",
+    "caption": "A cook lifts a clear lid from a pot, and the food that was visible through the lid is seen the same underneath.",
+    "category": "Optics",
+    "subcategory": "refraction_transparency",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The food seen through the lid matches what is there when the lid comes off; the lid did not hide or change it."
+  },
+  {
+    "id": "OPT-0151",
+    "caption": "A woman enters a dark living room and flips the wall switch, and the ceiling light comes on and the room is lit.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The room goes from dark to lit at the instant of the switch and stays lit; the brightness comes from the ceiling fixture and casts shadows downward."
+  },
+  {
+    "id": "OPT-0152",
+    "caption": "A man turns off the bedside lamp, and the bedroom goes dark except for the faint glow from the window.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The lamp's light and the shadows it cast vanish at once; the room does not stay lit after the lamp is off."
+  },
+  {
+    "id": "OPT-0153",
+    "caption": "A child points a flashlight at a dark wall and sweeps it across, and the bright spot slides along the wall with the movement of her hand.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The spot moves in the direction the flashlight turns and stays lit only where the beam points; it does not remain on the wall after the beam moves."
+  },
+  {
+    "id": "OPT-0154",
+    "caption": "A group sits around a single candle in a dark room, and the candle lights up the faces nearest to it while the far wall stays dark.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The faces closest to the flame are brightest, brightness falls off with distance, and the light flickers with the flame."
+  },
+  {
+    "id": "OPT-0155",
+    "caption": "A car turns onto a dark country road and switches on its headlights, and two beams light up the road ahead.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The lit area appears in front of the car the instant the lights come on and moves with the car; the road behind stays dark."
+  },
+  {
+    "id": "OPT-0156",
+    "caption": "A child hides under a blanket with a flashlight, and the blanket glows from inside where the light is.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The glow is brightest where the flashlight is nearest the cloth and moves as the child moves it; it stops when the light is switched off."
+  },
+  {
+    "id": "OPT-0157",
+    "caption": "A lighthouse beam sweeps around in the night, lighting up the sea and cliffs in turn as it passes.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "Each part of the scene brightens only as the beam crosses it and darkens again after; the beam rotates steadily."
+  },
+  {
+    "id": "OPT-0158",
+    "caption": "A spotlight follows an actor as she walks across a dark stage, and the circle of light moves with her.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The lit circle stays centred on the actor and the rest of the stage stays dark; her shadow falls on the floor away from the spotlight."
+  },
+  {
+    "id": "OPT-0159",
+    "caption": "A man opens a refrigerator door in a dark kitchen, and light from inside the fridge spills out across the floor.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The light appears as the door opens, widens with the door, and lights the floor and his front; it disappears when the door closes."
+  },
+  {
+    "id": "OPT-0160",
+    "caption": "A woman looks at her phone in a dark room, and the screen lights her face from below.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "Her face is lit on the side facing the screen and the glow changes when the screen's picture changes; it goes dark when the phone is locked."
+  },
+  {
+    "id": "OPT-0161",
+    "caption": "A man moves a desk lamp closer to the book he is reading, and the page becomes brighter.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The page brightens as the lamp approaches and dims when it is moved back; the lamp's shadow of the book's edge shifts accordingly."
+  },
+  {
+    "id": "OPT-0162",
+    "caption": "A woman turns a dimmer knob slowly, and the ceiling lights fade from bright to a dim glow.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The brightness follows the knob smoothly, down when turned down and up when turned up; it does not jump or change on its own."
+  },
+  {
+    "id": "OPT-0163",
+    "caption": "A cloud covers the sun over a picnic, and the whole scene dims, then brightens again when the cloud passes.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The dimming and brightening are gradual and affect everything at once; sharp shadows soften while the cloud is in front of the sun."
+  },
+  {
+    "id": "OPT-0164",
+    "caption": "A man pulls open heavy curtains in a dim bedroom, and daylight floods in and brightens the room.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The light enters through the widening gap and the room brightens as the curtains open; the brightest part is nearest the window."
+  },
+  {
+    "id": "OPT-0165",
+    "caption": "A hiker strikes a match in a dark cave, and the flame lights the rock walls around her for a moment.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The nearby walls brighten with a warm flicker and the light fades as the match burns down; the far reaches stay dark."
+  },
+  {
+    "id": "OPT-0166",
+    "caption": "A camper walks through a dark campsite carrying a lantern, and the pool of light moves along the ground with him.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The lit area travels with the lantern and the tents brighten as he passes and darken behind him; his shadow falls away from the lantern."
+  },
+  {
+    "id": "OPT-0167",
+    "caption": "A caver wearing a headlamp turns his head from side to side, and the beam sweeps across the cave walls with each turn.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The lit patch moves exactly with his head and the wall he looks away from goes dark; the light is brightest where the beam is centred."
+  },
+  {
+    "id": "OPT-0168",
+    "caption": "A presenter uses a laser pointer on a projection screen, and the red dot moves across the slide as she moves her hand.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The dot appears only when the button is pressed, moves with her hand, and disappears when she releases it; it does not linger."
+  },
+  {
+    "id": "OPT-0169",
+    "caption": "Dusk falls on a residential street, and the streetlights flicker on one after another along the road.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "Each lamp lights the pavement beneath it with a pool of light; the pools appear only under lamps that are on."
+  },
+  {
+    "id": "OPT-0170",
+    "caption": "A photographer takes a picture with a flash in a dim hall, and the whole room is lit for an instant.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The flash is a single brief burst that lights everything facing the camera and is gone; the room returns to dim immediately."
+  },
+  {
+    "id": "OPT-0171",
+    "caption": "A driver enters a tunnel on a sunny day, and the inside of the car dims until the overhead tunnel lights take over.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The light in the car drops as the tunnel entrance passes overhead and takes on the tunnel lamps' colour; it brightens again at the exit."
+  },
+  {
+    "id": "OPT-0172",
+    "caption": "A boy points a flashlight at the wall and then swings it up to the ceiling, and the lit spot leaves the wall and appears on the ceiling.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The spot travels up the wall and onto the ceiling continuously with the beam; the wall goes dark once the beam has left it."
+  },
+  {
+    "id": "OPT-0173",
+    "caption": "A television is switched on in a dark room, and the walls and the faces of the viewers glow with the changing light from the screen.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The glow on the room changes with the picture and comes from the screen's direction; it stops when the TV is switched off."
+  },
+  {
+    "id": "OPT-0174",
+    "caption": "A man cups his hand over the front of a flashlight, and the beam is blocked and the room goes dark.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The light disappears the instant the hand covers the lens and his fingers glow red at the edges; the beam returns when the hand is removed."
+  },
+  {
+    "id": "OPT-0175",
+    "caption": "A door to a lit hallway is opened into a dark room, and a wedge of light spreads across the floor as the door swings.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The lit wedge widens with the door and narrows as it closes; the door's shadow edge moves with it."
+  },
+  {
+    "id": "OPT-0176",
+    "caption": "Two people stand at different distances from a single lamp in a dark room, and the one nearer the lamp is lit far more brightly than the one farther away.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "Brightness falls off with distance from the lamp; when the far person walks toward it she brightens."
+  },
+  {
+    "id": "OPT-0177",
+    "caption": "A cyclist switches on a bicycle headlight at night, and a cone of light appears on the path ahead.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The lit patch appears in front of the bike when the light is switched on and moves with the bike; the path behind stays dark."
+  },
+  {
+    "id": "OPT-0178",
+    "caption": "A person carries a lit candle down a dark staircase, and the light on the walls travels with the candle.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The walls are brightest near the flame and darken behind as the candle moves on; the light flickers with the flame."
+  },
+  {
+    "id": "OPT-0179",
+    "caption": "A power cut hits a house at night, and every light goes out at once, leaving the rooms dark.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "All lamps go dark at the same instant and stay dark; only outside light through windows remains."
+  },
+  {
+    "id": "OPT-0180",
+    "caption": "A man strikes a lighter in a dark garage and holds it up, and the small flame lights his hand and face and the nearby tools.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "Only things near the flame are visible, lit from the flame's direction; the light flickers and goes out when the lighter closes."
+  },
+  {
+    "id": "OPT-0181",
+    "caption": "A child switches on a night light in a dark bedroom, and a soft glow lights the corner around it.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The glow is strongest on the wall next to the night light and fades across the room; the far side stays dim."
+  },
+  {
+    "id": "OPT-0182",
+    "caption": "A car's interior light comes on when the door is opened at night, and it goes off again after the door is shut.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The cabin brightens when the door opens and darkens after it closes; the light comes from the ceiling fixture."
+  },
+  {
+    "id": "OPT-0183",
+    "caption": "A woman opens the door of a lit oven in a dim kitchen, and the food inside is lit by the oven lamp.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The inside of the oven is bright and light spills a little onto the floor; the light comes from the bulb inside, not from the food."
+  },
+  {
+    "id": "OPT-0184",
+    "caption": "A cinema's house lights dim before the film starts, and the audience fades from view until only the screen glows.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The dimming is gradual, the seats go dark, and the screen's light on the front rows changes with the picture."
+  },
+  {
+    "id": "OPT-0185",
+    "caption": "A worker turns on a floodlight over a building site at dusk, and the yard is lit while the area behind the light stays dark.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The lit area is in front of the lamp and objects there cast long shadows away from it; the ground behind the lamp is not lit."
+  },
+  {
+    "id": "OPT-0186",
+    "caption": "A man lights a row of paper lanterns hanging in a garden, and each lantern glows as its candle is lit.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "A lantern glows only after its candle is lit and lights the leaves nearest to it; unlit lanterns stay dark."
+  },
+  {
+    "id": "OPT-0187",
+    "caption": "A boy shines a flashlight through his cupped fingers, and his fingers glow red where the light passes through them.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The glow appears where the flesh is thin and disappears when the flashlight is turned off; the light beyond the hand is dim."
+  },
+  {
+    "id": "OPT-0188",
+    "caption": "A stage's lights are turned up gradually, and the dark set becomes visible piece by piece as the brightness rises.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The scene brightens smoothly with no jumps; shadows appear away from the lamps; it does not brighten before the lights come up."
+  },
+  {
+    "id": "OPT-0189",
+    "caption": "A woman walks from a bright sunlit street into a dim shop, and the doorway behind her stands out as a bright rectangle.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The interior is dim relative to the doorway, the floor near the door is lit, and it grows darker deeper into the shop."
+  },
+  {
+    "id": "OPT-0190",
+    "caption": "A firework bursts high in the night sky, and for a moment the upturned faces of the crowd below are lit.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The faces brighten at the burst and dim as it fades; the light comes from above; the ground is lit only briefly."
+  },
+  {
+    "id": "OPT-0191",
+    "caption": "A person turns a desk lamp to point at the wall, and the wall brightens while the desk beneath it goes dim.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The lit area moves with the lamp head; whatever the lamp is aimed at is brightest and what it turns away from darkens."
+  },
+  {
+    "id": "OPT-0192",
+    "caption": "A car drives past a house at night, and its headlights sweep across the front windows, lighting the curtains for a moment.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The light moves along the wall in the direction the car travels and is gone once the car has passed; the wall does not stay lit."
+  },
+  {
+    "id": "OPT-0193",
+    "caption": "A student switches on a lamp with a coloured shade, and the shade glows while the desk below is lit through its open bottom.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The shade glows evenly with the bulb inside and the brightest spot is directly beneath the shade; the light stops when the lamp is off."
+  },
+  {
+    "id": "OPT-0194",
+    "caption": "A man walks through an office with motion-sensor lights, and the ceiling panels switch on ahead of him and go off behind him.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "Each panel lights as he approaches and its patch of floor brightens; panels far behind him go dark after a delay."
+  },
+  {
+    "id": "OPT-0195",
+    "caption": "A woman blows out the last candle at a dinner table, and the faces around the table fall into darkness.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The warm light on the faces disappears with the flame; the room stays dark afterwards."
+  },
+  {
+    "id": "OPT-0196",
+    "caption": "A man switches on a torch app on his phone and holds it up in a dark basement, and the beam lights the floor and shelves in front of him.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The lit area is where the phone points and moves with it; the space behind him remains dark."
+  },
+  {
+    "id": "OPT-0197",
+    "caption": "A garage door rolls up in the morning, and daylight moves across the floor from the front to the back as the door opens.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The lit region on the floor grows inward as the door rises; the rear of the garage brightens last."
+  },
+  {
+    "id": "OPT-0198",
+    "caption": "A diver switches on an underwater torch in murky water, and a cone of lit particles appears in front of it.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The lit cone points where the torch points, fades with distance, and moves with the diver's hand; the water behind stays dark."
+  },
+  {
+    "id": "OPT-0199",
+    "caption": "A woman turns on a string of fairy lights along a fence, and small pools of light appear under each bulb.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "Every bulb on the string lights together and each lights the fence close to it; nothing between bulbs is bright."
+  },
+  {
+    "id": "OPT-0200",
+    "caption": "A camper turns a lantern down to its lowest setting, and the tent interior darkens until only the nearest faces are visible.",
+    "category": "Optics",
+    "subcategory": "illumination",
+    "violation_types": [
+      "missing_consequence",
+      "process_direction"
+    ],
+    "expectation": "The brightness falls smoothly as the knob is turned; the farthest corners darken first; it does not brighten on its own."
+  },
+  {
+    "id": "OPT-0201",
+    "caption": "A painter squeezes yellow and blue paint side by side on a palette and stirs them together with a brush, and the mixture turns green.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "Green appears where the two colours meet and spreads as the stirring continues until no pure yellow or blue is left; the mixture does not separate back."
+  },
+  {
+    "id": "OPT-0202",
+    "caption": "A child adds a drop of red food colouring to a glass of white icing and stirs, and the icing turns pink.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "Streaks of red spread through the white and blend to an even pink; the colour does not come out again."
+  },
+  {
+    "id": "OPT-0203",
+    "caption": "A red stage light is switched on over a dancer in a white dress, and the dress turns red under the light.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The dress looks red only while the red light is on and where the light reaches; it looks white again when the light changes."
+  },
+  {
+    "id": "OPT-0204",
+    "caption": "Sunlight shines through a stained-glass window, and coloured patches of light lie across the church floor.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "Each patch has the colour of the glass it came through and lies on the floor away from the window; the patches fade when a cloud covers the sun."
+  },
+  {
+    "id": "OPT-0205",
+    "caption": "A boy tapes a piece of blue cellophane over a flashlight, and the beam on the wall turns blue.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The lit spot on the wall changes to blue as soon as the film covers the lens and goes white again when it is removed."
+  },
+  {
+    "id": "OPT-0206",
+    "caption": "A gardener sprays a fine mist from a hose with the sun behind her, and a small rainbow appears in the spray.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The rainbow appears within the mist while the spray runs and disappears when the water is turned off; it is not on the ground or in the dry air."
+  },
+  {
+    "id": "OPT-0207",
+    "caption": "A ray of sunlight hits a glass prism on a windowsill, and a band of rainbow colours appears on the wall.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The coloured band appears on the side away from the sun and moves when the prism is turned; it disappears when the prism is taken away."
+  },
+  {
+    "id": "OPT-0208",
+    "caption": "A crystal chandelier catches afternoon sunlight, and little flecks of rainbow light scatter across the walls and ceiling.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The flecks appear only while the sun hits the crystals and move when the chandelier sways; they vanish when the sun is blocked."
+  },
+  {
+    "id": "OPT-0209",
+    "caption": "A woman drips blue ink into a glass of clear water, and the blue spreads in swirls until the water is evenly tinted.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "process_direction",
+      "attribute_drift"
+    ],
+    "expectation": "The colour spreads outward and downward from the drop and gets paler as it spreads; it does not gather back into a drop."
+  },
+  {
+    "id": "OPT-0210",
+    "caption": "A cook stirs a spoonful of turmeric into a pot of white rice, and the rice turns yellow where the spice is mixed in.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "Yellow spreads from the spoon through the rice as it is stirred, and streaks even out; the rice does not return to white."
+  },
+  {
+    "id": "OPT-0211",
+    "caption": "A child mixes red and white paint on a paper plate with a finger, and the swirl turns pink.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "Pink appears where the finger blends the two and the streaks become uniform with more mixing; the colours do not separate."
+  },
+  {
+    "id": "OPT-0212",
+    "caption": "A DJ switches a party light from white to green, and the white walls of the room turn green.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The walls change colour with the light and at the same instant; things in the light's shadow stay unchanged."
+  },
+  {
+    "id": "OPT-0213",
+    "caption": "A car brakes on a rain-wet street at night, and red light from its brake lights spreads over the wet road behind it.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The red glow appears on the road when the lights come on and disappears when they go off; it lies behind the car, not in front."
+  },
+  {
+    "id": "OPT-0214",
+    "caption": "Morning sun shines through red curtains, and the white bedroom walls take on a red tint.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The tint is strongest where the light through the curtain falls and disappears when the curtains are opened; the walls are white in ordinary light."
+  },
+  {
+    "id": "OPT-0215",
+    "caption": "A woman changes a smart bulb from white to purple with her phone, and the room's white ceiling turns purple.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The ceiling colour changes with the bulb and returns to white when the bulb does; surfaces the bulb does not reach are unchanged."
+  },
+  {
+    "id": "OPT-0216",
+    "caption": "A boy holds a piece of red plastic in front of his eyes, and everything he looks at through it looks red.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "Only the view through the plastic is tinted; the scene beyond its edges is normal; the tint vanishes when the plastic is lowered."
+  },
+  {
+    "id": "OPT-0217",
+    "caption": "A child drops a purple bath bomb into a tub of clear water, and the colour billows out and turns the whole bath purple.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "process_direction",
+      "attribute_drift"
+    ],
+    "expectation": "The colour spreads from the bath bomb as it fizzes, thinning as it goes, until the water is evenly coloured; the water does not clear again."
+  },
+  {
+    "id": "OPT-0218",
+    "caption": "Snow falls under an orange streetlamp, and the snow on the ground beneath the lamp looks orange while the snow farther away looks white.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The tint is strongest directly under the lamp and fades with distance; snow outside the lamp's reach stays white."
+  },
+  {
+    "id": "OPT-0219",
+    "caption": "A painter dabs blue paint onto a wet patch of yellow watercolour, and the colours bleed into each other making green where they meet.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "process_direction",
+      "attribute_drift"
+    ],
+    "expectation": "The green forms along the boundary and widens as the paint spreads; the pure colours remain farther from the join."
+  },
+  {
+    "id": "OPT-0220",
+    "caption": "Sunlight passes through a glass of red wine on a white tablecloth, and a red patch of light appears on the cloth beside the glass.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The red patch lies on the side away from the sun and moves when the glass moves; it disappears when the glass is lifted."
+  },
+  {
+    "id": "OPT-0221",
+    "caption": "A cook pours a little green food colouring into a bowl of white cake batter and stirs, and the batter turns pale green.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "Green streaks spread with each stir and even out; the batter does not turn back to white."
+  },
+  {
+    "id": "OPT-0222",
+    "caption": "A lighting technician crosses a red and a blue spotlight on a white backdrop, and the area where they overlap glows purple.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The overlap is a different colour from either beam alone and disappears when one light is turned off; the single-colour areas stay red and blue."
+  },
+  {
+    "id": "OPT-0223",
+    "caption": "A child looks at a white lamp through a jar of yellow juice, and the lamp looks yellow through the jar.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The lamp is tinted only where seen through the juice; beside the jar it looks white."
+  },
+  {
+    "id": "OPT-0224",
+    "caption": "A man wearing yellow-tinted sunglasses looks at a white wall, and the wall looks yellow to him through the lenses.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The tint appears only through the lenses; when he lifts the glasses the wall is white."
+  },
+  {
+    "id": "OPT-0225",
+    "caption": "A girl swirls a brush loaded with red paint through a jar of clean water, and the water turns pink and cloudy.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "process_direction",
+      "attribute_drift"
+    ],
+    "expectation": "Colour streams off the brush and spreads through the jar, getting more even with each swirl; the water does not clear."
+  },
+  {
+    "id": "OPT-0226",
+    "caption": "A hairdresser squeezes two shades of hair dye into a bowl and whisks them together, and the mixture becomes one uniform colour.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "Streaks of the two shades blend with each stroke until the bowl is a single even colour; the shades do not separate again."
+  },
+  {
+    "id": "OPT-0227",
+    "caption": "A theatre spotlight with a blue filter is aimed at a white piano, and the piano turns blue under the beam.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The piano looks blue where the beam hits and white where it does not; it returns to white when the filter is removed."
+  },
+  {
+    "id": "OPT-0228",
+    "caption": "Sunlight passes through a blue glass bottle on a windowsill, and a blue patch of light lies on the counter beside it.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "missing_consequence",
+      "attribute_drift"
+    ],
+    "expectation": "The patch is on the side away from the sun and matches the bottle's colour; it moves when the bottle is moved."
+  },
+  {
+    "id": "OPT-0229",
+    "caption": "A child drips yellow and red watercolour onto a wet sheet of paper, and where they run together an orange band forms.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "process_direction",
+      "attribute_drift"
+    ],
+    "expectation": "The orange forms only where the two colours meet and spreads as they bleed; the pure colours remain at the edges."
+  },
+  {
+    "id": "OPT-0230",
+    "caption": "A woman holds a green glass up to the light and looks at a white wall through it, and the wall looks green.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The tint is only in the view through the glass; the wall around it is white and returns to white when the glass is lowered."
+  },
+  {
+    "id": "OPT-0231",
+    "caption": "A fountain's spray in a park is lit at night by coloured lamps, and the falling water glows in the lamps' colours.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The water takes the colour of whatever lamp lights it and changes when the lamps change; unlit water is dark."
+  },
+  {
+    "id": "OPT-0232",
+    "caption": "A cook drops a spoonful of beet juice into a bowl of white yogurt and folds it in, and the yogurt turns pink with darker streaks that fade as it is mixed.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "The pink spreads from the juice as the spoon moves and evens out with more folding; the yogurt does not become white again."
+  },
+  {
+    "id": "OPT-0233",
+    "caption": "Sunlight through a sprinkler's fan of water forms a rainbow that shifts as the sprinkler swings.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The rainbow is inside the spray and moves with it; it disappears when the sprinkler stops or the sun is covered."
+  },
+  {
+    "id": "OPT-0234",
+    "caption": "A stage floods with yellow light, and the actors' white costumes all look yellow at once.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "Every lit white surface changes together to yellow and back when the light changes; shadowed folds stay darker."
+  },
+  {
+    "id": "OPT-0235",
+    "caption": "A child adds blue drops to a glass of yellow lemonade and swirls it, and the drink turns green.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "Green appears where the blue meets the yellow and spreads until the whole glass is green; the drink does not separate back into yellow and blue."
+  },
+  {
+    "id": "OPT-0236",
+    "caption": "A tattoo shop's red neon sign shines on the wet white van parked outside, and the van's side glows pink-red.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The van is tinted where the sign's light reaches and white elsewhere; the tint goes when the sign is switched off."
+  },
+  {
+    "id": "OPT-0237",
+    "caption": "A painter rolls white paint over a patch of wet red paint on a wall, and the roller leaves a pink streak where they blend.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "Pink appears only along the roller's path through the red; the untouched red stays red and the pink does not turn white again."
+  },
+  {
+    "id": "OPT-0238",
+    "caption": "Sunset light through a window falls on a white cat, and its fur takes on an orange glow.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The fur looks orange only on the side facing the window and while the sunset light lasts; it is white in ordinary light."
+  },
+  {
+    "id": "OPT-0239",
+    "caption": "A red plastic cup is placed upside down over a phone's white flashlight, and the cup glows red and throws a red circle onto the ceiling.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The glow and the circle appear when the cup covers the light and are the cup's colour; they vanish when the cup is lifted or the light is switched off."
+  },
+  {
+    "id": "OPT-0240",
+    "caption": "A car wash's foaming brushes turn from white to blue when the blue soap is sprayed on, and rinse back to white under clear water.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "The colour spreads with the soap and washes out with the rinse water running downward; the brushes do not turn blue before the soap arrives."
+  },
+  {
+    "id": "OPT-0241",
+    "caption": "A red laser pointer's dot lands on a white wall, and when it moves onto a green plant the dot becomes hard to see.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "causeless_motion"
+    ],
+    "expectation": "The dot is bright red on the white wall and dim on the green leaves; it stays red wherever it lands and moves with the hand."
+  },
+  {
+    "id": "OPT-0242",
+    "caption": "A woman drapes a sheer red scarf over a white lamp, and the room's light turns warm red.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The room's light changes as the scarf covers the lamp and returns to white when it is lifted; the scarf glows from within."
+  },
+  {
+    "id": "OPT-0243",
+    "caption": "A child dips a white paper towel corner into a cup of blue dye, and the blue creeps up the towel.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "process_direction",
+      "attribute_drift"
+    ],
+    "expectation": "The colour climbs from the wet corner upward and stops advancing when the towel is lifted out; it does not spread from the dry end."
+  },
+  {
+    "id": "OPT-0244",
+    "caption": "A jeweller holds a clear-cut crystal pendant in sunlight and turns it, and coloured sparkles dance across the shop's ceiling.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "missing_consequence",
+      "causeless_motion"
+    ],
+    "expectation": "The sparkles move as the pendant turns and disappear when it is put down or the sun goes in."
+  },
+  {
+    "id": "OPT-0245",
+    "caption": "A bartender pours grenadine into a glass of orange juice, and the red sinks and spreads through the bottom of the glass while the top stays orange.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction",
+      "attribute_drift"
+    ],
+    "expectation": "The red drops through the juice and gathers low, blending into a red-orange band; it does not float on top or stay a separate blob."
+  },
+  {
+    "id": "OPT-0246",
+    "caption": "A child paints a stripe of blue over a dry yellow stripe with translucent watercolour, and the overlap looks green.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "Only the overlapping band is green; the yellow and blue outside the overlap keep their colours."
+  },
+  {
+    "id": "OPT-0247",
+    "caption": "Sunlight enters a room through a red balloon held up to the window, and a soft red glow falls on the child's hand behind it.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The glow is on the side away from the window and moves with the balloon; the hand is normal colour when the balloon is lowered."
+  },
+  {
+    "id": "OPT-0248",
+    "caption": "A cook stirs a spoonful of matcha powder into a glass of milk, and the milk turns pale green.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "process_direction"
+    ],
+    "expectation": "Green swirls spread from the spoon and even out; the milk does not return to white."
+  },
+  {
+    "id": "OPT-0249",
+    "caption": "A concert's lights switch from blue to red, and the white smoke over the stage changes from blue to red at the same instant.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "attribute_drift",
+      "missing_consequence"
+    ],
+    "expectation": "The smoke shows the colour of whatever light is on it and changes with the lights; unlit smoke is grey."
+  },
+  {
+    "id": "OPT-0250",
+    "caption": "A woman looks at a rainbow over a field after a shower, and it fades as the rain moves away and the sky clears.",
+    "category": "Optics",
+    "subcategory": "color_mixing",
+    "violation_types": [
+      "process_direction",
+      "permanence_count"
+    ],
+    "expectation": "The rainbow appears opposite the sun, keeps its arc shape while visible, and fades gradually; it does not move across the sky or become brighter as the rain ends."
+  }
+]

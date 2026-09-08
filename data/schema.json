@@ -1,0 +1,64 @@
+{
+  "description": "One record per caption. Files under train/ and eval/ are JSON lists of these records, one file per category. drafts/ holds review batches in the same format.",
+  "fields": {
+    "id": "Unique. <CAT>-<4 digits>. CAT in {MECH, HEAT, OPT, ELEC, ACOU}. Eval ids share the same space as train ids (no reuse).",
+    "caption": "English, one or two sentences, an everyday scene with a visible dynamic event. States the triggering event AND its outcome in plain words (falls off, is thrown forward, shatters, slides a short way and stops), so the phenomenon is guaranteed to be in frame and the ending is not left open. Never states HOW it happens physically (no accelerating, arc, bounces lower each time, at the same moment as): the manner belongs in expectation and in the rubric. No law names, no numbers, no decorative adjectives. No camera or shot directions (camera follows, close-up, slow motion): describe the scene, not how to film it. Must be filmable in a few seconds from one fixed viewpoint.",
+    "category": "One of: Mechanics, Heat, Optics, Electricity, Acoustics.",
+    "subcategory": "Phenomenon within the category. See subcategories below.",
+    "violation_types": "1 to 3 tags from the ten below: the expectations this caption puts at risk.",
+    "expectation": "Hidden. HOW the outcome named in the caption should unfold: timing relative to the cause, direction, gradual vs abrupt, what must not happen. Must hold for every reasonable realisation of the caption: no outcomes that depend on a threshold (fast enough, hard enough), on skill, or on details the caption leaves open. If the outcome is conditional, fix the caption or drop the record. Used for review and as the seed of the rubric's core items. Never shown to the video model or the judge."
+  },
+  "subcategories": {
+    "Mechanics": ["gravity_fall", "inertia", "collision", "friction_rolling", "projectile", "balance_topple", "tension", "deformation", "cut_tear", "fluid", "granular", "gas_wind", "biomechanics", "soft_material", "occlusion_containment"],
+    "Heat": ["melt_freeze", "boil_steam", "condensation", "burn_smoke", "heat_response"],
+    "Optics": ["shadow", "reflection", "refraction_transparency", "illumination", "color_mixing"],
+    "Electricity": ["switch_light", "plug_power", "lightning", "spark", "magnet", "static"],
+    "Acoustics": ["struck_vibration", "sound_driven_vibration", "source_motion"]
+  },
+  "subcategory_notes": {
+    "Mechanics/tension": "Inextensible ropes, strings, chains and cables only: slack to taut, pulling and stopping loads. Fail = a rope stretches like elastic or a slack rope carries load.",
+    "Mechanics/deformation": "Bodies changing shape under force, both elastic (springs back: sponge, trampoline, bow, rubber band) and plastic (keeps the shape: can, clay, paper clip).",
+    "Mechanics/fluid": "Also hosts everyday pressure and buoyancy: straw, squeeze bottle, floating and sinking.",
+    "Mechanics/gas_wind": "Also hosts suction and inflation: vacuum cleaner, pump, deflating mattress.",
+    "Electricity/switch_light": "Cause and simultaneity between a control and its device: the light comes on the instant the switch is flipped and goes off the instant it is flipped back; a remote turns the TV on; a burnt-out bulb flashes and dies. Optics/illumination covers how the light then lights the room; this covers the switch-device link.",
+    "Electricity/plug_power": "Power supply and its loss: unplugging stops a running device, batteries make a toy go and their removal stops it, a tripped cord kills every device on it, a charger plugged in lights the charging indicator, heater coils fade when unplugged.",
+    "Electricity/lightning": "Lightning as seen: a jagged bolt from cloud to ground, a flash that lights clouds, ground and room interiors for an instant then darkness, wet surfaces reflecting the flash, no sustained glow. Thunder is not visible; people flinching after the flash is.",
+    "Electricity/spark": "Sparks from electrical and mechanical sources: welding, grinding wheels, jumper cables touching, a plug pulled from a live socket, tram poles on wires, a bug zapper. Sparks fly off in the direction of motion, fall under gravity, and go dark within a short distance; they appear only during contact. Campfire sparks belong to Heat/burn_smoke.",
+    "Electricity/magnet": "Everyday magnetism: magnets stick to fridges and steel, pick up paperclips and nails but not plastic or paper, work through a sheet of paper or a tabletop, snap together, hold notes; a scrapyard crane lifts steel. Like-pole repulsion only in the familiar form of two magnets pushing apart when brought together.",
+    "Electricity/static": "Static cling: a balloon rubbed on hair sticks to a wall and lifts paper scraps, hair stands up after a wool hat comes off, clothes from the dryer cling, plastic wrap clings to a hand, a shock at a doorknob makes someone flinch. No textbook demonstrations.",
+    "Acoustics": "Sound as it can be SEEN in a silent video. Smaller branch (train 100 / eval 20): sound itself is not observable, only its visible causes and effects. Reactions of people or animals to sound are behaviour, not physics, and are excluded.",
+    "Acoustics/struck_vibration": "A struck, plucked or flicked object vibrates visibly and the vibration dies away: drum skin shivers, a plucked string blurs then sharpens, a gong face trembles, a ruler flicked off a table edge waggles and stops. Vibration starts at the strike and only then, and decays rather than growing.",
+    "Acoustics/sound_driven_vibration": "A sound source sets something else shaking: water in a glass next to a subwoofer ripples, dishes rattle as a truck passes, a slammed door sets a picture frame swinging, thunder rattles a window. The shaking is strongest nearest the source and stops when the source stops.",
+    "Acoustics/source_motion": "The visible motion of the thing producing sound, starting and stopping with it: a speaker cone pumps with the beat, a phone on vibrate creeps across a table, an electric toothbrush left running buzzes in circles, a tuning fork's prongs blur after being struck.",
+    "Heat/melt_freeze": "Solid to liquid and back. Melting is easy to show (ice cream, butter, snow on a warm hand). Freezing only in fast everyday cases: wax drips hardening, chocolate shell on ice cream, hot glue setting. No slow freezing, no timelapse.",
+    "Heat/boil_steam": "Liquid already boiling or about to: bubbles rising, steam rising from spout or pot, lid rattling, level dropping, boil-over. Not the slow heat-up from cold.",
+    "Heat/condensation": "Fast fogging and beading: cold bottle from the fridge, breath on a cold window, mirror after a hot shower, glasses fogging indoors. No slow frost.",
+    "Heat/burn_smoke": "Behaviour of flame and smoke, not the chemistry: flames point up and lean with wind, smoke rises, paper curls and blackens before turning to ash, a candle goes out when blown, embers glow and fade.",
+    "Optics/shadow": "Shadows fall away from the light, stay attached to their object, move with the object and with the light source; an opaque object between light and surface casts a shadow there (a person in front of a projector). Object permanence behind occluders belongs to Mechanics/occlusion_containment, not here.",
+    "Optics/reflection": "Images in mirrors, still water, glass and polished metal: mirrored left-right, move in step with the subject, disappear when the subject leaves, break up when water is disturbed.",
+    "Optics/refraction_transparency": "Seeing through glass and water: objects visible through clear material, a straw looks bent at the waterline, legs look shorter under water, a magnifying glass enlarges what is behind it, rain on a window blurs the view.",
+    "Optics/illumination": "Light sources and brightness: a switch turns a room from dark to lit, a flashlight beam and its spot move with the hand, things nearer a lamp are brighter, a candle lights the faces around it, a spotlight sweeping a stage.",
+    "Optics/color_mixing": "Paint mixing on a palette, coloured light on white surfaces, stained glass tinting the light that passes through, rainbows in spray. No dyes reacting, no chemistry.",
+    "Heat/heat_response": "Physical responses to heat other than phase change: softening and sagging near heat, popcorn and chestnuts bursting, dumplings floating once cooked, hot air lifting steam or paper strips, frost vanishing off frozen food in a hot pan, oil spitting when wet food goes in. EXCLUDES colour change from browning, egg white turning opaque, caramelising, dough rising: those are chemistry."
+  },
+  "violation_types": {
+    "permanence_count": "L1. Objects appear from nothing, vanish, teleport, duplicate or merge.",
+    "shape_identity": "L1. Rigid things morph, melt, change identity; bodies grow or lose parts.",
+    "solidity": "L1. Matter passes through matter.",
+    "causeless_motion": "L1/L2. Inert objects start, stop or change direction with nothing acting on them.",
+    "gravity_direction": "L2. Unsupported things hover, rise, or fall the wrong way.",
+    "trajectory_momentum": "L2. Paths, speeds and rebounds inconsistent with how the object was set in motion.",
+    "process_direction": "L2. A process runs backwards, oscillates or resets (melting refreezes, poured water returns).",
+    "missing_consequence": "L2. The event the scene is about does not produce its visible result.",
+    "material_response": "L2. A material behaves like another class: glass bends, rope stays slack under load, water behaves as a solid.",
+    "attribute_drift": "L3. Colour, texture, label or position of untouched things changes between frames."
+  },
+  "example": {
+    "id": "MECH-0001",
+    "caption": "Two friends sit in the back seat of a car, chatting, when the car brakes hard and both of them are thrown forward against their seat belts.",
+    "category": "Mechanics",
+    "subcategory": "inertia",
+    "violation_types": ["causeless_motion", "trajectory_momentum"],
+    "expectation": "The lurch happens at the moment of braking, not before or after; it is forward, not backward or sideways; they settle back once the car has stopped."
+  }
+}
