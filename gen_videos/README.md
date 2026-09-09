@@ -22,5 +22,11 @@ python gen_videos/generate.py --backend cogvideox --model $MODELS/CogVideoX-5b -
 Selection flags: `--split`, `--category`, `--ids MECH-0001 ...`, `--per-category N`
 (round-robin over subcategories, deterministic), `--shard K/N`.
 
+Backends: `cogvideox15` (CogVideoX1.5-5B, 1360x768x81), `wan22` (Wan2.2-T2V-A14B, 832x480x81) run in
+the `t2v` conda env; `hunyuan15` (HunyuanVideo-1.5 720p_t2v, 1280x720x121) needs diffusers>=0.36 and
+runs in the separate `t2v-hy15` env (clone of t2v with diffusers 0.40 / transformers 5.16, because
+the t2v env's transformers 4.57 pins huggingface-hub<1). `--manifest-dir` points the manifest at
+another checkout's `gen_videos/manifests` when generate.py runs from a worktree.
+
 Adding a model = adding one loader to `BACKENDS` in `generate.py` (see the `cogvideox`
 entry). Slurm templates live in `slurm/`; fill in the account, model and env lines.

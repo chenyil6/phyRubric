@@ -105,10 +105,15 @@ def load_cogvideox(model: Path, args: argparse.Namespace) -> Callable[[str, int]
     pipe.scheduler = CogVideoXDPMScheduler.from_config(pipe.scheduler.config, timestep_spacing="trailing")
     pipe.vae.enable_slicing()
     pipe.vae.enable_tiling()
-    if args.cpu_offload:
+    # CogVideoX1.5-5B at 1360x768x81 does not fit next to the T5 encoder on a 40 GB card:
+    # keep only the active component on the GPU there (official recipe uses CPU offload too).
+    offload = args.cpu_offload or (args.backend == "cogvideox15" and torch.cuda.get_device_properties(0).total_memory < 70e9)
+    if offload:
         pipe.enable_model_cpu_offload()
     else:
         pipe.to("cuda")
+    print(f"cogvideox: {args.width}x{args.height}x{args.num_frames} steps={args.steps} cfg={args.guidance_scale} "
+          f"cpu_offload={offload}", flush=True)
 
     def generate(prompt: str, seed: int) -> tuple[list, int]:
         frames = pipe(
@@ -182,21 +187,58 @@ def load_wan(model: Path, args: argparse.Namespace) -> Callable[[str, int], tupl
     return generate
 
 
+def load_hunyuan15(model: Path, args: argparse.Namespace) -> Callable[[str, int], tuple[list, int]]:
+    """HunyuanVideo-1.5 T2V (Diffusers layout: hunyuanvideo-community/HunyuanVideo-1.5-Diffusers-{480p,720p}_t2v).
+
+    8.3B DiT + Qwen2.5-VL-7B text encoder + byT5 + 1.3B VAE, ~34 GB in bf16, so a 40 GB card runs
+    with model CPU offload (one component on the GPU at a time; cheap here because each component
+    is used once per video). Needs diffusers>=0.36, which conflicts with the t2v env's pinned
+    transformers -- run this backend from the separate t2v-hy15 env. CFG lives in the pipeline's
+    guider component, not in __call__, so --guidance-scale swaps the guider. The pipeline wraps the
+    caption in a fixed Qwen chat template before encoding; the caption text itself is untouched."""
+    import torch
+    from diffusers import HunyuanVideo15Pipeline
+    from diffusers.guiders import ClassifierFreeGuidance
+
+    if (args.num_frames - 1) % 4 != 0:
+        raise SystemExit("HunyuanVideo-1.5 needs --num-frames = 4k+1 (121 recommended)")
+    pipe = HunyuanVideo15Pipeline.from_pretrained(model, torch_dtype=torch.bfloat16)
+    if abs(pipe.guider.guidance_scale - args.guidance_scale) > 1e-6:
+        pipe.guider = ClassifierFreeGuidance(guidance_scale=args.guidance_scale)
+    pipe.vae.enable_tiling()
+    offload = args.cpu_offload or torch.cuda.get_device_properties(0).total_memory < 70e9
+    if offload:
+        pipe.enable_model_cpu_offload()
+    else:
+        pipe.to("cuda")
+    print(f"hunyuan15: {args.width}x{args.height}x{args.num_frames} steps={args.steps} "
+          f"cfg={pipe.guider.guidance_scale} shift={pipe.scheduler.config.shift} cpu_offload={offload}", flush=True)
+
+    def generate(prompt: str, seed: int) -> tuple[list, int]:
+        frames = pipe(
+            prompt=prompt,
+            height=args.height,
+            width=args.width,
+            num_frames=args.num_frames,
+            num_inference_steps=args.steps,
+            generator=torch.Generator(device="cuda").manual_seed(seed),
+        ).frames[0]
+        return frames, args.fps
+
+    return generate
+
+
 BACKENDS: dict[str, dict[str, Any]] = {
     # defaults are the model authors' recommended sampling settings
-    "cogvideox":   {"load": load_cogvideox, "steps": 50, "guidance_scale": 6.0, "num_frames": 49, "fps": 8,
-                    "height": 480, "width": 720,                                   # CogVideoX-5b
-                    "packages": ("torch", "diffusers", "transformers", "accelerate", "sentencepiece")},
     "cogvideox15": {"load": load_cogvideox, "steps": 50, "guidance_scale": 6.0, "num_frames": 81, "fps": 16,
                     "height": 768, "width": 1360,                                  # CogVideoX1.5-5B
                     "packages": ("torch", "diffusers", "transformers", "accelerate", "sentencepiece")},
-    "wan":         {"load": load_wan, "steps": 50, "guidance_scale": 5.0, "num_frames": 81, "fps": 16,
-                    "height": 480, "width": 832,                                   # Wan2.1-T2V-14B, 480p
-                    "packages": ("torch", "diffusers", "transformers", "accelerate", "ftfy")},
     "wan22":       {"load": load_wan, "steps": 40, "guidance_scale": 4.0, "guidance_scale_2": 3.0,
                     "num_frames": 81, "fps": 16, "height": 480, "width": 832,      # Wan2.2-T2V-A14B, 480p
                     "packages": ("torch", "diffusers", "transformers", "accelerate", "ftfy")},
-    # "hunyuan":  to add: HunyuanVideoPipeline, needs cpu offload on 40 GB cards
+    "hunyuan15":   {"load": load_hunyuan15, "steps": 50, "guidance_scale": 6.0, "num_frames": 121, "fps": 24,
+                    "height": 720, "width": 1280,                                  # HunyuanVideo-1.5 720p_t2v
+                    "packages": ("torch", "diffusers", "transformers", "accelerate")},
 }
 
 
@@ -238,6 +280,8 @@ def main() -> int:
     ap.add_argument("--model", type=Path, required=True, help="local weights directory")
     ap.add_argument("--tag", help="output/manifest name; default = backend")
     ap.add_argument("--out-root", type=Path, default=DEFAULT_OUT_ROOT)
+    ap.add_argument("--manifest-dir", type=Path, default=MANIFESTS,
+                    help="where <tag>.jsonl is appended (default: this repo's gen_videos/manifests)")
     sel = ap.add_argument_group("selection")
     sel.add_argument("--split", nargs="+", choices=("train", "eval"), default=["train", "eval"])
     sel.add_argument("--category", nargs="+", choices=CATEGORIES)
@@ -269,7 +313,7 @@ def main() -> int:
         ap.error("--shard K/N needs 0 <= K < N")
     tag = args.tag or args.backend
     out_dir = args.out_root / tag
-    manifest = MANIFESTS / f"{tag}.jsonl"
+    manifest = args.manifest_dir / f"{tag}.jsonl"
 
     records = select(args)
     todo = [r for r in records if args.overwrite or not target_path(out_dir, r, args.seed).exists()]
