@@ -187,6 +187,83 @@ def load_wan(model: Path, args: argparse.Namespace) -> Callable[[str, int], tupl
     return generate
 
 
+def _patch_hunyuan15_attention(transformer) -> int:
+    """Replace diffusers' HunyuanVideo15 attention processor with a memory-safe one.
+
+    The stock processor turns the (B, L) text-padding mask into a dense (B, 1, L, L) boolean
+    mask; at 720p x 121 frames L ~ 113k tokens, so that single tensor is 12.7 GB and it is built
+    twice -> OOM on a 40 GB card. The transformer already orders text tokens as
+    [valid..., padding...] and video tokens are never masked, so attention over the valid prefix
+    with no mask gives the same output for every valid token (padded tokens only ever attend to /
+    are attended by nothing). We slice to the valid tokens, run flash SDPA, and zero-fill the rest.
+    Returns the number of attention modules patched."""
+    import torch
+    from diffusers.models.attention_processor import Attention
+    from diffusers.models.transformers import transformer_hunyuan_video15 as hv
+
+    class SlicedProcessor(hv.HunyuanVideo15AttnProcessor2_0):
+        def __call__(self, attn, hidden_states, encoder_hidden_states=None, attention_mask=None,
+                     image_rotary_emb=None):
+            F = hv.F
+            query = attn.to_q(hidden_states).unflatten(2, (attn.heads, -1))
+            key = attn.to_k(hidden_states).unflatten(2, (attn.heads, -1))
+            value = attn.to_v(hidden_states).unflatten(2, (attn.heads, -1))
+            query = attn.norm_q(query)
+            key = attn.norm_k(key)
+            if image_rotary_emb is not None:
+                from diffusers.models.embeddings import apply_rotary_emb
+                query = apply_rotary_emb(query, image_rotary_emb, sequence_dim=1)
+                key = apply_rotary_emb(key, image_rotary_emb, sequence_dim=1)
+            if encoder_hidden_states is not None:
+                eq = attn.add_q_proj(encoder_hidden_states).unflatten(2, (attn.heads, -1))
+                ek = attn.add_k_proj(encoder_hidden_states).unflatten(2, (attn.heads, -1))
+                ev = attn.add_v_proj(encoder_hidden_states).unflatten(2, (attn.heads, -1))
+                if attn.norm_added_q is not None:
+                    eq = attn.norm_added_q(eq)
+                if attn.norm_added_k is not None:
+                    ek = attn.norm_added_k(ek)
+                query = torch.cat([query, eq], dim=1)
+                key = torch.cat([key, ek], dim=1)
+                value = torch.cat([value, ev], dim=1)
+
+            batch_size, seq_len = query.shape[:2]
+            run = lambda q, k, v: hv.dispatch_attention_fn(  # noqa: E731
+                q, k, v, attn_mask=None, dropout_p=0.0, is_causal=False,
+                backend=self._attention_backend, parallel_config=self._parallel_config)
+            if attention_mask is None:
+                out = run(query, key, value)
+            else:
+                mask = F.pad(attention_mask, (seq_len - attention_mask.shape[1], 0), value=True).bool()
+                if bool(mask.all()):
+                    out = run(query, key, value)
+                elif batch_size == 1:
+                    idx = mask[0].nonzero(as_tuple=True)[0]
+                    out = torch.zeros_like(query)
+                    out[:, idx] = run(query[:, idx], key[:, idx], value[:, idx]).to(query.dtype)
+                else:  # batched with padding: fall back to the stock dense-mask path
+                    return super().__call__(attn, hidden_states, encoder_hidden_states, attention_mask,
+                                            image_rotary_emb)
+            hidden_states = out.flatten(2, 3).to(query.dtype)
+
+            if encoder_hidden_states is not None:
+                n = encoder_hidden_states.shape[1]
+                hidden_states, encoder_hidden_states = hidden_states[:, :-n], hidden_states[:, -n:]
+                if getattr(attn, "to_out", None) is not None:
+                    hidden_states = attn.to_out[0](hidden_states)
+                    hidden_states = attn.to_out[1](hidden_states)
+                if getattr(attn, "to_add_out", None) is not None:
+                    encoder_hidden_states = attn.to_add_out(encoder_hidden_states)
+                return hidden_states, encoder_hidden_states
+            return hidden_states
+
+    n = 0
+    for m in transformer.modules():
+        if isinstance(m, Attention) and isinstance(m.processor, hv.HunyuanVideo15AttnProcessor2_0):
+            m.set_processor(SlicedProcessor())
+            n += 1
+    return n
+
+
 def load_hunyuan15(model: Path, args: argparse.Namespace) -> Callable[[str, int], tuple[list, int]]:
     """HunyuanVideo-1.5 T2V (Diffusers layout: hunyuanvideo-community/HunyuanVideo-1.5-Diffusers-{480p,720p}_t2v).
 
@@ -206,12 +283,13 @@ def load_hunyuan15(model: Path, args: argparse.Namespace) -> Callable[[str, int]
     if abs(pipe.guider.guidance_scale - args.guidance_scale) > 1e-6:
         pipe.guider = ClassifierFreeGuidance(guidance_scale=args.guidance_scale)
     pipe.vae.enable_tiling()
+    patched = _patch_hunyuan15_attention(pipe.transformer)
     offload = args.cpu_offload or torch.cuda.get_device_properties(0).total_memory < 70e9
     if offload:
         pipe.enable_model_cpu_offload()
     else:
         pipe.to("cuda")
-    print(f"hunyuan15: {args.width}x{args.height}x{args.num_frames} steps={args.steps} "
+    print(f"hunyuan15: attention processors patched={patched} {args.width}x{args.height}x{args.num_frames} steps={args.steps} "
           f"cfg={pipe.guider.guidance_scale} shift={pipe.scheduler.config.shift} cpu_offload={offload}", flush=True)
 
     def generate(prompt: str, seed: int) -> tuple[list, int]:
