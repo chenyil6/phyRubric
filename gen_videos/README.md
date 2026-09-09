@@ -23,7 +23,7 @@ Selection flags: `--split`, `--category`, `--ids MECH-0001 ...`, `--per-category
 (round-robin over subcategories, deterministic), `--shard K/N`.
 
 Backends: `cogvideox15` (CogVideoX1.5-5B, 1360x768x81), `wan22` (Wan2.2-T2V-A14B, 832x480x81) run in
-the `t2v` conda env; `hunyuan15` (HunyuanVideo-1.5 720p_t2v, 1280x720x121) needs diffusers>=0.36 and
+the `t2v` conda env; `hunyuan15` (HunyuanVideo-1.5 480p_t2v, 848x480x121; 720p is ~57 min/video on A100-40GB) needs diffusers>=0.36 and
 runs in the separate `t2v-hy15` env (clone of t2v with diffusers 0.40 / transformers 5.16, because
 the t2v env's transformers 4.57 pins huggingface-hub<1). `--manifest-dir` points the manifest at
 another checkout's `gen_videos/manifests` when generate.py runs from a worktree.

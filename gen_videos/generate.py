@@ -315,7 +315,8 @@ BACKENDS: dict[str, dict[str, Any]] = {
                     "num_frames": 81, "fps": 16, "height": 480, "width": 832,      # Wan2.2-T2V-A14B, 480p
                     "packages": ("torch", "diffusers", "transformers", "accelerate", "ftfy")},
     "hunyuan15":   {"load": load_hunyuan15, "steps": 50, "guidance_scale": 6.0, "num_frames": 121, "fps": 24,
-                    "height": 720, "width": 1280,                                  # HunyuanVideo-1.5 720p_t2v
+                    "height": 480, "width": 848,                                   # HunyuanVideo-1.5 480p_t2v
+                    # 720p_t2v (1280x720) measured 66 s/step = ~57 min/video on an A100-40GB: too slow.
                     "packages": ("torch", "diffusers", "transformers", "accelerate")},
 }
 
