@@ -11,7 +11,8 @@
     python gen_videos/generate.py --backend cogvideox --model $MODELS/CogVideoX-5b --split train --shard 7/40
 
 The generation prompt is the caption verbatim: no upsampling, no style suffix. Output is
-<out-root>/<tag>/<ID>_s<seed>.mp4 and one append-only manifest line per video in
+<out-root>/<tag>/<split>/<ID>_s<seed>.mp4 (split = train | eval) and one append-only
+manifest line per video in
 gen_videos/manifests/<tag>.jsonl. Existing outputs are skipped, so a killed job is
 simply resubmitted. `--tag` defaults to the backend name; use it to keep separate
 settings apart (e.g. cogvideox5b_steps50).
@@ -105,10 +106,15 @@ def load_cogvideox(model: Path, args: argparse.Namespace) -> Callable[[str, int]
     pipe.scheduler = CogVideoXDPMScheduler.from_config(pipe.scheduler.config, timestep_spacing="trailing")
     pipe.vae.enable_slicing()
     pipe.vae.enable_tiling()
-    if args.cpu_offload:
+    # CogVideoX1.5-5B at 1360x768x81 does not fit next to the T5 encoder on a 40 GB card:
+    # keep only the active component on the GPU there (official recipe uses CPU offload too).
+    offload = args.cpu_offload or (args.backend == "cogvideox15" and torch.cuda.get_device_properties(0).total_memory < 70e9)
+    if offload:
         pipe.enable_model_cpu_offload()
     else:
         pipe.to("cuda")
+    print(f"cogvideox: {args.width}x{args.height}x{args.num_frames} steps={args.steps} cfg={args.guidance_scale} "
+          f"cpu_offload={offload}", flush=True)
 
     def generate(prompt: str, seed: int) -> tuple[list, int]:
         frames = pipe(
@@ -182,20 +188,97 @@ def load_wan(model: Path, args: argparse.Namespace) -> Callable[[str, int], tupl
     return generate
 
 
+# LTX-Video's default negative prompt (Lightricks README). Unused at guidance_scale=1 but passed for parity.
+LTX_NEGATIVE = "worst quality, inconsistent motion, blurry, jittery, distorted"
+# Official ltxv-2b-0.9.8-distilled.yaml schedule (sigma*1000): 7-step first pass at 2/3 resolution, then
+# latent 2x spatial upsample and a 3-step refinement. The trailing 0.03 / 0 entries follow the diffusers
+# port of that config (pipeline_ltx_condition docs); the distilled model is run without CFG (scale 1).
+LTX_FIRST_PASS = [1000, 993, 987, 981, 975, 909, 725, 0.03]
+LTX_SECOND_PASS = [1000, 909, 725, 421, 0]
+
+
+def load_ltx(model: Path, args: argparse.Namespace) -> Callable[[str, int], tuple[list, int]]:
+    """LTX-Video 2B 0.9.8 distilled, two-stage (multi-scale) pipeline as in the official config.
+
+    `model` holds the single-file checkpoint ltxv-2b-*.safetensors (transformer + VAE), the
+    ltxv-spatial-upscaler-*.safetensors latent upsampler, and Diffusers-layout text_encoder /
+    tokenizer / scheduler folders (T5-XXL) from Lightricks/LTX-Video. ~15 GB in bf16, fits any
+    40 GB+ card without offload. The distilled model has a fixed timestep schedule, so --steps is
+    rejected; the manifest records 12 = 8 first-pass + 4 effective second-pass steps."""
+    import torch
+    from diffusers import (AutoencoderKLLTXVideo, FlowMatchEulerDiscreteScheduler, LTXConditionPipeline,
+                           LTXLatentUpsamplePipeline, LTXVideoTransformer3DModel)
+    from diffusers.pipelines.ltx.modeling_latent_upsampler import LTXLatentUpsamplerModel
+    from safetensors.torch import load_file
+    from transformers import T5EncoderModel, T5Tokenizer
+
+    if (args.num_frames - 1) % 8 != 0:
+        raise SystemExit("LTX needs --num-frames = 8k+1 (121 recommended)")
+    if args.steps != BACKENDS["ltx"]["steps"]:
+        raise SystemExit("ltx (distilled) uses a fixed timestep schedule; --steps is not supported")
+    ckpts = [p for p in model.glob("ltxv-*b-*.safetensors")]
+    upscalers = list(model.glob("ltxv-spatial-upscaler-*.safetensors"))
+    if len(ckpts) != 1 or len(upscalers) != 1:
+        raise SystemExit(f"expected exactly one ltxv-*b-*.safetensors and one spatial upscaler in {model}: "
+                         f"{[c.name for c in ckpts]} {[u.name for u in upscalers]}")
+    dtype = torch.bfloat16
+    transformer = LTXVideoTransformer3DModel.from_single_file(ckpts[0], torch_dtype=dtype)
+    vae = AutoencoderKLLTXVideo.from_single_file(ckpts[0], torch_dtype=dtype)
+    text_encoder = T5EncoderModel.from_pretrained(model, subfolder="text_encoder", torch_dtype=dtype)
+    tokenizer = T5Tokenizer.from_pretrained(model, subfolder="tokenizer")  # slow/sentencepiece: the folder has no tokenizer.json and the env has no protobuf
+    # The repo's scheduler folder is the old 0.9.x config (dynamic shifting on); the official distilled
+    # config (Lightricks/LTX-Video-0.9.7-distilled) turns shifting off, and explicit timesteps need that.
+    scheduler = FlowMatchEulerDiscreteScheduler.from_pretrained(model, subfolder="scheduler", use_dynamic_shifting=False,
+                                                                shift=1.0, shift_terminal=None)
+    pipe = LTXConditionPipeline(scheduler=scheduler, vae=vae, text_encoder=text_encoder, tokenizer=tokenizer,
+                                transformer=transformer)
+    upsampler = LTXLatentUpsamplerModel()  # default config == 0.9.8 spatial upscaler (verified: no missing keys)
+    upsampler.load_state_dict(load_file(upscalers[0]))
+    upsampler.to(dtype)
+    pipe_up = LTXLatentUpsamplePipeline(vae=vae, latent_upsampler=upsampler)
+    pipe.vae.enable_tiling()
+    if args.cpu_offload:
+        pipe.enable_model_cpu_offload()
+        pipe_up.enable_model_cpu_offload()
+    else:
+        pipe.to("cuda")
+        pipe_up.to("cuda")
+
+    r = pipe.vae_spatial_compression_ratio  # 32
+    h1, w1 = int(args.height * 2 / 3), int(args.width * 2 / 3)
+    h1, w1 = h1 - h1 % r, w1 - w1 % r  # first pass; second pass runs at 2x this, then resized to target
+    print(f"ltx: {ckpts[0].name} target {args.width}x{args.height}x{args.num_frames} @ {args.fps} fps; "
+          f"pass1 {w1}x{h1} ({len(LTX_FIRST_PASS)} steps), pass2 {2 * w1}x{2 * h1} ({len(LTX_SECOND_PASS) - 1} steps), "
+          f"cfg={args.guidance_scale} cpu_offload={args.cpu_offload}", flush=True)
+
+    def generate(prompt: str, seed: int) -> tuple[list, int]:
+        common = dict(prompt=prompt, negative_prompt=LTX_NEGATIVE, num_frames=args.num_frames, frame_rate=args.fps,
+                      decode_timestep=0.05, decode_noise_scale=0.025, image_cond_noise_scale=0.0,
+                      guidance_scale=args.guidance_scale, guidance_rescale=0.7)
+        latents = pipe(width=w1, height=h1, timesteps=LTX_FIRST_PASS,
+                       generator=torch.Generator(device="cuda").manual_seed(seed), output_type="latent",
+                       **common).frames
+        latents = pipe_up(latents=latents, adain_factor=1.0, output_type="latent").frames
+        frames = pipe(width=2 * w1, height=2 * h1, timesteps=LTX_SECOND_PASS, denoise_strength=0.999, latents=latents,
+                      generator=torch.Generator(device="cuda").manual_seed(seed), output_type="pil",
+                      **common).frames[0]
+        frames = [f.resize((args.width, args.height)) for f in frames]
+        return frames, args.fps
+
+    return generate
+
+
 BACKENDS: dict[str, dict[str, Any]] = {
     # defaults are the model authors' recommended sampling settings
-    "cogvideox":   {"load": load_cogvideox, "steps": 50, "guidance_scale": 6.0, "num_frames": 49, "fps": 8,
-                    "height": 480, "width": 720,                                   # CogVideoX-5b
-                    "packages": ("torch", "diffusers", "transformers", "accelerate", "sentencepiece")},
     "cogvideox15": {"load": load_cogvideox, "steps": 50, "guidance_scale": 6.0, "num_frames": 81, "fps": 16,
                     "height": 768, "width": 1360,                                  # CogVideoX1.5-5B
                     "packages": ("torch", "diffusers", "transformers", "accelerate", "sentencepiece")},
-    "wan":         {"load": load_wan, "steps": 50, "guidance_scale": 5.0, "num_frames": 81, "fps": 16,
-                    "height": 480, "width": 832,                                   # Wan2.1-T2V-14B, 480p
-                    "packages": ("torch", "diffusers", "transformers", "accelerate", "ftfy")},
     "wan22":       {"load": load_wan, "steps": 40, "guidance_scale": 4.0, "guidance_scale_2": 3.0,
                     "num_frames": 81, "fps": 16, "height": 480, "width": 832,      # Wan2.2-T2V-A14B, 480p
                     "packages": ("torch", "diffusers", "transformers", "accelerate", "ftfy")},
+    "ltx":         {"load": load_ltx, "steps": 12, "guidance_scale": 1.0, "num_frames": 121, "fps": 24,
+                    "height": 704, "width": 1216,                                  # LTX-Video 2B 0.9.8 distilled
+                    "packages": ("torch", "diffusers", "transformers", "accelerate", "sentencepiece")},
     # "hunyuan":  to add: HunyuanVideoPipeline, needs cpu offload on 40 GB cards
 }
 
@@ -219,7 +302,8 @@ def gpu_summary() -> str:
 
 
 def target_path(out_dir: Path, rec: dict[str, Any], seed: int) -> Path:
-    return out_dir / f"{rec['id']}_s{seed}.mp4"
+    """<out-root>/<tag>/<split>/<ID>_s<seed>.mp4 -- train and eval videos live in separate subdirectories."""
+    return out_dir / rec["split"] / f"{rec['id']}_s{seed}.mp4"
 
 
 def append_manifest(path: Path, record: dict[str, Any]) -> None:
@@ -309,9 +393,9 @@ def main() -> int:
     generate = spec["load"](args.model, args)
     print(f"weights loaded in {time.time() - t0:.0f}s", flush=True)
 
-    out_dir.mkdir(parents=True, exist_ok=True)
     for i, rec in enumerate(todo, 1):
         target = target_path(out_dir, rec, args.seed)
+        target.parent.mkdir(parents=True, exist_ok=True)
         print(f"[{i}/{len(todo)}] {rec['id']}: {rec['caption']}", flush=True)
         t1 = time.time()
         frames, fps = generate(rec["caption"], args.seed)

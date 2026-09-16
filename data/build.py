@@ -6,6 +6,10 @@
     python data/build.py accept drafts/X.json train # validate a draft, append it to train/<category>.json
 
 Records follow schema.json. Ids must be unique across train and eval.
+Id convention (decided 2026-09-15): train ids run contiguously from 0001 within each branch file; eval ids
+start at a FIXED offset (MECH/HEAT/OPT/ELEC-0251, ACOU-0101) and are NOT renumbered when the train split
+shrinks, so the gap between the last train id and 0251 is intentional - an id >= 0251 (>= 0101 for Acoustics)
+is always an eval record, and train can grow back without colliding with eval.
 """
 
 from __future__ import annotations

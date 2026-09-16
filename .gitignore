@@ -34,3 +34,6 @@ Proposal.md
 .DS_Store
 .venv/
 venv/
+
+# Claude Code session state and worktrees
+.claude/
