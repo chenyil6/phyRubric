@@ -263,6 +263,120 @@ def load_ltx(model: Path, args: argparse.Namespace) -> Callable[[str, int], tupl
                       generator=torch.Generator(device="cuda").manual_seed(seed), output_type="pil",
                       **common).frames[0]
         frames = [f.resize((args.width, args.height)) for f in frames]
+def _patch_hunyuan15_attention(transformer) -> int:
+    """Replace diffusers' HunyuanVideo15 attention processor with a memory-safe one.
+
+    The stock processor turns the (B, L) text-padding mask into a dense (B, 1, L, L) boolean
+    mask; at 720p x 121 frames L ~ 113k tokens, so that single tensor is 12.7 GB and it is built
+    twice -> OOM on a 40 GB card. The transformer already orders text tokens as
+    [valid..., padding...] and video tokens are never masked, so attention over the valid prefix
+    with no mask gives the same output for every valid token (padded tokens only ever attend to /
+    are attended by nothing). We slice to the valid tokens, run flash SDPA, and zero-fill the rest.
+    Returns the number of attention modules patched."""
+    import torch
+    from diffusers.models.attention_processor import Attention
+    from diffusers.models.transformers import transformer_hunyuan_video15 as hv
+
+    class SlicedProcessor(hv.HunyuanVideo15AttnProcessor2_0):
+        def __call__(self, attn, hidden_states, encoder_hidden_states=None, attention_mask=None,
+                     image_rotary_emb=None):
+            F = hv.F
+            query = attn.to_q(hidden_states).unflatten(2, (attn.heads, -1))
+            key = attn.to_k(hidden_states).unflatten(2, (attn.heads, -1))
+            value = attn.to_v(hidden_states).unflatten(2, (attn.heads, -1))
+            query = attn.norm_q(query)
+            key = attn.norm_k(key)
+            if image_rotary_emb is not None:
+                from diffusers.models.embeddings import apply_rotary_emb
+                query = apply_rotary_emb(query, image_rotary_emb, sequence_dim=1)
+                key = apply_rotary_emb(key, image_rotary_emb, sequence_dim=1)
+            if encoder_hidden_states is not None:
+                eq = attn.add_q_proj(encoder_hidden_states).unflatten(2, (attn.heads, -1))
+                ek = attn.add_k_proj(encoder_hidden_states).unflatten(2, (attn.heads, -1))
+                ev = attn.add_v_proj(encoder_hidden_states).unflatten(2, (attn.heads, -1))
+                if attn.norm_added_q is not None:
+                    eq = attn.norm_added_q(eq)
+                if attn.norm_added_k is not None:
+                    ek = attn.norm_added_k(ek)
+                query = torch.cat([query, eq], dim=1)
+                key = torch.cat([key, ek], dim=1)
+                value = torch.cat([value, ev], dim=1)
+
+            batch_size, seq_len = query.shape[:2]
+            run = lambda q, k, v: hv.dispatch_attention_fn(  # noqa: E731
+                q, k, v, attn_mask=None, dropout_p=0.0, is_causal=False,
+                backend=self._attention_backend, parallel_config=self._parallel_config)
+            if attention_mask is None:
+                out = run(query, key, value)
+            else:
+                mask = F.pad(attention_mask, (seq_len - attention_mask.shape[1], 0), value=True).bool()
+                if bool(mask.all()):
+                    out = run(query, key, value)
+                elif batch_size == 1:
+                    idx = mask[0].nonzero(as_tuple=True)[0]
+                    out = torch.zeros_like(query)
+                    out[:, idx] = run(query[:, idx], key[:, idx], value[:, idx]).to(query.dtype)
+                else:  # batched with padding: fall back to the stock dense-mask path
+                    return super().__call__(attn, hidden_states, encoder_hidden_states, attention_mask,
+                                            image_rotary_emb)
+            hidden_states = out.flatten(2, 3).to(query.dtype)
+
+            if encoder_hidden_states is not None:
+                n = encoder_hidden_states.shape[1]
+                hidden_states, encoder_hidden_states = hidden_states[:, :-n], hidden_states[:, -n:]
+                if getattr(attn, "to_out", None) is not None:
+                    hidden_states = attn.to_out[0](hidden_states)
+                    hidden_states = attn.to_out[1](hidden_states)
+                if getattr(attn, "to_add_out", None) is not None:
+                    encoder_hidden_states = attn.to_add_out(encoder_hidden_states)
+                return hidden_states, encoder_hidden_states
+            return hidden_states
+
+    n = 0
+    for m in transformer.modules():
+        if isinstance(m, Attention) and isinstance(m.processor, hv.HunyuanVideo15AttnProcessor2_0):
+            m.set_processor(SlicedProcessor())
+            n += 1
+    return n
+
+
+def load_hunyuan15(model: Path, args: argparse.Namespace) -> Callable[[str, int], tuple[list, int]]:
+    """HunyuanVideo-1.5 T2V (Diffusers layout: hunyuanvideo-community/HunyuanVideo-1.5-Diffusers-{480p,720p}_t2v).
+
+    8.3B DiT + Qwen2.5-VL-7B text encoder + byT5 + 1.3B VAE, ~34 GB in bf16, so a 40 GB card runs
+    with model CPU offload (one component on the GPU at a time; cheap here because each component
+    is used once per video). Needs diffusers>=0.36, which conflicts with the t2v env's pinned
+    transformers -- run this backend from the separate t2v-hy15 env. CFG lives in the pipeline's
+    guider component, not in __call__, so --guidance-scale swaps the guider. The pipeline wraps the
+    caption in a fixed Qwen chat template before encoding; the caption text itself is untouched."""
+    import torch
+    from diffusers import HunyuanVideo15Pipeline
+    from diffusers.guiders import ClassifierFreeGuidance
+
+    if (args.num_frames - 1) % 4 != 0:
+        raise SystemExit("HunyuanVideo-1.5 needs --num-frames = 4k+1 (121 recommended)")
+    pipe = HunyuanVideo15Pipeline.from_pretrained(model, torch_dtype=torch.bfloat16)
+    if abs(pipe.guider.guidance_scale - args.guidance_scale) > 1e-6:
+        pipe.guider = ClassifierFreeGuidance(guidance_scale=args.guidance_scale)
+    pipe.vae.enable_tiling()
+    patched = _patch_hunyuan15_attention(pipe.transformer)
+    offload = args.cpu_offload or torch.cuda.get_device_properties(0).total_memory < 70e9
+    if offload:
+        pipe.enable_model_cpu_offload()
+    else:
+        pipe.to("cuda")
+    print(f"hunyuan15: attention processors patched={patched} {args.width}x{args.height}x{args.num_frames} steps={args.steps} "
+          f"cfg={pipe.guider.guidance_scale} shift={pipe.scheduler.config.shift} cpu_offload={offload}", flush=True)
+
+    def generate(prompt: str, seed: int) -> tuple[list, int]:
+        frames = pipe(
+            prompt=prompt,
+            height=args.height,
+            width=args.width,
+            num_frames=args.num_frames,
+            num_inference_steps=args.steps,
+            generator=torch.Generator(device="cuda").manual_seed(seed),
+        ).frames[0]
         return frames, args.fps
 
     return generate
@@ -279,7 +393,10 @@ BACKENDS: dict[str, dict[str, Any]] = {
     "ltx":         {"load": load_ltx, "steps": 12, "guidance_scale": 1.0, "num_frames": 121, "fps": 24,
                     "height": 704, "width": 1216,                                  # LTX-Video 2B 0.9.8 distilled
                     "packages": ("torch", "diffusers", "transformers", "accelerate", "sentencepiece")},
-    # "hunyuan":  to add: HunyuanVideoPipeline, needs cpu offload on 40 GB cards
+    "hunyuan15":   {"load": load_hunyuan15, "steps": 50, "guidance_scale": 6.0, "num_frames": 121, "fps": 24,
+                    "height": 480, "width": 848,                                   # HunyuanVideo-1.5 480p_t2v
+                    # 720p_t2v (1280x720) measured 66 s/step = ~57 min/video on an A100-40GB: too slow.
+                    "packages": ("torch", "diffusers", "transformers", "accelerate")},
 }
 
 
@@ -322,6 +439,8 @@ def main() -> int:
     ap.add_argument("--model", type=Path, required=True, help="local weights directory")
     ap.add_argument("--tag", help="output/manifest name; default = backend")
     ap.add_argument("--out-root", type=Path, default=DEFAULT_OUT_ROOT)
+    ap.add_argument("--manifest-dir", type=Path, default=MANIFESTS,
+                    help="where <tag>.jsonl is appended (default: this repo's gen_videos/manifests)")
     sel = ap.add_argument_group("selection")
     sel.add_argument("--split", nargs="+", choices=("train", "eval"), default=["train", "eval"])
     sel.add_argument("--category", nargs="+", choices=CATEGORIES)
@@ -353,7 +472,7 @@ def main() -> int:
         ap.error("--shard K/N needs 0 <= K < N")
     tag = args.tag or args.backend
     out_dir = args.out_root / tag
-    manifest = MANIFESTS / f"{tag}.jsonl"
+    manifest = args.manifest_dir / f"{tag}.jsonl"
 
     records = select(args)
     todo = [r for r in records if args.overwrite or not target_path(out_dir, r, args.seed).exists()]
