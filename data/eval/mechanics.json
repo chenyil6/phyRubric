@@ -45,18 +45,18 @@
   },
   {
     "id": "MECH-0255",
-    "caption": "A gymnast hanging from a pair of rings lets go and drops onto the mat below.",
+    "caption": "A sandbag hanging from a hook in a gym is unhooked and drops onto the mat below.",
     "category": "Mechanics",
     "subcategory": "gravity_fall",
     "violation_types": [
       "gravity_direction",
       "trajectory_momentum"
     ],
-    "expectation": "She falls straight down as soon as her hands open, bending her knees on landing; the empty rings swing after she leaves them."
+    "expectation": "The bag starts falling the instant it leaves the hook, drops straight down with increasing speed, lands on the mat and slumps; the empty hook swings; the bag does not drift sideways or pause."
   },
   {
     "id": "MECH-0256",
-    "caption": "A man leaning over a balcony rail fumbles his phone, and it falls into the swimming pool below with a splash.",
+    "caption": "A phone balanced on a balcony rail slips off and falls into the swimming pool below with a splash.",
     "category": "Mechanics",
     "subcategory": "gravity_fall",
     "violation_types": [
@@ -67,18 +67,18 @@
   },
   {
     "id": "MECH-0257",
-    "caption": "A boy running through a shopping mall mistakes a closed glass door for an open one, runs into it, and bounces back onto the floor.",
+    "caption": "A pigeon flies straight at a closed window, hits the glass with a thump, bounces off and drops to the ground below.",
     "category": "Mechanics",
     "subcategory": "collision",
     "violation_types": [
       "solidity",
       "trajectory_momentum"
     ],
-    "expectation": "He stops dead at the glass and is thrown back; the door stays closed and intact; no part of him passes through the pane."
+    "expectation": "The pigeon stops at the pane and is thrown back at the instant of impact; the glass stays whole and nothing passes through it; the bird falls after the bounce and does not fly on through the window."
   },
   {
     "id": "MECH-0258",
-    "caption": "A footballer's shot hits the crossbar and the ball drops down onto the goal line.",
+    "caption": "A football kicked at goal hits the crossbar and drops down onto the goal line.",
     "category": "Mechanics",
     "subcategory": "collision",
     "violation_types": [
@@ -89,7 +89,7 @@
   },
   {
     "id": "MECH-0259",
-    "caption": "A pool player breaks a tight triangle of balls with the cue ball, and the balls scatter across the table in all directions.",
+    "caption": "A cue ball is struck into a tight triangle of balls on a pool table, and the balls scatter across the table in all directions.",
     "category": "Mechanics",
     "subcategory": "collision",
     "violation_types": [
@@ -101,14 +101,14 @@
   },
   {
     "id": "MECH-0260",
-    "caption": "A boy kicks a ball against a tree trunk, and it bounces back to him.",
+    "caption": "A marble rolls across a table and hits a heavy steel ball at rest; the marble bounces back the way it came while the steel ball barely moves.",
     "category": "Mechanics",
     "subcategory": "collision",
     "violation_types": [
       "trajectory_momentum",
       "solidity"
     ],
-    "expectation": "The rebound begins at contact and comes back slower than the kick; the tree does not move and the ball does not go into it."
+    "expectation": "At contact the marble reverses and rolls back slower than it arrived; the steel ball shifts at most slightly; neither passes through the other and the steel ball does not shoot off."
   },
   {
     "id": "MECH-0261",
@@ -123,7 +123,7 @@
   },
   {
     "id": "MECH-0262",
-    "caption": "A woman squeezes a wet bar of soap in her hand in the bath, and it slips out of her grip and skids across the bottom of the tub.",
+    "caption": "A wet bar of soap is squeezed in a hand in the bath, slips out of the grip and skids across the bottom of the tub.",
     "category": "Mechanics",
     "subcategory": "friction_rolling",
     "violation_types": [
@@ -131,34 +131,33 @@
       "causeless_motion",
       "gravity_direction"
     ],
-    "expectation": "The soap leaves the hand as the fingers close on it and shoots out in one direction, not straight up or back into the hand; it skids across the wet surface in a straight line and slows to a stop or stops against the side of the tub; it does not hover, change direction on its own, or stay stuck to the hand."
+    "expectation": "The soap leaves the hand as the fingers close and shoots out in one direction; it skids across the wet surface in a straight line and slows to a stop or stops against the side of the tub; it does not hover, change direction on its own, or stay stuck to the hand."
   },
   {
     "id": "MECH-0263",
-    "caption": "A man shoves a cardboard box across a smooth garage floor, and it slides out onto the gravel driveway and stops almost at once.",
+    "caption": "A tin can lying on its side and a wooden block are given the same shove across a floor; the can rolls far while the block stops within a short distance.",
     "category": "Mechanics",
     "subcategory": "friction_rolling",
     "violation_types": [
-      "causeless_motion",
       "trajectory_momentum",
-      "material_response"
+      "causeless_motion"
     ],
-    "expectation": "The box slides freely in a straight line on the smooth floor, and its sharp slowing begins exactly where the gravel starts, not before; it does not glide on across the gravel as it did indoors, stop dead while still on the smooth floor, or speed up; it stays flat on the ground the whole way."
+    "expectation": "Both start moving together; the block slows quickly and stops while the can rolls on much farther before stopping; neither speeds up or changes direction on its own."
   },
   {
     "id": "MECH-0264",
-    "caption": "A woman lobs a water balloon over a garden fence to a friend, and it arcs over and lands in the friend's hands.",
+    "caption": "A water balloon is lobbed over a garden fence and arcs over into a paddling pool on the other side.",
     "category": "Mechanics",
     "subcategory": "projectile",
     "violation_types": [
       "trajectory_momentum",
       "gravity_direction"
     ],
-    "expectation": "The balloon rises, clears the fence at the top of its arc, and falls into the hands, wobbling in flight; it does not travel flat or hang above the fence."
+    "expectation": "The balloon rises, clears the fence near the top of its arc, wobbles in flight, and falls into the pool with a splash; it does not travel flat or hang above the fence."
   },
   {
     "id": "MECH-0265",
-    "caption": "An angler swings a rod and casts a weighted line far out over a lake, and the weight splashes into the water.",
+    "caption": "A weighted fishing line is cast far out over a lake from the bank, and the weight splashes into the water.",
     "category": "Mechanics",
     "subcategory": "projectile",
     "violation_types": [
@@ -169,18 +168,18 @@
   },
   {
     "id": "MECH-0266",
-    "caption": "A boy crumples a page into a ball and tosses it across the office toward a bin, and it drops into the bin.",
+    "caption": "A tennis ball rolls off the end of a table and curves down to the floor, landing a short distance out from the table's edge, and bounces on.",
     "category": "Mechanics",
     "subcategory": "projectile",
     "violation_types": [
       "trajectory_momentum",
       "gravity_direction"
     ],
-    "expectation": "The paper ball follows an arc, slowing near its peak, and falls into the bin; it does not float or change direction midway."
+    "expectation": "The ball keeps moving forward as it leaves the edge and drops in a curve that steepens; it lands beyond the edge, not straight below it, and does not stop in the air or fall straight down."
   },
   {
     "id": "MECH-0267",
-    "caption": "A child builds a house of playing cards on a table, and when someone bumps the table the house collapses into a heap.",
+    "caption": "A house of playing cards stands on a table; the table is bumped and the house collapses into a heap.",
     "category": "Mechanics",
     "subcategory": "balance_topple",
     "violation_types": [
@@ -191,18 +190,18 @@
   },
   {
     "id": "MECH-0268",
-    "caption": "A toddler stacks sofa cushions into a tower and pushes it, and the tower topples over onto the rug.",
+    "caption": "A ladder leaning at too shallow an angle against a garden wall slides out at its feet and falls flat to the ground.",
     "category": "Mechanics",
     "subcategory": "balance_topple",
     "violation_types": [
       "gravity_direction",
-      "trajectory_momentum"
+      "causeless_motion"
     ],
-    "expectation": "The tower leans away from the push and the top cushions fall first; the cushions land on the side away from the toddler."
+    "expectation": "The feet slip away from the wall first, the top slides down the wall as the angle flattens, and the ladder lands flat; it does not stay propped once the feet move or fall toward the wall."
   },
   {
     "id": "MECH-0269",
-    "caption": "A man carrying a long ladder turns around in a yard, and the far end of the ladder knocks over a bin.",
+    "caption": "A bin standing in a yard is knocked by the swinging end of a long ladder and tips over.",
     "category": "Mechanics",
     "subcategory": "balance_topple",
     "violation_types": [
@@ -213,18 +212,18 @@
   },
   {
     "id": "MECH-0270",
-    "caption": "A woman pulls the cord of a window blind, and the blind gathers upward as the cord runs down through her hands.",
+    "caption": "The cord of a window blind is pulled, and the blind gathers upward as the cord runs down.",
     "category": "Mechanics",
     "subcategory": "tension",
     "violation_types": [
       "material_response",
       "missing_consequence"
     ],
-    "expectation": "The blind rises only as fast as the cord is pulled and stops when she stops; the cord stays taut on the pulled side and does not stretch."
+    "expectation": "The blind rises only as fast as the cord is pulled and stops when the pulling stops; the cord stays taut on the pulled side and does not stretch."
   },
   {
     "id": "MECH-0271",
-    "caption": "A puppeteer lifts a marionette off the stage by its control bar, and the strings go taut and the puppet's limbs hang from them.",
+    "caption": "A marionette is lifted off the stage by its control bar, and the strings go taut and the puppet's limbs hang from them.",
     "category": "Mechanics",
     "subcategory": "tension",
     "violation_types": [
@@ -235,7 +234,7 @@
   },
   {
     "id": "MECH-0272",
-    "caption": "A sailor hauls in the anchor rope of a small boat, and the rope comes up taut and dripping until the anchor breaks the surface.",
+    "caption": "The anchor rope of a small boat is hauled in, and the rope comes up taut and dripping until the anchor breaks the surface.",
     "category": "Mechanics",
     "subcategory": "tension",
     "violation_types": [
@@ -246,18 +245,18 @@
   },
   {
     "id": "MECH-0273",
-    "caption": "A yoga student sits on a foam block, and the block compresses under her and springs back when she stands.",
+    "caption": "A vacuum-packed foam mattress is cut open, and the flat compressed slab swells and puffs up toward its full thickness.",
     "category": "Mechanics",
     "subcategory": "deformation",
     "violation_types": [
       "material_response",
-      "process_direction"
+      "shape_identity"
     ],
-    "expectation": "The block flattens only while she sits and recovers its shape within a second or two of her standing; it does not stay squashed."
+    "expectation": "The foam expands as soon as the bag is opened, thickening evenly and slowing as it nears full size; it does not stay flat, shrink, or grow beyond a mattress shape."
   },
   {
     "id": "MECH-0274",
-    "caption": "A child squeezes a rubber duck under the bathwater and lets go, and the duck squirts water and puffs back to shape.",
+    "caption": "A rubber duck is squeezed under the bathwater and released, and it squirts water and puffs back to shape.",
     "category": "Mechanics",
     "subcategory": "deformation",
     "violation_types": [
@@ -268,29 +267,29 @@
   },
   {
     "id": "MECH-0275",
-    "caption": "A potter presses a thumb into the side of a soft clay pot on the wheel, and the pot keeps the dent.",
+    "caption": "A sheet of aluminium foil is pressed down over an upturned bowl and lifted off, and the foil keeps the bowl's rounded shape.",
     "category": "Mechanics",
     "subcategory": "deformation",
     "violation_types": [
       "material_response",
-      "process_direction"
+      "shape_identity"
     ],
-    "expectation": "The wall dents inward under the thumb and stays dented after it lifts; the clay does not spring back."
+    "expectation": "The foil wrinkles and moulds to the bowl while pressed and holds that dome shape after it is lifted away; it does not spring back flat or tear."
   },
   {
     "id": "MECH-0276",
-    "caption": "A hairdresser snips a lock of hair with scissors, and the cut hair falls to the floor.",
+    "caption": "A cable tie holding a bundle of cables is snipped with cutters, and the bundle springs apart into loose cables.",
     "category": "Mechanics",
     "subcategory": "cut_tear",
     "violation_types": [
-      "missing_consequence",
-      "gravity_direction"
+      "permanence_count",
+      "missing_consequence"
     ],
-    "expectation": "The lock separates exactly where the blades close and drops straight down; the hair on the head is shorter where it was cut and does not regrow."
+    "expectation": "The tie parts where the blades close and the cables spread out at that instant; the tie does not rejoin and the bundle does not stay tight without it."
   },
   {
     "id": "MECH-0277",
-    "caption": "A carpenter saws through a plank on a sawhorse, and the cut end drops to the ground as the saw comes through.",
+    "caption": "A plank on a sawhorse is sawn through, and the cut end drops to the ground as the saw comes through.",
     "category": "Mechanics",
     "subcategory": "cut_tear",
     "violation_types": [
@@ -301,7 +300,7 @@
   },
   {
     "id": "MECH-0278",
-    "caption": "An office worker feeds a sheet of paper into a shredder, and it comes out the bottom as a bundle of thin strips.",
+    "caption": "A sheet of paper is fed into a shredder, and it comes out the bottom as a bundle of thin strips.",
     "category": "Mechanics",
     "subcategory": "cut_tear",
     "violation_types": [
@@ -312,18 +311,18 @@
   },
   {
     "id": "MECH-0279",
-    "caption": "A cook ladles pancake batter onto a hot griddle, and the batter spreads into a round puddle and stops.",
+    "caption": "Thick paint is poured from a tin onto a flat canvas, and it spreads slowly into a rounded pool and stops.",
     "category": "Mechanics",
     "subcategory": "fluid",
     "violation_types": [
-      "material_response",
-      "process_direction"
+      "process_direction",
+      "material_response"
     ],
-    "expectation": "The batter flows outward from where it lands, slows as it spreads, and settles into a round; it does not keep spreading or climb back into the ladle."
+    "expectation": "The paint flows outward from where it lands, slower and thicker than water would, and settles into a rounded shape with a raised edge; it does not keep spreading thin or climb back into the tin."
   },
   {
     "id": "MECH-0280",
-    "caption": "A gardener drops a large stone into a bucket full of water, and water spills over the rim onto the ground.",
+    "caption": "A large stone is dropped into a bucket full of water, and water spills over the rim onto the ground.",
     "category": "Mechanics",
     "subcategory": "fluid",
     "violation_types": [
@@ -335,14 +334,14 @@
   },
   {
     "id": "MECH-0281",
-    "caption": "A child stomps a foot in a full bathtub, and water sloshes up the sides and splashes over the edge onto the floor.",
+    "caption": "The plug of a full bathtub is pulled, and as the water drains a swirling whirlpool forms over the drain.",
     "category": "Mechanics",
     "subcategory": "fluid",
     "violation_types": [
-      "material_response",
-      "gravity_direction"
+      "causeless_motion",
+      "process_direction"
     ],
-    "expectation": "The wave rises where the foot lands and travels outward, spilling at the rim; the water settles back level afterwards."
+    "expectation": "The level falls steadily and a dimple over the drain deepens into a spinning funnel that grows as the water gets shallower; the water does not rise or spin without draining."
   },
   {
     "id": "MECH-0282",
@@ -357,29 +356,29 @@
   },
   {
     "id": "MECH-0283",
-    "caption": "A barista pours coffee beans from a bag into a grinder hopper, and the beans rattle down and fill the hopper in a heap.",
+    "caption": "A tray of dry rice is tilted to one side, and the rice slides to the low edge and piles up there while the high side clears.",
     "category": "Mechanics",
     "subcategory": "granular",
     "violation_types": [
-      "material_response",
-      "gravity_direction"
+      "gravity_direction",
+      "causeless_motion"
     ],
-    "expectation": "The beans fall in a stream and pile up from the bottom, settling into a rough cone; a few bounce out onto the counter."
+    "expectation": "The grains flow downhill as a sheet once the tilt is steep enough, collect against the low rim, and the pile's surface settles at a slope; they do not move uphill or stay spread evenly on a tilted tray."
   },
   {
     "id": "MECH-0284",
-    "caption": "A child pours sand through a plastic funnel into a bottle, and sand runs through the neck in a steady stream while a cone builds inside the bottle.",
+    "caption": "A sandbag on a low wall is punctured near its bottom, and a thin stream of sand runs out onto the ground while the bag slowly slumps.",
     "category": "Mechanics",
     "subcategory": "granular",
     "violation_types": [
-      "material_response",
-      "gravity_direction"
+      "gravity_direction",
+      "missing_consequence"
     ],
-    "expectation": "The stream is thin and steady, the cone grows inside the bottle, and the funnel empties from the bottom; the sand does not stop in the funnel."
+    "expectation": "The stream comes only from the hole and falls straight down, building a small cone below; the bag sags and wrinkles as it empties; the sand does not flow back in or stop while the bag is still full."
   },
   {
     "id": "MECH-0285",
-    "caption": "A farmer tips a sack of potatoes onto a barn floor, and the potatoes tumble out and roll apart into a loose spread.",
+    "caption": "A sack of potatoes is tipped out onto a barn floor, and the potatoes tumble out and roll apart into a loose spread.",
     "category": "Mechanics",
     "subcategory": "granular",
     "violation_types": [
@@ -390,18 +389,18 @@
   },
   {
     "id": "MECH-0286",
-    "caption": "A skydiver pulls the ripcord, and the parachute unfolds and snaps open into a canopy above her.",
+    "caption": "A model rocket reaches the top of its flight, its nose pops off and a parachute unfolds, and the rocket drifts slowly down under the canopy.",
     "category": "Mechanics",
     "subcategory": "gas_wind",
     "violation_types": [
-      "material_response",
-      "trajectory_momentum"
+      "missing_consequence",
+      "gravity_direction"
     ],
-    "expectation": "The canopy fills with air and rounds out above her, and her fall slows sharply the moment it opens; the lines go taut."
+    "expectation": "The canopy fills and rounds out above the rocket, whose fall slows sharply the moment it opens; the rocket hangs below the canopy and drifts with the wind; it does not keep falling fast or rise."
   },
   {
     "id": "MECH-0287",
-    "caption": "A sailor lets the sail of a small boat loose in a breeze, and the sail fills and bellies out to one side.",
+    "caption": "The sail of a small boat is let loose in a breeze, and it fills and bellies out to one side.",
     "category": "Mechanics",
     "subcategory": "gas_wind",
     "violation_types": [
@@ -434,51 +433,51 @@
   },
   {
     "id": "MECH-0290",
-    "caption": "A window cleaner climbs a ladder rung by rung to reach a second-floor window.",
+    "caption": "A person walking along a pavement catches a foot on a raised kerb, stumbles forward with arms flung out, and recovers balance after two quick steps.",
     "category": "Mechanics",
     "subcategory": "biomechanics",
     "violation_types": [
-      "shape_identity",
-      "solidity"
+      "trajectory_momentum",
+      "causeless_motion"
     ],
-    "expectation": "Hands and feet alternate on the rungs and rest on top of them, not through them; the ladder stays against the wall."
+    "expectation": "The stumble begins at the trip, the body pitches forward and the arms come up; the recovery steps are quick and in the direction of travel; the person does not fall backward or freeze mid-fall."
   },
   {
     "id": "MECH-0291",
-    "caption": "Two teammates run toward each other and high-five, their hands slapping together and stopping.",
+    "caption": "A person carries a full bucket of water in one hand and leans the body to the other side to balance the load.",
     "category": "Mechanics",
     "subcategory": "biomechanics",
     "violation_types": [
-      "solidity",
-      "shape_identity"
+      "gravity_direction",
+      "missing_consequence"
     ],
-    "expectation": "The hands stop at contact and rebound slightly; they do not pass through each other; each hand keeps five fingers."
+    "expectation": "The lean is away from the bucket and appears as soon as the bucket is lifted; the free arm may swing out; the person does not lean toward the bucket or walk upright as if it weighed nothing."
   },
   {
     "id": "MECH-0292",
-    "caption": "A baby crawls across a living-room rug toward a toy.",
+    "caption": "A person standing on one leg wobbles, sways further, and puts the other foot down to stay upright.",
     "category": "Mechanics",
     "subcategory": "biomechanics",
     "violation_types": [
-      "shape_identity",
-      "permanence_count"
+      "causeless_motion",
+      "gravity_direction"
     ],
-    "expectation": "Hands and knees move in alternation, the body stays whole with two arms and two legs, and the baby moves forward only as the limbs move."
+    "expectation": "The sway grows before the foot comes down and stops after it lands; the foot lands on the side the body was leaning toward; the person does not stay perfectly still or fall over."
   },
   {
     "id": "MECH-0293",
-    "caption": "A nurse folds a bedsheet in half lengthwise and then in half again, smoothing the folds flat.",
+    "caption": "A silk scarf draped over the back of a chair slides off and pools in soft folds on the floor.",
     "category": "Mechanics",
     "subcategory": "soft_material",
     "violation_types": [
-      "shape_identity",
-      "material_response"
+      "material_response",
+      "gravity_direction"
     ],
-    "expectation": "The sheet bends along each fold and lies flat on itself; it gets smaller with each fold and does not stiffen or fold by itself."
+    "expectation": "The scarf slips down following the chair's shape, falls as a limp sheet, and lands in loose folds; it does not stay rigid, float, or land flat as a square."
   },
   {
     "id": "MECH-0294",
-    "caption": "A man pulls a sock over his foot, stretching the opening and drawing the fabric up over his heel and ankle.",
+    "caption": "A sock is pulled over a foot, the opening stretching as the fabric is drawn up over the heel and ankle.",
     "category": "Mechanics",
     "subcategory": "soft_material",
     "violation_types": [
@@ -489,18 +488,18 @@
   },
   {
     "id": "MECH-0295",
-    "caption": "A florist wraps a bouquet in a sheet of cellophane, folding the sheet around the stems and creasing it at the corners.",
+    "caption": "A wet paper towel is laid over the top of an upright bottle, and it drapes and clings to the bottle's shape.",
     "category": "Mechanics",
     "subcategory": "soft_material",
     "violation_types": [
-      "shape_identity",
-      "solidity"
+      "material_response",
+      "shape_identity"
     ],
-    "expectation": "The sheet bends around the stems and keeps the creases where pressed; it does not pass through the stems or unfold on its own."
+    "expectation": "The towel folds down over the bottle's shoulders and hangs along its sides, showing the shape beneath; it does not stay flat like a lid or slide off."
   },
   {
     "id": "MECH-0296",
-    "caption": "A deckhand throws a coil of rope onto the dock, and it lands in a loose tangle of loops.",
+    "caption": "A coil of rope is thrown onto a dock, and it lands in a loose tangle of loops.",
     "category": "Mechanics",
     "subcategory": "soft_material",
     "violation_types": [
@@ -511,7 +510,7 @@
   },
   {
     "id": "MECH-0297",
-    "caption": "A boy pushes a coin under the edge of a rug with his finger, and when he lifts the rug the coin lies where he pushed it.",
+    "caption": "A coin is pushed under the edge of a rug, and when the rug is lifted the coin lies where it was pushed.",
     "category": "Mechanics",
     "subcategory": "occlusion_containment",
     "violation_types": [
@@ -533,7 +532,7 @@
   },
   {
     "id": "MECH-0299",
-    "caption": "A boy drops a marble into the top of a long cardboard tube held upright, and the marble comes out of the bottom and rolls away.",
+    "caption": "A marble is dropped into the top of a long cardboard tube standing upright, and it comes out of the bottom and rolls away.",
     "category": "Mechanics",
     "subcategory": "occlusion_containment",
     "violation_types": [
@@ -552,5 +551,280 @@
       "solidity"
     ],
     "expectation": "The lump is the cat's size and moves continuously; the cat is not visible through the blanket and emerges only at the edge."
+  },
+  {
+    "id": "MECH-0301",
+    "caption": "A train pulls out of a station, and a suitcase standing loose in the aisle tips over toward the rear of the carriage.",
+    "category": "Mechanics",
+    "subcategory": "inertia",
+    "violation_types": [
+      "trajectory_momentum",
+      "causeless_motion"
+    ],
+    "expectation": "The suitcase begins to tip as the train starts moving, falls toward the back of the carriage, and lies still once down; it does not tip before the train moves or fall toward the front."
+  },
+  {
+    "id": "MECH-0302",
+    "caption": "A tablecloth is pulled sharply out from under a set of plates and glasses, and the dishes stay almost where they were on the bare table.",
+    "category": "Mechanics",
+    "subcategory": "inertia",
+    "violation_types": [
+      "trajectory_momentum",
+      "permanence_count"
+    ],
+    "expectation": "The cloth leaves the table in one quick motion while the dishes shift only slightly and settle; they do not fly off with the cloth, rise, or move before the cloth is pulled."
+  },
+  {
+    "id": "MECH-0303",
+    "caption": "A ripe apple comes loose from a branch and drops through the leaves to the grass beneath the tree.",
+    "category": "Mechanics",
+    "subcategory": "gravity_fall",
+    "violation_types": [
+      "gravity_direction",
+      "trajectory_momentum"
+    ],
+    "expectation": "The apple falls straight down, speeding up as it goes, brushes through leaves without stopping, and comes to rest on the grass below the branch; it does not drift sideways, pause, or rise."
+  },
+  {
+    "id": "MECH-0304",
+    "caption": "A drone hovering over a field loses power, and it drops straight down into the grass.",
+    "category": "Mechanics",
+    "subcategory": "gravity_fall",
+    "violation_types": [
+      "gravity_direction",
+      "causeless_motion"
+    ],
+    "expectation": "The drone starts falling the moment its rotors stop, accelerates downward, and lands below where it hovered; it does not glide away, slow before landing, or stay in the air with the rotors still."
+  },
+  {
+    "id": "MECH-0305",
+    "caption": "A wrecking ball swings into a brick wall, and bricks burst out of the far side as the ball is stopped and swings back.",
+    "category": "Mechanics",
+    "subcategory": "collision",
+    "violation_types": [
+      "solidity",
+      "trajectory_momentum"
+    ],
+    "expectation": "The bricks move only at the moment of impact and fly away from the ball; the ball loses most of its speed at the wall and swings back less far than it came; the ball does not pass through the wall or stop before touching it."
+  },
+  {
+    "id": "MECH-0306",
+    "caption": "A car brakes hard on a dry road, its tyres screech and leave dark skid marks, and it stops within a short distance.",
+    "category": "Mechanics",
+    "subcategory": "friction_rolling",
+    "violation_types": [
+      "trajectory_momentum",
+      "missing_consequence"
+    ],
+    "expectation": "The marks appear behind the tyres only while the car is braking and stay on the road after it stops; the car slows quickly and comes to rest, not sliding on as it would on ice."
+  },
+  {
+    "id": "MECH-0307",
+    "caption": "A wooden crate rests on a board that is slowly tilted up at one end; the crate stays put as the slope grows, then suddenly slides down to the bottom.",
+    "category": "Mechanics",
+    "subcategory": "friction_rolling",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The crate does not move at shallow angles, starts sliding all at once when the slope is steep, and speeds up on the way down; it does not creep at every angle or slide uphill."
+  },
+  {
+    "id": "MECH-0308",
+    "caption": "A pumpkin is launched from a catapult on a field, arcs high over the grass, and smashes on the ground far away.",
+    "category": "Mechanics",
+    "subcategory": "projectile",
+    "violation_types": [
+      "trajectory_momentum",
+      "material_response"
+    ],
+    "expectation": "The pumpkin rises, slows near the top of its arc, and falls faster toward the ground; it breaks apart only when it lands and does not hover, change direction in the air, or bounce whole."
+  },
+  {
+    "id": "MECH-0309",
+    "caption": "A ping-pong ball is served, arcs over the net, bounces once on the far side of the table, and drops off the end.",
+    "category": "Mechanics",
+    "subcategory": "projectile",
+    "violation_types": [
+      "trajectory_momentum",
+      "solidity"
+    ],
+    "expectation": "The ball follows a smooth arc, bounces lower than its flight height, and falls off the table edge under gravity; it does not pass through the net, hover, or bounce higher than it came."
+  },
+  {
+    "id": "MECH-0310",
+    "caption": "A broom is stood upright on the end of its handle in the middle of a kitchen floor and let go; it stays for a moment, leans more and more, and falls to the floor.",
+    "category": "Mechanics",
+    "subcategory": "balance_topple",
+    "violation_types": [
+      "gravity_direction",
+      "causeless_motion"
+    ],
+    "expectation": "The lean grows steadily faster once it starts and the broom falls in the direction it leaned; it does not stand indefinitely, right itself, or fall before it begins to lean."
+  },
+  {
+    "id": "MECH-0311",
+    "caption": "A round-bottomed roly-poly toy on a table is pushed over onto its side and let go, and it rocks back upright and settles.",
+    "category": "Mechanics",
+    "subcategory": "balance_topple",
+    "violation_types": [
+      "causeless_motion",
+      "trajectory_momentum"
+    ],
+    "expectation": "The toy swings back toward upright as soon as it is released, rocks a few times with shrinking swings, and ends up standing; it does not stay on its side or tip over the other way."
+  },
+  {
+    "id": "MECH-0312",
+    "caption": "A backpack is hooked to a bungee cord hanging from a beam and let go; the cord stretches, the pack bounces back up, and it bobs up and down before settling.",
+    "category": "Mechanics",
+    "subcategory": "tension",
+    "violation_types": [
+      "material_response",
+      "trajectory_momentum"
+    ],
+    "expectation": "The cord lengthens as the pack drops and shortens as it rises, each bounce smaller than the last; the pack never rises above the point where it was released and the cord does not go slack while the pack hangs."
+  },
+  {
+    "id": "MECH-0313",
+    "caption": "A wet blanket is thrown over a thin washing line, the line sags deeply, then snaps, and the blanket falls to the grass.",
+    "category": "Mechanics",
+    "subcategory": "tension",
+    "violation_types": [
+      "material_response",
+      "gravity_direction"
+    ],
+    "expectation": "The sag deepens under the weight before the break; at the snap the two ends of the line spring apart and the blanket drops straight down; the line does not hold the load after breaking or rejoin."
+  },
+  {
+    "id": "MECH-0314",
+    "caption": "A brick is set on top of a coil spring standing on a table, the spring compresses under it, and when the brick is lifted off the spring extends again.",
+    "category": "Mechanics",
+    "subcategory": "deformation",
+    "violation_types": [
+      "material_response",
+      "shape_identity"
+    ],
+    "expectation": "The spring shortens only while the brick is on it and returns to its full height after the brick is removed; it does not stay compressed or stretch longer than it started."
+  },
+  {
+    "id": "MECH-0315",
+    "caption": "A car reverses slowly into a lamp post, and its rear bumper dents inward and stays dented after it pulls forward.",
+    "category": "Mechanics",
+    "subcategory": "deformation",
+    "violation_types": [
+      "material_response",
+      "permanence_count"
+    ],
+    "expectation": "The dent forms at the point of contact at the moment of impact and remains when the car moves away; the bumper does not spring back to shape and the post does not bend."
+  },
+  {
+    "id": "MECH-0316",
+    "caption": "A lawnmower runs across an overgrown lawn, and the grass behind it is cut short with clippings scattered.",
+    "category": "Mechanics",
+    "subcategory": "cut_tear",
+    "violation_types": [
+      "missing_consequence",
+      "permanence_count"
+    ],
+    "expectation": "The grass is shorter only where the mower has passed, the cut edge follows the mower's path, and clippings appear behind it; the grass ahead stays tall and does not grow back behind."
+  },
+  {
+    "id": "MECH-0317",
+    "caption": "A dog bites into a stuffed cushion on a sofa and tears it open, and white stuffing spills out through the rip.",
+    "category": "Mechanics",
+    "subcategory": "cut_tear",
+    "violation_types": [
+      "material_response",
+      "permanence_count"
+    ],
+    "expectation": "The fabric parts where the teeth pull, the rip widens as the dog tugs, and stuffing comes out only through the rip; the cushion does not seal itself or shrink back to shape."
+  },
+  {
+    "id": "MECH-0318",
+    "caption": "An empty glass bottle is pushed neck-first under the water in a sink, and water flows in while a stream of bubbles escapes from the neck.",
+    "category": "Mechanics",
+    "subcategory": "fluid",
+    "violation_types": [
+      "process_direction",
+      "gravity_direction"
+    ],
+    "expectation": "Water rises inside the bottle while air leaves as bubbles that climb to the surface; the bottle fills only as fast as the air escapes and does not fill instantly or stay empty under water."
+  },
+  {
+    "id": "MECH-0319",
+    "caption": "A snow plough drives down a street, and the snow rolls up along its blade and is left in a ridge at the roadside.",
+    "category": "Mechanics",
+    "subcategory": "granular",
+    "violation_types": [
+      "missing_consequence",
+      "solidity"
+    ],
+    "expectation": "Snow piles against the blade and spills off its end as the plough moves, leaving a continuous ridge behind and a cleared strip in its path; snow does not pass through the blade or return to the cleared strip."
+  },
+  {
+    "id": "MECH-0320",
+    "caption": "The base of a steep pile of dry sand in a sandbox is scraped away, and a section of the slope above slides down as a sheet and comes to rest at a gentler angle.",
+    "category": "Mechanics",
+    "subcategory": "granular",
+    "violation_types": [
+      "gravity_direction",
+      "causeless_motion"
+    ],
+    "expectation": "The slide starts where the support was removed and moves downhill, grains flowing rather than tumbling as a block; the pile ends flatter than it began and does not steepen or rebuild itself."
+  },
+  {
+    "id": "MECH-0321",
+    "caption": "A car speeds past a pile of dry leaves at the roadside, and the leaves are whirled up in its wake and settle again behind it.",
+    "category": "Mechanics",
+    "subcategory": "gas_wind",
+    "violation_types": [
+      "causeless_motion",
+      "gravity_direction"
+    ],
+    "expectation": "The leaves lift only as the car passes, swirl in the direction of travel, and drift back down after it has gone; they do not move before the car arrives or rise indefinitely."
+  },
+  {
+    "id": "MECH-0322",
+    "caption": "A gust through an open window blows the bedroom door shut with a bang.",
+    "category": "Mechanics",
+    "subcategory": "gas_wind",
+    "violation_types": [
+      "causeless_motion",
+      "solidity"
+    ],
+    "expectation": "The door swings closed in the direction the curtains blow and stops at the frame; it does not close in still air or swing against the wind."
+  },
+  {
+    "id": "MECH-0323",
+    "caption": "A person jumps down from a low garden wall, lands on both feet and bends deeply at the knees, then straightens up and walks on.",
+    "category": "Mechanics",
+    "subcategory": "biomechanics",
+    "violation_types": [
+      "trajectory_momentum",
+      "gravity_direction"
+    ],
+    "expectation": "The knees bend on landing and the body sinks before rising again; the landing is heavier than the take-off; the person does not land stiff-legged, float down, or bounce back up onto the wall."
+  },
+  {
+    "id": "MECH-0324",
+    "caption": "A curtain is drawn along its rail to one side, and the fabric gathers into deep folds as it bunches at the end.",
+    "category": "Mechanics",
+    "subcategory": "soft_material",
+    "violation_types": [
+      "shape_identity",
+      "material_response"
+    ],
+    "expectation": "The folds grow deeper and closer together as more curtain arrives, the hem stays hanging under gravity, and the cloth does not stiffen, stretch, or pass through itself."
+  },
+  {
+    "id": "MECH-0325",
+    "caption": "A red sock is tossed into a front-loading washing machine with other clothes and the door shut; through the glass window the sock is seen tumbling past among the clothes.",
+    "category": "Mechanics",
+    "subcategory": "occlusion_containment",
+    "violation_types": [
+      "permanence_count",
+      "solidity"
+    ],
+    "expectation": "The sock appears at the window now and then as the drum turns, always the same sock, and never outside the machine while the door is shut; it does not vanish for good or multiply."
   }
 ]

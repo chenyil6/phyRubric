@@ -9639,7 +9639,7 @@
   },
   {
     "id": "ACOU-0002",
-    "caption": "A guitarist plucks the low string of an acoustic guitar, and the string blurs into a wide band before slowly sharpening to a line again.",
+    "caption": "The low string of an acoustic guitar is plucked, and the string blurs into a wide band before slowly sharpening to a line again.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9661,18 +9661,18 @@
   },
   {
     "id": "ACOU-0004",
-    "caption": "A boy holds a steel ruler flat on a desk with part sticking over the edge, flicks the free end, and it waggles up and down before coming to rest.",
+    "caption": "A steel ruler is held flat on a desk with part sticking over the edge; the free end is flicked and it waggles up and down before coming to rest.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
       "causeless_motion",
       "process_direction"
     ],
-    "expectation": "The free end vibrates fast right after the flick with the tip blurring, the swings get smaller, and it stops within seconds; the part under his hand stays still."
+    "expectation": "The free end vibrates fast right after the flick with the tip blurring, the swings get smaller, and it stops within seconds; the part held on the desk stays still."
   },
   {
     "id": "ACOU-0005",
-    "caption": "A child flicks a taut rubber band stretched between two nails, and the band blurs and hums before going still.",
+    "caption": "A taut rubber band stretched between two nails is flicked, and the band blurs and hums before going still.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9705,18 +9705,18 @@
   },
   {
     "id": "ACOU-0008",
-    "caption": "A man plucks a single string on an upright bass, and the thick string swings visibly from side to side before settling.",
+    "caption": "A single string of an upright bass is plucked, and the thick string swings visibly from side to side before settling.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
       "causeless_motion",
       "process_direction"
     ],
-    "expectation": "The swing is widest right after the pluck and shrinks steadily; the string stops when he lays a finger on it."
+    "expectation": "The swing is widest right after the pluck and shrinks steadily; the string does not stop dead or swing wider on its own."
   },
   {
     "id": "ACOU-0009",
-    "caption": "A percussionist strikes a large cymbal, and the cymbal wobbles on its stand and its edge blurs before it steadies.",
+    "caption": "A large cymbal is struck, and the cymbal wobbles on its stand and its edge blurs before it steadies.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9760,7 +9760,7 @@
   },
   {
     "id": "ACOU-0013",
-    "caption": "A man knocks on a thin sheet-metal door, and the panel visibly flexes and rattles under his knuckles before going quiet.",
+    "caption": "A thin sheet-metal door is knocked on, and the panel visibly flexes and rattles under the knocks before going quiet.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9771,7 +9771,7 @@
   },
   {
     "id": "ACOU-0014",
-    "caption": "A woman taps a long wooden fishing rod against a post, and the tip whips back and forth in a blur before settling.",
+    "caption": "A long wooden fishing rod is tapped against a post, and the tip whips back and forth in a blur before settling.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9782,7 +9782,7 @@
   },
   {
     "id": "ACOU-0015",
-    "caption": "A boy slaps the surface of a taut trampoline mat with his hand, and the mat ripples outward and shivers before going flat.",
+    "caption": "The taut mat of a trampoline is slapped with a hand, and the mat ripples outward and shivers before going flat.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9793,7 +9793,7 @@
   },
   {
     "id": "ACOU-0016",
-    "caption": "A man plucks a stretched washing line, and the line blurs along its length and slowly sharpens.",
+    "caption": "A stretched washing line is plucked, and the line blurs along its length and slowly sharpens.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9804,7 +9804,7 @@
   },
   {
     "id": "ACOU-0017",
-    "caption": "A carpenter drops a long steel saw blade flat onto a bench, and the blade twangs and flutters for a moment before lying still.",
+    "caption": "A long steel saw blade is dropped flat onto a bench, and the blade twangs and flutters for a moment before lying still.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9815,7 +9815,7 @@
   },
   {
     "id": "ACOU-0018",
-    "caption": "A woman thumps the top of a large empty cardboard box, and the lid panel bounces and quivers before settling.",
+    "caption": "The top of a large empty cardboard box is thumped, and the lid panel bounces and quivers before settling.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9826,7 +9826,7 @@
   },
   {
     "id": "ACOU-0019",
-    "caption": "A boy flicks a metal spring doorstop mounted on the wall, and it wobbles wildly and then slows to a stop.",
+    "caption": "A metal spring doorstop mounted on the wall is flicked, and it wobbles wildly and then slows to a stop.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9848,7 +9848,7 @@
   },
   {
     "id": "ACOU-0021",
-    "caption": "A man slaps a taut drumhead of a large bass drum, and the head visibly dips and rebounds several times, each time smaller.",
+    "caption": "The taut head of a large bass drum is slapped, and the head visibly dips and rebounds several times, each time smaller.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9859,7 +9859,7 @@
   },
   {
     "id": "ACOU-0022",
-    "caption": "A woman plucks the wire of a garden fence, and the wire blurs and hums along its span before settling.",
+    "caption": "The wire of a garden fence is plucked, and the wire blurs and hums along its span before settling.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9881,7 +9881,7 @@
   },
   {
     "id": "ACOU-0024",
-    "caption": "A child plucks the thin elastic cord of a paddle ball toy, and the cord blurs and the ball bounces lightly before both go still.",
+    "caption": "The thin elastic cord of a paddle ball toy is plucked, and the cord blurs and the ball bounces lightly before both go still.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9892,7 +9892,7 @@
   },
   {
     "id": "ACOU-0025",
-    "caption": "A woman flicks a strip of thin sheet metal clamped at one end in a vise, and the free end vibrates in a blur that slowly stops.",
+    "caption": "A strip of thin sheet metal clamped at one end in a vise is flicked, and the free end vibrates in a blur that slowly stops.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9903,7 +9903,7 @@
   },
   {
     "id": "ACOU-0026",
-    "caption": "A child strikes the taut skin of a tambourine, and the skin shivers and the metal jingles rattle before quieting.",
+    "caption": "The taut skin of a tambourine is struck, and the skin shivers and the metal jingles rattle before quieting.",
     "category": "Acoustics",
     "subcategory": "struck_vibration",
     "violation_types": [
@@ -9936,7 +9936,7 @@
   },
   {
     "id": "ACOU-0029",
-    "caption": "A man slams a heavy door shut, and a picture frame on the nearby wall swings from side to side before hanging still.",
+    "caption": "A heavy door is slammed shut, and a picture frame on the nearby wall swings from side to side before hanging still.",
     "category": "Acoustics",
     "subcategory": "sound_driven_vibration",
     "violation_types": [
@@ -10024,7 +10024,7 @@
   },
   {
     "id": "ACOU-0037",
-    "caption": "A man switches on a loud table saw in a workshop, and the screws in a jar on the bench begin to rattle and shift.",
+    "caption": "A loud table saw in a workshop is switched on, and the screws in a jar on the bench begin to rattle and shift.",
     "category": "Acoustics",
     "subcategory": "sound_driven_vibration",
     "violation_types": [
@@ -10057,7 +10057,7 @@
   },
   {
     "id": "ACOU-0040",
-    "caption": "A drummer plays a hard rhythm in a small room, and a glass of water on a nearby amplifier ripples with each hit.",
+    "caption": "A hard rhythm is played on a drum kit in a small room, and a glass of water on a nearby amplifier ripples with each hit.",
     "category": "Acoustics",
     "subcategory": "sound_driven_vibration",
     "violation_types": [
@@ -10167,7 +10167,7 @@
   },
   {
     "id": "ACOU-0050",
-    "caption": "A cook drops a heavy cast-iron pan onto a stovetop, and the lids of neighbouring pots rattle for a moment.",
+    "caption": "A heavy cast-iron pan is dropped onto a stovetop, and the lids of neighbouring pots rattle for a moment.",
     "category": "Acoustics",
     "subcategory": "sound_driven_vibration",
     "violation_types": [
@@ -10189,7 +10189,7 @@
   },
   {
     "id": "ACOU-0052",
-    "caption": "A man revs a chainsaw in a garage, and the tools hanging on the pegboard behind him sway and tap against the board.",
+    "caption": "A chainsaw is revved in a garage, and the tools hanging on the pegboard behind it sway and tap against the board.",
     "category": "Acoustics",
     "subcategory": "sound_driven_vibration",
     "violation_types": [
@@ -10299,7 +10299,7 @@
   },
   {
     "id": "ACOU-0062",
-    "caption": "A lawnmower is started, and its handle shakes visibly in the operator's hands until the engine is cut.",
+    "caption": "A lawnmower is started, and its handle shakes visibly until the engine is cut.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
@@ -10310,7 +10310,7 @@
   },
   {
     "id": "ACOU-0063",
-    "caption": "A drummer presses the bass drum pedal repeatedly, and the beater swings into the drumhead with each press and the head dips each time.",
+    "caption": "The pedal of a bass drum is pressed repeatedly, and the beater swings into the drumhead with each press and the head dips each time.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
@@ -10354,7 +10354,7 @@
   },
   {
     "id": "ACOU-0067",
-    "caption": "A pager on vibrate goes off on a nightstand and rattles against the wood until the owner picks it up.",
+    "caption": "A pager on vibrate goes off on a nightstand and rattles against the wood until it stops.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
@@ -10387,7 +10387,7 @@
   },
   {
     "id": "ACOU-0070",
-    "caption": "A child bangs on a toy piano, and the small hammers inside can be seen jumping up with each key press.",
+    "caption": "The keys of a toy piano are banged, and the small hammers inside can be seen jumping up with each key press.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
@@ -10398,7 +10398,7 @@
   },
   {
     "id": "ACOU-0071",
-    "caption": "A woman turns on a paint shaker at a hardware store, and the paint can clamped in it blurs with the shaking until the timer stops it.",
+    "caption": "A paint shaker at a hardware store is switched on, and the paint can clamped in it blurs with the shaking until the timer stops it.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
@@ -10420,7 +10420,7 @@
   },
   {
     "id": "ACOU-0073",
-    "caption": "A dentist's drill is switched on and held up, and its tip becomes a blur until the pedal is released.",
+    "caption": "A dental drill is switched on and held up, and its tip becomes a blur until the pedal is released.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
@@ -10431,7 +10431,7 @@
   },
   {
     "id": "ACOU-0074",
-    "caption": "A cook uses a stand mixer on high, and the whole mixer trembles on the counter until she turns it down.",
+    "caption": "A stand mixer runs on high, and the whole mixer trembles on the counter until it is turned down.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
@@ -10442,7 +10442,7 @@
   },
   {
     "id": "ACOU-0075",
-    "caption": "A man taps a microphone on a stand, and the mic head jiggles on its clip with each tap.",
+    "caption": "A microphone on a stand is tapped, and the mic head jiggles on its clip with each tap.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
