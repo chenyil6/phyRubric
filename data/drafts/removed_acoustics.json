@@ -1,0 +1,290 @@
+[
+  {
+    "id": "ACOU-0013",
+    "caption": "A woman plucks the string of a harp, and the string vibrates in a blur that narrows as the note fades.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blur appears at the pluck and shrinks steadily to a sharp line; the other strings remain still.",
+    "removed_reason": "harp string blur: invisible at video resolution; the plucked-string idea is covered by ACOU-0002/0008/0011"
+  },
+  {
+    "id": "ACOU-0015",
+    "caption": "A cook strikes a hanging metal triangle with a rod, and the triangle swings on its loop and its sides shimmer.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shimmer begins at the strike and fades; the swinging is small and dies down; nothing moves before the rod touches it.",
+    "removed_reason": "triangle sides shimmer: invisible; the hanging-ball demo now lives on the gong (ACOU-0003)"
+  },
+  {
+    "id": "ACOU-0016",
+    "caption": "A child flicks the tines of a fork held by its handle, and the tines blur briefly and then are still.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blur starts at the flick and is gone within a second; the handle in the hand stays sharp.",
+    "removed_reason": "fork tines blur: invisible; the tuning fork in water (ACOU-0007) covers it"
+  },
+  {
+    "id": "ACOU-0020",
+    "caption": "A child hits a suspended metal wind-chime tube with a stick, and the tube swings and its outline shimmers.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The struck tube swings and shimmers; neighbouring tubes move only if it bumps them; the motion dies down over a few seconds.",
+    "removed_reason": "wind-chime tube outline shimmer: invisible; same class as the triangle/handbell"
+  },
+  {
+    "id": "ACOU-0025",
+    "caption": "A child strikes a hanging saucepan with a spoon, and the pan swings and its bottom shimmers.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shimmer and swing begin at the strike and decay over a few seconds; the pan is still before.",
+    "removed_reason": "hanging saucepan bottom shimmer: invisible; rice-on-lid demo (ACOU-0010) covers struck metal"
+  },
+  {
+    "id": "ACOU-0028",
+    "caption": "A boy bangs a metal garbage-can lid against the can, and the lid rings and quivers in his hand.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The quiver starts at the bang and dies within a second or two; the lid is still before and after.",
+    "removed_reason": "garbage-can lid quivering in a hand: invisible and duplicates ACOU-0010"
+  },
+  {
+    "id": "ACOU-0031",
+    "caption": "A man strikes a hanging church-style handbell with its clapper, and the bell swings and its rim shimmers.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shimmer begins as the clapper hits and fades; the swing settles; nothing moves before the clapper strikes.",
+    "removed_reason": "handbell rim shimmer: invisible; ball demo kept on the gong, water demo on the fork"
+  },
+  {
+    "id": "ACOU-0034",
+    "caption": "A man taps a thin metal lampshade with a pen, and the shade rings and its edge blurs faintly before settling.",
+    "category": "Acoustics",
+    "subcategory": "struck_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blur appears at the tap and fades within seconds; the lamp itself does not sway unless bumped.",
+    "removed_reason": "lampshade edge blur: invisible"
+  },
+  {
+    "id": "ACOU-0043",
+    "caption": "Fireworks explode overhead during a display, and the loose glass in a greenhouse below rattles with each bang.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "Each rattle follows a burst and dies away before the next; the glass is still between bursts.",
+    "removed_reason": "greenhouse glass rattling with fireworks: invisible on video; window-buzz idea kept in ACOU-0038/0040 with paper indicators"
+  },
+  {
+    "id": "ACOU-0046",
+    "caption": "A church bell rings in a tower, and the small loose panes of the belfry window quiver with each stroke.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "Each quiver comes with a stroke of the bell and settles between strokes.",
+    "removed_reason": "belfry panes quivering with bell strokes: invisible; same as above"
+  },
+  {
+    "id": "ACOU-0067",
+    "caption": "A giant firework shell bursts over a lake, and the reflection on the water shivers into fragments a moment after the bang.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The reflection breaks up briefly after each burst and reforms as the surface settles.",
+    "removed_reason": "a firework bang does not visibly shiver a lake's reflection: physics not sound"
+  },
+  {
+    "id": "ACOU-0078",
+    "caption": "A woman blows into a harmonica, and the reeds inside can be seen quivering through the openings while she plays.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The reeds move only while air is blown and are still between breaths.",
+    "removed_reason": "harmonica reeds seen through the openings: not visible"
+  },
+  {
+    "id": "ACOU-0082",
+    "caption": "A violinist plays a long note, and the string under the bow is a blur that clears the instant the bow stops.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "Only the bowed string blurs; the blur is present exactly while the bow moves.",
+    "removed_reason": "violin string blur under the bow: invisible; the cello (ACOU-0073) keeps the bowed-string case"
+  },
+  {
+    "id": "ACOU-0087",
+    "caption": "A trumpet player blows a note, and the bell of the trumpet trembles faintly while the note sounds.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The tremble appears while he blows and is gone when he stops.",
+    "removed_reason": "trumpet bell trembling: not visible"
+  },
+  {
+    "id": "ACOU-0099",
+    "caption": "A bagpiper plays, and the drones resting on his shoulder tremble faintly while the note holds.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The drones tremble only while air flows through them and are still when he stops.",
+    "removed_reason": "bagpipe drones trembling: not visible"
+  },
+  {
+    "id": "ACOU-0051",
+    "caption": "A stack of dry pasta sheets stands on a shelf above a running dishwasher, and the sheets buzz against each other while the machine runs.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The buzzing lasts as long as the machine runs and stops at the end of the cycle.",
+    "removed_reason": "pasta sheets buzzing above a dishwasher: not visible"
+  },
+  {
+    "id": "ACOU-0055",
+    "caption": "A man drops a heavy weight onto a gym floor, and the metal plates on a nearby rack ring and shiver.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shiver starts at the impact and fades within a second or two; the plates are still before.",
+    "removed_reason": "weight plates shivering after a dropped weight: not visible"
+  },
+  {
+    "id": "ACOU-0057",
+    "caption": "Someone bangs a bass drum in a school gym, and a row of basketballs on a rack gently rock in their cradles.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The rocking begins with the drum hits and dies down after they stop.",
+    "removed_reason": "a bass drum does not visibly rock basketballs on a rack: physics doubtful"
+  },
+  {
+    "id": "ACOU-0063",
+    "caption": "A large clock strikes the hour in a hallway, and a nearby vase of flowers trembles faintly with each chime.",
+    "category": "Acoustics",
+    "subcategory": "sound_driven_vibration",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The tremble comes with each chime and dies between chimes; the flowers are still when the clock is silent.",
+    "removed_reason": "a clock chime does not visibly shake a vase: not visible / doubtful"
+  },
+  {
+    "id": "ACOU-0076",
+    "caption": "A guitarist strums a chord, and all the strings blur together and then sharpen one by one as she damps them with her palm.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The blur begins at the strum and each string stops the instant the palm touches it.",
+    "removed_reason": "strummed strings blurring then damped: high strings invisible; plucked-string idea covered by 2/8/20"
+  },
+  {
+    "id": "ACOU-0081",
+    "caption": "A ringing old-fashioned telephone shakes slightly on its table, and the shaking stops when the handset is lifted.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The shaking coincides with the ringing bursts and ends the moment the handset is picked up.",
+    "removed_reason": "old telephone shaking while ringing: too small; the vibrating pager covers it"
+  },
+  {
+    "id": "ACOU-0084",
+    "caption": "A boy holds a running electric razor against his palm, and the razor's head buzzes and blurs until he switches it off.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "missing_consequence"
+    ],
+    "expectation": "The head blurs only while the razor runs and is sharp when it is off.",
+    "removed_reason": "razor head blur: duplicates the buzzing-device cases (phone, toothbrush, massager)"
+  },
+  {
+    "id": "ACOU-0095",
+    "caption": "A hand-cranked siren is wound faster and faster, and its casing vibrates more as the pitch climbs, then settles as the crank slows.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The vibration rises and falls with the cranking speed and stops when the crank stops.",
+    "removed_reason": "hand-cranked siren casing vibration: not visible; only the crank is"
+  },
+  {
+    "id": "ACOU-0098",
+    "caption": "An old refrigerator compressor kicks on, and the fridge shudders briefly and a magnet on its door quivers.",
+    "category": "Acoustics",
+    "subcategory": "source_motion",
+    "violation_types": [
+      "causeless_motion",
+      "process_direction"
+    ],
+    "expectation": "The shudder happens as the compressor starts and settles into a faint hum; it stops when the compressor cuts out.",
+    "removed_reason": "fridge compressor shudder and magnet quiver: too small"
+  }
+]
