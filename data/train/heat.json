@@ -1696,14 +1696,14 @@
   },
   {
     "id": "HEAT-0152",
-    "caption": "A slice of bread sits in a running toaster, and its top edge browns, then darkens, and thin smoke begins to rise from the slots.",
+    "caption": "A slice of bread sits in a running toaster, and its top edge darkens and thin smoke begins to rise from the slots.",
     "category": "Heat",
     "subcategory": "burn_smoke",
     "violation_types": [
       "process_direction",
       "attribute_drift"
     ],
-    "expectation": "The browning deepens over time and never lightens; smoke appears only after the bread has darkened and rises from the slots; the bread does not turn pale again."
+    "expectation": "The darkening deepens over time and never lightens; smoke rises from the slots only after the bread has darkened; the bread does not turn pale again."
   },
   {
     "id": "HEAT-0153",
@@ -1773,14 +1773,14 @@
   },
   {
     "id": "HEAT-0159",
-    "caption": "Frozen dumplings are dropped into a pot of boiling water; they sink at first, and the ones that have cooked bob back up to the surface.",
+    "caption": "Dumplings that have cooked in a pot of boiling water bob up to the surface one by one.",
     "category": "Heat",
     "subcategory": "heat_response",
     "violation_types": [
       "gravity_direction",
       "process_direction"
     ],
-    "expectation": "The dumplings sink on entry; any that rise do so one by one and stay bobbing at the surface; none floats the instant it enters or sinks again once up."
+    "expectation": "The dumplings rise one by one from the bottom and stay bobbing at the surface; none sinks again once up."
   },
   {
     "id": "HEAT-0160",

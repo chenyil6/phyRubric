@@ -749,14 +749,14 @@
   },
   {
     "id": "ELEC-0069",
-    "caption": "A laptop charger is plugged into the wall and then into the laptop, and the small light on the charger connector comes on.",
+    "caption": "A charger already plugged into the wall is connected to a laptop, and the small light on the connector comes on.",
     "category": "Electricity",
     "subcategory": "plug_power",
     "violation_types": [
       "missing_consequence",
       "process_direction"
     ],
-    "expectation": "The connector light comes on only once both ends are plugged in and goes off when either is removed."
+    "expectation": "The connector light is off before the plug seats in the laptop and comes on only then."
   },
   {
     "id": "ELEC-0070",

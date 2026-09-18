@@ -804,14 +804,14 @@
   },
   {
     "id": "OPT-0074",
-    "caption": "A silver tray is polished until the room appears in it, then breath is blown on it and the image fogs and returns.",
+    "caption": "Breath is blown on a polished silver tray that reflects the room, and the reflected image fogs over and returns.",
     "category": "Optics",
     "subcategory": "reflection",
     "violation_types": [
       "missing_consequence",
       "attribute_drift"
     ],
-    "expectation": "The image gets clearer as the tray is polished, blurs under the breath, and comes back as the fog clears."
+    "expectation": "The reflection blurs under the breath and comes back as the fog clears; the tray itself does not change."
   },
   {
     "id": "OPT-0075",
@@ -1508,14 +1508,14 @@
   },
   {
     "id": "OPT-0138",
-    "caption": "A car's side window fogs from the inside, blurring the passing city, until a patch is wiped clear.",
+    "caption": "A car's side window is fogged from the inside, blurring the passing city; a patch is wiped clear.",
     "category": "Optics",
     "subcategory": "refraction_transparency",
     "violation_types": [
       "shape_identity",
       "process_direction"
     ],
-    "expectation": "The blur grows with the fog and the view becomes sharp only where the patch is wiped; the city outside does not change."
+    "expectation": "The view is blurred everywhere except where the patch is wiped, where it turns sharp; the city outside does not change."
   },
   {
     "id": "OPT-0139",
@@ -1651,14 +1651,14 @@
   },
   {
     "id": "OPT-0151",
-    "caption": "A cloud covers the sun over a picnic, and the whole scene dims, then brightens again when the cloud passes.",
+    "caption": "A cloud slides across the sun over a picnic table, and the whole scene dims.",
     "category": "Optics",
     "subcategory": "illumination",
     "violation_types": [
       "missing_consequence",
       "process_direction"
     ],
-    "expectation": "The dimming and brightening are gradual and affect everything at once; sharp shadows soften while the cloud is in front of the sun."
+    "expectation": "The dimming is gradual and affects everything at once; sharp shadows soften as the cloud moves in front of the sun."
   },
   {
     "id": "OPT-0152",

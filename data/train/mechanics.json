@@ -633,14 +633,14 @@
   },
   {
     "id": "MECH-0058",
-    "caption": "A wheelbarrow full of soil is pushed across a soft lawn, where its wheel sinks and drags, and then onto a paved patio, where it rolls easily.",
+    "caption": "A wheelbarrow full of soil is pushed from a paved patio onto a soft lawn, and its wheel sinks into the turf and drags.",
     "category": "Mechanics",
     "subcategory": "friction_rolling",
     "violation_types": [
       "material_response",
       "trajectory_momentum"
     ],
-    "expectation": "The wheel leaves a track in the lawn and rolls without sinking on the patio; the change happens at the edge of the paving."
+    "expectation": "The wheel rolls without sinking on the paving and sinks and leaves a track once it is on the lawn; the change happens at the edge of the paving."
   },
   {
     "id": "MECH-0059",
@@ -1097,7 +1097,7 @@
   },
   {
     "id": "MECH-0100",
-    "caption": "A truck backs up until the tow rope to a stuck car lies slack on the ground, then drives forward; the rope goes taut and the car jerks into motion behind it.",
+    "caption": "A tow rope lies slack on the ground between a truck and a stuck car; the truck drives forward, the rope goes taut, and the car jerks into motion behind it.",
     "category": "Mechanics",
     "subcategory": "tension",
     "violation_types": [
@@ -1339,14 +1339,14 @@
   },
   {
     "id": "MECH-0122",
-    "caption": "A loaded toolbox is set down on top of a large cardboard box in a garage, the box caves in under it, and it stays crumpled when the toolbox is lifted away.",
+    "caption": "A loaded toolbox is set down on top of a large cardboard box in a garage, and the box caves in under it.",
     "category": "Mechanics",
     "subcategory": "deformation",
     "violation_types": [
       "material_response",
       "process_direction"
     ],
-    "expectation": "The top folds in and the sides buckle as the weight lands; the box does not hold like a stool or spring back to shape."
+    "expectation": "The top folds in and the sides buckle as the weight lands; the box does not hold like a stool."
   },
   {
     "id": "MECH-0123",
@@ -2547,14 +2547,14 @@
   },
   {
     "id": "MECH-0231",
-    "caption": "A glass of water is poured into an opaque metal jug, then the jug is tipped and the water poured back out into the glass.",
+    "caption": "A glass of water is poured into an opaque metal jug, and the water disappears from view inside the jug.",
     "category": "Mechanics",
     "subcategory": "occlusion_containment",
     "violation_types": [
       "permanence_count",
       "material_response"
     ],
-    "expectation": "About the same amount of water comes back out as went in; the water is unseen while in the jug and pours only from the spout."
+    "expectation": "The level in the glass falls as it pours; the water is unseen once inside the jug and does not show through or leak from its sides."
   },
   {
     "id": "MECH-0232",
@@ -2614,7 +2614,7 @@
   },
   {
     "id": "MECH-0237",
-    "caption": "A tennis ball is dropped into a bucket, then the bucket is tipped over and the ball rolls out onto the floor.",
+    "caption": "A bucket with a tennis ball inside is tipped over, and the ball rolls out onto the floor.",
     "category": "Mechanics",
     "subcategory": "occlusion_containment",
     "violation_types": [
@@ -2648,13 +2648,35 @@
   },
   {
     "id": "MECH-0240",
-    "caption": "A coin is pushed into the slot of a piggy bank and the bank is then shaken, and the coin rattles inside.",
+    "caption": "A piggy bank with a coin inside is shaken, and the coin rattles inside without coming into view.",
     "category": "Mechanics",
     "subcategory": "occlusion_containment",
     "violation_types": [
       "permanence_count",
       "solidity"
     ],
-    "expectation": "The coin disappears through the slot and stays inside; it does not fall out of the bank's solid sides or reappear outside; the bank's shape is unchanged."
+    "expectation": "The coin stays inside; it does not fall out of the bank's solid sides or appear outside; the bank's shape is unchanged."
+  },
+  {
+    "id": "MECH-0241",
+    "caption": "An opaque metal jug is tipped over an empty glass, and water pours out of it into the glass.",
+    "category": "Mechanics",
+    "subcategory": "occlusion_containment",
+    "violation_types": [
+      "permanence_count",
+      "material_response"
+    ],
+    "expectation": "Water appears only from the spout once the jug tilts far enough, and the level in the glass rises; the jug's sides stay opaque."
+  },
+  {
+    "id": "MECH-0242",
+    "caption": "A loaded toolbox resting on a crushed cardboard box in a garage is lifted away, and the box stays crumpled.",
+    "category": "Mechanics",
+    "subcategory": "deformation",
+    "violation_types": [
+      "material_response",
+      "process_direction"
+    ],
+    "expectation": "The box keeps its caved-in top and buckled sides after the weight is gone; it does not spring back to shape."
   }
 ]

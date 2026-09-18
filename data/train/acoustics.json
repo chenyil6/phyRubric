@@ -584,14 +584,14 @@
   },
   {
     "id": "ACOU-0054",
-    "caption": "A phone set to vibrate buzzes on a wooden table and creeps slowly across the surface until the buzzing stops.",
+    "caption": "A phone set to vibrate buzzes on a wooden table and creeps slowly across the surface.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "trajectory_momentum"
     ],
-    "expectation": "The phone shivers and moves only while it buzzes, in small jerks; it stops dead when the vibration ends."
+    "expectation": "The phone shivers and moves only while it buzzes, in small jerks along the table."
   },
   {
     "id": "ACOU-0055",
@@ -661,25 +661,25 @@
   },
   {
     "id": "ACOU-0061",
-    "caption": "A blender runs on a kitchen counter, and its base vibrates and inches slightly across the counter until it is switched off.",
+    "caption": "A blender runs on a kitchen counter, and its base vibrates and inches slightly across the counter.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "trajectory_momentum"
     ],
-    "expectation": "The movement happens only while the motor runs and stops when it is turned off."
+    "expectation": "The movement happens only while the motor runs, in small shifts rather than a smooth glide."
   },
   {
     "id": "ACOU-0062",
-    "caption": "A lawnmower is started, and its handle shakes visibly until the engine is cut.",
+    "caption": "A lawnmower is started, and its handle shakes visibly.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "missing_consequence"
     ],
-    "expectation": "The shaking lasts as long as the engine runs and stops when it is switched off."
+    "expectation": "The shaking begins with the engine and lasts as long as it runs."
   },
   {
     "id": "ACOU-0063",
@@ -727,14 +727,14 @@
   },
   {
     "id": "ACOU-0067",
-    "caption": "A pager on vibrate goes off on a nightstand and rattles against the wood until it stops.",
+    "caption": "A pager on vibrate goes off on a nightstand and rattles against the wood.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "missing_consequence"
     ],
-    "expectation": "The rattling and small movements happen only while it vibrates and end when it is lifted."
+    "expectation": "The rattling and small movements happen only while it vibrates."
   },
   {
     "id": "ACOU-0068",
@@ -749,14 +749,14 @@
   },
   {
     "id": "ACOU-0069",
-    "caption": "A generator runs on a building site, and its frame shakes and the loose bolts on it rattle until it is shut down.",
+    "caption": "A generator runs on a building site, and its frame shakes and the loose bolts on it rattle.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "missing_consequence"
     ],
-    "expectation": "The shaking lasts as long as the engine runs and stops within a moment of shutdown."
+    "expectation": "The shaking and rattling last as long as the engine runs and stay on the frame."
   },
   {
     "id": "ACOU-0070",
@@ -771,14 +771,14 @@
   },
   {
     "id": "ACOU-0071",
-    "caption": "A paint shaker at a hardware store is switched on, and the paint can clamped in it blurs with the shaking until the timer stops it.",
+    "caption": "A paint shaker at a hardware store is switched on, and the paint can clamped in it blurs with the shaking.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "missing_consequence"
     ],
-    "expectation": "The can blurs only while the machine runs and is sharp and still when it stops."
+    "expectation": "The can is sharp before the machine starts and blurs only while it runs."
   },
   {
     "id": "ACOU-0072",
@@ -793,25 +793,25 @@
   },
   {
     "id": "ACOU-0073",
-    "caption": "A dental drill is switched on and held up, and its tip becomes a blur until the pedal is released.",
+    "caption": "A dental drill is switched on and held up, and its tip becomes a blur.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "missing_consequence"
     ],
-    "expectation": "The tip blurs only while the drill runs and is sharp when it stops."
+    "expectation": "The tip is sharp before the drill starts and blurs only while it runs."
   },
   {
     "id": "ACOU-0074",
-    "caption": "A stand mixer runs on high, and the whole mixer trembles on the counter until it is turned down.",
+    "caption": "A stand mixer runs on high, and the whole mixer trembles on the counter.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "missing_consequence"
     ],
-    "expectation": "The trembling is strongest on high and eases as the speed is lowered; it stops when the mixer is off."
+    "expectation": "The trembling lasts as long as the mixer runs and is strongest at high speed."
   },
   {
     "id": "ACOU-0075",

@@ -633,14 +633,14 @@
   },
   {
     "id": "MECH-0058",
-    "caption": "A wheelbarrow full of soil is pushed across a soft lawn, where its wheel sinks and drags, and then onto a paved patio, where it rolls easily.",
+    "caption": "A wheelbarrow full of soil is pushed from a paved patio onto a soft lawn, and its wheel sinks into the turf and drags.",
     "category": "Mechanics",
     "subcategory": "friction_rolling",
     "violation_types": [
       "material_response",
       "trajectory_momentum"
     ],
-    "expectation": "The wheel leaves a track in the lawn and rolls without sinking on the patio; the change happens at the edge of the paving."
+    "expectation": "The wheel rolls without sinking on the paving and sinks and leaves a track once it is on the lawn; the change happens at the edge of the paving."
   },
   {
     "id": "MECH-0059",
@@ -1097,7 +1097,7 @@
   },
   {
     "id": "MECH-0100",
-    "caption": "A truck backs up until the tow rope to a stuck car lies slack on the ground, then drives forward; the rope goes taut and the car jerks into motion behind it.",
+    "caption": "A tow rope lies slack on the ground between a truck and a stuck car; the truck drives forward, the rope goes taut, and the car jerks into motion behind it.",
     "category": "Mechanics",
     "subcategory": "tension",
     "violation_types": [
@@ -1339,14 +1339,14 @@
   },
   {
     "id": "MECH-0122",
-    "caption": "A loaded toolbox is set down on top of a large cardboard box in a garage, the box caves in under it, and it stays crumpled when the toolbox is lifted away.",
+    "caption": "A loaded toolbox is set down on top of a large cardboard box in a garage, and the box caves in under it.",
     "category": "Mechanics",
     "subcategory": "deformation",
     "violation_types": [
       "material_response",
       "process_direction"
     ],
-    "expectation": "The top folds in and the sides buckle as the weight lands; the box does not hold like a stool or spring back to shape."
+    "expectation": "The top folds in and the sides buckle as the weight lands; the box does not hold like a stool."
   },
   {
     "id": "MECH-0123",
@@ -2547,14 +2547,14 @@
   },
   {
     "id": "MECH-0231",
-    "caption": "A glass of water is poured into an opaque metal jug, then the jug is tipped and the water poured back out into the glass.",
+    "caption": "A glass of water is poured into an opaque metal jug, and the water disappears from view inside the jug.",
     "category": "Mechanics",
     "subcategory": "occlusion_containment",
     "violation_types": [
       "permanence_count",
       "material_response"
     ],
-    "expectation": "About the same amount of water comes back out as went in; the water is unseen while in the jug and pours only from the spout."
+    "expectation": "The level in the glass falls as it pours; the water is unseen once inside the jug and does not show through or leak from its sides."
   },
   {
     "id": "MECH-0232",
@@ -2614,7 +2614,7 @@
   },
   {
     "id": "MECH-0237",
-    "caption": "A tennis ball is dropped into a bucket, then the bucket is tipped over and the ball rolls out onto the floor.",
+    "caption": "A bucket with a tennis ball inside is tipped over, and the ball rolls out onto the floor.",
     "category": "Mechanics",
     "subcategory": "occlusion_containment",
     "violation_types": [
@@ -2648,14 +2648,36 @@
   },
   {
     "id": "MECH-0240",
-    "caption": "A coin is pushed into the slot of a piggy bank and the bank is then shaken, and the coin rattles inside.",
+    "caption": "A piggy bank with a coin inside is shaken, and the coin rattles inside without coming into view.",
     "category": "Mechanics",
     "subcategory": "occlusion_containment",
     "violation_types": [
       "permanence_count",
       "solidity"
     ],
-    "expectation": "The coin disappears through the slot and stays inside; it does not fall out of the bank's solid sides or reappear outside; the bank's shape is unchanged."
+    "expectation": "The coin stays inside; it does not fall out of the bank's solid sides or appear outside; the bank's shape is unchanged."
+  },
+  {
+    "id": "MECH-0241",
+    "caption": "An opaque metal jug is tipped over an empty glass, and water pours out of it into the glass.",
+    "category": "Mechanics",
+    "subcategory": "occlusion_containment",
+    "violation_types": [
+      "permanence_count",
+      "material_response"
+    ],
+    "expectation": "Water appears only from the spout once the jug tilts far enough, and the level in the glass rises; the jug's sides stay opaque."
+  },
+  {
+    "id": "MECH-0242",
+    "caption": "A loaded toolbox resting on a crushed cardboard box in a garage is lifted away, and the box stays crumpled.",
+    "category": "Mechanics",
+    "subcategory": "deformation",
+    "violation_types": [
+      "material_response",
+      "process_direction"
+    ],
+    "expectation": "The box keeps its caved-in top and buckled sides after the weight is gone; it does not spring back to shape."
   },
   {
     "id": "HEAT-0001",
@@ -4354,14 +4376,14 @@
   },
   {
     "id": "HEAT-0152",
-    "caption": "A slice of bread sits in a running toaster, and its top edge browns, then darkens, and thin smoke begins to rise from the slots.",
+    "caption": "A slice of bread sits in a running toaster, and its top edge darkens and thin smoke begins to rise from the slots.",
     "category": "Heat",
     "subcategory": "burn_smoke",
     "violation_types": [
       "process_direction",
       "attribute_drift"
     ],
-    "expectation": "The browning deepens over time and never lightens; smoke appears only after the bread has darkened and rises from the slots; the bread does not turn pale again."
+    "expectation": "The darkening deepens over time and never lightens; smoke rises from the slots only after the bread has darkened; the bread does not turn pale again."
   },
   {
     "id": "HEAT-0153",
@@ -4431,14 +4453,14 @@
   },
   {
     "id": "HEAT-0159",
-    "caption": "Frozen dumplings are dropped into a pot of boiling water; they sink at first, and the ones that have cooked bob back up to the surface.",
+    "caption": "Dumplings that have cooked in a pot of boiling water bob up to the surface one by one.",
     "category": "Heat",
     "subcategory": "heat_response",
     "violation_types": [
       "gravity_direction",
       "process_direction"
     ],
-    "expectation": "The dumplings sink on entry; any that rise do so one by one and stay bobbing at the surface; none floats the instant it enters or sinks again once up."
+    "expectation": "The dumplings rise one by one from the bottom and stay bobbing at the surface; none sinks again once up."
   },
   {
     "id": "HEAT-0160",
@@ -5701,14 +5723,14 @@
   },
   {
     "id": "OPT-0074",
-    "caption": "A silver tray is polished until the room appears in it, then breath is blown on it and the image fogs and returns.",
+    "caption": "Breath is blown on a polished silver tray that reflects the room, and the reflected image fogs over and returns.",
     "category": "Optics",
     "subcategory": "reflection",
     "violation_types": [
       "missing_consequence",
       "attribute_drift"
     ],
-    "expectation": "The image gets clearer as the tray is polished, blurs under the breath, and comes back as the fog clears."
+    "expectation": "The reflection blurs under the breath and comes back as the fog clears; the tray itself does not change."
   },
   {
     "id": "OPT-0075",
@@ -6405,14 +6427,14 @@
   },
   {
     "id": "OPT-0138",
-    "caption": "A car's side window fogs from the inside, blurring the passing city, until a patch is wiped clear.",
+    "caption": "A car's side window is fogged from the inside, blurring the passing city; a patch is wiped clear.",
     "category": "Optics",
     "subcategory": "refraction_transparency",
     "violation_types": [
       "shape_identity",
       "process_direction"
     ],
-    "expectation": "The blur grows with the fog and the view becomes sharp only where the patch is wiped; the city outside does not change."
+    "expectation": "The view is blurred everywhere except where the patch is wiped, where it turns sharp; the city outside does not change."
   },
   {
     "id": "OPT-0139",
@@ -6548,14 +6570,14 @@
   },
   {
     "id": "OPT-0151",
-    "caption": "A cloud covers the sun over a picnic, and the whole scene dims, then brightens again when the cloud passes.",
+    "caption": "A cloud slides across the sun over a picnic table, and the whole scene dims.",
     "category": "Optics",
     "subcategory": "illumination",
     "violation_types": [
       "missing_consequence",
       "process_direction"
     ],
-    "expectation": "The dimming and brightening are gradual and affect everything at once; sharp shadows soften while the cloud is in front of the sun."
+    "expectation": "The dimming is gradual and affects everything at once; sharp shadows soften as the cloud moves in front of the sun."
   },
   {
     "id": "OPT-0152",
@@ -8144,14 +8166,14 @@
   },
   {
     "id": "ELEC-0069",
-    "caption": "A laptop charger is plugged into the wall and then into the laptop, and the small light on the charger connector comes on.",
+    "caption": "A charger already plugged into the wall is connected to a laptop, and the small light on the connector comes on.",
     "category": "Electricity",
     "subcategory": "plug_power",
     "violation_types": [
       "missing_consequence",
       "process_direction"
     ],
-    "expectation": "The connector light comes on only once both ends are plugged in and goes off when either is removed."
+    "expectation": "The connector light is off before the plug seats in the laptop and comes on only then."
   },
   {
     "id": "ELEC-0070",
@@ -10211,14 +10233,14 @@
   },
   {
     "id": "ACOU-0054",
-    "caption": "A phone set to vibrate buzzes on a wooden table and creeps slowly across the surface until the buzzing stops.",
+    "caption": "A phone set to vibrate buzzes on a wooden table and creeps slowly across the surface.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "trajectory_momentum"
     ],
-    "expectation": "The phone shivers and moves only while it buzzes, in small jerks; it stops dead when the vibration ends."
+    "expectation": "The phone shivers and moves only while it buzzes, in small jerks along the table."
   },
   {
     "id": "ACOU-0055",
@@ -10288,25 +10310,25 @@
   },
   {
     "id": "ACOU-0061",
-    "caption": "A blender runs on a kitchen counter, and its base vibrates and inches slightly across the counter until it is switched off.",
+    "caption": "A blender runs on a kitchen counter, and its base vibrates and inches slightly across the counter.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "trajectory_momentum"
     ],
-    "expectation": "The movement happens only while the motor runs and stops when it is turned off."
+    "expectation": "The movement happens only while the motor runs, in small shifts rather than a smooth glide."
   },
   {
     "id": "ACOU-0062",
-    "caption": "A lawnmower is started, and its handle shakes visibly until the engine is cut.",
+    "caption": "A lawnmower is started, and its handle shakes visibly.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "missing_consequence"
     ],
-    "expectation": "The shaking lasts as long as the engine runs and stops when it is switched off."
+    "expectation": "The shaking begins with the engine and lasts as long as it runs."
   },
   {
     "id": "ACOU-0063",
@@ -10354,14 +10376,14 @@
   },
   {
     "id": "ACOU-0067",
-    "caption": "A pager on vibrate goes off on a nightstand and rattles against the wood until it stops.",
+    "caption": "A pager on vibrate goes off on a nightstand and rattles against the wood.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "missing_consequence"
     ],
-    "expectation": "The rattling and small movements happen only while it vibrates and end when it is lifted."
+    "expectation": "The rattling and small movements happen only while it vibrates."
   },
   {
     "id": "ACOU-0068",
@@ -10376,14 +10398,14 @@
   },
   {
     "id": "ACOU-0069",
-    "caption": "A generator runs on a building site, and its frame shakes and the loose bolts on it rattle until it is shut down.",
+    "caption": "A generator runs on a building site, and its frame shakes and the loose bolts on it rattle.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "missing_consequence"
     ],
-    "expectation": "The shaking lasts as long as the engine runs and stops within a moment of shutdown."
+    "expectation": "The shaking and rattling last as long as the engine runs and stay on the frame."
   },
   {
     "id": "ACOU-0070",
@@ -10398,14 +10420,14 @@
   },
   {
     "id": "ACOU-0071",
-    "caption": "A paint shaker at a hardware store is switched on, and the paint can clamped in it blurs with the shaking until the timer stops it.",
+    "caption": "A paint shaker at a hardware store is switched on, and the paint can clamped in it blurs with the shaking.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "missing_consequence"
     ],
-    "expectation": "The can blurs only while the machine runs and is sharp and still when it stops."
+    "expectation": "The can is sharp before the machine starts and blurs only while it runs."
   },
   {
     "id": "ACOU-0072",
@@ -10420,25 +10442,25 @@
   },
   {
     "id": "ACOU-0073",
-    "caption": "A dental drill is switched on and held up, and its tip becomes a blur until the pedal is released.",
+    "caption": "A dental drill is switched on and held up, and its tip becomes a blur.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "missing_consequence"
     ],
-    "expectation": "The tip blurs only while the drill runs and is sharp when it stops."
+    "expectation": "The tip is sharp before the drill starts and blurs only while it runs."
   },
   {
     "id": "ACOU-0074",
-    "caption": "A stand mixer runs on high, and the whole mixer trembles on the counter until it is turned down.",
+    "caption": "A stand mixer runs on high, and the whole mixer trembles on the counter.",
     "category": "Acoustics",
     "subcategory": "source_motion",
     "violation_types": [
       "causeless_motion",
       "missing_consequence"
     ],
-    "expectation": "The trembling is strongest on high and eases as the speed is lowered; it stops when the mixer is off."
+    "expectation": "The trembling lasts as long as the mixer runs and is strongest at high speed."
   },
   {
     "id": "ACOU-0075",
