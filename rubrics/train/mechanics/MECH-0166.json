@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0166",
+  "caption": "A bag of soil is emptied into a flower pot, filling it with a loose heap.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bag of soil is emptied into a flower pot."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pot fills with a heap of soil."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The heap is loose rather than packed."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The emptying comes first and the heap forms after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The soil falls in clumps and crumbs and settles as a loose heap.",
+      "fail": "It pours like liquid with a flat surface; or it holds the bag's shape; or it comes out as one block."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It falls down into the pot and piles from the bottom.",
+      "fail": "Soil rises; or hangs; or the heap floats above the rim."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The heap only grows and the bag only empties.",
+      "fail": "The heap shrinks; or the bag refills; or it jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The bag's tilt produces the flow.",
+      "fail": "Soil pours from an upright bag; or the bag is tipped and nothing comes out; or the flow continues after the bag is righted.",
+      "precondition": "The bag's tilt is visible in the clip."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bag and one pot, and soil comes only from the bag.",
+      "fail": "Soil appears in the pot with no flow; or the pot duplicates; or soil passes through the pot."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag, the pot and the surroundings stay the same.",
+      "fail": "The soil changes colour; or the pot changes shape; or the surroundings rearrange."
+    }
+  ]
+}

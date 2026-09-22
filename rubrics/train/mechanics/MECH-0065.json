@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0065",
+  "caption": "A child on a moving swing lets go at the front of the arc, flies forward, and lands on the ground ahead of the swing.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A child is on a moving swing."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The child lets go at the front of the arc."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The child flies forward through the air."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The child lands on the ground ahead of the swing."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The release is at the front of the arc, not the back."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The release comes first, then the flight, then the landing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The child leaves the seat carrying the swing's forward motion and follows one curve forward and down.",
+      "fail": "The child drops straight down below the seat; or flies backward; or changes direction in mid-air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "After leaving the seat the child comes down and lands.",
+      "fail": "The child hangs in the air after letting go; or rises after leaving the seat and keeps rising; or lands and bounces higher than the seat."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The empty swing keeps swinging after the release and dies down on its own.",
+      "fail": "The seat stops dead the instant the child leaves it; or it swings harder after the release; or it follows the child forward off its chains."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The child lands with knees bending or a stumble, and the ground takes the landing.",
+      "fail": "The child lands rigid as a statue; or sinks into the ground; or bounces off the ground like a ball."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The child, the seat and the chains keep their number and shape, and the hands let go of the chains rather than passing through them.",
+      "fail": "A hand passes through a chain; or a limb detaches or vanishes; or the child passes through the seat."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The child's clothing, the swing and the playground stay the same.",
+      "fail": "The child's clothing changes colour; or the swing frame changes shape between frames; or the playground behind rearranges."
+    }
+  ],
+  "note": "Projectile scene: the child is kept because the body is the projectile. Posture and how the landing looks are not judged; only the direction and order of the motion."
+}

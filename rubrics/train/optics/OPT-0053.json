@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0053",
+  "caption": "A pigeon walks past a puddle on a pavement, and its reflection passes across the puddle upside down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pigeon walks past a puddle on a pavement."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its reflection passes across the puddle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The reflection is upside down."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection appears only within the puddle's edges."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection appears only within the puddle's edges and moves with the bird.",
+      "fail": "It extends onto dry pavement; or stays still while the bird walks; or it is missing on plainly still water."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is inverted, joined at the feet when the bird is at the water's edge.",
+      "fail": "It is upright; or offset from the bird's position; or a different bird's shape."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It moves while the bird stands still; or it drifts across the puddle."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The puddle is liquid: the reflection wavers where the surface is disturbed.",
+      "fail": "It is rigid like glass; or the reflection wavers on a flat calm; or the water flows uphill."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pigeon and one reflection; the reflection stays on the water.",
+      "fail": "A second bird appears; or the reflection leaves the puddle; or the bird vanishes; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plumage and the pavement stay the same, and the reflection's colours match the bird's.",
+      "fail": "The plumage changes; or the pavement changes; or the reflection's colours drift."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the reflection's relation to it is."
+}

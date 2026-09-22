@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0094",
+  "caption": "A disco ball turns under the stage lights, and dozens of small bright spots sweep across the walls.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A disco ball turns under stage lights."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Dozens of small bright spots sweep across the walls."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The spots move when the ball turns and stop when it stops."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The spots appear on the walls away from the lights."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The spots move when the ball turns and stop when it stops.",
+      "fail": "They are still while the ball turns; or sweep while the ball is still; or move out of time with it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The spots do not move on their own.",
+      "fail": "They dance with the ball stopped; or flicker with steady lights."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The spots are many small bright patches, each roughly a facet's shape.",
+      "fail": "They merge into one flood; or they are sharp geometric shapes unlike facets; or they are a single spot."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The spots all sweep the same way round the room as the ball turns one way.",
+      "fail": "Some sweep the opposite way; or they jump; or they move crosswise."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and its lights.",
+      "fail": "A second ball appears; or the ball vanishes; or a spot becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room and the stage lights stay the same.",
+      "fail": "The room rearranges; or the lights change colour abruptly; or the ball changes."
+    }
+  ]
+}

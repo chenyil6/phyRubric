@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0139",
+  "caption": "A demolition hammer chips a concrete floor, and an occasional spark flicks where the bit strikes embedded stone.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A demolition hammer with its bit on a concrete floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The hammer chips the floor: the bit strikes repeatedly and pieces break off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A spark flicks where the bit strikes embedded stone."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Sparks come only at some blows, not every one."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike comes first and the spark follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Sparks appear only at the moment of a blow, at the point where the bit meets the floor, and each is gone at once; between blows nothing glows.",
+      "fail": "A spark stays lit on the floor after the bit lifts; or sparks appear while the hammer is held off the floor; or the bit glows steadily; or sparks appear at a point away from the bit."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One hammer with one bit; chips that break off are pieces of the floor and stay on the floor; sparks leave nothing behind.",
+      "fail": "Glowing dots stay on the floor after a blow; or chips vanish in mid-air; or the bit duplicates or vanishes; or chips appear from nowhere away from the bit."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Chips and any spark fragments fly out from the bit and fall to the floor, going dark within a short distance.",
+      "fail": "Chips or sparks rise and hang in the air; or climb steadily; or sparks lie glowing on the floor for the rest of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The concrete breaks into hard chips and leaves a pitted hole; the bit stays a rigid steel point.",
+      "fail": "The concrete dents like clay and springs back; or the floor ripples like water; or the bit bends or curls; or the hole closes up between blows."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The bit strikes the floor's surface and enters only as far as the hole it makes; the hammer keeps its shape.",
+      "fail": "The bit passes deep through the floor as if through air; or the hammer sinks into the floor; or the hammer changes shape; or the floor turns transparent."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hammer's colour and the floor's surface away from the hole stay the same.",
+      "fail": "The hammer changes colour; or the floor changes texture away from the hole; or the surroundings rearrange."
+    }
+  ],
+  "note": "Who holds the hammer is not judged."
+}

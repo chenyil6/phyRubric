@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0023",
+  "caption": "A microwave door is opened, and the light inside the microwave comes on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A microwave with its door closed and interior dark."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The door is opened."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The light inside comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The interior is dark before the door opens."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is closed and dark, open, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The interior lights as the door opens, and only then; if the door is shut again the light goes off with it.",
+      "fail": "The door is open and the interior stays dark; or the interior is lit through the window before the door moves; or the light comes on with the door still shut and untouched; or the light stays on after the door has been shut."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once open, the interior stays lit for as long as the door is open; the turntable does not turn.",
+      "fail": "The light goes off with the door still open; or flickers; or the turntable turns while the door is open; or the door swings shut by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light comes from inside the cavity: the interior walls and anything inside are lit, and light spills out through the open door onto the counter.",
+      "fail": "The cavity is dark while the counter in front brightens; or the interior glows while nothing inside casts a shadow; or the light comes from the door rather than the cavity."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The door swings open about its hinge as one rigid panel and stays where it is put.",
+      "fail": "The door bends as it opens; or opens from the hinge side; or swings open and shut repeatedly; or comes off its hinge."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One microwave with one door; the door stays attached; the hand passes through nothing; the interior's contents are the same as the door opens.",
+      "fail": "The door detaches; or a second door appears; or the hand passes through the door; or food appears or vanishes inside as the light comes on."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The microwave's colour, its controls and the counter stay the same apart from the light.",
+      "fail": "The microwave changes colour; or the controls rearrange; or the counter's contents change."
+    }
+  ]
+}

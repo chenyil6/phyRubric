@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0034",
+  "caption": "Two bumper cars at a fairground drive straight at each other, meet head-on, and both cars bounce back a little.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two bumper cars are being driven at a fairground."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They drive straight at each other."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They meet head-on."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Both cars bounce back a little."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Both cars rebound rather than only one."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The approach comes first, then the contact, then the rebound."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "At the contact both cars stop or reverse, each moving back along the line it came in on.",
+      "fail": "The cars carry on at their old speed through the contact; or only one car is affected while the other drives on unchanged; or both move off together in one direction after a head-on meeting."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Each car changes its motion at the moment the bumpers touch and not before.",
+      "fail": "A car bounces back before the bumpers touch; or a car is thrown back with the other never reaching it; or a car stops short of contact and the other rebounds anyway."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The two cars meet at their bumpers and stay outside one another.",
+      "fail": "One car passes through the other; or the bumpers overlap and the bodies run into each other; or a car passes through the floor of the rink."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The rubber bumpers squash briefly at the contact and spring back, and the shells stay rigid.",
+      "fail": "A bumper stays dented after the contact; or a car body crumples like paper; or the cars stick together at the bumpers and travel on as one."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two cars and their riders keep their number and shape.",
+      "fail": "A car vanishes at the contact or a third appears; or a car turns into another vehicle; or a rider comes away from a car and stays sitting in mid-air."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cars' colours, the rink floor and the fairground behind stay the same.",
+      "fail": "A car changes colour at the contact; or the rink's markings shift between frames; or the fairground behind rearranges."
+    }
+  ]
+}

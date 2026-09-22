@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0011",
+  "caption": "A marshmallow on a stick is propped over a campfire, and it puffs, softens and sags.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A marshmallow on a stick is propped over a campfire."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The marshmallow puffs up: it swells."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The marshmallow softens and sags."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The stick is propped rather than held."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The side facing the fire changes first."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The puffing comes first and the sagging follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The change runs one way while the marshmallow is over the fire: it swells, goes glossy and slumps, and any darkening of the surface deepens.",
+      "fail": "The marshmallow firms up and regains its straight sides over the heat; or a darkened patch turns pale again; or it draws back to the shape it started with; or it alternates between puffed and flat."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The marshmallow behaves as a softening foam: it swells, its skin goes glossy and slack, and it stretches and droops around the stick.",
+      "fail": "The marshmallow keeps sharp square edges while glossy and sagging; or it runs off the stick as a thin liquid; or it crumbles dry; or it bounces on the stick like rubber."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sag is downward: the soft marshmallow droops below the stick and any drip runs down.",
+      "fail": "The marshmallow droops upward or out sideways with nothing pushing it; or a drip climbs the stick; or the marshmallow lifts off the stick and hangs above it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The change is strongest on the side toward the fire and the far side changes less.",
+      "fail": "The side away from the fire puffs and slumps while the side toward it stays firm; or the marshmallow changes evenly all round while the fire is plainly on one side; or a flame appears on the marshmallow while its surface stays white and unmarked."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One marshmallow on one stick; it stays on the stick and loses matter only by dripping or burning.",
+      "fail": "The marshmallow vanishes while still whole; or a second marshmallow appears; or the marshmallow splits into two whole marshmallows; or the stick passes through the marshmallow and it drops off."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stick, the fire's logs and the surroundings stay the same.",
+      "fail": "The stick changes colour or length; or the logs rearrange; or the background changes between frames."
+    }
+  ],
+  "note": "Browning or blackening of the marshmallow is chemistry and is not judged in itself; what is judged is that any darkening deepens and does not fade."
+}

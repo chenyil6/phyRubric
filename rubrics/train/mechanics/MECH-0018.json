@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0018",
+  "caption": "A bag of oranges tips over at the top of a staircase, and the oranges spill out and tumble down the stairs to the bottom.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bag containing oranges is present at the top of a staircase."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bag tips over and oranges spill out of it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The oranges travel down the stairs toward the bottom."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Several oranges are involved rather than a single one."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tipping comes first, then the spill, then the tumble down the stairs."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Every orange that leaves the bag moves downward from step to step; only the steps, the walls or another orange stop or redirect it.",
+      "fail": "An orange rolls up a step or climbs the stairs; or hovers above a step; or stops in mid-air."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Each orange bounces off the step it hits and leaves it downward and away, no higher than where it came from; the oranges spread apart as they tumble.",
+      "fail": "An orange rebounds higher than the step it fell from; or reverses back up the staircase after a bounce; or all the oranges move as one rigid formation."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Oranges start moving only after the bag tips, and an orange that has come to rest stays at rest.",
+      "fail": "Oranges are rolling out before the bag tips; or an orange that has stopped on a step or the floor sets off again with nothing touching it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The oranges stay round and firm through their impacts; they may bruise or split but do not flow or stretch.",
+      "fail": "An orange flattens like dough on landing and stays flat; or splashes like a liquid; or stretches as it falls."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The oranges keep their number and shape and the bag stays one bag; nothing passes through a step or through the bag.",
+      "fail": "Oranges appear from nowhere, vanish or merge; or an orange passes through a step or the bag's cloth; or an orange turns into a different object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The staircase, walls and bag keep their colour and layout while the oranges tumble.",
+      "fail": "Steps change count or shape between frames; or the bag changes colour or size; or an orange changes colour mid-tumble."
+    }
+  ]
+}

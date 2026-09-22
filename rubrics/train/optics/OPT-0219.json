@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0219",
+  "caption": "A sheer red scarf is draped over a white lamp, and the room's light turns warm red.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A white lamp lights a room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A sheer red scarf is draped over it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The room's light turns warm red."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The scarf glows from within."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The scarf goes on first and the light changes with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The room looks red only where the scarf's light reaches and while it is on.",
+      "fail": "The room is red with the scarf off; or stays white under the red light; or turns a different colour from the light."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens at the same instant as the scarf and is confined to where its light falls.",
+      "fail": "The room changes before the scarf; or long after; or surfaces the light cannot reach change too."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The scarf is sheer cloth that drapes over the lamp and glows.",
+      "fail": "It is rigid; or opaque so the room goes dark; or it floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves; only the light changes.",
+      "fail": "The room moves; or the scarf moves by itself; or the lit area wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One scarf and one room.",
+      "fail": "A second scarf appears; or the room vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room's shape and the surroundings stay the same.",
+      "fail": "The room changes shape; or the surroundings rearrange; or the scarf changes shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

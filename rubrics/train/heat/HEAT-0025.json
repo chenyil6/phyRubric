@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0025",
+  "caption": "A frozen fish fillet is laid in a hot pan, and the white frost on its surface disappears as the fillet thaws.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A frying pan."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A frozen fish fillet is laid in the pan."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The white frost on the fillet disappears."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The fillet goes from stiff to limp."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Water or steam shows at the fillet's edge."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The frost goes from the pan side first."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The frost only disappears, starting where the fillet meets the pan, and bare areas stay bare.",
+      "fail": "The frost grows back on a bare part of the fillet; or the frost spreads over the fillet in the hot pan; or the frost comes and goes in patches; or the fillet stiffens again after going limp."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The frost turns to water and steam at the fillet's surface, and the fillet stays one piece.",
+      "fail": "The frost goes with nothing wet or steaming at the fillet; or frost appears on the pan away from the fillet; or the fillet splits into two whole fillets; or the fillet vanishes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fillet begins as a stiff board that lies rigid and becomes a limp slab that settles into the pan's shape.",
+      "fail": "The fillet stays rigid and stands proud of the pan while its frost has gone and it looks wet; or the fillet flows like a liquid; or the fillet shatters like glass; or the fillet stiffens into a curl and stays rigid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Melted frost runs to the pan's low places and pools around the fillet, and any steam rises.",
+      "fail": "The water climbs the pan's wall and stays; or a run of water travels uphill; or the steam sinks and pools around the pan; or the fillet lifts off the pan."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The fillet lies on top of the pan's surface and nothing passes through the pan.",
+      "fail": "The fillet sinks into the pan's metal; or the water passes through the pan; or the pan changes shape; or a second pan appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan's finish and the hob around it stay the same.",
+      "fail": "The pan changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ],
+  "note": "The fish's colour change as it cooks is chemistry and is not judged."
+}

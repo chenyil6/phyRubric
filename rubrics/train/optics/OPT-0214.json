@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0214",
+  "caption": "A roller of white paint is run over a patch of wet red paint on a wall, and it leaves a pink streak where they blend.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A patch of wet red paint is on a wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A roller of white paint is run over it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It leaves a pink streak where they blend."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The untouched red stays red."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Pink appears only along the roller's path through the red and does not turn white again.",
+      "fail": "Pink appears where the roller has not passed; or the streak turns white; or the pink retreats."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The blend is pink, and the untouched red stays red.",
+      "fail": "The blend is a colour other than pink; or the untouched red changes; or the white paint stays white over the red."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Wet paint smears and blends under the roller.",
+      "fail": "The paints stay as separate hard layers; or the paint flows like water; or the roller passes without marking."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Paint moves only where the roller pushes it.",
+      "fail": "Paint runs by itself; or the roller moves by itself; or the wall changes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One roller and one wall.",
+      "fail": "A second roller appears; or the wall vanishes; or paint appears from nowhere."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wall and the room stay the same.",
+      "fail": "The wall changes shape; or the room rearranges; or the roller changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

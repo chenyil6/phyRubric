@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0034",
+  "caption": "A speaker on a table plays a loud bass track, and a handful of grains of rice scattered on the table jump and dance around it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A speaker stands on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Grains of rice are scattered on the table around the speaker."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The grains jump and move about."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The grains are a loose handful, not a heap."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The grains move near the speaker, around it rather than far away."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The grains hop in place in bursts; they do not slide as a body or stream in one direction.",
+      "fail": "All the grains slide together in one direction as if the table were tilted; or grains travel in a stream toward the speaker and climb its side; or grains rise and hang above the table."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The grains hop when the cone pumps and lie still when it is still; those nearest the speaker hop most.",
+      "fail": "The cone pumps for a spell and the grains lie dead still; or the grains hop while the cone is plainly still; or grains far from the speaker hop while those touching it lie still.",
+      "precondition": "The speaker's cone is in view."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Grains fall back to the table after each hop.",
+      "fail": "Grains hang in the air; or float upward; or stick to the side of the speaker cabinet above the table."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The grains stay separate hard grains and the table stays rigid.",
+      "fail": "Grains merge into a lump; or flow like a liquid puddle; or the table top ripples like water."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The grains keep their number, allowing for some falling off the table; one speaker; nothing passes through the table.",
+      "fail": "Grains appear from nowhere; or all the grains vanish at once; or the speaker duplicates; or grains sink into the table top."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The speaker's colour and logo, the table surface and the grains' colour stay the same.",
+      "fail": "The speaker changes colour or shape; or the table pattern changes; or the grains change colour."
+    }
+  ]
+}

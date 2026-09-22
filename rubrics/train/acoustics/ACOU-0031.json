@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0031",
+  "caption": "A washing machine spins up to full speed, and the bottle of detergent standing on top of it shakes and creeps toward the edge.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A washing machine with a bottle of detergent standing on top of it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The machine spins up: the drum turns faster or the machine begins to shake."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bottle shakes."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The bottle creeps toward the edge of the machine."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bottle stays upright while it creeps."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The machine starts first; the shaking and creeping follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The bottle is still while the machine is still and shakes only once the machine runs; if the machine stops the bottle stops.",
+      "fail": "The bottle shakes or moves before the machine starts; or slides while the machine top shows no tremble at all; or keeps creeping after the machine has plainly stopped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The creep is a series of small hops or shuffles in a roughly steady direction toward the edge, with the bottle flat on its base.",
+      "fail": "The bottle glides in one smooth slide as if pushed; or reverses and travels back to the centre; or leaps a large gap in one bound; or moves as a whole while its base is seen to stay in one place."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bottle stays down on the lid; if it reaches the edge it tips and falls off.",
+      "fail": "The bottle hovers above the lid; or hangs over the edge well past its middle without tipping; or floats off sideways instead of falling."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bottle and the machine stay rigid; the machine shakes as one body.",
+      "fail": "The bottle wobbles like jelly; or the lid ripples; or the machine's body bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bottle, one machine; nothing passes through the lid.",
+      "fail": "A second bottle appears; or the bottle vanishes; or it sinks into the lid; or the machine turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bottle's label and colour, the machine's dials and door and the room stay the same.",
+      "fail": "The label changes; or the bottle changes colour or size; or the dials or door change."
+    }
+  ]
+}

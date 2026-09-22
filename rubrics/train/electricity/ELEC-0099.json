@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0099",
+  "caption": "A lightning flash lights a bedroom through the curtains, and the shadow of the window frame appears on the wall for an instant.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bedroom with a curtained window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lightning flash lights the room through the curtains."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shadow of the window frame appears on the wall for an instant."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The room is dim before and after the flash."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shadow appears with the flash, not before it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is brief: the room brightens and returns to dim; the frame's shadow appears and vanishes with it.",
+      "fail": "The room stays lit to the end of the clip after the flash; or the shadow stays on the wall after the room is dim again; or the flash fades in slowly; or the shadow appears before the room brightens."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light comes through the window: the curtains glow brightest, the wall facing the window brightens most, and the frame's shadow lies on the wall away from the window with its bars matching the frame.",
+      "fail": "The room brightens evenly while the curtains stay as they were; or the shadow lies on the window wall itself; or the shadow is a shape unrelated to the window frame; or the wall brightens while the curtains stay dark."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing in the room moves at the flash: bed, curtains and objects stay as they were, apart from curtains stirring in a draught.",
+      "fail": "The curtains fly up at the instant of the flash while nothing else stirs; or objects on the nightstand shift; or the bedding moves; or a door opens by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The room's contents are the same before, during and after the flash.",
+      "fail": "Furniture or pictures appear or vanish between dim and lit frames; or the window moves along the wall; or a person appears in the bed; or the room's layout changes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Walls, window and furniture keep their shapes; nothing passes through anything; the shadow is a shadow, not an object.",
+      "fail": "The window changes shape; or the shadow becomes a solid object or remains as a painted mark; or the bed or wardrobe changes shape; or an object passes through the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The curtain fabric, the wall colour and the bedding keep their colours apart from brightness.",
+      "fail": "The curtains change colour or pattern; or the wall changes colour rather than brightness; or the bedding changes colour."
+    }
+  ]
+}

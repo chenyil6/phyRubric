@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0134",
+  "caption": "A dry twig is snapped in half with a crack.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dry twig is held."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is snapped."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It breaks into two pieces."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The break is near the middle."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The twig bends only slightly before breaking, with splintered ends.",
+      "fail": "It bends like rubber without breaking; or it crumbles to powder; or the break is a clean cut."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The two pieces stay two.",
+      "fail": "They rejoin; or a third piece appears; or the twig is whole again."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The break is where the hands bend it.",
+      "fail": "It breaks elsewhere; or it does not break under bending; or it breaks before bending."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Dropped pieces fall.",
+      "fail": "They float; or rise; or hang."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One twig becomes two pieces, and the hands do not pass through it.",
+      "fail": "The hands pass through the twig; or a second twig appears; or the twig turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The twig's bark and the background stay the same.",
+      "fail": "The bark changes colour; or the hands change; or the background rearranges."
+    }
+  ]
+}

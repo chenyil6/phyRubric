@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0021",
+  "caption": "Hot caramel is poured onto a cold marble slab, and the caramel spreads, then stiffens into a glassy sheet.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A marble slab."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Hot caramel is poured onto the slab."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The caramel spreads across the slab."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The caramel stiffens into a sheet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The set sheet looks glassy."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is pour, spread, stiffen."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The caramel spreads while it is hot, then slows and stops and stays where it has set.",
+      "fail": "A set part of the sheet flows again with nothing heating it; or the sheet draws back toward the point where it was poured; or the caramel spreads, stops and spreads again with none added; or the sheet alternates between runny and set."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The caramel arrives as a thick liquid that flows and levels and sets as a rigid brittle sheet that cracks rather than bends.",
+      "fail": "The set sheet bends or sags when lifted; or stretches like toffee when pulled; or the caramel runs as thin as water over the slab; or the sheet crumbles to powder as it sets."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The caramel runs downhill across the slab and over its edge where the slab slopes, and the pour falls downward from the pan.",
+      "fail": "The caramel climbs the slab's raised edge and stays; or flows uphill across the slab; or the stream travels upward from the pan; or the sheet lifts off the slab and hangs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The slab shows the caramel arriving: the sheet is thickest where the pour landed and thins outward, and it fills the slab's hollows.",
+      "fail": "The sheet is thickest far from where the pour landed with nothing moving it there; or caramel appears on a part of the slab the flow never reached; or the sheet bridges over a hollow in the slab without touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pour and one sheet; the caramel goes from the pan onto the slab and nowhere else.",
+      "fail": "Caramel appears on the slab with none pouring there; or the sheet vanishes; or the caramel passes through the slab; or a second sheet appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The slab's veining away from the caramel and the surroundings stay the same.",
+      "fail": "The slab's veining changes pattern; or the pan changes shape; or items around the slab rearrange."
+    }
+  ],
+  "note": "The caramel's colour is the product of cooking done before the clip; further darkening is chemistry and is not judged."
+}

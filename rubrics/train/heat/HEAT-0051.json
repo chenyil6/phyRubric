@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0051",
+  "caption": "A pressure cooker on a stove starts hissing, and a jet of steam shoots up from the valve on its lid.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pressure cooker stands on a hob."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A jet of steam comes from the valve on its lid."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The jet goes upward."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The jet spreads as it rises."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The steam comes from the valve rather than the lid's rim."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The jet leaves the valve going up and spreads and thins as it climbs.",
+      "fail": "The jet shoots downward onto the hob; or the steam pours down the cooker's sides and pools; or the jet hangs as a fixed shape without rising; or the steam sinks to the floor."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The steam issues from the valve alone and lasts as long as the jet does, and the lid's rim stays sealed.",
+      "fail": "Steam escapes all round the lid's rim while the valve is clear; or the jet comes from the cooker's body or base; or the valve is clear and steam appears above the cooker with nothing leaving it; or the jet appears while the valve is shut flat."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The jet is a narrow fast plume at the valve that softens into a spreading cloud above it.",
+      "fail": "The jet stays a hard-edged column all the way up; or the steam pours like a liquid; or the valve bends or droops; or the plume breaks into solid lumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The cooker stays put on the hob; only the valve and the steam move.",
+      "fail": "The cooker slides, rocks or turns with nothing touching it; or the lid lifts and stays up; or the cooker's handles swing."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cooker with one lid and one valve; the lid stays on and nothing passes through the body.",
+      "fail": "The lid passes through the cooker's rim; or a second valve appears; or the cooker changes shape; or steam passes out through the body's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cooker's finish, its handles and the hob stay the same.",
+      "fail": "The cooker changes colour; or a handle changes shape; or the hob's knobs move by themselves."
+    }
+  ],
+  "note": "The hiss is sound and is not judged."
+}

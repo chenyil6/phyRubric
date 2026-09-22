@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0276",
+  "caption": "A cable tie holding a bundle of cables is snipped with cutters, and the bundle springs apart into loose cables.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cable tie holds a bundle of cables."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is snipped with cutters."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bundle springs apart into loose cables."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The snip comes first and the spring apart follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The tie parts where the blades close and the cables spread at that instant.",
+      "fail": "The cables spread before the cut; or the tie is cut and they stay tight; or the tie parts elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The tie does not rejoin and the cables keep their number.",
+      "fail": "It rejoins; or cables vanish; or the tie vanishes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cables spring apart as stiff but flexible things.",
+      "fail": "They are rigid rods; or flow like liquid; or the tie stretches."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The loose cables sag and droop.",
+      "fail": "They float; or rise; or stand out rigidly."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The cutters and the cables keep their shape.",
+      "fail": "The cutters pass through a cable without cutting; or a cable turns into another object; or cables merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cables' colours and the background stay the same.",
+      "fail": "The colours change; or the cutters change; or the background rearranges."
+    }
+  ]
+}

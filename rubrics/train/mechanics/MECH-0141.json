@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0141",
+  "caption": "A thick garden hose is cut through with a pair of shears, leaving two open ends.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A garden hose and a pair of shears are present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The shears cut through the hose."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Two open ends are left."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The hose is thick."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cut comes first and the two ends follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The hose is severed where the blades close and only there, after they meet.",
+      "fail": "It is cut elsewhere; or it is cut before the blades meet; or the blades close and the hose stays whole."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The hose pinches under the blades before severing, leaving rubber ends.",
+      "fail": "It shatters; or the blades bend; or the hose stretches."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The two pieces stay two.",
+      "fail": "They rejoin; or a third piece appears; or the hose is whole again."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The cut ends drop.",
+      "fail": "They float; or rise; or hang."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One hose becomes two, and one pair of shears keeps its number.",
+      "fail": "The shears pass through the hand; or a second hose appears; or the shears vanish."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hose's colour and the shears stay the same.",
+      "fail": "The hose changes colour; or the shears change; or the garden rearranges."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "OPT-0001",
+  "caption": "A wooden puppet hanging in a sunny window lifts one arm as its string is pulled, and its shadow on the wall lifts its arm too.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wooden puppet on strings hangs in a window with sunlight coming through."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The puppet's arm lifts as a string is pulled."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The puppet's shadow is visible on a wall."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The shadow's arm lifts too."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strings and their movement are visible."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The shadow shows a recognisable puppet outline with head, body and arms."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow's arm moves when the puppet's arm moves, at the same time and in the corresponding direction.",
+      "fail": "The puppet's arm lifts and the shadow is unchanged; or the shadow's arm moves first or noticeably after; or the shadow's arm goes down as the puppet's goes up; or the shadow moves an arm while the puppet is still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the puppet's silhouette: the same number of limbs and the same proportions; only the parts that move on the puppet change on the shadow.",
+      "fail": "The shadow shows a different figure or extra limbs; or the shadow's shape changes with the puppet unchanged; or it splits into two shadows."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side of the puppet away from the window; light and shadow are on opposite sides.",
+      "fail": "The shadow falls on the window side, between the puppet and the sun; or the shadow appears on two opposite walls at once."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move on its own: when the puppet hangs still the shadow is still, apart from any sway the puppet shows.",
+      "fail": "The shadow drifts across the wall while the puppet hangs still; or the shadow swings with no matching sway of the puppet."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One puppet and one shadow of it; the puppet keeps its parts and does not pass through the window or wall.",
+      "fail": "The puppet gains or loses a limb; or a second puppet appears; or the puppet passes through the glass; or the shadow becomes a solid object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The puppet's paint, the wall colour and the window frame stay the same; the shadow stays dark rather than turning coloured.",
+      "fail": "The puppet changes colour; or the shadow turns bright or coloured; or the wall texture changes."
+    }
+  ]
+}

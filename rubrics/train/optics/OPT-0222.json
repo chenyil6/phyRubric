@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0222",
+  "caption": "Grenadine is poured into a glass of orange juice, and the red sinks and spreads through the bottom of the glass while the top stays orange.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass of orange juice is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Grenadine is poured in."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The red sinks and spreads through the bottom of the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The top stays orange."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pour comes first and the sinking follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The red drops through the juice and gathers low.",
+      "fail": "It floats on top; or hangs in the middle; or rises after sinking."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The red band at the bottom grows while pouring and blends into red-orange at its edge; it does not stay a separate blob.",
+      "fail": "It stays a sharp blob; or the layers swap; or the red vanishes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The bottom is red to red-orange and the top stays orange.",
+      "fail": "The whole glass turns red at once; or the top turns red first; or the mix is a colour other than red-orange."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Both are liquids that mix at their boundary.",
+      "fail": "The grenadine is a solid lump; or beads bounce; or the juice is rigid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass, and grenadine comes only from the pour.",
+      "fail": "Red appears with no pour; or the glass duplicates; or liquid passes through the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass and the table stay the same.",
+      "fail": "The glass changes shape; or the table changes; or the juice changes colour abruptly."
+    }
+  ]
+}

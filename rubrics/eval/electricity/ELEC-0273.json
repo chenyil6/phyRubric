@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0273",
+  "caption": "A bolt of lightning forks from a cloud to a lone barn in a field, and smoke rises from the barn roof after the flash.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lone barn in a field under a cloud."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lightning bolt forks from the cloud to the barn."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Smoke rises from the barn roof after the flash."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bolt is forked or branched."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bolt and flash come first and the smoke follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The bolt and its flash are brief and gone; the smoke appears at the roof only afterwards and grows from there; the roof does not glow.",
+      "fail": "The bolt stands as a steady lit line for the rest of the clip; or smoke rises from the roof before the bolt arrives; or the smoke shrinks back into the roof; or the roof glows like an ember after the bolt is gone."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The barn and the field are the same before and after: the same building in the same place, whole or scorched, with the smoke the only new thing.",
+      "fail": "The barn vanishes with the flash; or a second barn appears; or the barn changes place between dark and lit frames; or a burnt object appears on the roof that was not there."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The smoke rises from the roof and drifts upward and away; anything knocked off the roof falls.",
+      "fail": "The smoke sinks down the walls and pools on the ground; or hangs as a fixed shape; or shingles knocked off rise or hang in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The bolt is a jagged line with a main channel from the cloud to the barn and side branches that end in the air.",
+      "fail": "The bolt is a perfectly straight beam; or a smooth wave; or a wide glowing tube; or a bolt that hangs in mid-air touching neither cloud nor barn while the roof starts smoking."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The bolt ends at the roof and does not pass through the barn into the ground; the barn stays a solid building.",
+      "fail": "The bolt continues below the barn as a lit line under the ground; or the barn's interior lights up as if the bolt were inside; or the walls become transparent; or the barn melts."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The barn's paint, the field and the sky keep their colours apart from the flash and the scorch.",
+      "fail": "The barn changes colour away from the strike; or the field changes colour; or the sky turns to daylight after the flash."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0172",
+  "caption": "The top of a small pile of dry sand in a sandbox is kicked, and sand sprays forward and leaves a gouge in the pile.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A small pile of dry sand is in a sandbox."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The top of it is kicked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Sand sprays forward."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A gouge is left in the pile."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sand is dry."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The kick comes first, then the spray and the gouge."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The spray goes in the direction of the kick.",
+      "fail": "It sprays back at the kicker; or straight up; or the pile moves as one block."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "Dry sand flies as grains and falls back a short way off, and the gouge has loose sloping sides.",
+      "fail": "It clumps like wet sand; or flows like water; or the pile stays intact."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Sprayed sand falls to the ground.",
+      "fail": "It hangs; or rises; or floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The gouge is where the foot struck.",
+      "fail": "The gouge is elsewhere; or there is no gouge; or the gouge is there before the kick."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The foot keeps its shape and does not pass through the sandbox.",
+      "fail": "The foot passes through the sandbox floor; or a second foot appears; or the pile turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sandbox and the surroundings stay the same.",
+      "fail": "The sandbox changes; or the sand changes colour; or the surroundings rearrange."
+    }
+  ],
+  "note": "The foot is kept as the minimal trigger; the person is not judged."
+}

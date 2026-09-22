@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0258",
+  "caption": "The big red button on a toy fire engine is pressed, and its roof lights flash.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy fire engine with a big red button."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The button is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The roof lights flash."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The roof lights are dark before the press."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, press, flashing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The roof lights start flashing at the moment the button is pressed, and only then.",
+      "fail": "The button is pressed and the lights stay dark to the end of the clip; or the lights flash before the press; or the lights come on with nothing touching the engine; or a different part of the toy lights while the roof stays dark."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once started, the lights flash at a steady rhythm; they stop only after a stretch or at another press and do not stop and restart on their own.",
+      "fail": "The flashing stops and restarts by itself; or the rhythm jumps about; or the lights settle to a steady glow and then flash again; or the flashing fades out and returns."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Each flash lights the roof and the surface around the engine in the lights' colour.",
+      "fail": "The lights flash while the roof and surface beside them stay as dark as before; or the surface glows while the lights are dark; or the glow on the surface is a different colour from the lights."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The engine stays where it stands apart from the hand's nudge; its ladder and doors do not move by themselves.",
+      "fail": "The engine lifts or slides across the floor with no hand on it; or the ladder rises by itself; or the doors open; or nearby toys jump at the press."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One engine with its roof lights and wheels attached; the finger passes through nothing.",
+      "fail": "A light or wheel vanishes or appears; or a second engine appears; or the finger passes into the toy; or the engine changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The engine's red paint and decals and the floor stay the same apart from the flashing.",
+      "fail": "The paint changes colour; or the decals change; or the floor pattern changes."
+    }
+  ],
+  "note": "The siren is sound and is not judged."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0157",
+  "caption": "A burning log in a fireplace cracks with a pop, and a few sparks jump out onto the hearth and go dark.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A log burns in a fireplace."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The log cracks."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A few sparks jump out of the fire onto the hearth."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The sparks go dark."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sparks leave the log at the crack."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The crack comes first and the sparks follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The sparks leave the log at the crack, fly outward and downward along arcs and land on the hearth.",
+      "fail": "The sparks rise straight up and stay aloft; or fly out from a point away from the crack; or curve back into the fire after leaving it; or travel in straight lines and stop dead in mid-air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The sparks fade within a moment of landing and do not brighten again, and the crack in the log stays open.",
+      "fail": "A landed spark brightens again and burns on the stone; or the crack closes and the log is whole again; or the sparks keep glowing on the hearth for the rest of the clip; or sparks keep jumping out with no further crack."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The sparks arc downward after leaving the log and settle on the hearth, and the flames point upward.",
+      "fail": "The sparks rise and gather at the chimney's mouth; or hang in the air above the hearth; or the flames point downward; or a landed spark lifts off the stone by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The log is charred wood that splits along a crack and the sparks are small hot fragments that dull, while the hearth stays hard stone.",
+      "fail": "The log bends instead of cracking; or the log melts and drips; or a spark bounces high off the stone like a rubber ball; or the hearth's stone dents where sparks land."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The sparks come from the log and go dark rather than vanishing while bright, and the logs keep their number.",
+      "fail": "Sparks appear on the hearth with none leaving the fire; or a spark vanishes at a stroke while still bright; or a log vanishes; or a second log appears already burning."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hearth's stone, the fireplace's surround and the room stay the same.",
+      "fail": "The hearth changes colour; or the surround changes shape; or items in the room rearrange."
+    }
+  ],
+  "note": "The pop is sound and is not judged; the crack is read from the log splitting."
+}

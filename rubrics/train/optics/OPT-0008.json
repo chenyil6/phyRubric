@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0008",
+  "caption": "A flashlight is brought closer to a toy dinosaur standing in front of a wall, and the dinosaur's shadow on the wall grows larger.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy dinosaur stands in front of a wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A flashlight lights it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flashlight is brought closer to the dinosaur."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The dinosaur's shadow on the wall grows larger."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flashlight moves first and the shadow grows with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow grows as the light approaches and shrinks as it backs away.",
+      "fail": "The shadow stays the same size while the light moves; or it shrinks as the light comes closer; or it changes size with the light still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the dinosaur's outline as it grows.",
+      "fail": "It becomes a different shape; or splits; or the head and tail change places."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow is on the wall behind the dinosaur, away from the flashlight.",
+      "fail": "It is between the dinosaur and the flashlight; or on the ceiling; or missing with the light plainly on."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The dinosaur stays where it stands.",
+      "fail": "It slides; or turns by itself; or lifts off."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One dinosaur, one flashlight and one shadow.",
+      "fail": "A second shadow appears under one light; or the dinosaur vanishes; or the shadow becomes solid; or the flashlight passes through the dinosaur."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dinosaur's colour and the wall stay the same, and the shadow stays dark.",
+      "fail": "The dinosaur changes colour; or the shadow turns coloured; or the wall changes."
+    }
+  ]
+}

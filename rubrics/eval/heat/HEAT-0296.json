@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0296",
+  "caption": "A whole green pepper rests on a wire rack over a gas flame, and its skin blisters, puffs up and blackens where the flame touches it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A whole green pepper rests on a wire rack over a gas flame."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Blisters rise on the skin."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The skin puffs up."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The skin blackens where the flame touches it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The side away from the flame stays green and smooth."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The blistering comes first and the blackening follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The skin lifts away from the flesh in blisters that stay raised and char, while the pepper keeps its body.",
+      "fail": "The blisters sink back and the skin ends smooth; or the pepper's whole body collapses in a single frame; or the skin peels off as a rigid shell that keeps the pepper's shape; or the pepper melts and runs."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The blackening happens on the skin where the flame licks it and spreads from there; it never fades.",
+      "fail": "A blackened patch fades back to green; or the side away from the flame blackens while the flame's side stays green; or the rack changes colour rather than the pepper; or the whole pepper blackens at once while the flame licks one spot."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pepper rests on the rack, the flame points upward at it and any juices run down to the rack or the hob.",
+      "fail": "The pepper lifts off the rack and hangs; or the flame points downward away from the pepper; or juices climb the pepper's side; or the flame hangs below the hob."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The blistering and the blackening only advance while the pepper is over the flame.",
+      "fail": "A blister flattens and rises again with the pepper still over the flame; or the blackening spreads and shrinks in turn; or the skin blisters before the pepper is over the flame; or the blisters move to the side away from the flame."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pepper on one rack; the pepper stays one piece and the rack keeps its wires.",
+      "fail": "A second pepper appears; or the pepper vanishes; or the pepper passes through the rack's wires; or a wire vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rack, the hob and the surroundings stay the same.",
+      "fail": "The rack changes spacing; or the hob's knobs move by themselves; or items around the hob rearrange."
+    }
+  ],
+  "note": "The charring of the skin is the caption's asserted outcome; the chemistry of it is not judged, only that the darkening runs one way and appears where the flame touches."
+}

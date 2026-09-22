@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0288",
+  "caption": "A candle is carried behind a paper screen in a dark room, and a soft glow travels across the screen with it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A paper screen stands in a dark room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A candle is carried behind it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A soft glow travels across the screen with it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The glow flickers with the candle."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The glow moves with the candle and only then, flickering with it.",
+      "fail": "It moves with the candle still; or stays put while the candle moves; or pulses with a steady flame."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow is brightest opposite the flame and fades outward, and the screen is dark where the candle is not.",
+      "fail": "The whole screen glows evenly; or the brightest spot is far from the candle; or the screen glows with the candle gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The glow is one soft patch through the paper.",
+      "fail": "It is a sharp spot; or splits; or is a geometric shape."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flame points upward.",
+      "fail": "It points down or sideways; or detaches; or floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One candle and one screen.",
+      "fail": "A second glow appears with one candle; or the screen vanishes; or the candle passes through the paper."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The screen and the room stay the same.",
+      "fail": "The screen changes colour; or the room rearranges; or the candle changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

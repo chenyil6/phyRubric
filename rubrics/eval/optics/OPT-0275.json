@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0275",
+  "caption": "A coin lies at the bottom of an empty clear jug; as water is poured in, the coin appears to lift toward the surface and look larger.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A coin lies at the bottom of an empty clear jug."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Water is poured in."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The coin appears to lift toward the surface and look larger."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The effect grows as the water deepens."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The coin itself does not move from the bottom; the rise and enlargement are appearances.",
+      "fail": "The coin actually lifts; or slides; or changes size."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The apparent rise and enlargement grow as the water deepens and only then.",
+      "fail": "The coin looks raised with the jug empty; or the effect shrinks as water is added; or it changes with no pouring."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The water level rises steadily while pouring.",
+      "fail": "It falls while pouring; or jumps; or is full before the pour."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The stream falls as liquid and the jug is rigid.",
+      "fail": "The stream is a rod; or the jug bends; or the water goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One coin and one jug.",
+      "fail": "The coin duplicates; or the jug vanishes; or water passes through the jug."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The coin and the jug stay the same.",
+      "fail": "The coin changes colour; or the jug changes shape; or the table changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

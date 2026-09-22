@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0085",
+  "caption": "Lightning flashes far beyond a mountain range at night, and the outline of the peaks stands out against the lit sky for an instant.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A mountain range at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lightning flashes in the sky beyond the range."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The peaks stand out as dark outlines against the lit sky."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flash is far off, behind the mountains rather than over the foreground."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sky returns to dark after the flash."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each flash is brief: the sky brightens and returns to dark; flashes may repeat but each ends.",
+      "fail": "The sky stays lit for the rest of the clip; or brightens steadily without ending; or turns to daylight; or the light fades in slowly like a sunrise."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light comes from behind the range: the sky and clouds beyond the peaks brighten while the near faces of the mountains stay dark, so the peaks are silhouettes.",
+      "fail": "The near faces of the mountains light up while the sky behind stays dark; or the foreground brightens more than the sky; or the peaks glow brighter than the sky behind them."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The outline of the range is the same in lit and dark frames: the same peaks in the same places.",
+      "fail": "Peaks appear or vanish between the dark and lit frames; or the ridge line changes shape; or the range shifts across the frame while the foreground stays put."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The mountains and the foreground stay still through the flash; only the light changes; clouds drift slowly if at all.",
+      "fail": "The mountains shift or shake at the flash; or foreground trees or rocks move at the flash; or clouds jump to new shapes between one frame and the next."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The mountains stay solid ground; the flash does not pass through them or light them from within.",
+      "fail": "A mountain becomes transparent with the flash seen through it; or the range melts into cloud; or a bolt emerges from inside a peak; or the range morphs into a different landscape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The night colours of sky and land are consistent before and after; the flash whitens or blues the sky only briefly.",
+      "fail": "The sky changes colour permanently after the flash; or the mountains change colour; or the foreground changes colour."
+    }
+  ]
+}

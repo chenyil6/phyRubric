@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0227",
+  "caption": "A rainbow over a field is fading as the rain moves away and the sky clears.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A rainbow arches over a field."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is fading as the rain moves away and the sky clears."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The rainbow keeps its arc shape while visible."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rainbow is opposite the sun."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The rainbow fades gradually and does not brighten as the rain ends.",
+      "fail": "It brightens; or fades and returns; or vanishes in an instant."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The rainbow keeps its arc shape and place while visible and does not move across the sky.",
+      "fail": "It moves across the sky; or changes shape; or a second rainbow appears as it fades."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The bands show the spectrum's order.",
+      "fail": "They are in random order; or a single colour; or the colours change."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The field and the clouds move only with the wind.",
+      "fail": "The field changes; or the clouds jump; or the rainbow swings."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The field and the sky keep their layout.",
+      "fail": "The horizon changes; or the field rearranges; or the rainbow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The field's colours stay the same.",
+      "fail": "The grass changes colour; or the trees change; or the sky changes colour abruptly."
+    }
+  ]
+}

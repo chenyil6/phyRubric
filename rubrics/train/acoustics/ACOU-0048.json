@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0048",
+  "caption": "A train crosses a metal bridge, and the water in a puddle on the road below shows shivering rings.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A train crosses a metal bridge."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A puddle lies on the road below the bridge."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The puddle's surface shows shivering rings."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rings are fine shivers, not splashes."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rings appear while the train is on the bridge."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Rings cover the puddle while the train is on the bridge; the puddle is still before and settles after.",
+      "fail": "The train crosses and the puddle stays glassy; or the puddle shivers hardest with the bridge empty and calms as the train crosses; or the puddle keeps shivering unchanged long after the train has gone from view."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The water stays in the puddle at its level; the shiver is in place.",
+      "fail": "The puddle's water slides across the road; or one ring spreads from a point as from a dropped stone with nothing falling; or the water rises into a bulge; or the puddle's outline moves along the road."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The train runs along the bridge in one direction without a break.",
+      "fail": "The train jumps forward between frames; or its carriages separate and rejoin; or it moves sideways off the rails without falling."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Water stays in the puddle and any drips from the bridge fall downward.",
+      "fail": "Water lifts out of the puddle; or drips from the bridge fall upward; or the puddle climbs the kerb."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One train on one bridge, one puddle; the train passes through no girder.",
+      "fail": "The train passes through the bridge girders; or carriages appear or vanish mid-train; or the puddle vanishes in one frame; or the bridge changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The train's livery, the road markings and the puddle's colour stay the same.",
+      "fail": "The train's livery changes; or the road markings shift; or the puddle changes colour."
+    }
+  ]
+}

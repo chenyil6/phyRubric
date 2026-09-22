@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0099",
+  "caption": "Sunlight warms a greenhouse in the morning, and the inside of its glass panes is covered in drops that begin to run down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A greenhouse with glass panes."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The inside of the panes is covered in drops."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The drops begin to run down."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The drops merge into streaks as they run."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The setting is a sunlit morning."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The drops merge and run downward on the inner face of the glass and gather along the lower rails.",
+      "fail": "A drop runs up a pane; or a streak travels sideways and stays level; or water gathers along a pane's top rail and stays; or a drop leaves the glass and rises."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The drops only merge, run and clear from the glass; the panes do not bead up again while the house warms.",
+      "fail": "A pane that has cleared beads up again with nothing cooling it; or the drops grow and shrink in turn; or the streaks retreat up the glass; or the panes fog harder as the sun rises on them."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The water lies on the inside of the panes and the plants and soil below are damp.",
+      "fail": "The drops lie on the outer face while the inner face is dry; or the panes run with water while the soil and plants inside are bone dry and dusty; or the drops appear on the frame and not on the glass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The drops behave as water on glass: rounded, merging when they touch and running as streaks, and the glass stays rigid and clear.",
+      "fail": "Touching drops overlap without merging; or drops jump about on the pane; or the water sets as frost in the warming house; or the glass flexes as the water runs."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The greenhouse keeps its panes and frame and nothing passes through the glass.",
+      "fail": "A pane vanishes; or a new pane appears; or water passes through the glass to the outside; or the frame changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The frame, the plants and the paths stay the same.",
+      "fail": "The frame changes colour; or the plants change into different plants; or the paths change pattern."
+    }
+  ]
+}

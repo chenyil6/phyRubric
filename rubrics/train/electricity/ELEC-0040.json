@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0040",
+  "caption": "A shop escalator is started with its key switch, and the steps begin to move upward.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A shop escalator, still, with a key switch."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The key switch is turned."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The steps begin to move upward."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The steps are still before the key is turned."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is still, key, moving."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The steps start moving at the moment the key is turned, and only then.",
+      "fail": "The key is turned and the steps stay still to the end of the clip; or the steps move before the key is turned; or the steps move with the key untouched; or the steps move downward."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Before the turn nothing on the escalator moves; afterwards the steps run steadily upward and do not stop, start or reverse on their own.",
+      "fail": "The steps stop and restart with the key untouched; or reverse direction; or jerk in place; or the handrail runs while the steps stay still."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The steps move together as a continuous chain up the slope, each step keeping its place relative to the next; the handrails move with them.",
+      "fail": "Steps move at different speeds and open gaps; or a step slides sideways; or the handrail runs against the steps; or the steps move up while the treads stay flat at the landing forever."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The steps are rigid metal treads that keep their shape; the handrail is a continuous band.",
+      "fail": "A step bends or sags; or the treads ripple like fabric; or the handrail stretches or snaps; or the steps flow like liquid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One escalator with its steps and rails; steps emerge from and vanish into the landings only at the ends; the hand passes through nothing.",
+      "fail": "A step vanishes in the middle of the run; or steps appear from nowhere mid-slope; or the escalator duplicates; or the hand passes through the switch panel."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The escalator's finish, the handrail colour and the shop around stay the same.",
+      "fail": "The treads change colour; or the handrail changes colour; or the shop's displays rearrange."
+    }
+  ]
+}

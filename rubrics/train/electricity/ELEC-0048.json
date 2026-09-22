@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0048",
+  "caption": "An extension cord is yanked out of the wall socket, and the lamp, radio and heater plugged into it all go off together.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An extension cord in a wall socket with a lamp, a radio and a heater plugged into it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cord is yanked out of the socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lamp, the radio and the heater all go off together."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "All three are running before the yank: lamp lit, radio display lit, heater glowing or fan running."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is running, yank, all off."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "All three devices go off at the moment the cord leaves the socket, and only then.",
+      "fail": "The cord is out and a device keeps running to the end of the clip; or a device goes off before the cord moves; or the devices go off one after another over the clip; or a device goes off with the cord still seated."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The three devices, the cord and the socket are the same before and after: the same items in the same places, dark rather than gone.",
+      "fail": "A device vanishes rather than switching off; or a fourth device appears; or a device changes place; or the cord splits into two cords."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once the cord is out the devices stay off; the heater's glow, if any, only fades and does not return.",
+      "fail": "A device comes back on with the cord out; or the lamp flickers; or the heater's glow brightens after the yank; or the cord jumps back into the socket."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord is drawn taut by the yank and goes slack once the plug is free; it stays attached at both ends.",
+      "fail": "The cord stretches like elastic; or stands rigid in the air after the plug is out; or the cord floats; or the devices are dragged across the floor by the yank."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The plug leaves the socket whole; nothing passes through the wall; the devices keep their shape.",
+      "fail": "The plug passes through the wall beside the socket; or the cord passes through a device; or a device changes shape; or the socket comes off the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The devices' colours, the cord's colour and the room stay the same apart from the lights.",
+      "fail": "A device changes colour; or the cord changes colour; or the room's contents rearrange."
+    }
+  ],
+  "note": "The radio falling silent is sound and is not judged; the radio counts through its display or dial light."
+}

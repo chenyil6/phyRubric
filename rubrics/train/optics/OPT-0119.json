@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0119",
+  "caption": "A snorkel mask is lowered under the water, and the blurred rocks below come into sharp view through the mask.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A snorkel mask is lowered under the water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Blurred rocks below come into sharp view through the mask."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The rocks look nearer and larger through the mask."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The view blurs again when the mask is lifted out."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The rocks are clear through the mask and blurred outside it.",
+      "fail": "They are blurred through the mask; or sharp outside it; or the mask shows a different scene."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The rocks are unchanged; they look nearer and larger through the mask.",
+      "fail": "They look smaller; or they move; or a different bottom appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The mask moves only with the hand.",
+      "fail": "It floats away; or dives by itself; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mask's glass is rigid and the water liquid.",
+      "fail": "The glass bends; or the water is rigid; or the mask fills and stays clear."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mask and the rocks.",
+      "fail": "The mask duplicates; or the rocks vanish; or the hand passes through the mask."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mask and the water's colour stay the same.",
+      "fail": "The mask changes colour; or the water changes; or the rocks change colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

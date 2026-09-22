@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0116",
+  "caption": "A chilled bottle of sparkling water is uncapped, and a small puff of white mist rises from its neck and vanishes.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A chilled bottle of sparkling water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cap is taken off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A small puff of white mist rises from the neck."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The puff vanishes."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bottle reads as chilled: frost or condensation on it."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is uncap, puff, gone."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The puff appears at the bottle's neck at the instant the cap comes off and not before.",
+      "fail": "The mist appears while the cap is still on tight; or the cap comes off and no mist appears at all to the end of the clip; or the mist appears at the bottle's base rather than its neck; or the mist appears in the air above the bottle with nothing leaving the neck."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The puff rises a little from the neck and fades; it does not pour on and on or move about on its own.",
+      "fail": "The mist keeps pouring from the neck for the rest of the clip; or the puff darts sideways with nothing blowing it; or the puff sinks and pools on the table; or the puff shrinks and grows again with the bottle untouched."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The puff rises from the neck and spreads as it thins.",
+      "fail": "The puff pours down the bottle's sides and pools; or hangs as a fixed shape without rising; or falls in a stream from the neck; or climbs the bottle from its base up to the neck."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mist is a soft faint haze that spreads and fades, and the water inside fizzes and may rise a little in the neck.",
+      "fail": "The mist holds a fixed rigid shape; or pours as a liquid; or the water inside stays glassy still with no bubbles as the cap comes off; or the mist turns into solid lumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bottle and one cap; the cap comes off whole and the water stays in the bottle.",
+      "fail": "The cap vanishes; or a second cap appears; or the cap passes through the bottle's neck; or the water's level jumps with nothing poured."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bottle's label, the cap and the surroundings stay the same.",
+      "fail": "The label changes; or the cap changes colour; or items around the bottle rearrange."
+    }
+  ],
+  "note": "Who opens the bottle is not judged."
+}

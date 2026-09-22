@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0088",
+  "caption": "A glass of ice water sits on a wooden table in a warm room, and condensation runs down the outside of the glass onto the table.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass of ice water stands on a wooden table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Droplets cover the outside of the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Water runs down the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A wet ring forms on the table."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Ice is visible in the glass."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The droplets grow before they run."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The beading only builds while the glass stays cold: droplets grow, join and run, and the ring on the table only grows.",
+      "fail": "The droplets shrink or go while the glass stays cold with ice in it; or the ring on the table shrinks; or the glass beads and dries in turn; or the beading eases while the ice is still there."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Droplets that grow large enough run downward on the glass, leaving trails, and gather at its foot.",
+      "fail": "A droplet runs up the glass; or water gathers on the rim's top and stays; or a drop leaves the glass and rises; or a run travels sideways round the glass and stays level."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The water on the outside comes out of the air onto the cold glass, and the ring is fed by runs off the glass.",
+      "fail": "The glass's own level drops as the ring grows; or beads form on the inside of the glass; or the ring appears on the table with no water running down to it; or drops detach and drift off into the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The beads behave as water on glass: they stay rounded, merge when they touch and run as streaks, and the wood darkens where it is wet.",
+      "fail": "Touching drops overlap without merging; or drops jump about on the glass; or the beads turn to hard frost while the glass runs with water; or the table stays dry-looking under a spreading ring."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One glass on one table; the glass keeps its shape and nothing passes through it.",
+      "fail": "The glass changes shape; or a second glass appears; or the ice passes through the glass's wall; or the glass sinks into the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The table's grain away from the ring, the room and the glass's pattern stay the same.",
+      "fail": "The table's grain changes pattern; or the room's contents rearrange; or the glass changes pattern."
+    }
+  ]
+}

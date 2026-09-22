@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0295",
+  "caption": "A raw red steak is laid in a hot pan, and its surface turns from red to grey-brown from the edges inward while it sizzles.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A raw red steak is laid in a hot pan."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The steak's surface turns from red to grey-brown."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The change spreads from the edges inward."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The steak shrinks slightly."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The change starts where the meat touches the pan."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The laying down comes first and the colour change follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The colour change only advances inward and the changed surface does not turn red again; the steak only shrinks.",
+      "fail": "A greyed part turns red again in the hot pan; or the change spreads and then retreats; or the steak grows in the pan; or the change starts in the middle of the top face and works outward to the edges."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The change happens in the meat where it touches the hot pan and at its edges, and the pan's surface stays as it was.",
+      "fail": "The pan's surface changes colour rather than the steak; or the steak's upper face greys while the side on the metal stays red; or the steak is grey-brown before it reaches the pan; or the whole steak changes colour in a single frame with no spreading."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The steak lies in the pan and any juices run to its low places and pool.",
+      "fail": "The steak lifts off the pan and hangs; or the juices climb the pan's wall and stay; or the juices gather on top of the steak and stay; or the steak slides uphill in a tilted pan."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The steak is a soft solid that stiffens and shrinks a little, staying one slab, and the juices are a thin liquid.",
+      "fail": "The steak melts into a liquid; or the steak shatters; or the steak stretches longer as it cooks; or the juices set into a rigid crust that stands off the pan."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One steak in one pan; the steak stays one piece and none appears or vanishes.",
+      "fail": "A second steak appears; or the steak vanishes; or the steak splits into two whole steaks; or the steak passes through the pan's floor."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the hob and the surroundings stay the same.",
+      "fail": "The pan changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ],
+  "note": "The steak's colour change is the caption's asserted outcome; the chemistry of it is not judged, only that it runs one way and starts where the meat meets the pan."
+}

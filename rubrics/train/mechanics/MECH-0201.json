@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0201",
+  "caption": "A boy catches a ball thrown to him with both hands and holds on to it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ball is thrown to a boy."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "He catches it with both hands."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "He holds on to it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Both hands are used."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The throw comes first and the catch follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The ball stops in his hands and does not pass through them.",
+      "fail": "It passes through his hands; or passes into his chest; or his hands close on nothing while the ball goes on."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "His arms reach, his hands close, his arms give slightly as it arrives, and the joints bend.",
+      "fail": "His arms stretch like rubber; or his hands detach; or his arms bend mid-forearm."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The ball travels in an arc to him and stops at the catch.",
+      "fail": "It changes direction in mid-air; or stops in the air before his hands; or keeps going after the catch."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "He stays on his feet and the ball's arc dips.",
+      "fail": "He floats; or the ball curves upward; or the ball hangs."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "His limbs keep their number and stay attached, and one ball stays one ball.",
+      "fail": "A limb detaches; or the ball duplicates; or he merges with the ball."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "His clothing and the ball stay the same.",
+      "fail": "His clothing changes colour; or the ball changes; or the background rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Gait, posture, style and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0256",
+  "caption": "The switch on a rotating shop display stand is pressed, and the stand begins to turn with its lights on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A rotating shop display stand with a switch."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The switch is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The stand begins to turn."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Its lights are on as it turns."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The stand is still and dark before the press."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is still, press, turning and lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The stand starts to turn and its lights come on together at the press, and only then.",
+      "fail": "The switch is pressed and the stand stays still to the end of the clip; or the stand turns before the press; or the lights come on while the stand stays still to the end; or the stand turns while its lights stay dark to the end."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Before the press nothing on the stand moves; afterwards it turns steadily and does not stop, start or reverse on its own; the items on it ride round with it.",
+      "fail": "The stand stops and restarts with the switch untouched; or reverses; or items on the stand stay fixed while the stand turns beneath them; or items slide off with the stand turning slowly."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The stand turns about its own upright axis; items on it keep their places relative to each other.",
+      "fail": "The stand wobbles off its axis; or moves across the floor; or items swap places as it turns; or the top turns while the base turns the other way."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once on, the lights stay lit and the stand keeps turning while the switch stays on.",
+      "fail": "The lights go out again with the switch on; or flicker; or the switch presses itself again; or the stand slows to a stop with the switch on."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One stand with its items; the items keep their number and pass through nothing; the hand passes through nothing.",
+      "fail": "Items on the stand appear or vanish as it turns; or an item sinks into the shelf; or the stand duplicates; or the hand passes into the stand."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stand's colour and the items' colours stay the same apart from the light.",
+      "fail": "The stand changes colour; or an item changes colour or shape; or the shop background rearranges."
+    }
+  ]
+}

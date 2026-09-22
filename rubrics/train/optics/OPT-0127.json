@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0127",
+  "caption": "A bathroom window is fogged after a shower, and where a hairdryer blows on the glass the view of the yard outside sharpens.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bathroom window is fogged after a shower."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A hairdryer blows on the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The view of the yard outside sharpens where the air blows."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The view stays clear while the glass is dry."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The view goes from blurred to clear where the warm air dries the glass and does not blur again while dry.",
+      "fail": "It blurs again under the dryer; or it clears where no air blows; or it flickers."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The yard outside is unchanged; only the fog changes.",
+      "fail": "The yard changes; or a different scene appears; or the glass warps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The clear patch is where the dryer is aimed.",
+      "fail": "It is elsewhere; or the whole pane clears at once from one spot; or the patch appears before the dryer."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fog is a film of moisture that evaporates.",
+      "fail": "It peels; or is a solid coating; or drips as ice."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One window and one dryer.",
+      "fail": "The window duplicates; or the dryer vanishes; or the dryer passes through the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The frame and the bathroom stay the same.",
+      "fail": "The frame changes; or the room rearranges; or the dryer changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

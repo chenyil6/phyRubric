@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0023",
+  "caption": "On a bitterly cold winter morning a cup of water is splashed onto a frozen car windshield, and the water freezes into a film of ice on the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car windshield covered in frost or ice."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Water is splashed onto the glass from a cup."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water runs briefly on the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The water freezes into a film of ice on the glass."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The setting reads as bitterly cold: frost, snow or ice around."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is splash, run, freeze."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The water runs, slows and stops where it freezes, and the frozen film then stays.",
+      "fail": "A frozen patch turns back to running water with nothing warming it; or the film goes and leaves the glass bare; or the water runs, freezes and runs again in steps; or the film retreats up the glass."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "Where the water freezes the glass turns white and opaque and stays so; the change is in the film, not in the clear glass elsewhere.",
+      "fail": "The frozen film turns clear so the glass ends cleaner than before; or the whole windshield turns white at once including where no water landed; or the film's white fades back to clear while the cold holds; or the car's paint changes rather than the glass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The splashed water runs downward over the glass before it sets, and the film is thickest along its downward path.",
+      "fail": "The water runs up the windshield; or the film builds above where the water landed; or water splashes upward off the glass and stays in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water flows as a thin liquid and becomes a hard film stuck to the glass that could be scraped; it does not stay a mobile liquid.",
+      "fail": "The film ripples or flows when the glass is touched; or the water sets as a soft jelly that dents; or the film peels off as a rubbery sheet; or the water beads up and rolls off the glass without wetting it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cup of water lands on one windshield; the ice on the glass is the water that was splashed.",
+      "fail": "Ice appears on the glass where no water landed; or the film vanishes at a stroke; or the water passes through the glass into the car; or a second cup appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's paint, the wipers and the surroundings stay the same.",
+      "fail": "The car changes colour; or the wipers jump to a new position with nothing touching them; or the background changes between frames."
+    }
+  ]
+}

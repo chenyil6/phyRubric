@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0158",
+  "caption": "A car enters a tunnel on a sunny day, and the inside of the car dims until the overhead tunnel lights take over.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car enters a tunnel on a sunny day."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The inside of the car dims."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The overhead tunnel lights take over."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The light takes on the tunnel lamps' colour."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light in the car drops as the entrance passes overhead and takes on the tunnel lamps' colour.",
+      "fail": "The car stays sunlit in the tunnel; or dims before the entrance; or the light stays white under coloured lamps."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The dimming happens at the entrance and holds inside.",
+      "fail": "The car brightens inside; or flickers with steady lamps; or dims and brightens randomly."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The car drives steadily and the lamps pass overhead in turn.",
+      "fail": "The car jumps position; or the lamps move; or the car stops with no cause."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "Only the light changes; the interior's colours are the same under it.",
+      "fail": "The seats change colour rather than tint; or the dashboard changes; or the interior rearranges."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and one tunnel.",
+      "fail": "A second car appears inside; or the tunnel vanishes; or the car passes through the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The interior stays the same.",
+      "fail": "Objects move; or the windows change; or the tunnel changes shape."
+    }
+  ]
+}

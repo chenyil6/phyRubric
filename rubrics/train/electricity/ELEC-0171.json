@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0171",
+  "caption": "A magnet is stuck to a steel lamp post with a lost-cat poster under it, and the poster stays up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A steel lamp post."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A poster is held against the post."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A magnet is stuck onto the post over the poster."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The poster stays up after the hand withdraws."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The poster is a lost-cat notice: a picture or words about a cat."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The magnet lies over the poster, pinning it to the post."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "After the hand withdraws the magnet stays on the post with the poster pinned beneath it, both touching the post.",
+      "fail": "The magnet drops off when released; or slides down the post; or stands off the post at a gap with the poster hanging between; or the magnet stays but the poster slips out from under it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The poster hangs down from the magnet along the post; free edges and corners may lift in the wind and fall back; anything that comes loose falls.",
+      "fail": "The poster slides up the post or floats away upward; or a torn-off piece drifts upward rather than falling; or the poster stands out sideways from the magnet like a flag while nothing else in the scene moves."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The magnet, once placed, stays at its spot; the poster moves only as flaps at its free edges; the post stands still.",
+      "fail": "The magnet creeps round or along the post; or the poster slides sideways round the post while the magnet stays put; or the lamp post sways or shifts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The poster bends as paper: it wraps to the post where pinned and its free parts flutter and fall back; the magnet stays hard.",
+      "fail": "The poster stretches like rubber when tugged; or hangs and sways in heavy folds like wet cloth; or the magnet flattens and spreads on the post."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One magnet, one poster and one post, layered magnet on poster on post; nothing sinks into or passes through the post.",
+      "fail": "The magnet sinks into the post; or the poster passes through the post or the magnet; or a second magnet or poster appears; or the poster vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The poster's picture and text, the magnet's colour and the post's paint stay the same.",
+      "fail": "The cat picture or lettering changes; or the magnet changes colour; or the post changes colour."
+    }
+  ]
+}

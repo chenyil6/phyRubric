@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0020",
+  "caption": "A cat nudges a pen off the edge of a desk with its paw and the pen falls to the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cat and a pen are on a desk."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cat nudges the pen with its paw toward the edge."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pen goes over the edge and falls to the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The nudge is made with a paw."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The nudge comes first and the fall follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The pen moves when the paw reaches it and only then, and it goes over once it is past the edge.",
+      "fail": "The pen starts moving before the paw reaches it; or the paw pushes the pen and the pen stays where it is; or the pen leaves the desk with the paw never touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Once past the edge the pen tips and drops, falling quicker as it goes, and lands on the floor.",
+      "fail": "The pen hangs in the air past the edge of the desk; or it drifts outward while staying level with the desk top; or it rises after leaving the desk."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "On the desk the pen moves only where it is pushed; on the floor it comes to rest and stays.",
+      "fail": "The pen slides across the desk with nothing touching it; or it rolls off on its own before the cat reaches it; or it sets off again once it has settled on the floor."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pen stays a rigid stick as it falls and lands, clattering on the floor.",
+      "fail": "The pen bends like rope as it falls; or it splashes where it lands; or it flattens against the floor and stays flat."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The pen, the cat, the desk and the floor stay solid and keep their number.",
+      "fail": "The pen vanishes on the way down or a second one appears; or the pen passes through the desk top or the floor; or the paw passes through the pen."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pen's colour, the cat's markings and the desk stay the same.",
+      "fail": "The pen changes colour or length; or the cat's markings change between frames; or the things on the desk rearrange."
+    }
+  ],
+  "note": "The cat is kept as the minimal trigger for the fall; its gait, posture and whether it looks at the pen are not judged."
+}

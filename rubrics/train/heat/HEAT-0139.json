@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0139",
+  "caption": "A lit sparkler is dropped into a bucket of water, and it goes out with a hiss and a puff of steam.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lit sparkler throws sparks."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sparkler is dropped into a bucket of water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sparks stop."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A puff of steam rises from the bucket."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The wire sinks dark in the water."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the stopping follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The sparks stop as the sparkler enters the water and it does not keep sparking under the surface.",
+      "fail": "The sparkler keeps throwing sparks under the water; or the sparks stop before the sparkler reaches the water; or the sparks stop with the sparkler still held clear of the bucket; or the sparks start again while the sparkler is submerged."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sparkler falls downward into the water and sinks or rests in it while the steam rises.",
+      "fail": "The sparkler rises out of the water with nothing lifting it; or the steam pours down the bucket's sides and pools; or the sparkler hangs in the air above the water; or the steam sinks below the bucket."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The burning only ends: the spent wire stays dark and the puff comes at the moment of entry and then eases.",
+      "fail": "The wire lights again under the water; or the dark wire turns back to fresh coating; or the steam bursts before the sparkler enters; or the puff grows steadily after the sparkler is in."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The water shows the sparkler arriving: it splashes and ripples where it lands and the steam rises from there.",
+      "fail": "The sparkler enters and the surface stays glassy; or the water ripples before the sparkler reaches it; or the steam rises from a part of the bucket the sparkler never entered."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sparkler and one bucket; the wire goes into the water and stays there.",
+      "fail": "The sparkler vanishes in the water; or a second sparkler appears; or the wire passes through the bucket's wall; or the water's level jumps with nothing added."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bucket, the water and the surroundings stay the same.",
+      "fail": "The bucket changes colour; or the water turns a colour; or items around the bucket rearrange."
+    }
+  ],
+  "note": "The hiss is sound and is not judged."
+}

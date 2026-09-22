@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0029",
+  "caption": "A fox trots toward a streetlamp at night, and its shadow behind it shrinks until it is directly under the light.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A fox trots toward a streetlamp at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its shadow is behind it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shadow shrinks until the fox is directly under the light."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow shortens steadily as the fox approaches."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow trails behind the fox on the side away from the lamp and shortens steadily as it approaches.",
+      "fail": "It grows as the fox approaches; or it moves ahead of the fox toward the lamp; or it stays one length."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The fox moves steadily toward the lamp and the shadow shortens in step.",
+      "fail": "The shadow shortens with the fox still; or the fox moves and the shadow keeps its length; or the shadow jumps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the fox's outline with legs moving in step.",
+      "fail": "It is a different shape; or its legs are still while the fox's move; or it splits."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow is attached at the paws and lies on the ground.",
+      "fail": "It floats detached; or it climbs a wall the lamp cannot cast onto; or it is missing under the lamp's light."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One fox and one shadow.",
+      "fail": "A second fox or shadow appears; or the fox vanishes; or the shadow becomes solid; or the fox passes through the lamp post."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fox's coat and the street stay the same, and the shadow stays dark.",
+      "fail": "The coat changes colour; or the shadow turns coloured; or the lamp changes."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the shadow's relation to it is."
+}

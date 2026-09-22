@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0057",
+  "caption": "A ball is rolled up a gentle grassy slope; it slows, stops, and rolls back down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ball is rolled up a grassy slope."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It slows."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It stops."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It rolls back down."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The slope is gentle rather than steep."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The roll up comes first, then the stop, then the roll back."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "On the way up the ball slows, pauses for an instant, then comes back down, quicker the further it rolls.",
+      "fail": "The ball keeps its speed all the way up the slope; or it stays put where it stopped; or it slows on the way down."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It comes back along roughly the line it went up.",
+      "fail": "The ball turns sideways on the open slope with nothing touching it; or it rolls back down a part of the slope far from its track up; or it reverses again and rolls uphill."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing touches the ball after the roll; its motion changes only with the slope.",
+      "fail": "The ball speeds up while going uphill; or it stops and starts more than once on the slope; or it sets off again after coming to rest at the bottom."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ball stays round and rolls on the grass, which flattens under it.",
+      "fail": "The ball squashes flat and stays flat; or it slides without turning; or the grass ripples like water as the ball passes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball is on the slope throughout and stays above the ground.",
+      "fail": "The ball vanishes or a second one appears; or it passes through the ground; or it turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour, the slope and the background stay the same.",
+      "fail": "The ball changes colour; or the slope changes gradient between frames; or the background rearranges."
+    }
+  ]
+}

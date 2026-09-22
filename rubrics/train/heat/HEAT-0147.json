@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0147",
+  "caption": "A candle inside a glass jar has burned down to its last pool of wax, and the flame goes out.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A candle burns in a glass jar, down to a shallow pool of wax."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flame is small."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flame goes out."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Smoke rises from the wick."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The wax does not refill."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is small flame, out, smoke."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flame only shrinks and goes out and does not return, and the wax's level does not rise.",
+      "fail": "The flame relights by itself; or the flame grows large again with no more wax; or the wax pool deepens with nothing added; or the flame flickers between lit and out after it has gone."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The flame stands upward from the wick and the smoke rises after it, while the wax lies level in the jar's bottom.",
+      "fail": "The flame points downward; or the smoke sinks inside the jar and pools; or the wax climbs the jar's wall and stays; or the smoke pours downward out of the jar."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One candle in one jar; the wax only goes and the wick stays in its pool.",
+      "fail": "A second wick appears; or the wax pool vanishes at a stroke; or a new candle appears in the jar; or the wick detaches and floats in the wax."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light the flame cast goes with it: the jar's glass and the surface around it go dimmer as the flame dies.",
+      "fail": "The flame goes out while its glow still lies on the table; or the room brightens as the flame dies; or the jar keeps glowing with the flame out; or a glow remains on the jar's rim."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The jar keeps its shape and the wick stays a wick; nothing passes through the glass.",
+      "fail": "The jar changes shape; or the glass melts or sags; or the flame passes through the glass and burns outside; or the jar turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jar's label, the table and the room stay the same apart from the light.",
+      "fail": "The label changes; or the table's pattern changes; or the wax changes colour."
+    }
+  ]
+}

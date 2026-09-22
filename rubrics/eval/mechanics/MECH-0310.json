@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0310",
+  "caption": "A broom is stood upright on the end of its handle in the middle of a kitchen floor and let go; it stays for a moment, leans more and more, and falls to the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A broom is stood upright on the end of its handle on a kitchen floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is let go."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It stays for a moment."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It leans more and more."
+    },
+    {
+      "id": "S5",
+      "weight": "core",
+      "check": "It falls to the floor."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The release comes first, then the lean, then the fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The lean grows faster once it starts and the broom falls in the direction it leaned.",
+      "fail": "It stands indefinitely; or rights itself; or falls opposite to its lean."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Nothing pushes it, and it falls only after leaning.",
+      "fail": "It falls before leaning; or is pushed; or slides across the floor."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "It pivots about the end of the handle.",
+      "fail": "The handle end slides far; or it floats up; or it spins."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "It is rigid and clatters.",
+      "fail": "It bends; or bounces; or melts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One broom keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The broom and the kitchen stay the same.",
+      "fail": "The broom changes colour; or the floor changes; or the kitchen rearranges."
+    }
+  ]
+}

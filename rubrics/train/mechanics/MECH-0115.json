@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0115",
+  "caption": "A metal paper clip is bent open and let go, and it stays in its new shape.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A metal paper clip is held."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is bent open."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It is let go."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It stays in its new shape."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bend comes first, then the release, then the shape holds."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The wire bends smoothly only where it is worked, without snapping.",
+      "fail": "The clip snaps in two; or it bends everywhere at once; or it stretches longer."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "After release it keeps the bent shape and does not spring closed.",
+      "fail": "It springs back to its original shape; or it goes on bending after release; or it is already open before the fingers work it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The clip moves only in the fingers.",
+      "fail": "It bends with no fingers on it; or it flies off; or it twists on its own after release."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Released, it lies or hangs where it is put.",
+      "fail": "It floats; or rises; or drifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One clip keeps its number.",
+      "fail": "The clip vanishes or a second appears; or it turns into another object; or it merges with the fingers."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The clip's colour and the background stay the same.",
+      "fail": "The clip changes colour; or the hands change; or the background rearranges."
+    }
+  ]
+}

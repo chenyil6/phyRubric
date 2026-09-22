@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0094",
+  "caption": "A frosted beer mug is filled from a tap on a warm terrace, and the outside of the mug beads with water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A frosted beer mug."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The mug is filled from a tap."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The outside of the mug beads with water."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The frost on the glass turns to droplets."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The setting is a warm terrace."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The filling comes first and the beading follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The beading only builds while the mug stays cold: the frost turns to droplets that grow and join.",
+      "fail": "The droplets shrink or go while the mug stays cold and full; or the glass beads and dries in turn; or the droplets turn back into dry white frost in the warm air; or the beading eases while the glass is still frosted."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Droplets that grow large enough run downward on the outside of the mug and wet the table beneath.",
+      "fail": "A droplet runs up the mug; or water gathers on the rim's top and stays; or a drop leaves the mug and rises; or a run travels sideways round the mug and stays level."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The water forms on the outside of the cold glass, up to the level of the cold drink, and the table wets where runs reach it.",
+      "fail": "Beads form on the inside of the mug above the drink; or the beading is heaviest above the drink's level and absent below it; or the table stays dry under a mug streaming with runs; or drops appear on the table with none running down to it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The beads behave as water on glass: rounded, merging when they touch and running as streaks, with the frost softening into them.",
+      "fail": "Touching drops overlap without merging; or drops jump about on the glass; or the frost stays hard and dry while runs stream over it; or the beads stand as tall columns on the glass."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One mug; it keeps its shape and handle and nothing passes through it.",
+      "fail": "The mug changes shape; or a second mug appears; or the handle detaches; or the drink passes through the glass's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The terrace's table, the tap and the drink's colour stay the same.",
+      "fail": "The table changes pattern; or the tap changes shape; or the drink changes colour."
+    }
+  ]
+}

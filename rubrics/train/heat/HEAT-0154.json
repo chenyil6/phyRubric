@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0154",
+  "caption": "A sheet of paper rests on a wire rack above a burning candle, and a brown spot forms over the flame, then a hole burns through with a glowing edge spreading outward.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sheet of paper rests on a wire rack above a burning candle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A brown spot forms on the paper over the flame."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The spot darkens."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A hole opens at its centre."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hole grows with a glowing rim."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Thin smoke rises from the spot."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The brown spot only darkens, the hole only grows and the paper does not turn white again.",
+      "fail": "The brown spot fades back to white paper; or the hole closes up; or the hole grows and shrinks in turn; or the glowing rim travels inward and the hole fills in behind it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The paper chars and burns away at the hole rather than vanishing all at once, and no new paper appears.",
+      "fail": "The whole sheet vanishes in a single frame; or a second sheet appears; or a hole appears in a part of the paper away from the flame; or the sheet grows larger as it burns."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The spot and the hole form directly over the flame and the paper away from the flame stays white.",
+      "fail": "The spot forms at a corner of the sheet away from the flame; or the flame plays under the paper and it stays white and unmarked to the end of the clip; or the paper browns evenly all over while the flame sits under one spot."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The smoke rises from the spot, any charred flakes fall, and the flame points upward at the paper.",
+      "fail": "The smoke sinks through the rack and pools; or charred flakes rise and stay aloft; or the flame points downward away from the paper; or the smoke pours downward out of the hole."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One sheet on one rack over one candle; the paper stays paper as it chars and the rack stays rigid.",
+      "fail": "The paper melts and drips; or the paper turns into another material as it burns; or the rack's wires bend or melt; or the candle passes through the rack."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rack, the candle's holder and the surroundings stay the same.",
+      "fail": "The rack changes spacing; or the holder changes colour; or items around the rack rearrange."
+    }
+  ]
+}

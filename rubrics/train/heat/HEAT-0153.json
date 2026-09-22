@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0153",
+  "caption": "The vents on a charcoal grill's bowl are slid shut, and the bright orange coals dim to a dull glow.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A charcoal grill with glowing coals and vents on its bowl."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The vents are slid shut."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The coals' glow fades."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The coals end at a dull glow."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The coals are bright orange before the vents close."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is bright, vents shut, dimmer."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow begins to fade after the vents are slid shut and not before.",
+      "fail": "The glow fades before the vents are touched; or the vents are shut and the coals stay bright orange to the end of the clip; or the coals brighten after the vents are shut; or the glow fades while the vents are being opened."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fade runs one way while the vents stay shut and the coals do not flare back up.",
+      "fail": "The coals flare up again with the vents still shut; or the glow fades and brightens in turn; or the coals go dark in a single frame; or the ash gathers back into unburnt charcoal."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any smoke from the coals rises and escapes where it can, and ash settles down in the bowl.",
+      "fail": "The smoke sinks into the bowl and pools; or pours downward out of the grill's base; or ash rises and stays aloft; or the smoke hangs as a fixed shape without rising."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The coals stay hard lumps that dull and crust with ash, and the vents stay rigid sliding plates.",
+      "fail": "A coal melts or flows; or the coals swell as they dim; or a vent bends as it is slid; or the ash holds a rigid shape when the grill is knocked."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The coals keep their number in the bowl, dulling rather than vanishing, and the vents stay on the grill.",
+      "fail": "A coal vanishes leaving no ash; or new coals appear with none added; or a vent vanishes; or the bowl changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The grill's body, its legs and the surroundings stay the same.",
+      "fail": "The grill changes colour; or a leg changes shape; or items around the grill rearrange."
+    }
+  ],
+  "note": "How far the glow has faded by the end of the clip is not judged, only that it fades one way after the vents shut."
+}

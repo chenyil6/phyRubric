@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0027",
+  "caption": "A glass of water sits on top of a large subwoofer, and when the music starts the water's surface breaks into fine ripples.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass of water is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It sits on top of a large speaker or subwoofer."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water's surface ripples."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The surface is flat first and breaks into ripples at a moment, when the music starts."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The ripples are fine and small, not a big slosh."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The rippling is driven by the speaker: the surface goes from flat to rippled when the music starts, and stays rippled while it plays.",
+      "fail": "The speaker's cone plainly pumps and the water stays mirror-flat; or the surface is rippled from the start and goes flat while the cone is pumping; or the ripples appear and vanish at random with the cone unchanged."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The glass itself stays put or creeps only slightly; the water's ripples are fine and stay within the glass; nothing else moves without cause.",
+      "fail": "The glass slides off or jumps; or the water sloshes in one big wave with the glass still; or ripples appear on other surfaces in the room."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ripples are a pattern on the water's surface: fine concentric or crossing waves, droplets at most; the water stays in the glass.",
+      "fail": "The water jumps out in large spouts; or stays as a rigid textured surface that does not move; or the glass ripples along with the water."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any droplets thrown up fall back and the water surface stays level overall.",
+      "fail": "Droplets hover above the surface; or the water surface tilts and holds; or water climbs the glass walls."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass and one speaker; the glass keeps its shape and the water its amount.",
+      "fail": "A second glass appears; or the water level jumps; or the glass sinks into the speaker; or the glass vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The speaker's grille, the glass and the background stay the same.",
+      "fail": "The speaker changes design; or the glass changes shape; or the background shifts."
+    }
+  ],
+  "note": "Sound is inaudible in the frames. The timing anchor for P1 is a visible cone, indicator light or the caption's implied start; ripples with no visible driver are not a violation on their own."
+}

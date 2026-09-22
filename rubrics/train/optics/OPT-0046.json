@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0046",
+  "caption": "A lamppost on a pier casts its shadow onto the water below, and the shadow rides the ripples.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lamppost stands on a pier."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It casts its shadow onto the water below."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shadow rides the ripples."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow stays attached to the base of the post."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the water surface away from the sun and stays attached to the base of the post.",
+      "fail": "It lies toward the sun; or it detaches from the post's base; or it is missing in sunlight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the post's long outline and wobbles with the waves.",
+      "fail": "It is rigid and straight on a plainly rippled surface; or a different shape; or it splits into pieces unrelated to the ripples."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The post stays still and the shadow moves only with the water.",
+      "fail": "The post sways; or the shadow moves on a flat calm; or the shadow swings round."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ripples pass and the water surface stays liquid.",
+      "fail": "The water is rigid like glass with a wobbling shadow; or the ripples freeze; or the water flows uphill."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamppost and one shadow.",
+      "fail": "A second post or shadow appears; or the post vanishes; or the shadow becomes solid; or the post passes through the pier."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The post and the pier stay the same, and the shadow stays dark.",
+      "fail": "The post changes colour; or the shadow turns coloured; or the pier changes."
+    }
+  ]
+}

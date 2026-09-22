@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0104",
+  "caption": "A glass of water is set in front of a card printed with a straight vertical line, and the line seen through the glass looks shifted and wider.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A card is printed with a straight vertical line."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A glass of water is set in front of it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The line seen through the glass looks shifted and wider."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The line returns to normal when the glass is moved away."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The line appears displaced only behind the water-filled part of the glass and returns to normal when the glass is moved.",
+      "fail": "The line is displaced beside the glass; or it is unchanged behind the water; or it stays displaced after the glass is gone."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The card and its line are unchanged; the shift is an appearance.",
+      "fail": "The line on the card moves; or a second line is printed; or the card bends."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water surface is level and the glass is rigid.",
+      "fail": "The water tilts and holds; or the glass warps; or the water goes opaque."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The card and the glass stay put unless moved by the hand.",
+      "fail": "The card slides; or the glass moves by itself; or the image shifts with both still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass and one card.",
+      "fail": "The glass duplicates; or the card vanishes; or the glass passes through the card."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The card, the glass and the table stay the same.",
+      "fail": "The card changes colour; or the glass changes shape; or the table changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

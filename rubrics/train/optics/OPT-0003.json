@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0003",
+  "caption": "A dog runs across a sunlit lawn, and its shadow runs along the grass beside it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog runs across a lawn."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lawn is in sunlight."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dog's shadow is visible on the grass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The shadow runs along beside the dog."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shadow touches the dog at its paws."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow keeps pace with the dog, moving when it moves and in the same direction.",
+      "fail": "The shadow lags behind or runs ahead; or it stays still while the dog runs; or it moves the opposite way."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the dog's outline, its legs moving in step with the dog's.",
+      "fail": "The shadow is a different animal's shape; or its legs are still while the dog's move; or it splits into two."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side of the dog away from the sun and is attached at the paws.",
+      "fail": "It lies toward the sun; or it is detached from the paws on flat ground; or it switches sides while the sun stays put."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move on its own.",
+      "fail": "It moves while the dog stands still; or it changes length with the dog still; or it drifts across the grass by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One dog and one shadow of it; the dog keeps its parts and passes through nothing.",
+      "fail": "The dog duplicates or vanishes; or a second shadow appears under one sun; or the shadow becomes a solid object; or the dog passes through a fence."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dog's coat and the lawn stay the same, and the shadow stays dark rather than coloured.",
+      "fail": "The coat changes colour; or the shadow turns bright or coloured; or the lawn's texture changes."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the shadow's relation to it is."
+}

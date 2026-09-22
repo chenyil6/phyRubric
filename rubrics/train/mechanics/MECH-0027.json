@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0027",
+  "caption": "A skydiver steps out of the open door of an airplane and drops away below it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A skydiver stands at the open door of an airplane."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The skydiver steps out of the door."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The skydiver drops away below the plane."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The step out comes first and the drop follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Once out of the door the skydiver goes downward and falls quicker as the gap to the plane opens.",
+      "fail": "The skydiver rises above the plane after stepping out; or hangs level with the door; or sinks at one unchanging slow drift as if being lowered on a line."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The plane flies on ahead while the skydiver falls behind and below it, so the gap grows in both directions.",
+      "fail": "The skydiver stays beside the door while the plane flies on; or the skydiver moves out ahead of the plane; or the plane stops in the air alongside the skydiver."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The skydiver is carried only by the fall and the rushing air; nothing lifts or shoves the body.",
+      "fail": "The skydiver stops falling in mid-air and hangs; or the body shoots sideways with nothing touching it; or the skydiver climbs back up toward the door."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The skydiver's clothing and straps flap and stream in the rush of air.",
+      "fail": "The clothing hangs still as if in calm air; or it streams downward against the airflow; or it stays stiff like sheet metal."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One skydiver and one airplane keep their number and shape, and neither passes through the other.",
+      "fail": "A limb detaches or vanishes; or the skydiver passes through the fuselage; or a second figure appears from nowhere in the doorway."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The skydiver's suit, the airplane and the sky stay the same.",
+      "fail": "The suit changes colour during the fall; or the airplane changes shape or markings between frames; or the cloud layer jumps to a different place."
+    }
+  ],
+  "note": "Freefall scene: the skydiver's body is what shows the fall. Body position, style and how the parachute is packed are not judged."
+}

@@ -1,0 +1,65 @@
+{
+  "id": "OPT-0278",
+  "caption": "Street lights are seen through a glass of fizzy water, and they wobble and sparkle as bubbles rise through the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Street lights are seen through a glass of fizzy water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They wobble and sparkle as bubbles rise through the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The lights are steady when seen past the glass."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The lights themselves do not move; the wobble is through the glass only.",
+      "fail": "The lights move; or are wobbly past the glass; or a different set of lights appears."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The distortion changes with the rising bubbles and only then.",
+      "fail": "The view wobbles with no bubbles; or is steady while bubbles plainly rise; or the glass moves."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bubbles rise.",
+      "fail": "They sink; or hang; or go sideways."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The glass is rigid and the water liquid.",
+      "fail": "The glass bends; or the water is rigid; or goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass.",
+      "fail": "It duplicates; or vanishes; or bubbles appear from nowhere outside it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass and the street stay the same.",
+      "fail": "The glass changes shape; or the street rearranges; or the water changes colour."
+    }
+  ]
+}

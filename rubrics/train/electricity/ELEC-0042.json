@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0042",
+  "caption": "The bedside lamp is switched off, and only the glow of the alarm clock's display remains in the dark room.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bedroom with a lit bedside lamp and an alarm clock with a glowing display."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lamp is switched off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The room goes dark apart from the clock's display."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The clock's display stays lit after the lamp is off."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is lit, switch, dark with the clock glowing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lamp goes out at the moment its switch is moved, and only then; the clock's display stays lit through the change.",
+      "fail": "The switch is moved and the lamp stays lit; or the lamp goes out before the switch is touched; or the clock's display goes dark with the lamp; or the lamp goes out with the switch untouched."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The room's contents are the same before and after: the same clock, lamp and furniture in the same places, seen lit and then dim; the clock keeps its one display.",
+      "fail": "Furniture or objects appear or vanish between lit and dark frames; or a second glowing display appears; or the clock changes place; or the lamp vanishes rather than going dark."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once off, the lamp stays dark and the clock's display stays lit for the rest of the clip.",
+      "fail": "The lamp comes back on by itself; or flickers; or the clock's display goes out later with nothing touched; or the display brightens to light the whole room."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light the lamp cast disappears with it: the walls and bedding go dim, and the only glow left is around the clock's display.",
+      "fail": "The lamp is dark while its light on the wall stays; or the room stays as bright with the lamp dark; or the clock's small display lights the whole room like a lamp."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The lamp, clock and furniture keep their shapes; nothing passes through anything.",
+      "fail": "The lamp changes shape; or the clock morphs into another object; or the hand passes through the lamp or the nightstand; or the bed changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lampshade's colour, the clock's digits and the bedding stay the same apart from brightness.",
+      "fail": "The shade changes colour rather than brightness; or the digits change colour or font; or the bedding changes pattern."
+    }
+  ],
+  "note": "The clock's display is on a different supply and staying lit is the caption's point; the digits changing as time passes is not a violation."
+}

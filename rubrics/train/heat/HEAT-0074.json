@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0074",
+  "caption": "Boiling water is poured over a tea bag in a glass, and steam rises while the colour spreads from the bag.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tea bag sits in a glass."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Boiling water is poured over the bag."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Steam rises from the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Colour spreads from the bag into the water."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bag stays in the glass."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the colouring follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The water falls downward into the glass and the steam rises from it, while the colour sinks and spreads through the water.",
+      "fail": "The water travels upward from the kettle; or the steam sinks over the glass's rim and pools; or the colour climbs out of the water; or the steam pours downward from the spout."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The water only grows more coloured while the bag sits in it and the colour does not gather back into the bag.",
+      "fail": "The water clears again while the bag stays in it; or the colour draws back into the bag; or the water darkens and lightens in turn; or the water is dark before the bag is in it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The colour comes out of the bag: it streams from where the bag sits and the water near it darkens first.",
+      "fail": "The water darkens evenly all over before any colour leaves the bag; or colour appears at the far side of the glass with none spreading from the bag; or the bag sits in hot water and the water stays clear to the end of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bag is a limp paper pouch that swells and sinks and sheds colour, and the water is a thin liquid that swirls and finds its level.",
+      "fail": "The bag stays a rigid flat packet in the water; or the bag dissolves away into the water; or the water stands in a heap above the rim; or the colour moves as a solid mass through the water."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bag in one glass; the bag stays whole and the water comes only from the pour.",
+      "fail": "The bag vanishes; or a second bag appears; or the bag passes through the glass's wall; or the water's level jumps with nothing poured."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass, the bag's tag and the counter stay the same.",
+      "fail": "The glass changes shape; or the tag changes; or items on the counter rearrange."
+    }
+  ]
+}

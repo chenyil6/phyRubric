@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0101",
+  "caption": "A magnifying glass is moved over a page of small print, and the letters under the lens appear much larger.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A magnifying glass is moved over a page of small print."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The letters under the lens appear much larger."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The print outside the lens stays small."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The enlarged letters shift as the lens moves."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Only the letters seen through the lens are enlarged, and they shift as the lens moves.",
+      "fail": "Letters outside the lens are enlarged; or the letters under the lens are the same size; or the enlarged patch stays put while the lens moves."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The page itself is unchanged; the enlarged letters are the same words, larger.",
+      "fail": "The letters under the lens are different words; or the page's print changes; or the enlarged letters are mirrored."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The page stays put and the image changes only as the lens moves.",
+      "fail": "The page slides; or the image shifts with the lens still; or letters move by themselves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The lens is rigid glass.",
+      "fail": "It bends; or ripples; or goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lens and one page.",
+      "fail": "The lens duplicates; or the page vanishes; or the hand passes through the lens."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The page and the lens frame stay the same.",
+      "fail": "The paper changes colour; or the frame changes; or the desk changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

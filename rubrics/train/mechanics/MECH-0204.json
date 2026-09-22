@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0204",
+  "caption": "A man slips on a wet floor in a supermarket aisle and falls down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A man walks along a supermarket aisle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "He slips on a wet patch of floor."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "He falls to the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The floor is visibly wet where he slips."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The slip comes first and the fall follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Once his balance goes he comes down to the floor and stays.",
+      "fail": "He hangs mid-fall; or rises; or bounces back to his feet."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "His foot shoots forward, his arms fly up, and his body bends only at the joints.",
+      "fail": "His body folds mid-torso; or a limb detaches; or his legs pass through each other."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The slip starts where his foot meets the wet patch.",
+      "fail": "He slips on dry floor away from the patch; or falls before reaching the patch; or his foot slides with no contact."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "He lands on the floor, not in it.",
+      "fail": "He passes into the floor; or passes through a shelf; or a shelf passes through him."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "His limbs keep their number and stay attached.",
+      "fail": "A limb detaches or vanishes; or a second figure appears; or he merges with the shelving."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "His clothing and the aisle stay the same.",
+      "fail": "His clothing changes colour; or the shelves rearrange; or the wet patch moves."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Gait, posture, style and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

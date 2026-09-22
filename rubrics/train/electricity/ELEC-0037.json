@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0037",
+  "caption": "A fluorescent tube in a garage is switched on, and it blinks a few times before staying lit.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A fluorescent tube in a garage, dark."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The tube is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The tube blinks a few times."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The tube then stays lit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The garage is dark before the switch."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark, switch, blinking, steady."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The tube begins to blink at the switch, and only then.",
+      "fail": "The switch is thrown and the tube stays dark to the end of the clip; or the tube blinks or glows before the switch is touched; or the tube lights with the switch untouched; or a different lamp lights instead."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The blinking comes first and ends in a steady light that lasts for the rest of the clip; the tube does not go back to blinking or dark.",
+      "fail": "The tube glows steadily and then starts blinking; or goes dark again after settling; or blinks to the end of the clip without settling; or the steady glow fades out."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The garage lights with the tube: the floor and walls under it brighten with each blink and stay bright once the tube is steady.",
+      "fail": "The tube glows while the garage stays as dark as before; or the garage brightens while the tube stays dark; or the garage stays lit during a blink's dark phase."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The fixture hangs still through the blinking; nothing in the garage moves at the switch.",
+      "fail": "The fixture swings at the switch; or tools or objects shift with the blinks; or the door moves by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tube in one fixture; the fixture stays on the ceiling; the garage's contents are the same before and after.",
+      "fail": "A second tube appears; or the fixture vanishes or moves; or tools or vehicles appear or vanish between dark and lit frames; or the tube changes length."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The garage's wall colours and contents stay the same apart from brightness.",
+      "fail": "The walls change colour rather than brightness; or the tools rearrange; or the tube changes colour once steady."
+    }
+  ]
+}

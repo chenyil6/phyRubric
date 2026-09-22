@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0061",
+  "caption": "The lid of a large pot of dumplings is lifted at a street stall, and steam rolls up out of the pot into the cold air.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A large pot of dumplings with a lid stands at a stall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lid is lifted."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Steam rolls up out of the pot."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The dumplings sit in bubbling water below."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The steam hangs visibly in the cold air before it fades."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The lift comes first and the steam follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam rises out of the pot, spreading and thinning as it climbs.",
+      "fail": "The steam pours down the pot's sides and pools; or sinks to the ground; or stays in the pot with the lid off; or streams straight down from the rim."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The steam escapes as the lid comes off and the plume moves outward and away; puffs that have left keep going.",
+      "fail": "The plume runs back into the pot; or a puff retreats to the water; or steam billows before the lid has moved; or steam appears above the closed lid and sinks into it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The pot shows the boil: bubbles break the water's surface around the dumplings and the dumplings are wet.",
+      "fail": "The water is glassy still while a thick plume pours from it; or the dumplings sit dry in the water; or steam rises from a pot with no water in it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The steam is a soft cloud that spreads, waves and fades; the dumplings are soft parcels that jostle; the lid is a rigid piece.",
+      "fail": "The steam holds a fixed rigid shape; or pours like a liquid over the rim; or a dumpling shatters; or the lid bends like cloth as it lifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pot with one lid; the dumplings keep their number and stay in the pot.",
+      "fail": "A dumpling vanishes; or new dumplings appear with none added; or the lid passes through the pot's rim; or a dumpling passes through the pot's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the stall and the surroundings stay the same.",
+      "fail": "The pot changes colour; or the stall's signs change; or items around the stall rearrange."
+    }
+  ]
+}

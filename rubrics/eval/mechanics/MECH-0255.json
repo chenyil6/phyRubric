@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0255",
+  "caption": "A sandbag hanging from a hook in a gym is unhooked and drops onto the mat below.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sandbag hangs from a hook in a gym."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is unhooked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It drops onto the mat below."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The unhooking comes first and the drop follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It falls the instant it leaves the hook, straight down and faster as it goes, and lands on the mat.",
+      "fail": "It hangs after unhooking; or drifts sideways; or pauses in the air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It lands below where it hung and slumps without bouncing high.",
+      "fail": "It lands far to one side; or bounces higher than it fell; or slides away."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The empty hook swings after the release.",
+      "fail": "The hook stays rigidly still; or swings before; or falls too."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bag is heavy and floppy and slumps on landing.",
+      "fail": "It is a rigid block; or bounces like rubber; or bursts into sand."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bag and one hook keep their number.",
+      "fail": "The bag duplicates; or vanishes; or the hook turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag and the gym stay the same.",
+      "fail": "The bag changes colour; or the mat changes; or the gym rearranges."
+    }
+  ]
+}

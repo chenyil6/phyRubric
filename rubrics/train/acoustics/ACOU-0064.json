@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0064",
+  "caption": "A washing machine on its spin cycle rocks and shudders on the floor, and it settles still as the drum slows to a stop.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A washing machine stands on a floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It rocks and shudders."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The drum is seen slowing to a stop."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The machine settles still."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rocking is under way first and the settling follows the slowing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The machine rocks in place on its feet; it does not glide.",
+      "fail": "The machine slides across the floor in one smooth glide; or rocks while the drum is plainly still; or starts shuddering again after settling with the drum stopped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The shudder is strongest at full spin and fades as the drum slows; once the drum stops the machine is still.",
+      "fail": "The shuddering grows as the drum slows; or the drum stops and the machine goes on shuddering unchanged; or the machine stops dead in a tilted pose off its feet."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The machine rests on the floor and returns to all its feet after each rock.",
+      "fail": "The machine lifts off the floor entirely; or stays balanced on one corner; or rises."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The machine's body, its door glass and the floor stay rigid.",
+      "fail": "The body bends like rubber; or the floor ripples; or the door glass bulges."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One machine; nothing passes through the floor.",
+      "fail": "A second machine appears; or it vanishes; or sinks into the floor; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dials, the machine's colour and the wall behind stay the same.",
+      "fail": "The dials change; or the machine changes colour; or the wall behind changes."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0116",
+  "caption": "A large brass singing bowl half full of water is rubbed around its rim with a mallet, and as it sings the water surface breaks into ripples and leaping droplets.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A brass singing bowl half full of water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A mallet is rubbed around the bowl's rim."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water surface breaks into ripples."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Droplets leap from the surface."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The mallet moves around the rim rather than tapping it."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rubbing comes first; the ripples and droplets follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The water is flat until the mallet moves on the rim; ripples and droplets appear only while it moves and die away when it stops.",
+      "fail": "Ripples or droplets appear before the mallet touches the rim; or appear with the mallet held away; or the mallet circles the rim and the water stays glassy; or the droplets keep leaping well after the mallet has stopped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The ripples form a fine pattern across the surface with droplets leaping up from it and falling back; the bowl stays put and does not spill.",
+      "fail": "The bowl tips or slides while being rubbed; or the water sloshes up one side and spills over; or droplets rise from a single spot while the rest of the surface is glassy; or a single ring spreads from the centre as if something were dropped in."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Droplets fall back into the bowl or onto the table.",
+      "fail": "Droplets hang in the air; or rise out of view; or droplets that left the bowl come back up into it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The brass bowl and the mallet are rigid.",
+      "fail": "The bowl's wall ripples like cloth; or the mallet bends; or the bowl dents under the mallet."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bowl, one mallet; the water keeps its amount.",
+      "fail": "A second bowl appears; or the mallet passes through the bowl wall; or the water vanishes; or the bowl changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bowl's colour and engraving, the mallet and the table stay the same.",
+      "fail": "The bowl changes colour or its engraving changes; or the mallet changes length; or the table changes."
+    }
+  ],
+  "note": "The hand on the mallet is a trigger and is not judged."
+}

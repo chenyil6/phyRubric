@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0064",
+  "caption": "A basketball shot from the three-point line drops through the hoop.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A basketball is shot from behind the three-point line."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It flies toward the hoop."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It drops through the hoop."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "It goes cleanly through rather than bouncing on the rim first."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The ball follows one smooth arc that rises, peaks and descends into the hoop.",
+      "fail": "The ball flies flat at a constant height; or it hangs above the rim; or it changes direction in mid-flight with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "After the peak the ball comes down, passes through the hoop, and continues down toward the floor.",
+      "fail": "The ball rises again after starting to fall; or it stops in the net and stays there; or it floats back up out of the hoop."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The net swings and flares as the ball passes through, and the ball keeps its shape.",
+      "fail": "The net stays rigid and still as the ball passes through it; or the ball squashes to fit and stays squashed; or the net closes and holds the ball like a bag."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The ball passes through the open ring and the net, not through the rim's metal or the backboard.",
+      "fail": "The ball passes through the metal of the rim; or it passes through the backboard; or the net passes through the ball."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one hoop are there throughout.",
+      "fail": "The ball vanishes in flight or a second one appears; or the ball turns into another object; or the hoop disappears from the backboard."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and seams, the court markings and the backboard stay the same.",
+      "fail": "The ball changes colour in flight; or the three-point line shifts between frames; or the backboard changes shape."
+    }
+  ]
+}

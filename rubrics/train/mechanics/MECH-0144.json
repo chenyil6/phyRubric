@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0144",
+  "caption": "A full glass of milk on a kitchen table is knocked over, and the milk spreads across the table and drips off the edge.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A full glass of milk stands on a kitchen table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is knocked over."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The milk spreads across the table."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Milk drips off the edge of the table."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The glass is full before the knock."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The knock comes first, then the spread, then the drips."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The milk flows out as the glass goes over and spreads in a widening puddle; it does not hold the glass's shape.",
+      "fail": "The milk stays in a glass shape after the glass falls; or it leaves as a solid lump; or it beads into balls that roll."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The puddle runs toward the low edge and drips downward from it.",
+      "fail": "Milk flows uphill or back into the glass; or drips rise from the edge; or drips hang below the edge without falling."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The puddle only widens and the glass only empties.",
+      "fail": "The puddle shrinks back; or the glass refills; or the puddle jumps between shapes."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The table is wet where milk has passed, and drips land on the floor.",
+      "fail": "The table stays dry under the puddle; or a wet patch appears where no milk went; or drips vanish before reaching the floor."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass, and milk comes only from it.",
+      "fail": "The glass vanishes or duplicates; or milk appears away from the glass; or milk passes through the glass wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass, the tablecloth and the kitchen stay the same.",
+      "fail": "The milk changes colour; or the glass changes shape; or the table pattern shifts."
+    }
+  ]
+}

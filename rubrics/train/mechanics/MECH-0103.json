@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0103",
+  "caption": "A sled loaded with firewood is pulled across a snowy field by a rope, then the pull stops, and the rope goes slack.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sled loaded with firewood is pulled across a snowy field by a rope."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pull stops."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The rope goes slack."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The load is firewood."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pull stops first and the slack follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The rope is taut while the sled is being pulled and droops only after the pull stops.",
+      "fail": "The rope is slack while the sled is plainly being pulled along; or it stays taut after the pull stops with the sled at rest; or it stretches."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The sled slides on a little after the pull stops, then stops and stays.",
+      "fail": "The sled stops dead the instant the pull stops; or it keeps going at full speed; or it sets off again after stopping."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The slack rope drops onto the snow.",
+      "fail": "The slack rope floats; or it rises; or it hangs in a curve in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The sled follows the rope's line with the load riding on it.",
+      "fail": "The sled swerves; or the load slides off backward; or the sled overtakes the rope."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sled, one rope and the load keep their number.",
+      "fail": "The sled vanishes or a second appears; or the rope passes through the sled; or logs vanish from the load."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sled, the firewood and the field stay the same.",
+      "fail": "The sled changes colour; or the load changes; or the field rearranges."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0062",
+  "caption": "A dishwasher door is opened at the end of its cycle, and a wave of steam rolls up and out of the machine.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dishwasher."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its door is opened."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Steam rolls up and out of the machine."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The dishes inside are wet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The steam spreads above the open door."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The opening comes first and the steam follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam rises past the door and spreads above it, thinning as it climbs.",
+      "fail": "The steam flows down over the door and pools on the floor; or sinks below the machine; or hangs as a fixed shape without rising; or pours downward out of the machine."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The steam escapes as the door opens and the plume moves outward and away; puffs that have left keep going.",
+      "fail": "The plume runs back into the machine; or a puff retreats to the racks; or steam rolls out before the door has moved; or steam appears above the closed door and sinks into it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The inside shows the hot wash: the dishes and racks are wet and the steam comes from them.",
+      "fail": "The dishes are dry while a thick plume pours out; or the steam comes from the door's outside face; or steam pours from an empty machine with dry racks."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The steam is a soft cloud that spreads and fades; the door is a rigid panel on its hinge and the dishes stay rigid in their racks.",
+      "fail": "The steam holds a fixed rigid shape; or pours like a liquid over the door's edge; or the door bends as it opens; or the dishes sag in the racks."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One machine with one door; the dishes keep their number and stay in the racks.",
+      "fail": "A dish vanishes; or new dishes appear; or the door passes through the machine's frame; or a dish passes through a rack."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The machine's front, the kitchen units and the floor stay the same.",
+      "fail": "The machine changes colour; or the units change; or the floor's pattern changes."
+    }
+  ]
+}

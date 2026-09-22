@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0040",
+  "caption": "Coarse salt is scattered over an icy doorstep, and the ice pits and turns to slush where the grains land.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An icy doorstep."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Coarse salt is scattered over the ice."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ice pits where the grains land."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The surface turns to slush around the grains."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Ice the grains miss stays hard and clear."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The scattering comes first and the pitting follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Hollows form around the grains and spread from them, and ice with no grain on it stays hard and clear.",
+      "fail": "Hollows form on parts of the step where no grain landed; or the whole step turns to slush at once while the grains lie in one patch; or grains land and the ice around them stays dry and unmarked to the end of the clip; or the slush appears before the salt is scattered."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The pits only deepen and widen and the wet grey area only grows; nothing heals over.",
+      "fail": "A pit fills back in and the ice returns to smooth; or the slush turns back to clear hard ice while the grains lie in it; or the wet area shrinks; or the surface goes from slush to clear and back."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The grains fall downward onto the step and stay where they land or settle into their pits, and meltwater runs downhill across the step.",
+      "fail": "A grain travels upward off the step; or a grain hangs above the ice without touching it; or meltwater climbs the step's riser; or the slush flows uphill."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The grains stay hard grains sitting in the ice, and the ice goes from hard and clear to wet and grey where they lie.",
+      "fail": "A grain melts away like a drop of water and leaves no pit; or the ice turns rubbery and dents under the grains; or the slush sets into a smooth glaze while the grains lie in it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The grains on the step are the grains that were scattered, and the step keeps its shape.",
+      "fail": "Grains appear on the step with none scattered there; or a grain passes into the step's stone; or the step changes shape; or a second step appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The doorstep's stone away from the ice, the door and the surroundings stay the same.",
+      "fail": "The step's stone changes colour; or the door changes colour; or items around the step rearrange."
+    }
+  ]
+}

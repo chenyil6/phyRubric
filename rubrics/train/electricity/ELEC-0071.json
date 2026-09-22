@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0071",
+  "caption": "Jumper cables from a running car are clamped onto a dead car's battery, and the dead car's dashboard lights come on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Jumper cables with clamps lead from a second car to the open engine bay of the first."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The clamps are fixed onto the dead car's battery terminals."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dead car's dashboard lights come on."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The dashboard is dark before the clamps go on."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is clamps on, then lights."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The dashboard lights come on when the second clamp is seated on the battery, and only then.",
+      "fail": "Both clamps are on the battery and the dashboard stays dark to the end of the clip; or the dashboard lights while the clamps are still off the battery; or the lights come on with one clamp hanging loose beside its terminal."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once lit the dashboard stays lit while the clamps stay on the terminals.",
+      "fail": "The dashboard goes dark again with the clamps still on; or the lights switch on and off with the clamps untouched; or a clamp springs off its terminal by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cable hangs slack from each clamp, and the clamps are rigid jaws that grip the terminal posts.",
+      "fail": "The cable stands rigid in the air or stretches like elastic; or a clamp bends like rubber around the post; or a clamp hangs on the post with its jaws still wide open."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The battery and the parts around it stay put as the clamps go on; the dead car does not move.",
+      "fail": "The battery slides in its tray with nothing touching it; or the bonnet swings by itself; or the dead car rolls or rocks as the clamps go on."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two clamps on one battery; the clamps stay outside the battery casing; the cables stay continuous and the cars keep their shape.",
+      "fail": "A clamp passes into the battery casing; or a third clamp appears or one vanishes; or a cable splits or detaches; or the battery changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cable colours, the battery's label and the engine bay stay the same.",
+      "fail": "A cable changes colour; or the battery's label changes; or engine parts change shape or place."
+    }
+  ],
+  "note": "'Running' has no visible sign the judge needs; the second car's engine is not judged. The battery and the dashboard are unlikely to share one view: S3 is judged on whatever view of the dead car's dashboard the clip gives, and P1 on the order of clamp seating and dashboard lighting as far as both are shown."
+}

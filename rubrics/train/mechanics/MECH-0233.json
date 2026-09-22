@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0233",
+  "caption": "A coat lies on a table; an arm slides into one sleeve and the hand emerges from the cuff.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A coat lies on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "An arm slides into one sleeve."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The hand emerges from the cuff."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The arm enters first and the hand emerges after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The hand appears at the cuff only after the arm has travelled the sleeve's length, and it is the same hand.",
+      "fail": "The hand appears before the arm is in; or appears elsewhere; or two hands appear."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The sleeve bulges as the arm passes, and the arm does not show through the fabric.",
+      "fail": "The arm shows through; or passes through the sleeve wall; or the sleeve passes through the arm."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The arm and hand keep their shape and the sleeve keeps its length.",
+      "fail": "The arm stretches; or the sleeve grows; or the hand changes."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fabric bulges and shifts softly.",
+      "fail": "It is rigid; or stretches like elastic; or tears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One arm and one coat keep their number.",
+      "fail": "The arm detaches; or a second coat appears; or the arm merges with the coat."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The coat's colour and the table stay the same.",
+      "fail": "The coat changes colour; or the table changes; or the background rearranges."
+    }
+  ],
+  "note": "The arm is the physics here: it is what travels the sleeve. The person is not judged."
+}

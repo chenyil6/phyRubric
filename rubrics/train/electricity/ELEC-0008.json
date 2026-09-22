@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0008",
+  "caption": "An old bulb in a ceiling fixture flashes bright for an instant and then goes dark for good.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ceiling fixture with a bulb, lit."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bulb flashes bright for an instant."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bulb goes dark."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bulb stays dark for the rest of the clip."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is lit, flash, dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is a single brief brightening and the bulb then goes dark and stays dark; it does not come back on however long the clip runs.",
+      "fail": "The bulb comes back on after going dark; or flickers between lit and dark repeatedly; or the flash lasts to the end of the clip; or the bulb dims slowly instead of flashing and going out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One fixture with one bulb; the bulb stays in the fixture, dark rather than gone; the room's contents are the same before and after.",
+      "fail": "The bulb vanishes rather than going dark; or a second bulb appears; or the fixture moves along the ceiling; or furniture appears or vanishes between the lit and dark frames."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The room's light follows the bulb: it brightens at the flash and goes dim when the bulb dies, with whatever remains lit coming from windows or other sources present before.",
+      "fail": "The bulb goes dark while the room stays as bright; or the room darkens while the bulb still glows; or the room brightens as the bulb dies; or light stays pooled under the dark fixture."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The fixture hangs still through the flash; nothing in the room moves at the flash or the blackout.",
+      "fail": "The fixture swings at the flash; or the light switch on the wall moves by itself; or objects in the room shift at the moment the bulb dies."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The fixture and bulb keep their shapes; the bulb does not shatter into the room or melt.",
+      "fail": "The bulb explodes and fragments fly; or the fixture melts or changes shape; or the bulb turns into a different object; or the ceiling opens."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fixture's design, the ceiling and the room's colours stay the same apart from brightness.",
+      "fail": "The fixture changes shape or colour; or the ceiling changes colour rather than brightness; or the walls change colour."
+    }
+  ],
+  "note": "A faint glow fading in the filament after the flash is the expected look of a dying bulb and is not a violation."
+}

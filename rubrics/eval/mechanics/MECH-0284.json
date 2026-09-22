@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0284",
+  "caption": "A sandbag on a low wall is punctured near its bottom, and a thin stream of sand runs out onto the ground while the bag slowly slumps.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sandbag sits on a low wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is punctured near its bottom."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A thin stream of sand runs out onto the ground."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The bag slowly slumps."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The puncture comes first, then the stream, then the slump."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The stream comes only from the hole and starts at the puncture.",
+      "fail": "It starts before the puncture; or comes from elsewhere; or the bag is punctured and nothing comes out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sand falls straight down and builds a small cone below.",
+      "fail": "It goes up; or sideways; or hangs."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bag sags and wrinkles as it empties, and the sand runs as grains.",
+      "fail": "The bag is rigid; or the sand is liquid; or the bag inflates."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The stream continues and does not flow back.",
+      "fail": "Sand flows back in; or stops while the bag is still full; or the cone shrinks."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bag keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag and the wall stay the same.",
+      "fail": "The bag changes colour; or the wall changes; or the background rearranges."
+    }
+  ]
+}

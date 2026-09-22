@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0025",
+  "caption": "A strip of thin sheet metal clamped at one end in a vise is flicked, and the free end vibrates in a blur that slowly stops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A strip of thin sheet metal clamped at one end in a vise."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The free end is flicked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The free end vibrates in a blur."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The blur stops and the strip is still."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The clamped end stays gripped in the jaws."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is flick, blur, still."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The strip stands still until the finger reaches it; it blurs from the flick and only then.",
+      "fail": "The strip is already blurred before the finger arrives; or blurs while the finger is well away; or the finger flicks it and the strip stays sharp; or the strip goes still and blurs again with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The blur is widest right after the flick and narrows steadily until the strip is a sharp, still line.",
+      "fail": "The blur widens again after it has begun to narrow; or keeps the same width for the whole clip; or the strip snaps from a wide blur to still in a single instant."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The strip flexes as a springy sheet from the jaws: the blur is widest at the tip and absent at the clamp, and the strip returns straight.",
+      "fail": "The strip kinks and stays bent; or the blur is widest at the jaws while the tip is sharp; or the strip curls over like paper; or the strip stretches longer."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The clamp and the bench stay fixed; only the strip moves.",
+      "fail": "The jaws open or shift with the flick; or the clamp slides along the bench; or the bench top shakes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One strip in one clamp; the strip stays one piece and passes through nothing.",
+      "fail": "The strip passes through the jaws or the bench; or splits in two; or a second strip appears; or the strip vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The strip's sheen, the clamp's colour and the bench stay the same.",
+      "fail": "The strip changes colour; or the clamp changes colour or shape; or tools on the bench move by themselves."
+    }
+  ],
+  "note": "'Slowly' is not judged as a rate; only that the blur narrows and does not widen."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0132",
+  "caption": "A fatty burger is flipped on a grill, and fat drips onto the coals and a flame flares up under the patty.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A burger patty lies on a grill."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The patty is flipped."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Fat drips from the patty onto the coals."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A flame flares up under the patty."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flare dies back after a moment."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is flip, drip, flare."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flare appears where the fat lands on the coals and dies back after a moment.",
+      "fail": "The flare appears before any fat has dripped; or fat drips onto the coals and nothing flares at all; or the flare appears at a part of the grill no fat reached; or the flare keeps growing with no more fat dripping."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The fat drips downward from the patty to the coals and the flames climb upward around the patty.",
+      "fail": "Fat drips upward from the patty; or a drip hangs in the air between patty and coals; or the flames point downward away from the patty; or the flames hang below the coals."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flare only rises and then dies back and does not return with no more fat, and the patty's seared face does not return to raw.",
+      "fail": "The flare dies back and rises again with no fresh drip; or the patty's seared face turns back to raw pink where the flame licked it; or the flare shrinks and grows in turn with the patty still; or a burnt mark on the patty fades."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fat leaves as thin drops that fall and sizzle, the patty stays a soft solid that dents under the tongs, and the bars stay rigid.",
+      "fail": "The fat leaves as a solid lump; or the patty flows off the bars as a liquid; or the patty shatters when flipped; or the grill bars bend under the patty."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One patty on one grill; the patty keeps its shape apart from the flip and the coals keep their number.",
+      "fail": "The patty vanishes; or a second patty appears; or the patty passes through the bars and out below; or a coal vanishes leaving no ash."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The grill's bars, the coals' bed and the surroundings stay the same.",
+      "fail": "The bars change spacing; or the coals rearrange where no fat fell; or the background changes between frames."
+    }
+  ],
+  "note": "The patty browning as it cooks is chemistry and is not judged. Who flips the burger is not judged."
+}

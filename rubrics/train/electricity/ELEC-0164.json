@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0164",
+  "caption": "A magnetic wand is dragged over a tray of iron filings, and the filings clump onto the wand in fuzzy bristles.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tray of iron filings."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnetic wand is dragged over the tray."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Filings gather onto the wand."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The gathered filings stand off the wand as fuzzy bristles or spikes."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The wand's pass comes first and the clumping follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The filings lie still until the wand comes over them and gather only where the wand is close; filings away from the wand stay put, and stay put after it has passed.",
+      "fail": "Filings rise or crawl toward the wand while it is still across the tray from them; or the whole tray of filings stirs at once; or filings jump up where the wand has not been; or filings in the tray keep shifting after the wand has left the tray."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Filings on the wand hang from it and stand out from it in spikes, in contact with it; any that come loose fall down into the tray.",
+      "fail": "Loose filings drift upward or float in the air away from the wand; or filings hang in a cloud below the wand without touching it; or filings that drop off fall sideways or upward."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bristles are short stiff spikes standing out from the wand; the filings remain separate grains and the tray stays rigid.",
+      "fail": "The filings coat the wand as a smooth paint-like skin; or run up the wand like a liquid; or the tray bends as the wand passes over it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The clumps travel with the wand as it moves, staying attached; the tray stays where it is.",
+      "fail": "Clumps stay hanging in mid-air where the wand was after it has moved on; or the tray slides along beneath the wand; or filings on the wand crawl along it toward one end while the wand is held level."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One wand and one tray; filings leave the tray only onto the wand and return only by falling; the wand does not pass through the tray.",
+      "fail": "The wand passes through the tray's rim or bottom; or a second wand appears; or the clumps vanish from the wand in mid-air with nothing falling; or the tray's filings disappear without being on the wand."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wand's colour and length, the tray and the surface it sits on stay the same; the filings stay dark grey.",
+      "fail": "The wand changes colour or length; or the filings change colour; or the tray changes shape or pattern."
+    }
+  ]
+}

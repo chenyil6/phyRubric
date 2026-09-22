@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0004",
+  "caption": "A shopping cart is given a push across an empty parking lot and let go, and it rolls on by itself until it slows to a stop.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A shopping cart is in a parking lot."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is given a push and then let go."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It rolls on by itself with nothing touching it."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It slows to a stop."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lot around the cart is empty rather than crowded with traffic."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The push and release come first, then the free roll, then the stop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "After the release the cart keeps rolling with nothing touching it, slows steadily, and stays at rest once it has stopped.",
+      "fail": "The cart stops the moment the hands leave it; or it speeds up after the release with nothing touching it; or it sets off again after coming to rest."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It holds the straight line it was pushed along, its wheels turning as it goes.",
+      "fail": "The cart curves away on the open, level tarmac with nothing touching it; or it reverses and rolls back the way it came; or its wheels stay still while the cart slides on."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The cart stays on its wheels on the ground for the whole roll.",
+      "fail": "The cart lifts off the ground and rolls through the air; or it tips onto two wheels and stays tipped with nothing holding it; or it sinks into the tarmac."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Items in the basket ride along with the cart and lurch forward when it slows.",
+      "fail": "An item in the basket stays behind in mid-air as the cart rolls on; or it slides backward as the cart slows; or it moves before the push.",
+      "precondition": "Items are visible in the cart's basket."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cart keeps its wheels and its shape and stays outside every solid thing in the lot.",
+      "fail": "The cart vanishes or a second one appears; or a wheel detaches or a new one appears; or the cart passes through a parked car, a kerb or a lamp post."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cart's colour, the lot markings and the background stay the same.",
+      "fail": "The cart changes colour; or the painted bay lines shift between frames; or the buildings behind the lot rearrange."
+    }
+  ]
+}

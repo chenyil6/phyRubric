@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0128",
+  "caption": "A loupe is held over a ring, and the ring's details appear greatly enlarged through it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A loupe is held over a ring."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The ring's details appear greatly enlarged through it."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The rest of the ring and the desk look normal size."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The enlargement applies only to what is seen through the loupe.",
+      "fail": "The desk is enlarged; or the ring is unchanged through the loupe; or the enlarged view is offset from the loupe."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The ring is unchanged; the enlarged details are its own.",
+      "fail": "A different ring appears; or the ring changes; or the image is mirrored."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The loupe moves only with the hand and the ring stays put.",
+      "fail": "The loupe floats; or the ring slides; or the image shifts with both still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The loupe's lens is rigid.",
+      "fail": "It bends; or ripples; or goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One loupe and one ring.",
+      "fail": "The loupe duplicates; or the ring vanishes; or the hand passes through the loupe."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ring and the desk stay the same.",
+      "fail": "The ring changes colour; or the desk changes; or the loupe changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

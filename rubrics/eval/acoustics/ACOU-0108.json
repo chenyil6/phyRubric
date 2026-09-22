@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0108",
+  "caption": "A sheet of paper lies loosely over the grille of a large speaker, and it lifts and flaps with each beat of the bass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sheet of paper lies over the grille of a large speaker."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The paper lifts and flaps."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The flapping comes in beats: repeated lifts with still spells between."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The paper stays on the speaker."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The speaker is large."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The paper lifts from the grille and falls back; it does not slide steadily or float off.",
+      "fail": "The paper slides steadily off the grille in one direction with no flap; or floats up and hangs; or flaps while lying on the floor away from the speaker; or its edges flutter as in a draught while the middle never lifts."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each lift is followed by the paper settling back onto the grille; between lifts it lies flat.",
+      "fail": "The paper stays lifted in a hump and never settles; or is flat in one frame and airborne in the next and never comes down; or the lifts go on at the same rhythm after the paper has slid clear of the grille."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The paper falls back after each lift.",
+      "fail": "The paper hangs in the air above the grille; or rises steadily out of view; or climbs up the wall behind."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The paper flexes as paper and the speaker is rigid.",
+      "fail": "The paper stays rigid like a board while lifting; or the speaker cabinet flexes; or the paper tears with nothing touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet, one speaker; the paper does not pass into the speaker.",
+      "fail": "A second sheet appears; or the paper vanishes; or passes into the speaker; or the speaker changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The paper's markings, the speaker's colour and the room stay the same.",
+      "fail": "The paper's markings change; or the speaker changes colour; or the room changes."
+    }
+  ]
+}

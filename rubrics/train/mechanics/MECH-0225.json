@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0225",
+  "caption": "A ball rolls across a living-room floor, disappears behind a sofa, and comes out the other side.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ball rolls across a living-room floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It disappears behind a sofa."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It comes out the other side."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The roll in comes first and the emergence follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The same ball reappears at the far side, not changed, doubled, or from the wrong side.",
+      "fail": "A different ball emerges; or two balls come out; or it emerges from the side it entered; or nothing comes out and a ball appears elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It reappears at about the time and speed its motion implies, continuing the same line.",
+      "fail": "It emerges instantly; or long after it should; or emerges going the other way."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The ball is hidden by the sofa and is not visible through it.",
+      "fail": "It shows through the sofa; or passes through the sofa's front; or the sofa passes through the ball."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It rolls straight and slows gently.",
+      "fail": "It curves on the open floor; or speeds up; or stops and restarts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The ball and the sofa keep their shape.",
+      "fail": "The ball turns into another object; or the sofa changes shape; or the ball merges with the sofa."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and the room stay the same.",
+      "fail": "The ball changes colour; or the sofa changes; or the room rearranges."
+    }
+  ]
+}

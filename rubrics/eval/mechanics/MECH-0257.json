@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0257",
+  "caption": "A pigeon flies straight at a closed window, hits the glass with a thump, bounces off and drops to the ground below.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pigeon flies straight at a closed window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It hits the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It bounces off."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It drops to the ground below."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hit comes first, then the bounce, then the drop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The pigeon stops at the pane, the glass stays whole, and nothing passes through.",
+      "fail": "It passes through the glass; or the glass shatters and lets it through; or the bird sinks into the glass."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It is thrown back at the instant of impact, slower than it came.",
+      "fail": "It is thrown back before contact; or keeps going forward; or leaves faster."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It falls after the bounce and lands.",
+      "fail": "It hovers; or rises after the bounce; or floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "Its wings and body stay attached.",
+      "fail": "A wing detaches; or the body morphs; or two birds appear."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One pigeon and one window keep their number.",
+      "fail": "The bird splits; or the window duplicates; or the bird merges with the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plumage and the window frame stay the same.",
+      "fail": "The plumage changes; or the frame changes; or the wall rearranges."
+    }
+  ],
+  "note": "The pigeon is self-driven: its flight is its own. Only the impact and what follows are judged."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0026",
+  "caption": "A traffic light at a quiet crossing changes from red to green, and the red lamp goes dark as the green lamp lights.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A traffic light at a crossing, showing red."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The light changes to green."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The red lamp goes dark."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The green lamp lights."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The crossing is quiet: little or no traffic."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The red goes dark as the green lights, not long before or after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The red lamp goes dark and the green lamp lights at the same moment; only one lamp is lit at a time before and after.",
+      "fail": "The red and green lamps are both lit together for a stretch; or the red goes dark and the green stays dark to the end of the clip; or the green lights while the red stays lit to the end; or the amber lamp lights together with the green."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The signal head keeps its lamps in their fixed positions: red at top, amber in the middle, green at bottom, each staying where it is whether lit or dark.",
+      "fail": "A lamp changes place on the head; or a fourth lamp appears; or a lamp vanishes rather than going dark; or the green glow appears in the red lamp's position."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once the green is lit it stays lit for the rest of the clip and the red stays dark.",
+      "fail": "The red comes back on while the green is still lit; or the green flickers; or the lamps swap back and forth; or the green fades slowly to dark."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The signal head and its pole stay still through the change; parked vehicles and street furniture do not move at the change.",
+      "fail": "The head swings or turns at the change; or the pole moves; or a parked car jumps forward at the change; or signs shift."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The signal head, pole and surroundings keep their shapes; nothing passes through anything.",
+      "fail": "The head changes shape or merges with the pole; or a vehicle passes through the pole; or the head duplicates; or the road surface changes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pole's colour, the head's housing and the crossing markings stay the same apart from the lamps.",
+      "fail": "The housing changes colour; or the road markings change; or the pole changes shape."
+    }
+  ],
+  "note": "Vehicles moving off when the light turns green are driven and are not judged."
+}

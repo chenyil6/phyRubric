@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0080",
+  "caption": "A glass electric kettle at a rolling boil clicks off, and the churning bubbles die down and the steam thins.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass kettle is at a rolling boil."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The kettle's switch clicks off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The streams of bubbles from the base stop."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The surface settles."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Steam from the spout weakens after the click."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is boiling, switch off, settling."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "After the switch goes off the bubbling only eases and the water does not come back to a rolling boil, while the steam only thins.",
+      "fail": "The water returns to a rolling boil with the switch off; or the bubbling eases and surges in turn; or the steam thickens after the switch is off; or the streams stop and then start again by themselves."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The water moves only as the dying boil carries it and then settles, and the kettle stays on its base.",
+      "fail": "The water swirls or churns after the surface has settled with nothing stirring it; or the kettle rocks or slides with nothing touching it; or the switch moves back to on by itself; or the water churns while the switch is off and the base is quiet."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The switch acts on the boil: the streams of bubbles from the base stop and the surface settles after it, not before.",
+      "fail": "The streams stop before the switch has moved; or the switch goes off and the streams run as hard as before to the end of the clip; or the surface settles while streams still run from the base."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The remaining bubbles rise to the surface and the steam leaves the spout upward.",
+      "fail": "Bubbles sink from the surface to the base; or hang still in the water; or the steam sinks over the spout and pools on the counter; or the steam pours downward from the spout."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One kettle on one base; the water stays inside and its level changes only by boiling away.",
+      "fail": "Water passes through the glass; or the level jumps up with nothing added; or a second kettle appears; or the kettle changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The kettle's handle, its base and the counter stay the same.",
+      "fail": "The handle changes shape; or the base changes colour; or items on the counter rearrange."
+    }
+  ],
+  "note": "The click is sound; it is read from the switch moving. How quickly the boil dies down is not judged."
+}

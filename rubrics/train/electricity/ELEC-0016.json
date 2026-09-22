@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0016",
+  "caption": "The light chain on a ceiling fan is pulled, and the light above the fan comes on while the blades stay still.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ceiling fan with a light above or beneath it and a pull chain."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The light chain is pulled."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The light comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The blades stay still."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The light is dark before the pull."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark and still, pull, lit and still."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light comes on at the moment the chain is pulled, and only then.",
+      "fail": "The chain is pulled and the light stays dark; or the light is lit before the chain moves; or the light comes on with the chain hanging untouched; or the light comes on well after the pull with nothing else happening."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The blades stay still before, during and after the pull; the fan does not start turning by itself.",
+      "fail": "The blades start turning when the chain is pulled; or the blades turn slowly by themselves before the pull; or the blades spin up after the light is on with nothing touched; or the blades jerk or rock."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once on, the light stays lit for the rest of the clip.",
+      "fail": "The light goes off again by itself; or flickers on and off; or dims back to dark; or the chain pulls itself again."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The chain hangs straight down, is drawn taut by the pull and swings then hangs slack again; the fan body stays fixed to the ceiling.",
+      "fail": "The chain stands rigid or stays stretched out sideways after the pull; or stretches like elastic; or the fan body swings or tilts with the pull; or the chain floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One fan with a fixed number of blades and one light; the fan stays on the ceiling; the hand passes through nothing.",
+      "fail": "Blades appear or vanish; or the fan moves across the ceiling; or a second chain or light appears; or the hand passes through the chain or the fan."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fan's colour, the blade finish and the ceiling stay the same apart from the light.",
+      "fail": "The fan changes colour; or the blades change shape; or the ceiling changes colour rather than brightness."
+    }
+  ]
+}

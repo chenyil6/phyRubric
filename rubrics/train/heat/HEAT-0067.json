@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0067",
+  "caption": "A locomotive at a heritage railway lets off steam, and a great white cloud rolls up from beside the wheels.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A steam locomotive."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A white cloud of steam bursts out from beside its wheels."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cloud rolls upward."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The cloud is large and white."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cloud thins as it spreads."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The cloud leaves the locomotive's side low down and rises, spreading and thinning.",
+      "fail": "The cloud sinks and lies along the track; or flows away down the ballast like water; or hangs as a fixed shape without rising; or pours downward under the locomotive and stays there."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The burst comes out and moves away from the locomotive; puffs that have left keep going.",
+      "fail": "The cloud runs back into the locomotive; or a puff retreats toward the cylinder; or steam appears in the air away from the locomotive and drifts into it; or the cloud grows with no steam leaving the engine."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The steam issues from an opening on the locomotive low beside the wheels and is thickest there.",
+      "fail": "The cloud is thickest far from the locomotive with nothing carrying it there; or the cloud appears above the boiler while nothing leaves the engine's side; or the locomotive stands clear of any cloud while a cloud rolls along the platform."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The steam is a soft cloud that billows, spreads and fades; the locomotive stays a rigid machine.",
+      "fail": "The steam holds a fixed rigid shape; or pours like a liquid; or the cloud lifts the locomotive; or the steam breaks into solid lumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One locomotive on the track; it keeps its wheels and fittings and passes through nothing.",
+      "fail": "A wheel vanishes; or a second locomotive appears; or the locomotive passes through the platform; or the locomotive changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The locomotive's livery, its number and the platform stay the same.",
+      "fail": "The livery changes colour; or the number changes; or the platform's signs change."
+    }
+  ],
+  "note": "The locomotive is a driven machine; whether it moves and how fast are not judged."
+}

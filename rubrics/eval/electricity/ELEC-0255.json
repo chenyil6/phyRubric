@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0255",
+  "caption": "The button on a toy light-sabre is pressed, and the blade lights up from the handle outward to the tip.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy light-sabre with a handle and a blade."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The button on the handle is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The blade lights up."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The glow runs from the handle outward to the tip."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The blade is dark before the press."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark, press, lit from the handle to the tip."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The blade begins to light at the press, and only then.",
+      "fail": "The button is pressed and the blade stays dark to the end of the clip; or the blade is lit before the press; or the blade lights with nothing touching the handle; or only the handle lights."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The glow starts at the handle end and travels to the tip, then the whole blade stays lit; it does not start at the tip or run back.",
+      "fail": "The glow starts at the tip and runs toward the handle; or runs to the tip and then retreats; or lights in patches out of order; or the blade goes dark again by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lit blade throws its colour onto the hand, the handle and nearby surfaces.",
+      "fail": "The blade glows while the hand and surroundings stay as dark as before; or the surroundings glow while the blade is dark; or the glow on the surroundings is a different colour from the blade."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The blade is a rigid tube that stays straight and fixed to the handle.",
+      "fail": "The blade bends or droops; or stretches longer as it lights; or wobbles like rubber; or detaches from the handle."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sabre with one blade; it keeps its shape; the hand passes through nothing.",
+      "fail": "A second blade appears; or the blade vanishes; or the hand passes through the handle; or the sabre changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The handle's colour and the background stay the same; the blade keeps one colour once lit.",
+      "fail": "The handle changes colour; or the blade changes colour after lighting; or the background rearranges."
+    }
+  ]
+}

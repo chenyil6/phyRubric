@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0258",
+  "caption": "A garden sprayer mists water onto a bare branch in deep winter cold, and the mist freezes into a white glaze on the twigs within seconds.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sprayer mists water onto a bare branch."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The wet twigs turn white and glassy."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The glaze thickens with more spraying."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Drops on the twigs stop running and hang as ice."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The setting reads as deep winter cold."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The spraying comes first and the glaze follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The mist lands as fine drops that stop moving and become a hard glassy coat on the twigs, and the twigs stay rigid.",
+      "fail": "The drops stay runny and keep dripping off in the cold; or the glaze stays a soft slush that smears; or the twigs droop and swing like rope under a thin glaze; or the glaze sets as a dry white powder that blows away."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The glaze only thickens with more spraying and does not melt off while the cold holds.",
+      "fail": "The glaze melts off the twigs while the cold holds and nothing warms them; or the glaze thins between sprays; or the glaze forms and clears in turn; or the twigs are glazed before any mist reaches them."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The mist falls and drifts downward onto the twigs, drops hang from their undersides and any that fall go down.",
+      "fail": "The mist rises from the sprayer and gathers above the branch; or the drops on the twigs hang upward from their tops; or a drop leaves a twig and rises; or a fallen drop returns to a twig."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The glaze forms where the mist lands and twigs the mist misses stay bare.",
+      "fail": "A twig the mist never reached is glazed; or the mist lands on a twig and it stays bare and dry to the end of the clip; or the whole branch glazes at once while the mist plays on one part."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One branch and one sprayer; the ice on the twigs is the water that was sprayed.",
+      "fail": "Ice appears on a twig with no mist reaching it; or the glaze vanishes at a stroke; or a twig vanishes; or a second branch appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The branch's bark away from the glaze, the sprayer and the surroundings stay the same.",
+      "fail": "The bark changes colour; or the sprayer changes shape; or the background changes between frames."
+    }
+  ]
+}

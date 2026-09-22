@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0036",
+  "caption": "A pair of hands claps twice in a room with a clap-activated lamp, and the lamp comes on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A room with a lamp that is dark."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A pair of hands claps twice."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lamp comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lamp lights after the second clap, not the first."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, two claps, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lamp lights right after the second clap, and only then.",
+      "fail": "The lamp stays dark after the two claps to the end of the clip; or the lamp lights before the hands have met; or the lamp lights after the first clap; or the lamp lights with the hands still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once lit, the lamp stays on steadily until another double clap.",
+      "fail": "The lamp goes dark again with the hands still; or flickers on and off; or dims and brightens repeatedly; or lights and goes out at once."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lamp's light reaches its surroundings: the shade glows and nearby surfaces brighten with shadows pointing away from the lamp.",
+      "fail": "The bulb glows while the shade and surroundings stay as dark as before; or the room brightens while the lamp stays dark; or the light comes from a place other than the lamp."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The hands come together and part twice, meeting palm to palm.",
+      "fail": "The hands pass through each other; or one hand claps alone; or the hands meet once and the second clap is a wave; or the hands merge."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp and one pair of hands; the lamp keeps its shape; the hands keep their fingers.",
+      "fail": "A second lamp appears; or the lamp vanishes; or a hand gains or loses fingers; or a third hand appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shade's colour, the room's colours and its contents stay the same apart from the light.",
+      "fail": "The shade changes colour rather than brightness; or the room's contents rearrange; or the walls change colour."
+    }
+  ],
+  "note": "The hands are kept because the clap is the caption's cause; the person is otherwise not judged. The sound is not judged; the clap is read from the hands meeting."
+}

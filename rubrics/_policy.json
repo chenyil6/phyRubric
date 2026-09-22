@@ -1,0 +1,61 @@
+{
+  "source": "data/train/*.json and data/eval/*.json (data/schema.json defines the record, the subcategories and the ten violation_types). One rubric per caption at rubrics/<split>/<branch>/<ID>.json; <branch> is the lower-case category name used by the data files. rubrics/build.py validates the set and merges it into rubrics/train.json and rubrics/eval.json.",
+  "record_format": {
+    "id": "The caption id (MECH-0001 ...). File name is <id>.json.",
+    "caption": "Verbatim copy of the data caption. build.py fails the rubric if it differs, so a caption edit marks its rubric stale.",
+    "sa": "Caption-adherence items S1..Sn. {id, weight: core|minor, check}. One item per visible fact the caption requires; when the caption names several sub-actions, one item each plus one item for their order. Order: core items first, in the order the caption states them; then minor qualifiers (once, slowly, a single hit); the ordering item, when there is one, comes last.",
+    "pc": "Physics items P1..Pn, ordered as described under pc.order. {id, severity: fatal|core|major|minor, type, expect, fail, precondition?}. expect = what a correct clip shows; fail = what counts as a violation, written as concrete visible events joined by 'or'. precondition = a situation that must occur in the clip for the item to be judged; when it does not, the item is not_shown.",
+    "pc.order": "Order is for the reader, not the scorer: pc_scoring is order-independent and severity is carried by the severity field, so items are NOT sorted by severity. They follow the way a viewer checks a clip. First the core items, the physics of the caption's central event, in the order the event unfolds (before the cause, at the cause, after it). Then the major items, the accompanying physics of side elements (gravity, material response, trajectory, secondary consequences). Last the whole-clip invariants: the fatal item (nothing appears, vanishes, morphs or passes through) and then the minor attribute_drift item. The fatal item reads nearly the same in every rubric; putting it first would open every rubric with the same boilerplate and bury the scene-specific physics the judge should attend to most.",
+    "pc.type": "One of the ten violation_types in data/schema.json (permanence_count, shape_identity, solidity, causeless_motion, gravity_direction, trajectory_momentum, process_direction, missing_consequence, material_response, attribute_drift). It names the axis a FAIL on this item counts toward. Every violation_type declared on the data record should be covered by at least one PC item; build.py warns when it is not.",
+    "note": "Optional. Author's remarks on edge cases, kept-person justification, or a caption ambiguity the judge must resolve a particular way."
+  },
+  "labelling_instructions": [
+    "Judge each item independently: pass / fail / not_shown.",
+    "PC items are decided in three steps. (1) Is the situation the item refers to in the clip at all? Use expect to find the moment, region or event; if the precondition never happens, or none of the moments or regions the item refers to ever appear, the item is not_shown. not_shown means the situation is absent; it does not mean the correct behaviour failed to happen, and it does not mean uncertainty. (2) The situation is present: if any event listed in fail is seen, the item is fail, and the matching clause is named. The fail text is the only ground for a fail. (3) Otherwise pass, even if the correct behaviour is hard to confirm.",
+    "Something that looks physically wrong but is covered by no fail clause does not fail any item. Record it separately (the teacher's `uncovered` list; a reviewer's margin note) so the rubric can be extended; the clip is then re-judged under the revised rubric. This is how rubric coverage is measured and improved, not by judging outside the rubric.",
+    "PC is about the physics of WHAT YOU ACTUALLY SEE, not about what the caption asked for. If the video depicts something else entirely, that costs SA points, not PC points.",
+    "not_shown means the item's precondition never occurs in the clip, or the moment or region it refers to is not visible. not_shown never raises and never lowers the score. SA items are never not_shown.",
+    "An unseen cause is not a violation. Heat sources, the electrical supply, sound, wind, a puff of breath and the hand that let go are routinely invisible in plausible footage. Judge the visible effect, not the invisible cause.",
+    "The clips are about five seconds of real time with no timelapse. Judge the DIRECTION and ORDER of change (downward, outward, first then second, one-way), never how far it got or how fast. A physically correct clip in which the process has barely advanced passes.",
+    "The caption says what happens; the rubric says how it should look. Do not fail a clip for missing detail the caption never asked for and the rubric does not name.",
+    "When the caption names several sub-actions, each one is its own SA item and one further SA item asks whether they happen in the order the caption gives. A clip that shows every sub-action but in the wrong order fails only the ordering item.",
+    "When the caption asserts an outcome (the light comes on, the magnet stays stuck), whether the clip shows it is an SA item; whether what the clip shows is physically possible is judged by the PC items. Both can fail on the same clip; that is not double counting.",
+    "Write one line for every FAIL saying what you actually saw and when. That line is the diagnostic report.",
+    "Watch each clip at least twice before scoring."
+  ],
+  "branch_notes": {
+    "Mechanics": "People and animals appear only where the body is the physics (biomechanics, inertia in vehicles) or as a minimal trigger. Self-driven agents (people, animals, vehicles under power) may start, stop and turn on their own; that is not causeless motion. Athletic form, skill and posture are not judged. Rate of fall, exact rebound height and exact stopping distance are not judged, only their direction and ordering.",
+    "Heat": "The heat source is often invisible; the response of the material is what is judged. Melting, boiling, condensing and burning are judged by direction and monotonicity (softer, wetter, blacker, never back), not by how far they get in five seconds. Steam and smoke rise; melt and drips run down. Colour change from browning and other chemistry is outside the branch.",
+    "Optics": "Shadows, reflections and refraction are judged by geometry: which side, attached to what, moving with what, at the same moment. Image quality, exact shadow softness, exact brightness and colour accuracy are not judged. A reflection is judged only where a reflective surface is plainly in view. The on/off causality of electric lights belongs to Electricity; Optics judges where the light goes once it exists.",
+    "Electricity": "The electrical cause is invisible; what is judged is the link between the visible control and the visible device (timing, direction, staying on or off) and the behaviour of sparks, lightning, magnets and static as seen. Bolt brightness and colour, spark count and how strongly a magnet snaps are not judged.",
+    "Acoustics": "Sound itself is neither visible nor audible in the frames; the branch judges its visible causes (a strike, a moving cone) and visible effects (grains jump, water ripples, a frame swings). The timing anchor is the visible strike or source; if no source is visible, the effect is not a violation on its own. Vibration is judged as blur, tremble or displacement that starts at the cause and decays afterwards."
+  },
+  "sa_scoring": {
+    "5": "every item passes",
+    "4": "all core items pass, at least one minor item fails",
+    "3": "exactly one core item fails",
+    "2": "two or more core items fail, but the clip is a recognisable attempt at the caption",
+    "1": "no discernible relation to the caption"
+  },
+  "pc_scoring": {
+    "caps": {"fatal": 1, "core": 2, "major": 3, "minor": 4},
+    "rule": "If nothing fails, PC = 5. Otherwise take the cap of the most severe failed item, then subtract 1 for each additional failed item of severity major or worse. Floor at 1. not_shown items are ignored.",
+    "severity_meaning": {
+      "fatal": "L1, core object principles: the situation is impossible as a whole. Matter through matter, objects appearing from nothing, vanishing, teleporting, splitting or merging, rigid things morphing or melting, gravity in the wrong direction.",
+      "core": "L2, the central event: the interaction the caption is about does not happen, happens in reverse, or the mechanism at the centre of this scene is broken.",
+      "major": "L2, accompanying expectations: one clear violation that is not the central interaction. A secondary consequence missing or inverted, gravity, inertia or material response wrong on a side element.",
+      "minor": "L3, attribute experience: a real artefact that does not change how the event unfolds. Colour, texture, label or position drift of untouched things."
+    }
+  },
+  "not_penalized": [
+    "Image quality: blur, low resolution, compression artefacts, flicker, colour cast.",
+    "A heat source, power supply, sound, wind, breath, hand, force or contact that is not visible.",
+    "Camera motion and parallax. Apparent drift caused by the camera moving is not object motion.",
+    "Style, set dressing, object design, brand plausibility, the exact look of steam, smoke or sparks.",
+    "Anything that would need a numeric measurement to settle: speed, temperature, distance, exact angle, exact brightness.",
+    "How far a process has advanced by the end of the clip, as long as it advanced in the right direction.",
+    "Self-driven agents starting, stopping or turning; athletic form, technique and posture.",
+    "Decorative caption language that the physics does not produce."
+  ],
+  "band_reachability": "Every rubric must be able to produce all five scores on any clip. SA therefore carries at least two core items and at least one minor item. PC carries at least one core, one major and one minor item with NO precondition, plus a fatal item (or a second heavy item alongside the core). Items behind a precondition are scored not_shown when the precondition does not occur, so a band reachable only through a gated item is empty on those clips."
+}

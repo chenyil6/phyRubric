@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0018",
+  "caption": "A kite flies high over a beach in the sun, and its small shadow moves across the sand as the kite sways.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A kite flies high over a beach in the sun."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its small shadow moves across the sand."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shadow moves as the kite sways."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow is far from the kite itself."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow moves in step with the kite's motion.",
+      "fail": "It stays still while the kite moves; or moves the opposite way; or lags and jumps."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the kite's outline, small and soft-edged at that height.",
+      "fail": "It is a different shape; or it is huge and sharp; or it splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side away from the sun, far from the kite's foot of string.",
+      "fail": "It lies toward the sun; or directly beneath under a plainly low sun; or it is missing in sunlight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move on its own.",
+      "fail": "It moves with the kite still; or drifts across the sand by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One kite and one shadow.",
+      "fail": "A second shadow appears; or the kite vanishes; or the shadow becomes solid; or the kite passes through its string."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The kite's colours and the beach stay the same, and the shadow stays dark.",
+      "fail": "The kite changes colour; or the shadow turns coloured; or the sand changes."
+    }
+  ]
+}

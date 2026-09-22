@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0269",
+  "caption": "Lightning flashes over a vineyard at night, and the rows of vines are lit for an instant before the dark returns.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A vineyard at night with rows of vines."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lightning flashes over the vineyard."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The rows of vines are lit for an instant."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The dark returns."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The vines are in rows."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark, flash, dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is brief: the vineyard brightens and returns to dark; flashes may repeat but each ends.",
+      "fail": "The vineyard stays lit for the rest of the clip after the flash; or brightens steadily; or the flash fades in slowly like a dimmer; or the sky turns to daylight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flash lights the whole scene at once: the rows, the ground between them and the cloud undersides brighten together during the flash, from the sky's direction.",
+      "fail": "The sky flashes while the vines stay as dark as before; or the vines light up while the sky stays dark; or the light sweeps across the rows one after another; or the rows are lit from below."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The rows, posts and any buildings are the same across dark and lit frames.",
+      "fail": "Rows or posts appear or vanish between dark and lit frames; or a building appears; or the rows change direction; or the vines change shape."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The vines and posts stay still through the flash; leaves stir only in the wind.",
+      "fail": "The vines shake sharply at the flash with nothing else stirring; or posts move; or the ground shifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The vines and posts keep their shapes and stay rooted; nothing passes through anything; any bolt seen ends in the air or at the ground.",
+      "fail": "A row merges into a wall; or a bolt passes through a vine and lights it like a lamp; or a post morphs into another object; or the ground turns into water."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The foliage colour, the soil and the sky are consistent before and after the flash.",
+      "fail": "The foliage changes colour permanently; or the soil changes colour; or the sky turns to daylight after the flash."
+    }
+  ]
+}

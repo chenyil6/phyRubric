@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0143",
+  "caption": "Water is poured from a jug into an empty drinking glass on a table until the glass is nearly full.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A jug and a drinking glass are present, the glass empty at the start."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Water is poured from the jug into the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The glass fills toward nearly full."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pour stops before the glass overflows."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The glass stands on a table."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The water level in the glass rises steadily while the stream is flowing, stays flat, and does not drop or reset while the pour continues.",
+      "fail": "The level goes down while water is still entering; or jumps up or down between frames; or the glass is full before the stream reaches it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "Water leaves the jug as a continuous stream that falls into the glass, splashing or swirling on arrival, and settles to a flat surface.",
+      "fail": "The stream hangs as a rigid, glassy rod that does not move; or the water in the glass keeps a tilted or humped surface once the pour stops; or the water behaves as a solid block."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The stream falls straight down from the jug's lip to the glass.",
+      "fail": "The stream curves upward or sideways with no wind; or water flows from the glass up into the jug; or the stream bends around the glass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The jug's tilt produces the stream: water flows only while the jug is tipped and stops when it is righted.",
+      "fail": "Water pours from a level jug; or the jug is tipped and no water comes out; or the stream continues after the jug is upright.",
+      "precondition": "The jug's tilt is visible."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One jug, one glass; water appears only from the jug and ends up only in the glass, on the table or in the air between.",
+      "fail": "Water appears in the glass with no stream connecting it; or the stream passes through the glass wall; or the glass or jug duplicates, vanishes or changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass, jug and table keep their appearance; the water stays clear.",
+      "fail": "The water changes colour; or the glass changes shape or size; or the table pattern shifts."
+    }
+  ]
+}

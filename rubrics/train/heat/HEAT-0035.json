@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0035",
+  "caption": "A soap bubble rests on a snow-covered railing in bitter cold, and feathery ice crystals spread across its surface until the whole bubble has frozen white.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A soap bubble rests on a snow-covered railing."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Ice crystals appear on the bubble's surface."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The crystals spread across the bubble."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The bubble ends frosted white."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The crystals are feathery or branching."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The crystals start at a few points and spread from them."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The frosting only spreads: crystals grow outward from where they started and frosted film stays frosted.",
+      "fail": "A frosted area turns clear again; or the crystals retreat toward the points they started from; or the bubble clears and frosts in turn; or the frost appears everywhere at once with no spreading front."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The bubble stays a thin film holding its round shape while the frost grows across it: the crystals lie in the film rather than standing off it as a crust.",
+      "fail": "The bubble sags or collapses while staying whole as it freezes; or the frost stands off the film as a thick shell; or the bubble turns into a solid ball of ice with no film; or the film ripples like open water."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bubble rests on the railing under its own weight and stays there; anything that breaks off falls.",
+      "fail": "The bubble rises off the railing and hangs in the air; or the bubble rolls uphill along the railing; or a broken piece of the frozen film floats upward."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The frost grows on the bubble's own surface, spreading from where the film meets the cold railing or from a few points on it.",
+      "fail": "The frost appears on the railing rather than on the bubble; or the bubble frosts from its top down while its base on the cold railing stays clear; or the snow around the bubble changes while the bubble stays clear."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One bubble keeps its round shape and stays on the railing; nothing passes through it.",
+      "fail": "The bubble turns into a different shape such as a cube; or a second bubble appears; or the bubble passes through the railing; or the railing changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The railing, the snow on it and the background stay the same.",
+      "fail": "The railing changes colour; or the snow on the railing changes texture away from the bubble; or the background changes between frames."
+    }
+  ]
+}

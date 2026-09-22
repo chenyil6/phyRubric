@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0135",
+  "caption": "Smoke drifts from a chimney on a windy day and is blown sideways as it leaves the stack.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Smoke leaves a chimney."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The smoke is blown sideways."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The smoke rises a little before it streams away."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Trees or flags nearby bend the same way."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The smoke thins with distance."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The smoke streams the same way the trees and flags in the scene are bent and keeps that direction while they hold theirs.",
+      "fail": "The smoke streams against the way the trees and flags bend; or the smoke stands straight up while the trees are bent hard; or the smoke's direction swings about while the trees hold steady; or the smoke streams one way while other smoke in the scene streams the other."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The smoke leaves the stack going up before it is carried sideways and thins as it goes; it does not sink down the roof.",
+      "fail": "The smoke pours down the chimney's side and along the roof; or sinks to the ground and pools; or goes straight down from the stack's mouth; or hangs as a fixed shape without rising or drifting."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The plume keeps leaving the stack and what has left keeps moving away and fading.",
+      "fail": "The plume runs back into the chimney; or a puff retreats toward the mouth; or smoke appears downwind with none leaving the stack; or the plume grows with nothing leaving the chimney."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The smoke is a soft cloud that spreads, waves and fades, and the chimney stays a rigid stack.",
+      "fail": "The plume holds a fixed rigid shape; or pours like a liquid; or the chimney bends with the plume; or the plume breaks into solid lumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One chimney on one roof; the chimney stays in place and the roof keeps its shape.",
+      "fail": "The chimney vanishes; or a second chimney appears; or the chimney sinks into the roof; or the roof changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The roof's tiles, the chimney's brick and the house stay the same.",
+      "fail": "The tiles change pattern; or the brickwork changes colour; or the house's windows change layout."
+    }
+  ]
+}

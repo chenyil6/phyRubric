@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0100",
+  "caption": "A tow rope lies slack on the ground between a truck and a stuck car; the truck drives forward, the rope goes taut, and the car jerks into motion behind it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A rope lies slack between a truck and a car."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The truck drives forward."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The rope goes taut."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The car jerks into motion behind the truck."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rope lies on the ground and slack at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The truck moves first, then the rope tightens, then the car moves."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The car does not move until the rope has straightened.",
+      "fail": "The car moves while the rope is still slack; or it moves before the truck does; or it moves on its own without the truck."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The jerk happens at the instant the rope goes tight, and the car then follows the truck.",
+      "fail": "The rope goes taut and the car stays put; or the rope snaps taut and the truck is jerked back; or the car moves with a slack rope trailing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The rope lifts off the ground and straightens as it tightens, and it does not stretch like elastic.",
+      "fail": "The rope stretches on and on; or it stays lying on the ground while taut; or it floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The car follows the line of the rope.",
+      "fail": "The car moves sideways; or backward; or faster than the truck and overtakes it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One truck, one car and one rope keep their number.",
+      "fail": "A vehicle vanishes or a third appears; or the rope passes through a bumper; or the rope vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The vehicles' colours, the rope and the road stay the same.",
+      "fail": "A vehicle changes colour; or the rope changes; or the road rearranges."
+    }
+  ]
+}

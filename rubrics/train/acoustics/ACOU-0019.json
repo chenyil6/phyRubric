@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0019",
+  "caption": "A metal spring doorstop mounted on the wall is flicked, and it wobbles wildly and then slows to a stop.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A spring doorstop mounted on a wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The doorstop is flicked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It wobbles."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It slows to a stop."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The base stays fixed to the wall."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is flick, wobble, stop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The spring stands still until the finger reaches it; it wobbles from the flick and only then.",
+      "fail": "The spring is already swaying before the finger arrives; or wobbles while the finger is well away; or the finger flicks it and the spring stays rigid; or it stops and begins wobbling again with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The wobble is widest right after the flick and shrinks steadily until the spring stands still.",
+      "fail": "The swings grow after the flick; or hold the same width for the whole clip; or the spring stops dead from a wide swing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The spring bends and whips as a coil anchored at its base, the rubber tip riding on the free end; the coil straightens as it settles.",
+      "fail": "The coil kinks and stays bent; or the spring stretches out longer and stays stretched; or the coil goes straight and rigid in mid-swing; or the coils separate into loose rings."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The base plate stays fixed to the wall; the wall around it does not move.",
+      "fail": "The base plate lifts or rotates on the wall; or the wall ripples at the flick; or the wall around the base bulges."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One doorstop with its base, spring and tip; the spring passes through nothing.",
+      "fail": "The tip flies off and the spring is then whole again; or the spring passes into the wall or floor; or a second doorstop appears; or the doorstop vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The doorstop's finish, the wall colour and the floor stay the same.",
+      "fail": "The spring changes colour; or the tip changes colour or size; or the wall or floor changes."
+    }
+  ],
+  "note": "'Wildly' is not judged as a magnitude; only the wobble's start and decay are."
+}

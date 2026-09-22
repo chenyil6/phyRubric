@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0224",
+  "caption": "Sunlight enters a room through a red balloon held up to the window, and a soft red glow falls on the white wall behind it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A red balloon is held up to a window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Sunlight enters through it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A soft red glow falls on the white wall behind it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The glow is on the side away from the window."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The glow moves with the balloon."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The wall looks red only where the balloon's light reaches and while it is on.",
+      "fail": "The wall is red with the balloon off; or stays white under the red light; or turns a different colour from the light."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens at the same instant as the balloon and is confined to where its light falls.",
+      "fail": "The wall changes before the balloon; or long after; or surfaces the light cannot reach change too."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The glow is one soft patch roughly the balloon's shape.",
+      "fail": "It splits; or is a sharp square; or floods the wall."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves; only the light changes.",
+      "fail": "The wall moves; or the balloon moves by itself; or the lit area wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon and one wall.",
+      "fail": "A second balloon appears; or the wall vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wall's shape and the surroundings stay the same.",
+      "fail": "The wall changes shape; or the surroundings rearrange; or the balloon changes shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

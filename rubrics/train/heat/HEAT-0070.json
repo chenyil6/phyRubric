@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0070",
+  "caption": "A jet of steam from a wallpaper steamer plate softens old wallpaper, and the paper peels away in wet strips.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A steamer plate is held against a papered wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Steam escapes from around the plate."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The wallpaper loosens where the plate has been."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The paper peels away in strips."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strips look wet and darkened."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The steaming comes first and the peeling follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam escapes upward around the plate's edges and the loosened strips hang and fall downward.",
+      "fail": "The steam pours downward through the wall; or sinks and pools on the floor; or a loosened strip hangs upward from its top edge with nothing holding it; or a fallen strip rises toward the ceiling."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The paper goes from dry and stuck to wet, dark and limp where the steam reaches it, and comes away in soft floppy strips.",
+      "fail": "The paper stays dry and pale while peeling; or a strip snaps off as a rigid board; or the paper turns to liquid and runs down the wall; or a strip stretches like rubber as it is pulled."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The paper only loosens where the steam has been and loosened paper stays loose.",
+      "fail": "A loosened strip presses itself back onto the wall and sticks; or the paper loosens on a part of the wall the plate has not reached; or the paper dries pale again while the steamer works on it; or the paper loosens and re-sticks in turn."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The plate's path shows: the wall behind the peeled strips is bare and damp while paper away from the plate stays stuck.",
+      "fail": "The wall behind a peeled strip is dry and dusty; or paper comes away from a part of the wall the plate never touched; or the plate is held on the wall and the paper there stays dry and tight to the end of the clip."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One plate on one wall; strips come off the wall and neither appear nor vanish.",
+      "fail": "A strip vanishes in mid-air; or new paper appears on the bare wall; or the plate passes into the wall; or a second plate appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wallpaper's pattern away from the peeled area and the room stay the same.",
+      "fail": "The wallpaper's pattern changes; or the bare wall changes colour; or items in the room rearrange."
+    }
+  ]
+}

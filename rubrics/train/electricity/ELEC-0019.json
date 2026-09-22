@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0019",
+  "caption": "The button on a garage door remote is pressed, and the garage light comes on and the door begins to rise.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A garage with its door closed and a remote in view."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The remote's button is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The garage light comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The door begins to rise."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The light is off and the door still before the press."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is press, then light and door together."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light comes on and the door starts to rise together, right after the press, and only then.",
+      "fail": "The button is pressed and neither light nor door responds to the end of the clip; or the door rises while the light stays dark; or the light comes on while the door stays shut to the end; or the door begins to move before the button is pressed."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The door is still before the press and moves only after it, rising steadily in one direction.",
+      "fail": "The door rises before the press; or stops and starts with nothing pressed; or rises and drops back; or rattles in place without rising."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The door rises along its tracks as one panel or as hinged sections following each other, its bottom edge lifting off the ground.",
+      "fail": "The door swings outward like a gate while its tracks show a roll-up door; or the sections separate; or the door rises faster at one side so it tilts; or the door lifts as a whole off its tracks."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light lights the garage: the floor and walls inside brighten from the fixture.",
+      "fail": "The fixture glows while the garage stays as dark as before; or the garage brightens while the fixture stays dark; or the light comes from a place other than the fixture."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One door in its frame; the door passes through nothing and stays attached; the light fixture stays on the ceiling.",
+      "fail": "The door passes through its frame or the ceiling; or a second door appears; or the door vanishes; or the fixture drops or vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The door's colour and panelling, the remote and the garage contents stay the same apart from the light.",
+      "fail": "The door changes colour or panel pattern; or the remote changes shape; or the garage contents rearrange."
+    }
+  ]
+}

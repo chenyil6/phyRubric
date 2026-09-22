@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0211",
+  "caption": "A stage floods with yellow light, and the white set and curtains all look yellow at once.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stage has a white set and curtains."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It floods with yellow light."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The set and curtains all look yellow at once."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Shadowed folds stay darker."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The light comes first and the colour changes with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The set looks yellow only where the light's light reaches and while it is on.",
+      "fail": "The set is yellow with the light off; or stays white under the yellow light; or turns a different colour from the light."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens at the same instant as the light and is confined to where its light falls.",
+      "fail": "The set changes before the light; or long after; or surfaces the light cannot reach change too."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The folds show as darker and lighter yellow, not as colour changes.",
+      "fail": "Folds are a different colour; or the set is flat yellow with no shading; or the folds vanish."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves; only the light changes.",
+      "fail": "The set moves; or the light moves by itself; or the lit area wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One light and one set.",
+      "fail": "A second light appears; or the set vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The set's shape and the surroundings stay the same.",
+      "fail": "The set changes shape; or the surroundings rearrange; or the light changes shape."
+    }
+  ]
+}

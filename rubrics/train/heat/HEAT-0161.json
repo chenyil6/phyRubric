@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0161",
+  "caption": "Chestnuts roast in a pan over a fire, and their shells split open with a crack.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Chestnuts sit in a pan over a fire."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A shell splits open."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The split gapes open."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The nut inside shows through the split."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The split does not close again."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each split only opens wider and stays open.",
+      "fail": "A split closes and the shell is whole again; or a split narrows; or the shell splits and forms again; or a split opens and shuts in turn."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shell stays a hard shell that cracks along a line and gapes, and the nut inside stays a nut.",
+      "fail": "The shell melts and drips; or the shell squashes flat instead of cracking; or the whole chestnut turns into another object; or the shell stretches as it splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The chestnuts rest in the pan and any that jump come back down into it, and the flames point upward.",
+      "fail": "A chestnut leaps out of the pan and hangs in the air; or a chestnut rises and stays above the pan; or the flames point downward under the pan; or a chestnut falls upward out of the pan."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The chestnuts shift only as they are shaken, as they split or as the pan is moved.",
+      "fail": "A chestnut slides across the pan with the pan still and no split; or a chestnut spins fast on the spot; or the chestnuts arrange themselves into a pattern; or the pan slides on the fire with nothing touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The chestnuts keep their number in the pan and a split shell stays with its nut.",
+      "fail": "A chestnut vanishes; or a new chestnut appears in the pan; or a nut leaves its shell and the shell vanishes; or a chestnut passes through the pan's floor."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the fire's wood and the surroundings stay the same.",
+      "fail": "The pan changes colour; or the pan's holes change pattern; or items around the fire rearrange."
+    }
+  ],
+  "note": "The crack is sound and is not judged; the split is read from the shell opening. The shells darkening as they roast is chemistry and is not judged."
+}

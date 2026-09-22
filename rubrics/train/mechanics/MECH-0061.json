@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0061",
+  "caption": "A car drives onto a frozen pond, its front wheels are turned sharply, and the car keeps sliding straight ahead instead of turning.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car drives onto a frozen pond."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its front wheels are turned sharply."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The car keeps sliding straight ahead instead of turning."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wheels are turned first and the straight slide continues afterwards."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The car's path barely changes while the wheels point sideways; it carries on along its old line.",
+      "fail": "The car turns crisply to follow the wheels as it would on dry road; or it turns the opposite way to the wheels; or it stops dead when the wheels are turned."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The car slides under its own momentum; any swing of the rear is gradual, and nothing changes its motion without acting on it.",
+      "fail": "The car jinks sideways with the wheels straight; or it speeds up while sliding; or it reverses."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "On the ice the tyres skid rather than grip; the car may drift and the rear may swing out slowly.",
+      "fail": "The tyres bite and the car pivots sharply; or the car tilts up onto two wheels; or the ice cracks open and swallows a wheel."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The car stays flat on the ice throughout.",
+      "fail": "The car lifts off the surface; or it sinks through the ice; or it tilts and stays tilted with nothing holding it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car keeps its shape on the pond.",
+      "fail": "The car vanishes or a second one appears; or it passes through the bank or a tree; or it turns into another vehicle."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour, the ice and the shore stay the same.",
+      "fail": "The car changes colour; or the pond's edge moves between frames; or the trees on the shore rearrange."
+    }
+  ]
+}

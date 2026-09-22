@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0052",
+  "caption": "A hula hoop is rolled along a sidewalk and let go; it rolls on by itself, wobbles, and falls over.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hula hoop is rolled along a sidewalk and let go."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It rolls on by itself."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It wobbles."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It falls over."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hoop is released rather than kept in a hand."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rolling comes first, then the wobble, then the fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "After the release nothing touches the hoop: it rolls on, slows, and changes only by slowing.",
+      "fail": "The hoop gathers speed after being let go; or it is driven along with nothing touching it; or it starts rolling again after it has fallen."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The hoop leans further as it slows and comes down flat onto the sidewalk.",
+      "fail": "The hoop leans right over and goes on rolling on its edge without falling; or it rights itself and rolls upright again; or it tips upward off the ground."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "It stays upright while it is rolling quickly, and the wobble sets in only as it slows.",
+      "fail": "The hoop topples over while still rolling quickly; or it stands on its edge without moving and stays standing; or its wobble shrinks as it slows."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The hoop stays a rigid ring as it rolls and lands, rattling flat on the pavement.",
+      "fail": "The hoop bends out of round as it rolls; or it flops like a loop of rope when it falls; or it bounces high off the pavement."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One hoop on one sidewalk keeps its shape.",
+      "fail": "The hoop vanishes or a second one appears; or it passes through the pavement; or it turns into another object as it falls."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hoop's colour, the sidewalk and the surroundings stay the same.",
+      "fail": "The hoop changes colour as it rolls; or the paving slabs change pattern between frames; or the scene beside the sidewalk rearranges."
+    }
+  ]
+}

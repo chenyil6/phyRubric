@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0185",
+  "caption": "A child slides down a plastic playground slide, and at the bottom her hair is standing up from her head.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A child on a plastic playground slide."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The child slides down."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "At the bottom the child's hair is standing up from her head."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The slide is plastic: smooth moulded plastic, not metal."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hair lies flat or hangs at the top and stands up by the bottom."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The hair rises during or just after the slide and settles slowly afterwards; it does not stand up before the slide begins.",
+      "fail": "The hair stands up at the top before the child has moved; or rises long after the child has left the slide with nothing near it; or drops flat the instant the slide ends and then rises again; or rises and falls repeatedly at the bottom."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The standing strands stay rooted to the head and fan out; as they settle they fall back onto the head; the child's body follows the slide downward.",
+      "fail": "Strands detach and float away; or the hair settles upward; or the child rises up the slide without pushing; or the hair stands as a stiff column that stays to the end."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The child moves down the slide along its surface and slows or stops at the bottom.",
+      "fail": "The child stops half way and starts again with nothing pushing; or leaves the slide's surface and floats down; or moves up the slide; or slides sideways off the chute."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The slide is a rigid plastic chute that keeps its shape under the child; the hair is fine strands.",
+      "fail": "The slide bends or sags like fabric; or ripples as the child passes; or the hair lifts as one stiff sheet."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One child with the same body, limbs and hair throughout; the child passes through nothing and the slide keeps its shape.",
+      "fail": "The child gains or loses a limb or changes size; or passes through the slide; or a second child appears from nowhere; or the slide changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The slide's colour, the child's clothing and the playground stay the same.",
+      "fail": "The slide changes colour; or the child's clothes change colour; or the playground rearranges."
+    }
+  ],
+  "note": "The child is kept because the hair is the physics; the sliding posture is not judged."
+}

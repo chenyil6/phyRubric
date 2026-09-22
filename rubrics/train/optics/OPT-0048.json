@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0048",
+  "caption": "A lantern inside a tent is turned up to full brightness, and sharp shadows of the tent poles appear on the canvas.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lantern is inside a tent."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is turned up to full brightness."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Sharp shadows of the tent poles appear on the canvas."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadows appear as the lantern brightens."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shadows fall away from the lantern."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadows appear as the lantern brightens and fall away from it.",
+      "fail": "They are there with the lantern dim; or they point toward the lantern; or the lantern brightens and no shadows appear."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadows are the poles' outlines, one per pole, sharpening as the light strengthens.",
+      "fail": "There are more shadows than poles; or they are unrelated shapes; or they stay blurred at full brightness."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadows do not move with the lantern and poles fixed, and would shift if the lantern moved.",
+      "fail": "They drift by themselves; or swing round; or change with nothing moving."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The shadows sharpen and darken as the lantern is turned up, and would fade if it were dimmed.",
+      "fail": "They fade as the lantern brightens; or flicker with a steady lantern; or appear fully sharp before the lantern is turned up."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lantern and the tent's poles.",
+      "fail": "A pole vanishes; or a second lantern appears; or a shadow becomes solid; or the lantern passes through the canvas."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The canvas and the lantern stay the same, and the shadows stay dark.",
+      "fail": "The canvas changes colour; or the shadows turn coloured; or the lantern changes shape."
+    }
+  ]
+}

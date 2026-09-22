@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0306",
+  "caption": "A car brakes hard on a dry road, its tyres screech and leave dark skid marks, and it stops within a short distance.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car brakes hard on a dry road."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Dark skid marks appear behind the tyres."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It stops within a short distance."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The road is dry."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The braking comes first and the marks and stop follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The marks appear behind the tyres only while braking and stay after.",
+      "fail": "Marks appear ahead of the tyres; or before braking; or they vanish."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The car slows quickly and comes to rest on a straight line.",
+      "fail": "It slides on as if on ice; or swerves; or speeds up."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It stays stopped.",
+      "fail": "It restarts; or rolls back; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The tyres may smoke and the car's nose dips.",
+      "fail": "The tyres deform hugely; or the car flips; or the body bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another vehicle."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and the road stay the same.",
+      "fail": "The car changes colour; or the road markings shift; or the surroundings rearrange."
+    }
+  ]
+}

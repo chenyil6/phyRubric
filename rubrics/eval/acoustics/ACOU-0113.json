@@ -1,0 +1,77 @@
+{
+  "id": "ACOU-0113",
+  "caption": "A church organ plays a deep pedal note, and the still water in the stone font nearby breaks into fine ripples.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stone font holding water, in a church."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The water surface breaks into fine ripples."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The ripples cover the surface evenly."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The water is flat at first and the ripples begin during the clip."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "An organ is in view: its pipes, console or player."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The ripples are a fine even shiver; the water stays level in the font.",
+      "fail": "The water sloshes to one side; or a single ring spreads from a point as if something were dropped in; or the water surface tilts; or the water rises into a bulge."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Ripples appear while the organist holds a pedal or key and fade when the hands and feet lift.",
+      "fail": "The organist's foot holds a pedal and the water stays glassy; or the water ripples while the organist sits with hands and feet off the keys; or the ripples begin before the organist plays.",
+      "precondition": "The organist is in view at the console."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The water stays in the font with a level surface.",
+      "fail": "Water rises out of the font; or hangs in the air; or the surface stays tilted."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The font is rigid stone and the water stays liquid.",
+      "fail": "The font's stone ripples; or the water's surface cracks like ice; or the font bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One font; the water keeps its amount; nothing passes through the stone.",
+      "fail": "A second font appears; or the water vanishes; or the font changes shape; or water passes through the font's side."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The font's carvings, the church background and the water's colour stay the same.",
+      "fail": "The font's carvings change; or the church background changes; or the water changes colour."
+    }
+  ],
+  "note": "Organ pipes do not show sound; if no organist is in view, the ripples alone are not a violation."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0131",
+  "caption": "A charcoal chimney starter is lit, and flames and smoke rise up through the coals from the paper burning below.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A charcoal chimney starter is filled with coals."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Paper burns below the coals."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Flames rise up through the coals."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Smoke pours out of the top."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fire starts at the bottom."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is paper lit below, flames climb, smoke at the top."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The flames and smoke travel upward through the coals and out of the chimney's top.",
+      "fail": "The flames start at the top and travel down; or the smoke pours out of the bottom and sinks to the ground; or the flames point downward out of the base; or the smoke hangs as a fixed shape without rising."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fire only climbs: the coals catch from the bottom upward and lit coals stay lit.",
+      "fail": "A lit coal turns back to cold black charcoal; or the fire starts at the top of the chimney; or the flames climb and then fall back to the paper leaving the coals cold; or the paper below turns back into unburnt paper."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The paper burning below feeds the flames and the coals above it begin to glow.",
+      "fail": "The paper burns and the coals above stay untouched and cold to the end of the clip; or the coals glow while the paper below is unlit; or the flames appear in the middle of the chimney with the paper below unlit."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The coals stay hard lumps that glow and shift as they settle and the paper chars and crumbles, while the chimney stays a rigid metal can.",
+      "fail": "A coal melts or flows; or the coals swell up and fill the chimney; or the paper melts and drips; or the chimney's metal sags or bulges."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One chimney with its coals; the coals keep their number and stay inside until the chimney is tipped.",
+      "fail": "A coal vanishes; or new coals appear with none added; or a coal passes through the chimney's wall; or the chimney changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The chimney's handle, the ground and the surroundings stay the same.",
+      "fail": "The handle changes shape; or the ground changes texture; or items around the chimney rearrange."
+    }
+  ]
+}

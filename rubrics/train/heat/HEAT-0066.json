@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0066",
+  "caption": "Wet spinach is tossed into a very hot pan, and a burst of steam rises with a loud hiss as the leaves wilt.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hot pan."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Wet spinach is tossed into the pan."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A burst of steam rises."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The leaves wilt: they go limp and shrink."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The leaves look wet as they go in."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The toss comes first, then the steam, then the wilting."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam rises from the pan, spreading and thinning, while the leaves stay down in the pan.",
+      "fail": "The steam pours down the pan's sides and pools on the hob; or sinks below the pan; or a leaf rises out of the pan and hangs above it; or the steam hangs as a fixed shape without rising."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The burst comes when the wet leaves meet the pan and then eases; the wilting only advances and the leaves do not stiffen again.",
+      "fail": "The steam bursts before the leaves reach the pan; or a wilted leaf springs back crisp and upright; or the burst grows stronger with nothing added; or the leaves wilt and then swell back."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The leaves go from stiff wet sheets to limp glossy folds that collapse into the pan and shrink, and the water on them turns to steam.",
+      "fail": "The leaves stay stiff and flat while glossy and shrinking; or a leaf shatters dry; or the leaves melt into a liquid; or the leaves swell up and stiffen."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The burst comes from the wet leaves meeting the hot metal: it is fiercest as they land and the pan goes wet where they lie.",
+      "fail": "The steam pours from a part of the pan no leaf touched; or the leaves land and the pan stays dry with no steam at all; or the burst is fiercest long after the leaves have settled and gone limp."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The leaves in the pan are the leaves that were tossed in; they shrink rather than vanishing.",
+      "fail": "A leaf vanishes in a single frame while still whole; or new leaves appear with none added; or a leaf passes through the pan's wall; or the leaves merge into one smooth sheet."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan's finish and the hob stay the same.",
+      "fail": "The pan changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ],
+  "note": "The hiss is sound and is not judged. The leaves darkening as they cook is chemistry and is not judged."
+}

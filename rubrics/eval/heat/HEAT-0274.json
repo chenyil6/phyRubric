@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0274",
+  "caption": "A chilled cocktail glass is set on a bar in a warm room, and a film of mist forms on it and turns into running drops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A chilled cocktail glass is set on a bar."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A film of mist forms on the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mist turns into drops."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The drops run down."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bar mat wets beneath the glass."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The setting down comes first and the misting follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The misting and beading only build while the glass stays cold: the drops grow, join and run.",
+      "fail": "The glass dries while it is still cold and frosted; or the glass mists and dries in turn; or the glass is misted before it is taken out of the chiller; or the beads shrink while the glass is still cold."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The drops run downward over the glass to its stem and foot and wet the bar mat.",
+      "fail": "A drop runs up the glass; or water gathers on the rim and stays as a dome; or a drop leaves the glass and rises; or a run travels sideways round the bowl and stays level."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The mist lies on the outside of the cold glass and the mat wets where runs reach it.",
+      "fail": "The mist forms on the inside of the glass; or the bar mat stays dry under a glass streaming with runs; or the mist forms on the bar beside the glass while the glass stays clear; or the glass mists before it is chilled."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mist is a fine even film that beads into rounded drops which merge and streak, and the glass stays rigid.",
+      "fail": "Touching drops overlap without merging; or drops jump about on the glass; or the film peels away as a sheet; or the beads turn to hard frost while the glass runs with water."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One glass on one bar; the glass keeps its bowl and stem and nothing passes through it.",
+      "fail": "The glass changes shape; or a second glass appears; or the stem detaches; or the drink passes through the glass's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass's shape, the drink's colour and the bar stay the same.",
+      "fail": "The glass changes pattern; or the drink changes colour; or items on the bar rearrange."
+    }
+  ]
+}

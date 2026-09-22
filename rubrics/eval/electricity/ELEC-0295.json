@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0295",
+  "caption": "A plastic pipe rubbed on a fleece is held near an empty aluminium can lying on its side, and the can rolls toward the pipe.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A plastic pipe is rubbed on a fleece."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "An empty aluminium can lies on its side."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pipe is held near the can."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The can rolls toward the pipe."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The can is empty and on its side."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rub comes first, then the approach, then the roll."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The can lies still until the pipe is close, rolls only while the pipe is near, follows the pipe as it is moved and stops when the pipe is taken away.",
+      "fail": "The can rolls before the pipe is brought near; or keeps rolling after the pipe has been taken well away; or rolls with the pipe held still and far off; or the can rolls before the pipe has been rubbed."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The can rolls toward the pipe, not away from it, and follows the pipe's side.",
+      "fail": "The can rolls away from the pipe; or rolls at right angles to the pipe's direction; or lifts toward the pipe; or spins in place without rolling."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The can rolls on its side along the surface, turning about its axis as it moves.",
+      "fail": "The can slides without turning; or rolls uphill; or tumbles end over end; or leaves the surface."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The can is a rigid cylinder that keeps its shape as it rolls; the pipe is a rigid tube.",
+      "fail": "The can dents or squashes as it rolls; or bends toward the pipe; or the pipe droops; or the can stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One can and one pipe; nothing appears, vanishes or passes through the table.",
+      "fail": "A second can appears; or the can vanishes; or the can passes through the pipe or the table; or the pipe duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The can's label, the pipe's colour and the surface stay the same.",
+      "fail": "The can's label changes; or the pipe changes colour; or the surface changes pattern."
+    }
+  ],
+  "note": "Who holds the pipe is not judged."
+}

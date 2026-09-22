@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0096",
+  "caption": "An airliner flying through a storm cloud is hit by lightning, and a flash runs along its wing before the plane flies on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An airliner flies through or beside a storm cloud."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lightning hits the plane."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A flash runs along its wing."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The plane flies on afterwards."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flash is on the wing, not on the tail or nose alone."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is flying, flash, flying on."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is brief: it appears on the wing and is gone, and the wing returns to its unlit look; the plane carries on.",
+      "fail": "The flash stays on the wing as a steady glow for the rest of the clip; or the wing keeps glowing after the bolt is gone; or the flash moves slowly along the wing like a light being drawn; or the flash returns to the same spot and lingers."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The plane is the same before and after the strike: the same fuselage, wings, engines and tail, none appearing or vanishing.",
+      "fail": "A wing or engine vanishes or duplicates; or the plane changes into a different aircraft; or a second plane appears at the flash; or part of the plane detaches and hangs in the air."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The plane keeps its heading and steady motion through the strike; the flash does not push it off course.",
+      "fail": "The plane stops in mid-air at the flash; or jumps to a new position between dark and lit frames; or reverses direction; or is knocked sideways at the instant of the flash."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The bolt, where seen, is a jagged bright line meeting the plane at a point; the plane keeps its rigid shape.",
+      "fail": "The bolt is a straight beam or a smooth curve; or a wide glowing tube; or the wing bends or ripples at the strike; or the bolt wraps around the fuselage as a ring."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The plane stays a solid body: the bolt meets its surface and does not pass through the cabin; nothing passes into or through the plane.",
+      "fail": "The bolt passes through the fuselage and out the other side; or the cabin lights up from within as if the bolt were inside it; or the plane passes through a solid object; or the plane melts or splits apart."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plane's livery and the cloud's colour stay the same apart from the flash.",
+      "fail": "The livery changes colour or markings; or the cloud changes colour permanently; or the plane's windows change pattern."
+    }
+  ]
+}

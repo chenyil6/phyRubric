@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0080",
+  "caption": "A puck slides across a frozen pond, and a faint reflection slides beneath it on the ice.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A puck slides across a frozen pond."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A faint reflection slides beneath it on the ice."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflection is inverted and dim."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection disappears where the ice is scratched or snow-covered."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection moves with the puck and disappears where the ice is scratched or snow-covered.",
+      "fail": "It stays still while the puck slides; or shows on snow; or lags."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is inverted, dim, and joined at the puck's contact with the ice.",
+      "fail": "It is upright; or brighter than the puck; or detached."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The puck slides straight and slows gently.",
+      "fail": "It curves; or speeds up; or restarts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ice is rigid: the reflection is undistorted.",
+      "fail": "The ice ripples; or the reflection warps; or the puck sinks."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One puck and one reflection.",
+      "fail": "A second puck appears; or the reflection rises off the ice; or the puck vanishes; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The puck and the pond stay the same.",
+      "fail": "The puck changes colour; or the pond changes; or the snow patches move."
+    }
+  ]
+}

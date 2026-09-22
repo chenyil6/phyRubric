@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0285",
+  "caption": "A sack of potatoes is tipped out onto a barn floor, and the potatoes tumble out and roll apart into a loose spread.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sack of potatoes is tipped out onto a barn floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The potatoes tumble out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They roll apart into a loose spread."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tip comes first and the spread follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "They fall and roll away from the pile and come to rest scattered.",
+      "fail": "They roll back in; or move as a block; or roll uphill."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The potatoes are firm and roll and bump, not stacking or holding the sack's shape.",
+      "fail": "They hold the sack's shape; or stack; or squash."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "They fall to the floor.",
+      "fail": "They float; or rise; or hang."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "They come to rest and stay.",
+      "fail": "They restart; or speed up; or jump."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The potatoes keep their number.",
+      "fail": "Potatoes multiply; or vanish; or turn into other objects."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sack and the barn stay the same.",
+      "fail": "The sack changes colour; or the barn rearranges; or the potatoes change colour."
+    }
+  ]
+}

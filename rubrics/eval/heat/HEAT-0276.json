@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0276",
+  "caption": "Rain begins on a warm, humid day while a car sits with its windows shut, and the inside of the windshield fogs over while the wipers sweep the outside without clearing it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car sits with its windows shut in the rain."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The inside of the windshield fogs."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The wipers sweep the outside."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Each wiper pass leaves the haze unchanged."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The wipers clear rain from the outside."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The fog thickens as the rain goes on."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each wiper pass clears the rain from the outer face and leaves the inner haze as it was.",
+      "fail": "A wiper pass clears the fog from the inside of the glass; or the haze thins in a band following the wiper; or the wipers sweep and the outside stays as streaked with rain as before; or the fog clears where the wiper has passed and returns between passes."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog on the inside only thickens while the car stays shut and the rain goes on.",
+      "fail": "The fog clears while the car stays shut; or the fog thins and thickens with the wipers' rhythm; or the windshield is fogged before the rain begins; or the fog retreats to the glass's edges while the rain goes on."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Rain runs downward on the outer face and drops in the inner fog run downward too.",
+      "fail": "Rain runs up the windshield; or a drop on the inner face runs upward; or water gathers along the glass's top edge and stays; or a drop leaves the glass and rises."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Each wiper sweeps across the glass in an arc about its pivot and returns, and the blade stays on the glass.",
+      "fail": "A wiper lifts off the glass and sweeps through the air; or a wiper moves in a straight line across the glass; or a wiper sweeps about a pivot that moves along the glass; or a blade passes through the glass."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One windshield with its wipers; the wipers stay attached and the glass stays whole.",
+      "fail": "A wiper vanishes; or a third wiper appears; or a wiper passes through the glass; or the windshield changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dashboard, the wipers' arms and the view outside stay the same.",
+      "fail": "The dashboard changes colour; or a wiper arm changes shape; or the scene outside jumps to a different place."
+    }
+  ]
+}

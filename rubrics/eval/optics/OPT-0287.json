@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0287",
+  "caption": "A moth flutters through the beam of a projector in a dark hall and is brightly lit only while it is inside the cone of light.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A moth flutters through the beam of a projector in a dark hall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is brightly lit only while inside the cone of light."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "Its shadow appears on the screen while it is in the beam."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The moth is dim outside the beam, flares bright as it enters, and dims again as it leaves.",
+      "fail": "It is bright outside the beam; or dark inside it; or stays bright after leaving."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The brightness changes only with the moth's position in the beam.",
+      "fail": "It flickers with the moth still; or the beam moves; or the hall brightens."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Its shadow appears on the screen while it is in the beam.",
+      "fail": "There is no shadow in the beam; or a shadow outside it; or the shadow is away from the beam's line."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The beam is one cone from the projector.",
+      "fail": "It bends; or splits; or floods the hall."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One moth keeps its wings.",
+      "fail": "It splits; or a wing detaches; or a second moth appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hall and the screen stay the same.",
+      "fail": "The picture changes with no click; or the hall rearranges; or the projector changes."
+    }
+  ],
+  "note": "The moth is self-driven; only the light on it is judged. Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

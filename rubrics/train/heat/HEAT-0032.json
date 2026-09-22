@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0032",
+  "caption": "A handful of chocolate chips is dropped into a saucepan of hot cream, and the chips melt into the cream.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A saucepan of cream."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Chocolate chips are dropped into the cream."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The chips melt: they lose their shape."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Dark streaks spread through the pale cream."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Steam rises from the cream."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the melting follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The chips only soften, lose their edges and shrink while the cream grows darker; chips do not form again.",
+      "fail": "A chip regains its pointed shape; or dark streaks gather back into a chip; or the mixture separates into pale cream and hard chips again; or the chips alternate between hard and soft."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The melting chocolate is a thick liquid that smears and blends into the cream and the chips are soft solids that squash rather than shatter.",
+      "fail": "A chip shatters into dry shards; or the melted chocolate runs as thin as water and sits apart on top; or a chip stays hard-edged while glossy and smearing; or the mixture sets into a rigid block in the hot pan."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The chips sink into the cream or sit in it and the dark streaks sink and spread; the cream's surface stays level.",
+      "fail": "A chip rises out of the cream and hangs above it; or the streaks climb the pan's wall and stay; or the surface tilts and stays tilted with the pan level; or chocolate gathers on the pan's rim."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The chips show the hot cream around them: they go glossy where they are wetted and the cream darkens where they lie.",
+      "fail": "The chips sit in the cream sharp-edged and matt while the cream darkens; or the cream darkens on the far side of the pan from the chips with nothing stirring it there; or the chips soften while the cream stays pale everywhere."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The chips that go in are the chips in the pan and the pan's contents gain nothing.",
+      "fail": "Chips appear in the pan with none falling in; or a chip vanishes with none of it joining the cream; or the pan's level rises with nothing added; or a chip passes through the pan's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the hob and the surroundings stay the same.",
+      "fail": "The pan changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ]
+}

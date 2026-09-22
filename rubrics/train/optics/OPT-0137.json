@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0137",
+  "caption": "A straight stick is lowered into a clear pond, and the underwater part appears to angle away from the part above the surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A straight stick is lowered into a clear pond."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The underwater part appears to angle away from the part above the surface."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The apparent bend is at the surface."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The stick is straight when lifted out."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The apparent bend is at the surface and its size changes with the stick's angle.",
+      "fail": "The bend is above or below the surface; or it stays the same at every angle; or the stick looks straight in the water."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The stick is straight and rigid; the bend is an appearance that is absent out of the water.",
+      "fail": "The stick is physically bent when out; or the bend stays at a fixed point on the stick as it is raised; or the stick flexes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pond surface is level and the water clear.",
+      "fail": "The surface tilts and holds; or the water goes opaque; or the water leaps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The stick moves only with the hand.",
+      "fail": "It floats up; or sinks away; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One stick.",
+      "fail": "It duplicates; or vanishes below the surface; or passes through the bed."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stick and the pond stay the same.",
+      "fail": "The stick changes colour underwater; or the pond changes; or the bank rearranges."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0024",
+  "caption": "The start button on a blender is pressed, and the blades spin and the contents whirl.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A blender with contents in its jug."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The start button is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The blades spin."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The contents whirl."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The blades and contents are still before the press."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is still, press, spinning and whirling."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The blades start to spin and the contents start to move at the moment the button is pressed, and only then.",
+      "fail": "The button is pressed and the blades stay still to the end of the clip; or the contents whirl before the press; or the blades spin while the contents stay still; or the contents whirl while the blades are still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Before the press nothing in the jug moves; afterwards the blender runs steadily and does not stop, start or reverse on its own.",
+      "fail": "The blades stop and restart with the button untouched; or the contents swirl before the button is touched; or the blades reverse direction; or the jug spins round with the blades."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The contents swirl round the jug in the direction of the blades, climbing the walls and dipping at the centre.",
+      "fail": "The contents rise straight up as a column; or swirl against the blades' direction; or stay flat and still at the surface while the blades spin below; or the contents leap out of a closed jug."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The contents flow as liquid or soft food; the jug stays rigid and the blades stay stiff.",
+      "fail": "The contents move as a solid block; or the jug wobbles or bulges; or the blades bend or flop like rubber."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One blender with one jug; the contents stay inside the jug; the finger passes through nothing.",
+      "fail": "The contents pass through the jug's walls; or the jug vanishes or duplicates; or the finger passes into the base; or the contents change into something else or vanish."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blender's colour, the jug and the counter stay the same; the contents change only by mixing.",
+      "fail": "The blender changes colour; or the jug changes shape; or the counter's contents rearrange."
+    }
+  ],
+  "note": "The contents turning smoother or changing colour as they blend is the expected result and is not judged."
+}

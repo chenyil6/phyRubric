@@ -1,0 +1,82 @@
+{
+  "id": "ACOU-0022",
+  "caption": "The wire of a garden fence is plucked, and the wire blurs and hums along its span before settling.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A garden fence with a wire strand."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The wire is plucked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The wire blurs along its span."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The wire settles to a sharp line."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "One wire is plucked; the other strands are left alone."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is pluck, blur, settle."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The wire is sharp and still until the fingers pull it; the blur begins at the pluck and only then; the other wires stay sharp.",
+      "fail": "The wire is already blurred before the hand reaches it; or blurs while the hand is well away; or the hand plucks and the wire stays a sharp line; or a different wire blurs from the one plucked."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The blur is widest right after the release and narrows steadily until the wire is sharp; it does not widen again.",
+      "fail": "The blur widens after it has begun to narrow; or holds the same width for the whole clip; or the wire goes sharp and blurs again with nothing touching it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wire vibrates between its fixed posts: the blur lies between the posts, widest around the plucked point, and the wire stays attached.",
+      "fail": "The wire pulls free of a post; or the blur is at the posts and absent at the plucked point; or the wire sags into a loop and hangs slack; or a post leans with the pluck."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "When a hand closes on the vibrating wire the blur stops at once and the whole wire is sharp.",
+      "fail": "The wire keeps blurring through and beyond the gripping hand; or the span stays blurred for the rest of the clip while the hand holds it; or the wire starts blurring again after the hand lets go with no new pluck.",
+      "precondition": "A hand grips the wire while it is still blurred."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The fence keeps its wires and posts; the plucked wire stays one strand and passes through nothing.",
+      "fail": "Wires appear or vanish; or the wire passes through the hand or a post; or the wire splits into two strands; or a post vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wire's colour, the posts and the garden behind stay the same.",
+      "fail": "The wire changes colour; or the posts change spacing between frames; or the plants behind change."
+    }
+  ],
+  "note": "The hum is inaudible and is not judged. The caption does not say the wire is gripped; P4 applies only if a hand is seen closing on it."
+}

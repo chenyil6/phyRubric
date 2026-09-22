@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0078",
+  "caption": "An electric blanket is plugged in and switched on, and its small control light comes on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An electric blanket with a cord and a small controller."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The blanket's plug is pushed into a socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The switch on the controller is turned on."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The small light on the controller comes on."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The light is on the blanket's controller, not elsewhere."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is plug in, switch on, light."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The control light stays dark after the plug goes in and comes on when the switch is turned on, and only then.",
+      "fail": "The light comes on as the plug goes in with the switch untouched; or the switch is turned and the light stays dark; or the light is lit before the plug reaches the socket."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once lit the light stays on while the plug and switch stay as they are; it goes off only if the switch is turned back or the plug pulled.",
+      "fail": "The light goes out with the switch on and the plug in; or switches on and off untouched; or stays lit after the plug has been pulled out."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The blanket lies as it was laid and moves only where the controller or cord is handled.",
+      "fail": "The blanket ripples or shifts by itself as the light comes on; or lifts off the bed; or the cord slides across the blanket with nothing touching it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The blanket drapes as cloth, the cord hangs slack and the controller is a rigid block.",
+      "fail": "The blanket stands stiff like a board; or the cord stands rigid in the air or stretches like elastic; or the controller bends when pressed."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One blanket, one cord, one controller, one plug; the plug enters the socket rather than the wall and the controller stays on top of the blanket.",
+      "fail": "The plug passes into the wall beside the socket; or a second controller or plug appears; or the controller sinks into the blanket; or the cord splits or detaches."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blanket's colour and pattern, the controller's markings and the bed stay the same apart from the light.",
+      "fail": "The blanket changes colour or pattern; or the controller's markings change; or the bedding changes."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0056",
+  "caption": "A struck tuning fork is brought up to a ping-pong ball hanging on a thread, and the ball is kicked away and swings.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ping-pong ball hangs on a thread."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A tuning fork is brought up to the ball."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ball is kicked away from the fork."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The ball swings."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fork is shown being struck, or its prongs show a blur."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The fork approaches first; the kick and the swing follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The ball hangs still until the prongs touch it and moves off only on contact.",
+      "fail": "The ball swings away before the fork reaches it; or the prongs touch it and it hangs unmoved; or the ball moves toward the fork on its own."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The ball is knocked outward, swings back and is kicked again if it returns to the ringing fork; with the fork withdrawn its swing shrinks.",
+      "fail": "The ball swings ever wider with the fork held away; or stops dead in mid-swing; or is kicked again with the fork withdrawn; or comes to rest pressed against the prongs while they are still blurred."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The thread stays taut with the ball hanging below its fixing; at rest the ball hangs straight down.",
+      "fail": "The thread goes slack while the ball stays up; or the ball rises above its fixing; or rests tilted with nothing touching it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ball and the fork stay rigid and the thread stays straight.",
+      "fail": "The ball dents and stays dented; or the prongs bend; or the thread stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball, one fork; the prongs do not pass through the ball.",
+      "fail": "A second ball appears; or the ball vanishes; or the prongs pass through the ball; or the fork changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour, the fork's size and the thread's length stay the same.",
+      "fail": "The ball changes colour; or the fork changes size; or the thread changes length."
+    }
+  ],
+  "note": "The hand holding the fork is a trigger and is not judged."
+}

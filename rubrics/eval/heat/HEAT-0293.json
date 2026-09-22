@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0293",
+  "caption": "Two jars of honey are tipped side by side, one straight from the fridge and one that sat in the sun; the warm honey pours out in a quick stream while the cold honey barely moves.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two jars of honey are tipped side by side."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "One jar has been in the sun and one in the fridge."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The warm honey pours out in a stream."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The cold honey creeps or stays put."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Both jars are tipped at about the same moment."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The difference between the two is plain."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "Both are thick liquids, the warm one running in a thinner faster stream and the cold one creeping as a stiff mass that holds its shape.",
+      "fail": "The cold honey pours out as freely as the warm one; or the warm honey stands as a rigid column as it leaves the jar; or the cold honey shatters as a solid; or the warm honey runs as thin as water and splashes."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each honey only advances down and out and neither runs back up into its jar; the difference does not reverse.",
+      "fail": "The cold jar empties faster than the warm one; or a stream runs back up into its jar; or the warm honey stops and the cold one speeds up with nothing changed; or the honey climbs the jar's inner wall and stays."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Both honeys move downward out of the tipped jars and fall or pile below.",
+      "fail": "A honey runs upward out of a tipped jar; or a stream hangs in the air without falling; or the honey climbs the jar's outside; or a pile below rises back into a jar."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The jars show their contents moving: the warm jar's level drops while the cold jar's stays nearly still.",
+      "fail": "The warm jar's level stays unchanged while a stream pours from it; or the cold jar's level drops as fast as the warm one's; or honey pours from a jar that is plainly still upright and untipped."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two jars of honey; the honey goes only from jar to the surface below and none appears from nowhere.",
+      "fail": "Honey appears below a jar with none leaving it; or a jar refills itself; or a third jar appears; or honey passes through a jar's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jars' labels, the honey's colour and the surface below stay the same.",
+      "fail": "A label changes; or the honey changes colour; or the surface below changes pattern."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0114",
+  "caption": "A heavy freight train passes a level crossing, and the coins in a cup holder of a waiting car rattle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Inside a car waiting at a level crossing: a cup holder with coins in it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A freight train passes the crossing, seen through the windows."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The coins rattle."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The car is stationary."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The train approaches, the coins rattle, the train passes, the coins settle."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The rattling starts as the train arrives, is strongest as it passes and stops after it has gone.",
+      "fail": "The train passes in view and the coins lie dead still; or the coins rattle hardest after the train has gone; or the coins are still throughout the pass and start rattling once the train is out of view.",
+      "precondition": "The train is visible through the windows."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The coins tremble in the holder; they do not leap out or slide as a group.",
+      "fail": "The coins leap out of the holder; or slide up the holder's side in one glide and hang there; or the holder itself moves in the dashboard; or the coins rattle unchanged with the outside scene still and empty."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The coins stay at the bottom of the holder, hopping and falling back.",
+      "fail": "Coins hang in the air; or rise out of the holder; or stick to the holder's wall above the pile."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The coins and the dashboard are rigid.",
+      "fail": "Coins bend; or the dashboard ripples; or the holder flexes like rubber."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The coins keep their count; one continuous train; nothing passes through the barrier.",
+      "fail": "Coins appear from nowhere; or vanish; or the train's wagons appear or vanish mid-train; or the train passes through the barrier."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The coins' faces and sizes, the dashboard and the window view stay the same apart from the train.",
+      "fail": "The coins change size or face; or the dashboard changes; or the window view changes to a different scene."
+    }
+  ]
+}

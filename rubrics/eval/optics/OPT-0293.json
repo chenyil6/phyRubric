@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0293",
+  "caption": "A green spotlight is aimed at a white marble statue in a garden at night, and the statue appears green.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A white marble statue stands in a garden at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A green spotlight is aimed at it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The statue appears green."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "It returns to white when the light is off."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The statue looks green only where the beam falls and while it is on.",
+      "fail": "It is green with the light off; or stays white under the green beam; or turns a different colour."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change is confined to where the beam falls and happens with the light.",
+      "fail": "Parts outside the beam turn green; or the statue changes before the light; or long after."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The statue's shape and shading show in green, not as a colour change of the marble.",
+      "fail": "Parts are a different colour; or the statue is flat green with no shading; or the statue changes shape."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves; only the light changes.",
+      "fail": "The statue moves; or the spotlight swings by itself; or the lit area wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One statue and one spotlight.",
+      "fail": "A second statue appears; or the spotlight vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The garden stays the same.",
+      "fail": "The plants rearrange; or the plinth changes; or the spotlight changes shape."
+    }
+  ]
+}

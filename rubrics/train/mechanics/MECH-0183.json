@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0183",
+  "caption": "A light curtain hanging in front of an open window billows into the room with each gust of wind and falls back between gusts.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A light curtain hangs in front of an open window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It billows into the room."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It falls back."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The billowing repeats with each gust."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Each billow comes first and the fall back follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The curtain moves in step with the wind, inward with a gust and back when it drops.",
+      "fail": "It moves with the window shut and no wind signs; or it billows outward through the window against the gust; or it stays rigidly still while other things blow."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The light fabric flows and ripples and hangs in folds when slack.",
+      "fail": "It is rigid like a board; or stretches like elastic; or stays inflated after the gust."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Between gusts it hangs down from the rail.",
+      "fail": "It hangs sideways with no wind; or rises to the ceiling; or floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The billow is into the room, downwind of the window.",
+      "fail": "It billows outward with the same wind; or alternates directions with no cause; or swings crosswise."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One curtain on one rail keeps its number.",
+      "fail": "The curtain duplicates; or passes through the wall; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The curtain's colour and the room stay the same.",
+      "fail": "The curtain changes colour; or the window changes; or the room rearranges."
+    }
+  ]
+}

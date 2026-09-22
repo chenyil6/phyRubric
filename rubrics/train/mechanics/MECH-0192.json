@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0192",
+  "caption": "A vacuum cleaner nozzle is run over crumbs scattered on a carpet, and the crumbs disappear into the nozzle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Crumbs are scattered on a carpet."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A vacuum cleaner nozzle is run over them."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The crumbs disappear into the nozzle."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The nozzle passes first and the crumbs go after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Crumbs jump toward the nozzle only when it comes close and vanish into it.",
+      "fail": "Crumbs vanish before the nozzle nears; or the nozzle passes and the crumbs stay; or crumbs vanish elsewhere on the carpet."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The carpet is clean behind the nozzle's path and crumbs do not reappear.",
+      "fail": "Crumbs reappear behind the nozzle; or new crumbs appear; or the carpet stays covered after the pass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Crumbs move toward the nozzle mouth, not away.",
+      "fail": "They fly away from the nozzle; or sideways; or straight up."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Crumbs stay still until the nozzle nears.",
+      "fail": "Crumbs move about before the nozzle comes; or the carpet ripples; or crumbs hop with the nozzle far away."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One nozzle keeps its number and does not pass through the carpet.",
+      "fail": "It passes through the carpet; or duplicates; or the carpet tears open."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The carpet's pattern and the nozzle stay the same.",
+      "fail": "The carpet changes pattern; or the nozzle changes; or the room rearranges."
+    }
+  ]
+}

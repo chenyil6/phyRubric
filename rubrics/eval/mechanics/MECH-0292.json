@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0292",
+  "caption": "A person standing on one leg wobbles, sways further, and puts the other foot down to stay upright.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A person stands on one leg."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They wobble and sway further."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They put the other foot down."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sway comes first and the foot comes down after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sway grows before the foot comes down, and the foot lands on the side the body was leaning toward.",
+      "fail": "The foot lands on the other side; or they fall over; or they stay perfectly still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The sway stops after the foot lands.",
+      "fail": "They keep swaying after; or the sway stops before the foot is down; or they jump."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The foot lands on the ground.",
+      "fail": "It sinks; or hovers above the ground while they steady; or passes through."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The body bends at the joints.",
+      "fail": "It folds mid-bone; or a limb detaches; or a leg stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Their limbs keep their number and stay attached.",
+      "fail": "A limb vanishes; or a third leg appears; or a second figure appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Their clothing and the floor stay the same.",
+      "fail": "The clothing changes colour; or the floor changes; or the room rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Form, posture and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

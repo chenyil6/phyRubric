@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0162",
+  "caption": "A door blown open by a draught swings until it reaches a magnetic doorstop, and the door snaps to the stop and holds open.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A door swings toward open."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnetic doorstop stands at the end of the door's travel, on the floor or wall."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The door reaches the stop and snaps onto it."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The door holds open on the stop."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "No hand pushes the door: it swings as if blown."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The swing comes first, the snap onto the stop follows, and the hold comes last."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the door nears the stop it closes the last gap onto it and comes to rest touching it.",
+      "fail": "The door reaches the stop and bounces back off it; or halts a gap short of the stop and hangs there; or swings on past where the stop stands; or rests held open with door and stop not touching."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Once on the stop the door stays held open for the rest of the clip; it does not drift or swing closed with nothing touching it.",
+      "fail": "The door swings back toward closed after coming to rest on the stop; or rocks open and shut on the stop; or jumps to a different angle between one moment and the next."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The door swings about its hinges as one panel, in one direction toward the stop, its free edge sweeping an arc.",
+      "fail": "The door reverses and swings toward closed before it has reached the stop; or the hinge side moves along the frame; or the door moves away from the frame as a whole."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The door is a rigid panel that keeps its flat shape through the swing; the stop stays fixed to the floor or wall as the door lands on it.",
+      "fail": "The door bends or ripples as it swings; or the stop slides across the floor when the door meets it; or the door's edge squashes against the stop."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One door on its hinges and one stop; the door passes through neither wall, furniture nor stop, and stays attached to its frame.",
+      "fail": "The door passes through the wall or a piece of furniture; or the stop vanishes or reappears in a new spot; or a second door appears; or the door detaches from its frame."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The door's colour and handle, the floor and the stop stay the same.",
+      "fail": "The door changes colour; or the handle changes side or shape; or the floor pattern changes."
+    }
+  ],
+  "note": "The draught is invisible: the door beginning to swing with nothing visible pushing it is not a violation. What is judged is the arrival onto the stop and the door staying there."
+}

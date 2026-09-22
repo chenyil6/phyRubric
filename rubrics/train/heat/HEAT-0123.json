@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0123",
+  "caption": "A long barbecue lighter is clicked, and a small flame appears at its tip and burns steadily.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A long barbecue lighter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lighter's trigger is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A flame appears at its tip."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flame burns steadily."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flame is at the tip rather than the handle."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The press comes first and the flame follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flame appears at the tip at the moment the trigger is pressed and goes out when it is released.",
+      "fail": "The flame is alight before the trigger is pressed; or the trigger is pressed and no flame appears at all; or the flame stays alight after the trigger is released; or the flame appears at the handle rather than the tip."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The flame points upward however the lighter is tilted.",
+      "fail": "The flame points downward; or leans along the lighter's barrel as it is tilted; or hangs below the tip; or points at the hand whatever way the lighter is held."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once lit the flame burns steadily while the trigger is held and does not go out and relight by itself.",
+      "fail": "The flame goes out and relights with the trigger still held; or grows and shrinks in turn with the trigger held steady; or drifts away from the tip and burns in the air; or splits into two flames."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The lighter stays a rigid wand and the flame is a soft tongue of light at its tip.",
+      "fail": "The lighter's barrel bends or droops near the flame; or the flame holds a fixed rigid shape like a blade; or the lighter melts; or the flame casts solid pieces."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lighter with one tip; the lighter keeps its shape and the hand passes through nothing.",
+      "fail": "A second tip or flame appears; or the lighter vanishes; or the hand passes through the lighter; or the lighter changes into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lighter's body, its trigger and the surroundings stay the same.",
+      "fail": "The lighter changes colour; or the trigger moves to a different place; or the background changes between frames."
+    }
+  ]
+}

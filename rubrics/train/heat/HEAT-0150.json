@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0150",
+  "caption": "A fire steel is scraped with a knife, and sparks shower onto a nest of dry tinder that begins to smoke and then flame.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A fire steel is scraped with a knife over a nest of tinder."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Sparks shower from the steel."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sparks land on the tinder."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Smoke rises from where they land."
+    },
+    {
+      "id": "S5",
+      "weight": "core",
+      "check": "A small flame follows the smoke."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Nothing burns before the sparks land."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sparks fly downward from the steel onto the tinder below and go dark on the way or as they land, while the smoke and flame rise from the tinder.",
+      "fail": "The sparks rise from the steel and gather above it; or sparks hang in the air; or the smoke sinks and pools around the nest; or the flame points downward into the ground."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The sparks come only during the scrape, then smoke appears where they landed and a flame follows; the order does not reverse.",
+      "fail": "The smoke appears before any spark lands; or the flame appears before any smoke; or the sparks keep flying after the knife has stopped; or the charred tinder turns back to pale dry fibre."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The smoke and flame appear at the spot the sparks landed and not elsewhere.",
+      "fail": "The smoke rises from a part of the nest no spark reached; or the sparks land on the tinder and nothing smokes or catches at all to the end of the clip; or the flame appears in the air above the nest with a gap to the tinder; or the nest smokes while the sparks fly wide of it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The tinder is a nest of fine dry fibres that glows, curls and blackens, and the steel and knife stay rigid.",
+      "fail": "The tinder melts and drips; or the fibres stay pale and straight while glowing; or the nest lifts as one solid block; or the knife bends as it scrapes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One steel, one knife and one nest; the sparks come from the steel and the tinder chars rather than vanishing.",
+      "fail": "Sparks appear in the air far from the steel; or the nest vanishes at a stroke while still whole; or a second steel appears; or the knife passes through the steel."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ground, the steel's handle and the surroundings stay the same.",
+      "fail": "The steel's handle changes colour; or the ground changes texture; or the background changes between frames."
+    }
+  ],
+  "note": "Whoever scrapes the steel is not judged."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0013",
+  "caption": "The power button on a laptop is pressed, and the screen lights up and the keyboard glows.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A laptop with its screen dark."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The power button is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The screen lights up."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The keyboard glows."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The keys are unlit before the press."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark, press, screen and keys lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The screen and the keyboard light shortly after the press, and only then.",
+      "fail": "The button is pressed and the screen stays dark to the end of the clip; or the screen is lit before the press; or the keys glow while the screen stays dark to the end; or the laptop lights up with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the screen and keyboard stay lit for the rest of the clip.",
+      "fail": "The screen goes dark again by itself; or the keyboard glow switches on and off; or the screen flickers between lit and dark; or the screen lights and shrinks back to black."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The screen's glow reaches the keys and the desk in front of it; the keyboard glow sits at the keys.",
+      "fail": "The screen is lit while the keys and desk in front stay as dark as before; or the glow lies on the desk while the screen is dark; or the keyboard glow sits between the keys and not on them."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The laptop stays put on the desk as the button is pressed; the lid does not move by itself.",
+      "fail": "The laptop slides or turns on the desk at the press; or the lid opens further or closes by itself; or items on the desk jump."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One laptop with one screen and one keyboard; the laptop keeps its shape; the finger passes through nothing.",
+      "fail": "A second screen appears; or keys appear or vanish; or the finger passes into the keyboard; or the laptop changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The laptop's colour, its key layout and the desk stay the same apart from the light.",
+      "fail": "The laptop changes colour; or the key layout changes; or the desk's contents rearrange."
+    }
+  ],
+  "note": "What the screen shows is not judged; any content counts as lit."
+}

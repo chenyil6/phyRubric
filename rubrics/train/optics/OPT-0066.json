@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0066",
+  "caption": "A bicycle wheel rolls through a puddle showing the reflection of a building, and the image shatters into ripples.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A puddle shows the reflection of a building."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A bicycle wheel rolls through the puddle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The image shatters into ripples."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wheel enters first and the image breaks at that moment."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection breaks up at the moment the wheel enters and reforms as the ripples die.",
+      "fail": "It stays sharp while the water moves; or breaks before the wheel arrives; or never reforms on still water."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Before and after, the reflection is the inverted building; the building itself is unchanged.",
+      "fail": "The building changes; or the reflection is upright; or a different building appears in the puddle."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid: ripples spread from the wheel and fade.",
+      "fail": "The surface is rigid; or the ripples freeze; or the water leaps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The wheel rolls straight through and the water moves only where it is disturbed.",
+      "fail": "The wheel jinks; or the water churns before it arrives; or ripples appear elsewhere."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One puddle, one wheel and one building.",
+      "fail": "The wheel vanishes; or a second building appears; or the wheel passes through the pavement; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The building and the pavement stay the same.",
+      "fail": "The building changes colour; or the pavement changes; or the wheel changes."
+    }
+  ]
+}

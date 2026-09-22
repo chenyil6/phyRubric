@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0007",
+  "caption": "A tall wooden lifeguard chair stands on a beach with the low sun behind it, and its long shadow stretches across the sand in front of it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tall wooden lifeguard chair stands on a beach."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sun is low behind it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its long shadow stretches across the sand in front of it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow is longer than the chair is tall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the ground away from the sun and starts at the chair's legs.",
+      "fail": "It points toward the sun; or it floats detached from the legs; or it is missing under a plainly low sun."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the chair's outline, stretched long by the low sun.",
+      "fail": "It is a different shape; or it is short under a low sun; or it splits into two."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow stays still with the chair still.",
+      "fail": "It drifts across the sand by itself; or it changes length with nothing moving; or it swings round."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The chair stands on the sand and the shadow lies flat on it.",
+      "fail": "The chair floats; or the shadow stands up off the sand; or the shadow climbs the chair."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One chair and one shadow; the chair keeps its parts.",
+      "fail": "The chair duplicates or vanishes; or a second shadow appears; or the shadow becomes solid; or a leg vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The chair's paint and the beach stay the same, and the shadow stays dark.",
+      "fail": "The chair changes colour; or the shadow turns coloured; or the sand texture changes."
+    }
+  ]
+}

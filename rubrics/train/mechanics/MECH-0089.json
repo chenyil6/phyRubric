@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0089",
+  "caption": "A stack of textbooks is balanced on the palm of a hand; the hand tilts to one side, and the books slide off and fall to the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stack of textbooks is balanced on the palm of a hand."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The hand tilts to one side."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The books slide off."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "They fall to the floor."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Several books are stacked rather than one."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The tilt comes first, then the slide, then the fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The books slide toward the low side of the hand and fall from there.",
+      "fail": "They slide toward the high side; or they stay on the tilted palm; or they lift off the hand."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Once off the hand they drop to the floor and stay there.",
+      "fail": "They hang in the air; or rise; or land and re-stack."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The books stay put on the level palm and move only as the tilt grows.",
+      "fail": "They slide before the hand tilts; or they move again after landing; or they jump off as a block while the hand is level."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The books stay rigid, may fan open, and clatter on the floor.",
+      "fail": "They bend like rubber; or bounce high; or splash."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The books keep their number and pass through nothing.",
+      "fail": "Books vanish or multiply; or a book passes through the hand; or a book turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The books' covers, the hand and the room stay the same.",
+      "fail": "A cover changes colour; or the hand changes; or the room rearranges between frames."
+    }
+  ],
+  "note": "The hand is kept as the balancing surface; the person behind it is not judged."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0278",
+  "caption": "A skateboard's metal truck grinds along a steel rail at night, and sparks flick off where it scrapes.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A skateboard grinds along a steel rail at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its metal truck scrapes the rail."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Sparks flick off where it scrapes."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sparks come from the truck's contact with the rail."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The scrape comes first and the sparks follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Sparks appear only where and while the truck scrapes the rail; none appear before the board reaches the rail or after it leaves.",
+      "fail": "Sparks flick from the truck while the board is in the air or on the ground; or sparks appear on the rail where no truck touches; or sparks keep coming after the board has left the rail; or the rail glows along its length."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each spark is gone within a short flight; the sparks trail behind the board and leave nothing on the rail.",
+      "fail": "A spark stays lit at one spot on the rail after the board has passed; or a glowing line remains along the rail; or sparks flow back to the truck; or sparks lie glowing on the ground for the rest of the clip."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The sparks stream backward from the contact, opposite to the board's motion, and drop away.",
+      "fail": "Sparks fly ahead of the board; or spray equally in all directions; or climb steadily and stay aloft; or the trail moves along with the board as a fixed cloud."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The rail is a rigid bar that keeps its shape; the board's deck flexes only slightly and the trucks stay stiff.",
+      "fail": "The rail bends or sags under the board; or the deck folds like cloth; or a truck stretches; or the wheels squash flat."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The truck rides on the rail's surface; the board and rider pass through nothing; the rail stays whole.",
+      "fail": "The truck sinks into the rail; or the board passes through the rail; or the rider merges with the board; or a wheel detaches and floats."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The board's graphics, the rail and the surroundings stay the same.",
+      "fail": "The deck's graphics change; or the rail changes colour; or the surroundings rearrange."
+    }
+  ],
+  "note": "The rider is kept because the grind is the caption's action; riding technique is not judged."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0142",
+  "caption": "Brandy is ignited in a pan, and a sheet of flame rises above the pan and then dies down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pan with brandy in it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The brandy catches fire."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A sheet of flame rises above the pan."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flame dies down."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flame covers the liquid's surface."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is lit, rise, die down."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The flame stands upward from the liquid's surface and the liquid stays in the pan.",
+      "fail": "The flame points downward into the pan's base; or hangs below the pan; or the burning liquid climbs the pan's wall and over the rim with nothing tipping it; or the flame lies flat along the hob with nothing blowing it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flame rises, burns and then shrinks away, and it does not come back once gone.",
+      "fail": "The flame dies down and flares up again with nothing added; or sinks into the liquid and reappears; or grows steadily for the rest of the clip; or the liquid's level rises as it burns."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The flame sits on the liquid: it covers the surface and shrinks as the liquid does.",
+      "fail": "The flame burns in the air above the pan with a gap to the liquid; or the flame burns over a dry empty pan; or the flame covers only one spot while the whole surface is alight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The flame is a soft low sheet that waves over the liquid and the liquid stays a thin liquid that shifts as the pan moves.",
+      "fail": "The flame holds a fixed rigid shape; or the liquid sets solid as it burns; or the liquid stands in a heap above the rim; or the flame leaves solid pieces behind."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pan with its contents; the flame stays over the pan and the contents stay in it.",
+      "fail": "The flame detaches and floats away from the pan; or a second flame appears beside the pan; or the contents pass through the pan's wall; or the pan vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the hob and the surroundings stay the same.",
+      "fail": "The pan changes colour; or the hob's knobs move by themselves; or items around the hob rearrange."
+    }
+  ],
+  "note": "How high the flame rises is not judged. Who lights the brandy is not judged."
+}

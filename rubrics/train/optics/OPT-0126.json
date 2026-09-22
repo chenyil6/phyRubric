@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0126",
+  "caption": "A glass paperweight is slid over a newspaper, and the letters under it look swollen and bent.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass paperweight is slid over a newspaper."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The letters under it look swollen and bent."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The distortion shifts as the paperweight is slid."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The letters outside it are normal."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The distortion is confined to the area under the glass and shifts as it is slid.",
+      "fail": "Letters beside the glass are distorted; or letters under it are unchanged; or the distortion stays put as it slides."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The newspaper is unchanged; the swelling is an appearance.",
+      "fail": "The print changes; or letters move; or the paper bends."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The paperweight moves only with the hand and the paper stays put.",
+      "fail": "It slides by itself; or the paper moves; or the image shifts with both still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The paperweight is rigid glass.",
+      "fail": "It bends; or ripples; or goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One paperweight and one newspaper.",
+      "fail": "It duplicates; or the paper vanishes; or it passes through the paper."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The newspaper and the desk stay the same.",
+      "fail": "The paper changes colour; or the desk changes; or the glass changes colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0129",
+  "caption": "A CNC plasma cutter slices a steel sheet, and a fountain of sparks pours from the underside of the cut.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A CNC plasma cutter over a steel sheet."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The torch cuts the sheet: a bright point moves along it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A fountain of sparks pours from the underside of the cut."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sparks come from below the sheet, under the torch."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The torch's cut comes first and the sparks follow it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sparks pour downward from the underside of the sheet, spreading as they fall, and fade as they drop.",
+      "fail": "Sparks rise from the underside and gather above the sheet; or hang in the air beneath it; or lie on the floor glowing like lamps for the rest of the clip; or the fountain climbs without arcing down."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The spark fountain stays beneath the torch and moves along with it, following the line of the cut.",
+      "fail": "The fountain lags far behind the torch or runs ahead of it; or sparks pour from a part of the sheet away from the cut; or the fountain stays fixed while the torch moves on."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Sparks appear only while the torch is cutting and stop when the torch stops or lifts.",
+      "fail": "Sparks pour from the sheet while the torch is off and still; or continue after the torch has lifted; or sparks flow back up into the cut."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "Sparks are transient and leave nothing glowing behind; the sheet stays one sheet with a cut line where the torch has been.",
+      "fail": "Glowing dots stay on the floor for the rest of the clip; or a cut line appears where the torch has not been; or the cut heals behind the torch; or a second torch appears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The torch cuts a narrow line through the sheet; the sheet stays flat on its bed and the machine keeps its shape.",
+      "fail": "The torch passes through the sheet leaving it unmarked; or the sheet bends like cloth; or the torch head sinks into the sheet; or the gantry passes through the sheet."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sheet's colour away from the cut, the machine and the workshop stay the same.",
+      "fail": "The sheet changes colour away from the cut; or the machine changes colour; or the workshop background rearranges."
+    }
+  ]
+}

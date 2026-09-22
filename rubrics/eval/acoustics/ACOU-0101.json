@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0101",
+  "caption": "A large temple bell is struck once with its wooden beam, and a small pebble resting on the bell's shoulder skitters and slides off.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A large temple bell with a small pebble resting on its shoulder."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bell is struck once with its wooden beam."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pebble skitters and slides off the bell."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The strike is a single blow."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike comes first and the pebble moves after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The pebble is still until the beam lands and moves at the blow.",
+      "fail": "The pebble skitters before the beam reaches the bell; or moves with the beam hanging away; or the beam lands and the pebble stays put."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The blow sends the pebble off the bell: it leaves its spot and comes to rest lower down or on the ground, and does not return.",
+      "fail": "The pebble hops and settles back in its exact spot on the shoulder; or slides off and then climbs back onto the bell; or comes to rest higher on the bell than where it started."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pebble slides down the bell's curve and falls to the ground.",
+      "fail": "The pebble slides upward toward the crown; or hangs in the air beside the bell; or floats away sideways."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bell is rigid and sways as a whole; the beam rebounds; the pebble is rigid.",
+      "fail": "The beam sinks into the bell; or the bell's wall dents and springs back like rubber; or the pebble squashes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bell, one beam, one pebble; the beam does not pass through the bell.",
+      "fail": "A second pebble appears; or the pebble vanishes in mid-slide; or the beam passes through the bell; or the bell changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bell's colour and inscriptions, the beam and the surroundings stay the same.",
+      "fail": "The bell changes colour or its inscriptions change; or the beam changes length; or the surroundings change."
+    }
+  ],
+  "note": "Whoever swings the beam is a trigger and is not judged."
+}

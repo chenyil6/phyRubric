@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0143",
+  "caption": "A magnifying glass focuses sunlight onto a dry leaf until a wisp of smoke appears and a small glowing spot begins to spread.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A magnifying glass is held over a dry leaf."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A bright spot of light lies on the leaf."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A wisp of smoke rises from the bright spot."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A dark scorched patch appears and spreads."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The patch has a glowing edge."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The bright spot comes first, then the smoke, then the patch."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The scorched patch only grows outward from the bright spot and does not shrink or lighten.",
+      "fail": "The scorched patch shrinks; or the dark patch turns back to pale leaf; or the patch appears away from the bright spot; or the patch grows and shrinks in turn."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The leaf chars where the light is focused and shrinks rather than vanishing, and the glass stays outside it.",
+      "fail": "The leaf vanishes at a stroke while still whole; or a second leaf appears; or the glass passes into the leaf; or a hole appears in the leaf where the spot never lay."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The smoke rises from the bright spot, and the patch appears where the spot lies and follows it if it moves.",
+      "fail": "Smoke rises from a part of the leaf the spot never reached; or the spot lies on the leaf and nothing darkens or smokes at all to the end of the clip; or the patch stays where it was while the spot moves on and the new place stays pale; or the smoke rises before any bright spot appears."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The smoke rises from the leaf and any ash falls.",
+      "fail": "The smoke sinks and pools on the ground; or pours downward through the leaf; or ash lifts and stays aloft; or the smoke hangs as a fixed shape without rising."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One leaf and one glass; the leaf keeps its outline apart from the burnt hole and the glass keeps its shape.",
+      "fail": "The leaf turns into another object; or the glass bends or melts; or a second glass appears; or the leaf's stem detaches and floats."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The leaf's colour away from the patch, the ground and the surroundings stay the same.",
+      "fail": "The leaf changes colour away from the burn; or the ground changes texture; or the background changes between frames."
+    }
+  ],
+  "note": "Whoever holds the glass is not judged; the sunlight is invisible except as the bright spot."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0180",
+  "caption": "A damp sock hangs from a stick propped beside a campfire, and steam rises from it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A damp sock hangs from a stick beside a campfire."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Steam rises from the sock."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The steam comes from the side facing the fire."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The steam drifts upward and away."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sock hangs rather than being held."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam leaves the sock going up, spreading and thinning, while the sock hangs downward from the stick.",
+      "fail": "The steam sinks and pools below the sock; or pours downward through the sock; or the sock's toe rises and stays up with nothing lifting it; or the steam hangs as a fixed shape without rising."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The steam only leaves the sock and the sock only dries; it does not get wetter while it hangs by the fire.",
+      "fail": "The steam runs back into the sock; or a puff retreats to the fabric; or a dried patch goes dark and wet again with nothing wetting it; or the steaming grows steadily thicker the longer the sock hangs."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The steam comes from the sock's own damp fabric and is thickest on the side toward the fire.",
+      "fail": "The steam rises from the stick rather than the sock; or the steam is thickest on the side away from the fire; or the sock hangs by the fire soaking wet and no steam leaves it at all; or the steam rises from the ground beside the fire while the sock is clear."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The sock is limp damp cloth that hangs in folds and sways, and the steam is a soft cloud that spreads.",
+      "fail": "The sock stands stiff like a board; or stretches downward like elastic; or the steam holds a fixed rigid shape; or the sock sets hard as it dries."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sock on one stick; the sock stays on the stick and the fire's wood keeps its number.",
+      "fail": "The sock vanishes; or a second sock appears; or the sock passes through the stick; or a log vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sock's colour and pattern, the stick and the surroundings stay the same.",
+      "fail": "The sock changes colour or pattern; or the stick changes shape; or the background changes between frames."
+    }
+  ],
+  "note": "Scorching of the sock is not judged; the caption's event is the steam."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0049",
+  "caption": "The lid is lifted off a rice cooker, and a cloud of steam billows up out of it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A rice cooker with its lid on."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lid is lifted off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A cloud of steam comes out of the cooker."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The steam billows up and spreads."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lift comes first and the steam follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam rises out of the cooker, spreading and thinning as it climbs.",
+      "fail": "The steam pours down the cooker's sides and pools on the counter; or sinks to the floor; or stays inside the cooker with the lid off; or streams straight sideways with nothing blowing it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The steam escapes when the lid comes off and the plume moves outward and away; puffs that have left keep going.",
+      "fail": "The plume runs back into the cooker; or a puff retreats toward the pot; or steam appears above the closed lid and drifts down into it; or steam billows before the lid has moved."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The steam is a soft cloud that spreads, waves and fades; the lid is a rigid piece and the rice below stays a bed of grains.",
+      "fail": "The steam holds a fixed rigid shape; or pours like a liquid over the rim; or the lid bends like cloth as it lifts; or the steam lifts the rice out of the pot."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The steam comes from the hot food: the plume issues from the pot's mouth where the lid was and the rice below looks wet.",
+      "fail": "The plume comes from the cooker's base or side rather than its mouth; or steam pours from the closed part of the cooker while its mouth is clear; or the pot below holds no food and no water while a thick plume pours from it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cooker and one lid; the lid stays a lid and nothing passes through the cooker.",
+      "fail": "The lid passes through the cooker's rim; or a second lid appears; or the cooker vanishes; or a hand passes through the lid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cooker's casing, its controls and the counter stay the same.",
+      "fail": "The casing changes colour; or the controls rearrange; or items on the counter change."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0220",
+  "caption": "The corner of a white paper towel is dipped into a cup of blue dye, and the blue creeps up the towel.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cup of blue dye is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The corner of a white paper towel is dipped into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The blue creeps up the towel."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The colour stops advancing when the towel is lifted out."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The colour climbs from the wet corner upward and stops advancing when the towel is lifted out; it does not retreat.",
+      "fail": "It spreads from the dry end; or retreats; or keeps climbing fast after the towel is out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The wet part is the dye's blue and the dry part stays white.",
+      "fail": "The wet part is a different colour; or the dry part changes; or the whole towel turns blue at once."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The towel is absorbent paper that darkens where wet.",
+      "fail": "The dye beads off it; or the towel dissolves; or it stays dry in the cup."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The towel moves only with the hand.",
+      "fail": "It dips itself; or floats; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One towel and one cup.",
+      "fail": "The towel duplicates; or the cup vanishes; or dye appears from nowhere."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cup and the table stay the same.",
+      "fail": "The cup changes colour; or the table changes; or the dye changes colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

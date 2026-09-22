@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0108",
+  "caption": "Windshield wipers sweep in heavy rain, and each sweep clears a sharp view of the road that blurs again as rain lands.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Windshield wipers sweep in heavy rain."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Each sweep clears a sharp view of the road."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The view blurs again as rain lands."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Each sweep comes first and the clear view follows it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The view is clear immediately behind each wiper stroke and degrades between strokes.",
+      "fail": "The view stays blurred behind the wiper; or it is clear with no wipe; or the rain clears itself."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Clearing and re-blurring alternate with the strokes.",
+      "fail": "The view stays clear through heavy rain with the wipers stopped; or it blurs during a stroke; or it flickers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The wipers sweep in their arc and the rain falls.",
+      "fail": "The wipers stop mid-arc with nothing wrong; or rain falls upward; or the wipers pass through each other."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Raindrops are liquid that spread and run.",
+      "fail": "They are rigid beads; or they bounce off; or they freeze in place."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two wipers and one windshield.",
+      "fail": "A wiper vanishes; or a third appears; or the windshield duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car interior and the road stay the same.",
+      "fail": "The dashboard changes; or the road rearranges; or the wipers change."
+    }
+  ]
+}

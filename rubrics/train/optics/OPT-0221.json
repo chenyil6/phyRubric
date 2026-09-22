@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0221",
+  "caption": "A clear-cut crystal pendant is turned in sunlight, and coloured sparkles dance across the ceiling.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A clear-cut crystal pendant is turned in sunlight."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Coloured sparkles dance across the ceiling."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The sparkles disappear when the pendant is put down or the sun goes in."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The sparkles move as the pendant turns and would disappear if it were put down or the sun went in.",
+      "fail": "They stay put while the pendant turns; or are there with no sun; or the pendant turns in sun with no sparkles."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The sparkles do not move on their own.",
+      "fail": "They dance with the pendant still; or flicker in steady sun; or drift."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The sparkles are rainbow-coloured.",
+      "fail": "They are all white; or a single colour; or change colour with nothing moving."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The sparkles are many small spots.",
+      "fail": "They merge into one flood; or are large squares; or a single spot."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pendant.",
+      "fail": "It duplicates; or vanishes; or a sparkle becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room stays the same.",
+      "fail": "Furniture rearranges; or the ceiling changes; or the pendant changes shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

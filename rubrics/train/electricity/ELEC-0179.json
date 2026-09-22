@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0179",
+  "caption": "A balloon rubbed on a wool jumper is lowered over small torn scraps of paper on a table, and the scraps jump up and cling to the balloon.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A balloon is rubbed on a wool jumper."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Small torn scraps of paper lie on a table."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The balloon is lowered over the scraps."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The scraps jump up and cling to the balloon."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The scraps are small: torn pieces, not whole sheets."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rub comes first, then the lowering, then the jump."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The scraps lie still until the balloon is close above them, then leap up to it; scraps far from the balloon stay put.",
+      "fail": "Scraps jump while the balloon is still high above or off to one side; or scraps across the table stir while the balloon is far from them; or the scraps move before the balloon has been rubbed and brought near; or scraps slide away from the balloon."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Scraps that reach the balloon hang from its underside or cling to its sides, touching it; any that drop off fall back to the table.",
+      "fail": "Scraps hover in the air between table and balloon without touching either; or a scrap that lets go drifts upward or sideways; or scraps rise past the balloon and continue upward; or scraps on the balloon's top stand upright away from it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The balloon is a light elastic shell that keeps its round shape; the scraps are limp paper that bend and flutter.",
+      "fail": "The balloon keeps a deep dent after the hand leaves; or stretches out like taffy; or the scraps stand rigid like cards on the balloon; or the scraps stretch."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Each scrap moves along the line from its spot to the balloon and stops on the balloon; scraps travel with the balloon as it is moved.",
+      "fail": "A scrap flies past the balloon and off; or scraps circle the balloon in the air; or scraps stay hanging in place when the balloon is moved away; or scraps bounce off the balloon and back again several times."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The scraps on the balloon are the scraps from the table; the balloon stays one balloon and passes through nothing.",
+      "fail": "Scraps multiply on the balloon; or scraps vanish in mid-air; or the balloon passes into the table; or scraps merge into one sheet."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour, the scraps' colour and the table surface stay the same.",
+      "fail": "The balloon changes colour or size; or the scraps change colour; or the table changes pattern."
+    }
+  ]
+}

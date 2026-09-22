@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0056",
+  "caption": "A robot vacuum turns in front of a floor-length mirror, and its reflection turns with it in mirror image.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A robot vacuum is in front of a floor-length mirror."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It turns."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its reflection turns with it in mirror image."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection's turn is simultaneous with the real one."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Every turn is matched instantly by the reflection.",
+      "fail": "The reflection turns first or later; or it stays still while the vacuum turns; or it turns while the vacuum is still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image, facing the real vacuum across the surface, and never faces a different way.",
+      "fail": "It is a rotated copy rather than mirrored; or it faces away; or it is a different object."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It slides across the mirror with the vacuum still; or spins by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mirror is flat and rigid: the reflection is undistorted.",
+      "fail": "The surface ripples; or the reflection warps; or the mirror bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One vacuum and one reflection; the reflection stays in the mirror.",
+      "fail": "A second vacuum appears; or the reflection leaves the mirror; or the vacuum passes into the glass; or it vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The vacuum and the mirror frame stay the same.",
+      "fail": "The vacuum changes colour; or the frame changes; or the floor changes."
+    }
+  ],
+  "note": "Mirror geometry: each point of the image lies directly across the mirror surface from the real point, so the image is a mirror copy, not a rotated one."
+}

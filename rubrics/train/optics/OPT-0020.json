@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0020",
+  "caption": "A parked bicycle is lit from behind by a car's headlights at night, and a long shadow of the bicycle stretches down the road ahead of it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bicycle is parked at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A car's headlights light it from behind."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A long shadow of the bicycle stretches down the road ahead of it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow changes as the car approaches and passes."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow points away from the headlights and grows sharper and shorter as the car approaches, swinging as the car passes.",
+      "fail": "It points toward the headlights; or stays fixed while the car moves; or grows longer as the car nears."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the bicycle's outline, wheels and frame, stretched long.",
+      "fail": "It is a different shape; or splits under one car's lights into unrelated pieces; or it is short with the lights far off."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bicycle stays parked and the shadow moves only with the lights.",
+      "fail": "The bicycle rolls by itself; or the shadow moves with the car stopped; or the shadow swings before the lights reach it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow starts at the wheels and lies on the road.",
+      "fail": "It floats detached from the wheels; or it appears on a wall the lights cannot reach; or it is missing with the lights plainly on it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bicycle and one shadow per car.",
+      "fail": "A second bicycle appears; or the shadow becomes solid; or the car passes through the bicycle."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bicycle and the road stay the same, and the shadow stays dark.",
+      "fail": "The bicycle changes colour; or the shadow turns coloured; or the road markings shift."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0005",
+  "caption": "A bowl of half-melted chocolate sits in a pan of steaming water and is stirred with a spatula, and the remaining pieces melt into the liquid.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bowl of chocolate sits in a pan of steaming water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Some of the chocolate is already liquid and some is still in pieces."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A spatula stirs the chocolate."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The remaining pieces melt into the liquid."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Steam rises from the water around the bowl."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The stirring comes first and the pieces disappear into the liquid after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The pieces only lose their edges and shrink and the liquid share only grows; nothing hardens again while the water steams.",
+      "fail": "A piece grows back; or the liquid turns grainy and separates into pieces again; or the mixture sets firm in the bowl; or pieces reappear where the spatula has smoothed the liquid."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The melted chocolate is a thick glossy liquid that flows slowly, holds the spatula's trail for a moment and then levels; the pieces are soft solids that smear.",
+      "fail": "The melted chocolate runs as thin as water; or the surface keeps a sharp ridge where the spatula passed; or a piece shatters into dry shards; or the liquid climbs the spatula and stands up on it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The chocolate settles into the bottom of the bowl and levels; the steam around the bowl rises.",
+      "fail": "Chocolate climbs the bowl's wall and stays above its level; or the steam sinks and pools around the pan; or liquid chocolate lifts off the surface and hangs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The spatula's passage shows: it leaves a trail that fills in behind it and the pieces it meets are pushed along.",
+      "fail": "The spatula passes through the chocolate leaving the surface undisturbed; or the pieces stay put as the spatula sweeps through them; or the surface moves where the spatula never went."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bowl and one spatula; the chocolate stays in the bowl and pieces become liquid rather than disappearing.",
+      "fail": "A piece vanishes with none of it joining the liquid; or the chocolate's level drops with nothing taken out; or the spatula passes through the bowl; or a second bowl appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bowl's colour, the pan and the spatula stay the same.",
+      "fail": "The bowl changes colour; or the spatula changes shape; or the pan moves on the hob by itself."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0163",
+  "caption": "A salt shaker is shaken over a plate of fries and salt grains fall onto the fries.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A salt shaker is held over a plate of fries."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is shaken."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Salt grains fall onto the fries."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shake comes first and the fall follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Grains fall from the holes straight down onto the fries and plate.",
+      "fail": "They hang in the air; or fall upward; or drift sideways."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "Grains fall as separate specks during each shake, not as a stream or lump.",
+      "fail": "Salt pours as a solid rod; or as liquid; or as one lump."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Grains fall only during each shake.",
+      "fail": "Grains fall with the shaker still; or the shake produces nothing; or grains keep falling after the shake stops."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Salt on the fries only accumulates.",
+      "fail": "It vanishes; or it is there before the shake; or it jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One shaker, and salt comes only from it.",
+      "fail": "Salt appears with no shaker above; or the shaker duplicates; or salt passes through the shaker."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shaker, the plate and the fries stay the same.",
+      "fail": "The shaker changes; or the plate changes; or the fries rearrange."
+    }
+  ]
+}

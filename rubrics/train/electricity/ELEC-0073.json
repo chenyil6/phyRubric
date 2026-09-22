@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0073",
+  "caption": "A coin-cell battery is pressed into a wristwatch lying face up, and the second hand starts to tick.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wristwatch lies face up."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A coin-cell battery is pressed into the watch."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The second hand starts to move."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The second hand is still before the battery goes in."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is battery in, then the hand moves."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The second hand is still while the battery is out and starts moving once the battery is seated, and only then.",
+      "fail": "The battery is in and the second hand stays still to the end of the clip; or the hand moves before the battery reaches the watch; or the hand starts while the battery lies loose beside the watch."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Before the battery is seated nothing on the dial moves; afterwards only the second hand moves, advancing steadily.",
+      "fail": "The hour or minute hand sweeps round on its own; or the second hand stops and restarts with the battery seated; or the second hand jumps to a new spot on the dial."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The second hand advances clockwise around the dial.",
+      "fail": "The second hand runs anticlockwise; or swings back and forth about one spot; or reverses part-way round."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The battery stays a rigid flat disc and seats into an opening in the watch; the watch stays put as it is pressed.",
+      "fail": "The battery bends or squashes under the finger; or the watch slides or flips as the battery is pressed with nothing else touching it; or the battery pops out and hangs in the air."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One watch and one battery; the battery enters an opening rather than sinking through the glass or case; the hands stay attached at the centre.",
+      "fail": "The battery sinks through the watch glass or the case wall; or a second battery appears or the battery vanishes; or a hand detaches from the centre; or the watch changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dial's markings, the strap and the surface beneath stay the same.",
+      "fail": "The dial numerals change; or the strap changes colour; or the battery changes size."
+    }
+  ],
+  "note": "A watch's battery compartment is in the back, hidden when the watch lies face up; the judge accepts whatever opening the battery visibly enters and does not fail the clip for where the compartment is."
+}

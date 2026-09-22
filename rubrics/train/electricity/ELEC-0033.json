@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0033",
+  "caption": "The dial of an electric stove burner is turned off, and the red-hot coil's glow dims.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An electric stove with a coil burner glowing red."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The burner's dial is turned to off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The coil's glow dims."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The coil is glowing before the dial is turned."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is glowing, turn, dimming."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow begins to fade after the dial is turned, and not before.",
+      "fail": "The dial is turned and the coil stays at full glow to the end of the clip; or the coil begins to fade before the dial is touched; or the coil brightens after the dial is turned; or the glow goes out instantly like a lamp at the turn."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fade runs one way, from bright through dull red toward dark, and never brightens again; it is gradual, not a switch-off.",
+      "fail": "The glow brightens again after dimming; or goes dark and returns; or pulses; or the coil turns from red to a brighter colour."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The fade starts at the coil's outer parts or evenly and does not skip about; the whole coil follows the same one-way change.",
+      "fail": "One part of the coil goes dark while another brightens; or the glow jumps between segments; or the glow moves along the coil like a travelling light."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The stove and anything on it stay still as the dial is turned; the coil does not move.",
+      "fail": "The coil lifts or shifts at the turn; or a pan on the stove slides; or the dial turns back by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One coil on one stove; the coil keeps its spiral shape; the hand passes through nothing.",
+      "fail": "The coil vanishes rather than going dark; or a second coil appears glowing; or the coil changes shape or melts; or the hand passes through the dial or stove."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stove top's colour, the other burners and the surroundings stay the same apart from the glow.",
+      "fail": "The stove changes colour; or another burner lights or goes out; or items on the counter rearrange."
+    }
+  ],
+  "note": "How fast the glow fades and how far it has faded by the end are not judged, only that it fades one way after the turn."
+}

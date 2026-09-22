@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0286",
+  "caption": "A candle burns inside a glass lantern hung outdoors, and its flame flickers as gusts pass but stays lit.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A candle burns inside a glass lantern hung outdoors."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flame flickers as gusts pass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flame stays lit."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flame stands upright between gusts."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Other signs of wind show: leaves, foliage or the lantern swinging."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The glass surrounds the flame."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The flame dances when the gusts come, as the leaves and the swinging lantern show, and stands upright between them.",
+      "fail": "The flame flickers hard while the leaves and the lantern hang dead still; or the flame stands dead steady while the lantern swings hard in a gust; or the flame's dancing follows a rhythm unrelated to any sign of wind; or the flame leans against the way the leaves are blown."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The flame points upward from the wick between gusts and the wax pools at the candle's top.",
+      "fail": "The flame points downward between gusts; or hangs below the wick; or melted wax climbs the candle's side; or the flame lies flat inside still glass with nothing moving."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The flame stays alight through the gusts; if it goes out it stays out.",
+      "fail": "The flame goes out and relights by itself; or shrinks to nothing and returns with each gust; or the wick's glow brightens into a flame with nothing touching it; or the flame splits into two flames."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The glass shields the flame: the flame moves less than the leaves and foliage outside the lantern do.",
+      "fail": "The flame is flattened as hard as the leaves outside while the glass stands whole around it; or the flame is snuffed while the lantern's glass is whole and closed; or the flame is blown out by a gust that barely stirs the leaves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One candle inside one lantern; the glass stays whole and the flame stays inside it.",
+      "fail": "The flame passes out through the glass and burns outside; or the candle passes through the lantern's base; or a second candle appears inside; or the lantern's glass vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lantern's frame, the candle's colour and the surroundings stay the same.",
+      "fail": "The lantern's frame changes shape; or the candle changes colour; or the background changes between frames."
+    }
+  ]
+}

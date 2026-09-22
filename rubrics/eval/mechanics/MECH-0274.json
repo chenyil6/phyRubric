@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0274",
+  "caption": "A rubber duck is squeezed under the bathwater and released, and it squirts water and puffs back to shape.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A rubber duck is squeezed under bathwater."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is released."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It squirts water."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It puffs back to shape."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The squeeze comes first, then the release, then the squirt and the puff back."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "It flattens while squeezed and rounds out when released.",
+      "fail": "It stays flat; or does not deform; or shatters."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The jet comes out on the squeeze, and the refill and rounding come on the release.",
+      "fail": "It squirts while unsqueezed; or squirts only on release; or puffs back while still squeezed."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The jet arcs and falls back to the water, and the duck floats up.",
+      "fail": "The jet rises indefinitely; or the duck sinks; or the water is rigid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The water comes from the duck's hole.",
+      "fail": "It comes from elsewhere; or there is no jet; or the jet comes before the squeeze."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One duck keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The duck's colour and the bath stay the same.",
+      "fail": "The duck changes colour; or the bath changes; or the bathroom rearranges."
+    }
+  ]
+}

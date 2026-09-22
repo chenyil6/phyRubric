@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0210",
+  "caption": "Sunlight through a sprinkler's fan of water forms a rainbow that shifts as the sprinkler swings.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sprinkler throws a fan of water in sunlight."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A rainbow forms in the spray."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The rainbow shifts as the sprinkler swings."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rainbow is inside the spray."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The rainbow is inside the spray and would disappear if the sprinkler stopped or the sun were covered.",
+      "fail": "It is on the ground; or in dry air; or stays with the water off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The rainbow moves with the spray and only then.",
+      "fail": "It stays put while the spray swings; or moves with the spray still; or flickers in steady sun."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The rainbow shows the spectrum's order.",
+      "fail": "It is a single colour; or the order is random; or it changes colours."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The spray arcs and falls.",
+      "fail": "It rises indefinitely; or hangs; or falls upward."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sprinkler and one spray.",
+      "fail": "A second sprinkler appears; or the spray comes from nowhere; or the rainbow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lawn and the sprinkler stay the same.",
+      "fail": "The lawn changes; or the sprinkler changes; or the sky changes abruptly."
+    }
+  ]
+}

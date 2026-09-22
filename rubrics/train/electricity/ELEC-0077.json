@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0077",
+  "caption": "A laptop is unplugged from its charger, and the charging light on it goes off while the screen stays on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A laptop with its screen on and a charger connected to it, its charging light lit."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The charger connector is pulled out of the laptop."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The charging light goes off."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The screen stays on after the pull."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The charging light is on the laptop itself."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is lit, pull, light off with the screen still on."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The charging light goes out at the moment the connector leaves the port, and only then.",
+      "fail": "The connector is out and the charging light still shines; or the light goes out before the connector moves; or the light goes out with the connector still seated and untouched."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The screen's contents carry on through the pull, apart from a battery indicator changing state; windows and icons stay where they were.",
+      "fail": "Icons or windows vanish or appear at the moment of unplugging; or the screen's picture jumps to a different one at the pull; or a second charging light appears elsewhere on the laptop."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once the connector is out the charging light stays off.",
+      "fail": "The charging light comes back on with the connector out; or blinks after the pull; or the connector slides back into the port by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cable follows the connector: it slackens and drops as the connector comes free and stays attached to it.",
+      "fail": "The cable stands rigid in the air; or stretches like elastic; or the connector floats beside the port."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One laptop and one connector on one cable; the connector leaves the port whole; the laptop keeps its shape and fingers stay outside it.",
+      "fail": "The connector passes out through the laptop's body rather than the port; or the connector vanishes or duplicates; or the laptop's lid or keyboard changes shape; or the cable splits."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The laptop's colour, its keyboard layout and the desk stay the same apart from the light.",
+      "fail": "The laptop changes colour; or the keyboard layout changes; or the port moves along the side."
+    }
+  ],
+  "note": "A screen that goes dark at the pull fails S4 only: a laptop with a flat battery does go dark when unplugged, so no PC item fails for it."
+}

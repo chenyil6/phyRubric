@@ -1,0 +1,77 @@
+{
+  "id": "ACOU-0035",
+  "caption": "A jackhammer starts up on a street, and the coffee in cups on a café terrace table shows rings of tiny ripples.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A café terrace table with cups of coffee on it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A jackhammer on the street starts up: its bit begins to pound."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The coffee surfaces show rings of ripples."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The ripples are fine rings, not sloshing waves."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The jackhammer starts first and the ripples follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Ripples appear while the hammer pounds and vanish when it pauses.",
+      "fail": "The hammer pounds and the coffee stays glassy; or the coffee ripples while the hammer is lifted and still; or the ripples begin before the hammer starts.",
+      "precondition": "The jackhammer is in view."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The ripples are a fine trembling of the surface in place; the coffee stays level in its cup.",
+      "fail": "The coffee sloshes up one side of the cup as if pushed; or spills over with the cup standing still; or swirls round as if stirred; or a single ring spreads outward from one point with nothing dropped in."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The coffee stays in the cups with a level surface and the cups stay on the table.",
+      "fail": "Coffee rises out of a cup; or the surface tilts and stays tilted; or a cup lifts off the table."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cups and table stay rigid and the coffee stays a liquid.",
+      "fail": "The cups wobble like rubber; or the table top ripples like water; or the coffee surface cracks like a skin."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The cups keep their count; one hammer; nothing passes through the table or the pavement.",
+      "fail": "Cups appear or vanish; or a cup sinks into the table; or the hammer bit passes through the pavement without breaking it; or the coffee vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cups' patterns, the coffee's colour and the chairs stay the same.",
+      "fail": "Cup patterns change; or the coffee changes colour; or the chairs change shape."
+    }
+  ],
+  "note": "The worker holding the jackhammer is a trigger and is not judged."
+}

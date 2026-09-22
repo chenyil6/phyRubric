@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0103",
+  "caption": "A wok with a scattering of sesame seeds in it is struck once with a ladle, and the seeds jump.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wok with a scattering of sesame seeds in it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A ladle strikes the wok once."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The seeds jump."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The strike is a single hit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike comes first and the jump follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The seeds are still until the ladle hits the wok.",
+      "fail": "Seeds hop before the ladle reaches the wok; or jump with the ladle held away; or the ladle lands and the seeds stay still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The seeds leap at the blow and settle in new places; the wok stays seated, rocking a little at most.",
+      "fail": "The wok tips over or slides across the stove at the tap; or the seeds settle back into their exact previous arrangement; or the seeds keep hopping unchanged to the end of the clip."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Seeds fall back into the wok or over its rim.",
+      "fail": "Seeds hang in the air; or float up; or seeds that left the wok come back up into it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wok is rigid, the ladle rebounds and the seeds stay separate.",
+      "fail": "The ladle sinks into the wok; or the wok ripples like cloth; or the seeds merge into a paste."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The seeds keep their number, allowing for some leaving the wok; one wok, one ladle.",
+      "fail": "Seeds appear from nowhere; or all the seeds vanish at once; or the ladle passes through the wok; or the wok changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wok's colour, the stove and the seeds' colour stay the same.",
+      "fail": "The wok changes colour; or the stove changes; or the seeds change colour."
+    }
+  ],
+  "note": "The hand on the ladle is a trigger and is not judged."
+}

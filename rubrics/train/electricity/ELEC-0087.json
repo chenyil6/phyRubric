@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0087",
+  "caption": "Several flashes of lightning light up a stormy sky over a highway one after another, each one lighting the wet road for an instant.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A highway under a stormy sky."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lightning flashes in the sky more than once."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Each flash lights the wet road."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The road looks wet: shiny or streaked with reflections."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flashes come one after another, with darker sky between them."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each flash is separate and brief: the sky brightens, returns to dark, and brightens again; between flashes the scene is at its dark storm level.",
+      "fail": "The flashes merge into a steady glow that lasts to the end of the clip; or the sky brightens steadily without dropping back; or a flash fades in slowly like a dimmer; or the sky turns to daylight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The road, its markings, the vehicles and the roadside are the same across dark and lit frames; each flash reveals the same scene.",
+      "fail": "Vehicles appear or vanish between dark and lit frames; or lane markings jump to new places; or roadside signs or poles appear or vanish; or the road bends differently between frames."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The wet road mirrors each flash: bright streaks and patches lie on the surface below the lit sky, during the flash only.",
+      "fail": "The sky flashes while the wet road stays as dark as before; or the road lights up while the sky stays dark; or the road's reflection stays lit after the sky is dark."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Vehicles keep their direction and lane through each flash; headlights and tail lights stay steady.",
+      "fail": "A vehicle jumps ahead or back between dark and lit frames; or changes direction at a flash; or its headlights go out at the flash and return afterwards.",
+      "precondition": "Vehicles are moving on the highway."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Vehicles, signs and the road keep their shapes; nothing passes through anything; any bolt seen ends at the ground or in the air, not inside a vehicle or structure.",
+      "fail": "A vehicle changes shape or merges with another; or a bolt passes through a vehicle or bridge and lights it like a lamp; or the road surface turns into open water; or a sign morphs into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The road surface, the vehicles' colours and the roadside keep their colours apart from brightness.",
+      "fail": "A vehicle changes colour; or the lane markings change colour; or the sky changes colour permanently after a flash."
+    }
+  ]
+}

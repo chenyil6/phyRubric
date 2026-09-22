@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0073",
+  "caption": "A dart is thrown at a dartboard on a pub wall and sticks in the board.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dart is thrown at a dartboard hanging on a wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It flies to the board."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It sticks in the board."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The dart stays in the board rather than dropping out."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The throw comes first and the dart sticking follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The dart flies point-first along one line with at most a slight dip.",
+      "fail": "The dart flies tail-first; or it turns over in mid-air; or it changes direction with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "On reaching the board the dart stops with its tip in the board and its flight standing out.",
+      "fail": "The dart passes through the board; or it stops in mid-air short of the board; or it hangs on the board by its flight."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "In flight the dart's path dips slightly rather than climbing, and anything that falls goes down.",
+      "fail": "The dart curves upward in flight; or it rises after sticking; or it hangs in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The board takes the point, the dart quivers briefly and holds, and the board stays on the wall.",
+      "fail": "The board swings or falls off the wall at the hit; or the dart bends; or the board ripples like cloth."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One dart and one board stay solid and separate from the wall.",
+      "fail": "The dart passes through the board and the wall; or the dart vanishes; or a second dart appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dart's flight colour, the board's rings and the wall stay the same.",
+      "fail": "The dart changes colour; or the board's numbers rearrange between frames; or the wall changes."
+    }
+  ]
+}

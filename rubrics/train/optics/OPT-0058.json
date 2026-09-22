@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0058",
+  "caption": "A cloth is draped over a wall mirror, and the reflection of the room disappears behind the cloth.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wall mirror reflects the room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A cloth is draped over it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The reflection disappears behind the cloth."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection is gone wherever the cloth hangs and visible where it does not."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflected room is visible until the cloth covers the glass and is gone wherever the cloth hangs.",
+      "fail": "The reflection shows through the cloth; or it vanishes before the cloth arrives; or it stays visible on covered glass."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The reflection would return when the cloth is pulled off, and the real room is unchanged.",
+      "fail": "The room changes while covered; or the mirror vanishes; or a reflection appears on the cloth itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The cloth hangs down over the mirror.",
+      "fail": "It floats; or hangs upward; or stays out stiffly."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cloth drapes and folds.",
+      "fail": "It is rigid like a board; or stretches; or passes through the mirror."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mirror and one cloth.",
+      "fail": "A second mirror appears; or the cloth duplicates; or the cloth passes through the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cloth's colour and the room stay the same.",
+      "fail": "The cloth changes colour; or the frame changes; or the room rearranges."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0152",
+  "caption": "A slice of bread sits in a running toaster, and its top edge darkens and thin smoke begins to rise from the slots.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A slice of bread sits in a toaster."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bread's top edge darkens."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Thin smoke rises from the toaster's slots."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The darkening deepens over time."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The smoke comes after the bread has darkened."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The darkening only deepens and the bread does not turn pale again, and the smoke only rises once the bread has begun to darken.",
+      "fail": "A darkened part of the bread turns pale again; or the darkening spreads and then shrinks; or the smoke rises while the bread is still pale all over; or the darkening jumps from one edge of the bread to the other."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The change is in the bread where the heat reaches it, deepest at the edge nearest the element, and the toaster's shell stays as it was.",
+      "fail": "The toaster's shell darkens rather than the bread; or the bread darkens evenly right through including the part standing clear of the slot; or the bread lightens at the edge nearest the element; or the crumbs in the tray change colour rather than the bread."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The smoke rises out of the slots, spreading and thinning.",
+      "fail": "The smoke pours down the toaster's sides and pools on the counter; or sinks below the toaster; or hangs as a fixed shape without rising; or pours downward through the slots."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The smoke comes out of the slot where the bread sits and not from the toaster's base or sides.",
+      "fail": "The smoke comes from the toaster's base; or the bread chars black while no smoke leaves the slots at all; or the smoke leaves an empty slot while the bread is in the other."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One slice in one toaster; the slice stays one slice and the toaster keeps its shape.",
+      "fail": "A second slice appears; or the slice vanishes; or the slice passes through the toaster's shell; or the toaster changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The toaster's finish, its controls and the counter stay the same.",
+      "fail": "The toaster changes colour; or its lever moves to a different place; or items on the counter rearrange."
+    }
+  ],
+  "note": "The browning of the bread is chemistry; what is judged is that the darkening runs one way and starts where the heat reaches it."
+}

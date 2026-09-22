@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0175",
+  "caption": "A stick is dragged through a patch of loose gravel on a path, leaving a furrow behind it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stick is dragged through a patch of loose gravel on a path."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A furrow is left behind it."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The gravel is loose."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The furrow trails behind the stick, not ahead of it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "Small ridges of pushed-aside stones form on each side of the furrow as the stick moves.",
+      "fail": "The gravel closes behind like liquid; or the stick leaves no mark; or the stones fly up in a spray."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The furrow appears only where the stick has passed and stays.",
+      "fail": "It appears ahead of the stick; or closes up behind; or appears elsewhere."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The stick moves only as dragged and stones move only as pushed.",
+      "fail": "Stones move ahead of the stick; or the stick moves by itself; or stones rearrange after the stick has passed."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Displaced stones settle down.",
+      "fail": "They hang; or rise; or float."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One stick keeps its number, and the stones keep theirs.",
+      "fail": "The stick duplicates; or stones vanish; or the stick passes through the path."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The path and the surroundings stay the same.",
+      "fail": "The gravel changes colour; or the path rearranges; or the stick changes."
+    }
+  ],
+  "note": "The hand on the stick is kept as the minimal trigger; the person is not judged."
+}

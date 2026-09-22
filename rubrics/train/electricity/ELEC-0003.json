@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0003",
+  "caption": "The cord of a bedside lamp is pulled, and the lamp lights up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bedside lamp with a pull cord."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cord is pulled."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lamp lights up."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lamp is dark before the pull."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, pull, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lamp comes on at the moment the cord is pulled, and only then.",
+      "fail": "The cord is pulled and the lamp stays dark; or the lamp is lit before the cord moves; or the lamp comes on while the cord hangs untouched; or the lamp comes on well after the pull with nothing else happening."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the lamp stays lit steadily for the rest of the clip.",
+      "fail": "The lamp goes off again by itself; or flickers on and off after the pull; or dims back to dark; or the cord pulls itself again."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "When the lamp is on its light reaches its surroundings: the shade glows and the bedside table and wall nearby brighten, with shadows pointing away from the lamp.",
+      "fail": "The bulb glows while the shade and the table beneath stay as dark as before; or the surroundings brighten while the lamp stays dark; or the light comes from a place other than the lamp."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord is a limp string or chain that hangs straight down from the lamp, is drawn taut by the pull and hangs slack again afterwards.",
+      "fail": "The cord stands rigid or stays stretched out sideways after the pull; or stretches like elastic; or the lamp tips or lifts with the pull and hangs in the air."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp with one cord on one table; the lamp and table keep their shape; the hand passes through nothing.",
+      "fail": "A second lamp or cord appears; or the lamp vanishes or moves across the table by itself; or the hand passes through the shade or the cord; or the lamp changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shade's colour, the table and the bedding stay the same apart from the light.",
+      "fail": "The shade changes colour rather than brightness; or the table's contents rearrange; or the bedding changes pattern."
+    }
+  ]
+}

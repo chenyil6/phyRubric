@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0036",
+  "caption": "A shopping cart rolls across a parking lot, runs into a concrete curb, and stops abruptly.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A shopping cart rolls across a parking lot."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It runs into a concrete curb."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It stops abruptly at the curb."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The concrete curb in the cart's path is visible."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rolling comes first and the stop at the curb follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The cart's stop happens where its wheels meet the curb, not anywhere else.",
+      "fail": "The cart stops on open tarmac before reaching the curb; or it reaches the curb and rolls on unaffected; or it stops with no curb or obstacle in its path."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The wheels are checked at the curb while the basket carries on, so the cart jolts and may tip forward before settling back.",
+      "fail": "The cart comes to rest at the curb with no jolt or tip at all; or it bounces back from the curb quicker than it arrived; or it keeps rolling forward at its old speed after the contact."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The cart stays on its side of the curb and above the tarmac.",
+      "fail": "The cart's wheels pass through the concrete curb; or the cart sinks into the tarmac at the stop; or the basket passes through the curb while the wheels stay behind it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Items in the basket pitch forward at the moment the cart is stopped.",
+      "fail": "Items in the basket stay still while the cart jolts to a halt; or they pitch backward; or they move before the cart reaches the curb.",
+      "precondition": "Items are visible in the cart's basket."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cart and one curb keep their number and shape.",
+      "fail": "The cart vanishes at the curb or a second one appears; or a wheel comes away and hangs in the air; or the curb disappears where the cart meets it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cart's colour, the lot markings and the background stay the same.",
+      "fail": "The cart changes colour at the impact; or the painted bay lines shift between frames; or the buildings behind rearrange."
+    }
+  ]
+}

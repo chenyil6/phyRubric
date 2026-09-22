@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0200",
+  "caption": "A balloon rubbed on a wool sweater is held beside a feather duster standing in a jar, and the feathers lean toward the balloon.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A balloon is rubbed on a wool sweater."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A feather duster stands in a jar."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The balloon is held beside the duster."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The feathers lean toward the balloon."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The duster stands upright in the jar."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rub comes first, then the approach, then the lean."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The feathers hang as they were until the balloon is close, lean toward it only where it is near, follow it as it moves and fall back when it is pulled away.",
+      "fail": "The feathers lean before the balloon is brought near; or stay leaning after the balloon has been taken well away; or feathers on the far side lean away from the balloon; or the feathers wave back and forth with the balloon held still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The leaning feathers stay attached to the duster's head; when the balloon leaves they fall back to hanging; the duster stays in the jar.",
+      "fail": "Feathers detach and float to the balloon; or the duster rises out of the jar toward the balloon; or feathers stand straight up with the balloon far off; or the feathers settle upward."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The feathers are soft and lift individually; the balloon keeps its round shape and dents only where pressed; the jar is rigid.",
+      "fail": "The feathers move as one stiff block; or the balloon keeps a deep dent after the hand leaves; or stretches out like taffy; or the jar bends."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The jar stays where it is; the sweater and other items nearby do not stir.",
+      "fail": "The jar slides toward the balloon; or tips over with nothing touching it; or paper or fabric nearby jumps while the balloon is far from it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon, one duster, one jar; the balloon passes through nothing and does not vanish or duplicate.",
+      "fail": "The balloon passes into the duster or the jar; or a second balloon or duster appears; or the balloon vanishes; or a clump of feathers detaches and hangs on the balloon."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour, the feathers' colours and the jar stay the same.",
+      "fail": "The balloon changes colour or size, small dents aside; or the feathers change colour; or the jar changes shape."
+    }
+  ]
+}

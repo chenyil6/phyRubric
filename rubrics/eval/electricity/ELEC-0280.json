@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0280",
+  "caption": "A lawnmower's blade strikes a hidden stone, and a spark flicks out from under the deck.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lawnmower cuts grass."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its blade strikes a hidden stone."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A spark flicks out from under the deck."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The spark comes from under the deck, low to the ground."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike comes first and the spark follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The spark appears at the instant of the strike and only then; while the mower cuts grass alone nothing flashes under the deck.",
+      "fail": "Sparks flick from under the deck while the mower runs over plain grass; or sparks appear while the mower stands still; or the spark appears before the mower reaches the stone; or sparks keep coming after the strike."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The spark flies out low from under the deck's edge and dies at once; the stone, if it appears, is thrown out or stays under the deck.",
+      "fail": "The spark appears on top of the deck or at the handle; or the spark hangs in the air; or the stone flies straight up through the deck; or the spark leaves a glowing mark on the grass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The spark and any thrown stone fall to the ground and come to rest; the spark goes dark within a short distance.",
+      "fail": "The spark rises and hangs in the air; or climbs steadily; or the stone rises and stays aloft; or lies glowing on the grass for the rest of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mower is a rigid machine that jolts at the strike and rolls on; the deck keeps its shape.",
+      "fail": "The deck bends or dents deeply and springs back; or the mower bounces high into the air; or the handle wobbles like rubber."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One mower on the grass; the mower passes through nothing; the stone does not pass through the deck.",
+      "fail": "The mower passes through a tree or fence; or the stone passes up through the deck; or the mower sinks into the lawn; or a second mower appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mower's colour, the lawn and the surroundings stay the same apart from the cut strip.",
+      "fail": "The mower changes colour; or the lawn changes colour away from the cut; or the surroundings rearrange."
+    }
+  ],
+  "note": "Who pushes the mower is not judged. The strike itself is hidden under the deck; it is read from the mower's jolt and the spark."
+}

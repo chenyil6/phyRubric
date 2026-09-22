@@ -1,0 +1,65 @@
+{
+  "id": "OPT-0105",
+  "caption": "A drop of water lands on a phone screen, and the tiny pixels under the drop appear magnified.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A drop of water lands on a phone screen."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The tiny pixels under the drop appear magnified."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The screen beyond the drop is unchanged."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The enlarged pattern shows only within the drop and would move if the drop slid.",
+      "fail": "Pixels outside the drop are enlarged; or the drop shows nothing different; or the enlarged patch is offset from the drop."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The screen itself is unchanged; the magnified pattern is its own pixels.",
+      "fail": "The screen's picture changes; or a different pattern appears in the drop; or the drop shows a mirror image."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The drop is a rounded bead of liquid.",
+      "fail": "It is a rigid lens; or it spreads flat and thin instantly; or it bounces."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The drop lands and sits on the screen.",
+      "fail": "It hangs above the screen; or rises; or slides uphill."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One drop and one phone.",
+      "fail": "The drop duplicates; or the phone vanishes; or the drop passes through the screen."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The phone and the surroundings stay the same.",
+      "fail": "The phone changes; or the table changes; or the screen colours shift."
+    }
+  ]
+}

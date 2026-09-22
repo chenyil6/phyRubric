@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0288",
+  "caption": "A pan of rice left on the stove boils dry, and smoke begins to rise as the grains on the bottom scorch black.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pan of rice sits on a stove."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The steam gives way to thin smoke."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The smoke rises from the pan."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The grains on the bottom blacken."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The blackening spreads from the bottom."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The steam comes first and the smoke follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The change runs one way: steam gives way to smoke as the last water goes, the smoke thickens and the blackening only spreads.",
+      "fail": "The smoke gives way back to steam with the pan still on the heat; or a blackened grain turns white again; or the blackening spreads and then shrinks; or the water returns to the pan and the rice steams again."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The blackening happens in the rice at the pan's bottom and spreads from there, while the rice above stays paler.",
+      "fail": "The rice at the top blackens while the grains on the pan's bottom stay white; or the pan's outside changes colour rather than the rice; or the whole panful blackens at once with no spreading; or the rice blackens before any steam has gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The smoke rises out of the pan, spreading and thinning.",
+      "fail": "The smoke pours down the pan's sides and pools on the hob; or sinks below the pan; or hangs as a fixed shape without rising; or pours downward through the pan's base."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The smoke comes from the scorching rice at the pan's bottom and appears only once the water has gone.",
+      "fail": "Thick smoke pours from the pan while water still stands in it and steam is rising; or the smoke comes from the hob beside the pan; or the rice blackens while no smoke leaves the pan at all."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pan of rice; the rice stays in the pan and its level only drops as the water goes.",
+      "fail": "The rice's level rises with nothing added; or rice appears outside the pan with none leaving it; or a second pan appears; or rice passes through the pan's base."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan's outside, the hob and the surroundings stay the same.",
+      "fail": "The pan changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ],
+  "note": "The scorching of the rice is the caption's asserted outcome; the chemistry of it is not judged, only that the darkening runs one way and starts at the pan's bottom."
+}

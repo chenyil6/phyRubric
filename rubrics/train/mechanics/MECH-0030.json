@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0030",
+  "caption": "A button on a vending machine is pressed, and a can drops inside the machine and lands in the tray at the bottom.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A button on a vending machine is pressed."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A can drops inside the machine."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It lands in the tray at the bottom."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The can is visible behind the glass as it falls."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The press comes first and the drop follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The can starts to fall after the button is pressed and not before.",
+      "fail": "A can drops with no button being pressed; or the button is pressed and nothing in the machine moves; or the can is already lying in the tray before the press."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The can drops downward inside the machine, quicker as it falls, and comes to rest in the tray.",
+      "fail": "The can drifts sideways across the shelves as it falls; or it hangs in the air inside the machine; or it climbs back up to its shelf."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "One can leaves the shelf and the same one arrives in the tray.",
+      "fail": "A second can appears during the fall; or the can vanishes on the way down; or the shelf still holds its full row after a can has dropped."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The can stays a rigid cylinder and clatters against the glass and the tray.",
+      "fail": "The can bends or crumples as it falls; or it bounces around the tray like a rubber ball without settling; or it sinks into the floor of the tray."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The can, the glass and the machine's shelves stay solid and separate.",
+      "fail": "The can passes through the glass front; or it passes through the shelf below it; or it merges with another can in the rack."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The can's label, the machine's front and the room stay the same.",
+      "fail": "The can changes label or colour as it falls; or the machine's buttons rearrange between frames; or the room behind the machine changes."
+    }
+  ]
+}

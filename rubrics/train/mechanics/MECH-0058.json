@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0058",
+  "caption": "A wheelbarrow full of soil is pushed from a paved patio onto a soft lawn, and its wheel sinks into the turf and drags.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wheelbarrow full of soil is pushed along a paved patio."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is pushed onto a lawn."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its wheel sinks into the turf."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The wheel drags."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The barrow is full of soil."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The paving comes first, then the lawn, then the sinking."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "On the paving the wheel rolls without sinking; on the lawn it sinks and leaves a track, and the change happens at the edge of the paving.",
+      "fail": "The wheel sinks into the paving; or it rolls over the lawn leaving no track as if on stone; or it sinks well before or well after the edge of the paving."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The barrow slows as the wheel sinks and drags.",
+      "fail": "The barrow speeds up on the soft lawn; or it glides across the lawn as freely as it did on the paving; or it stops dead at the edge of the paving as though against a wall."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The barrow stays down on its wheel and legs, and the load rides in the tray.",
+      "fail": "The barrow lifts off the ground; or soil rises out of the tray; or the wheel floats above the turf."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The soil in the tray shifts and settles as the barrow jolts, and turf disturbed by the wheel stays on the ground.",
+      "fail": "The load stays a rigid block while the barrow jolts; or soil rises away from the tray and hangs; or the turf flows like liquid around the wheel."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One barrow with its load keeps its number and shape.",
+      "fail": "The barrow vanishes or a second one appears; or the wheel passes through the ground; or the barrow turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The barrow's colour, the paving and the lawn stay the same.",
+      "fail": "The barrow changes colour; or the edge between paving and lawn moves between frames; or the garden behind rearranges."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0183",
+  "caption": "A box of packing peanuts is tipped over a table, and many of the foam pieces stick to the sides and flaps of the box instead of falling out.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A box of packing peanuts."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The box is tipped over a table."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Many foam pieces stick to the sides and flaps of the box instead of falling out."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Some pieces do fall out onto the table."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tipping comes first and the clinging shows as the box empties."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the box tips, pieces that touch the cardboard stay pressed against the sides and flaps, hanging on with nothing else holding them, and stay when the box is lifted or shaken lightly.",
+      "fail": "Every piece pours out and none stays on the cardboard; or pieces cling a gap away from the cardboard without touching; or the clinging pieces drop off all together the moment the box stops moving; or pieces cling to the table's edge."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Pieces that do not cling fall from the box onto the table and come to rest there; the clinging pieces sit on the cardboard, even on its underside.",
+      "fail": "Falling pieces rise or drift upward; or hang in the air between box and table; or land and then hop back up into the box; or pieces roll uphill on the table."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The peanuts are light foam pieces that bounce a little and lie loose; the box is stiff cardboard that keeps its shape.",
+      "fail": "The pieces splat or flatten like dough; or merge into a foam mass; or the box bends like cloth; or the box swells or shrinks."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The pieces fall out through the box's opening and scatter on the table beneath it.",
+      "fail": "Pieces fly out sideways far across the room; or leave the box through its closed sides; or land far from where they fell; or a pile grows on the table where no piece has landed."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The pieces on the table and on the box came from the box; none appear from nowhere or vanish; the box stays one box.",
+      "fail": "Pieces multiply on the table beyond what fell; or pieces vanish in mid-air; or the box duplicates; or the box passes through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The box's colour and printing, the peanuts' colour and the table stay the same.",
+      "fail": "The box changes colour; or the peanuts change colour or shape; or the table changes."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0083",
+  "caption": "A candle burns between two facing mirrors, and a line of flames stretches away in both directions, all flickering together.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A candle burns between two facing mirrors."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A line of flames stretches away in both directions."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "All the flames flicker together."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The copies get smaller and dimmer further along the line."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "All the copies flicker in time with the real flame and none moves independently.",
+      "fail": "A copy flickers out of time; or one stays steady; or one moves on its own."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The copies get smaller and dimmer further along the line and alternate in mirror image.",
+      "fail": "They are all the same size; or grow along the line; or they are rotated copies."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The line does not move with the candle and mirrors still.",
+      "fail": "The line drifts; or a copy shifts; or the candle moves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "All the flames point upward.",
+      "fail": "A flame points down or sideways in still air; or a flame detaches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One real candle and its copies; the copies stay in the mirrors.",
+      "fail": "A second real candle appears; or a copy steps out; or the candle vanishes; or a copy becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candle and the mirror frames stay the same.",
+      "fail": "The candle changes colour; or a frame changes; or the room rearranges."
+    }
+  ],
+  "note": "Mirror geometry: each point of the image lies directly across the mirror surface from the real point, so the image is a mirror copy, not a rotated one."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0131",
+  "caption": "A boy bites into a whole apple and takes a bite-shaped piece out of it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A boy holds a whole apple."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "He bites into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A bite-shaped piece is missing afterward."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The apple is whole before the bite."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bite comes first and the hollow follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The hollow appears exactly where he bit and nowhere else.",
+      "fail": "The bite mark is elsewhere; or he bites and the apple stays whole; or the mark appears before his teeth reach it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The hollow stays and the apple does not grow back.",
+      "fail": "The apple is whole again; or a second bite appears untouched; or the piece reappears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The flesh is crisp: it breaks off with juice, and the skin tears at the edge of the bite.",
+      "fail": "The apple squashes like dough; or it shatters; or the bite is a clean straight cut."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The boy's face and the apple stay separate.",
+      "fail": "The teeth pass through the apple; or the apple passes into his face; or the apple splits in two."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One apple and one boy keep their number.",
+      "fail": "The apple vanishes; or duplicates; or turns into another fruit."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The apple's colour and the boy's clothing stay the same.",
+      "fail": "The apple changes colour; or the clothing changes; or the background rearranges."
+    }
+  ],
+  "note": "The boy is kept because the bite is the physics. His expression is not judged."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0117",
+  "caption": "A spoon stands in a clear glass jar of oil and looks kinked where it enters the oil; when it is lifted out the kink vanishes.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A spoon stands in a clear glass jar of oil."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It looks kinked where it enters the oil."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It is lifted out."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The kink vanishes."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lift comes first and the kink vanishes with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The kink sits at the surface of the oil and vanishes when the spoon is lifted out.",
+      "fail": "The kink is above or below the surface; or it stays when the spoon is out; or the spoon looks straight in the oil."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The spoon is straight and rigid; the kink is an appearance.",
+      "fail": "The spoon is physically bent when out; or the kink stays at a fixed point on the spoon as it is raised; or the spoon flexes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The oil surface is level and the jar rigid.",
+      "fail": "The oil tilts and holds; or the jar warps; or the oil goes opaque."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The spoon moves only with the hand.",
+      "fail": "It rises by itself; or slides; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One spoon and one jar.",
+      "fail": "The spoon duplicates; or the jar vanishes; or the spoon passes through the jar."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The spoon, the oil's colour and the jar stay the same.",
+      "fail": "The spoon changes colour; or the oil changes colour; or the jar changes shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

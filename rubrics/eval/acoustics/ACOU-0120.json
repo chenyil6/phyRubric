@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0120",
+  "caption": "The keys of an old typewriter are struck one after another, and with each clack a type bar flies up to hit the paper and the carriage jumps one step sideways.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An old typewriter with paper in it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Keys are struck one after another."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A type bar flies up to hit the paper with each keystroke."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The carriage jumps one step sideways with each stroke."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "There are several strokes in the clip."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Each keystroke comes first; its type bar and carriage step follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The type bars and the carriage move only at keystrokes and are still between them.",
+      "fail": "A type bar rises while no key is pressed; or the carriage moves between strokes; or several type bars rise for one keystroke; or the carriage drifts steadily instead of stepping."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each keystroke sends one type bar up to the paper and back, and the carriage steps once, always in the same direction.",
+      "fail": "A key goes down and no type bar moves; or the type bar rises and stays up; or the carriage steps back and forth alternately; or the carriage stays still while type bars strike."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Type bars fall back after striking and the carriage rests on its rails.",
+      "fail": "A type bar hangs in the air; or the carriage lifts off its rails; or the paper floats up."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The type bars and keys are rigid; the paper flexes.",
+      "fail": "Type bars bend like rubber; or the paper is punched through by a bar; or keys stretch."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The type bars and keys keep their count; one carriage; nothing passes through the roller.",
+      "fail": "Type bars appear or vanish; or a type bar passes through the paper and the roller; or the carriage duplicates; or the typewriter changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The typewriter's colour, the key lettering and the paper's size stay the same.",
+      "fail": "The key lettering changes; or the typewriter changes colour; or the paper changes size."
+    }
+  ],
+  "note": "The hands on the keys are a trigger and are not judged."
+}

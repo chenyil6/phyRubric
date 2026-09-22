@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0180",
+  "caption": "An umbrella is opened on a windy street corner, and the wind tugs it sideways and flips the canopy inside out.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An umbrella is opened on a street corner."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is tugged sideways by the wind."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The canopy flips inside out."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The street is windy, with other signs of wind."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The opening comes first, then the tug, then the flip."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The canopy strains, then inverts with a snap as the ribs bend, and it does not return on its own.",
+      "fail": "The canopy returns to shape on its own; or it is rigid like a plate; or it tears into strips."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The umbrella leans downwind and the flip happens when a gust catches the underside.",
+      "fail": "It leans upwind; or flips with no sign of wind; or flips before it is opened."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The pull is in the direction the wind blows other things.",
+      "fail": "It pulls opposite to other wind signs; or spins in place; or flies straight up out of the hand."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The hand holding it is pulled and the arm strains.",
+      "fail": "The hand is unmoved while the umbrella strains; or the umbrella flips with the handle not moving at all; or the arm moves before the wind."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One umbrella keeps its number, and no rib passes through the fabric.",
+      "fail": "Ribs pass through the canopy; or the umbrella duplicates; or it turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The umbrella's colour and the street stay the same.",
+      "fail": "The umbrella changes colour; or the street rearranges; or the hand changes."
+    }
+  ],
+  "note": "The hand is kept as the anchor the wind pulls against; the person is not judged."
+}

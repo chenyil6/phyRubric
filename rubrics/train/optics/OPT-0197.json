@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0197",
+  "caption": "Sunlight passes through a glass of red wine on a white tablecloth, and a red patch of light appears on the cloth beside the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass of red wine stands on a white tablecloth."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Sunlight passes through it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A red patch of light appears on the cloth beside the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The patch lies on the side away from the sun."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The patch moves when the glass moves."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The red patch lies on the side away from the sun and would disappear if the glass were lifted.",
+      "fail": "It lies on the sun side; or is there with no glass; or the glass is in sun with no patch."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The patch is the wine's red.",
+      "fail": "It is white; or a different colour; or it changes colour with the glass still."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The patch moves only when the glass moves.",
+      "fail": "It drifts with the glass still; or stays put while the glass moves; or flickers in steady sun."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The patch is one soft shape roughly the glass's footprint.",
+      "fail": "It splits; or is a sharp square; or floods the cloth."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass and one patch.",
+      "fail": "A second glass appears; or the patch becomes solid; or the glass vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cloth and the glass stay the same.",
+      "fail": "The cloth changes colour; or the glass changes shape; or the table setting rearranges."
+    }
+  ]
+}

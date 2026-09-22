@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0018",
+  "caption": "The button on an electric toothbrush lying on a counter is pressed, and the head starts buzzing and vibrating.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An electric toothbrush lies on a counter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its button is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The head starts vibrating."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The brush is still before the press."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is still, press, vibrating."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The head begins to vibrate at the moment the button is pressed, and only then.",
+      "fail": "The button is pressed and the brush stays still to the end of the clip; or the head vibrates before the press; or the brush buzzes while lying untouched; or the handle vibrates while the head is still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Before the press nothing on the brush moves; afterwards the head vibrates steadily until the button is pressed again.",
+      "fail": "The brush stops and restarts with the button untouched; or the brush jumps across the counter by itself; or the head vibrates in bursts with nothing pressed; or the brush rolls away with no hand on it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The vibration is a small rapid shake of the head; the handle stays in place or drifts slowly on the counter.",
+      "fail": "The head swings in wide arcs; or the whole brush spins round; or the brush lifts off the counter; or the head rotates like a drill bit while the caption's brush is a plain head."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The brush is a rigid plastic handle with a stiff head; it keeps its shape while vibrating.",
+      "fail": "The handle bends or wobbles like rubber; or the head stretches; or the bristles flow like liquid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One toothbrush; it keeps its head and handle; the finger passes through nothing.",
+      "fail": "A second brush appears; or the head detaches; or the brush vanishes; or the finger passes into the handle."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The brush's colour and the counter stay the same.",
+      "fail": "The brush changes colour; or the bristles change colour; or the counter's contents rearrange."
+    }
+  ],
+  "note": "The buzz is sound and is not judged; vibration is read from visible shaking of the head or blur at its edges."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0016",
+  "caption": "A candle tips and a drop of liquid wax falls onto a wooden table, where it hardens into a small white disc.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A candle is tipped to one side."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A drop of liquid wax falls from it onto a wooden table."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The drop spreads on landing."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The wax hardens into a small disc."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The set wax is white and dull."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is fall, spread, set."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The drop spreads once as it lands, then stops moving and stays where it set for the rest of the clip.",
+      "fail": "The set disc turns liquid again and flows on with nothing heating it; or the disc draws back into a bead and lifts off the table; or the wax spreads, stops and spreads again with none added."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The wax lands as a thin liquid that flows briefly, then sets as a rigid solid: it goes from glossy and see-through to dull and opaque and sits on the wood as one piece.",
+      "fail": "The wax stays a glossy liquid bead for the rest of the clip; or it soaks into the wood and disappears; or the set disc bends or flows when the table is knocked."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The drop falls downward from the candle's rim to the table.",
+      "fail": "The drop travels upward from the candle; or hangs in the air part-way down; or moves sideways across the room with nothing blowing it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The candle moves only as it is tipped, and the table and the set disc stay put.",
+      "fail": "The candle rights itself with nothing touching it; or the disc slides across the table; or the table shifts as the drop lands."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One drop leaves the candle and one disc lies on the table; wax neither appears nor vanishes.",
+      "fail": "A second disc appears where no drop landed; or the disc vanishes; or the drop passes through the table; or the candle's wax grows back as the drop leaves."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candle's colour, the table's grain away from the disc and the room stay the same.",
+      "fail": "The candle changes colour; or the table's grain changes pattern; or objects on the table rearrange."
+    }
+  ]
+}

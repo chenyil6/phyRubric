@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0102",
+  "caption": "An empty tire swing hanging from a branch is given a push and swings back and forth beneath the branch.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An empty tire swing hangs from a branch."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is given a push."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It swings back and forth beneath the branch."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tire is empty."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The push comes first and the swinging follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The rope stays straight and taut throughout and does not go slack or bend.",
+      "fail": "The rope goes slack at the ends of the swing; or it bends mid-length; or it stretches."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The tire follows an arc under the branch at the rope's length.",
+      "fail": "The tire rises above the branch; or it moves in a straight line; or it swings at a changing radius."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It swings from the one push, dies down, and nothing else touches it.",
+      "fail": "It swings harder and harder; or stops dead; or starts again after stopping."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The tire hangs below the branch and the rope's fixed point is the branch.",
+      "fail": "The tire floats up; or the branch bends down to the tire; or the rope's top slides along the branch."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tire, one rope and one branch keep their number.",
+      "fail": "The tire vanishes or a second appears; or the rope passes through the branch; or the tire turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tire, the rope and the tree stay the same.",
+      "fail": "The tire changes colour; or the rope changes; or the tree rearranges."
+    }
+  ]
+}

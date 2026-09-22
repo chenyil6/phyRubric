@@ -1,0 +1,77 @@
+{
+  "id": "ELEC-0134",
+  "caption": "An arc welder is struck behind a screen in a garage, and the arc lights the whole garage in blue-white, throwing hard shadows.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A garage interior with a welding screen."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "An arc is struck behind the screen: a bright light appears there."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The arc lights the whole garage in blue-white."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Hard shadows are thrown across the garage."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The light comes from behind the screen, not from a lamp."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "While the arc burns, the garage is lit from the arc's position: surfaces facing the screen are brightest, and the shadows of tools, benches and the screen itself stretch away from the arc with sharp edges.",
+      "fail": "The garage brightens evenly with no shadows; or the shadows point toward the arc; or the light comes from a place other than behind the screen; or the arc is visible but the garage stays lit only as before."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The intense light appears only while the arc is struck, flickers with it, and the garage returns to its earlier lighting when the arc stops.",
+      "fail": "The garage stays lit blue-white after the arc has gone out; or the light fades in slowly like a dimmer; or the light stays perfectly steady with no flicker while the arc burns; or the garage darkens below its earlier level when the arc stops."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The screen, benches and tools stay put as the arc comes and goes; only the light changes.",
+      "fail": "Tools or benches shift at the arc's start; or the screen falls or slides by itself; or objects jump between lit and unlit frames."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any sparks that fly from behind the screen fall and go dark within a short distance.",
+      "fail": "Sparks rise and gather above the screen; or hang in the air; or lie glowing on the floor for the rest of the clip.",
+      "precondition": "Sparks are visible beyond the screen."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The garage's contents are the same in lit and unlit frames; the screen stays one screen in one place.",
+      "fail": "Tools, benches or vehicles appear or vanish between lit and unlit frames; or the screen duplicates or vanishes; or the arc light passes through the screen and shows the welder as if the screen were glass; or the garage's layout changes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Wall colours, tool colours and the screen's colour are consistent apart from the arc's blue-white cast.",
+      "fail": "The walls change colour permanently after the arc; or tools change colour; or the screen changes colour or pattern."
+    }
+  ],
+  "note": "The welder behind the screen is not judged; whoever strikes the arc may be out of view."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0095",
+  "caption": "A large dog on a leash tied to a post spots a squirrel and lunges after it; the leash snaps taut and the dog is stopped short.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog is on a leash tied to a post."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The dog lunges forward."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The leash snaps taut."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The dog is stopped short."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "A squirrel is what the dog goes for."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The lunge comes first, then the taut leash, then the stop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The leash goes from slack to straight at the instant the dog reaches its end; it does not stretch like elastic.",
+      "fail": "The leash stretches on and on as the dog keeps going; or it stays curved while the dog is plainly held; or it goes taut while the dog is still standing."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The dog stops at the instant the leash goes tight and not before.",
+      "fail": "The dog stops before the leash straightens; or it keeps running past the leash's length; or it is thrown back before the leash is taut."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The post holds and does not move, and the dog is jerked back or pulled up.",
+      "fail": "The post bends or comes out of the ground; or the dog keeps going with the leash trailing; or the leash detaches without breaking."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The taut leash runs straight from collar to post, and a slack leash droops.",
+      "fail": "A slack leash floats in a curve above the ground; or the taut leash sags; or the dog is lifted off the ground."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One dog, one leash and one post keep their number and shape.",
+      "fail": "The leash passes through the dog or the post; or the dog duplicates; or the leash vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dog's coat, the leash and the post stay the same.",
+      "fail": "The coat changes pattern; or the leash changes colour; or the post changes between frames."
+    }
+  ],
+  "note": "The dog is self-driven: its speed, reaction and where it looks are not judged. Only the leash's response and the timing of the stop are."
+}

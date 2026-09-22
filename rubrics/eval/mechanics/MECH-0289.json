@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0289",
+  "caption": "A gymnast performs a cartwheel across a mat, hands then feet touching the ground in turn.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A gymnast performs a cartwheel across a mat."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Hands then feet touch the ground in turn."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "She lands upright."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The hands touch first, then the feet."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Her hands and feet touch the mat one after another in sequence, her body stays whole, and she bends only at the joints.",
+      "fail": "A limb detaches; or a limb bends mid-bone; or hands and feet are all down at once mid-wheel."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "She stays in contact through hands or feet and lands upright.",
+      "fail": "She floats; or hovers upside down; or sinks."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "Her hands and feet land on the mat, not in it.",
+      "fail": "They sink; or pass through; or the mat passes through her."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "She travels sideways across the mat.",
+      "fail": "She jumps position; or ends where she started; or reverses mid-wheel."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Her limbs keep their number and stay attached.",
+      "fail": "A limb vanishes; or a second figure appears; or she merges with the mat."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Her leotard and the mat stay the same.",
+      "fail": "The leotard changes colour; or the mat changes; or the gym rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Form, posture and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

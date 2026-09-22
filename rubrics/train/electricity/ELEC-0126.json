@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0126",
+  "caption": "A motorcycle leaning hard through a turn scrapes its metal footpeg along the track, and sparks trail out behind it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A motorcycle leans hard through a turn on a track."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its metal footpeg scrapes along the track surface."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Sparks trail out behind the motorcycle."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sparks come from the peg's contact with the track."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The scrape comes first and the sparks trail after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The sparks stream backward from the contact point along the track, opposite to the motorcycle's motion, low over the surface, and die out along the way.",
+      "fail": "Sparks fly ahead of the motorcycle; or spray equally in all directions from the peg; or the trail lies off to one side while the machine runs straight on; or the trail moves along with the bike as a fixed cloud."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Sparks are transient: each fades within a short distance and none remain on the track; one motorcycle with one rider and its footpegs.",
+      "fail": "Glowing dots stay on the track behind the bike for the rest of the clip; or a glowing line remains along the track; or the footpeg vanishes or duplicates; or a second motorcycle appears from nowhere."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Sparks appear only while the peg touches the track and stop when the machine straightens and the peg lifts.",
+      "fail": "Sparks continue after the bike has straightened and the peg is clear of the track; or sparks trail from a peg that is high off the track; or sparks flow back to the peg."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Sparks that lift off the track arc back down and go dark; none rise or hover.",
+      "fail": "Sparks rise steadily and gather above the track; or hang in the air; or climb along the bike's side."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The peg scrapes the track's surface; the motorcycle and rider stay whole and pass through nothing.",
+      "fail": "The peg or the wheel sinks into the track; or the bike passes through a barrier or kerb; or the bike and rider merge or change shape; or a wheel detaches."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bike's livery, the rider's gear and the track markings stay the same.",
+      "fail": "The bike changes colour; or the rider's suit changes colour; or the track's lines change."
+    }
+  ],
+  "note": "The rider is kept because leaning the machine is what brings the peg to the track; riding technique is not judged."
+}

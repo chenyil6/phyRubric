@@ -1,0 +1,65 @@
+{
+  "id": "OPT-0060",
+  "caption": "A ball rolls out of a room past a wall mirror, and its reflection leaves the mirror at the same time.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ball rolls out of a room past a wall mirror."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its reflection leaves the mirror at the same time."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "Afterwards the mirror shows only the empty room."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection slides out of the frame as the ball passes the mirror's edge, at the same time.",
+      "fail": "The reflection remains after the ball has gone; or leaves before the ball reaches the edge; or stays still while the ball rolls."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "After the ball has passed, the mirror shows only the empty room.",
+      "fail": "A ball remains in the mirror; or a second ball appears; or the room in the mirror changes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image of the ball, same colour and size.",
+      "fail": "It is a different colour or size; or a different object; or it is not mirrored."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The ball rolls straight and slows gently.",
+      "fail": "It curves; or speeds up; or restarts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one mirror; the reflection stays in the mirror.",
+      "fail": "The reflection steps out; or the ball passes into the glass; or the ball vanishes; or the mirror duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and the room stay the same.",
+      "fail": "The ball changes colour; or the frame changes; or the room rearranges."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0278",
+  "caption": "A warm loaf fresh from the oven is slid into a clear plastic bag, and the inside of the bag fogs over.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A warm loaf is slid into a clear plastic bag."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The inside of the bag fogs over."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The fog is thickest above the loaf."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The fog gathers into drops."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The outside of the bag stays dry."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The loaf goes in first and the fogging follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The fog appears on the bag's inner face once the warm loaf is inside and is thickest above it.",
+      "fail": "The bag is fogged before the loaf is in it; or the loaf sits in the bag and the plastic stays clear and dry to the end of the clip; or the fog appears on the outside of the bag; or the fog is thickest at a corner far from the loaf."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog only thickens while the warm loaf stays in the bag and gathers into drops; it does not clear on its own.",
+      "fail": "The fog clears while the warm loaf stays in the closed bag; or the fog thins and thickens in turn; or the drops draw back into a clear film and the bag dries; or the fog moves to the outer face as it thickens."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Drops on the bag's inner face run downward and pool at its bottom, and drops on the upper face hang and fall.",
+      "fail": "A drop runs up the bag's inner face; or drops fall upward off the upper face; or water gathers along the bag's top and stays as a dome; or drops hang in the air inside the bag away from the plastic."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bag is a limp clear film that creases and clings and the fog beads on it, and the loaf stays a soft solid.",
+      "fail": "The bag stays a rigid box as the loaf goes in; or the bag's film sets hard as it fogs; or the loaf flows as a liquid in the bag; or the fog stands off the film as a thick crust."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One loaf in one bag; the loaf stays whole inside and nothing passes through the plastic.",
+      "fail": "The loaf passes out through the bag's wall; or a second loaf appears; or the loaf vanishes; or the bag splits into two bags."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag's printing, the loaf's crust and the counter stay the same.",
+      "fail": "The bag's printing changes; or the crust changes pattern; or items on the counter rearrange."
+    }
+  ],
+  "note": "Who bags the loaf is not judged."
+}

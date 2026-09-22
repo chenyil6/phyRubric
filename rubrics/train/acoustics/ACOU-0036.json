@@ -1,0 +1,78 @@
+{
+  "id": "ACOU-0036",
+  "caption": "A car with a booming stereo pulls up at a light, and the fuzzy dice hanging from its rear-view mirror jiggle with the bass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Fuzzy dice hang from a car's rear-view mirror."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The car pulls up and stops at a traffic light."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dice jiggle."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The jiggle is a rapid twitch rather than a slow pendulum swing."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The dice are still jiggling after the car has stopped."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The dice hang from their string and twitch about the hanging point with the string taut above them.",
+      "fail": "The dice rise with the string going slack; or move sideways as a pair while the string above them stays perfectly still and straight; or float away from the mirror."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Other loose light things in the cabin twitch at the same moments as the dice.",
+      "fail": "An air freshener, charm or paper hangs dead still while the dice twitch hard; or it twitches while the dice hang still; or the two move at different moments.",
+      "precondition": "Another loose light object hangs or lies in the cabin."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "As the car slows, the dice swing toward the windscreen and then back.",
+      "fail": "The dice swing toward the rear as the car brakes; or stay rigidly vertical as the scene outside comes to a halt; or swing sideways only.",
+      "precondition": "The car's slowing is visible through the windows."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The dice hang below the mirror on their string and return to hanging straight down after each swing.",
+      "fail": "The dice rest tilted off vertical with a taut string and nothing touching them; or rise above the mirror; or the string arcs upward."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The dice keep their number; one mirror; nothing passes through the windscreen.",
+      "fail": "An extra die appears; or a die vanishes; or the dice pass through the windscreen or mirror; or the dice merge into one."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dice's colour and pips, the mirror and the dashboard stay the same.",
+      "fail": "The dice change colour or their pips change; or the mirror moves on its own; or the dashboard changes."
+    }
+  ],
+  "note": "The car and the stereo are self-driven; the dice swinging forward as the car brakes is inertia, not a violation."
+}

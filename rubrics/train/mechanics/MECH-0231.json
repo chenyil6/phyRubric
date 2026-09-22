@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0231",
+  "caption": "A glass of water is poured into an opaque metal jug, and the water disappears from view inside the jug.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass of water and an opaque metal jug are present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The water is poured into the jug."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water is out of sight inside the jug."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pour comes first and the water disappears as it enters."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The level in the glass falls as it pours, and the water is unseen once inside and does not leak from the sides.",
+      "fail": "The glass level is unchanged; or water leaks from the jug's sides; or water reappears in the glass."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The stream falls as a liquid, and the jug stays opaque and rigid.",
+      "fail": "The stream is a rigid rod; or the jug becomes transparent; or the jug bulges."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The stream falls into the jug's opening.",
+      "fail": "It curves; or misses and rises; or hangs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "Water does not show through the metal.",
+      "fail": "It shows through; or passes through the wall; or the jug passes through the glass."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass and one jug keep their number.",
+      "fail": "The glass duplicates; or the jug vanishes; or water appears elsewhere."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jug, the glass and the background stay the same.",
+      "fail": "The jug changes colour; or the glass changes; or the background rearranges."
+    }
+  ]
+}

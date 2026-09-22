@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0052",
+  "caption": "A cat walks up to a floor-length mirror and sees another cat approaching it in the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cat walks up to a floor-length mirror."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Another cat approaches it in the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflected cat is a mirror image of the real one."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Their noses meet at the glass."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflected cat approaches as the real cat does, at the same time and pace, and their noses meet at the glass.",
+      "fail": "The reflection stays still while the cat walks; or moves first or later; or the noses meet away from the glass."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image: the same cat, same markings, facing the real one across the surface.",
+      "fail": "It is a different cat; or shows the cat's back; or it is a rotated copy with the markings on the wrong side."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It moves while the cat sits still; or it turns away by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mirror is flat and rigid: the reflection is undistorted.",
+      "fail": "The surface ripples; or the reflection warps while the cat is unchanged; or the mirror bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cat and one reflection; the reflection stays inside the mirror.",
+      "fail": "The reflection steps out of the mirror; or a second cat appears in the room; or the cat passes into the glass; or the cat vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cat's markings and the mirror frame stay the same, and the reflection's colours match the cat's.",
+      "fail": "The cat changes colour; or the frame changes; or the reflection's colours drift from the cat's."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the reflection's relation to it is. Mirror geometry: each point of the image lies directly across the mirror surface from the real point, so the image is a mirror copy, not a rotated one."
+}

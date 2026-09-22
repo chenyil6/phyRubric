@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0176",
+  "caption": "Cooking oil is poured into a pan over high heat, and the oil begins to shimmer and ripple across its surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Oil is poured into a pan on a hob."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The oil's surface goes from still to moving."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Fine ripples run across the surface."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Thin wisps may rise from the oil."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The oil is still just after it is poured."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the rippling follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The surface goes from still to rippling as the pan heats and the rippling keeps up.",
+      "fail": "The oil ripples while it is still falling from the bottle; or the surface goes glassy still and stays so while wisps rise from it; or the rippling stops and then starts again by itself; or the ripples appear before any oil is in the pan."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The ripples run across the oil's own surface and the oil stays in the pan; nothing else moves it.",
+      "fail": "The oil swirls as though stirred with nothing in the pan; or the whole body of oil slides from side to side in a still pan; or the pan shakes with nothing touching it; or the ripples hold one fixed pattern that never changes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The oil lies level in the pan and finds its level as it is poured, and any wisps rise.",
+      "fail": "The oil's surface tilts and stays tilted with the pan level; or the oil climbs the pan's wall and stays above its level; or the wisps sink over the rim and pool on the hob; or the oil stands in a heap in the pan's middle."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The oil is a thin liquid that pours in a stream, spreads over the pan's floor and shows fine surface movement.",
+      "fail": "The oil pours as a solid rod; or the oil sets solid in the pan; or the oil moves as a single rigid sheet; or the oil beads up and rolls about without wetting the pan."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pan and one pour; the oil stays in the pan and its level changes only by pouring.",
+      "fail": "The oil's level jumps up with nothing poured; or oil passes through the pan's wall; or a second pan appears; or the pan changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the hob and the oil's colour stay the same.",
+      "fail": "The pan changes colour; or the oil changes colour; or items around the hob rearrange."
+    }
+  ],
+  "note": "Smoking of the oil is chemistry and is not judged."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0093",
+  "caption": "The reflection of a moored boat lies on clear still water, and when the boat rocks the reflection breaks apart and then settles.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A moored boat's reflection lies on clear still water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The boat rocks."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The reflection breaks apart."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It settles again."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rocking comes first, then the break-up, then the settling."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection wavers and fragments as the boat rocks and returns when the water calms.",
+      "fail": "It stays sharp while the boat rocks; or breaks up with the boat still; or never returns on calm water."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The clear reflection is the boat inverted, attached at the waterline.",
+      "fail": "It is upright; or detached; or a different boat."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid: ripples spread from the hull and fade.",
+      "fail": "It is rigid; or the ripples freeze; or the water leaps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move with the boat and water still.",
+      "fail": "It drifts; or shifts on a flat calm."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One boat and one reflection; the reflection stays on the water.",
+      "fail": "A second boat appears; or the reflection rises off the water; or the boat vanishes; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The boat and the mooring stay the same.",
+      "fail": "The boat changes colour; or the mooring changes; or the shore rearranges."
+    }
+  ]
+}

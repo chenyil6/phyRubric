@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0106",
+  "caption": "The canvas of a pitched tent lights up from a lightning flash outside, then goes dark again.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pitched tent, its canvas in view."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The canvas lights up from a flash outside."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The canvas goes dark again."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tent is dim before the flash."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dim, lit, dark again."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The glow on the canvas is brief: it appears and is gone, and the canvas returns to dim; flashes may repeat but each ends.",
+      "fail": "The canvas stays lit for the rest of the clip after the flash; or brightens steadily; or the flash fades in slowly like a lantern being turned up; or the canvas glows on after the sky is dark."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The canvas is brightest on the side toward the flash and dimmer on the far side; the light shows through the fabric with the poles and seams as dark lines.",
+      "fail": "The canvas lights evenly all round with no brighter side; or the side away from the lit sky is the brightest; or the canvas lights up while the sky around the tent stays dark; or the glow sits at one spot on the canvas like a lamp inside."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The tent and its surroundings stay still at the flash; the canvas may ripple in the wind but does not jump at the flash.",
+      "fail": "The tent shifts or its poles move at the flash; or objects around the tent jump; or the canvas snaps taut or collapses at the instant of the flash."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The tent, the ground and the surroundings are the same across dim and lit frames.",
+      "fail": "Trees or objects around the tent appear or vanish between frames; or the tent changes place; or a second tent appears; or a figure appears inside the tent at the flash."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The tent keeps its shape and the canvas stays cloth; nothing passes through it.",
+      "fail": "The tent changes shape between frames; or the canvas becomes a solid wall or turns transparent like glass; or a bolt passes through the tent; or the tent merges with the ground."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The canvas colour, the ground and the surroundings keep their colours apart from brightness.",
+      "fail": "The canvas changes colour rather than brightness; or the ground changes colour; or the tent's pattern or logo changes."
+    }
+  ]
+}

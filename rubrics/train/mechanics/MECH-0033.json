@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0033",
+  "caption": "A bowling ball reaches the end of the lane, hits the front pin of a full rack, and the pins fly and scatter.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bowling ball reaches the end of a lane where a full rack of pins stands."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The ball hits the front pin."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pins fly and scatter."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rack is standing full before the ball arrives."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The ball reaches the pins first and the scattering follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each pin moves only after the ball or another pin strikes it, so the disturbance spreads outward from the front pin.",
+      "fail": "Pins topple before the ball reaches them; or the ball reaches the front pin and the rack stands unmoved; or pins at the back fall while the front pin is still standing untouched."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Struck pins are driven back and out to the sides, away from the ball's line, and the ball carries on into the pit more slowly than it arrived.",
+      "fail": "Pins fly back up the lane toward the bowler, against the ball; or the ball holds its speed unchanged through the rack; or all the pins move off together as one rigid block."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The ball and the pins meet solidly and stay outside one another and above the lane.",
+      "fail": "The ball passes through a pin without moving it; or two pins pass through each other; or a pin passes through the lane surface or the back wall."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Pins thrown up come back down onto the lane and end lying on it.",
+      "fail": "A pin rises and stays up in the air; or a pin hangs above the lane after being struck; or a pin drifts upward out of the frame."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The pins that stood in the rack are the pins that scatter, and the ball stays one ball.",
+      "fail": "A pin vanishes as it is struck; or extra pins appear during the scatter; or a pin turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour, the pins' markings and the lane stay the same.",
+      "fail": "The ball changes colour at the impact; or the pins change their stripes between frames; or the back wall of the pit changes."
+    }
+  ]
+}

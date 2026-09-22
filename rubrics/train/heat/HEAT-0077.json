@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0077",
+  "caption": "A saucepan of milk on a stove begins to boil, and the milk foams up rapidly toward the rim.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A saucepan of milk sits on a hob."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The milk foams up."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The foam climbs toward the rim."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The foam rises fast enough to threaten a spill."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The milk lies flat before the foam rises."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The foam only rises while the pan stays on the heat; it falls back only if the pan is lifted off.",
+      "fail": "The foam sinks back while the pan sits on the burner with nothing changed; or the foam rises and falls in turn on the heat; or the foam rises before the milk has begun to bubble; or the foam collapses and swells again with nothing touched."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The milk is a liquid that throws up a thick bubbly foam which climbs the pan's wall and collapses when it spills or cools.",
+      "fail": "The milk stays a flat mirror while foam stands above it; or the foam stands as rigid spikes that keep their shape when the pan is moved; or the milk sets solid; or the foam pours off as a thin clear liquid."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The foam climbs the inside of the pan and, if it goes over, runs down the outside, while the milk otherwise stays in the pan.",
+      "fail": "The foam climbs the outside of the pan and goes in over the rim; or foam lifts off the pan and hangs above it; or foam runs upward on the pan's outside; or the milk runs up the pan's wall and out with no foam at the rim."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Foam near the rim means the milk below has risen: the level and the foam go up together.",
+      "fail": "The foam reaches the rim while the visible milk below is calm and far from full; or the milk's level drops while the foam climbs; or the foam climbs while the surface below shows no bubbles."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pan of milk; the milk stays in the pan except where it spills over the rim.",
+      "fail": "Milk passes through the pan's wall; or the level jumps up with nothing added; or a second pan appears; or the pan changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the hob and the milk's colour stay the same.",
+      "fail": "The pan changes colour; or the milk changes colour; or the hob's knobs move by themselves."
+    }
+  ]
+}

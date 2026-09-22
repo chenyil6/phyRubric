@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0182",
+  "caption": "A piece of blue cellophane is taped over a flashlight, and the beam on the wall turns blue.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flashlight is on."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A piece of blue cellophane is taped over it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The beam on the wall turns blue."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The spot goes white again when the film is removed."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The film goes on first and the colour changes with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The spot looks blue only where the film's light reaches and while it is on.",
+      "fail": "The spot is blue with the film off; or stays white under the blue light; or turns a different colour from the light."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens at the same instant as the film and is confined to where its light falls.",
+      "fail": "The spot changes before the film; or long after; or surfaces the light cannot reach change too."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The spot keeps its shape and place; only its colour changes.",
+      "fail": "The spot moves when the film goes on; or changes shape; or splits."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves; only the light changes.",
+      "fail": "The spot moves; or the film moves by itself; or the lit area wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One film and one spot.",
+      "fail": "A second film appears; or the spot vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The spot's shape and the surroundings stay the same.",
+      "fail": "The spot changes shape; or the surroundings rearrange; or the film changes shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

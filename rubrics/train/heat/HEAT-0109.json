@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0109",
+  "caption": "A tray of ice cubes is taken from the freezer, and the cubes and tray frost over white.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tray of ice cubes is taken from a freezer."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A white frost forms on the tray and the cubes."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The frost appears first on the coldest surfaces."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The frost spreads as a haze."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tray is taken out first and the frost follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The frost builds on the cold surfaces and any later change is toward wetness as the tray warms; it does not come and go.",
+      "fail": "The frost thickens, goes and thickens again; or the frost turns back to bare dry plastic and then frosts again; or wet drops turn back into dry white frost in the warm room; or the frost thins and thickens in turn."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The white appears on the tray and the cubes themselves and spreads across them, not on the warm counter around.",
+      "fail": "The frost appears on the counter while the tray stays bare; or the tray's plastic changes colour rather than frosting; or the frost appears on the wall behind; or the frost covers the whole scene."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Once the frost turns to drops they run downward on the tray's sides and gather below it.",
+      "fail": "A drop runs up the tray's side; or water gathers on the tray's top edge and stays as a dome; or a drop leaves the tray and rises; or a run travels sideways and stays level."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The frost is a fine white bloom on the surface that softens into beads as the tray warms, and the cubes stay hard solids in their wells.",
+      "fail": "The frost stands off as thick spikes of ice; or the frost peels away as a sheet; or the tray's plastic flexes as the frost grows; or a cube slumps while the frost is still growing."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tray with its cubes; the cubes keep their number and stay in their wells.",
+      "fail": "A cube vanishes; or a new cube appears in an empty well; or a cube passes through the tray's floor; or the tray changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tray's colour, the counter and the kitchen stay the same.",
+      "fail": "The tray changes colour; or the counter changes pattern; or items in the kitchen rearrange."
+    }
+  ]
+}

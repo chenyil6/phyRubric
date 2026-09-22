@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0194",
+  "caption": "A purple bath bomb is dropped into a tub of clear water, and the colour billows out and turns the whole bath purple.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tub of clear water is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A purple bath bomb is dropped in."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The colour billows out."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The whole bath turns purple."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bath bomb fizzes as the colour spreads."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The purple spreads from the bath bomb through the water as it fizzes, thinning as it goes, until the water is evenly coloured and never gathers back; coloured areas stay coloured.",
+      "fail": "The water returns to its original colour where it was purple; or the purple gathers back into the bath bomb; or the purple appears before the bath bomb arrives."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The result is purple, and un-reached water keeps its original colour.",
+      "fail": "The water turns a colour other than purple; or the un-reached water changes; or the purple is darker than the bath bomb itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water behaves as it should: streaks and swirls where stirred or spread, settling where it flows.",
+      "fail": "The water is rigid and unmarked; or it flows like water when it is a paste; or it bounces like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The water moves only where stirred or where the purple flows.",
+      "fail": "The water swirls by itself; or the purple spreads faster than stirring or flow carries it; or the container moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The amount of water stays the same and the container keeps its shape.",
+      "fail": "The container fills or empties on its own; or a second container appears; or the bath bomb passes through the container."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The container and the background stay the same.",
+      "fail": "The container changes colour; or the background rearranges; or the tool changes."
+    }
+  ]
+}

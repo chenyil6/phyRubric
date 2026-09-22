@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0059",
+  "caption": "A car approaches from behind, and its image grows larger in the rear-view mirror of the car ahead.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car approaches from behind another car."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its image grows larger in the rear-view mirror of the car ahead."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The image is seen behind, not ahead."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The image grows as the car closes in."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflected car grows as the real one closes in and would shrink if it fell back.",
+      "fail": "The image stays one size as the car closes; or it shrinks as the car nears; or it grows with the gap unchanged."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The image is a mirror image of the following car, seen behind, with any lettering reversed.",
+      "fail": "It is a different car; or it shows the road ahead; or its lettering reads the right way round."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The image moves only as the cars move.",
+      "fail": "It jumps; or moves while both cars are stopped; or drifts across the mirror."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mirror is flat and rigid: the image is undistorted.",
+      "fail": "The mirror ripples; or the image warps; or the mirror bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two cars and one mirror image of the following one.",
+      "fail": "A third car appears; or the image leaves the mirror; or a car vanishes; or the image becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cars' colours and the road stay the same.",
+      "fail": "A car changes colour; or the mirror changes; or the road rearranges."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0260",
+  "caption": "A hot-air balloon drifts low over a field in the morning sun, and its huge shadow glides across the crops below.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hot-air balloon drifts low over a field in the morning sun."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its huge shadow glides across the crops below."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The shadow is stretched by the low light."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow lies on the side away from the sun."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The shadow moves with the balloon and only then.",
+      "fail": "It stays behind while the balloon drifts; or moves with the balloon still; or jumps."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the balloon's outline, stretched by the low sun.",
+      "fail": "It is a different shape; or a small round spot under a plainly low sun; or splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side away from the low sun, not directly beneath.",
+      "fail": "It lies toward the sun; or directly beneath under a low sun; or it is missing in sunlight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The balloon drifts gently and the shadow lies on the ground.",
+      "fail": "The balloon drops like a stone; or the shadow stands up off the crops; or the balloon shoots up."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon and one shadow.",
+      "fail": "A second balloon or shadow appears; or the balloon vanishes; or the shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colours and the field stay the same, and the shadow stays dark.",
+      "fail": "The balloon changes colour; or the shadow turns coloured; or the crops change."
+    }
+  ]
+}

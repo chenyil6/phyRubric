@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0297",
+  "caption": "A papadum is dropped into hot oil, and it puffs up and doubles in size within seconds.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flat papadum is dropped into hot oil."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The papadum blisters."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The papadum expands."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The papadum keeps its puffed shape when lifted out."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The oil bubbles around it."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the puffing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The flat disc raises blisters and swells into a thicker bubbled round, staying one piece that keeps its outline.",
+      "fail": "The papadum stays perfectly flat and smooth while plainly larger; or it swells into a smooth ball with no blisters; or it splits into separate pieces as it puffs; or it turns into another shape such as a tube."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The swelling only advances in the oil and the papadum does not shrink back once puffed.",
+      "fail": "The papadum shrinks back flat in the oil; or it puffs and flattens in turn; or it is puffed before it reaches the oil; or it collapses as it is lifted out and stays flat."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The papadum rides at the oil's surface or is held under it, the bubbles rise, and any oil runs off it when lifted.",
+      "fail": "The papadum sinks to the pot's floor and stays; or hangs motionless in mid-oil; or bubbles sink toward the pot's floor; or oil climbs the papadum as it is lifted out."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The oil shows the papadum arriving: it bubbles hard around it and the papadum goes glossy.",
+      "fail": "The papadum enters and the oil stays glassy still; or the oil bubbles before the papadum reaches it; or the papadum puffs while the oil around it stays flat and clear; or the papadum stays dry and matt in the oil."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One papadum in one pot; it stays one piece and the oil stays in the pot.",
+      "fail": "A second papadum appears; or the papadum vanishes; or oil passes through the pot's wall; or the papadum passes through the pot's floor."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the oil's colour and the surroundings stay the same.",
+      "fail": "The pot changes colour; or the oil changes colour; or items around the pot rearrange."
+    }
+  ],
+  "note": "The papadum browning as it fries is chemistry and is not judged."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0220",
+  "caption": "A knot is tied in a thick rope and both ends pulled hard so the knot tightens.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A knot is tied in a thick rope."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Both ends are pulled hard."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The knot tightens."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tying comes first and the pulling follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The rope loops through itself only where the hands pass it, and it does not merge with or pass through itself.",
+      "fail": "It passes through itself; or merges with itself; or the knot forms with no crossing."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The knot shrinks and hardens as the ends are pulled, and the rope does not stretch like elastic.",
+      "fail": "It stretches; or the knot loosens under the pull; or the rope snaps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The rope keeps its length and thickness.",
+      "fail": "It grows; or thins; or changes into another material."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The pull tightens the knot and the knot holds when released.",
+      "fail": "The pull produces no tightening; or the knot unties on release; or it tightens with no pull."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One rope keeps its number and its two ends.",
+      "fail": "The rope splits; or the ends multiply; or the knot vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rope's colour and the background stay the same.",
+      "fail": "The rope changes colour; or the hands change; or the background rearranges."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged."
+}

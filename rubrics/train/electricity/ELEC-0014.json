@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0014",
+  "caption": "A light switch is flicked up and down several times in quick succession, and the ceiling light goes on and off in step with each flick.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A light switch and a ceiling light in the same room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The switch is flicked up and down several times in quick succession."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ceiling light goes on and off with the flicks."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "There are several flicks, not one."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Each change of the light follows a flick."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Every flick changes the light's state at once: each time the switch moves the light goes from off to on or on to off.",
+      "fail": "The switch moves and the light stays as it was; or the light changes while the switch is still; or the light changes only after a delay while the switch has already moved again; or the light changes twice for one flick."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Between flicks the light holds its state; after the last flick it stays in that state for the rest of the clip.",
+      "fail": "The light flickers between flicks with the switch still; or changes state after the flicking has stopped; or dims gradually rather than switching; or the switch moves by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The room brightens and darkens with the light: the walls and floor under the fixture follow each change.",
+      "fail": "The fixture goes dark while the room stays as bright; or the room changes brightness while the fixture stays as it was; or light stays pooled under the dark fixture."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing else in the room moves as the switch is flicked; the fixture hangs still.",
+      "fail": "Doors or objects move at the flicks; or the fixture swings; or the switch plate slides on the wall."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One switch and one ceiling light; both stay in place; the hand passes through nothing.",
+      "fail": "A second switch or light appears; or the fixture vanishes or moves across the ceiling; or the hand passes into the wall; or the room's contents appear or vanish between lit and dark frames."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wall colour, the fixture and the room's contents stay the same apart from brightness.",
+      "fail": "The wall changes colour rather than brightness; or the fixture changes shape; or pictures or furniture change."
+    }
+  ]
+}

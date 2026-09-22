@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0151",
+  "caption": "A magnetic parts tray is set on the side of a car and screws dropped into it, and the tray and the screws stay put.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A magnetic parts tray and a car."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The tray is set on the side of the car."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Screws are dropped into the tray."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The tray and the screws stay put."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tray is on a vertical or sloping steel panel, not on a flat top."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is tray placed, screws dropped, both hold."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Once let go, the tray stays where it was placed on the panel with nothing else supporting it; the screws land in the tray and stay there, even as the tray is jostled or tilted.",
+      "fail": "The tray drops when released; or slides down the panel; or stands off the panel with a gap; or screws slide out of a tilted tray and fall."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The screws fall downward into the tray and come to rest on its floor; anything that misses the tray falls to the ground.",
+      "fail": "Screws float above the tray; or rise after landing; or a screw that misses hangs in the air; or screws climb the tray's walls."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The tray stays still once placed; the screws lie still once landed; the car does not move.",
+      "fail": "The tray creeps along the panel; or screws hop about in the tray with nothing touching them; or the car rocks or rolls as the screws land."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The tray is a rigid dish; the screws are hard pieces that clatter and settle; the car's panel does not dent.",
+      "fail": "The tray bends or sags; or screws squash or stick together into a lump; or the panel dents under the tray."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tray; the screws in the tray are the screws that were dropped; nothing passes into the tray's floor or the car's panel.",
+      "fail": "Screws multiply in the tray; or vanish in mid-air; or the tray sinks into the panel; or a second tray appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tray's colour, the car's paint and the screws' finish stay the same.",
+      "fail": "The tray changes colour or shape; or the car changes colour; or the screws change size."
+    }
+  ]
+}

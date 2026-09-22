@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0052",
+  "caption": "A blender with its button held down is plugged into a wall socket, and the blades start spinning.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A blender with its button held down."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The blender is plugged into a wall socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The blades start spinning."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The blades are still before the plug goes in, though the button is held."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is button held, plug in, blades spin."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The blades start at the moment the plug seats in the socket, and only then; holding the button alone does nothing while unplugged.",
+      "fail": "The blades spin before the plug reaches the socket; or the plug is in and the blades stay still to the end of the clip; or the blades start with the plug lying loose; or the blades spin only when the button is released."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Before the plug is in nothing in the jug moves; afterwards the blades run steadily while the button is held and do not stop, start or reverse on their own.",
+      "fail": "The blades stop and restart with the plug in and the button held; or the contents swirl before the plug is in; or the blades reverse; or the jug spins with the blades."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Any contents swirl round the jug in the blades' direction, climbing the walls and dipping at the centre.",
+      "fail": "The contents rise as a column; or swirl against the blades; or stay flat and still while the blades spin; or leap out of a closed jug.",
+      "precondition": "The jug has contents."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord hangs slack from the plug to the blender and stays attached; the jug and blades stay rigid.",
+      "fail": "The cord stands rigid in the air or stretches like elastic; or the jug wobbles or bulges; or the blades flop like rubber."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One blender, one plug, one socket; the plug enters the socket rather than the wall; the hand passes through nothing.",
+      "fail": "The plug passes into the wall beside the socket; or a second plug or jug appears; or the hand passes through the blender; or the contents pass through the jug's walls."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blender's colour, the jug and the counter stay the same.",
+      "fail": "The blender changes colour; or the jug changes shape; or the counter's contents rearrange."
+    }
+  ]
+}

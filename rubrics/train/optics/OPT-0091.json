@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0091",
+  "caption": "A neon sign glows above a rain-soaked street at night, and its coloured reflection streaks down the wet pavement toward the viewer.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A neon sign glows above a rain-soaked street at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its coloured reflection streaks down the wet pavement toward the viewer."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflection has the same colours as the sign."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection fades where the pavement is dry."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection lies below the sign on the wet surface and fades where the pavement is dry.",
+      "fail": "It lies above the sign; or shows on dry pavement; or it is missing on plainly wet ground."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The reflection has the same colours as the sign.",
+      "fail": "It is a different colour; or brighter than the sign; or it changes colour with the sign steady."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pavement is wet: the reflection shimmers where puddles ripple.",
+      "fail": "It is a sharp mirror image on rough ground; or it is rigid on rippling puddles; or the water flows uphill."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It drifts along the pavement; or flickers with the sign steady."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sign and one reflection.",
+      "fail": "A second sign appears; or the reflection becomes solid; or the sign vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sign's lettering and the street stay the same.",
+      "fail": "The lettering changes; or the street rearranges; or the buildings change."
+    }
+  ]
+}

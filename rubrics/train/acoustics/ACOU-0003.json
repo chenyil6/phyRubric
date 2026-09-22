@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0003",
+  "caption": "A gong is struck once with a padded mallet, and a ping-pong ball hanging on a thread against its face is knocked away and swings.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A gong is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A ping-pong ball hangs on a thread, touching the gong's face."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A mallet strikes the gong once."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The ball is knocked away and swings."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The ball swings back toward the gong."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The strike comes first and the ball moves after it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The ball rests against the gong until the strike, is thrown outward at the strike, then swings on its thread.",
+      "fail": "The ball moves before the mallet lands; or stays against the gong through the strike; or jumps away with the mallet nowhere near."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The swing decays: each return is smaller; the ball may tap the gong again as it returns and be knocked off again while the gong rings, but it does not gain height.",
+      "fail": "The ball swings higher and higher; or keeps the same swing for the whole clip; or stops dead in mid-swing; or returns and sticks to the gong."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The thread stays taut as the ball swings, hanging from its fixed point, and the ball moves on an arc.",
+      "fail": "The thread stretches like elastic; or the ball swings in a straight horizontal line rather than an arc; or the thread goes slack while the ball is plainly at the end of it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The ball swings as a pendulum: outward from the gong, back down through the bottom of its arc, up on the other side.",
+      "fail": "The ball floats away and stays up; or drops straight down as if the thread were cut while it remains attached; or swings sideways along the gong's face."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One gong, one ball and one thread; the ball stays attached and nothing passes through anything.",
+      "fail": "The ball detaches and vanishes; or a second ball appears; or the mallet passes through the gong; or the gong changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The gong's colour and the ball's appearance stay the same.",
+      "fail": "The gong changes colour; or the ball changes colour or size; or the stand moves."
+    }
+  ]
+}

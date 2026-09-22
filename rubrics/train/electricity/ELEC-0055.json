@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0055",
+  "caption": "A power bank is connected to a phone by a cable, and a light on the power bank comes on and the phone shows it is charging.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A power bank, a phone and a cable."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cable connects the power bank to the phone."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A light on the power bank comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The phone shows that it is charging."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bank's light is off and the phone shows no charging sign before the cable is in."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is connect, then both indicators."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bank's light comes on and the phone's charging sign appears once the cable is connected at both ends, and only then.",
+      "fail": "The cable is connected and neither indicator appears to the end of the clip; or the bank's light is on with the cable loose; or the phone shows charging while the cable is not in it; or one indicator appears and the other never does with both ends seated."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once shown, both indicators stay while the cable stays in; they go only if the cable is pulled.",
+      "fail": "An indicator vanishes with the cable seated; or flashes on and off at random; or the phone's screen goes dark as the cable seats; or the connector backs out by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cable is a flexible cord that lies in a curve between the two and stays attached at both ends.",
+      "fail": "The cable stands rigid in the air; or stretches like elastic; or floats; or a connector detaches from the cable."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The phone and the bank stay where they lie as the cable goes in, apart from small nudges.",
+      "fail": "The phone or bank slides across the table by itself; or lifts; or flips over; or other items on the table jump."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One phone, one bank, one cable; each connector enters a port rather than a body; fingers pass through nothing.",
+      "fail": "A connector passes into the phone's or bank's body away from the port; or a second cable appears; or the bank vanishes; or the phone changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bank's colour, the phone's case and the table stay the same apart from the indicators.",
+      "fail": "The bank changes colour; or the phone changes colour; or the table's contents rearrange."
+    }
+  ]
+}

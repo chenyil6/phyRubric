@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0055",
+  "caption": "An electric toothbrush is switched on and left lying on a bathroom counter, and it buzzes and slowly turns in circles.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An electric toothbrush lies on a bathroom counter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is switched on: a button is pressed or it starts buzzing."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It visibly buzzes and moves."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It turns in circles on the counter."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The motion is slow."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "It is switched on first and moves after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The toothbrush moves only while it is on and buzzing: still before the switch, moving after, and if switched off it stops.",
+      "fail": "It moves before being switched on; or moves while showing no vibration at all; or keeps moving after being switched off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The visible vibration has its effect on the counter: the head blurs or shivers and the body creeps in small jerks, turning as it goes.",
+      "fail": "The brush is plainly buzzing and the body glides smoothly as if pushed; or spins like a top; or the head does not shiver at all while the body moves."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It stays flat on the counter; if it reaches the edge it falls.",
+      "fail": "It hovers; or stands up on end; or climbs a wall."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The counter and the toothbrush stay rigid.",
+      "fail": "The counter ripples; or the toothbrush bends; or the bristles stretch."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One toothbrush; it does not pass into the counter, duplicate or vanish.",
+      "fail": "A second toothbrush appears; or it vanishes; or it sinks into the counter; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Its colour and the bathroom items stay the same.",
+      "fail": "It changes colour; or the counter items move by themselves; or the counter changes pattern."
+    }
+  ]
+}

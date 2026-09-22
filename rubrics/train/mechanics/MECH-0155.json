@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0155",
+  "caption": "A dog climbs out of a lake and shakes itself, sending a spray of water droplets flying off its fur.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog climbs out of a lake."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It shakes itself."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Droplets fly off its fur."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The dog is wet as it comes out."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The climb out comes first, then the shake, then the spray."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Droplets leave the fur in all directions during the shake, flung outward.",
+      "fail": "Droplets hang beside the dog; or return to the fur; or fly only before the shake."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The fur is wet and clumped and fluffs as water leaves, and the droplets are small rounded drops.",
+      "fail": "The fur looks dry throughout; or the water leaves as a sheet; or as solid shards."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Droplets fall to the ground around the dog.",
+      "fail": "They hang; or rise; or travel level to the edge of the frame."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The spray happens only while the dog shakes.",
+      "fail": "Spray flies with the dog still; or continues long after the shake; or the dog is thrown by its own shake."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One dog keeps its limbs and shape.",
+      "fail": "A limb detaches; or a second dog appears; or the dog turns into another animal."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dog's coat and the lakeshore stay the same.",
+      "fail": "The coat changes pattern; or the shore rearranges; or the water changes colour."
+    }
+  ],
+  "note": "The dog is self-driven: its shake is its own. Only the water's behaviour is judged."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0040",
+  "caption": "A hard rhythm is played on a drum kit in a small room, and a glass of water on a nearby amplifier ripples with each hit.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A drum kit being played: sticks strike the drums."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A glass of water stands on an amplifier nearby."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water surface ripples."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rhythm is hard and steady: repeated strikes through the clip."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The ripples come in pulses, one per hit, rather than a continuous shimmer."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each ring of ripples appears as a stick lands; the surface calms in any gap between hits.",
+      "fail": "The sticks land repeatedly and the surface stays glassy; or rings appear while the sticks are held up away from the drums; or the water keeps rippling unchanged after the drumming has stopped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The water stays level in the glass; the ripple is a surface tremble, not a slosh.",
+      "fail": "The water sloshes up one side as if the glass were shoved; or spills with the glass standing still; or swirls round as if stirred; or a single ring spreads from one point as if something were dropped in."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The glass stands on the amplifier and the water stays in it.",
+      "fail": "The glass rises off the amplifier; or water lifts out of the glass; or the surface stays tilted."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The glass is rigid; the drumheads flex as skins under the sticks and the sticks rebound.",
+      "fail": "A stick sinks into a drumhead and stays; or a drumhead shatters; or the glass bulges."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass; the drums and sticks keep their count; no stick passes through a head or cymbal.",
+      "fail": "A second glass appears; or the glass vanishes; or a stick passes through a cymbal or head; or drums appear or vanish."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The amplifier's front, the glass and the water's colour stay the same.",
+      "fail": "The amplifier's front changes; or the glass changes shape; or the water changes colour."
+    }
+  ],
+  "note": "The drummer is kept as the striking agent; posture and technique are not judged."
+}

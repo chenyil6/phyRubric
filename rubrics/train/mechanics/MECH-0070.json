@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0070",
+  "caption": "A frog on a lily pad leaps toward the bank of a pond and lands on it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A frog sits on a lily pad on a pond."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It leaps toward the bank."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It lands on the bank."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The leap comes first and the landing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The frog rises and comes down in one arc toward the bank.",
+      "fail": "The frog flies flat; or it hangs in mid-air; or it changes direction with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "After the peak it descends, lands on the bank and stays down.",
+      "fail": "The frog hovers above the water; or it rises again after starting to fall; or it lands and bounces up high."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lily pad dips and bobs as the frog pushes off, and ripples spread from it.",
+      "fail": "The pad stays still and the water flat as the frog leaves; or the pad sinks entirely and stays under; or the pad moves before the frog moves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The frog lands with its legs folding, and the bank takes the landing.",
+      "fail": "The frog lands rigid; or it sinks into the bank; or it splashes into the bank as if it were water."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One frog keeps its limbs and shape, and it does not pass through the pad or the bank.",
+      "fail": "A leg detaches or vanishes; or a second frog appears; or the frog passes through the lily pad."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The frog's colour, the pad and the pond stay the same.",
+      "fail": "The frog changes colour in flight; or the lily pad changes size between frames; or the pond's edge moves."
+    }
+  ],
+  "note": "The frog is kept because its body is the projectile. Its posture and how it looks in the air are not judged."
+}

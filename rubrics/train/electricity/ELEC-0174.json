@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0174",
+  "caption": "A laptop lid is lowered, and it snaps shut over the last small gap and stays closed thanks to the magnets inside.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An open laptop."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lid is lowered toward the base."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Over the last small gap the lid closes onto the base."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The lid stays closed."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The final gap closes as a snap: the lid completes its travel after the hand stops pushing."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is lower, snap shut, stay closed."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The lid moves down while it is being lowered and, on its own, only over the last small gap; left standing at a wide angle it stays there.",
+      "fail": "The lid, left standing at a wide angle, swings shut with nothing touching it; or reverses and rises while the hand still presses it down; or swings open and shut several times before closing."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Once the lid reaches the last small gap it closes fully onto the base and stays shut for the rest of the clip.",
+      "fail": "The lid stops a gap short of closed and rests there; or springs back open after touching the base; or bounces open and shut on the base; or opens again by itself later in the clip."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The lid stays a rigid flat panel hinged at the back; its front edge comes down onto the base's front edge.",
+      "fail": "The lid bends or bows as it closes; or one corner rests shut while the other stands open; or the hinge side lifts off the base as the front closes; or the lid slides across the base rather than hinging down."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The base and the things beside it stay still as the lid snaps shut.",
+      "fail": "The base slides or tips on the desk as the lid comes down; or a mouse, cup or papers beside the laptop jump at the snap; or the laptop turns on the desk."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One laptop with one lid and one base; the lid closes onto the base without passing into it; the hand passes through nothing.",
+      "fail": "The lid sinks into the base; or the lid detaches from its hinge; or a second laptop or lid appears; or fingers pass through the lid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The laptop's colour, its logo and stickers, and the desk stay the same.",
+      "fail": "The lid changes colour; or a logo or sticker moves or vanishes; or the desk surface changes."
+    }
+  ]
+}

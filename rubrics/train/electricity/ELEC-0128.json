@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0128",
+  "caption": "A locomotive brakes hard into a station, and sparks fly from its wheels where the brakes grip.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A locomotive approaches a station."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It brakes hard: it slows sharply."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Sparks fly from its wheels."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sparks come from the wheels, at rail level, not from the roof or body."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The braking comes first and the sparks follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The sparks stream backward and downward from the wheels, opposite to the train's motion, along the rails.",
+      "fail": "Sparks fly forward ahead of the wheels; or spray upward past the windows; or radiate equally in all directions; or the spark trail moves ahead of the train."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Sparks are transient and leave nothing on the rails; the locomotive keeps its wheels and shape.",
+      "fail": "Glowing dots stay on the rails behind the train; or a glowing line remains along the track; or a wheel vanishes or appears; or a second locomotive appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Sparks appear only while the train is braking and moving; they stop as it comes to rest.",
+      "fail": "Sparks keep flying from the wheels after the train has stopped; or sparks fly while the train coasts with no slowing; or sparks flow back into the wheels."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Sparks that leave the wheels arc down to the track bed and go dark within a short distance.",
+      "fail": "Sparks rise steadily and gather above the train; or hang in the air; or lie glowing on the platform for the rest of the clip."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The locomotive stays on the rails and passes through nothing; the wheels turn on the rails.",
+      "fail": "The locomotive passes through the platform or a buffer; or the wheels sink into the track bed; or carriages merge or split; or the locomotive changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The locomotive's livery, the platform's signs and the rails stay the same.",
+      "fail": "The livery changes colour; or the number on the locomotive changes; or the signs change lettering."
+    }
+  ],
+  "note": "The train is a powered vehicle; how fast it slows is not judged."
+}

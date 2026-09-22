@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0162",
+  "caption": "A plastic spoon left resting on the rim of a hot frying pan droops and bends over the edge.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A plastic spoon rests on the rim of a frying pan."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The spoon softens where it touches the rim."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The spoon droops over the edge."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The spoon is straight at the start."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spoon bends at the point of contact rather than along its whole length."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The softening comes first and the drooping follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The spoon goes from a stiff stick to a soft one that bends at the heated spot and hangs, keeping its plastic look.",
+      "fail": "The spoon shatters into pieces; or runs off the pan as a liquid; or stays perfectly rigid while bent at a sharp angle with nothing holding it; or stretches like elastic along its whole length."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The softened part bends downward under the spoon's own weight, its free end hanging lower.",
+      "fail": "The spoon bends upward away from the pan; or the free end rises; or the spoon bends sideways with nothing pushing it; or the spoon lifts off the rim and hangs in the air."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The droop only deepens while the spoon rests on the hot rim and the spoon does not straighten again.",
+      "fail": "The spoon straightens while still on the hot rim; or the droop deepens and eases in turn; or the spoon droops before it touches the pan; or the bend moves along the spoon to a part away from the rim."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The bend forms where the spoon touches the hot rim and the part away from the pan stays stiff.",
+      "fail": "The spoon bends at a point well away from the pan; or the spoon droops from the end resting on the cool counter; or the whole spoon softens evenly while only its middle touches the rim."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One spoon on one pan; the spoon stays one piece and does not pass through the pan.",
+      "fail": "The spoon breaks into two pieces that both stay whole; or a second spoon appears; or the spoon sinks into the pan's metal; or the spoon vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The spoon's colour, the pan and the hob stay the same.",
+      "fail": "The spoon changes colour; or the pan changes colour; or items around the hob rearrange."
+    }
+  ]
+}

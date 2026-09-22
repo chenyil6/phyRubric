@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0012",
+  "caption": "A ball is thrown across a sunlit yard, and the ball's shadow slides along the ground beneath it and meets the ball where it lands.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ball is thrown across a sunlit yard."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The ball's shadow slides along the ground beneath it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shadow meets the ball where it lands."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The throw comes first and the shadow tracks the flight."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow tracks the ball's path on the ground, separating from it while it is high and rejoining at the landing spot.",
+      "fail": "It lags or vanishes in flight; or stays attached to the ball in mid-air; or fails to meet it at landing."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The ball follows one smooth arc.",
+      "fail": "It flies flat; or hangs; or changes direction in mid-air."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the ball's round outline.",
+      "fail": "It becomes a different shape; or splits; or becomes a long streak."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side away from the sun.",
+      "fail": "It lies toward the sun; or switches sides during the flight; or it is missing in sunlight."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one shadow.",
+      "fail": "A second ball or shadow appears; or the ball vanishes; or the shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and the yard stay the same, and the shadow stays dark.",
+      "fail": "The ball changes colour; or the shadow turns coloured; or the yard changes."
+    }
+  ]
+}

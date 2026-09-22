@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0138",
+  "caption": "A strip of peel is torn off an orange starting from a slit in the top, exposing the segments underneath.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An orange has a slit in its top."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A strip of peel is torn off from the slit."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The segments underneath are exposed."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The peel comes away as a strip."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tear comes first and the bare patch follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The peel lifts only where it is worked loose and comes away as one piece, with pith fibres.",
+      "fail": "The peel shatters; or it flows; or it comes off all around in an instant."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The bare patch stays bare and the skin does not regrow.",
+      "fail": "The skin regrows; or the strip rejoins; or a second orange appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The bare patch is where the strip came off.",
+      "fail": "It is elsewhere; or the strip comes off and the orange is unchanged; or the patch is there before the peel comes off."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The torn peel hangs or drops.",
+      "fail": "It floats; or rises; or hangs unsupported."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One orange keeps its number, and the fingers do not pass through it.",
+      "fail": "The fingers pass through the orange; or the orange splits; or it turns into another fruit."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The orange's colour and the background stay the same.",
+      "fail": "The orange changes colour; or the hands change; or the background rearranges."
+    }
+  ]
+}

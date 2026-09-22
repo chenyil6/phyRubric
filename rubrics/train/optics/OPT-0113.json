@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0113",
+  "caption": "A shopping cart is pushed up to a clear glass door which swings open, the cart having been fully visible through it as it approached.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A shopping cart is pushed up to a clear glass door."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cart is fully visible through the door as it approaches."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The door swings open."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The cart goes through the opening."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The door opens first and the cart passes after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The cart is seen through the glass the whole way and the door opens on its hinges when pushed.",
+      "fail": "The glass hides the cart; or the door opens with nothing pushing it; or it stays shut while the cart passes."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The cart goes through the opening, not through the glass.",
+      "fail": "It passes through the pane; or the door passes through it; or the cart is inside the glass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The door swings in an arc on its hinges.",
+      "fail": "It slides; or lifts; or spins."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The cart moves only as pushed.",
+      "fail": "It rolls by itself; or jumps; or stops dead with no obstacle."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cart and one door.",
+      "fail": "The cart duplicates; or the door vanishes; or the cart turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cart and the doorway stay the same.",
+      "fail": "The cart changes colour; or the frame changes; or the shop rearranges."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

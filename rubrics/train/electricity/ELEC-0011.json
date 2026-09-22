@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0011",
+  "caption": "The knob of a night light in a dark bedroom is turned, and the little lamp glows.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A night light in a dark bedroom."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The knob of the night light is turned."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The little lamp glows."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The room is dark before the turn."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, turn, glow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow appears at the moment the knob turns, and only then.",
+      "fail": "The knob is turned and the lamp stays dark; or the lamp glows before the knob is touched; or the lamp comes on with the knob untouched; or the glow appears somewhere other than the lamp."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the glow stays steady for the rest of the clip while the knob is left alone.",
+      "fail": "The lamp goes dark again by itself; or flickers on and off; or the knob turns back by itself; or the glow brightens and dims repeatedly."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The glow lights the wall and surface around the lamp, centred on it, and the room is dimmer further away.",
+      "fail": "The lamp glows while the wall beside it stays as dark as before; or the room brightens while the lamp stays dark; or the pool of light sits away from the lamp."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The night light stays where it is as the knob turns; nothing else in the room moves.",
+      "fail": "The night light slides or tips at the turn; or the bedding or curtains move; or objects on the nightstand shift."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One night light; it keeps its shape and place; the hand passes through nothing.",
+      "fail": "A second night light appears; or the night light vanishes; or the hand passes through it; or the night light changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The night light's colour and shape, the wall and the room's contents stay the same apart from the glow.",
+      "fail": "The night light changes colour rather than brightness; or the wall changes colour; or the nightstand's contents rearrange."
+    }
+  ]
+}

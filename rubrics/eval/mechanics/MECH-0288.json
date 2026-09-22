@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0288",
+  "caption": "A gust of wind reaches a row of wind turbines on a hill, and the blades start turning and speed up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A row of wind turbines stands on a hill."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A gust of wind reaches them."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The blades start turning."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "They speed up."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The gust comes first and the turning follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The blades begin turning only when the wind arrives and slow when it drops.",
+      "fail": "They turn in still air; or the wind arrives and they stay still; or they keep speeding up after the wind drops."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The speed builds steadily.",
+      "fail": "They reach full speed instantly; or reverse; or jerk."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "All the turbines turn the same way.",
+      "fail": "They turn in opposite directions; or one stays still while the others spin in the same wind; or they turn erratically."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The blades are rigid.",
+      "fail": "They bend like cloth; or detach; or stretch."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The turbines keep their number.",
+      "fail": "A turbine vanishes; or appears; or a blade vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The turbines and the hill stay the same.",
+      "fail": "The turbines change colour; or the hill rearranges; or the sky changes."
+    }
+  ]
+}

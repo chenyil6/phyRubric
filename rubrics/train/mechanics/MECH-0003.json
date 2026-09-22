@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0003",
+  "caption": "A full cup of coffee sits in the cup holder of a car, and as the car turns sharply left the coffee sloshes up the right side of the cup and spills over the rim.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A full cup of coffee sits in the cup holder of a car."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The car turns sharply to the left."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The coffee climbs the right side of the cup."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The coffee spills over the rim."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cup stays in the holder rather than being held in a hand."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The turn begins first, then the climb, then the spill."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The coffee surface lies level while the car runs straight; it starts to tilt as the turn begins and settles level again once the car straightens.",
+      "fail": "The coffee sloshes while the car is driving straight; or it climbs the cup with no turn visible outside; or it keeps sloshing long after the car has straightened up."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The coffee rides up the side of the cup away from the direction of the turn, which on a left turn is the right side.",
+      "fail": "The coffee climbs the left side of the cup during a left turn; or it rises evenly all around the rim; or it lifts straight up out of the cup."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The coffee behaves as a liquid: the surface tilts as one connected sheet, slops over the rim and runs down the outside of the cup.",
+      "fail": "The coffee surface stays flat and rigid while the cup is plainly tilted; or the coffee leaves the cup as a solid lump that keeps its shape; or the spill gathers into balls that roll away."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "What goes over the rim runs down the outside of the cup and collects in the holder or on the console below.",
+      "fail": "A run of coffee climbs the outside of the cup; or a drip leaves the rim and floats; or the spill gathers on top of the cup."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cup stays in the holder, and coffee leaves it only by going over the rim.",
+      "fail": "The cup vanishes or a second one appears; or the coffee level rises while it is spilling; or coffee passes through the wall of the cup; or the cup passes through the holder."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The coffee's colour, the cup and the car interior stay the same.",
+      "fail": "The coffee changes colour; or the cup changes size or pattern; or the dashboard and holder rearrange between frames."
+    }
+  ]
+}

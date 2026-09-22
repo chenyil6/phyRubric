@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0299",
+  "caption": "A cat rubs against a wool blanket in a dark room, and tiny sparks crackle in its fur.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cat and a wool blanket in a dark room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cat rubs against the blanket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Tiny sparks flash in its fur."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The room is dark."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sparks come while the fur moves against the wool, not while the cat is still."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The sparks appear only where the fur moves against the wool and each is gone at once; nothing glows while the cat is still.",
+      "fail": "The fur glows steadily like a lamp; or sparks keep flashing after the cat has stopped moving; or a spark stays lit at one spot; or sparks appear on parts of the cat far from the blanket."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One cat and one blanket; the sparks leave nothing behind on the fur or the wool.",
+      "fail": "Glowing dots stay on the fur after a spark; or a second cat appears; or the blanket vanishes; or the sparks detach and float about the room."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The sparks are small: they brighten only the fur right around them and not the room.",
+      "fail": "The room lights up with each spark as if a lamp came on; or the sparks throw shadows across the walls; or the sparks stay lit and light the room."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fur is soft and parts and lifts where it rubs; the blanket is cloth that drapes and shifts under the cat.",
+      "fail": "The fur moves as a rigid shell; or the blanket stands stiff like a board; or the fur stretches like elastic; or the blanket flows like liquid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One cat with its head, legs and tail; the cat passes through nothing and does not merge with the blanket.",
+      "fail": "The cat gains or loses a limb or changes size; or passes through the blanket or furniture; or merges with the blanket; or a second cat appears from nowhere."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cat's coat colour and pattern and the blanket's colour stay the same apart from the sparks.",
+      "fail": "The coat changes colour or pattern; or the blanket changes colour; or the room's contents rearrange."
+    }
+  ],
+  "note": "The cat is an animal and its movements are not causeless motion. The crackle is sound and is not judged."
+}

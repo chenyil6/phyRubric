@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0184",
+  "caption": "A lava lamp that has warmed up glows on a table, and the blobs of wax inside rise and sink.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lava lamp glows on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Blobs of wax rise inside it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Blobs sink again."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The blobs rise from the lamp's base."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The blobs slow near the top."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rising and sinking repeat."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The blobs rise from the warm base, slow near the top and fall again, moving up and down through the liquid.",
+      "fail": "The blobs all sink to the base and stay there while the lamp glows; or the blobs gather at the top and stay; or a blob hangs motionless in mid-liquid for the rest of the clip; or the blobs rise from the top and sink to the base."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The blobs move only with the slow currents in the lamp and their paths are gentle.",
+      "fail": "A blob shoots across the lamp sideways; or a blob spins fast on the spot; or the blobs arrange themselves into a pattern; or the blobs move in a rhythm unrelated to the base, jumping while the base is dark."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The rising and sinking runs as a slow cycle: a blob that has risen comes down and one that has fallen goes up, and the wax stays wax.",
+      "fail": "A blob vanishes at the top and reappears at the base; or the wax sets into a solid lump while the lamp glows; or every blob freezes in place while the lamp still glows; or the blobs freeze and melt in turn."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The blobs are soft rounded lumps that stretch, pinch off and merge, and the liquid around them is clear and thin.",
+      "fail": "A blob keeps a sharp-cornered shape as it rises; or two blobs touch and pass through each other without merging or parting; or the blobs shatter; or the liquid moves as a solid mass with the blobs fixed in it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp; the wax stays inside the glass and the blobs merge or split rather than appearing or vanishing.",
+      "fail": "A blob appears from nowhere in the middle of the liquid; or a blob vanishes in mid-liquid; or wax passes through the glass; or a second lamp appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lamp's base, its cap and the table stay the same.",
+      "fail": "The lamp's base changes colour; or the wax changes colour; or items on the table rearrange."
+    }
+  ]
+}

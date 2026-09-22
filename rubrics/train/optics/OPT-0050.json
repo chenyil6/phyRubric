@@ -1,0 +1,80 @@
+{
+  "id": "OPT-0050",
+  "caption": "A bus drives slowly past a row of shop windows, and its reflection moves along in the glass beside it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bus moves along a street."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A row of shop windows runs beside the street."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bus's reflection is visible in the windows."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The reflection moves along with the bus."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bus moves slowly."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The reflection shows the bus's shape and colour."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection travels with the bus, in step with it, and appears only in the glass: it stops where a pane ends and shows again in the next pane.",
+      "fail": "The reflection stays still while the bus moves; or moves in the opposite direction; or continues across the wall between windows; or the bus has no reflection in a plainly reflective window."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing in the reflection moves that is not moving in reality; a stationary bus has a stationary reflection.",
+      "fail": "The reflection moves while the bus has stopped; or shows the bus in a different pose or heading; or people in the reflection move differently from those on the street."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image of the bus: same colours and size, alongside the real bus, with any lettering reversed.",
+      "fail": "The reflection is a different vehicle or colour; or upside down; or far larger or smaller than the bus; or its lettering reads the right way round."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The windows are flat rigid panes: the reflection is undistorted and the shop interior is seen through it.",
+      "fail": "The glass ripples like water; or the reflection warps as it slides; or the window frames bend."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bus and one reflection per pane; the bus does not pass through the windows and nothing appears or vanishes.",
+      "fail": "A second bus appears; or the bus drives into the glass; or the reflection steps out into the street; or the bus vanishes mid-pass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shop fronts, the bus livery and the street stay the same.",
+      "fail": "The bus's livery changes; or shop signs change; or the number of windows changes."
+    }
+  ]
+}

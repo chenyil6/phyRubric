@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0200",
+  "caption": "A woman bends down, picks up a heavy box from the floor, and straightens up holding it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A woman bends down toward a box on the floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "She picks up the box."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "She straightens up holding it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The box is heavy, and the effort shows."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bend comes first, then the lift, then the straightening."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "She bends her knees and back at the joints to reach and straightens at them.",
+      "fail": "She folds mid-torso; or her arms stretch to reach; or her legs bend mid-shin."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The box rises only as she lifts it, held in her hands, and she leans back slightly to balance once standing.",
+      "fail": "The box floats up ahead of her hands; or rises with her hands not under it; or she leans far forward with a heavy box and does not fall."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "Her hands grip the box and do not pass through it.",
+      "fail": "Her hands pass through the box; or the box passes into her body; or the box hangs in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The box stays rigid and her arms strain.",
+      "fail": "The box folds like cloth; or it stretches; or her arms bend mid-forearm."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Her limbs keep their number and stay attached.",
+      "fail": "A limb detaches or vanishes; or a second figure appears; or she merges with the box."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Her clothing, the box and the room stay the same.",
+      "fail": "Her clothing changes colour; or the box changes; or the room rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Gait, posture, style and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

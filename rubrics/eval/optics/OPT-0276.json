@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0276",
+  "caption": "A cat sits behind a glass patio door watching a bird on the lawn, paws at the glass, and cannot reach the bird.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cat sits behind a glass patio door."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A bird is on the lawn outside."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cat paws at the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It cannot reach the bird."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bird is visible through the glass."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bird is visible through the glass.",
+      "fail": "The glass hides the bird; or the bird flickers in and out behind clear glass; or a different bird appears."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The paw stops at the pane and the cat does not pass through.",
+      "fail": "The paw passes through the glass; or the cat passes through; or the bird passes in."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pane is flat and rigid.",
+      "fail": "It ripples under the paw; or bends; or goes opaque."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The door stays shut.",
+      "fail": "It opens by itself; or slides; or vanishes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One cat and one bird keep their shape.",
+      "fail": "The cat splits; or the bird merges with the glass; or a second cat appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cat's markings and the lawn stay the same.",
+      "fail": "The markings change; or the lawn rearranges; or the door frame changes."
+    }
+  ],
+  "note": "Both animals are self-driven; only transparency and the barrier are judged."
+}

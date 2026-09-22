@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0195",
+  "caption": "A boy climbs a flight of stairs two at a time and reaches the top.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A boy climbs a flight of stairs."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "He takes the steps two at a time."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "He reaches the top."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The climb comes first and the top is reached after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "Each foot lands on top of a step, not inside it.",
+      "fail": "A foot sinks into a step; or a foot passes through a riser; or he slides up the stairs with his feet planted."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Each knee lifts high and the legs alternate, and the limbs bend only at the joints.",
+      "fail": "Both legs lift together; or a leg bends mid-shin; or a leg stretches to reach a step."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "His body rises with each push, his weight over the supporting foot.",
+      "fail": "He rises without a push; or floats up the stairs; or rises and sinks between steps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The staircase keeps its number of steps.",
+      "fail": "Steps appear or vanish; or the staircase changes length; or the top moves away as he climbs."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "His limbs keep their number and stay attached.",
+      "fail": "A limb detaches or vanishes; or a second boy appears; or he merges with the handrail."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "His clothing and the stairwell stay the same.",
+      "fail": "His clothing changes colour; or the stairwell rearranges; or the steps change material."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Gait, posture, style and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

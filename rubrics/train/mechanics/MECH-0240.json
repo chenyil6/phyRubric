@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0240",
+  "caption": "A piggy bank with a coin inside is shaken, and the coin rattles inside without coming into view.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A piggy bank is held."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is shaken."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "No coin comes into view."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shake is repeated."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The coin stays inside and does not appear outside.",
+      "fail": "A coin appears outside; or a coin is visible through the bank; or a coin falls out of a solid side."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The bank's sides stay solid and nothing passes through them.",
+      "fail": "A coin passes through; or the hand passes through; or the bank cracks open."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The bank keeps its shape.",
+      "fail": "It changes shape; or grows; or turns into another object."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It moves only with the hand.",
+      "fail": "It shakes itself; or jumps; or floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bank keeps its number.",
+      "fail": "It duplicates; or vanishes; or a second bank appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bank's colour and the background stay the same.",
+      "fail": "The bank changes colour; or the hand changes; or the background rearranges."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged. The rattle is not audible in the frames; only containment is judged."
+}

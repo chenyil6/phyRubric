@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0190",
+  "caption": "A thin plastic bag is torn off a roll, and it clings to the roll and to the dispenser instead of dropping away.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A roll of thin plastic bags in a dispenser."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A bag is torn off the roll."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bag clings to the roll and to the dispenser instead of dropping away."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bag is thin and flimsy."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tear comes first and the clinging follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Once torn, the bag lies against the roll and the dispenser where it touches them and stays there, coming away only when peeled.",
+      "fail": "The bag drops straight away from the roll and hangs free like paper; or a part that touches the dispenser falls away on its own; or the bag stands out stiff away from the roll; or the bag hangs a gap away from the dispenser without touching."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Parts of the bag not stuck to anything hang downward; if the bag is let go entirely it falls.",
+      "fail": "A free edge rises or stands out sideways with nothing near it; or the bag floats when let go; or the bag climbs up the dispenser."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bag is a thin limp film: it crumples, wrinkles and clings, and peels off with a pull; the roll stays a roll.",
+      "fail": "The bag holds a flat rigid shape like a card; or drapes in heavy folds like cloth; or stretches out long like rubber; or the roll sags like dough."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The dispenser and the roll stay where they are while the bag is torn; the bag moves only with the hand or as it settles.",
+      "fail": "The dispenser slides or swings by itself; or the roll unwinds on its own; or the bag crawls across the dispenser after settling."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bag torn from the roll; it stays one piece and passes through nothing; the dispenser keeps its shape.",
+      "fail": "The bag splits into several pieces after the tear; or vanishes; or passes through the dispenser; or a second bag appears already torn."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dispenser's colour, the roll and the surroundings stay the same.",
+      "fail": "The dispenser changes colour or shape; or the roll changes colour; or the surroundings rearrange."
+    }
+  ]
+}

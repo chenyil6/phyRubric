@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0075",
+  "caption": "A swan glides across a still lake at sunset, and its reflection glides beneath it with the orange sky behind both.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A swan glides across a still lake at sunset."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its reflection glides beneath it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The orange sky is behind both."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection is inverted and directly under the swan."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The reflection breaks up only in the ripples the swan makes."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflected swan is directly under the real one and moves with it, breaking up only in the swan's own ripples.",
+      "fail": "It is offset; or stays still while the swan glides; or it is broken on flat water ahead."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is inverted and joined at the waterline, with the orange sky reflected around it.",
+      "fail": "It is upright; or detached; or the reflected sky is a different colour."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It moves with the swan still; or drifts across the lake."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid: ripples spread from the swan and the surface elsewhere stays flat.",
+      "fail": "The surface is rigid; or ripples run ahead of the swan; or the water leaps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One swan and one reflection; the reflection stays on the water.",
+      "fail": "A second swan appears; or the reflection rises off the water; or the swan vanishes; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The swan's plumage and the sky stay the same.",
+      "fail": "The plumage changes; or the sky changes colour abruptly; or the shore rearranges."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the reflection's relation to it is."
+}

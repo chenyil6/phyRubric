@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0119",
+  "caption": "A gymnast lands feet-first in the centre of a trampoline, the mat stretches deep under her, and it throws her back up into the air.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A gymnast comes down onto a trampoline."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "She lands feet-first in the centre."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mat stretches deep under her."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "She is thrown back up into the air."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The landing is feet-first."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The landing comes first, then the dip, then the rebound."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The mat dips as she lands and springs back as she rises, and she leaves it as it returns to flat.",
+      "fail": "The mat stays rigid like a floor; or it stays stretched after she leaves; or it ripples like water."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The rebound follows the dip, upward, roughly along the line she came down.",
+      "fail": "She is thrown sideways off the trampoline; or she rises before the mat has dipped; or she stops dead on the mat with no rebound."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "She comes down, then goes up, slowing as she rises.",
+      "fail": "She hangs at the bottom of the dip; or hangs at the top; or speeds up after leaving the mat."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The springs and frame hold and the trampoline stays put.",
+      "fail": "The frame lifts off the ground; or it slides; or the mat moves before she lands."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One gymnast keeps her limbs and shape, and she does not pass through the mat.",
+      "fail": "A limb detaches; or she passes through the mat; or a second figure appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Her leotard, the trampoline and the gym stay the same.",
+      "fail": "The leotard changes colour; or the trampoline changes; or the gym rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the gymnast is kept because her body is the load. Form and technique are not judged."
+}

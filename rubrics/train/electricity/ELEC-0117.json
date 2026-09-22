@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0117",
+  "caption": "Bumper cars race under a metal ceiling grid, and their poles throw small sparks where they scrape along it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Bumper cars drive on a floor under a metal ceiling grid."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Poles rise from the cars to the grid."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Small sparks fly where the poles scrape along the grid."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "More than one car is driving."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sparks are at the top of the poles, at the grid."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Sparks appear only at the tips of poles that touch the grid and move with each car; each flash is brief and gone.",
+      "fail": "Sparks appear at a point on the grid with no pole beneath; or a flash stays lit at one spot after the car has moved on; or sparks come from the pole's middle or from the car body; or the whole grid glows."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Each car has one pole to the grid; sparks leave nothing behind on the grid.",
+      "fail": "Glowing dots stay on the grid after a car passes; or a car has two poles or none while sparking; or a car appears or vanishes; or a pole detaches and stays in the air."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Spark fragments fall from the grid toward the floor and go dark within a short distance.",
+      "fail": "Sparks rise above the grid and gather; or hang in the air; or lie glowing on the floor for the rest of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Each pole is a rigid rod from car to grid, bending only slightly; the grid stays a fixed flat ceiling.",
+      "fail": "A pole bends like rubber or curls; or the grid sags or ripples where a pole touches; or a pole stretches longer as the car moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The poles touch the underside of the grid; cars pass through neither each other nor the walls.",
+      "fail": "A pole passes up through the grid; or two cars merge as they bump; or a car passes through the barrier wall; or a car passes through another car."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cars' colours and numbers, the floor and the grid stay the same.",
+      "fail": "A car changes colour or number; or the floor pattern changes; or the grid changes spacing."
+    }
+  ],
+  "note": "The cars are driven vehicles; their steering, speed and bumps are not judged."
+}

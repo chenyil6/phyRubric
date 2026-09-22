@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0034",
+  "caption": "A remote-controlled car launches off a small ramp in the sun, and its shadow stays on the ground while it is airborne and rejoins it on landing.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A remote-controlled car launches off a small ramp in the sun."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its shadow stays on the ground while it is airborne."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shadow rejoins the car on landing."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The launch comes first, then the separation, then the rejoining."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow stays on the ground while the car is in the air, separated from it, and meets the wheels at the moment of landing.",
+      "fail": "The shadow rises with the car; or stays attached in mid-air; or fails to meet the wheels on landing."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The car rises off the ramp, arcs, and comes down.",
+      "fail": "It hangs in the air; or keeps rising; or drops straight down off the ramp."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the car's outline.",
+      "fail": "It is a different shape; or splits; or streaks."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side away from the sun.",
+      "fail": "It lies toward the sun; or switches sides in flight; or it is missing in sunlight."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car, one ramp and one shadow.",
+      "fail": "A second car or shadow appears; or the car vanishes; or the shadow becomes solid; or the car passes through the ramp."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and the ground stay the same, and the shadow stays dark.",
+      "fail": "The car changes colour; or the shadow turns coloured; or the ramp changes."
+    }
+  ]
+}

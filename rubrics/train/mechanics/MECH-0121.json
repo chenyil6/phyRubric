@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0121",
+  "caption": "The heel of a hand presses into a ball of bread dough on a floured counter and the dough flattens and spreads.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ball of bread dough sits on a floured counter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The heel of a hand presses into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dough flattens."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The dough spreads outward."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The counter is floured."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The press comes first, then the flatten and spread."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The dough deforms only where pressed, spreading outward, without cracking or springing back like rubber.",
+      "fail": "The dough cracks like clay; or it springs back to a ball when the hand lifts; or it holds the hand up without flattening."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flattening progresses with the press and holds; it does not reverse.",
+      "fail": "The dough rises back into a ball; or it flattens before the hand touches; or it keeps spreading after the hand lifts."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The dough stays put on the counter.",
+      "fail": "It slides; or lifts; or rolls."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Flour marks the dough and the counter where it is pressed.",
+      "fail": "The dough passes over the flour leaving no mark; or flour appears where nothing touched; or flour rises in a cloud with no press."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One ball of dough keeps its number, and the hand does not pass through it.",
+      "fail": "The dough splits; or the hand passes through it; or a second ball appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dough's colour and the counter stay the same.",
+      "fail": "The dough changes colour; or the counter changes; or the kitchen rearranges."
+    }
+  ]
+}

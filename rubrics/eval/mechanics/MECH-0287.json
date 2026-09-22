@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0287",
+  "caption": "The sail of a small boat is let loose in a breeze, and it fills and bellies out to one side.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "The sail of a small boat is let loose."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It fills."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It bellies out to one side."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "A breeze is visible in other signs."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The release comes first and the filling follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The sail bulges away from the wind and flaps when the wind drops.",
+      "fail": "It bellies toward the wind; or fills in still air; or stays limp in wind."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The cloth fills smoothly and flaps at the edges.",
+      "fail": "It is rigid; or stretches; or tears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "It bellies to the same side as other wind signs.",
+      "fail": "It bellies opposite; or flips randomly; or spins."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The sail hangs from the mast when slack.",
+      "fail": "It floats; or rises; or hangs sideways with no wind."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sail and one boat keep their number.",
+      "fail": "The sail duplicates; or vanishes; or the boat turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sail's colour and the water stay the same.",
+      "fail": "The sail changes colour; or the boat changes; or the water changes."
+    }
+  ]
+}

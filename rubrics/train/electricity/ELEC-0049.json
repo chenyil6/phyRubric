@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0049",
+  "caption": "Two batteries are slid into a flashlight whose switch is already on, and the light comes on as the cap is screwed down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flashlight with its cap off and its switch on."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Two batteries are slid into the flashlight."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cap is screwed down."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The light comes on as the cap closes."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flashlight is dark before the cap is screwed down."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is batteries in, cap on, light."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light comes on as the cap closes on the barrel, and only then; it stays dark with the batteries in but the cap off.",
+      "fail": "The light comes on as the batteries slide in with the cap still off; or the cap is screwed down and the light stays dark to the end of the clip; or the light is on before the batteries go in; or the light comes on with the cap lying loose."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the light stays on steadily while the cap stays screwed down.",
+      "fail": "The light goes out again with the cap on; or flickers; or the cap unscrews itself; or the beam fades to dark."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lit lens throws a beam: the surface it points at brightens.",
+      "fail": "The lens glows while the surface it points at stays as dark as before; or the surface brightens while the lens stays dark; or the lit patch is behind the flashlight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The batteries slide into the barrel along its axis; the cap turns on the barrel's thread and tightens.",
+      "fail": "A battery enters sideways through the barrel's wall; or the cap goes on without turning and then is shown screwed; or the barrel turns instead of the cap while the hand holds the barrel; or the cap turns and does not advance."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "Two batteries inside one barrel; the batteries enter the open end and are hidden once in; the cap closes on the barrel; fingers pass through nothing.",
+      "fail": "A battery passes through the barrel's wall; or a third battery appears; or a battery vanishes in mid-air; or the cap merges with the barrel."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The flashlight's colour, the batteries' labels and the surface stay the same apart from the light.",
+      "fail": "The flashlight changes colour; or the batteries change size or label; or the surface changes."
+    }
+  ]
+}

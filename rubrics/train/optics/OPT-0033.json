@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0033",
+  "caption": "A robot vacuum travels the length of a corridor lit by a single ceiling light, and its shadow on the floor changes side as it passes beneath the light.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A robot vacuum travels the length of a corridor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The corridor is lit by a single ceiling light."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its shadow on the floor changes side as it passes beneath the light."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow is ahead before the light and behind after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow is ahead of the vacuum before the light and behind it after, always pointing away from the bulb.",
+      "fail": "It stays on one side the whole way; or points toward the bulb; or switches sides at the wrong place."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the vacuum's round outline, short beneath the light and longer away from it.",
+      "fail": "It is a different shape; or one length throughout; or it splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The vacuum moves steadily and the shadow only with it.",
+      "fail": "The shadow moves with the vacuum stopped; or the vacuum jumps position; or the shadow drifts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow is attached at the vacuum's base and lies on the floor.",
+      "fail": "It floats detached; or it appears on the ceiling; or it is missing under the light."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One vacuum, one light and one shadow.",
+      "fail": "A second shadow appears under one light; or the vacuum vanishes; or the shadow becomes solid; or the vacuum passes through a wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The vacuum and the corridor stay the same, and the shadow stays dark.",
+      "fail": "The vacuum changes colour; or the shadow turns coloured; or the corridor changes."
+    }
+  ]
+}

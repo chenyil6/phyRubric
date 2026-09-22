@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0083",
+  "caption": "An elbow knocks a full wine glass on a table; it tips over and the wine spills across the tablecloth.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A full wine glass stands on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "An elbow knocks the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The glass tips over."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The wine spills across the tablecloth."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The glass is full before the knock."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The knock comes first, then the tip, then the spill."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The glass falls the way it was knocked and does not swing back upright.",
+      "fail": "The glass rights itself; or it tips toward the elbow; or it hangs leaning without falling."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The wine pours out as the glass goes over and spreads across the cloth as a liquid, soaking in.",
+      "fail": "The wine stays in the glass on its side; or it leaves as a solid lump; or it beads up and rolls off the cloth without soaking in."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Spilled wine runs down onto the cloth and spreads outward, not back up the glass.",
+      "fail": "Wine climbs the glass; or the puddle shrinks back into the glass; or wine floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The cloth darkens where the wine reaches it.",
+      "fail": "Wine pours and the cloth stays dry; or a stain appears where no wine went; or the stain appears before the glass tips."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass, and wine leaves it only over the rim.",
+      "fail": "The glass vanishes or a second one appears; or wine passes through the wall of the glass; or the wine level rises while spilling."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wine's colour, the glass and the table setting stay the same.",
+      "fail": "The wine changes colour; or the glass changes shape; or the table setting rearranges between frames."
+    }
+  ],
+  "note": "The elbow is kept as the minimal trigger; the person behind it is not judged."
+}

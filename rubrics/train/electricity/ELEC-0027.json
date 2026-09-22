@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0027",
+  "caption": "A string of Christmas lights wound around a tree is switched on, and the tree lights up from the plug to the top all at once.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tree wound with a string of Christmas lights."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lights are switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The whole string lights up at once, from the plug end to the top."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tree is dark before the switch."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, switch, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Every bulb comes on together at the switch, and only then.",
+      "fail": "The switch is thrown and the string stays dark; or the bulbs are lit before the switch is touched; or the bulbs come on one after another up the tree; or the string lights with the switch untouched."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The lit bulbs are the same bulbs seen dark: the same number at the same spots along the wire; none stays dark while the rest glow.",
+      "fail": "Lit points appear where no bulb hung; or bulbs seen dark are gone once lit; or lit bulbs multiply or shift along the wire; or a stretch of the string stays dark while the rest glows."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once on, the lights stay lit steadily while the switch stays on.",
+      "fail": "The lights go dark again with the switch untouched; or flicker; or brighten gradually from dim to full; or the switch moves back by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lights' glow reaches the tree: branches and ornaments near each bulb take on its colour.",
+      "fail": "The bulbs glow while the branches around them stay as dark as before; or the tree brightens while the bulbs stay dark; or the glow sits on the wire between bulbs."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One tree and one string; the tree keeps its shape and the string stays one continuous wire; nothing passes through the tree.",
+      "fail": "The tree changes shape or vanishes; or the string splits or detaches; or ornaments appear or vanish at the switch; or the wire passes through the trunk."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tree's foliage, the ornaments' colours and the room stay the same apart from the light.",
+      "fail": "The foliage changes colour rather than brightness; or ornaments change colour; or the room's contents rearrange."
+    }
+  ]
+}

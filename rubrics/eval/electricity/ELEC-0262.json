@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0262",
+  "caption": "A lamp is plugged into the far end of a long extension cord, and the moment the cord's plug goes into the wall socket at the other side of the room the lamp lights.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lamp plugged into the far end of a long extension cord."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cord's plug is pushed into a wall socket at the other side of the room."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lamp lights."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The cord runs across the room from the socket to the lamp."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lamp lights as the plug goes in, not before and with no delay."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lamp lights at the instant the plug seats in the wall socket, and only then; there is no delay for the cord's length.",
+      "fail": "The plug is in and the lamp stays dark to the end of the clip; or the lamp is lit before the plug reaches the socket; or the lamp lights with the plug lying loose; or a glow travels along the cord toward the lamp."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The cord lies still along its route and the lamp stays where it stands; nothing moves as the plug goes in.",
+      "fail": "The cord snakes or jumps across the floor by itself; or the lamp slides or turns; or the shade swings; or the socket end of the cord moves while the hand is at the lamp."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once on, the lamp stays lit steadily for the rest of the clip.",
+      "fail": "The lamp goes out again by itself; or flickers; or dims back to dark; or the plug backs out of the socket by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lamp's light reaches its surroundings: the shade glows and the floor and wall near it brighten.",
+      "fail": "The bulb glows while the shade and the floor near it stay as dark as before; or the surroundings brighten while the lamp stays dark; or the light comes from the socket end of the room."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One cord from one socket to one lamp; the plug enters the socket rather than the wall; the cord stays continuous; fingers pass through nothing.",
+      "fail": "The plug passes into the wall beside the socket; or the cord splits or detaches; or a second lamp appears; or the cord passes through furniture."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cord's colour, the lamp's shade and the room stay the same apart from the light.",
+      "fail": "The cord changes colour; or the shade changes colour rather than brightness; or the room's contents rearrange."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0016",
+  "caption": "A lit candle is carried in a circle around a vase on a table, and the vase's shadow sweeps around the table opposite the candle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A vase stands on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lit candle is carried in a circle around it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The vase's shadow sweeps around the table opposite the candle."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow's length changes as the candle's distance changes."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The candle moves first and the shadow follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow always points away from the candle and rotates as the candle circles.",
+      "fail": "It points toward the candle; or stays fixed while the candle moves; or rotates the wrong way."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the vase's outline, lengthening and shortening with the candle's distance.",
+      "fail": "It is a different shape; or splits into two under one flame; or keeps one length while the distance plainly changes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow moves only as the candle moves.",
+      "fail": "It moves with the candle still; or it lags and jumps; or it moves before the candle."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flame points upward and the shadow lies on the table.",
+      "fail": "The flame points sideways in still air; or the shadow stands up off the table; or the shadow floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One vase, one candle and one shadow.",
+      "fail": "A second shadow or vase appears; or the candle passes through the vase; or the shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The vase, the table and the candle stay the same, and the shadow stays dark.",
+      "fail": "The vase changes colour; or the shadow turns coloured; or the table changes."
+    }
+  ]
+}

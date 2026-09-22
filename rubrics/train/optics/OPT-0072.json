@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0072",
+  "caption": "A breeze crosses a lake that has been reflecting a boathouse, and the reflection wobbles and blurs, then sharpens again as the water calms.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lake reflects a boathouse."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A breeze crosses the lake."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The reflection wobbles and blurs."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It sharpens again as the water calms."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The breeze comes first, then the blur, then the sharpening."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The image distorts exactly where ripples pass and returns to a clear inverted image when the surface is still.",
+      "fail": "It stays sharp across plain ripples; or blurs on flat water; or never sharpens again on a calm surface."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The boathouse itself is unaffected and the sharp reflection is its inverted image.",
+      "fail": "The boathouse wobbles; or the reflection is upright; or a different building appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The water moves only with the breeze.",
+      "fail": "Ripples run against other wind signs; or the surface churns in still air; or the ripples freeze."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The surface is liquid: ripples pass and fade.",
+      "fail": "The water is rigid like glass; or the ripples hold their shape; or the water leaps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One boathouse and one reflection; the reflection stays on the water.",
+      "fail": "A second boathouse appears; or the reflection rises off the water; or the boathouse vanishes; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The boathouse's colours and the shore stay the same.",
+      "fail": "The boathouse changes colour; or the shore rearranges; or the sky changes abruptly."
+    }
+  ]
+}

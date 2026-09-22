@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0187",
+  "caption": "An old television screen is wiped with a dry cloth, and dust and a few hairs jump onto the screen and stick.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An old television with a glass screen."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The screen is wiped with a dry cloth."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Dust and a few hairs jump onto the screen."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "They stick to the screen."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cloth is dry: no water or spray."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The wipe comes first and the specks jump after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The specks lie still until the screen has been rubbed, then move to the screen only when close to it; specks far away stay put; once on the screen they stay.",
+      "fail": "Specks jump to the screen before the cloth has touched it; or specks far across the room stream to the screen; or the specks on the screen crawl about after landing; or specks jump off the screen with nothing touching them."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Specks and hairs on the screen cling to the glass, even on its upper part, and stay there; any that come loose fall.",
+      "fail": "Specks hover in front of the screen without touching it; or fall off the screen the instant they land; or a loose speck drifts upward; or hairs stand out from the screen like bristles."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cloth is soft fabric that folds as it wipes; the screen is rigid glass that keeps its curve.",
+      "fail": "The cloth stays stiff like a board; or the screen bends or ripples under the cloth; or the glass dents; or the hairs stretch."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Where the cloth wipes, the screen is cleaner behind it; the wiped area does not regain the dust it had.",
+      "fail": "The dust reappears where the cloth has just passed; or the screen gets dustier as it is wiped; or dust on the screen fades away without being wiped."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One television and one cloth; the screen stays whole; the cloth passes through nothing.",
+      "fail": "The cloth passes into the screen; or the television changes shape or vanishes; or a second cloth appears; or the screen turns into a picture of a scene."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The television's casing colour, the cloth's colour and the room stay the same.",
+      "fail": "The casing changes colour; or the cloth changes colour; or the room rearranges."
+    }
+  ],
+  "note": "Who wipes is not judged. The screen showing a picture is not required; a picture on the screen is not a violation."
+}

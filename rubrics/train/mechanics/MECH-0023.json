@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0023",
+  "caption": "A ceramic plate slides off the edge of a restaurant counter, drops onto the tiled floor, and shatters.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ceramic plate is at the edge of a restaurant counter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It slides off the edge."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It drops onto the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It shatters."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The floor below the counter is tiled."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The slide comes first, then the drop, then the shattering."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The plate falls downward from the counter edge, quicker the further it goes, and reaches the floor.",
+      "fail": "The plate drifts sideways away from the counter as it falls; or it hangs in the air below the counter; or it rises after leaving the edge."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The plate stays whole until it meets the tile, then breaks into hard pieces that scatter outward.",
+      "fail": "The plate breaks apart in mid-air before touching the floor; or it bounces off the tile whole and unbroken; or it squashes flat and stays in one soft piece."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The fragments stay low, skittering and sliding along the tile before coming to rest.",
+      "fail": "The fragments fly upward and stay up; or a fragment rises and never comes back down; or the pieces float above the tile."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The breaking happens at the moment of contact with the floor, and the pieces are the plate's.",
+      "fail": "The plate lands whole and stays whole while pieces appear beside it; or fragments scatter across the floor before the plate arrives; or the plate is gone from the floor and no pieces are left."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One plate falls and nothing passes through the counter or the floor.",
+      "fail": "A second plate appears during the fall; or the plate passes through the tiled floor; or the plate turns into another object on the way down."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plate's colour and pattern, the counter and the room stay the same.",
+      "fail": "The plate changes colour or pattern as it falls; or the counter changes height between frames; or the room behind rearranges."
+    }
+  ]
+}

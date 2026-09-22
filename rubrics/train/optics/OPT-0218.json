@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0218",
+  "caption": "A red laser dot lands on a white wall, and when it is moved onto a green plant the dot becomes hard to see.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A red laser dot is on a white wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is moved onto a green plant."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dot becomes hard to see."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The dot stays red wherever it lands."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The dot is bright red on the white wall and dim on the green leaves, and stays red wherever it lands.",
+      "fail": "It is bright on the green leaves; or turns green; or is dim on the white wall."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The dot moves with the pointer and only then.",
+      "fail": "It drifts with the pointer still; or stays put while the pointer moves; or leaves a trail."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The dot is one small spot.",
+      "fail": "It splits; or is a large patch; or changes shape."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The dot lands where the pointer aims.",
+      "fail": "It is far from the aim; or appears with no pointer; or two dots from one pointer."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pointer, one wall and one plant.",
+      "fail": "The plant duplicates; or the wall vanishes; or the dot becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wall and the plant stay the same.",
+      "fail": "The plant changes; or the wall changes colour; or the pointer changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

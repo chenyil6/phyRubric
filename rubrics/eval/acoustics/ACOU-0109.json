@@ -1,0 +1,77 @@
+{
+  "id": "ACOU-0109",
+  "caption": "A garbage truck idles outside a house, and a hanging wind chime by the door trembles and tinkles while the engine runs.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wind chime hangs by a house door."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A garbage truck stands outside, stationary."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The chime trembles."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The truck is stationary while the chime trembles."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tubes tremble rather than swinging in wide arcs."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The chime trembles while the truck stands idling and stops after it drives away.",
+      "fail": "The truck idles in view and the chime hangs dead still; or the chime trembles hardest after the truck has driven off; or the chime starts trembling only as the truck disappears.",
+      "precondition": "The truck is in view at some point."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The tubes tremble on taut strings hanging from the chime's top; the chime stays on its hook.",
+      "fail": "The tubes rise on slack strings; or the whole chime slides along its hook; or the tubes drift apart from the chime's centre and hang there; or the tubes swing in wide arcs and stop dead."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "At rest the tubes hang straight down.",
+      "fail": "Tubes rest tilted with nothing touching them; or rise above the top plate; or hang sideways on taut strings."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The tubes are rigid and the strings flex.",
+      "fail": "The tubes bend; or the strings stretch; or the top plate flexes like rubber."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One chime whose tubes keep their count; one truck; nothing passes through the door frame.",
+      "fail": "A tube appears or vanishes; or two tubes merge; or the chime passes through the door frame; or the truck vanishes in one frame."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The chime's colour, the door and the truck's colour stay the same.",
+      "fail": "The chime changes colour; or the door changes; or the truck changes colour."
+    }
+  ],
+  "note": "The engine cannot be seen running; if the truck is not in view, the trembling alone is not a violation."
+}

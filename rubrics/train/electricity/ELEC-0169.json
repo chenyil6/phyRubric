@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0169",
+  "caption": "A steel bolt is tossed toward a strong magnet fixed to a workbench, and the bolt swerves and clacks onto the magnet.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A magnet fixed to a workbench."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A steel bolt is tossed toward the magnet."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bolt's flight swerves toward the magnet."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The bolt lands on the magnet and stays there."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bolt travels through the air: it is thrown, not placed by hand."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The toss comes first, the swerve follows, then the landing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The bolt flies from the toss along a downward-sagging arc; as it nears the magnet its path bends toward the magnet and ends on its surface.",
+      "fail": "The bolt bends away from the magnet; or flies past it and then turns back; or curves toward a place on the bench other than the magnet and stops there."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "On contact the bolt stops on the magnet and stays there; the magnet stays fixed to the bench and the bolt does not move again.",
+      "fail": "The bolt bounces off the magnet and lands away from it; or keeps sliding across the magnet after landing; or drops off the magnet while nothing touches it; or the magnet shifts on the bench when the bolt hits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flight sags downward; a bolt that misses falls to the bench or floor; a bolt on the magnet stays held even on the magnet's side.",
+      "fail": "The bolt climbs steadily through its flight with no downward arc; or hangs in the air; or a missed bolt floats instead of falling."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bolt stays a rigid piece of steel and does not bend or squash on hitting the magnet; the magnet and bench keep their shape.",
+      "fail": "The bolt bends or crumples on impact; or the magnet's face dents where the bolt hits; or the bench surface ripples."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bolt and one magnet fixed to the bench; the bolt does not pass into the magnet or the bench, does not split and does not vanish.",
+      "fail": "The bolt vanishes in flight; or two bolts appear; or the bolt sinks into the magnet or through the bench; or the magnet leaves the bench and follows the bolt."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The magnet's colour, the bench top and the tools on it stay the same; the bolt keeps its size.",
+      "fail": "The magnet changes colour or shape; or tools on the bench move or vanish; or the bolt changes size between toss and landing."
+    }
+  ]
+}

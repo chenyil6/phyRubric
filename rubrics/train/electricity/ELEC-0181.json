@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0181",
+  "caption": "A shirt is lifted out of a tumble dryer, and a sock clings to it and hangs on until it is peeled off.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tumble dryer with its door open."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A shirt is lifted out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A sock clings to the shirt and hangs on."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The sock is peeled off the shirt."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sock stays on until it is peeled, not falling by itself."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The lift comes first, the cling shows, then the peel."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the shirt is lifted the sock stays pressed against it, hanging on the fabric with nothing else holding it, until a hand peels it away.",
+      "fail": "The sock drops off the shirt on its own as it is lifted; or hangs a gap away from the shirt without touching; or the sock slides down the shirt and falls; or the sock stays on the shirt while the hand pulls it and the fabric between them stretches without parting."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The shirt hangs down from the hand; the sock hangs on the shirt's surface; once peeled free the sock, if let go, falls.",
+      "fail": "The peeled sock floats or rises; or the shirt stands out sideways or rises from the hand; or the sock hangs in the air after the shirt is moved away; or the sock climbs the shirt."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Shirt and sock are cloth: they drape and fold; the sock lifts off with a small tug and both keep their shapes.",
+      "fail": "The shirt stands stiff like a board; or the sock stretches out long like elastic as it is peeled; or the shirt tears where the sock was; or the fabrics flow like liquid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Clothes left in the dryer stay still; the dryer stays put; the sock moves only with the shirt or the hand.",
+      "fail": "Clothes in the drum jump or rearrange as the shirt is lifted; or the sock crawls across the shirt by itself; or the dryer door swings by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One shirt and one sock; the sock is a separate garment on the shirt's surface; nothing merges, vanishes or passes through anything.",
+      "fail": "The sock merges into the shirt's fabric; or a second sock appears; or the sock vanishes rather than being peeled; or the shirt passes through the dryer door."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shirt's colour and pattern, the sock's colour and the dryer stay the same.",
+      "fail": "The shirt changes colour; or the sock changes colour or becomes a different garment; or the dryer changes."
+    }
+  ]
+}

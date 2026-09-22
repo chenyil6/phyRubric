@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0093",
+  "caption": "A tub of ice cream is taken from the freezer, and a white frost forms on its lid as it sits on the counter.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tub of ice cream is taken from a freezer."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The tub sits on a counter."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A white frost forms on its lid."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The frost grows as a haze on the cold surfaces."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The counter around the tub stays clear of frost."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The frost builds first on the cold surfaces and any later change is toward wetness as the tub warms; it does not come and go.",
+      "fail": "The frost thickens, goes and thickens again; or the frost turns back to bare dry plastic and then frosts again; or wet drops on the lid turn back into dry white frost while the tub sits in the warm room; or the frost thins and thickens in turn."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The white appears on the tub's own cold surfaces and spreads across them, not on the warm counter or wall.",
+      "fail": "The frost appears on the counter around the tub while the lid stays bare; or the tub's label changes colour rather than frosting over; or the frost appears on the warm wall behind; or the frost covers the whole scene."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Once the frost turns to drops they run downward on the tub's sides and gather at its base.",
+      "fail": "A drop runs up the tub's side; or water gathers on top of the lid and stays as a dome; or a drop leaves the tub and rises; or a run travels sideways round the tub and stays level."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The frost is a fine white bloom on the surface that softens into beads as the tub warms, and the tub stays a rigid tub.",
+      "fail": "The frost stands off as thick spikes of ice; or the frost peels away as a sheet; or the tub's wall flexes as the frost grows; or the frost turns to a hard glaze that stays dry as the tub warms."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tub with one lid on one counter; the tub keeps its shape and nothing passes through it.",
+      "fail": "The tub changes shape; or a second tub appears; or the lid passes into the tub; or the tub vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tub's label, the counter and the kitchen stay the same.",
+      "fail": "The label's printing changes; or the counter changes pattern; or items in the kitchen rearrange."
+    }
+  ]
+}

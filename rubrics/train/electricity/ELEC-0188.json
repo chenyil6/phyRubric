@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0188",
+  "caption": "A fleece blanket is shaken out in a dark bedroom, and small flickers of light run through the fabric.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A fleece blanket in a dark bedroom."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The blanket is shaken out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Small flickers of light run through the fabric."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The room is dark."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flickers come while the blanket moves, not while it is still."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flickers appear only as the fabric moves and separates from itself, and each is gone at once; while the blanket is still there is no glow.",
+      "fail": "The blanket glows steadily like a lamp; or flickers keep running through it after it has been laid still; or a flicker stays lit at one spot; or the fabric glows before it is shaken."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One blanket; the flickers leave nothing behind on the fabric.",
+      "fail": "Glowing dots stay on the blanket after the flicker; or a second blanket appears; or the blanket vanishes; or the flickers detach and float in the room."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The blanket is soft fabric: it billows, folds and drapes as it is shaken and falls in folds when let go.",
+      "fail": "The blanket stands stiff like a board; or stretches out like elastic; or hangs in the air as a fixed shape after the shake; or flows like liquid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The flickers are small: they brighten only the fabric right around them and not the room.",
+      "fail": "The room lights up with each flicker as if a lamp came on; or the flickers throw shadows across the walls; or the flickers stay lit and light the room."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The blanket passes through nothing; the bed and furniture keep their shapes.",
+      "fail": "The blanket passes through the bed or a wall; or the blanket merges with the bedding; or furniture changes shape; or a hand passes through the blanket."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blanket's colour and pattern and the room stay the same apart from the flickers.",
+      "fail": "The blanket changes colour or pattern; or the room's contents rearrange; or the flickers change the blanket's colour where they pass."
+    }
+  ],
+  "note": "Who shakes the blanket is not judged."
+}

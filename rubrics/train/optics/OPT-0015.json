@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0015",
+  "caption": "A ball rolls from a sunlit pavement into the shade of a building, and its shadow disappears.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ball rolls along a sunlit pavement."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It rolls into the shade of a building."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its shadow disappears."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow is visible only while the ball is in the sun."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow is visible while the ball is in the sun and fades as it enters the shade.",
+      "fail": "The shadow stays visible in the shade; or it is missing in sunlight; or it vanishes before the ball reaches the shade."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The ball itself is unchanged as it enters the shade.",
+      "fail": "The ball vanishes; or a second ball appears; or the ball changes as it enters the shade."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "In sunlight the shadow lies on the side away from the sun, attached at the contact point.",
+      "fail": "It lies toward the sun; or is detached; or switches sides."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The ball rolls straight and slows gently.",
+      "fail": "It curves; or speeds up; or stops and restarts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one shadow.",
+      "fail": "A second shadow appears in sunlight; or the shadow becomes solid; or the ball passes through the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and the pavement stay the same, and the shadow stays dark.",
+      "fail": "The ball changes colour; or the shadow turns coloured; or the building changes."
+    }
+  ]
+}

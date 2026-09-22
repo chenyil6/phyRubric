@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0039",
+  "caption": "A horse trots across a sunlit paddock, and its shadow trots along the grass beside it, legs moving in step.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A horse trots across a sunlit paddock."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its shadow trots along the grass beside it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shadow's legs move in step with the horse's."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow stays attached at the hooves."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow's legs move in time with the horse's and it stays attached at the hooves.",
+      "fail": "The shadow's legs are still while the horse's move; or it lags or leads; or it is detached from the hooves on flat ground."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the horse's outline, head, legs and tail.",
+      "fail": "It is a different animal's shape; or splits; or loses a leg the horse still has."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side away from the sun.",
+      "fail": "It lies toward the sun; or switches sides with the sun fixed; or it is missing in sunlight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move on its own.",
+      "fail": "It moves with the horse standing still; or drifts across the grass by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One horse and one shadow.",
+      "fail": "A second horse or shadow appears; or the horse vanishes; or the shadow becomes solid; or the horse passes through the fence."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The horse's coat and the paddock stay the same, and the shadow stays dark.",
+      "fail": "The coat changes colour; or the shadow turns coloured; or the paddock changes."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the shadow's relation to it is."
+}

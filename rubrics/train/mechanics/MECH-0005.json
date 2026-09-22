@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0005",
+  "caption": "An empty playground swing is given one push and left alone, and it keeps going back and forth on its own before gradually dying down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An empty playground swing is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The swing is given one push and then left alone."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It keeps going back and forth on its own."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The swinging dies down."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "It is pushed once and nothing touches it again."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The push comes first, then the free swinging, then the dying down."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each arc carries the seat a little less high than the one before, and the swing never rises above the arc the push gave it.",
+      "fail": "An arc carries the seat higher than the one before it with nothing touching the swing; or the arcs hold exactly the same height and then the swing stops dead; or the swinging builds up on its own."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The swing moves because of the one push; nothing else touches it, and it changes only by dying down.",
+      "fail": "The swing gets a fresh shove with nothing visible touching it; or it halts at the end of an arc and hangs there; or it starts up again after hanging still."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The seat hangs below its chains and travels along an arc, moving quickest at the bottom and slowest at the ends.",
+      "fail": "The seat rises above the height of the crossbar; or it stays out sideways at the end of an arc instead of swinging back; or it moves quickest at the top of its arc."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The chains stay taut and straight and the seat hangs from them, the two moving as one.",
+      "fail": "A chain bunches slack while the seat is swinging out; or a chain grows longer as the swing rises; or the seat swings while the chains hang still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One seat on its chains keeps its number and shape and stays clear of the frame.",
+      "fail": "The seat vanishes or a second swing appears; or a chain comes away from the bar and the seat keeps swinging; or the seat passes through a chain or through the frame."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The swing's colour, the frame and the playground behind stay the same.",
+      "fail": "The seat changes colour or shape; or the frame changes height between frames; or the ground below rearranges."
+    }
+  ]
+}

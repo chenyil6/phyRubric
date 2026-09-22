@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0182",
+  "caption": "A sheet of plastic wrap is torn from its box, and it clings to the side of the box and folds onto itself instead of hanging straight.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A box of plastic wrap."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A sheet of wrap is torn from the box."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sheet clings to the side of the box."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The sheet folds onto itself and sticks there."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The wrap is thin and transparent."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The tear comes first and the clinging follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The torn sheet does not hang straight: it lies against the box's side where it touches and its folds stick to each other, staying so until pulled apart.",
+      "fail": "The sheet hangs straight down from the hand like paper and touches nothing; or a fold that touches the box falls away on its own; or folds that meet slide apart with nothing pulling them; or the sheet stands out stiff from the box."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The wrap is a thin limp film: it crumples, wrinkles and folds, stretches slightly when tugged, and peels off with a pull.",
+      "fail": "The wrap holds a flat rigid shape like a card; or drapes in heavy folds like cloth; or stretches out long like rubber and snaps back; or tears into shards like glass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Parts of the sheet not stuck to anything hang downward; if the sheet is let go entirely it falls.",
+      "fail": "A free edge rises or stands out sideways with nothing near it; or the sheet floats when let go; or the sheet climbs up the box."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The box stays where it is while the sheet is torn and clings; the sheet moves only with the hand or as it settles onto the box.",
+      "fail": "The box slides or tips by itself; or the sheet crawls across the box after settling; or the sheet jumps between spots on the box with nothing touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet torn from one box; the sheet stays one piece and passes through nothing; the box keeps its shape.",
+      "fail": "The sheet splits into several pieces after the tear; or vanishes; or passes through the box; or the box changes shape or a second box appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The box's colours and lettering and the counter stay the same.",
+      "fail": "The box changes colour or lettering; or the counter changes; or the wrap changes colour."
+    }
+  ]
+}

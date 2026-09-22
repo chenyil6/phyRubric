@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0106",
+  "caption": "A clear ice cube is held up to a window, and the scene outside is visible through the ice, slightly blurred.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A clear ice cube is held up to a window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The scene outside is visible through the ice."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The view is slightly blurred."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The view is distorted at the cube's edges and cracks."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Light and shapes come through the cube, distorted at its edges and cracks.",
+      "fail": "The cube blocks the view like a stone; or the view is perfectly sharp with no distortion; or the cube shows a different scene."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The scene outside is unchanged; only its image through the ice is blurred.",
+      "fail": "The scene changes; or objects appear in the cube that are not outside; or the image is upside down."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ice is rigid and clear, and may drip.",
+      "fail": "It flows; or goes opaque; or shatters untouched."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The cube moves only with the hand.",
+      "fail": "It floats; or turns by itself; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cube and one window.",
+      "fail": "The cube duplicates; or vanishes; or the hand passes through it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The window and the scene stay the same.",
+      "fail": "The frame changes; or the scene rearranges; or the cube changes colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

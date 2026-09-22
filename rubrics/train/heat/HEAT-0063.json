@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0063",
+  "caption": "A coffee pot on a warming plate is nearly empty, and the last of the coffee bubbles and steams in the bottom.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A coffee pot stands on a warming plate."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A shallow layer of coffee lies in its bottom."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Bubbles form and burst in the coffee."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Steam rises from the pot."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pot is nearly empty."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The level drops further."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The level only drops while the pot sits on the plate, and bubbles keep forming while steam keeps rising.",
+      "fail": "The level rises with nothing poured in; or the bubbling stops and then starts again by itself; or the steam runs back into the pot; or the level rises and falls in turn."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The coffee leaves only as steam and no coffee appears in the pot.",
+      "fail": "Coffee appears in the pot with none poured in; or the layer vanishes in a single frame; or a second pot appears; or coffee passes through the pot's glass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bubbles rise through the shallow layer and burst at its surface, and the steam rises out of the pot.",
+      "fail": "Bubbles sink through the layer; or hang still in the coffee; or the steam sinks over the rim and pools on the plate; or the steam pours downward from the spout."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The coffee is a thin liquid that lies level in the pot's bottom and shifts as bubbles burst; the pot stays rigid glass.",
+      "fail": "The shallow layer stands as a dome; or the coffee moves as a solid mass; or the pot's glass flexes; or the layer climbs the pot's wall and stays."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One pot with one handle and one spout on one plate; the pot keeps its shape.",
+      "fail": "The pot changes shape; or a second spout appears; or the pot merges with the plate; or the handle detaches and floats."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot's markings, the plate and the counter stay the same.",
+      "fail": "The pot's markings change; or the plate changes colour; or items on the counter rearrange."
+    }
+  ],
+  "note": "Darkening or burning of the coffee is chemistry and is not judged."
+}

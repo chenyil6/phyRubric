@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0058",
+  "caption": "Water boils in a glass electric kettle, with streams of bubbles rising from the bottom to the surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass electric kettle holds water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Bubbles form at the kettle's base."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bubbles rise to the surface."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Streams of bubbles run up through the water."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bubbles grow as they rise."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The bubbles start at the base and travel upward to the surface, growing as they rise, and burst there.",
+      "fail": "Bubbles travel downward from the surface to the base; or form at the surface and sink; or hang still in mid-water; or rise part-way and then fall back."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The streams keep coming from the base while the water boils and the surface churns; bubbles that have left the base keep rising.",
+      "fail": "A bubble retreats into the base; or the streams stop and then start again by themselves; or the surface goes glassy still while streams run below it; or bubbles shrink as they rise and vanish before reaching the surface."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Each stream shows at the surface: bubbles break through and the surface above a stream churns most.",
+      "fail": "The streams reach the surface and it stays glassy; or the surface churns above a part of the base with no stream under it; or the water churns while no bubble rises anywhere."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is a liquid that churns and finds its level, and the glass stays a rigid clear wall.",
+      "fail": "The water stands in a heap above its level; or the churn moves as a solid mass; or the glass flexes or bulges; or the water sticks to the glass in a fixed shape."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One kettle; the water stays inside and its level changes only by boiling away.",
+      "fail": "Water passes through the glass; or the level jumps up with nothing added; or a second kettle appears; or the kettle changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The kettle's base, its handle and the counter stay the same.",
+      "fail": "The handle changes shape; or the base changes colour; or items on the counter rearrange."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0127",
+  "caption": "A bucket of water is poured over a dying campfire, and the fire goes out with a hiss in a cloud of steam and smoke.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A campfire burns with small flames."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Water is poured over the fire from a bucket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flames go out where the water lands."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A cloud of steam and smoke rises."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The wet ash stays dark."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the cloud follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flames go out where the water lands and the ash there goes dark and wet.",
+      "fail": "The water lands and the flames burn on unchanged; or the flames go out before the water reaches them; or the flames go out in a part of the fire the water never reached while the wetted part burns on; or the ash stays dry and pale where the water has soaked it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The water falls downward onto the fire while the steam and smoke rise, spreading and thinning.",
+      "fail": "The water travels upward from the bucket; or the cloud sinks and pools around the fire; or the cloud hangs as a fixed shape without rising; or the water runs uphill out of the fire pit."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fire only dies: doused flames do not flare back up and the wetted ash stays dark.",
+      "fail": "A doused part of the fire flares up again with nothing added; or the wet ash dries and glows again; or the flames shrink and grow in turn while water keeps pouring; or the ash gathers back into unburnt wood."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water falls as a thin liquid and soaks the ash, the cloud is soft and spreading, and the logs stay charred solids.",
+      "fail": "The water bounces off the fire as a solid lump; or the cloud holds a fixed rigid shape; or the logs melt or flow; or the water sits on the ash as beads that do not soak in."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bucket and one fire; the logs keep their number and the water goes only from the bucket to the fire.",
+      "fail": "A log vanishes at a stroke; or a new log appears; or water appears in the fire pit with none poured there; or the bucket passes through a log."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fire's stones, the ground and the surroundings stay the same.",
+      "fail": "The stones rearrange; or the ground changes texture away from the water; or the background changes between frames."
+    }
+  ],
+  "note": "The hiss is sound and is not judged."
+}

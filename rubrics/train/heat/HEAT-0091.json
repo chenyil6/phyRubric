@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0091",
+  "caption": "The lid of a pot that has been simmering is lifted and turned over, and its underside is covered in drops that run and drip off.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lid is lifted off a pot."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lid is turned over."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its underside is covered in drops."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Drops run and drip off the lid."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pot below is simmering or steaming."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is lift, turn, drip."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The drops run to the lid's lowest point as it tilts and fall from there straight down.",
+      "fail": "Drops stay fixed in place on a steeply tilted lid; or run up toward the lid's raised side; or a drop leaves the lid and rises; or drops run along the lid's rim and stay level as it tilts."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The drops are on the lid's inner face and come from the pot's steam; they leave only by running off or falling.",
+      "fail": "Drops appear on the lid's outer face while its inner face is dry; or a drop vanishes in mid-air; or new drops appear on a part of the lid the steam never reached; or the lid's inner face is dry when it comes off a steaming pot."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once the lid is off, the drops only gather, run and fall; the film on it does not grow back.",
+      "fail": "The lid's inner face beads up again while it is held clear of the pot's steam; or drops that have fallen come back onto the lid; or the drops grow and shrink in turn; or the lid dries and beads again with nothing touching it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The drops behave as water on metal or glass: rounded, merging when they touch and running as streaks.",
+      "fail": "Touching drops overlap without merging; or drops jump about on the lid; or the drops set as hard frost on the warm lid; or the drops stand as tall columns on the lid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One lid with one handle; the lid keeps its shape and nothing passes through it.",
+      "fail": "The lid changes shape; or a second lid appears; or the handle detaches and floats; or a hand passes through the lid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lid's finish, the pot and the hob stay the same.",
+      "fail": "The lid changes colour; or the pot changes shape; or the hob's knobs move by themselves."
+    }
+  ]
+}

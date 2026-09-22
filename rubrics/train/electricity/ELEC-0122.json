@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0122",
+  "caption": "A bad connection in a fuse box sparks and pops, and the lights in the house go out.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A fuse box with its lid open or its connections in view."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A connection in the box sparks."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lights in the house go out."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lights are lit before the spark."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spark comes first and the lights go out after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spark is a brief flash at one connection in the box, and is gone; it does not stay lit or spread across the box.",
+      "fail": "The spark glows on at the connection for the rest of the clip; or several connections flash one after another; or the whole box glows; or a spark appears again after the lights are already out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lights go out at the spark and stay out; they do not come back on by themselves.",
+      "fail": "The spark flashes and the lights stay lit to the end of the clip; or the lights go out before the spark; or the lights come back on by themselves; or the lights flicker on and off repeatedly."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light the lamps cast disappears with them: the room around the box goes dim and whatever remains lit is daylight or the spark.",
+      "fail": "A lamp goes dark while its light on the walls stays; or the room stays as bright with every lamp dark; or a lamp elsewhere brightens as the others go out."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any spark fragments fall from the box and go dark within a short distance; any smoke rises.",
+      "fail": "Sparks rise from the box and gather above it; or hang in the air; or smoke sinks from the box and pools on the floor."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One fuse box on the wall; its parts stay in place; nothing appears, vanishes or passes through the wall.",
+      "fail": "The box vanishes or a second box appears; or fuses or wires appear or vanish; or the box sinks into the wall; or the box changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The box's colour and labels and the wall stay the same apart from the light.",
+      "fail": "The box changes colour; or the labels change; or the wall changes colour rather than brightness."
+    }
+  ],
+  "note": "The pop is sound and is not judged."
+}

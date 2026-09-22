@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0152",
+  "caption": "The flap of a handbag with a magnetic clasp is let fall, and the flap snaps down and holds.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A handbag with a flap and a magnetic clasp."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flap is let fall."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flap snaps down onto the clasp."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flap holds closed."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flap moves on its own after being let go, not pushed down."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is release, fall, snap, hold."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The flap falls when released, snaps to over the last small gap and then stays shut; it does not lift or open again by itself.",
+      "fail": "The flap opens again with nothing touching it; or flaps up and down repeatedly; or moves before it is released; or the bag jumps as the flap lands."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Over the last small gap the flap is drawn onto the clasp and stays pressed shut for the rest of the clip.",
+      "fail": "The flap stops a gap short of the clasp and hangs there; or bounces back open after touching; or slides off the clasp; or rests closed but lifts when the bag is moved."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flap falls downward from where it is released toward the bag's front.",
+      "fail": "The flap rises when released; or hangs in the air; or falls sideways away from the bag."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The flap is a stiff or leathery panel that swings down from its fold; the bag keeps its shape.",
+      "fail": "The flap flops like wet cloth; or stretches; or the bag collapses as the flap lands; or the flap stays rigid in the air."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One bag with one flap; the flap lands on the bag's outside and does not pass into it; the hand passes through nothing.",
+      "fail": "The flap sinks into the bag; or the flap detaches; or a second flap appears; or the hand passes through the bag."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag's colour, its hardware and the surface it sits on stay the same.",
+      "fail": "The bag changes colour; or the clasp changes shape or place; or the surface changes."
+    }
+  ]
+}

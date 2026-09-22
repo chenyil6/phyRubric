@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0114",
+  "caption": "The glass door of a supermarket freezer is closed after being held open, and the inside of the glass fogs over, then slowly clears as the cold air circulates.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A supermarket freezer with a glass door."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The door is closed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The inside of the glass fogs over."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The fog clears again."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fog is on the inner face of the door."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is closed, fogged, cleared."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog forms after the door shuts and then only clears; once clear it stays clear with the door shut.",
+      "fail": "The fog forms before the door has closed; or the fog clears and forms again with the door shut; or the fog thickens after it has begun to clear; or the glass is fogged while the door stands open."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The clearing spreads from one part of the glass, such as its edges or a vent, with a visible edge.",
+      "fail": "The whole pane goes from fogged to clear at a stroke with no edge at all; or the fog lifts off the glass as a sheet; or the clearing starts and then reverses; or the fog clears while the door is being opened again."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The haze lies on the inner face and the outer face stays clear.",
+      "fail": "The fog forms on the outer face; or both faces fog equally; or the door's frame changes colour rather than the glass; or the goods behind the glass change colour as it fogs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Drops that gather in the fog run downward on the inner face.",
+      "fail": "A drop runs up the glass; or a drop leaves the glass and rises; or water gathers along the glass's top edge and stays."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One door on its hinge; the goods behind the glass are the same before and after the fogging.",
+      "fail": "Packets behind the glass appear or vanish while it is fogged; or a second door appears; or the door passes through the cabinet's frame; or the door vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cabinet's frame, its labels and the aisle stay the same.",
+      "fail": "The frame changes colour; or the labels change; or the aisle behind changes between frames."
+    }
+  ]
+}

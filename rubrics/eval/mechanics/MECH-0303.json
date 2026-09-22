@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0303",
+  "caption": "A ripe apple comes loose from a branch and drops through the leaves to the grass beneath the tree.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An apple hangs from a branch."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It comes loose."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It drops through the leaves."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It lands on the grass beneath."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The loosening comes first, then the drop, then the landing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It falls straight down, speeding up, and comes to rest below the branch.",
+      "fail": "It drifts sideways; or pauses; or rises."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It brushes through the leaves without stopping.",
+      "fail": "It stops in the leaves; or bounces up high; or reverses."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The leaves stir as it passes.",
+      "fail": "They stay rigid; or stir before; or the apple passes through them untouched."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The apple is firm and may bounce low.",
+      "fail": "It splashes; or bounces high; or floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One apple keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The apple's colour and the tree stay the same.",
+      "fail": "The apple changes colour; or the tree rearranges; or the grass changes."
+    }
+  ]
+}

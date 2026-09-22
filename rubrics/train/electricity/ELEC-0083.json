@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0083",
+  "caption": "An empty living room lit by a single lamp during a storm brightens for an instant as lightning flashes through the window.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An empty living room lit by a single lamp."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A window is in view or its light falls into the room."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The room brightens for an instant, as from a flash outside the window."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "A storm shows outside the window: dark sky, rain or streaked glass."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lamp is lit before, during and after the flash."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is lamp-lit, flash, lamp-lit again."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The brightening is brief: the room lights up and returns to its lamp-lit state; flashes may repeat but each ends.",
+      "fail": "The room stays bright to the end of the clip after the flash; or brightens steadily without ending; or the flash fades in slowly like a dimmer being turned up; or the room ends darker than its lamp-lit state with the lamp still lit."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flash light enters from the window side: surfaces facing the window brighten most and the far side of the room least.",
+      "fail": "The whole room brightens evenly with no side brighter; or the brightening comes from the lamp's side while the window side stays as it was; or the window glass stays dark while the room lights up."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Sharp shadows of the window frame appear on the floor or the wall opposite only during the flash and vanish with it; the lamp's own soft shadows remain as before.",
+      "fail": "The frame's shadow stays on the wall after the room has returned to lamp light; or the shadow appears before the flash; or the shadow lies on the window side of the objects rather than away from the window."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing in the room moves at the flash: furniture, pictures, the lamp and the curtains stay as they were, apart from curtains stirring in a draught.",
+      "fail": "Furniture or pictures shift at the flash; or the lamp moves or swings; or a door opens by itself; or the curtains fly up sharply at the instant of the flash while nothing else stirs."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The room's contents are the same before, during and after the flash: the flash reveals what was there and creates or removes nothing.",
+      "fail": "Furniture or pictures appear or vanish between the dim and lit frames; or the lamp vanishes or duplicates; or the window moves along the wall; or the room's layout changes after the flash."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Wall colours, the lampshade and the curtains keep their colours apart from brightness.",
+      "fail": "The walls change colour rather than brightness; or the lampshade changes colour; or the curtains change pattern."
+    }
+  ]
+}

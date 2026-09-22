@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0069",
+  "caption": "A hand mirror in a sunny doorway is tilted, sending a patch of sunlight dancing across the shaded room.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hand mirror is in a sunny doorway."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is tilted."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A patch of sunlight dances across the shaded room."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The patch vanishes when the mirror is turned from the sun."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bright patch moves as the mirror tilts and vanishes when the mirror is turned from the sun.",
+      "fail": "It stays still while the mirror tilts; or it remains with the mirror turned away; or it is there with no sun on the mirror."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The patch does not move on its own.",
+      "fail": "It dances with the mirror still; or it moves before the tilt; or it flickers with the mirror steady."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The patch moves in the direction opposite to the tilt, as a reflected beam does.",
+      "fail": "It moves the same way as the tilt; or it jumps; or it moves crosswise."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The patch is one bright shape roughly the mirror's outline.",
+      "fail": "It splits into several; or it is a sharp geometric shape unlike the mirror; or it floods the whole room."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mirror and one patch.",
+      "fail": "A second patch appears; or the mirror duplicates; or the patch becomes solid; or the hand passes through the mirror."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room and the mirror stay the same.",
+      "fail": "The room rearranges; or the mirror changes; or the walls change colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

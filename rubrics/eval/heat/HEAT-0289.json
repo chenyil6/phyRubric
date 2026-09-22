@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0289",
+  "caption": "A stick of incense burns in a holder, and the grey ash column lengthens, curls, and finally drops into the tray.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stick of incense burns in a holder."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The glowing point creeps down the stick."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The grey ash above the glowing point lengthens and curls."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The ash breaks and drops into the tray."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Smoke rises from the glowing point."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The lengthening comes first and the dropping follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The glowing point only creeps along the stick and the ash behind it only grows; burnt stick does not become fresh incense.",
+      "fail": "The glowing point moves back the way it came; or the ash turns back into unburnt incense; or the stick grows longer as it burns; or the ash column shortens with nothing breaking off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The ash column bends downward under its own weight and, when it breaks, falls straight down into the tray, while the smoke rises.",
+      "fail": "The ash column bends upward; or a broken piece of ash rises or hangs in the air; or the ash falls upward out of the tray; or the smoke sinks and pools around the holder."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The ash builds behind the glowing point and the tray catches what falls from it.",
+      "fail": "Ash appears in the tray with none falling from the stick; or the stick burns with no ash forming behind the glowing point at all; or the ash grows on the unburnt part ahead of the glowing point; or the smoke leaves a part of the stick that has not burnt."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ash is a fragile grey column that bends and crumbles, the unburnt stick stays rigid, and the smoke is a fine thread.",
+      "fail": "The ash stays straight and bright like fresh incense; or the ash bends like rubber and springs back; or the unburnt stick sags; or the smoke holds a fixed rigid shape like a wire."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One stick in one holder; the stick shortens only by burning and the ash goes only into the tray.",
+      "fail": "A second stick appears already lit; or the stick vanishes while still long; or the glowing point jumps to a new place on the stick; or the ash reattaches to the stick after falling."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The holder, the tray and the surroundings stay the same.",
+      "fail": "The holder changes shape; or the tray changes colour; or items around the holder rearrange."
+    }
+  ]
+}

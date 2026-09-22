@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0105",
+  "caption": "A boat tied to a dock by a long line drifts away on the tide until the line goes taut and stops it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A boat is tied to a dock by a line."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The boat drifts away from the dock."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The line goes taut."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The boat is stopped by the line."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The line is long, so the boat drifts some distance before it tightens."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drift comes first, then the taut line, then the stop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The line goes from slack, drooping or in the water, to straight at the moment the boat reaches its length; it does not stretch.",
+      "fail": "The line stretches; or it stays curved while the boat is held; or it is taut while the boat is still beside the dock."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The boat stops the instant the line straightens and then swings at the end of the line.",
+      "fail": "The boat keeps drifting with the line taut; or it stops before the line is straight; or the line goes taut and the dock post comes away."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "While the line is slack the boat drifts freely and slowly, and once held it swings.",
+      "fail": "The boat speeds up as it drifts; or reverses on its own; or stops in open water with the line slack."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "A slack line droops into the water, and a taut line runs straight above it.",
+      "fail": "Slack line floats in the air; or the taut line sags into the water; or the boat lifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One boat, one line and one dock keep their number.",
+      "fail": "The boat vanishes or a second appears; or the line passes through the dock; or the boat turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The boat, the line and the dock stay the same.",
+      "fail": "The boat changes colour; or the line changes; or the dock rearranges."
+    }
+  ]
+}

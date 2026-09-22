@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0120",
+  "caption": "A tennis racket strikes a ball hard during a serve and the ball flies off toward the far court.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tennis racket strikes a ball."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The strike is hard."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ball flies off toward the far court."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The stroke is a serve."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike comes first and the flight follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The ball flattens against the strings for an instant and leaves round again; it does not pass through or stick.",
+      "fail": "It passes through the strings; or it sticks to the racket; or it stays flattened in flight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The ball leaves at the instant of contact, faster than it arrived, along the racket's swing.",
+      "fail": "The ball moves off before the racket reaches it; or it leaves slower than it came; or it flies backward past the server."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The ball flies in one line after the hit.",
+      "fail": "It jinks; or stops in the air; or speeds up in mid-air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The racket frame stays rigid, and the strings may flex.",
+      "fail": "The frame bends; or the strings tear; or the racket passes through the ball."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one racket keep their number.",
+      "fail": "The ball vanishes or a second appears; or the racket vanishes; or the ball turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball, the racket and the court stay the same.",
+      "fail": "The ball changes colour; or the racket changes; or the court lines shift."
+    }
+  ],
+  "note": "The server is kept because the swing is the physics. Serving form is not judged."
+}

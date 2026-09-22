@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0158",
+  "caption": "A lit candle in a holder is tilted to one side, and the flame keeps pointing straight up while melted wax runs down the low side.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lit candle in a holder is tilted to one side."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flame keeps pointing straight up."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Melted wax runs down the candle's low side."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wax drips off the low edge."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flame does not lean with the candle."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The tilt comes first and the running follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The flame stays upright whatever the candle's angle and the melted wax runs down the low side and drips from its lowest point.",
+      "fail": "The flame leans with the candle and stays in line with the wick; or the wax runs up toward the candle's high side; or a drip leaves the candle and rises; or the wax gathers on the high side and stays there."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The tilt shows in the wax: the pool at the top runs toward the low side and spills there.",
+      "fail": "The candle tilts and the wax pool stays square with the candle's top instead of level with the ground; or the wax pool spills over the high side; or the candle tilts and no wax moves at all; or wax runs down a side the candle is not tilted toward."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The run only advances down the low side and stops where it sets, and set wax stays set.",
+      "fail": "A set run turns liquid again with no fresh wax reaching it; or the run retreats up the candle; or the candle grows taller as the wax runs; or the run advances and withdraws in turn."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wax is a thin liquid near the flame that stiffens into a dull ridge lower down, and the candle's body stays a solid column.",
+      "fail": "The candle's body bends with the tilt; or the wax runs off as thin as water and leaves no ridge; or the run sets as a spike standing out sideways; or the candle melts through at its middle."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One candle with one wick and one flame in one holder; the flame stays on the wick.",
+      "fail": "The flame separates from the wick and floats; or a second flame appears; or the candle vanishes; or wax appears below with no run reaching it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candle's colour, the holder and the surface below stay the same.",
+      "fail": "The candle changes colour; or the holder changes shape; or the surface below changes pattern."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0013",
+  "caption": "A thin sheet-metal door is knocked on, and the panel visibly flexes and rattles under the knocks before going quiet.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A thin sheet-metal door."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The door is knocked on: a hand raps the panel."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The panel flexes and rattles with the knocks."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The panel goes still after the knocking."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The knocking is a series of raps rather than a single blow."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The flexing comes with the knocks and the stillness follows the last knock."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The panel is still before the first knock; each flex begins as the knuckles land; the panel does not move by itself between or after knocks.",
+      "fail": "The panel is already shaking before the hand reaches it; or flexes while the hand is drawn back and away; or the hand raps and the panel stays rigid; or the door starts rattling again after it has gone still with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each knock's shake fades before or as the next knock lands, and after the last knock the rattle dies away to stillness.",
+      "fail": "The rattle grows after the knocking stops; or keeps the same shaking for the whole clip after the last knock; or the panel stops dead from a hard shake the instant the hand leaves it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The panel flexes as a thin sheet: it dimples inward at the knuckles and springs back flat; the frame and hinges stay rigid.",
+      "fail": "A dimple stays pressed in after the hand lifts; or the panel folds like cloth; or the door frame bends with each knock; or a wave rolls across the whole panel like water."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The wall, the door frame and any neighbouring panels stay still; only the knocked panel shivers.",
+      "fail": "The wall beside the door shakes; or a neighbouring panel rattles while the knocked one is still; or the door frame jumps in the wall."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One door with its panel, frame and handle; the hand passes through nothing and the door stays one piece.",
+      "fail": "The hand passes into or through the panel; or the panel splits or a hole opens where the hand lands; or the handle vanishes or moves to another spot; or the door changes into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The door's paint, any rust or marks on it, and the surroundings stay the same.",
+      "fail": "The door changes colour; or marks and scratches on it shift or vanish; or the surroundings change."
+    }
+  ]
+}

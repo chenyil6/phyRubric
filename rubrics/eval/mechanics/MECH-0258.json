@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0258",
+  "caption": "A football kicked at goal hits the crossbar and drops down onto the goal line.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A football is kicked at a goal."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It hits the crossbar."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It drops down onto the goal line."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The hit comes first and the drop follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It rebounds off the bar at the moment of contact.",
+      "fail": "It changes course before the bar; or passes through; or leaves faster than it arrived."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It falls under gravity to the line.",
+      "fail": "It hangs; or rises; or floats."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bar stays rigid and the ball squashes briefly.",
+      "fail": "The bar bends; or the ball stays flat; or the ball sticks."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The ball does not pass through the bar or the net.",
+      "fail": "It passes through the bar; or through the net; or the net passes through the ball."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one goal keep their number.",
+      "fail": "The ball duplicates; or vanishes; or the goal changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball and the goal stay the same.",
+      "fail": "The ball changes colour; or the goal changes; or the pitch rearranges."
+    }
+  ]
+}

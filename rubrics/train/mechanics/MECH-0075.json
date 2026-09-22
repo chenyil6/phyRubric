@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0075",
+  "caption": "A soccer ball is punted far down the field, and it lands and bounces near the far end.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A soccer ball is punted."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It travels far down the field."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It lands and bounces near the far end."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flight is long, reaching the far end of the field."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The punt comes first, then the flight, then the bounce."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The ball follows one high arc, its forward motion carrying it toward the far end.",
+      "fail": "The ball flies flat; or it hangs at the top; or it changes direction in mid-air with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It descends steadily after the peak, and on landing it bounces lower than its flight and rolls.",
+      "fail": "The ball rises again after starting to fall; or it bounces higher than it flew; or it hovers above the grass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Each bounce is lower than the one before.",
+      "fail": "A later bounce is higher than the one before it; or the ball stops dead on first contact with no bounce or roll; or it bounces back toward the kicker."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ball squashes briefly on landing and springs back round, and the grass flattens under it.",
+      "fail": "The ball stays flat after landing; or it sinks into the ground; or the ground ripples."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball is in play throughout.",
+      "fail": "The ball vanishes in flight or a second one appears; or it turns into another object; or it passes through the ground."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's panels, the field lines and the goal stay the same.",
+      "fail": "The ball changes colour in flight; or the field markings shift between frames; or the goal changes shape."
+    }
+  ]
+}

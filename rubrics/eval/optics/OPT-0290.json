@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0290",
+  "caption": "The sun comes out from behind a cloud over a beach, and the sand and sea brighten all at once.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "The sun comes out from behind a cloud over a beach."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sand and sea brighten all at once."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "Sharp shadows appear."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "It would dim again when the next cloud passes."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The whole scene brightens together and sharp shadows appear.",
+      "fail": "Only part brightens; or shadows stay soft in full sun; or the scene dims as the sun comes out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The brightening follows the cloud's edge and holds while the sun is clear.",
+      "fail": "It flickers; or brightens then dims with the sun still out; or is instant with no cloud edge."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The cloud moves steadily and nothing on the beach moves with it.",
+      "fail": "The cloud jumps; or objects move; or shadows swing round."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "Colours stay the same, only brighter.",
+      "fail": "The sand changes colour; or the sea changes colour; or the sky changes abruptly."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The beach's objects keep their number.",
+      "fail": "An object vanishes; or appears; or duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The beach stays the same.",
+      "fail": "Items rearrange; or the shoreline moves; or the horizon changes."
+    }
+  ]
+}

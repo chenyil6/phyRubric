@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0275",
+  "caption": "A sheet of aluminium foil is pressed down over an upturned bowl and lifted off, and the foil keeps the bowl's rounded shape.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sheet of aluminium foil is pressed down over an upturned bowl."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is lifted off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The foil keeps the bowl's rounded shape."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The press comes first, then the lift, then the shape holds."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "It wrinkles and moulds to the bowl while pressed and holds that dome after it is lifted away.",
+      "fail": "It springs back flat; or tears; or does not mould."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The dome matches the bowl.",
+      "fail": "It is a different shape; or grows; or shrinks."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It moves only with the hands.",
+      "fail": "It lifts itself; or slides; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The foil lies on the bowl, not through it.",
+      "fail": "It passes through the bowl; or the bowl passes through the foil; or the hands pass through."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet and one bowl keep their number.",
+      "fail": "The foil duplicates; or the bowl vanishes; or the foil turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The foil's shine and the bowl stay the same.",
+      "fail": "The foil changes colour; or the bowl changes; or the background rearranges."
+    }
+  ]
+}

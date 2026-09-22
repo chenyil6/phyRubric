@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0109",
+  "caption": "A heavy bucket hung from the handle of a backyard zip line is released and rides it down to the far end, the cable sagging under it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bucket hangs from the handle of a zip line."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is released."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It rides down the cable to the far end."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The cable sags under it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The release comes first and the ride follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The cable dips most under the handle and the dip travels with the bucket; it stays straight on either side and does not stretch.",
+      "fail": "The cable stays level under the bucket; or it sags everywhere at once; or it stretches longer; or it bends upward."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The bucket runs downhill along the cable, speeding up, and slows at the far end; it hangs below the cable.",
+      "fail": "The bucket climbs; or it stops mid-run with nothing in its way; or it rises above the cable."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bucket moves only after release and stops at the end.",
+      "fail": "It moves before release; or sets off again after reaching the end; or changes speed with nothing acting on it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The bucket follows the cable's line, swinging a little, and the handle stays on the cable.",
+      "fail": "The bucket swings off to the side of the cable's line; or it spins; or the handle leaves the cable and the bucket keeps going."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bucket, one handle and one cable keep their number.",
+      "fail": "The bucket vanishes or a second appears; or the handle passes through the cable; or the bucket turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bucket, the cable and the yard stay the same.",
+      "fail": "The bucket changes colour; or the cable changes; or the yard rearranges."
+    }
+  ]
+}

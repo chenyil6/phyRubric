@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0074",
+  "caption": "A stand mixer runs on high, and the whole mixer trembles on the counter.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stand mixer stands on a kitchen counter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The mixer runs: its beater turns."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The whole mixer trembles."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The speed is high: the beater is a blur or turns fast."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The trembling happens while the mixer runs."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The mixer trembles in place only while the beater turns.",
+      "fail": "The mixer trembles while the beater is plainly still; or slides across the counter in a smooth glide; or keeps trembling after the beater has stopped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "While the beater turns, the head and base tremble together.",
+      "fail": "The beater turns at speed and the mixer stands dead still for the whole clip; or the trembling stops while the beater keeps turning at the same speed; or only the bowl trembles while the body is still."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The mixer stays on the counter on all its feet.",
+      "fail": "The mixer lifts off; or balances on one foot; or rises."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The body, bowl and beater are rigid.",
+      "fail": "The body bends; or the bowl ripples; or the beater stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mixer; the beater does not pass through the bowl.",
+      "fail": "A second mixer appears; or it vanishes; or the beater passes through the bowl; or the mixer sinks into the counter."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mixer's colour, the counter pattern and the bowl's colour stay the same.",
+      "fail": "The mixer changes colour; or the counter pattern changes; or the bowl changes colour."
+    }
+  ]
+}

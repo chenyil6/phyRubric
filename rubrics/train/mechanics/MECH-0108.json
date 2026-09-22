@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0108",
+  "caption": "The rope on a flagpole is pulled steadily, and the flag rises up the pole as the rope runs through the pulley at the top.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flag hangs on a flagpole with a rope."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The rope is pulled."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flag rises up the pole."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pulley at the top of the pole is visible."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pull is steady rather than in jerks."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The rope stays taut on the pulled side and does not stretch or go slack while lifting.",
+      "fail": "The pulled side hangs slack while the flag rises; or the rope stretches; or it bunches."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flag moves only as fast as rope is pulled in and stops when the pulling stops.",
+      "fail": "The flag rises with no pull; or keeps rising after the pull stops; or the rope is pulled and the flag stays put."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flag hangs or flutters from its clips, and the rope runs straight down from the pulley.",
+      "fail": "The flag rises above the pulley; or the rope rises away from the pole; or the flag floats up ahead of the rope."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "One side of the rope goes up as the other comes down.",
+      "fail": "Both sides go up; or the rope does not move while the flag rises; or the flag goes down as the rope is pulled."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One flag, one rope and one pole keep their number.",
+      "fail": "The flag vanishes or a second appears; or the rope passes through the pole; or the flag turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The flag's colours, the pole and the sky stay the same.",
+      "fail": "The flag changes colours; or the pole changes; or the background rearranges."
+    }
+  ]
+}

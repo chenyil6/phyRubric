@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0063",
+  "caption": "A duck paddles across a calm pond, and its reflection glides along under it, breaking up in the wake it leaves.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A duck paddles across a calm pond."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its reflection glides along under it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The reflection breaks up in the wake it leaves."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The water ahead shows a clear image."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection stays directly beneath the duck and moves with it, wavering in the ripples behind.",
+      "fail": "It is offset from the duck; or stays still while the duck paddles; or it is sharp in the wake and broken ahead."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is inverted and joined at the waterline.",
+      "fail": "It is upright; or detached from the duck; or a different bird."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It moves with the duck still; or drifts across the pond."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid: ripples spread from the duck and the surface ahead stays flat.",
+      "fail": "The surface is rigid; or ripples run ahead of the duck; or the water flows uphill."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One duck and one reflection; the reflection stays on the water.",
+      "fail": "A second duck appears; or the reflection rises off the water; or the duck vanishes; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The duck's plumage and the pond stay the same.",
+      "fail": "The plumage changes; or the pond changes colour; or the shore rearranges."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the reflection's relation to it is."
+}

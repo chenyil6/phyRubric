@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0154",
+  "caption": "A saucepan is tipped and soup poured into a bowl until it is full and begins to spill over the sides.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A saucepan is tipped over a bowl."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Soup pours into the bowl."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bowl fills."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Soup spills over the sides."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pour comes first, then the fill, then the spill."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The level rises steadily while pouring.",
+      "fail": "The level drops while pouring; or it jumps; or the bowl is full before the pour."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The overflow begins exactly when the soup reaches the rim and runs down the outside onto the counter.",
+      "fail": "It overflows before reaching the rim; or the bowl is over-full with a domed surface and nothing spills; or the outside stays dry."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The stream falls straight down and the overflow runs down.",
+      "fail": "The stream curves up; or the overflow climbs; or soup hangs in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The soup is a liquid: it splashes and settles flat.",
+      "fail": "It pours as a rigid rod; or as a solid lump; or as beads."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One saucepan and one bowl, and soup comes only from the pan.",
+      "fail": "Soup appears in the bowl with no stream; or the bowl duplicates; or soup passes through the bowl."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The soup's colour, the bowl and the counter stay the same.",
+      "fail": "The soup changes colour; or the bowl changes shape; or the counter rearranges."
+    }
+  ]
+}

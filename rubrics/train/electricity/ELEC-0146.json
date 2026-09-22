@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0146",
+  "caption": "A phone is brought near a magnetic mount on a car's dashboard, and the phone snaps onto the mount and holds.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A magnetic phone mount on a car's dashboard."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A phone is brought near the mount."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The phone snaps onto the mount."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The phone holds on the mount after the hand withdraws."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The mount is on the dashboard, not on a vent or window."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is approach, snap, hold."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The phone moves only in the hand until the last small gap, jumps that gap onto the mount, and then stays still on it; it does not move once held.",
+      "fail": "The phone jumps to the mount from far away; or slides about on the mount after the hand leaves; or springs off the mount with nothing pulling it; or the mount moves toward the phone."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Once on the mount the phone is held with nothing else supporting it; if it comes off it falls downward.",
+      "fail": "The phone drops the instant the hand lets go; or hangs a gap from the mount without touching; or floats away from the mount; or a fallen phone rises back."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The snap is toward the mount along the line between them, and the phone stops flat on the mount's face.",
+      "fail": "The phone jumps away from the mount; or darts sideways past it; or lands at an angle and then swings flat by itself repeatedly; or bounces on and off."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The mount stays fixed to the dashboard; nothing else in the car moves as the phone attaches.",
+      "fail": "The mount shifts or tips as the phone lands; or the dashboard items jump; or the steering wheel turns by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One phone on one mount; the phone touches the mount's face and does not sink into it or the dashboard; the hand passes through nothing.",
+      "fail": "The phone sinks into the mount or dashboard; or a second phone appears; or the phone vanishes; or the hand passes through the phone."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The phone's case colour, the mount and the dashboard stay the same.",
+      "fail": "The phone changes colour or size; or the mount changes shape; or the dashboard changes."
+    }
+  ],
+  "note": "Whether the car is moving is not judged; if it moves, the phone staying on the mount is the caption's point."
+}

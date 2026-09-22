@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0279",
+  "caption": "Thick paint is poured from a tin onto a flat canvas, and it spreads slowly into a rounded pool and stops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Thick paint is poured from a tin onto a flat canvas."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It spreads slowly."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It forms a rounded pool."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It stops spreading."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pour comes first, then the spread, then the stop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "It flows outward slower and thicker than water, with a rounded raised edge.",
+      "fail": "It spreads thin and fast; or is a rigid lump; or beads into balls."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "It spreads and then settles, and does not keep spreading thin or climb back.",
+      "fail": "It climbs back into the tin; or shrinks; or jumps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The stream falls down onto the canvas.",
+      "fail": "It curves; or hangs; or rises."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The tin's tilt produces the flow.",
+      "fail": "Paint pours from an upright tin; or the tin is tipped and nothing comes; or it continues after the tin is righted.",
+      "precondition": "The tin's tilt is visible in the clip."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tin and one canvas, and paint comes only from the tin.",
+      "fail": "Paint appears with no stream; or the tin duplicates; or paint passes through the canvas."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The paint's colour and the canvas stay the same.",
+      "fail": "The paint changes colour; or the canvas changes; or the room rearranges."
+    }
+  ]
+}

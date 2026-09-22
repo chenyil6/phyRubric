@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0190",
+  "caption": "A drop of food colouring falls into each of two glasses side by side, one of hot water and one of cold, and the colour spreads through the hot water while it sinks in a thin thread in the cold.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two glasses of water stand side by side."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "One glass reads as hot and the other as cold: steam, ice or condensation shows which."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A drop of colouring falls into each glass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The colour spreads through the hot glass."
+    },
+    {
+      "id": "S5",
+      "weight": "core",
+      "check": "In the cold glass the colour sinks as a thin thread."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The two drops fall at about the same moment."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The colour in each glass only spreads further and the water does not clear again; the difference between the two does not reverse.",
+      "fail": "A glass's water clears again while the colour stays in it; or the colour gathers back into a drop; or the cold glass colours through more fully than the hot one; or the colour spreads and shrinks in turn."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The colour moves with the water's own currents: it billows in the hot glass and sinks in a slow thread in the cold one, and it does not dart about.",
+      "fail": "The colour darts across a glass in a straight line and stops dead; or the colour swirls hard in the still cold glass while the hot glass's colour hangs at the top; or the colour climbs out of the water; or the colour moves in a fixed pattern that repeats exactly in both glasses."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Each drop falls downward into its glass and the thread in the cold glass sinks toward the bottom.",
+      "fail": "A drop travels upward from the dropper; or the thread in the cold glass rises to the surface and stays; or a drop hangs in the air above a glass; or the colour in the cold glass gathers at the top and stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The drops show their arrival: each surface dimples and ripples where its drop lands.",
+      "fail": "A drop enters and its surface stays glassy; or a surface ripples before its drop reaches it; or the ripples appear in the glass the drop did not enter."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two glasses and two drops; the colour in each glass came from its own drop and neither level jumps.",
+      "fail": "Colour appears in a glass with no drop falling into it; or a glass's level jumps with nothing added; or a third glass appears; or colour passes through a glass's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glasses' shapes, the table and the dropper stay the same.",
+      "fail": "A glass changes shape; or the table's setting rearranges; or the dropper changes colour."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "ACOU-0038",
+  "caption": "A low-flying jet passes over a house, and a hanging light fitting in the hallway swings gently.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A light fitting hangs from the ceiling on a cord or chain."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The fitting swings."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The swing is gentle: a small sway, not a wild one."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The setting is a hallway inside a house."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The swing is a pendulum about the ceiling fixing: the cord stays taut and straight and the fitting arcs below it.",
+      "fail": "The fitting moves sideways with the cord bending or going slack; or the fixing point slides across the ceiling; or the fitting rotates in place without arcing; or rises toward the ceiling."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once swinging, the arcs shrink until the fitting hangs still; they do not grow or restart.",
+      "fail": "The arcs grow larger over the clip; or the swing stops dead in a tilted pose; or the fitting settles still and then starts swinging again."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "At rest the fitting hangs straight down beneath its fixing.",
+      "fail": "The fitting rests tilted with the cord taut and nothing touching it; or hangs above its fixing; or the cord arcs upward."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Other hanging things nearby stir at the same time as the fitting and are still before.",
+      "fail": "A nearby picture or coat swings hard while the fitting is still; or objects on a shelf slide while the fitting hangs still; or the fitting and the other object start at plainly different moments.",
+      "precondition": "Pictures, a mirror or coats hang on the hallway walls."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One fitting; the ceiling and walls stay intact.",
+      "fail": "A second fitting appears; or the fitting vanishes; or it passes through the ceiling or a wall; or the cord detaches and the fitting stays up."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shade's colour and shape, the wall pictures and the floor pattern stay the same.",
+      "fail": "The shade changes colour or shape; or the wall pictures change; or the floor pattern shifts."
+    }
+  ],
+  "note": "The jet is normally out of view; the swing is judged on its own shape and decay."
+}

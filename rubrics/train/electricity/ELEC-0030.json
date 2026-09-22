@@ -1,0 +1,77 @@
+{
+  "id": "ELEC-0030",
+  "caption": "The key in a car's ignition is turned, and the dashboard lights up before the engine starts.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car's ignition with a key in it, and the dashboard in view."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The key is turned."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dashboard lights up."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The dashboard is dark before the turn."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The dashboard lights before any sign of the engine starting."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The dashboard lights come on at the moment the key turns, and only then.",
+      "fail": "The key is turned and the dashboard stays dark to the end of the clip; or the dashboard is lit before the key moves; or the dashboard lights with no key in the ignition; or the lights come on well after the turn with nothing else happening."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once lit, the dashboard stays lit while the key stays turned; warning lights may go out one by one but the display does not go dark as a whole.",
+      "fail": "The dashboard goes dark again with the key untouched; or flickers on and off; or the key turns back by itself; or the dashboard lights and goes dark repeatedly."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The car stays still as the key turns; the steering wheel and pedals do not move by themselves.",
+      "fail": "The car rolls or rocks at the turn; or the steering wheel turns by itself; or the wipers sweep; or the gear lever moves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The needles on the dials sweep from rest to a position and settle; they do not spin round.",
+      "fail": "A needle spins round its dial repeatedly; or needles jump between positions frame to frame; or a needle bends.",
+      "precondition": "Dial needles are visible."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One key in one ignition; one dashboard with its dials in fixed places; the hand passes through nothing.",
+      "fail": "Dials appear or vanish; or a second key appears; or the hand passes through the wheel or dashboard; or the ignition moves along the column."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dashboard's colours and layout and the steering wheel stay the same apart from the lighting.",
+      "fail": "The dashboard changes colour rather than brightness; or the layout changes; or the wheel changes shape."
+    }
+  ],
+  "note": "Whether the engine starts is not judged; the caption's event is the dashboard lighting first."
+}

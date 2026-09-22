@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0110",
+  "caption": "A hand squeezes a wet kitchen sponge over a sink, water streams out, and the sponge springs back to shape when the hand opens.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wet kitchen sponge is held in a hand over a sink."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The hand squeezes and the sponge compresses."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Water comes out of the sponge."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The hand opens and the sponge returns toward its shape."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "A sink is below the sponge."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is squeeze, water out, release, spring back."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The sponge compresses only where and while it is squeezed and expands again when the grip opens, recovering most of its shape.",
+      "fail": "The sponge stays crushed after the hand opens; or it expands while the hand is still closed on it; or it compresses before the fingers close; or it behaves as a rigid block that does not compress."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Water leaves the sponge during the squeeze and runs down into the sink; the sponge does not take water back in from the air.",
+      "fail": "Water streams out while the sponge is unsqueezed; or water rises from the sink back into the sponge; or the sponge grows wetter as it is squeezed."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The released water falls straight down into the sink.",
+      "fail": "Water floats away from the sponge; or flows sideways or upward; or hangs beneath the sponge without falling."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The expelled water behaves as a liquid: a stream or drips that splash and spread in the sink.",
+      "fail": "The water comes out as solid lumps; or as balls that bounce off the sink like rubber; or it keeps a fixed shape after leaving the sponge."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One hand with its fingers and one sponge keep their number and identity; the hand does not pass through the sponge.",
+      "fail": "Fingers multiply, vanish or pass through the sponge; or the sponge splits in two or merges with the hand; or water appears away from the sponge or vanishes in mid-air."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sponge keeps its colours and the sink stays the same.",
+      "fail": "The sponge changes colour or its scouring side swaps; or the sink's contents change between frames."
+    }
+  ]
+}

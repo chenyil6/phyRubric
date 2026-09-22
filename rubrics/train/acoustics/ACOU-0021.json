@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0021",
+  "caption": "The taut head of a large bass drum is slapped, and the head visibly dips and rebounds several times, each time smaller.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A large bass drum with its head in view."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The head is slapped."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The head dips and rebounds more than once."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Each dip and rebound is smaller than the one before."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike is a slap with a hand, not a stick or mallet."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The slap comes first and the dips follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The head is flat and still until the hand lands; the first dip happens at the slap and only then.",
+      "fail": "The head is already trembling before the hand arrives; or dips while the hand is well away; or the hand lands and the head stays flat; or the head starts dipping again after lying flat with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The head dips inward under the slap first; the first dip is the deepest and each rebound smaller, until the head lies flat.",
+      "fail": "A later dip is deeper than the first; or the dips stay the same depth for the whole clip; or the head stops dead while bowed in or out; or the head bulges outward toward the hand before dipping in."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The head flexes as a stretched skin, dipping under the palm and springing back; the hoop and shell stay rigid.",
+      "fail": "The hand's print stays pressed into the head after the hand lifts; or the head sags loose like cloth; or the shell dents or wobbles like rubber; or the head splits."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The drum stays put on its stand or the floor; the shell, hoop and stand do not shift with the slap.",
+      "fail": "The drum rolls or slides at the slap; or the stand rocks and keeps rocking; or the hoop turns on the shell."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One drum with one head; the hand passes through nothing and the drum stays one object.",
+      "fail": "The hand passes through the head; or a second head or drum appears; or the drum vanishes or changes into another object; or the hoop separates from the shell."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The head's colour and any logo on it, the shell's finish and the surroundings stay the same.",
+      "fail": "The logo on the head changes or moves; or the shell changes colour; or the background changes."
+    }
+  ],
+  "note": "Separate dips may not be resolvable in the frames; a shiver that starts at the slap and fades counts as the dips and rebounds for S3 and P2."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0059",
+  "caption": "A wind-up alarm clock rings, and its little hammer hammers between the two bells and the clock shivers on the table.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wind-up alarm clock with two bells on top stands on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The little hammer swings between the bells."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The clock shivers on the table."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The hammer moves rapidly back and forth."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hammer swings and the clock shivers at the same time."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The hammer swings from its base between the two bells and the clock trembles in place.",
+      "fail": "The clock shivers while the hammer hangs still; or the clock glides smoothly across the table; or the hammer detaches and floats; or the bells swing on their own while the hammer is still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "While the hammer swings the clock shivers; when the hammer stops the clock stands still.",
+      "fail": "The hammer swings hard and the clock stands dead still; or the hammer stops and the clock keeps shivering unchanged; or the hammer swings but stays clear of both bells for the whole clip."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The clock stays on the table; if it walks to the edge it falls.",
+      "fail": "The clock lifts off the table; or tips and hangs at an angle unsupported; or rises up on end."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The clock case and bells are rigid; the hammer is a rigid head on a thin stalk.",
+      "fail": "The bells dent or wobble like rubber; or the clock case bends; or the hammer stalk stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One clock with two bells and one hammer; the hammer does not pass through a bell.",
+      "fail": "A third bell appears; or the hammer vanishes; or the hammer passes through a bell; or the clock duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The clock face, its hands and the table stay the same.",
+      "fail": "The clock face changes; or the hands jump; or the table changes."
+    }
+  ]
+}

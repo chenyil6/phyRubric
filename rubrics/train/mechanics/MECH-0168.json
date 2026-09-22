@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0168",
+  "caption": "Snow is shovelled off a driveway onto the lawn, building a ragged pile there.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Snow is shovelled off a driveway."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Each shovelful is thrown onto the lawn."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A pile builds on the lawn."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pile is ragged."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The driveway clears where it has been shovelled."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Each shovelful flies in a loose clump along the swing's direction and lands on the lawn.",
+      "fail": "It flies backward; or hangs; or lands back on the driveway from a swing toward the lawn."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The clump breaks apart in the air and lands scattered, and the pile is loose and ragged.",
+      "fail": "It stays a rigid block; or flows like liquid; or the pile is a smooth dome."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The driveway clears where it has been shovelled.",
+      "fail": "The driveway stays covered after shovelling; or it clears ahead of the shovel; or snow reappears."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Thrown snow falls.",
+      "fail": "It rises; or hangs; or floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One shovel keeps its shape, and snow passes through nothing.",
+      "fail": "The shovel passes through the snow; or a second shovel appears; or snow passes through the lawn."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The driveway, the lawn and the house stay the same.",
+      "fail": "The driveway changes; or the lawn changes; or the house rearranges."
+    }
+  ],
+  "note": "The shoveller is kept because the swing is the physics. Technique is not judged."
+}

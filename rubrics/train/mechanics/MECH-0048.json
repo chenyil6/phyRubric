@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0048",
+  "caption": "A loaded sled slides down a snowy slope, runs out onto a flat patch of bare grass, and stops within a short distance.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sled carrying a load is present on a snowy slope."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sled slides down the slope."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sled runs onto a patch of bare grass at the bottom and comes to a stop there."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The slope shows snow and the flat run-out shows grass: a visible change of surface."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is descent on snow, then grass, then stop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "On snow the sled keeps gliding; the sharp slowing begins where the runners reach the grass, and the sled stops within a short run on the grass.",
+      "fail": "The sled stops dead while still on the snow slope with nothing in its way; or glides across the grass without slowing, as if still on snow; or slows and then speeds up again on the flat."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The sled moves only downhill under gravity and stays stopped once it has stopped; it does not start, turn or restart untouched.",
+      "fail": "The sled sets off uphill; or turns sharply on open ground with nothing deflecting it; or moves again after having come to rest."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The sled keeps contact with the surface and its load rides on it; a hard stop may pitch the load forward but not upward or backward.",
+      "fail": "The sled floats above the snow or grass; or the load rises off the sled with nothing lifting it; or the load is thrown backward, uphill, when the sled stops."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Snow thrown up by the runners falls back to the ground; grass under the sled is flattened, not sprayed.",
+      "fail": "Snow spray hangs in the air or rises away; or the sled ploughs through the grass as if it were loose powder.",
+      "precondition": "Snow or grass is visibly disturbed by the runners."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sled and its load keep their shape and number and stay above the ground.",
+      "fail": "The sled or its load vanishes, duplicates or changes into another object; or the sled passes through the ground or a fence."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The load's contents, the sled's colour and the boundary between snow and grass stay consistent throughout.",
+      "fail": "The load changes contents or colour; or the snow-grass boundary shifts between frames; or the slope changes shape."
+    }
+  ]
+}

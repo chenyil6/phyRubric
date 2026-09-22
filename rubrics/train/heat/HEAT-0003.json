@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0003",
+  "caption": "A pat of cold butter is dropped into a hot frying pan, and it melts into a spreading pool of liquid.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pat of butter is dropped into a frying pan."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The butter melts: it loses its block shape and turns to liquid."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A pool of liquid butter spreads across the pan."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The butter starts as a solid pat with square edges."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drop comes first and the melting follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The melting runs one way: the pat softens, slumps and shrinks while the pool around it grows, and each change persists.",
+      "fail": "The pat regains its square edges or its height; or the pool shrinks back into the pat; or the butter firms into a solid block again in the pan; or the pat alternates between softer and firmer."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The melted butter flows as a thin liquid that runs to the pan's low places and wets its surface; the unmelted pat is a soft solid that slides on the film.",
+      "fail": "The pool stands as a dome or holds a fixed shape as the pan is tilted; or the melt moves as a solid slab across the pan; or the pat shatters into dry pieces; or the liquid stands in a heap above the pan's surface."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pool spreads outward and downhill across the pan's floor and runs to its lowest side.",
+      "fail": "The pool climbs the pan's sloping wall and stays there; or a run of butter travels uphill; or liquid butter lifts off the pan and floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The melt starts where the butter meets the pan: the pat's underside goes glossy and the film spreads out from beneath it.",
+      "fail": "A pool spreads on the pan while the pat is still sharp-edged and dry underneath; or the pat melts from its top face while its underside stays solid and matt; or the pool appears on a part of the pan the butter never touched."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pat of butter; matter moves only from the pat into the pool, and the pan keeps its shape.",
+      "fail": "The pat grows; or a second pat appears; or the pool vanishes at a stroke; or butter appears outside the pan with none crossing the rim; or the pat passes through the pan's base."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan's finish, the hob and the things around it stay the same.",
+      "fail": "The pan's finish changes pattern; or the hob's knobs move; or items around the pan rearrange."
+    }
+  ],
+  "note": "Browning of the butter is chemistry and is outside the branch; a deepening golden colour is not judged."
+}

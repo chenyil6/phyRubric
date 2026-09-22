@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0177",
+  "caption": "A gust of wind lifts a wide-brimmed hat off a bench on a seafront and carries it away along the ground.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wide-brimmed hat rests on a bench on a seafront."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The hat lifts off the bench."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It is carried away along the ground."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Other signs of wind are visible."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lift comes first and the tumble along the ground follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The hat moves the same way as other things blown by the wind, tumbling and skipping along.",
+      "fail": "It moves against the direction other things are blown; or it glides smoothly in a straight line as if pushed; or it moves crosswise to the visible wind signs."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The hat moves when the gust arrives and eases when the wind eases.",
+      "fail": "It lifts with nothing else stirring; or it keeps travelling steadily while everything else is still; or it moves before any other sign of wind."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It lifts a little and comes down, tumbling along the ground rather than soaring.",
+      "fail": "It soars high and keeps rising; or hangs in the air; or rolls along without touching the ground."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The brim flexes and flaps in the wind.",
+      "fail": "It is rigid as a plate; or folds like cloth; or turns inside out and stays so."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One hat keeps its number and passes through nothing.",
+      "fail": "It duplicates; or passes through the bench; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hat's colour and the seafront stay the same.",
+      "fail": "The hat changes colour; or the bench changes; or the seafront rearranges."
+    }
+  ]
+}

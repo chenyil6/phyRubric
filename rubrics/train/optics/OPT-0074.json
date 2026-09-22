@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0074",
+  "caption": "Breath is blown on a polished silver tray that reflects the room, and the reflected image fogs over and returns.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A polished silver tray reflects the room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Breath is blown on it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The reflected image fogs over."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It returns as the fog clears."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The breath comes first, then the fog, then the clearing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection blurs under the breath and comes back as the fog clears.",
+      "fail": "It stays sharp under the breath; or fogs before the breath; or never clears."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The tray itself does not change; only its surface fogs.",
+      "fail": "The tray changes colour; or bends; or the fog is a different colour from a misted surface."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The fog forms quickly and clears gradually.",
+      "fail": "It clears instantly; or forms slowly after the breath; or flickers."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The reflection that returns is the same room, mirrored.",
+      "fail": "A different scene appears; or the reflection is upright where it was inverted; or objects appear that are not in the room."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tray and one reflection.",
+      "fail": "The tray duplicates or vanishes; or the reflection becomes solid; or the breath is visible as an object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room and the tray's rim stay the same.",
+      "fail": "The room rearranges; or the rim changes; or the table changes."
+    }
+  ],
+  "note": "The breath is the trigger; the person is not judged."
+}

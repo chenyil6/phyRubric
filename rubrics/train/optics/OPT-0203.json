@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0203",
+  "caption": "Two shades of hair dye are squeezed into a bowl and whisked together, and the mixture becomes one uniform colour.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two shades of hair dye are squeezed into a bowl."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They are whisked together."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mixture becomes one uniform colour."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Streaks of the two shades blend with each stroke."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The single blended colour spreads from the whisk through the dye stroke by stroke until the bowl is even and never gathers back; coloured areas stay coloured.",
+      "fail": "The dye returns to its original colour where it was single blended colour; or the single blended colour gathers back into the whisk; or the single blended colour appears before the whisk arrives."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The result is single blended colour, and un-reached dye keeps its original colour.",
+      "fail": "The dye turns a colour other than single blended colour; or the un-reached dye changes; or the single blended colour is darker than the whisk itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The dye behaves as it should: streaks and swirls where stirred or spread, settling where it flows.",
+      "fail": "The dye is rigid and unmarked; or it flows like water when it is a paste; or it bounces like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The dye moves only where stirred or where the single blended colour flows.",
+      "fail": "The dye swirls by itself; or the single blended colour spreads faster than stirring or flow carries it; or the container moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The amount of dye stays the same and the container keeps its shape.",
+      "fail": "The container fills or empties on its own; or a second container appears; or the whisk passes through the container."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The container and the background stay the same.",
+      "fail": "The container changes colour; or the background rearranges; or the tool changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

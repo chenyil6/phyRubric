@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0171",
+  "caption": "A hot air balloon's burner is fired, and the balloon lifts off the field.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hot air balloon stands on a field with its envelope up."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The burner is fired: a flame roars into the envelope's mouth."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The balloon lifts off the field."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The balloon rises slowly."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The firing comes first and the lift follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The balloon rises after the burner fires and not before; it does not lift with the burner dark.",
+      "fail": "The balloon lifts off before the burner is fired; or the burner fires and the basket stays settled on the ground to the end of the clip; or the balloon rises while the burner is plainly off; or the balloon drops at the moment the burner fires."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The balloon rises upward with the basket hanging below the envelope, and it drifts sideways only with the wind.",
+      "fail": "The balloon rises basket first with the envelope below; or the balloon shoots sideways across the field with no sign of wind; or the envelope hangs below the basket; or the balloon sinks while the burner roars on."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The lift builds from rest without jumps and the balloon keeps rising or levels off.",
+      "fail": "The balloon jumps up in steps between frames; or stops dead in mid-air and starts again from rest; or rises and falls in turn with the burner steady; or spins fast about its own axis."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The envelope stays a taut fabric bag that rounds out and ripples, and the ropes stay taut between envelope and basket.",
+      "fail": "The envelope stays a rigid shell; or the ropes go slack while the basket hangs from them; or the envelope collapses as the balloon rises; or the ropes stretch like elastic."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon with one envelope and one basket; the balloon keeps its parts and passes through nothing.",
+      "fail": "The basket detaches and the balloon rises alone; or a second balloon appears; or the envelope vanishes; or the balloon passes through a tree or a mast."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The envelope's panels, the basket and the field stay the same.",
+      "fail": "The envelope's panel colours change; or the basket changes shape; or the field's markings change."
+    }
+  ],
+  "note": "The burner's roar is sound and is not judged; the firing is read from the flame. The crew are not judged."
+}

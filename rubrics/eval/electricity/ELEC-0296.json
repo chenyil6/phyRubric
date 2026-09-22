@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0296",
+  "caption": "A small ball of aluminium foil hangs on a thread, and it swings toward a plastic rod that has been rubbed on wool as the rod is brought near.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A small ball of aluminium foil hangs on a thread."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A plastic rod is rubbed on wool."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The rod is brought near the ball."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The ball swings toward the rod."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The thread stays taut with the ball at its end."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rub comes first, then the approach, then the swing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The ball hangs straight until the rod is close, leans toward it while it is near and hangs straight again when the rod is removed.",
+      "fail": "The ball swings before the rod is brought near; or stays leaning after the rod has been taken well away; or swings to and fro with the rod held still; or the ball moves while the rod is far off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lean is toward the rod: the ball moves to the rod's side of vertical, along the line from ball to rod.",
+      "fail": "The ball leans away from the rod; or moves at right angles to the line to the rod; or rises straight up; or the rod is drawn to the ball."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The ball hangs from the thread, which stays taut from anchor to ball; the ball does not rise above its anchor.",
+      "fail": "The thread goes slack while the ball hangs in the air; or the ball rises above its anchor; or the ball floats with the thread curving; or the ball hangs at an angle with no rod near."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The thread is a limp line that stays straight under the ball's weight; the ball is a crumpled foil sphere that keeps its shape.",
+      "fail": "The thread stands rigid like a rod; or stretches like elastic; or the ball flattens or unfolds; or the ball melts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball on one thread and one rod; the ball stays on the thread; nothing appears, vanishes or passes into the rod.",
+      "fail": "The ball detaches from the thread and hangs in the air; or a second ball appears; or the ball sinks into the rod; or the thread splits."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The foil's finish, the thread and the rod's colour stay the same.",
+      "fail": "The ball changes colour or size; or the thread changes colour or length; or the rod changes colour."
+    }
+  ],
+  "note": "Who holds the rod is not judged."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0186",
+  "caption": "A flag hanging limp from a pole outside a school lifts and streams out as a strong wind picks up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flag hangs limp from a pole outside a school."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The wind picks up."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flag lifts and streams out."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wind comes first and the flag responds after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The flag lifts as the wind picks up and points the same way as other things blown.",
+      "fail": "It streams while trees and grass are still; or points opposite to other wind signs; or lifts before any sign of wind."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "It stretches out downwind and ripples along its length.",
+      "fail": "It is rigid like a board; or stays limp while strong wind signs are visible; or stretches longer."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It hangs below its clips when limp and lifts along the wind when blown.",
+      "fail": "It rises above the pole top; or floats off; or hangs out sideways with no wind."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "It streams out on the downwind side.",
+      "fail": "It flips between sides randomly; or wraps around the pole and stays; or streams into the wind."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One flag on one pole keeps its number.",
+      "fail": "The flag duplicates; or passes through the pole; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The flag's colours, the pole and the school stay the same.",
+      "fail": "The flag changes colours; or the pole changes; or the school rearranges."
+    }
+  ]
+}

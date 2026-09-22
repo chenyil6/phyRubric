@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0144",
+  "caption": "A magnet is slid along the underside of a thin wooden table, and a toy car with a metal base on top of the table follows it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy car sits on top of a thin wooden table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnet is slid along the underside of the table."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The car follows the magnet across the table top."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The car has a metal base: a metal underside or chassis is stated or shown."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The magnet's movement comes first and the car follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The car moves only where and when the magnet below it moves, staying above it, and stops when the magnet stops.",
+      "fail": "The car moves in a different direction from the magnet beneath; or keeps rolling after the magnet has stopped; or stays still while the magnet passes under it; or the car sets off before the magnet moves."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The table top stays between magnet and car: the magnet stays below the table and the car on its surface.",
+      "fail": "The magnet passes up through the table top; or the car sinks into the table; or the car and magnet are seen touching with no wood between; or the car passes through the table's edge."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The car rides along on its wheels on the table's surface, following the magnet's path.",
+      "fail": "The car lifts off the table; or slides sideways with its wheels still while its wheels face along the path; or flips over as it follows; or the car jumps ahead of the magnet."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The table stays where it is; other items on the table do not move as the magnet passes beneath.",
+      "fail": "The table slides or rocks; or other items on the table shift as the magnet passes; or the car spins in place with the magnet still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car, one magnet, one table; nothing appears, vanishes or merges.",
+      "fail": "A second car or magnet appears; or the car vanishes; or the car changes into another object; or the table changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour, the table's grain and the surroundings stay the same.",
+      "fail": "The car changes colour; or the table changes colour or pattern; or the surroundings rearrange."
+    }
+  ],
+  "note": "The magnet is mostly hidden beneath the table; P1 is judged on the moments when both magnet and car are in view. The car moving while no magnet is in view is not a violation."
+}

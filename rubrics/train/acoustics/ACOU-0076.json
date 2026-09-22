@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0076",
+  "caption": "The figurine on a wind-up music box turns slower and slower as the spring runs down, and finally stops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wind-up music box with a figurine on it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The figurine turns."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It slows down."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It stops."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The slowing is gradual over the clip."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Turning, slowing and stopping happen in that order."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The turning only slows, never speeds up, eases to a stop and then stays still.",
+      "fail": "The figurine speeds up; or stops and starts again; or reverses direction; or jerks forward in steps."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The figurine turns about a fixed axis on the box, and the box stays still.",
+      "fail": "The figurine drifts across the box top; or the box slides; or the figurine's base separates from the box."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The figurine stands upright on its stand and the box rests on its surface.",
+      "fail": "The figurine floats up; or leans and hangs with nothing holding it; or the box lifts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The figurine is rigid and holds its pose while turning.",
+      "fail": "The figurine's arms or skirt change pose while turning; or it stretches; or the box lid bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One figurine, one box; nothing passes into the box.",
+      "fail": "A second figurine appears; or the figurine vanishes; or sinks into the box; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The figurine's colour and the box's decoration stay the same.",
+      "fail": "The figurine changes colour; or the box's pattern changes; or the box changes colour."
+    }
+  ],
+  "note": "The spring and mechanism are inside the box and need not be visible; the slowing is judged on the figurine alone."
+}

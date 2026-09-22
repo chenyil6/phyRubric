@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0290",
+  "caption": "A ring magnet is dropped down a pencil standing upright toward another ring magnet at the base with like poles facing, and it stops and floats a little above the lower one.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pencil stands upright with a ring magnet at its base."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A second ring magnet is dropped down the pencil."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The falling ring stops above the lower one."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The upper ring floats with a gap above the lower one."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The falling ring is threaded onto the pencil."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is drop, slow, hover."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The upper ring falls down the pencil, slows as it nears the lower ring and comes to hover with a visible gap above it; it does not land on it.",
+      "fail": "The upper ring lands on the lower ring and rests there; or the upper ring rises back up the pencil; or it hovers high up the pencil far from the lower ring; or the lower ring rises to meet it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The hovering ring bobs and settles at a steady height with the pencil through its centre; it stays there while nothing touches it.",
+      "fail": "The upper ring passes through the gap and the lower ring; or flies off the pencil; or its bobbing grows until it flies up; or it settles and then drops onto the lower ring with nothing touching it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The upper ring travels straight down along the pencil, staying threaded on it.",
+      "fail": "The ring leaves the pencil and falls beside it; or tilts and jams then continues through the pencil; or spins off sideways; or moves upward at first."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The pencil stays upright and still; the lower ring stays at the base; the table does not move.",
+      "fail": "The pencil topples or slides; or the lower ring slides up or off; or the table shifts; or the pencil spins."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "Two rings threaded on one pencil; the rings stay outside the pencil and each other; the pencil stays solid.",
+      "fail": "A ring passes through the pencil's side; or the rings merge into one; or a third ring appears; or a ring passes through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rings' colours, the pencil and the table stay the same.",
+      "fail": "A ring changes colour or size; or the pencil changes colour or length; or the table changes."
+    }
+  ]
+}

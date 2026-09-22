@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0091",
+  "caption": "A wooden spoon is balanced across the rim of a pot and a heavy ladle set on one end, and the spoon tips and the ladle falls into the pot.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wooden spoon is balanced across the rim of a pot."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A ladle is set on one end of the spoon."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The spoon tips."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The ladle falls into the pot."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The ladle is set on first and the tip follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The weighted end goes down as soon as the ladle is set on it.",
+      "fail": "The spoon stays level with the ladle on one end; or it tips before the ladle touches it; or the empty end goes down."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The spoon tips off the rim and the ladle drops into the pot and stays there.",
+      "fail": "The ladle hangs in the air; or rises; or lands and balances on the rim."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The spoon pivots on the rim, the ladle slides toward the low end and falls in, and the spoon may follow.",
+      "fail": "The spoon slides off along the rim without tipping; or the ladle slides uphill; or the spoon flips over and lands back balanced."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The spoon, the ladle and the pot stay rigid and clatter.",
+      "fail": "The spoon bends like rubber; or the pot's rim dents; or the ladle bounces high out of the pot."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One spoon, one ladle and one pot keep their number.",
+      "fail": "The ladle vanishes or a second appears; or the spoon passes through the pot; or the pot turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The spoon, the ladle and the pot stay the same.",
+      "fail": "The spoon changes colour; or the ladle changes size; or the pot changes between frames."
+    }
+  ]
+}

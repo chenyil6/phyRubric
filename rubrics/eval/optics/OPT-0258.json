@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0258",
+  "caption": "A cat sits on a sunny fence, jumps down, and its shadow leaves the fence and lands with it on the ground.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cat sits on a sunny fence."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It jumps down."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its shadow leaves the fence and lands with it on the ground."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow separates during the jump and rejoins at the paws on landing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow stays on the surfaces below the cat, separates during the jump, and rejoins at the paws on landing.",
+      "fail": "It rises with the cat; or stays attached in mid-air; or fails to rejoin on landing."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The cat comes down to the ground and stays.",
+      "fail": "It hangs in the air; or rises; or bounces back onto the fence."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the cat's outline.",
+      "fail": "It is a different shape; or splits; or vanishes in mid-jump."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side away from the sun.",
+      "fail": "It lies toward the sun; or switches sides; or it is missing in sunlight."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cat and one shadow.",
+      "fail": "A second cat or shadow appears; or the cat vanishes; or the shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cat's markings and the fence stay the same, and the shadow stays dark.",
+      "fail": "The markings change; or the shadow turns coloured; or the fence changes."
+    }
+  ],
+  "note": "Self-driven animal: where it goes is not judged. Only the shadow's relation to it is."
+}

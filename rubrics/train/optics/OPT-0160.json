@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0160",
+  "caption": "A hand is cupped over the front of a flashlight, and the beam is blocked and the room goes dark.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flashlight is on."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A hand is cupped over its front."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The beam is blocked and the room goes dark."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The fingers glow red at the edges."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hand comes first and the dark follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light disappears the instant the hand covers the lens and would return when the hand is removed.",
+      "fail": "The room stays lit with the lens covered; or goes dark before the hand arrives; or stays dark after the hand is removed."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The change is at the moment of covering and holds while covered.",
+      "fail": "The room fades slowly; or flickers; or brightens while covered."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The fingers glow red where the light passes through them.",
+      "fail": "They glow white; or do not glow at all; or the glow is away from the lens."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The hand moves only as the person moves it.",
+      "fail": "It floats; or passes through the flashlight; or the flashlight moves by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One flashlight and one hand.",
+      "fail": "The flashlight duplicates; or a second hand appears; or the hand passes through the lens."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room stays the same.",
+      "fail": "Furniture rearranges; or the walls change; or the flashlight changes."
+    }
+  ],
+  "note": "The hand is the object blocking the beam; the person is not judged."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0257",
+  "caption": "A pot of boiling water is flung into the air on a day far below freezing, and the spray turns into a cloud of ice crystals and vapour that drifts away instead of falling as water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot of boiling water is flung into the air."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The arc of water breaks into a white cloud."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cloud hangs and drifts."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Little or no liquid water reaches the ground."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The setting reads as far below freezing: snow, ice or heavy winter clothing."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The fling comes first and the cloud follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The water leaves the pot as an arc and breaks into a cloud of fine crystals and vapour rather than staying a stream of drops.",
+      "fail": "The arc stays a solid sheet of water all the way to the ground; or the water lands as a puddle and stays liquid; or the cloud sets into a single sheet of ice in the air; or the water freezes into one solid lump in flight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The cloud drifts and spreads with the air rather than falling as water, and what does fall settles as frost or snow.",
+      "fail": "The cloud falls straight down as a stream of water and splashes; or the cloud rises steadily and keeps climbing out of view; or the cloud hangs as a fixed shape without drifting; or water rises from the ground back into the cloud."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The cloud only spreads and thins and does not gather back into a stream.",
+      "fail": "The cloud gathers back into a stream and returns to the pot; or the cloud thickens steadily after the fling; or the crystals melt into liquid in the freezing air and pool; or the cloud spreads and then draws in again."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The water leaves the pot along the arm's swing, follows an arc, and the cloud carries on in that direction as it spreads.",
+      "fail": "The water leaves the pot against the swing; or the cloud stops dead at the top of the arc; or the cloud reverses and returns along the arc; or the arc bends sideways with no sign of wind."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pot of water; the cloud is the water that was flung and none appears from nowhere.",
+      "fail": "A second cloud appears away from the arc; or the cloud vanishes at a stroke while still thick; or the pot refills itself; or water appears in the air far from the arc."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the clothing and the snowy surroundings stay the same.",
+      "fail": "The pot changes colour; or the clothing changes colour; or the ground's snow changes texture between frames."
+    }
+  ],
+  "note": "Whoever flings the pot is kept because the throw is the caption's action; their form is not judged."
+}

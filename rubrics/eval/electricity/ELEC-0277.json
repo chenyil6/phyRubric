@@ -1,0 +1,88 @@
+{
+  "id": "ELEC-0277",
+  "caption": "A power saw cuts into the roof of a wrecked car, and sparks spray from the blade across the wet road.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wrecked car on a wet road."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A power saw cuts into the car's roof."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Sparks spray from the blade."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The sparks fly across the wet road."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sparks come from where the blade meets the roof."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The cut comes first and the sparks follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sparks arc downward as they fly and go dark on or before reaching the road; none rise or hover.",
+      "fail": "Sparks rise steadily and gather above the car; or hang in the air; or lie on the road glowing like lamps for the rest of the clip; or the spray climbs without arcing down."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Sparks appear only while the blade is in the metal and stop when it lifts; each spark is gone within a short flight.",
+      "fail": "Sparks stream while the blade is clear of the roof; or continue after the saw has been withdrawn; or sparks flow back into the cut; or a spark stays lit at one spot."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Sparks are transient and none accumulate; the saw, the car and the road keep their number and shape apart from the cut.",
+      "fail": "Sparks persist as fixed bright dots; or a glowing pile builds on the road; or sparks appear from a point away from the blade; or a second saw appears."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The spray leaves the cut along the direction the blade's rim is moving, in one fan.",
+      "fail": "Sparks radiate equally in all directions from the cut; or the spray points opposite to the rim's motion; or the spray's direction jumps about while the saw is steady."
+    },
+    {
+      "id": "P5",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The wet road mirrors the spray briefly beneath it.",
+      "fail": "The sparks fly over the wet road while it stays as dark as before; or a reflection lies where no spark is above it; or the reflection stays lit after the sparks are gone."
+    },
+    {
+      "id": "P6",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The blade cuts into the roof along a narrow line; the saw and the car keep their shape; the blade passes through nothing else.",
+      "fail": "The blade passes through the roof leaving it unmarked; or the saw sinks into the car; or the car's roof bends like cloth; or the blade bends like rubber."
+    },
+    {
+      "id": "P7",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour away from the cut, the saw and the road stay the same.",
+      "fail": "The car changes colour; or the saw changes colour; or the road markings change."
+    }
+  ],
+  "note": "Who holds the saw is not judged."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0029",
+  "caption": "A water balloon is dropped from a second-floor balcony, and it falls straight down and bursts on the pavement.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A water balloon is dropped from a second-floor balcony."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It falls straight down."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It bursts on the pavement."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The balcony and the pavement below are both visible."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The release comes first, then the fall, then the burst."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The balloon starts to fall at the release, drops along a line below the balcony, and falls quicker the further it goes.",
+      "fail": "The balloon drifts sideways out from under the balcony; or it slows as it falls; or it hangs in the air below the balcony."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "It bursts where it meets the pavement and not before; the water spreads out on the ground and stays there.",
+      "fail": "The balloon bursts in mid-air before touching the pavement; or it hits the pavement and bounces away still whole; or the water lands and leaves the pavement dry."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "One balloon goes down and the water on the ground is the water it carried.",
+      "fail": "A second balloon appears during the fall; or the balloon vanishes before reaching the pavement; or a wet patch spreads on the ground before the balloon lands."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The balloon bulges and wobbles as a bag of liquid on the way down and its skin tears open on impact.",
+      "fail": "The balloon stays a rigid ball through the fall and the impact; or it squashes and springs back whole off the pavement; or it shrinks slowly as if leaking air instead of bursting."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The balloon, the balcony and the pavement stay solid.",
+      "fail": "The balloon passes through the pavement; or it passes through the balcony rail on the way down; or it merges into the wall of the building."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour, the balcony and the pavement stay the same.",
+      "fail": "The balloon changes colour during the fall; or the balcony railing changes pattern between frames; or the pavement's paving changes layout."
+    }
+  ]
+}

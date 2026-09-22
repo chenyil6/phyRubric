@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0267",
+  "caption": "A pot of jam boils on a stove, and the surface foams up and bubbles thickly.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot of jam boils on a stove."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The surface foams up."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Thick bubbles rise and burst slowly."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The foam climbs while the heat is on."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The foam sinks back when the pot is pulled off the heat."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The foam only rises while the pot stays on the heat and sinks back only when it is pulled off.",
+      "fail": "The foam sinks back while the pot sits on the burner with nothing changed; or the foam rises and falls in turn on the heat; or the foam stays up after the pot has been pulled off and left standing; or the foam rises before any bubble appears."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The jam is a thick liquid whose bubbles push up slowly, hold their domes for a moment and burst heavily, leaving the surface mounded.",
+      "fail": "The jam bubbles as thin and fast as water; or the surface holds a fixed shape while bubbles burst through it; or the jam sets solid in the pot; or the foam stands as rigid spikes that keep their shape when the pot is moved."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bubbles rise from below to the surface and burst there, and the jam stays in the pot unless it climbs over the rim.",
+      "fail": "Bubbles sink from the surface toward the pot's floor; or hang still in the jam; or the jam climbs the pot's outside and goes in over the rim; or jam lifts off the surface and hangs above it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Foam high in the pot means the jam below has risen: the level and the foam go up together.",
+      "fail": "The foam reaches the rim while the jam below is calm and far from full; or the jam's level drops while the foam climbs; or the foam climbs while the surface below shows no bubbles at all."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pot of jam; the jam stays in the pot except where it spills over the rim.",
+      "fail": "Jam passes through the pot's wall; or the level jumps up with nothing added; or a second pot appears; or the pot changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the hob and the jam's colour stay the same.",
+      "fail": "The pot changes colour; or the jam changes colour; or the hob's knobs move by themselves."
+    }
+  ]
+}

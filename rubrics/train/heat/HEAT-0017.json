@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0017",
+  "caption": "Warm chocolate sauce is poured over a scoop of ice cream, and the sauce firms into a crackly shell on the cold surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A scoop of ice cream."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Chocolate sauce is poured over the scoop."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sauce flows down the scoop."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The sauce firms into a shell on the ice cream."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The set shell looks dull rather than glossy."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is pour, flow, set."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The sauce's change runs one way where it lies on the cold scoop: it slows, stops and stays set.",
+      "fail": "A set patch of shell turns runny again and flows on with no fresh sauce over it; or the shell draws back up the scoop; or the shell alternates between glossy and runny and dull and set."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The sauce arrives as a thin liquid that flows and coats, and where it sets it is a rigid shell that cracks rather than flows.",
+      "fail": "The set shell sags or drips as the scoop is moved; or the sauce sets as a soft skin that stretches; or the shell crumbles to dust; or the sauce stands as a rigid ridge before it has stopped flowing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The sauce runs downward over the scoop's sides and any excess falls to the dish.",
+      "fail": "The sauce climbs the scoop; or a run travels up over the scoop's top; or a drip leaves the scoop and floats; or sauce gathers under the scoop and rises around it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The ice cream shows the sauce arriving: the surface it covers goes dark, and the scoop goes wet and glossy where the warm sauce lies.",
+      "fail": "Sauce runs over the scoop and the surface under it stays pale and untouched; or the shell forms on a part of the scoop no sauce reached; or the scoop stays sharp-edged and dry where sauce has pooled on it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One scoop and one stream of sauce; the sauce goes from the jug to the scoop to the dish and nowhere else.",
+      "fail": "Sauce appears on the dish with none running off the scoop; or the scoop grows; or a second scoop appears; or the sauce passes through the scoop and out below it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bare ice cream's colour, the dish and the table stay the same.",
+      "fail": "The bare ice cream changes colour; or the dish changes pattern; or items on the table rearrange."
+    }
+  ]
+}

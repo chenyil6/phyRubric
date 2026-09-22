@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0001",
+  "caption": "The wall switch in a dark hallway is flipped up, and the ceiling light comes on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wall switch in a hallway; the hallway is dark at the start."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The switch is flipped: it moves to its other position."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ceiling light comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The light is a ceiling fixture."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, flip, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light comes on at the moment the switch moves, and only then.",
+      "fail": "The switch flips and the light stays off; or the light comes on before the switch is touched; or it comes on well after the flip with nothing else happening; or it comes on while the switch is untouched."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the light stays on steadily and the hallway stays lit for the rest of the clip.",
+      "fail": "The light goes off again by itself; or flickers on and off after the flip; or dims back to dark; or the switch moves back by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "When the light is on, the hallway is lit from the ceiling fixture: walls and floor below it are brighter than before, with shadows pointing away from it.",
+      "fail": "The fixture glows but the hallway stays dark; or the hallway brightens while the fixture stays dark; or the light comes from a place other than the fixture."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing else in the hallway moves or changes when the switch is flipped.",
+      "fail": "Doors open, objects move or the hallway layout changes at the flip; or the switch plate moves along the wall."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One switch and one ceiling light; the switch stays on the wall and the fixture on the ceiling.",
+      "fail": "A second switch or light appears; or the fixture vanishes or moves across the ceiling; or the switch sinks into the wall; or the hand passes through the switch."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wall colour, fixture design and hallway contents stay the same apart from the lighting.",
+      "fail": "The wall changes colour rather than brightness; or the fixture changes shape; or pictures on the wall change."
+    }
+  ]
+}

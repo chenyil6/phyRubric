@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0209",
+  "caption": "A spoonful of beet juice is dropped into a bowl of white yogurt and folded in, and the yogurt turns pink with darker streaks that fade as it is mixed.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bowl of white yogurt is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A spoonful of beet juice is dropped in."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It is folded in."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The yogurt turns pink with darker streaks."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The streaks fade as it is mixed."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The pink spreads from the spoon through the yogurt as the spoon folds it, streaks evening out and never gathers back; coloured areas stay coloured.",
+      "fail": "The yogurt returns to its original colour where it was pink; or the pink gathers back into the spoon; or the pink appears before the spoon arrives."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The result is pink, and un-reached yogurt keeps its original colour.",
+      "fail": "The yogurt turns a colour other than pink; or the un-reached yogurt changes; or the pink is darker than the spoon itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The yogurt behaves as it should: streaks and swirls where stirred or spread, settling where it flows.",
+      "fail": "The yogurt is rigid and unmarked; or it flows like water when it is a paste; or it bounces like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The yogurt moves only where stirred or where the pink flows.",
+      "fail": "The yogurt swirls by itself; or the pink spreads faster than stirring or flow carries it; or the container moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The amount of yogurt stays the same and the container keeps its shape.",
+      "fail": "The container fills or empties on its own; or a second container appears; or the spoon passes through the container."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The container and the background stay the same.",
+      "fail": "The container changes colour; or the background rearranges; or the tool changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

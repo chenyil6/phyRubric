@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0056",
+  "caption": "Boiling water is poured from a kettle into a mug, and steam rises from the mug as it fills.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A kettle pours water into a mug."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The mug fills."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Steam rises from the mug."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Steam also rises from the falling stream."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The steam grows as the mug fills."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the mug's steam follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The water falls downward from the spout into the mug while the steam rises upward from both the stream and the mug.",
+      "fail": "The water travels upward from the spout; or the stream bends up into the air; or the steam sinks over the mug's rim and pools on the table; or the steam pours downward from the spout."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The mug's level only rises while the pour lasts and the steam keeps leaving upward; puffs that have left keep going.",
+      "fail": "The mug's level drops while water still pours in; or the steam runs back into the mug; or a puff retreats to the surface; or water climbs back up the stream into the kettle."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The pour has an effect in the mug: the surface churns and rises where the stream lands and the mug's inside wall wets.",
+      "fail": "The stream enters and the surface stays glassy with the level unchanged; or the level rises with no stream reaching the mug; or the mug's inside stays dry above the water."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is a thin liquid that falls as a continuous stream, splashes and finds its level; the steam is a soft cloud that spreads and fades.",
+      "fail": "The stream falls as a rigid rod; or the water stands in a heap above the mug's rim; or the steam holds a fixed rigid shape; or the stream breaks into solid lumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One kettle and one mug; the water goes from kettle to mug and nowhere else.",
+      "fail": "Water appears in the mug with no stream reaching it; or the stream passes through the mug's wall; or the mug's level jumps; or a second mug appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The kettle, the mug's pattern and the counter stay the same.",
+      "fail": "The kettle changes colour; or the mug's pattern changes; or items on the counter rearrange."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0169",
+  "caption": "Seen from inside a dim shop, the open doorway to the sunlit street stands out as a bright rectangle and the floor near the door is lit.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "The view is from inside a dim shop."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The open doorway to the sunlit street stands out as a bright rectangle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The floor near the door is lit."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "It grows darker deeper into the shop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The interior is dim relative to the doorway, the floor near the door is lit, and it grows darker deeper in.",
+      "fail": "The back of the shop is as bright as the door; or the floor by the door is dark; or the light comes from the back."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The interior's colours are the same, only dimmer.",
+      "fail": "Objects change colour with depth; or the doorway is a colour; or the floor changes colour."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lit area stays put with the door and sun fixed.",
+      "fail": "It wanders; or flickers; or the door moves by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The bright rectangle is the doorway's shape.",
+      "fail": "It is round; or splits; or is larger than the door."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One doorway.",
+      "fail": "A second doorway appears; or it vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shop stays the same.",
+      "fail": "Shelves rearrange; or the door changes; or the street changes."
+    }
+  ]
+}

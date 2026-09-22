@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0294",
+  "caption": "Candles are lit beneath a wooden Christmas pyramid, and its fan blades start turning and the figures rotate.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wooden Christmas pyramid stands with candles beneath its fan blades."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The candles are lit."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The fan blades start turning."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The figures on the pyramid rotate."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The blades and figures are still before the candles are lit."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The lighting comes first and the turning follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The blades and figures stay still until the candles are lit, turn while they burn and slow to a stop when they are put out.",
+      "fail": "The blades turn before the candles are lit; or they keep turning at the same rate after the candles are out; or they turn while the candles stand unlit; or they stop and start again while the candles burn steadily."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The rising air from the flames turns the blades and the figures turn with them, on the same shaft.",
+      "fail": "The figures turn while the blades stand still; or the blades turn while the figures stay fixed; or the blades turn while the candles are plainly out; or the blades turn faster as the candles are blown out."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The blades turn about the pyramid's upright shaft in one direction and the tiers turn with them.",
+      "fail": "The blades reverse direction with nothing changing; or the blades wobble off the shaft; or a tier turns the opposite way to the blades on the same shaft; or the whole pyramid slides across the table as it turns."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flames point upward at the blades and the melted wax runs down the candles.",
+      "fail": "A flame points downward; or a flame is drawn up into the blades and burns above them; or wax climbs a candle's side; or a flame hangs below its candle."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pyramid with its blades, tiers and figures; the figures keep their number and stay on their tiers.",
+      "fail": "A figure vanishes; or a new figure appears on a tier; or a blade vanishes; or the pyramid's shaft passes through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pyramid's wood, the figures' paint and the room stay the same.",
+      "fail": "The wood changes colour; or a figure's paint changes; or items in the room rearrange."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0146",
+  "caption": "A spotlight follows a remote-controlled car across a dark stage, and the circle of light moves with it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A remote-controlled car crosses a dark stage."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A spotlight follows it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The circle of light moves with the car."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rest of the stage stays dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lit circle stays centred on the car and the rest of the stage stays dark.",
+      "fail": "The circle lags or leads the car; or the whole stage is lit; or the circle is elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The circle moves only as the car and spotlight move.",
+      "fail": "It moves with the car stopped; or it jumps; or it stays put while the car drives."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The car's shadow falls on the floor away from the spotlight.",
+      "fail": "The shadow points toward the spotlight; or there is no shadow in the beam; or shadows fall in several directions under one light."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The circle is one round patch with a soft edge.",
+      "fail": "It splits; or is a sharp square; or it floods the stage."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and one circle of light.",
+      "fail": "A second car appears; or two circles under one spotlight; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car and the stage stay the same.",
+      "fail": "The car changes colour; or the stage changes; or the light changes colour."
+    }
+  ],
+  "note": "Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

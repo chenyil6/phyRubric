@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0027",
+  "caption": "The curtains of a sunny window are pulled open, and the shadow of the window frame appears on the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "The curtains of a sunny window are pulled open."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The shadow of the window frame appears on the floor."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The bars of the frame's shadow match the frame's layout."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The curtains open first and the pattern appears with them."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "A bright patch with the dark bars of the frame appears on the floor as the curtains open, on the side away from the window.",
+      "fail": "The pattern is there with the curtains shut; or it appears on the window side; or the curtains open and no pattern appears in sunlight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The bars match the frame's layout.",
+      "fail": "The bars are a different pattern from the frame; or there are more bars than the frame has; or the pattern is a solid shape."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The pattern does not move on its own.",
+      "fail": "It slides across the floor with the curtains still; or it appears and vanishes with no curtain movement."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The patch widens as the curtains open and would narrow as they close.",
+      "fail": "It narrows as the curtains open; or it is full width before the curtains move; or it flickers."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One window and one pattern of it.",
+      "fail": "A second window's pattern appears; or the frame vanishes; or the pattern becomes solid; or the curtains pass through the frame."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The curtains, the frame and the floor stay the same, and the bars stay dark.",
+      "fail": "The curtains change colour; or the bars turn coloured; or the floor changes."
+    }
+  ]
+}

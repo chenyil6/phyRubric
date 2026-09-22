@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0293",
+  "caption": "A silk scarf draped over the back of a chair slides off and pools in soft folds on the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A silk scarf is draped over the back of a chair."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It slides off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It pools in soft folds on the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The slide comes first and the pooling follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It slips down following the chair's shape, falls, and lands.",
+      "fail": "It floats; or rises; or stays in the air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "It falls as a limp sheet and lands in loose folds.",
+      "fail": "It is rigid; or lands flat as a square; or tears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "It settles and stays.",
+      "fail": "It rises again; or slides on; or re-drapes itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "It lies on the floor, not through it.",
+      "fail": "It passes through the floor; or through the chair; or the chair passes through it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One scarf keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The scarf's colour and the chair stay the same.",
+      "fail": "The scarf changes colour; or the chair changes; or the room rearranges."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0177",
+  "caption": "An underwater torch is switched on in murky water, and a cone of lit particles appears in front of it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An underwater torch is in murky water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A cone of lit particles appears in front of it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The water behind stays dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lit cone points where the torch points, fades with distance, and moves with the torch.",
+      "fail": "The cone points elsewhere; or is even to its end; or stays put while the torch moves."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The cone appears with the switch and moves only with the torch.",
+      "fail": "It is there with the torch off; or drifts with the torch still; or flickers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The cone is one soft-edged beam of lit particles.",
+      "fail": "It is a sharp rod; or splits; or floods the whole water."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The particles drift slowly in the water.",
+      "fail": "They are rigid and still; or shoot about; or the water is clear with a visible beam."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One torch and one cone.",
+      "fail": "A second cone appears; or the torch vanishes; or the beam becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The water's colour and the torch stay the same.",
+      "fail": "The water changes colour; or the torch changes; or the beam changes colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged. Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

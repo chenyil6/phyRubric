@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0090",
+  "caption": "A compact mirror is opened and angled toward a ring on a table, and the ring appears in the little mirror.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A compact mirror is opened."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is angled toward a ring on a table."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ring appears in the little mirror."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The image is mirrored."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The ring slides out of view when the angle changes."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The ring comes into view when the mirror is angled toward it and slides out of view when the angle changes.",
+      "fail": "The ring is in the mirror with the mirror facing away; or the mirror is angled at it and shows nothing; or the image stays fixed as the angle changes."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The image is the ring, mirrored.",
+      "fail": "It is a different object; or not mirrored; or larger than the ring."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The ring stays put and the image changes only as the mirror moves.",
+      "fail": "The ring slides; or the image shifts with the mirror still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mirror is flat and rigid: the image is undistorted.",
+      "fail": "It ripples; or warps; or bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mirror and one ring.",
+      "fail": "The ring duplicates; or the mirror vanishes; or the image becomes solid; or the hand passes through the mirror."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ring, the mirror and the table stay the same.",
+      "fail": "The ring changes colour; or the compact changes; or the table changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

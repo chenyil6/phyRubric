@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0217",
+  "caption": "The drawstring of a cloth bag is pulled, and the bag's opening gathers shut.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cloth bag has a drawstring."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The drawstring is pulled."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The opening gathers shut."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pull comes first and the closing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The opening closes only as the string tightens.",
+      "fail": "It closes before the pull; or the string is pulled and the opening stays open; or it closes with no string."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The fabric bunches into gathers as the string passes through it, and the bag keeps its size.",
+      "fail": "The fabric shrinks smoothly with no gathers; or the bag grows; or the opening seals like a zip."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The string runs through its channel, not through the fabric.",
+      "fail": "The string passes through the cloth; or the hands pass through the bag; or the string passes through itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The string is flexible and the gathers are soft.",
+      "fail": "The string is rigid; or the fabric is rigid; or the string stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bag keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag's colour and the background stay the same.",
+      "fail": "The bag changes colour; or the string changes; or the background rearranges."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged."
+}

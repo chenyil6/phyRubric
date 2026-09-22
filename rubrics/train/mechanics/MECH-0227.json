@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0227",
+  "caption": "An upturned cup is placed over a coin on a table, slid to the side, and lifted to reveal the coin.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A coin lies on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "An upturned cup is placed over it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cup is slid to the side."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The cup is lifted and the coin is revealed."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cover comes first, then the slide, then the lift."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The coin is found where the cup was slid to, having moved with it.",
+      "fail": "The coin is left behind at the first spot while the cup slides away; or the coin vanishes; or two coins are revealed."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The coin does not show through the cup, and the cup does not pass through the table.",
+      "fail": "The coin shows through the cup; or the cup sinks into the table; or the coin passes through the cup."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The coin and the cup move only by the hand.",
+      "fail": "The coin slides by itself; or the cup moves alone; or the coin jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The coin stays flat on the table.",
+      "fail": "The coin floats; or stands on edge and stays; or rises up into the cup."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cup and one coin keep their number.",
+      "fail": "The cup duplicates; or the coin turns into another object; or the cup vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cup, the coin and the table stay the same.",
+      "fail": "The cup changes colour; or the coin changes; or the table rearranges."
+    }
+  ]
+}

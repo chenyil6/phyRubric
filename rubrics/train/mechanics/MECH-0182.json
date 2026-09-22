@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0182",
+  "caption": "A bubble machine in a park sends out a stream of soap bubbles; the bubbles float away on the breeze and pop one by one.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bubble machine in a park sends out bubbles."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bubbles float away on the breeze."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They pop one by one."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "There is a stream of many bubbles."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The float comes first and the pops follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Bubbles drift with the wind, all the same way, and sink slowly.",
+      "fail": "They fly in different directions on one breeze; or against the wind; or shoot off fast."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Each pops when it touches something or after a few seconds and does not re-form.",
+      "fail": "A popped bubble reappears; or bubbles merge and split; or bubbles appear from nowhere away from the machine."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "They sink slowly as they drift.",
+      "fail": "They rise steadily; or hang still; or drop like stones."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Bubbles are thin and iridescent, wobble, and vanish when they pop.",
+      "fail": "They bounce off the ground like rubber balls; or hold a rigid shape when they hit something; or shatter into shards."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One machine keeps its shape and is the only source.",
+      "fail": "The machine duplicates; or it turns into another object; or bubbles pass through a person."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The machine and the park stay the same.",
+      "fail": "The machine changes colour; or the park rearranges; or the trees change."
+    }
+  ]
+}

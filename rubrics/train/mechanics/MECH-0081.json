@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0081",
+  "caption": "A man sitting in a dining chair leans back until only the two rear legs are on the floor, leans a little further, and tips over backward with the chair.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A man sits in a dining chair."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "He leans back until only the rear legs are on the floor."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "He leans a little further."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "He and the chair tip over backward."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The front legs are off the floor before the tip."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The lean comes first, then the balance on two legs, then the fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The chair balances on its rear legs while he is near the tipping point; once past it the fall begins and speeds up.",
+      "fail": "The chair hangs balanced far past upright for the rest of the clip; or the fall slows as it goes; or he rises off the chair."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "They fall backward together and land behind where the chair stood.",
+      "fail": "They fall forward; or the man falls and the chair stays upright; or they fall sideways."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing pushes him; the tip comes from his own lean.",
+      "fail": "The chair tips before he leans; or it slides across the floor; or it rights itself after starting to fall."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The chair stays rigid in legs and back, and the floor takes the impact.",
+      "fail": "The chair legs bend; or the chair bounces high; or the man's body folds like cloth."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The man and the chair keep their number and shape, and neither passes into the other or the floor.",
+      "fail": "He merges with the chair; or a limb detaches; or the chair passes through the floor."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "His clothing, the chair and the room stay the same.",
+      "fail": "His clothing changes colour; or the chair changes design between frames; or the room rearranges."
+    }
+  ],
+  "note": "Balance scene: the man is kept because his body is the load that moves the balance point. His expression and how gracefully he falls are not judged."
+}

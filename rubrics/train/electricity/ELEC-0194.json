@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0194",
+  "caption": "A stack of freshly printed sheets is lifted from a printer, and the sheets cling together; a single sheet lifted from the top clings to the stack rather than falling.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stack of printed sheets in a printer's tray."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The stack is lifted from the printer."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sheets cling together."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A single sheet lifted from the top clings to the stack rather than falling."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sheets are printed: text or images on them."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The stack is lifted first; the single sheet is lifted after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The sheets hold together as the stack is lifted, with no sheet sliding out; when the top sheet is lifted by an edge it hangs against the stack, and comes free only when pulled or fanned.",
+      "fail": "Sheets slide apart and fall out of the stack as it is lifted; or the top sheet lifts cleanly away with no cling and hangs free; or the top sheet hangs a gap away from the stack without touching; or the top sheet falls off by itself."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The sheets are paper: they flex and curl a little, stay flat sheets and part with a fanning motion; the stack stays a block of sheets.",
+      "fail": "The sheets bend like cloth and hang in heavy folds; or stretch like elastic; or the stack moves as one rigid solid block that cannot be fanned; or a sheet tears when lifted."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Parts of a sheet not held or stuck hang downward; a sheet let go falls onto the stack or the table.",
+      "fail": "A sheet rises or floats when let go; or hangs out sideways with nothing holding it; or the stack rises from the hand."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The printer stays put as the stack is lifted; the sheets move only with the hand.",
+      "fail": "The printer slides or lifts with the stack; or sheets in the tray jump by themselves; or the stack fans open with nothing touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The stack keeps its sheets: the same sheets, none vanishing or appearing; the sheets pass through nothing.",
+      "fail": "Sheets vanish from the stack in the air; or the stack grows thicker as it is lifted; or a sheet passes through another; or the printer changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The printing on the sheets, the printer's colour and the desk stay the same.",
+      "fail": "The printed content changes between frames; or the printer changes colour; or the desk changes."
+    }
+  ]
+}

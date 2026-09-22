@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0150",
+  "caption": "A cabinet door with a magnetic latch is swung shut, and the door pulls itself closed the last little way and stays closed.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cabinet door with a magnetic latch."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The door is swung shut."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The door pulls itself closed the last little way."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The door stays closed."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The final pull happens after the hand has let go."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is swing, pull shut, stay closed."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The door moves while it is being swung and, on its own, only over the last small gap; left standing at a wide angle it stays there.",
+      "fail": "The door, left standing wide open, swings shut with nothing touching it; or reverses and opens while the hand still pushes it; or swings open and shut several times before closing."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Once the door reaches the last small gap it closes fully against the frame and stays shut for the rest of the clip.",
+      "fail": "The door stops a gap short of closed and rests there; or springs back open after touching the frame; or bounces open and shut on the frame; or opens again by itself later in the clip."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The door swings about its hinges as one panel toward the frame, its free edge sweeping an arc.",
+      "fail": "The door bends or ripples as it swings; or the hinge side moves along the frame; or the door slides across the opening rather than hinging; or the door moves away from the frame as a whole."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The cabinet and its contents stay still as the door shuts; neighbouring doors do not move.",
+      "fail": "The cabinet rocks or slides; or a neighbouring door swings open at the shut; or items on the cabinet jump."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One door on its hinges; the door passes through neither the frame nor a neighbouring door; the hand passes through nothing.",
+      "fail": "The door passes through the frame; or the door detaches from its hinges; or a second door appears; or the hand passes through the door."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The door's colour and handle and the cabinet's finish stay the same.",
+      "fail": "The door changes colour; or the handle changes side or shape; or the cabinet's finish changes."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0085",
+  "caption": "A snowman's head is knocked sideways by a thrown snowball, rolls off the body, and drops to the snow.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A snowman stands with its head in place."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A thrown snowball hits the head."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The head is knocked sideways and rolls off the body."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The head drops to the snow."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The snowball comes in through the air."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The hit comes first, then the roll off, then the drop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The head moves at the moment of impact, in the direction of the throw, and rolls off that side.",
+      "fail": "The head moves toward the thrower; or it moves before the snowball arrives; or it lifts straight up."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Once off the shoulders the head falls to the snow and stays there.",
+      "fail": "The head hovers above the shoulders; or rises; or bounces back onto the body."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The head is packed snow: it may dent, crack or break apart when it lands, and the snowball bursts or sticks.",
+      "fail": "The head bounces like rubber; or shatters like glass into shards; or the snowball passes through it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The body stays standing and nothing else moves.",
+      "fail": "The body topples too with nothing hitting it; or the arms fly off; or the head rolls back up onto the body."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One snowman and one snowball keep their number.",
+      "fail": "The head vanishes or a second head appears; or the snowman turns into another object; or the snowball vanishes in flight."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The snowman's features, the scarf and the yard stay the same.",
+      "fail": "The face changes; or the scarf changes colour; or the yard rearranges."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0061",
+  "caption": "A blender runs on a kitchen counter, and its base vibrates and inches slightly across the counter.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A blender stands on a kitchen counter, running: its blades turn or its contents churn."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The base vibrates."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The blender moves across the counter."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The movement is slight, a small shift."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The blender stays upright."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The blender moves only while it runs and vibrates; if stopped it stays where it is.",
+      "fail": "The blender moves while its contents are still and the base shows no tremble; or keeps moving after being switched off; or moves before it is running."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The creep is a series of small shifts in a roughly steady direction, with slow turning at most.",
+      "fail": "The blender glides in one smooth slide; or darts back and forth across the counter; or returns to its exact start over and over; or lifts one side and hops."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The blender stays down on the counter; at the edge it would fall.",
+      "fail": "The blender hovers; or hangs over the edge past its middle; or climbs onto an object."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The counter and the jar stay rigid; the contents churn inside.",
+      "fail": "The counter ripples; or the jar bends; or the contents pass out through the closed lid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One blender; nothing passes through the counter.",
+      "fail": "A second blender appears; or it vanishes; or sinks into the counter; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blender's colour, the counter pattern and the wall behind stay the same.",
+      "fail": "The blender changes colour; or the counter pattern changes; or the wall behind changes."
+    }
+  ]
+}

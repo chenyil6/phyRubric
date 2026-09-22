@@ -1,0 +1,77 @@
+{
+  "id": "MECH-0002",
+  "caption": "A woman standing in the aisle of a bus holding the overhead rail sways backward as the bus pulls away from the stop.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A woman stands in the aisle of a bus, holding an overhead rail."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bus pulls away from a stop: it starts moving and the view outside begins to slide past."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "She sways backward, toward the rear of the bus."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Her hand stays on the overhead rail through the sway."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bus starts moving first and the sway follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "She stands steady while the bus is at the stop; her sway begins as the bus starts moving and eases once it is running at a steady speed.",
+      "fail": "She sways while the bus is still standing at the stop; or she sways with no start of motion visible outside the windows; or she keeps swaying after the view outside has settled to a steady slide."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The sway carries her toward the rear of the bus, the rail arrests it, and she comes back upright.",
+      "fail": "She is thrown toward the front of the bus as it pulls away; or she leans sideways across the aisle while the bus goes straight; or she keeps toppling backward past the point where the rail holds her."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The overhead rail stays fixed and rigid where she grips it, and her feet stay on the floor of the aisle.",
+      "fail": "The rail bends or stretches as she pulls on it; or the rail comes away from the ceiling and she keeps hanging from it; or her feet leave the floor and she hangs in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Other standing passengers and hanging straps lean or swing the same way at the same moment.",
+      "fail": "Another standing passenger sways toward the front while she sways backward; or the hanging straps stay still while she is plainly swaying; or they swing before the bus begins to move.",
+      "precondition": "Other standing passengers or hanging straps are visible in the aisle."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The passengers, the rail and the seats keep their number and shape, and nothing passes through anything.",
+      "fail": "Her hand passes through the rail; or she merges with a seat or with another passenger; or a limb detaches, vanishes or a second one appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Her clothing, the bus interior and the street seen through the windows stay consistent apart from the motion.",
+      "fail": "Her clothing changes colour; or the seat layout changes between frames; or the street outside jumps to a different place."
+    }
+  ],
+  "note": "Inertia scene: the woman is kept because her body is what shows the sway. Her expression, posture and how hard the bus accelerates are not judged; only when and which way she moves."
+}

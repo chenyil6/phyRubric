@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0105",
+  "caption": "A pair of glasses is carried into a steam room, and the lenses cloud over completely within seconds.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pair of glasses is carried into a steam room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lenses cloud over."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lenses end fully clouded."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lenses are clear as they go in."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The room is full of steam."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The clouding only builds while the glasses stay in the steam and the lenses stay fogged there.",
+      "fail": "The lenses clear while still in the steam; or the clouding thins and thickens in turn; or the lenses are clouded before they enter; or the clouding retreats to the lens edges while the steam holds."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The change is a haze on the lens glass that hides what lies behind it.",
+      "fail": "The frames change colour rather than the lenses; or the haze lies on the frame and not on the glass; or the lenses turn a colour instead of hazing; or the view behind the lenses changes to a different scene as they cloud."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Drops that gather on the lenses run downward and any drip falls away.",
+      "fail": "A drop runs up a lens; or a drop leaves a lens and rises; or water gathers along a lens's top edge and stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The haze is a fine film on the glass that beads; the lenses stay rigid and the frames keep their shape.",
+      "fail": "The haze stands off the glass as a thick crust; or the haze peels away as a film; or a lens flexes or bulges; or the haze turns to hard frost in the steam."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One pair of glasses with two lenses in one frame; nothing passes through the lenses.",
+      "fail": "A lens vanishes; or a third lens appears; or a hand passes through a lens; or the frame bends into another shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The frames, the room's tiles and the benches stay the same.",
+      "fail": "The frames change colour; or the tiles change pattern; or the benches move."
+    }
+  ],
+  "note": "The glasses may be on a face or in a hand; the person is not judged."
+}

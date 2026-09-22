@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0266",
+  "caption": "A mirrored wardrobe door swings shut, and the reflected room sweeps across the mirror until it shows only the wall.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A mirrored wardrobe door swings shut."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The reflected room sweeps across the mirror."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mirror ends up showing only the wall."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The door moves first and the view sweeps with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The scene in the mirror slides smoothly as the door turns and changes to whatever the mirror faces.",
+      "fail": "It stays fixed on one view; or jumps; or shows the room when the mirror faces the wall."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The view changes only while the door moves.",
+      "fail": "It sweeps with the door still; or before the door moves; or keeps moving after the door stops."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The reflected room is the real room, mirrored.",
+      "fail": "It is a different room; or not mirrored; or objects appear that are not there."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The door swings in an arc on its hinges.",
+      "fail": "It slides; or lifts; or spins."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One door and one mirror.",
+      "fail": "A second door appears; or the mirror vanishes; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wardrobe and the room stay the same.",
+      "fail": "The wardrobe changes colour; or the room rearranges; or the frame changes."
+    }
+  ],
+  "note": "The hand closing the door is the minimal trigger; the person is not judged."
+}

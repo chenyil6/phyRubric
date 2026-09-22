@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0080",
+  "caption": "A bicycle resting on its kickstand is hit by a stray soccer ball and falls over onto its side.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bicycle rests on its kickstand."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A soccer ball hits the bicycle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bicycle falls over onto its side."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The hit comes first and the fall follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The bike rocks at the hit, leans further, and falls on the side away from the kickstand's support.",
+      "fail": "The bike falls toward the kickstand side, over the stand; or it rights itself after leaning; or it falls before the ball arrives."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Once past its balance the bike goes down until it hits the ground and stays there.",
+      "fail": "The bike hangs leaning in mid-fall; or it rises; or it bounces back upright."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The ball's arrival is what moves the bike, and the ball rebounds or drops after hitting.",
+      "fail": "The ball passes the bike without touching it and the bike falls anyway; or the ball hits and stops dead in the air; or the ball sticks to the bike."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The frame stays rigid, the wheels may spin, the kickstand may fold.",
+      "fail": "The frame bends; or the bike bounces high off the ground; or a wheel squashes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bicycle and one ball keep their number and shape.",
+      "fail": "The bike vanishes or a second one appears; or the ball passes through the frame; or the bike turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bike's colour, the ball and the surroundings stay the same.",
+      "fail": "The bike changes colour; or the ball changes size; or the background rearranges."
+    }
+  ]
+}

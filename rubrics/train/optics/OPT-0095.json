@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0095",
+  "caption": "A sheet of glass is held at an angle to a window, and the garden outside appears faintly in the glass over the room behind it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sheet of glass is held at an angle to a window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The garden outside appears faintly in the glass over the room behind it."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflected garden shifts as the glass tilts."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflected garden is dim and mirrored."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflected garden shifts as the glass tilts and would disappear if the glass were laid flat away from the window.",
+      "fail": "It stays fixed as the glass tilts; or it is there with the glass facing away from the window; or it is missing with the glass angled to the window."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflected garden is dim and mirrored, seen over the room behind the glass.",
+      "fail": "It is brighter than the room; or not mirrored; or the room behind is hidden."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection changes only as the glass moves.",
+      "fail": "It shifts with the glass still; or moves before the tilt."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The glass is flat and rigid: the reflection is undistorted.",
+      "fail": "It ripples; or warps; or bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet of glass and one window.",
+      "fail": "The glass duplicates; or the hand passes through it; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The garden, the room and the window stay the same.",
+      "fail": "The garden changes; or the room rearranges; or the window changes."
+    }
+  ],
+  "note": "The hands holding the glass are the minimal trigger; the person is not judged."
+}

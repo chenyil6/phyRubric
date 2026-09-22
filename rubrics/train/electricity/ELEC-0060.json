@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0060",
+  "caption": "A toy train is placed on its track and the track's power pack switched on, and the train begins to run.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy train and a track with a power pack."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The train is placed on the track."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The power pack is switched on."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The train begins to run."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The train is still on the track before the pack is switched on."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is place, switch, run."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The train starts to move when the pack is switched on, and only then.",
+      "fail": "The pack is on and the train stays still to the end of the clip; or the train runs before the pack is touched; or the train moves while being placed; or the train runs with the pack switched off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Before the switch the train is still; afterwards it runs steadily along the track and does not stop, start or reverse on its own.",
+      "fail": "The train stops and restarts with the pack untouched; or reverses; or the train jerks in place without moving on; or the track moves under the train."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The train follows the track, its wheels on the rails, round curves and along straights.",
+      "fail": "The train leaves the rails and runs across the floor; or floats above the track; or takes a curve by sliding sideways off the rails; or the carriages separate and run at different speeds."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The train and track are rigid toys; the track stays where it is laid.",
+      "fail": "The track bends or ripples as the train passes; or a carriage squashes; or the rails stretch."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One train with its carriages on one track; nothing appears, vanishes or passes through the track.",
+      "fail": "A carriage vanishes or appears; or a second train appears; or the train passes through the track or a tunnel wall; or carriages merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The train's colours, the track's layout and the surroundings stay the same.",
+      "fail": "The train changes colour; or the track's layout changes between frames; or the surroundings rearrange."
+    }
+  ]
+}

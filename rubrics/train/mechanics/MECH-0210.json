@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0210",
+  "caption": "The laces of a sneaker are tied into a bow and the loops pulled tight.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "The laces of a sneaker are handled."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They are tied into a bow."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The loops are pulled tight."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tying comes first and the tightening follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The laces cross, loop and pull through each other only where the fingers guide them, and they never pass through themselves.",
+      "fail": "A lace passes through another lace or through itself; or a lace passes through the shoe; or the knot forms with the laces never crossing."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The knot tightens as the loops are pulled and stays tied, and the laces keep their length.",
+      "fail": "The knot loosens as it is pulled; or the laces grow or shrink; or the bow unties itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "There are two lace ends and two loops throughout.",
+      "fail": "A third end appears; or a loop vanishes; or the laces multiply."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The laces are flexible cord that bends and droops.",
+      "fail": "They are rigid rods; or stretch like elastic; or melt together."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The shoe and the hands keep their shape.",
+      "fail": "Fingers pass through the shoe; or a finger detaches; or the shoe duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The laces' colour and the shoe stay the same.",
+      "fail": "The laces change colour; or the shoe changes; or the background rearranges."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged."
+}

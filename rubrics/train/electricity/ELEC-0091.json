@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0091",
+  "caption": "Heat lightning flickers silently on the horizon beyond a lake on a summer night, lighting the far clouds again and again.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lake at night with the horizon beyond it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lightning flickers at the horizon, lighting the far clouds."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flickers repeat: the far clouds light up more than once."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flickers are distant, at the horizon rather than overhead."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The near shore stays dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each flicker is brief with the clouds dark between; the flickers repeat but never merge into one steady light.",
+      "fail": "The far clouds stay lit for the rest of the clip; or the glow brightens steadily; or the sky turns to daylight; or a flicker fades in slowly."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The horizon, the far cloud bank and the shoreline are the same across lit and dark frames.",
+      "fail": "The clouds change shape abruptly between one flicker and the next; or the shoreline shifts; or trees or buildings on the far shore appear or vanish; or a second horizon line appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light stays far off: the far clouds brighten while the near shore, foreground trees and anything on the water near the viewer stay dark.",
+      "fail": "The near shore and foreground light up as brightly as the far clouds; or the flash lights the foreground from the near side; or a bright reflection appears on the lake with no glow in the sky."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lake surface moves only as slow ripples; trees and objects on the shore stay still; nothing moves at a flicker.",
+      "fail": "The water heaves or jumps at a flicker; or trees sway sharply at the flicker with nothing else stirring; or objects on the shore shift at the flash."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Land, water and cloud keep their identities: the lake stays water and the clouds stay cloud.",
+      "fail": "The clouds turn into solid objects; or the lake turns into solid ground; or a bolt emerges from the lake; or the far shore morphs into a different landscape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The night colours of sky, water and shore are consistent before and after each flicker.",
+      "fail": "The sky changes colour permanently after a flicker; or the water changes colour; or the shore changes colour."
+    }
+  ]
+}

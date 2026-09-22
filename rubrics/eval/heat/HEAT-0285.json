@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0285",
+  "caption": "A dry pine cone is tossed into a fireplace, and it catches, glows, and crumbles into embers.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pine cone is tossed into a fireplace."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cone catches fire where it meets the flames."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cone glows."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The cone crumbles into embers."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The embers fade."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The toss comes first and the catching follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The cone only chars, glows and crumbles and does not return to whole pale wood.",
+      "fail": "The cone turns back to pale unburnt wood; or the embers gather back into a whole cone; or the cone's scales close and lift again; or the burn front retreats leaving unburnt scales behind it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The cone shrinks to embers and ash rather than vanishing at a stroke, and the fire's wood keeps its number.",
+      "fail": "The cone vanishes in a single frame while still whole; or a second cone appears in the air; or a log vanishes; or ash appears far from the cone with none falling there."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The cone falls downward into the fire, the flames climb upward around it and the embers settle in the grate.",
+      "fail": "The cone rises out of the fire and hangs; or the flames point downward into the ash; or embers lift and stay aloft; or the cone falls upward out of the grate."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The cone catches where it meets the flames and its scales darken and open there first.",
+      "fail": "The cone catches at a point no flame reached; or the cone rests in the flames and stays pale and closed to the end of the clip; or the flames pass through the cone and leave it untouched; or the cone glows while the flames are elsewhere in the grate."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The cone stays a pine cone as it chars and crumbles into pieces; it does not turn into another material.",
+      "fail": "The cone melts and drips; or the cone turns into another object; or the cone swells into a smooth ball; or the cone's scales fuse into one solid lump."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fireplace's surround, the grate and the hearth stay the same.",
+      "fail": "The surround changes colour; or the grate changes shape; or items on the hearth rearrange."
+    }
+  ],
+  "note": "Who tosses the cone is not judged."
+}

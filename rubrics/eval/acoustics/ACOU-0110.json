@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0110",
+  "caption": "A heavy book is dropped flat onto a table, and a pencil lying nearby rolls a little while a glass of water shows a ring of ripples.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A table with a pencil and a glass of water on it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A heavy book is dropped flat onto the table."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pencil rolls a little."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The glass of water shows a ring of ripples."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The book lands flat."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The book lands first; the pencil and the ripples follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The pencil and the water are still until the book lands and both move at the impact.",
+      "fail": "The pencil rolls before the book lands; or the ripples appear with the book still in the air; or the book lands and both the pencil and the water stay still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The impact moves both: the pencil rolls a short way and stops; the ripple ring appears and fades.",
+      "fail": "The pencil rolls on without stopping across the whole table; or rolls toward the book and climbs onto it; or the ripples grow stronger after the impact; or the water sloshes up the side as if the glass were shoved."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The book falls down, lands and stays; the pencil stays on the table.",
+      "fail": "The book hangs in the air before landing; or lands and then rises again; or the pencil lifts off the table."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The table, glass and pencil are rigid; the book is a flat rigid slab whose pages may flap.",
+      "fail": "The table top ripples like water; or the glass wobbles like rubber; or the pencil bends; or the book splashes like a liquid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One book, one pencil, one glass; nothing passes into the table.",
+      "fail": "A second pencil appears; or the glass vanishes; or the book passes into the table; or the pencil passes through the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The book's cover, the pencil's colour and length and the table pattern stay the same.",
+      "fail": "The book's cover changes; or the pencil changes colour or length; or the table pattern changes."
+    }
+  ],
+  "note": "The hand that drops the book is a trigger and is not judged."
+}

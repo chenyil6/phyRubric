@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0142",
+  "caption": "A flashlight is swept across a dark wall, and the bright spot slides along the wall.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lit flashlight is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A dark wall is present."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The beam's bright spot is on the wall and slides along it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flashlight turns or moves during the sweep."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spot is a bright patch with a soft edge, brighter at its centre."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The spot follows the flashlight: it moves in the direction the flashlight turns, at the same time, and sits where the beam points.",
+      "fail": "The flashlight turns and the spot stays put; or the spot moves opposite to the flashlight's turn; or the spot moves while the flashlight is held still; or the spot lags behind and then jumps."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Light on the wall exists only where the beam is: no glow lingers behind the spot and none appears ahead of it.",
+      "fail": "A lit trail remains on the wall behind the spot; or a patch lights up before the beam arrives; or a second spot appears with only one flashlight."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "A beam visible in the air runs straight from the flashlight's head to the spot.",
+      "fail": "The visible beam points elsewhere than the spot; or the beam is bent; or the beam is visible but the flashlight's head is dark.",
+      "precondition": "The beam is visible in the air (dust, haze or smoke)."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The spot is one patch that stretches into an oval as the beam strikes the wall more obliquely and rounds up when it strikes squarely.",
+      "fail": "The spot splits into several pieces; or takes a sharp geometric shape like a square; or keeps a fixed shape while the beam angle plainly changes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One flashlight and one spot; the flashlight keeps its shape and does not pass through the wall.",
+      "fail": "The flashlight duplicates or vanishes; or passes through the wall; or the spot becomes a solid object; or the wall changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wall's colour and texture stay the same; the parts of the room outside the beam stay as dark as they were.",
+      "fail": "The wall's texture changes between frames; or the room's overall brightness changes with the flashlight steady; or objects on the wall move."
+    }
+  ]
+}

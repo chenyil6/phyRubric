@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0229",
+  "caption": "A cat climbs into a paper grocery bag on the floor, and the bag rustles and shifts as the cat moves inside it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A paper grocery bag stands on the floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A cat climbs into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bag shifts and moves as the cat moves inside."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The climb in comes first and the movement of the bag follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The cat does not appear elsewhere while it is inside.",
+      "fail": "The cat appears outside while the bag still moves; or a second cat appears; or the cat vanishes and the bag goes still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The bag bulges where the cat pushes from inside, and the cat does not show through the paper.",
+      "fail": "The cat shows through the paper; or passes through the bag wall; or the bag passes through the cat."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The bag keeps its size, bulging and crumpling.",
+      "fail": "The bag grows to fit; or shrinks; or changes into another bag."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bag moves only where the cat pushes.",
+      "fail": "The bag moves with no cat inside; or slides across the room; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One cat stays one cat.",
+      "fail": "It splits; or merges with the bag; or turns into another animal."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag's printing and the room stay the same.",
+      "fail": "The printing changes; or the floor changes; or the room rearranges."
+    }
+  ],
+  "note": "The cat is self-driven: its movements inside are its own. Only containment and the bag's response are judged."
+}

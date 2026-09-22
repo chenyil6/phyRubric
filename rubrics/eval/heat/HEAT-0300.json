@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0300",
+  "caption": "Slices of cheese on toast sit under a hot grill, and the cheese bubbles and browns in dark spots.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Slices of cheese sit on toast under a grill."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cheese goes glossy and soft."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Bubbles rise and burst on the cheese's surface."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Brown patches appear and darken."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The browning starts where the cheese is nearest the element."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The softening comes first and the browning follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The cheese only softens, bubbles and browns further and does not firm back up or lighten under the grill.",
+      "fail": "The cheese sets firm and matt again under the grill; or a brown patch fades back to pale cheese; or the browning spreads and then shrinks; or the cheese bubbles and goes flat and smooth in turn with the grill on."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The browning appears in the cheese itself, in patches nearest the element, and deepens from there.",
+      "fail": "The toast's crust browns rather than the cheese; or the cheese browns evenly all over while the element is plainly on one side; or the cheese is brown before it goes under the grill; or the browning appears on the tray rather than the cheese."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The melted cheese slumps downward, spreads over the toast and runs off its edge, and the bubbles rise to its upper surface.",
+      "fail": "The cheese climbs the toast's crust and stays; or the bubbles sink through the cheese into the toast; or melted cheese lifts off the toast; or the cheese runs uphill on a tilted tray."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cheese is a thick liquid that bubbles slowly and holds a rounded edge, and the toast stays firm bread beneath it.",
+      "fail": "The cheese runs as thin as water; or the bubbles hold their domes as rigid shells; or the cheese shatters dry; or the toast flows like batter under the cheese."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The slices on the toast are the slices that were laid there; the cheese goes only onto the toast and the tray.",
+      "fail": "A slice vanishes; or a new slice appears on the toast; or the cheese grows in amount with none added; or cheese appears on the tray with none running off."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The toast's crust, the tray and the surroundings stay the same.",
+      "fail": "The crust changes shape; or the tray changes colour; or items around the tray rearrange."
+    }
+  ],
+  "note": "The browning of the cheese is the caption's asserted outcome; the chemistry of it is not judged, only that it runs one way and appears nearest the element."
+}

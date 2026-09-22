@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0270",
+  "caption": "A hot towel is unrolled on a counter, and steam rises from the cloth as it opens.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A rolled hot towel lies on a counter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The towel is unrolled."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Steam rises from the cloth."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The steam is thickest as the towel first opens."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The steam fades as the towel cools."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The unrolling comes first and the steam follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam leaves the towel going up, spreading and thinning as it rises.",
+      "fail": "The steam sinks over the counter's edge and pools on the floor; or pours downward through the towel; or hangs as a fixed shape without rising; or flows sideways with nothing blowing it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The steam is thickest as the towel opens and then only eases; it does not build up again with nothing added.",
+      "fail": "The steam thickens steadily the longer the towel lies open; or the steam stops and then starts again with nothing touching the towel; or the plume runs back into the cloth; or a puff retreats to the towel."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The steam comes off the towel's own damp cloth and is thickest over the newly opened folds.",
+      "fail": "The steam rises from the counter beside the towel while the cloth is clear; or the steam is thickest over a part of the towel still rolled tight; or the towel lies open and steaming wet with no steam leaving it at all."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The towel is limp damp cloth that unrolls, drapes and settles, and the steam is a soft cloud that spreads.",
+      "fail": "The towel stays a rigid roll as it opens; or stands stiff like a board once open; or the steam holds a fixed rigid shape; or the towel sets hard as it cools."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One towel on one counter; the towel stays one piece and nothing passes through the counter.",
+      "fail": "The towel splits into two towels; or a second towel appears; or the towel vanishes; or the towel passes through the counter."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The towel's colour, the counter and the surroundings stay the same.",
+      "fail": "The towel changes colour; or the counter changes pattern; or items around the towel rearrange."
+    }
+  ],
+  "note": "Who unrolls the towel is not judged."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0317",
+  "caption": "A dog bites into a stuffed cushion on a sofa and tears it open, and white stuffing spills out through the rip.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog bites into a stuffed cushion on a sofa."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It tears the cushion open."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "White stuffing spills out through the rip."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bite comes first, then the rip, then the stuffing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The fabric parts where the teeth pull and the rip widens as the dog tugs.",
+      "fail": "The fabric stretches like rubber; or shatters; or tears elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Stuffing comes out only through the rip and the cushion does not reseal.",
+      "fail": "It reseals; or stuffing comes from elsewhere; or the stuffing returns."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The stuffing falls or drifts down.",
+      "fail": "It rises indefinitely; or hangs; or floats up."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The cushion deflates as stuffing leaves.",
+      "fail": "It stays plump; or grows; or turns into another object."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One dog and one cushion keep their number.",
+      "fail": "The dog splits; or the cushion duplicates; or the dog merges with the cushion."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cushion's colour and the sofa stay the same.",
+      "fail": "The cushion changes colour; or the sofa changes; or the room rearranges."
+    }
+  ],
+  "note": "The dog is self-driven: its tugging is its own. Only the fabric's response is judged."
+}

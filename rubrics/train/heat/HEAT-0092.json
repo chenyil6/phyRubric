@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0092",
+  "caption": "A man exhales on a frosty morning, and his breath appears as a white cloud that drifts away and fades.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A person stands outdoors on a cold morning."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A white cloud of breath appears in front of the mouth."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cloud drifts away."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The cloud fades."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The setting reads as frosty: frost, bare trees or winter clothing."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The cloud appears with the exhale, not between breaths."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each cloud appears at the exhale, spreads and fades and does not come back, and nothing shows between breaths.",
+      "fail": "A cloud appears while the chest is drawing in and no breath is going out; or a faded cloud thickens again with no new breath; or a cloud hangs unchanged for the rest of the clip; or the cloud runs back into the mouth."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The cloud starts just in front of the mouth and goes by thinning away.",
+      "fail": "A cloud appears in the air away from the face with nothing coming from the mouth; or the cloud vanishes in a single frame while still thick; or two clouds appear from one exhale in different places; or the cloud splits into solid pieces."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The cloud drifts and spreads as it thins; it does not fall as a liquid.",
+      "fail": "The cloud sinks to the ground and pools; or falls in a stream from the mouth; or hangs as a fixed shape without drifting; or pours downward over the chest."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cloud is a soft haze that spreads, waves and fades; it holds no edges and does not turn solid.",
+      "fail": "The cloud holds a fixed rigid shape; or turns into solid lumps; or pours like a liquid; or keeps a sharp outline as it drifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One person with the same face and clothing; the cloud stays outside the body.",
+      "fail": "The face changes shape; or a second head appears; or the cloud passes into the chest and out the back; or the clothing turns into another garment."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The clothing, the background and the light stay the same.",
+      "fail": "The clothing changes colour; or the background changes between frames; or the scene changes from frosty to green."
+    }
+  ],
+  "note": "The person is kept because the breath is the caption's subject; the face and expression are not judged."
+}

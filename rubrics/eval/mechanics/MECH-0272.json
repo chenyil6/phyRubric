@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0272",
+  "caption": "The anchor rope of a small boat is hauled in, and the rope comes up taut and dripping until the anchor breaks the surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An anchor rope runs from a small boat into the water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is hauled in."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The rope comes up taut and dripping."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The anchor breaks the surface."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hauling comes first and the anchor appears last."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The rope runs straight down under load and stays taut while pulled.",
+      "fail": "It is slack while hauling; or stretches; or hangs in a loose curve."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Water drips downward from the rope and the anchor hangs below it.",
+      "fail": "Drips rise; or the anchor is above the rope; or the rope rises on its own."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The anchor appears only when enough rope is in.",
+      "fail": "It appears immediately; or the rope is hauled and no anchor comes; or it appears elsewhere."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The rope moves only as it is hauled.",
+      "fail": "It climbs by itself; or the anchor rises alone; or the boat shoots away."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One rope and one anchor keep their number.",
+      "fail": "The rope splits; or the anchor duplicates; or the anchor vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The boat and the water stay the same.",
+      "fail": "The boat changes colour; or the water changes; or the shore rearranges."
+    }
+  ]
+}

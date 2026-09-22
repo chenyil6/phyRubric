@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0232",
+  "caption": "A toy car is pushed into one end of a cardboard tunnel and rolls out the other end.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy car is pushed into one end of a cardboard tunnel."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It rolls out the other end."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The tunnel is cardboard."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The entry comes first and the exit follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The same car comes out, and nothing exits before it enters.",
+      "fail": "A different car exits; or two cars; or a car exits before one has entered."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It exits after a delay matching its speed and the tunnel's length, moving in the same direction.",
+      "fail": "It exits instantly; or after far too long; or exits going back."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "It is hidden inside and does not show through the cardboard.",
+      "fail": "It shows through; or passes through the tunnel wall; or exits through the roof."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It rolls straight and slows gently.",
+      "fail": "It speeds up inside; or stops and restarts; or curves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One car and one tunnel keep their shape.",
+      "fail": "The car turns into another object; or the tunnel changes shape; or the car merges with the tunnel."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and the tunnel stay the same.",
+      "fail": "The car changes colour; or the tunnel changes; or the background rearranges."
+    }
+  ]
+}

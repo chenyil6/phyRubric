@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0079",
+  "caption": "A block is pulled out of the bottom row of a tall wooden block tower and the tower collapses.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tall tower of wooden blocks stands on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A block is pulled out of the bottom row."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The tower collapses."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "It is the bottom row the block comes from."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pull comes first and the collapse follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The collapse starts as the support is removed: the tower sways or leans, then falls; it does not stand for long on nothing.",
+      "fail": "The tower stands unmoved on the gap for the rest of the clip; or it collapses before the block is pulled; or the tower collapses from the top while the bottom row with its gap stays intact."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Blocks fall downward, land on the table, and stay there.",
+      "fail": "A block rises; or hangs in the air; or slides along the table with nothing pushing it after landing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The tower comes apart as it falls and the blocks scatter outward from where it lands.",
+      "fail": "The tower topples as one rigid piece and lands whole; or blocks fly upward and outward as if exploding; or the blocks fall and re-stack themselves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The blocks stay rigid, clatter, and bounce low at most.",
+      "fail": "A block bends; or bounces higher than the tower stood; or splashes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The blocks keep their number, and the pulled block stays out of the tower.",
+      "fail": "Blocks vanish or multiply; or a block passes through the table or another block; or the pulled block reappears in its place."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blocks' colours, the table and the room stay the same.",
+      "fail": "A block changes colour or size; or the table changes between frames; or the room behind rearranges."
+    }
+  ]
+}

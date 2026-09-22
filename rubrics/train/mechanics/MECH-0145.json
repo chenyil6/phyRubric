@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0145",
+  "caption": "A stone is dropped into a still garden pond; it splashes, sinks, and ripples spread out across the water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stone is dropped into a still pond."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It splashes."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It sinks."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Ripples spread out across the water."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pond is still before the drop."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The splash comes first, then the sinking, then the ripples spread."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The splash rises at the moment of entry and falls back, and the water closes over the stone.",
+      "fail": "There is no splash when the stone enters; or the splash hangs in the air; or the water stays rigid like glass."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Rings spread outward from the entry point and fade as they widen.",
+      "fail": "Rings run inward; or they appear before the stone lands; or they stop dead and hold their shape."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The stone goes under and stays under.",
+      "fail": "The stone floats; or it comes back up; or it hangs at the surface."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Away from the ripples the water stays still.",
+      "fail": "Waves appear elsewhere with no cause; or the surface churns before the stone lands; or the centre of the rings moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One stone enters and nothing else appears in the water.",
+      "fail": "The stone vanishes in mid-air or a second appears; or it turns into another object; or a splash appears where nothing landed."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pond's colour and the garden around it stay the same.",
+      "fail": "The water changes colour; or the plants rearrange; or the pond's edge moves."
+    }
+  ]
+}

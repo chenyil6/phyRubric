@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0096",
+  "caption": "A lid is snapped onto a container of hot food, and the inside of the clear lid fogs over.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A container of hot food."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A clear lid is snapped onto the container."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The inside of the lid fogs over."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Drops gather on the fogged surface."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The outside of the lid stays clear."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The lid goes on first and the fogging follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog only thickens on the inner face while the food is hot and the lid is on; it does not clear on its own.",
+      "fail": "The fog clears while the lid stays on the hot food; or the fog thins and thickens in turn; or the lid is fogged before it is put on; or the fog moves to the outer face as it thickens."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The change is a haze on the lid's inner surface, and the outer surface stays clear.",
+      "fail": "The outer face fogs while the inner face stays clear; or both faces fog equally; or the lid's plastic turns milky right through rather than hazing on one face; or the container's wall changes colour rather than the lid."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Drops that gather on the underside of the lid hang there and run to its lowest point, and fall back into the food if the lid is tilted.",
+      "fail": "Drops run upward on the lid's underside; or drops fall upward off the lid; or drops stay fixed on a steeply tilted lid; or drops rise from the food to the lid as visible streams."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The fog is heaviest over the hot food and thinner over the lid's cooler rim.",
+      "fail": "The lid fogs in a place with no food beneath; or the fog is heaviest at the rim and absent over the food; or the fog appears on the lid before it is lowered onto the container."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One container and one lid; the lid stays on and nothing passes through it.",
+      "fail": "The lid passes into the container's wall; or a second lid appears; or food passes through the lid; or the container changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The container's colour, the food's look and the counter stay the same.",
+      "fail": "The container changes colour; or the food changes into something else; or items on the counter rearrange."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0177",
+  "caption": "A handful of dry rice noodles is dropped into hot water, and they go from stiff and brittle to limp and floppy.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot of hot water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Dry rice noodles are dropped into the water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The noodles go limp."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The noodles sink into loose coils."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The noodles are stiff and straight at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The softening starts at the ends in the water."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The noodles go from stiff straight sticks to limp strands that bend, coil and drape over each other.",
+      "fail": "The noodles stay straight and rigid while fully under the water and glossy; or a noodle snaps into stiff pieces and stays stiff; or the noodles fuse into one solid block; or the noodles stretch like elastic."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The softening only advances and softened noodles do not stiffen again in the hot water.",
+      "fail": "A limp noodle stiffens and straightens again in the water; or the noodles soften and stiffen in turn; or the noodles are limp before they reach the water; or a coiled noodle springs back straight."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The softening starts where the noodles meet the water and spreads along them, while parts still out of the water stay stiff.",
+      "fail": "The part standing out of the water goes limp while the submerged part stays stiff; or the whole bundle goes limp at once while only its tips are wetted; or the noodles sit in hot water and stay stiff and straight to the end of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The softened noodles sink or settle into the water and the bundle sags downward as it gives way.",
+      "fail": "A noodle rises out of the water and hangs above it; or a noodle hangs motionless in mid-water; or the bundle stands upright in the water with nothing holding it; or the noodles float on top like a raft and stay dry."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The noodles that go in are the noodles in the water and none appears or vanishes.",
+      "fail": "A noodle vanishes; or new noodles appear with none added; or two noodles merge into one thicker strand; or a noodle passes through the pot's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the water and the surroundings stay the same.",
+      "fail": "The pot changes colour; or the water turns a colour; or items around the pot rearrange."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0040",
+  "caption": "A hockey puck slides along the ice, hits the metal goalpost, and deflects off at an angle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hockey puck slides along the ice."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It hits the metal goalpost."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It deflects off at an angle and slides on."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The goalpost is visible where the puck meets it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The slide comes first and the deflection follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The puck turns at the post, leaving on a new line away from it, a little slower than it arrived.",
+      "fail": "The puck changes direction before it reaches the post; or it leaves the post quicker than it arrived; or it carries on straight past the post's line unchanged."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The puck stays outside the post and the post stays fixed where it stands.",
+      "fail": "The puck passes through the goalpost; or it sinks into the post and comes out the other side; or the post drifts away across the ice with nothing else touching it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The puck stays flat on the ice through the contact and afterwards.",
+      "fail": "The puck lifts off the ice and stays in the air after the deflection; or it hovers above the surface as it slides; or it sinks into the ice."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The puck stays a hard rigid disc and the post stays rigid metal at the contact.",
+      "fail": "The puck squashes or bends at the post; or the post bends and stays bent; or the puck sticks to the post."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One puck and one goal frame are there throughout.",
+      "fail": "The puck vanishes at the post or a second one appears; or the puck turns into another object at the deflection; or part of the goal frame disappears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The puck's colour, the goal's paint and the ice markings stay the same.",
+      "fail": "The puck changes colour at the contact; or the goal frame changes colour between frames; or the lines painted in the ice shift."
+    }
+  ]
+}

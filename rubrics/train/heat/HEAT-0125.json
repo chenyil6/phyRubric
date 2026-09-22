@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0125",
+  "caption": "The knob on a gas stove is turned, and a ring of blue flames lights around the burner.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A gas stove with a burner and a knob."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The knob is turned."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A ring of flames lights around the burner."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flames stand around the whole ring."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flames are blue."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The turn comes first and the flames follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flames appear all around the ring shortly after the knob turns and go out when it is turned off.",
+      "fail": "The flames are alight before the knob is touched; or the knob is turned and no flame appears at all; or the flames light on one side while the rest of the ring stays dark to the end of the clip; or the flames stay alight after the knob is turned back to off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once lit the flames hold steady and grow or shrink only as the knob is turned.",
+      "fail": "The flames grow and shrink with the knob untouched; or go out and relight by themselves; or creep off the burner onto the stove top; or the knob turns back by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flames stand upward from the burner's ports.",
+      "fail": "The flames point downward under the burner; or lie flat along the stove top with nothing blowing them; or hang below the burner; or meet in a ball above the centre while the ports are clear."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The flames are soft tongues at the ports that flicker, and the burner and grate stay rigid metal.",
+      "fail": "The flames hold fixed rigid shapes like blades; or the burner's metal sags as it lights; or the grate bends; or the flames leave solid pieces behind."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One burner with its ring of ports and one knob; the burner keeps its shape and place.",
+      "fail": "A second burner lights with its own knob untouched; or the burner vanishes; or the burner moves across the stove top; or the knob vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stove top, the grate and the other knobs stay the same.",
+      "fail": "The stove top changes colour; or the grate changes pattern; or another knob moves by itself."
+    }
+  ]
+}

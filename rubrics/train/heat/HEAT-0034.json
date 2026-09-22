@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0034",
+  "caption": "Hot espresso is poured over a scoop of vanilla ice cream in a glass, and the ice cream melts.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A scoop of ice cream sits in a glass."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Hot espresso is poured over the scoop."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ice cream melts where the coffee runs over it."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Pale melted cream runs down and streaks into the dark coffee."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Steam rises from the coffee."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the melting follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The scoop only softens and shrinks where the coffee runs, and melt that has left it does not return.",
+      "fail": "The scoop regains a firm round shape; or melted cream draws back into the scoop; or the scoop freezes hard again in the hot coffee; or the melt alternates between more and less melted."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The softening ice cream is a thick pale liquid that streaks and blends slowly into the thin dark coffee, and the scoop is a soft solid that slumps.",
+      "fail": "The melted cream stands as a rigid cap on the coffee; or the scoop shatters dry; or the scoop bounces on the coffee like a ball; or the scoop keeps sharp edges while glossy and running."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The coffee falls downward onto the scoop and runs down it, and the pale melt sinks and streaks down into the coffee below.",
+      "fail": "The coffee's stream travels upward; or the melt climbs the glass's wall and stays; or pale streaks rise from the coffee onto the scoop's top; or the scoop rises out of the glass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The scoop shows the hot coffee arriving: it goes wet and glossy and hollows where the stream lands.",
+      "fail": "The coffee runs over the scoop and it stays dry, matt and sharp-edged; or a hollow forms on a part of the scoop the stream never reached; or the coffee darkens the glass while the scoop stays untouched."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One scoop in one glass; matter goes from the scoop into the liquid.",
+      "fail": "The scoop grows; or a second scoop appears; or the scoop vanishes while still large; or the glass's level drops with nothing taken out."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass's shape, the coffee's colour where it is unmixed and the surroundings stay the same.",
+      "fail": "The glass changes shape; or the coffee changes colour away from where the cream mixes in; or items around the glass rearrange."
+    }
+  ]
+}

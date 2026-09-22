@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0037",
+  "caption": "A loud table saw in a workshop is switched on, and the screws in a jar on the bench begin to rattle and shift.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A workshop bench with a table saw and a jar of screws."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The saw is switched on: the blade starts to spin or a switch is thrown."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The screws in the jar rattle and shift."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The screws stay inside the jar."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The saw starts first and the screws move after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The screws are still before the saw runs, shift only while the blade turns and stop when it stops.",
+      "fail": "Screws move before the switch is thrown or the blade turns; or keep rattling after the blade has stopped; or the jar slides while the screws inside stay frozen in place."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The rattling rearranges the screws: they settle a little differently and do not spring back to the old arrangement.",
+      "fail": "The blade runs, the jar visibly shakes and the screws hold their exact pattern; or the screws return to their old arrangement after the saw stops; or screws climb the jar wall and stay pressed to it above the heap."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Screws that hop fall back down; the heap stays at the bottom of the jar.",
+      "fail": "Screws hang in the air inside the jar; or the heap floats up; or screws stick to the lid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The jar is rigid glass, the screws rigid metal and the bench rigid.",
+      "fail": "The jar bulges; or screws bend; or the jar's wall flexes like film; or the bench top ripples."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One jar with a steady count of screws; one saw; nothing passes through the glass or the table.",
+      "fail": "Screws appear outside the jar; or the jar duplicates or vanishes; or screws pass through the glass; or the blade passes through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jar's label and shape, the saw's colour and the wall behind stay the same.",
+      "fail": "The jar changes shape or label; or the saw changes colour; or the wall behind changes."
+    }
+  ]
+}

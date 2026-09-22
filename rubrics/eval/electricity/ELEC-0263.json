@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0263",
+  "caption": "A cordless drill running on a bench slows and stops as its battery runs flat, and it only twitches when the trigger is pulled again.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cordless drill running on a bench."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The drill slows and stops."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The trigger is pulled again."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The drill only twitches."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "No cord runs from the drill."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is running, slowing, stopped, trigger pulled, twitch."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The slowing runs one way from running to stopped; the drill does not speed up again on its own.",
+      "fail": "The drill speeds up again after slowing; or stops and restarts at full speed with nothing touched; or runs faster than before after the stop; or the chuck spins with nothing pulling the trigger after the stop."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "When the trigger is pulled again the chuck turns only a little or briefly and stops; it does not run at full speed.",
+      "fail": "The trigger is pulled again and the drill runs at full speed to the end of the clip; or the twitch grows into steady spinning; or the trigger is pulled and the bit spins while the chuck stays still."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The chuck and bit spin about the drill's axis while running and stay on that axis as they slow.",
+      "fail": "The bit wobbles off its axis or bends; or the chuck turns while the bit stays still; or the whole drill body spins on the bench."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The drill stays on the bench as it runs and slows, apart from a small shift; it does not walk off.",
+      "fail": "The drill crawls across the bench and falls; or lifts into the air; or jumps when it stops; or bench items shift at the stop."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One drill with its bit and battery pack; nothing vanishes or passes through the bench.",
+      "fail": "The bit vanishes or a second bit appears; or the pack detaches and floats; or the drill duplicates; or the bit sinks into the bench."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The drill's colour, its markings and the bench stay the same.",
+      "fail": "The drill changes colour; or its markings change; or the bench's contents rearrange."
+    }
+  ],
+  "note": "The motor's sound is not judged; running and stopping are read from the chuck's visible spin and blur. Who pulls the trigger is not judged."
+}

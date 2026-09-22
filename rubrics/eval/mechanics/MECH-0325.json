@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0325",
+  "caption": "A red sock is tossed into a front-loading washing machine with other clothes and the door shut; through the glass window the sock is seen tumbling past among the clothes.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A red sock is tossed into a front-loading washing machine with other clothes."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The door is shut."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sock is seen through the glass tumbling past among the clothes."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The toss and the door shutting come first, then the tumbling."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The same sock appears at the window now and then, and never outside while the door is shut.",
+      "fail": "Two red socks appear; or the sock is outside; or it vanishes for good."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The clothes stay inside the drum behind the glass.",
+      "fail": "They pass through the glass; or through the door; or the drum passes through them."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The clothes tumble with the drum's turn.",
+      "fail": "They stay still while the drum turns; or move against it; or float."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The sock keeps its colour and shape.",
+      "fail": "It changes colour; or grows; or turns into another garment."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One machine keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The machine and the room stay the same.",
+      "fail": "The machine changes colour; or the room rearranges; or the door changes."
+    }
+  ]
+}

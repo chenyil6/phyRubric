@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0028",
+  "caption": "A block of frozen orange juice is dropped into a jug of hot water, and it melts, the orange colour spreading into the water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A jug of hot water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A block of frozen orange juice is dropped into the jug."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The block melts: it rounds off and shrinks."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Orange colour spreads through the water."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Streaks of orange run from the block."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the colouring follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The block only shrinks while the water grows more orange, and the colour does not gather back.",
+      "fail": "The block grows; or the water clears again while the block is still shrinking; or the colour draws back into the block; or the block regains a sharp corner."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The colour in the water came out of the block, which loses matter and gains none.",
+      "fail": "A second block appears; or the block vanishes in a single frame while still large; or the water turns orange with no streaks leaving the block; or orange appears in the jug before the block is in."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The block floats or rests in the water and the orange streaks sink and spread from it; the surface stays level in the jug.",
+      "fail": "The streaks climb out of the water; or the block rises out of the water and hangs above it; or the surface tilts and stays tilted with the jug upright; or streaks rise from the jug's floor with no block there."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The block is a hard solid that rounds off as it melts and the juice mixes as a liquid that streaks and blends; the water closes around the block.",
+      "fail": "The block bends or sags as one lump; or the juice moves as a solid mass through the water; or the block crumbles to dry powder; or the water holds a dent around the block like a solid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One jug and one block; the block stays in the water and passes through nothing.",
+      "fail": "The block passes through the jug's wall; or the jug changes shape; or the block passes out through the jug's base; or the block merges with the jug's handle."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jug's shape and markings and the surroundings stay the same.",
+      "fail": "The jug changes colour; or its markings change; or items around the jug rearrange."
+    }
+  ]
+}

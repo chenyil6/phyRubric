@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0128",
+  "caption": "A lit sparkler stands upright in a cake, throwing off a spray of bright sparks that fade as they fall.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lit sparkler stands upright in a cake."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Sparks spray out from the sparkler's burning point."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sparks fade as they travel."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The burning point is part-way down the wire."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The wire above the burning point is dark."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The sparks travel away from the sparkler."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sparks fly outward from the burning point and their paths bend downward, going dark before or as they land.",
+      "fail": "The sparks rise steadily and gather above the sparkler; or hang in the air; or lie on the cake glowing like lamps for the rest of the clip; or curve upward after leaving the wire."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Each spark fades within a short flight and none accumulate, and the sparkler is one wire.",
+      "fail": "Sparks persist as fixed bright dots; or a glowing pile builds on the cake; or sparks appear in the air far from the sparkler; or a second sparkler appears already lit."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The burning point only travels down the wire and the spent wire above it stays dark.",
+      "fail": "The burning point climbs back up the wire; or a dark part of the wire lights up again; or the burning point jumps to a new place on the wire; or the spent wire turns back to fresh coating."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The sparks come from the burning point and the wire behind it is spent.",
+      "fail": "The sparks come from a part of the wire that is still coated and unburnt; or the sparks come from the wire's tip while the burning point is elsewhere; or the sparkler burns with no sparks leaving it at all."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One sparkler in one cake; the wire stays a straight wire and the cake keeps its shape.",
+      "fail": "The wire bends into another shape; or the sparkler passes through the cake and out below; or a second wire appears; or the cake changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cake's icing away from the sparkler, the plate and the table stay the same.",
+      "fail": "The icing changes colour; or the plate changes pattern; or items on the table rearrange."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0175",
+  "caption": "The last candle on a dinner table is blown out, and the table falls into darkness.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "The last candle on a dinner table is lit."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is blown out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The table falls into darkness."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The room stays dark afterwards."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The warm light on the table disappears with the flame.",
+      "fail": "The table stays lit with the flame out; or goes dark before the flame; or another light appears."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The room stays dark afterwards.",
+      "fail": "The candle relights; or the room brightens with no source; or the light flickers back."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The flame goes out with the breath.",
+      "fail": "It goes out with no breath; or leans toward the breath; or stays lit through the puff."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The smoke rises.",
+      "fail": "It sinks; or hangs; or flows sideways with no draught."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One candle.",
+      "fail": "A second candle appears; or it vanishes; or the flame becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The table setting stays the same.",
+      "fail": "Items rearrange; or the cloth changes; or the candle changes."
+    }
+  ],
+  "note": "The breath is the trigger; the person is not judged."
+}

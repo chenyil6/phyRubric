@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0238",
+  "caption": "A blanket is thrown over a wooden chair, and the shape of the chair shows through the blanket.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A blanket is thrown over a wooden chair."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The blanket settles on the chair."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The chair's shape shows through the blanket."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The throw comes first and the settling follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The blanket settles onto the back and seat and hangs down at the edges.",
+      "fail": "It floats; or hangs upward; or stays in the air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The blanket's bumps match the chair beneath, and the chair itself is not seen through the fabric.",
+      "fail": "The bumps do not match the chair; or the chair is visible through the blanket as if it were transparent; or the chair changes shape."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The soft cloth drapes and folds.",
+      "fail": "It is rigid; or stretches; or tears."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The blanket lies on the chair, not through it.",
+      "fail": "It passes through the chair; or the chair passes through the blanket; or it sinks into the seat."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One blanket and one chair keep their number.",
+      "fail": "The blanket duplicates; or the chair vanishes; or the blanket turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blanket's pattern and the room stay the same.",
+      "fail": "The pattern changes; or the room rearranges; or the floor changes."
+    }
+  ]
+}

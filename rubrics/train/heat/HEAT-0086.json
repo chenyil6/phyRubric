@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0086",
+  "caption": "Breath is blown onto a cold window pane, and a patch of fog appears on the glass and then fades.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A window pane is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Breath is blown onto it: a face or mouth near the glass, or visible breath."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A patch of fog appears on the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The fog fades again."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fog is a rounded patch localised where the breath lands."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Appearing comes first, fading after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog appears during the exhale, then thins and shrinks until gone; once clear it stays clear without another breath.",
+      "fail": "The patch grows after the breath has stopped; or comes back without another breath; or flickers on and off; or moves across the glass."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The fog is a haze on the glass surface: it hides what is behind it only where it lies, and the same view returns as it clears.",
+      "fail": "The fogged patch hides objects that are missing when it clears, or new objects appear behind it; or the fog detaches from the glass and drifts as a cloud."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The breath produces the fog: the patch appears in front of the mouth during the exhale.",
+      "fail": "Breath is blown at the glass and it stays clear; or the fog appears far from where the breath lands."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fog is fine condensation: a matte haze that thins evenly.",
+      "fail": "The patch hardens into frost; or peels off as a film; or turns opaque white like paint."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The window, its frame and whoever breathes keep their shape and number; nothing passes through the glass.",
+      "fail": "The face or a hand passes through the glass; or the pane changes size; or a second pane appears; or the face deforms."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The frame, the view outside and the glass's colour stay the same throughout.",
+      "fail": "The frame changes colour; or the view outside jumps; or the glass tints."
+    }
+  ],
+  "note": "The breath is kept because it is the moisture source. The person is judged only as the origin of the breath; face and expression are not judged."
+}

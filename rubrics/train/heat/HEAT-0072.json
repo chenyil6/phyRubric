@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0072",
+  "caption": "A glowing piece of metal is plunged into a bucket of water, and a cloud of steam bursts up from the bucket.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glowing piece of metal."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The metal is plunged into a bucket of water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A cloud of steam bursts up from the bucket."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The metal loses its glow in the water."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The metal glows before it enters the water."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The plunge comes first and the steam follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The metal goes downward into the water while the steam bursts upward out of the bucket, spreading and thinning.",
+      "fail": "The metal rises out of the water with nothing lifting it; or the steam pours down the bucket's sides and pools; or the steam sinks below the bucket; or the cloud hangs as a fixed shape without rising."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The burst comes as the metal enters and then eases, and the metal's glow only fades while it is in the water.",
+      "fail": "The steam bursts before the metal reaches the water; or the metal glows brighter in the water; or the glow goes and comes back while the metal stays submerged; or the burst grows stronger the longer the metal sits in the water."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The change is in the metal: it goes from glowing to dark and stays dark in the water.",
+      "fail": "The water glows rather than the metal; or the metal's glow moves onto the bucket; or the metal's glow spreads through the water as a glowing cloud."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water boils hard around the metal and closes over it, the metal stays a rigid piece, and the steam is a soft cloud that spreads.",
+      "fail": "The water stays glassy still as the glowing metal enters; or the metal bends or melts in the water; or the steam holds a fixed rigid shape; or the water stands in a heap above the bucket's rim."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One piece of metal and one bucket; the metal goes into the water and stays there.",
+      "fail": "The metal vanishes in the water; or a second piece appears; or the metal passes through the bucket's wall; or the water's level jumps with nothing added."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bucket, the tongs and the surroundings stay the same.",
+      "fail": "The bucket changes colour; or the tongs change shape; or items around the bucket rearrange."
+    }
+  ]
+}

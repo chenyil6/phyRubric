@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0082",
+  "caption": "The top cup of a tower of stacked plastic cups on a carpet is swiped sideways, and the top of the tower falls.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tower of stacked plastic cups stands on a carpet."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The top cup is swiped sideways."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The top of the tower falls."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Only the top cup is swiped."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The swipe comes first and the fall follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The struck cup flies off in the direction of the swipe, and the cups below wobble and some fall.",
+      "fail": "The struck cup flies against the swipe; or the whole tower drops straight down as one piece; or the bottom cups fall while the top stays."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Cups that leave the tower fall to the carpet and stay there.",
+      "fail": "A cup hangs in the air; or rises; or lands and bounces back onto the tower."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Cups move only after being struck or losing their support.",
+      "fail": "Cups fall before the swipe; or a landed cup slides with nothing touching it; or a lower cup jumps off untouched while the tower above it stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The plastic cups are light and stiff: they bounce and roll on the carpet without breaking.",
+      "fail": "A cup shatters; or squashes flat and stays flat; or the carpet ripples like water."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The cups keep their number and pass through nothing.",
+      "fail": "Cups vanish or multiply; or a cup passes through another; or a cup turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cups' colours, the carpet and the room stay the same.",
+      "fail": "A cup changes colour or size; or the carpet changes pattern between frames; or the room rearranges."
+    }
+  ]
+}

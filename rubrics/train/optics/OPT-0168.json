@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0168",
+  "caption": "A stage's lights are turned up gradually, and the dark set becomes visible piece by piece as the brightness rises.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stage is dark."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its lights are turned up gradually."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The set becomes visible piece by piece as the brightness rises."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Shadows appear away from the lamps."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The scene brightens smoothly with no jumps and does not brighten before the lights come up.",
+      "fail": "It jumps to full; or flickers; or it is lit before the lights rise."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Shadows appear away from the lamps.",
+      "fail": "Shadows point toward the lamps; or in several directions under one lamp; or there are none."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing on the set moves.",
+      "fail": "Set pieces move; or the lit area wanders; or a lamp swings."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "Colours emerge without changing hue.",
+      "fail": "The set changes colour as it brightens; or the lights change colour; or the backdrop changes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The set pieces keep their number.",
+      "fail": "A piece vanishes; or appears; or a lamp duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The set stays the same.",
+      "fail": "Pieces rearrange; or the backdrop changes; or the stage changes."
+    }
+  ],
+  "note": "Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

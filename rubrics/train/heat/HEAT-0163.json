@@ -1,0 +1,77 @@
+{
+  "id": "HEAT-0163",
+  "caption": "A strip of tissue paper is held above a hot radiator, and it lifts and flutters upward in the warm air.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A strip of tissue paper is held above a radiator."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The strip lifts."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The strip flutters."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The strip hangs still when it is held away from the radiator."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strip rises rather than hanging straight down."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The strip lifts and dances only while it is over the radiator and hangs still when held away from it.",
+      "fail": "The strip flutters while held well away from the radiator with nothing else moving; or the strip hangs dead still directly over the radiator; or the strip flutters before it is brought over the radiator; or the strip keeps dancing after it has been taken away and held elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Over the radiator the strip is carried upward and its free end rises; away from it the strip hangs downward.",
+      "fail": "The strip hangs straight down while directly over the radiator; or the strip is pushed downward toward the radiator; or the strip lifts while held below the radiator; or the strip stands out stiffly sideways with nothing blowing it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The strip is a limp light sheet that ripples along its length and folds over.",
+      "fail": "The strip stays a rigid flat board as it rises; or stretches as it lifts; or holds a fixed wave shape frozen in place; or stands stiff like a wire."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Other light things in the rising air over the radiator stir too, and the strip's flutter is strongest where the air leaves the radiator.",
+      "fail": "The strip flutters hard while dust or a curtain right beside it hangs dead still; or the flutter is strongest far out to the side of the radiator; or the strip stirs while nothing else in the rising air does.",
+      "precondition": "Other light items such as dust, a curtain or a second strip are in the rising air."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One strip; it stays one piece and does not pass through the radiator.",
+      "fail": "The strip vanishes; or a second strip appears; or the strip passes through the radiator's fins; or the strip merges with the curtain."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The radiator's paint, the wall and the room stay the same.",
+      "fail": "The radiator changes colour; or the wall changes colour; or items in the room rearrange."
+    }
+  ],
+  "note": "Whoever holds the strip is not judged."
+}

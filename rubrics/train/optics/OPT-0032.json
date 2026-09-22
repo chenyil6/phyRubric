@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0032",
+  "caption": "A book is held up between a lamp and a wall, and a rectangular shadow appears on the wall; as the book is tilted the shadow narrows.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A book is held up between a lamp and a wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A rectangular shadow appears on the wall."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The book is tilted."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The shadow narrows."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tilt comes first and the shadow narrows with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow appears where the book blocks the light and changes shape as the book turns.",
+      "fail": "The shadow stays a full rectangle when the book is edge-on; or it changes with the book still; or it is missing with the lamp on."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow is the book's outline: a rectangle face-on, narrowing to a bar edge-on.",
+      "fail": "It is a different shape from the book; or it widens as the book turns edge-on; or it splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow is on the wall behind the book, away from the lamp.",
+      "fail": "It is between the book and the lamp; or on the ceiling; or it is missing."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow moves only as the book moves.",
+      "fail": "It drifts with the book still; or it moves before the book; or it lingers after the book is lowered."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One book, one lamp and one shadow.",
+      "fail": "A second shadow appears under one lamp; or the book vanishes; or the shadow becomes solid; or the hand passes through the book."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The book's cover and the wall stay the same, and the shadow stays dark.",
+      "fail": "The cover changes; or the shadow turns coloured; or the wall changes."
+    }
+  ],
+  "note": "The hand holding the book is the minimal trigger; the person is not judged."
+}

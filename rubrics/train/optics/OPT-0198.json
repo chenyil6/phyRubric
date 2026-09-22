@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0198",
+  "caption": "A little green food colouring is poured into a bowl of white cake batter and stirred, and the batter turns pale green.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bowl of white cake batter is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Green food colouring is poured in."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The batter is stirred."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The batter turns pale green."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Green streaks spread with each stir and even out."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The pale green spreads from the colouring through the batter with each stir, streaks evening out and never gathers back; coloured areas stay coloured.",
+      "fail": "The batter returns to its original colour where it was pale green; or the pale green gathers back into the colouring; or the pale green appears before the colouring arrives."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The result is pale green, and un-reached batter keeps its original colour.",
+      "fail": "The batter turns a colour other than pale green; or the un-reached batter changes; or the pale green is darker than the colouring itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The batter behaves as it should: streaks and swirls where stirred or spread, settling where it flows.",
+      "fail": "The batter is rigid and unmarked; or it flows like water when it is a paste; or it bounces like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The batter moves only where stirred or where the pale green flows.",
+      "fail": "The batter swirls by itself; or the pale green spreads faster than stirring or flow carries it; or the container moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The amount of batter stays the same and the container keeps its shape.",
+      "fail": "The container fills or empties on its own; or a second container appears; or the colouring passes through the container."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The container and the background stay the same.",
+      "fail": "The container changes colour; or the background rearranges; or the tool changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0079",
+  "caption": "Frozen french fries are dropped into a pot of hot oil, and the oil erupts in bubbles and steam.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot of hot oil."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Frozen fries are dropped into the oil."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The oil erupts in bubbles."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Steam rises from the pot."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bubbling is fiercest right after the fries go in."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the eruption follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The bubbling starts as the fries enter, is fiercest at first and then eases; it does not build up long after.",
+      "fail": "The oil bubbles hard before the fries reach it; or the bubbling grows steadily with nothing added; or the bubbling stops and then starts again by itself; or the steam runs back into the oil."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The oil is a thin liquid that throws up a mass of fine bubbles and foam and closes round the fries, and the fries stay firm sticks.",
+      "fail": "The oil stays a flat mirror as the frozen fries enter; or the oil sets solid; or a fry melts away into the oil; or the foam stands as a rigid dome above the pot."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The fries fall downward into the oil and sink or ride at the surface while the bubbles and steam rise.",
+      "fail": "A fry rises out of the oil and hangs above it; or bubbles sink toward the pot's floor; or the steam sinks over the rim and pools on the hob; or the oil climbs the pot's wall and stays above its level."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The fries show the oil: the frost on them goes and the oil's level rises as they go in.",
+      "fail": "The fries sit in the bubbling oil with frost still on them to the end of the clip; or the oil's level drops as the fries go in; or the oil erupts in a part of the pot no fry reached."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The fries in the pot are the fries that were dropped, and the oil stays in the pot.",
+      "fail": "A fry vanishes; or new fries appear with none added; or oil passes through the pot's wall; or the oil's level jumps with nothing added."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the hob and the oil's colour stay the same.",
+      "fail": "The pot changes colour; or the oil changes colour; or items around the hob rearrange."
+    }
+  ],
+  "note": "The fries browning as they cook is chemistry and is not judged."
+}

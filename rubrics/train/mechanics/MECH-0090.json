@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0090",
+  "caption": "A cyclist comes to a stop at a light with both feet still on the pedals, the bicycle leans to one side, and cyclist and bike fall over together.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cyclist comes to a stop at a light."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Both feet stay on the pedals."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bicycle leans to one side."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Cyclist and bike fall over together."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "A traffic light is visible."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The stop comes first, then the lean, then the fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The lean grows steadily into a fall toward the low side, and nothing holds them up.",
+      "fail": "The bike stays upright unsupported with the feet on the pedals; or it falls toward the high side; or it rights itself."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The lean starts once the bike has stopped, and nothing pushes it.",
+      "fail": "The bike topples while still rolling forward; or it slides sideways; or it falls before stopping."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Cyclist and bike go down together as one and land beside where they stopped.",
+      "fail": "The bike falls and the cyclist stays upright in the air; or they separate and fly apart; or they fall forward over the handlebars."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The frame stays rigid, and the rider's body folds on landing.",
+      "fail": "The frame bends; or the rider lands rigid as a statue; or the bike bounces high."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The cyclist and the bike keep their number and shape, and neither passes into the other or the road.",
+      "fail": "The cyclist merges with the bike; or a limb detaches; or the bike passes through the road."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cyclist's clothing, the bike and the street stay the same.",
+      "fail": "The clothing changes colour; or the bike changes design; or the street rearranges."
+    }
+  ],
+  "note": "Balance scene: the cyclist is kept because the body is the load. Riding skill and how the fall looks are not judged."
+}

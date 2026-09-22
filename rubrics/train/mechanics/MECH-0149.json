@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0149",
+  "caption": "A half-full fish tank resting on a table is tilted to one side, and the water climbs the low side and spills over the rim.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A half-full fish tank rests on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is tilted to one side."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water rises on the low side."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Water spills over the rim."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tank is half-full before the tilt."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The tilt comes first, then the climb, then the spill."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The water surface stays level while the tank tilts, so the water piles up at the low side.",
+      "fail": "The water tilts with the tank keeping a fixed shape; or it climbs the high side; or it rises evenly all round."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The spill comes from the low side only and starts when the rim reaches the surface.",
+      "fail": "It spills from the high side; or it spills before the rim reaches the water; or it spills while the tank is level."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Spilled water runs down the outside of the tank and onto the table.",
+      "fail": "The outside stays dry; or water appears on the table with none spilling; or drips rise."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water sloshes and settles as a liquid, and the tank stays rigid.",
+      "fail": "The water stays a rigid block; or the glass bends; or the water beads into balls."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tank, and water leaves it only over the rim.",
+      "fail": "Water passes through the glass; or the tank duplicates; or the water level rises while spilling."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tank, its contents and the table stay the same.",
+      "fail": "The water changes colour; or the gravel inside rearranges; or the table changes."
+    }
+  ]
+}

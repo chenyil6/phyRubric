@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0146",
+  "caption": "A handful of dry pine needles is fed to a small fire, and they crackle and flare up brightly before the flames settle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A small fire burns."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A handful of dry pine needles is dropped onto it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flames flare up brightly."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flames settle back down."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The needles turn to ash."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the flare follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flare comes as the needles land and dies back to the size the fire was, and the needles only char to ash.",
+      "fail": "The flare comes before the needles land; or ash gathers back into whole needles; or the flare dies back and rises again with nothing added; or the flare keeps growing for the rest of the clip."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The flare rises upward from the fire and the ash and fragments settle down.",
+      "fail": "The flare points downward into the fire pit; or the needles are blown upward and stay aloft as they burn; or the ash rises and stays in the air; or the flames hang below the wood."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The needles catch where they land on the flames and the flare comes from that spot.",
+      "fail": "The needles land and nothing flares at all; or the flare rises from a part of the fire where no needles landed; or the needles sit in the flames and stay pale and whole to the end of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The needles are fine dry stalks that curl, blacken and crumble, and the fire's logs stay solid.",
+      "fail": "A needle melts and drips; or the needles stay straight and pale while glowing; or the needles fuse into one lump; or a log flows like a liquid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The needles that were dropped are the needles that burn, and the fire's logs keep their number.",
+      "fail": "The needles vanish in mid-air before landing; or new needles appear on the fire with none dropped; or a log vanishes; or a needle passes through a log and out below."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fire's stones, the ground and the surroundings stay the same.",
+      "fail": "The stones rearrange; or the ground changes texture; or the background changes between frames."
+    }
+  ],
+  "note": "The crackle is sound and is not judged. Who feeds the fire is not judged."
+}

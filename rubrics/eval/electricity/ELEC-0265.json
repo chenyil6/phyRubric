@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0265",
+  "caption": "The handle of a wind-up torch is cranked, and the bulb brightens as the handle turns and fades when the cranking stops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wind-up torch with a crank handle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The handle is cranked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bulb brightens as the handle turns."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The bulb fades when the cranking stops."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bulb is dark before the handle moves."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark, crank and glow, stop and fade."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bulb lights while the handle turns and fades within a moment of the handle stopping; it does not glow with the handle still.",
+      "fail": "The handle turns and the bulb stays dark to the end of the clip; or the bulb is lit before the handle moves; or the bulb stays bright long after the handle has stopped; or the bulb brightens after the cranking has stopped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The handle turns only while the hand cranks it; it does not spin on its own or keep turning after release.",
+      "fail": "The handle spins by itself; or keeps turning after the hand lets go; or the torch spins with the handle; or the handle turns the other way by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once the cranking stops the fade runs one way to dark and does not brighten again without cranking.",
+      "fail": "The bulb brightens again with the handle still; or pulses on and off with the handle still; or goes dark and relights by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "While lit, the bulb throws a beam: the surface it points at brightens with it and dims as it fades.",
+      "fail": "The lens glows while the surface it points at stays as dark as before; or the surface brightens while the lens is dark; or the lit patch lies behind the torch."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One torch with one handle; the handle stays attached; the hand passes through nothing.",
+      "fail": "The handle detaches and floats; or a second torch appears; or the hand passes through the torch; or the torch changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The torch's colour and the surroundings stay the same apart from the light.",
+      "fail": "The torch changes colour; or the handle changes shape; or the surroundings rearrange."
+    }
+  ],
+  "note": "The hand is kept because cranking is the caption's cause; the person is otherwise not judged."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0013",
+  "caption": "A handful of shredded cheese is scattered onto a hot skillet, and the shreds melt and flow together into a bubbling layer.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A skillet."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Shredded cheese is scattered onto the skillet."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shreds melt: they lose their strand shape."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The melted cheese flows together into one layer."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The layer bubbles at its edges."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The scattering comes first, then the melting, then the merging."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The shreds only soften, slump and join, and the layer's reach only grows; separate strands do not come back.",
+      "fail": "A melted patch separates into dry strands again; or the layer sets firm and matt in the hot pan; or the strands stiffen and stand up again; or the layer alternates between joined and separate."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "Melting cheese slumps, goes glossy, stretches and pools as a thick liquid that bubbles, and the shreds soften before they join.",
+      "fail": "The shreds run as thin as water; or they shatter dry; or the layer stands as a rigid sheet that keeps its shape when the pan is tilted; or the shreds keep hard square edges while glossy and flowing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The melted cheese runs into the pan's low places and spreads across its floor.",
+      "fail": "The cheese climbs the pan's wall and stays above the floor; or a run travels uphill; or melted cheese lifts off the pan and hangs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shreds melt where they touch the pan: they go glossy from underneath and the layer forms on the pan's floor.",
+      "fail": "Shreds high on a heap melt while those on the pan stay dry and separate; or a pool spreads on a part of the pan no cheese touched; or bubbles rise through the layer while the cheese is still dry strands."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The cheese in the layer is the cheese that was scattered, and it stays in the pan.",
+      "fail": "The layer grows with no cheese added; or shreds vanish with none joining the layer; or cheese appears outside the pan with none crossing the rim; or the pan changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan's surface and the hob around it stay the same.",
+      "fail": "The pan changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ],
+  "note": "Browning of the cheese is chemistry and is not judged."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0123",
+  "caption": "Tongs reach into a bakery's glass counter from the open back and lift out a pastry that was visible through the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pastry is visible through a bakery's glass counter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Tongs reach in from the open back."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They lift out the pastry."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pastry lifted is the one that was seen."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tongs enter from behind, not through the pane."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The pastry is clearly visible through the glass and the tongs lift the one that was seen.",
+      "fail": "The glass hides the pastry; or a different pastry is lifted; or the pastry changes as it is lifted."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The tongs enter from behind rather than through the pane.",
+      "fail": "The tongs pass through the glass; or the pastry passes through the glass; or the glass passes through the tongs."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The pastry moves only in the tongs.",
+      "fail": "It rises by itself; or slides; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The tongs are rigid and the pastry firm.",
+      "fail": "The tongs bend like rubber; or the pastry flows; or the glass ripples."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The pastries keep their number apart from the one lifted.",
+      "fail": "A pastry vanishes; or appears; or the lifted one duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The counter and the pastries stay the same.",
+      "fail": "The pastries change colour; or the counter changes; or the shop rearranges."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

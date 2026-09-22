@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0166",
+  "caption": "A marshmallow in a microwave swells to several times its size and then collapses when the door opens.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A marshmallow sits in a microwave."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The marshmallow swells."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The marshmallow grows to several times its size."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The door is opened."
+    },
+    {
+      "id": "S5",
+      "weight": "core",
+      "check": "The marshmallow collapses into a sticky blob."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The swelling comes first and the collapse follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The marshmallow only swells while the microwave runs and only collapses after the heat stops; it does not swell again with the door open.",
+      "fail": "The marshmallow shrinks while the microwave still runs; or it swells again after the door is open with nothing running; or the swelling and collapsing repeat with the door open; or it collapses before the door has moved."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The marshmallow stays one mass of foam as it swells, its surface stretching, and it slumps into a lower wider blob when it collapses.",
+      "fail": "The marshmallow keeps its sharp cylinder edges while several times its size; or it swells into a smooth sphere with a hard shell; or it splits into separate marshmallows as it swells; or it turns into another object."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The swollen marshmallow slumps downward when it collapses and stays on the plate.",
+      "fail": "The marshmallow lifts off the plate as it swells and hangs in the air; or it collapses upward into a tall spike; or it rises when the door opens; or it slumps sideways off the plate with nothing pushing it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The marshmallow behaves as a softening foam: it stretches, goes glossy and stays sticky and slack after collapsing.",
+      "fail": "The marshmallow shatters when it collapses; or snaps back to its first firm shape; or runs off the plate as a thin liquid; or bounces on the plate like rubber."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One marshmallow on one plate in one microwave; it swells and slumps rather than appearing or vanishing.",
+      "fail": "A second marshmallow appears; or the marshmallow vanishes; or it passes through the plate; or it passes through the microwave's door."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plate, the microwave's interior and the marshmallow's colour stay the same.",
+      "fail": "The plate's pattern changes; or the interior changes; or the marshmallow changes colour."
+    }
+  ],
+  "note": "Browning of the marshmallow is chemistry and is not judged."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0301",
+  "caption": "A train pulls out of a station, and a suitcase standing loose in the aisle tips over toward the rear of the carriage.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A suitcase stands loose in the aisle of a train carriage."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The train pulls out of the station."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The suitcase tips over toward the rear of the carriage."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The train moves first and the tip follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "It begins to tip as the train starts, not before, and lies still once down.",
+      "fail": "It tips before the train moves; or tips with no motion; or rights itself and tips again."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It falls toward the back of the carriage.",
+      "fail": "It falls toward the front; or sideways; or up."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It falls to the floor and stays.",
+      "fail": "It hangs; or rights itself; or floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The case is rigid and thuds.",
+      "fail": "It folds; or bounces high; or melts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One suitcase keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The suitcase and the carriage stay the same.",
+      "fail": "The case changes colour; or the seats change; or the view outside jumps."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0282",
+  "caption": "A cat trots along a night street beneath a row of streetlamps, brightening as it passes under each lamp and fading in the dark stretches between.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cat trots along a night street beneath a row of streetlamps."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It brightens as it passes under each lamp."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It fades in the dark stretches between."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Its shadow points away from the nearest lamp and swaps sides as it passes beneath."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The cat is brightest directly under each lamp and dimmest midway between, repeating for each lamp.",
+      "fail": "It is evenly lit along the street; or brightest between lamps; or dark under a lamp."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The brightening and fading alternate with the lamps.",
+      "fail": "It stays bright; or stays dark; or flickers unrelated to position."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Its shadow points away from the nearest lamp and swaps sides as it passes beneath.",
+      "fail": "The shadow points toward the lamp; or stays on one side; or there is none."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lamps stay lit and still.",
+      "fail": "A lamp goes out; or moves; or flickers."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One cat keeps its shape.",
+      "fail": "It splits; or turns into another animal; or a second cat appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cat's coat and the street stay the same.",
+      "fail": "The coat changes colour rather than brightness; or the street rearranges; or the lamps change."
+    }
+  ],
+  "note": "The cat is self-driven; only the light on it is judged. Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

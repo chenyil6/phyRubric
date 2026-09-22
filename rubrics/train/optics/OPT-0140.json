@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0140",
+  "caption": "A pair of binoculars is held up to the camera toward a distant bird, and the bird appears large and close through the lenses.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pair of binoculars is held up to the camera toward a distant bird."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bird appears large and close through the lenses."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The bird seen beside the binoculars is small."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The enlarged view follows where the binoculars point."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The enlarged view appears only through the eyepieces and follows where the binoculars point.",
+      "fail": "The bird is large beside the binoculars; or small through them; or the enlarged view stays fixed as they turn."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The bird is the same bird, enlarged.",
+      "fail": "A different bird appears; or the bird changes; or the image is mirrored."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The binoculars move only with the hands.",
+      "fail": "They float; or turn by themselves; or jump."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The binoculars are rigid.",
+      "fail": "They bend; or the lenses ripple; or go opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pair of binoculars and one bird.",
+      "fail": "They duplicate; or the bird vanishes; or the hands pass through them."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The binoculars and the scenery stay the same.",
+      "fail": "They change colour; or the scenery rearranges; or the bird changes colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged. The bird is self-driven."
+}

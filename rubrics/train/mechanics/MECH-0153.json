@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0153",
+  "caption": "A bucket of water is emptied over a concrete sidewalk, and the water spreads out in a thin sheet and runs toward the lower side.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bucket of water is emptied over a concrete sidewalk."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The water spreads out in a thin sheet."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It runs toward the lower side."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The emptying comes first and the spread and run follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The sheet spreads outward from where it lands, thin, leaving the concrete wet and dark.",
+      "fail": "The water stays in a heap; or it holds the bucket's shape; or it beads into balls."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It flows downhill toward the lower side and pools there.",
+      "fail": "It runs uphill; or spreads evenly on a plainly sloped surface; or rises."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The wet patch only grows and darkens.",
+      "fail": "It shrinks back; or the concrete dries instantly; or the wet patch appears before the water."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bucket empties by being tipped, and the water moves only by flowing.",
+      "fail": "Water leaps from an upright bucket; or the sheet stops dead mid-slope; or water moves back into the bucket."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bucket, and water comes only from it.",
+      "fail": "Water appears where none was poured; or the bucket duplicates; or water passes through the bucket."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bucket and the sidewalk stay the same.",
+      "fail": "The bucket changes colour; or the sidewalk's slabs shift; or the surroundings rearrange."
+    }
+  ]
+}

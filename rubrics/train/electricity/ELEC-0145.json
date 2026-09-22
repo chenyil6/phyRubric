@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0145",
+  "caption": "A kitchen knife is brought up to a magnetic strip on the wall, and the knife snaps onto the strip and stays there.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A magnetic knife strip on a wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A kitchen knife is brought up to the strip."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The knife snaps onto the strip."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The knife stays on the strip after the hand withdraws."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The blade lies flat against the strip."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is approach, snap, hold."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Over the last small gap the blade is drawn onto the strip and stays pressed to it with nothing else holding it once the hand withdraws.",
+      "fail": "The knife stops a gap short of the strip and hangs there; or drops when the hand lets go; or slides down the strip; or bounces off the strip and falls."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The knife hangs on the vertical strip; if it comes off it falls straight down.",
+      "fail": "The knife floats away from the strip; or drifts upward along the wall; or hangs a gap from the strip without touching; or a fallen knife rises back to the strip."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The snap is toward the strip along the line from the blade to it, and the knife stops on contact.",
+      "fail": "The knife jumps away from the strip; or darts sideways past it; or slides toward and away several times before settling; or the knife keeps moving along the strip after landing."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Once on the strip the knife stays put; the strip stays fixed to the wall; other knives on the strip do not move.",
+      "fail": "The knife creeps along the strip after release; or rotates by itself; or the strip shifts on the wall; or other knives on the strip drop or move."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One knife on one strip; the blade touches the strip's surface and does not sink into it or the wall; the hand passes through nothing.",
+      "fail": "The blade sinks into the strip or the wall; or a second knife appears; or the knife vanishes; or the hand passes through the blade or the strip."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The knife's handle colour, the strip and the wall stay the same.",
+      "fail": "The handle changes colour; or the blade changes length or shape; or the strip changes place or colour."
+    }
+  ]
+}

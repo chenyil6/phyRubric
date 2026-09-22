@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0057",
+  "caption": "Noodles cook in a pot of boiling water, bobbing and swirling with the bubbles.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot of boiling water sits on a hob."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Noodles are in the water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The noodles bob and swirl."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Bubbles rise around the noodles."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Steam rises above the pot."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The noodles move only as the churning water carries them, and they settle when the churn eases.",
+      "fail": "A noodle darts across the pot with the water still; or a noodle travels against the swirl; or the noodles swirl in water with no bubbles rising; or a noodle leaves the water and hangs above it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The boil keeps up while the noodles turn: bubbles keep coming from below and steam keeps rising.",
+      "fail": "The bubbling stops and then starts again by itself; or the steam runs back into the pot; or bubbles sink from the surface downward; or the surface goes glassy still while bubbles stream below it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The noodles are limp strands that bend and coil in the water and drape over each other, and the water closes round them.",
+      "fail": "The noodles stay straight and rigid like sticks while tumbling in the boil; or a noodle snaps into pieces that stay stiff; or the noodles fuse into one solid mass; or the water holds a dent around a noodle."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The noodles ride in the water, sinking or rising with the churn, and the bubbles and steam rise.",
+      "fail": "A noodle hangs motionless in mid-water while the rest churn; or a noodle rises out of the water and stays above it; or bubbles sink toward the pot's floor; or the steam sinks and pools around the pot."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The noodles keep their number and stay in the pot; nothing appears or vanishes.",
+      "fail": "A noodle vanishes; or new noodles appear with none added; or a noodle passes through the pot's wall; or two noodles merge into one thicker strand."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the hob and the water stay the same.",
+      "fail": "The pot changes colour; or the water turns a colour; or the hob's knobs move by themselves."
+    }
+  ],
+  "note": "The noodles softening as they cook is expected; how soft they get is not judged."
+}

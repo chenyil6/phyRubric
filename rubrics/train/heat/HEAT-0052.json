@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0052",
+  "caption": "A pot of soup simmers on a stove, with small bubbles breaking the surface and steam rising.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot of soup sits on a hob."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Small bubbles break the soup's surface."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Steam rises from the pot."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The surface shifts gently rather than churning hard."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bubbles come up from below."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The bubbles rise from below to the surface and burst there, and the steam rises from the surface upward.",
+      "fail": "Bubbles sink from the surface downward; or hang still in the soup; or the steam sinks over the pot's rim and pools on the hob; or the steam streams straight down."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The simmer keeps up: bubbles keep arriving and steam keeps leaving, and puffs that have left keep going.",
+      "fail": "The steam runs back into the pot; or a puff retreats toward the surface; or the surface goes glassy still while bubbles keep streaming below it; or the bubbling stops and then starts again by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Each bubble shows at the surface: it breaks through and leaves a spreading ring.",
+      "fail": "A bubble reaches the surface and the surface stays glassy; or rings spread from spots where no bubble arrived; or the surface shifts while nothing rises below it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The soup behaves as a liquid: it shifts, ripples and finds its level, with any solid pieces bobbing in it.",
+      "fail": "The surface holds a fixed shape while bubbles burst through it; or the soup stands in a heap above the rim; or the soup moves as a solid mass; or pieces in the soup stay fixed in place while the liquid moves around them."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pot of soup; the soup stays in the pot.",
+      "fail": "Soup passes through the pot's wall; or the level jumps up with nothing added; or a second pot appears; or the pot changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the hob and the soup's colour stay the same.",
+      "fail": "The pot changes colour; or the soup changes colour; or the hob's knobs move by themselves."
+    }
+  ]
+}

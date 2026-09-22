@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0208",
+  "caption": "A child does a forward roll on a gym mat and comes up sitting.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A child is on a gym mat."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "She does a forward roll."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "She comes up sitting."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The roll comes first and the sitting follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "She tucks her head and rolls over her back, her body bends at the joints, and her limbs stay attached.",
+      "fail": "A limb detaches; or her body folds mid-torso like cloth; or her head passes through her body."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "She rolls along the surface of the mat, not into it.",
+      "fail": "She sinks into the mat; or passes through the floor; or the mat passes through her."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The roll carries her forward along the mat and she ends further along.",
+      "fail": "She rolls backward; or ends where she started after a forward roll; or jumps up to sitting with no roll between."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "She comes down onto the mat through the roll and sits.",
+      "fail": "She hovers; or rises; or hangs upside down."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Her limbs keep their number and she stays one child.",
+      "fail": "A second figure appears; or she merges with the mat; or a limb vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Her clothing and the mat stay the same.",
+      "fail": "Her clothing changes colour; or the mat changes; or the gym rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Gait, posture, style and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

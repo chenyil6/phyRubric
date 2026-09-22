@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0181",
+  "caption": "Smoke rises from a house chimney on a calm winter evening and thins out as it climbs.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Smoke comes out of a house chimney."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It rises."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It thins out as it climbs."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The evening is calm, so the column stays near vertical."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The column drifts upward.",
+      "fail": "It sinks to the ground; or hangs at chimney height; or flows down the roof."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "It widens and thins with height and does not gather back.",
+      "fail": "It gathers back into the chimney; or gets denser higher up; or forms a solid shape."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "On a calm evening the column drifts gently with no sharp turns.",
+      "fail": "It whips sideways; or jumps; or a piece detaches and drifts as a block."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The smoke is diffuse, translucent and swirling.",
+      "fail": "It is a solid shape; or a liquid; or a rigid stick."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One chimney is the source.",
+      "fail": "Smoke appears elsewhere; or the chimney duplicates; or the smoke vanishes all at once."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The house, the roof and the sky stay the same.",
+      "fail": "The house changes; or the roof rearranges; or the sky changes colour."
+    }
+  ]
+}

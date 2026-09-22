@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0159",
+  "caption": "Dumplings that have cooked in a pot of boiling water bob up to the surface one by one.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot of boiling water: bubbles or steam are visible."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Dumplings are in the water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "At least one dumpling rises from below to the surface during the clip."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Dumplings that have risen float and bob at the surface."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "They surface one by one, at different moments, not all together."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "A dumpling that rises comes up from below, reaches the surface and stays there, partly submerged and bobbing; dumplings still cooking stay down.",
+      "fail": "A dumpling that has surfaced goes back down to the bottom; or hangs motionless in mid-water; or rises out of the water into the air; or sits wholly on top of the water like a ball on a sheet."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The change is one way and staggered: the number of dumplings at the surface only grows, and they arrive at different moments. Bobbing at the surface is small up-and-down motion, not sinking.",
+      "fail": "The same dumpling alternates between the bottom and the surface; or the count at the surface drops with none removed; or all rise at exactly the same instant like a block."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The dumplings stay whole, soft-edged parcels that jostle in the boiling water; bubbles rise around them.",
+      "fail": "A dumpling dissolves or bursts into liquid; or dumplings bounce off the water surface like balls; or the water surface holds them up like a solid sheet."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Dumplings move only by rising or drifting with the rolling water; they do not dart or swap places.",
+      "fail": "A dumpling shoots across the pot; or spins fast; or jumps out of the water with nothing lifting it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The dumplings visible at the end are the ones that were in the pot; none appears from nothing, merges or passes through the pot.",
+      "fail": "A dumpling pops into existence in open water or in the air; or two dumplings merge into one; or a dumpling vanishes mid-frame; or a dumpling passes through the pot wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, stove and dumpling colours stay the same apart from gradual cooking changes.",
+      "fail": "The pot changes size or colour; or the dumplings change colour instantly; or the stove knobs change."
+    }
+  ],
+  "note": "The caption does not say the dumplings are dropped in; the clip may open with them already submerged, and a clip with no drop and no sinking phase passes SA. Bobbing (small up-and-down while staying at the top) is not sinking."
+}

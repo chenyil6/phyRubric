@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0154",
+  "caption": "A lantern is carried through a dark campsite, and the pool of light moves along the ground with it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lantern is carried through a dark campsite."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pool of light moves along the ground with it."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The tents brighten as it passes and darken behind it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lit area travels with the lantern and the tents brighten as it passes and darken behind.",
+      "fail": "The lit area stays put while the lantern moves; or tents stay lit after it has passed; or light appears ahead of it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The light moves only with the lantern.",
+      "fail": "It drifts with the lantern still; or moves the opposite way; or jumps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The pool is one soft patch around the lantern.",
+      "fail": "It is a sharp beam; or splits; or floods the whole site."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Shadows point away from the lantern.",
+      "fail": "They point toward it; or in several directions; or there are none."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lantern and one pool of light.",
+      "fail": "A second pool appears with one lantern; or the lantern vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tents and the ground stay the same.",
+      "fail": "A tent changes colour rather than brightness; or moves; or the ground changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged. Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0014",
+  "caption": "A car driving along an icy street brakes hard, its wheels lock, and it slides on past the stop line before it comes to a halt.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car drives along an icy street."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It brakes hard."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its wheels lock."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It slides on past the stop line and comes to a halt beyond it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The stop line painted on the road is visible."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The braking comes first, then the locked wheels, then the slide."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Once the wheels lock the car keeps going the way it was travelling and slows gradually, coming to rest past the line.",
+      "fail": "The car stops on the spot as soon as the wheels lock; or it keeps sliding at its old speed and never comes to rest; or it slides backward."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The car slides along its own line on the ice; nothing turns it or sets it going again.",
+      "fail": "The car swerves sharply on the open, straight road with nothing striking it; or it moves off again after coming to rest; or it gathers speed while the wheels are locked."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The wheels are visibly still while the body slides on over the ice.",
+      "fail": "The wheels keep rolling with the road while the car is plainly skidding; or the wheels turn backward while the car slides forward; or the wheels lock and the car halts in the same instant."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Loose snow and ice chips thrown up at the tyres fall back to the road.",
+      "fail": "Spray hangs in the air after the car has stopped; or it is flung forward ahead of the car; or ice chips rise away from the road and keep rising.",
+      "precondition": "Loose snow, slush or spray is visibly disturbed at the tyres."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car keeps its shape on the road and stays outside every other solid thing.",
+      "fail": "The car vanishes or a second one appears; or it passes through another vehicle or a kerb; or it changes into a different car mid-slide."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour, the road markings and the street stay the same.",
+      "fail": "The car changes colour; or the stop line moves along the road between frames; or the buildings alongside rearrange."
+    }
+  ]
+}

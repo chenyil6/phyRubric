@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0028",
+  "caption": "A hand is held in front of a projector lens, and a dark hand shape covers part of the picture on the screen.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A projector shows a picture on a screen."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A hand is held in front of the lens."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A dark hand shape covers part of the picture on the screen."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The dark shape is much larger than the hand."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The dark shape disappears when the hand is withdrawn."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The dark shape matches the hand and changes the instant the fingers move.",
+      "fail": "It is a different shape from the hand; or it stays fixed while the fingers move; or it changes while the hand is still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The dark shape appears only while the hand is in the beam and disappears the moment the hand is withdrawn.",
+      "fail": "It lingers after the hand is gone; or it appears with the hand outside the beam; or it appears before the hand enters."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The dark shape does not move on its own.",
+      "fail": "It drifts across the screen with the hand still; or it moves before the hand."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The dark shape is much larger than the hand and has a soft edge.",
+      "fail": "It is smaller than the hand; or has a hard geometric edge unlike a hand; or it splits into unrelated pieces."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One hand and one dark shape.",
+      "fail": "A second dark shape appears under one beam; or the hand loses a finger; or the shape becomes solid; or the hand passes through the lens."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The picture and the screen stay the same, and the shape stays dark.",
+      "fail": "The picture changes with no click; or the shape turns bright; or the screen changes."
+    }
+  ],
+  "note": "The hand is the object blocking the beam; the person is not judged."
+}

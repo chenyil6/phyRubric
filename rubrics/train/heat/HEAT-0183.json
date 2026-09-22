@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0183",
+  "caption": "A frozen block of soup sits in a pan over heat, sliding around on a thin layer of melt and shrinking as the liquid pools around it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A frozen block of soup sits in a pan on a hob."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The block slides on a thin layer of melt."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The block shrinks."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A pool of liquid grows around it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The block loosens from the pan's floor."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The melting comes first and the sliding follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The block only shrinks while the pool grows, and the pool does not freeze again on the hot pan.",
+      "fail": "The block grows; or the pool draws back into the block; or the pool freezes solid around the block on the hot pan; or the block alternates between larger and smaller."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The block glides only as the pan is tilted or moved and as it rides on the melt, and it slows and stops when the pan is still.",
+      "fail": "The block darts across a level pan with nothing touching it; or spins fast on the spot; or climbs the pan's wall and hangs there; or slides uphill in a tilted pan."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The block settles downward as it melts and the pool spreads outward and downhill across the pan.",
+      "fail": "The block lifts off the pan and hangs; or the pool climbs the pan's wall and stays; or the pool gathers uphill of the block in a tilted pan; or melted soup lifts off the pan."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The block melts where it touches the hot pan: its underside wets first and the pool spreads from beneath it.",
+      "fail": "The block melts from its top while its underside stays frosted and dry; or a pool spreads on a part of the pan the block never touched; or the block slides about on a dry pan with no melt under it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One block in one pan; the soup goes only from the block into the pool.",
+      "fail": "The block vanishes while still large; or a second block appears; or the pool's level jumps with nothing added; or soup passes through the pan's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the hob and the soup's colour stay the same.",
+      "fail": "The pan changes colour; or the soup changes colour; or items around the hob rearrange."
+    }
+  ]
+}

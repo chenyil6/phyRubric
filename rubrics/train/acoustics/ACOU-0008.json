@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0008",
+  "caption": "A single string of an upright bass is plucked, and the thick string swings visibly from side to side before settling.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An upright bass is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "One string is plucked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The plucked string swings visibly from side to side."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The string settles to stillness."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Only a single string is plucked; the others are not."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is pluck, swing, settle."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The string hangs as a sharp, still line until the finger pulls it; it swings from the pluck and only then; the other strings stay still.",
+      "fail": "The string swings before the finger reaches it; or a different string swings from the one plucked; or all the strings swing together; or the string goes still and swings again with the hand away from it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The swing is widest right after the release and shrinks steadily until the string hangs straight.",
+      "fail": "The swing widens again after it has begun to shrink; or holds the same width for the whole clip; or the string stops dead from a wide swing to a straight line."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The string stays anchored at the nut and the bridge: the swing is widest between them and both ends stay put.",
+      "fail": "An end of the string lifts off the bridge or the nut; or the swing is widest at the bridge with the middle still; or the string sags and hangs loose like a rope; or the string stretches visibly longer."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bass's body, neck and bridge stay still; only the plucked string swings.",
+      "fail": "The neck bends with the pluck; or the body rocks on its endpin; or the bridge slides across the top."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The same set of strings throughout; the plucked string stays one string and passes through nothing.",
+      "fail": "A string appears or vanishes; or the plucked string splits into two; or the string passes through the fingerboard or the finger; or the bass changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bass's varnish, the fingerboard and the tuning pegs stay the same.",
+      "fail": "The body changes colour; or the fingerboard's markings change; or a tuning peg moves while untouched."
+    }
+  ]
+}

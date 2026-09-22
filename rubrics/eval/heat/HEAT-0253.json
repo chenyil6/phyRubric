@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0253",
+  "caption": "Snow scraped off a windshield lands on the warm bonnet of a car whose engine has just been running, and it melts into rivulets that run off the edge.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Snow lands on a car's bonnet."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The snow darkens and slumps where it touches the metal."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Water runs across the bonnet."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Water drips from the bonnet's edge."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bonnet reads as warm: bare or wet where snow has melted."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The landing comes first and the melting follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The snow only darkens, slumps and shrinks while the wet area grows; it does not freeze again on the warm metal.",
+      "fail": "The snow turns white and firm again on the bonnet; or a rivulet freezes into ice on the warm metal; or the wet area shrinks while snow still sits on it; or the snow alternates between firmer and softer."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The meltwater runs downhill across the bonnet and drips from its lowest edge.",
+      "fail": "A rivulet runs up the bonnet toward the windscreen; or water gathers at the bonnet's high edge and stays; or a drip leaves the edge and rises; or the rivulets run sideways and stay level on a sloping bonnet."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The snow melts where it touches the warm metal: it wets from underneath and the rivulets come from the slumping heap.",
+      "fail": "The snow melts from its top while its underside stays white and dry; or rivulets run on a part of the bonnet no snow reached; or the snow slumps while the metal around it stays dry."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The snow is a wet crumbling solid that slumps and the melt is a thin liquid that runs in streaks.",
+      "fail": "The heap melts into a thick syrup that stands in a dome; or the snow lifts as one solid slab; or the snow bends and flows as one soft lump; or the melt beads up and rolls off without wetting the paint."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The water on the bonnet came from the snow; the snow loses matter and gains none.",
+      "fail": "The heap grows; or new snow appears on the bonnet with none landing; or water appears at the bonnet's edge with none running there; or the snow vanishes at a stroke while still white and deep."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's paint, its badge and the surroundings stay the same.",
+      "fail": "The car changes colour; or the badge changes; or the background changes between frames."
+    }
+  ]
+}

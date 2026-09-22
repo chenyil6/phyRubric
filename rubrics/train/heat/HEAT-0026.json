@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0026",
+  "caption": "A bag of frozen peas is emptied into a pot of hot water, and the frost on them vanishes and the clumps break apart.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot of hot water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Frozen peas are emptied into the pot from a bag."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The frost on the peas disappears."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The frozen clumps break apart into separate peas."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Steam rises from the water."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is emptied in, frost gone, clumps apart."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The frost only disappears and the clumps only break apart; loose peas do not join back up.",
+      "fail": "Loose peas gather back into a frozen clump; or frost grows back on the peas in the hot water; or a clump breaks apart and forms again; or the frost comes and goes."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The peas that fall in are the peas in the pot; none appears or vanishes.",
+      "fail": "Peas vanish from the pot; or peas appear in the water with none falling there; or two peas merge into one; or the pot's contents rise with nothing added."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The peas fall downward from the bag into the water and sink or ride at the surface, and the clumps drop to the pot's floor.",
+      "fail": "Peas travel upward out of the bag; or hang in the air between bag and pot; or a pea rises out of the water and stays above it; or the peas gather on the pot's rim."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The clumps are frozen lumps that hold together until they loosen and then let go pea by pea, and the peas stay firm round grains.",
+      "fail": "A clump melts into a smooth paste; or the peas squash flat in the water; or a clump stays a single rigid lump while frost-free and tumbling in the boil; or the peas dissolve away."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The pot keeps its shape, the bag stays a bag and nothing passes through the pot's wall.",
+      "fail": "The peas pass through the pot's wall; or the pot changes shape; or the bag turns into another object; or a second pot appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the bag's printing and the hob stay the same.",
+      "fail": "The pot changes colour; or the bag's printing changes; or items around the hob rearrange."
+    }
+  ],
+  "note": "The peas' colour brightening as they cook is not judged."
+}

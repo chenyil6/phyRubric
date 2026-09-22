@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0042",
+  "caption": "A putted golf ball rolls across the green, hits the back of the cup's rim, pops up, and drops into the hole.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A putted golf ball rolls across a green."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It hits the back of the cup's rim."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It pops up."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It drops into the hole."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "It strikes the far side of the rim rather than dropping straight in."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The roll comes first, then the rim, then the pop up, then the drop in."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The hop begins where the ball meets the far rim, and it is a short hop rather than a long flight.",
+      "fail": "The ball pops up before it reaches the cup; or it is flung high across the green at the rim; or it rolls over the hole with no change of motion at all."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "After the hop the ball falls back down and drops below the level of the green into the hole.",
+      "fail": "The ball hangs above the cup after the hop; or it rises away from the hole and keeps rising; or it settles on top of the hole as if the opening were solid ground."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The ball enters the cup through its opening; the turf and the rim stay solid.",
+      "fail": "The ball passes through the turf beside the hole; or it sinks into the green where there is no hole; or it passes through the edge of the rim rather than over it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ball stays a hard sphere and the turf and the rim stay firm where it touches them.",
+      "fail": "The ball squashes at the rim and stays squashed; or the turf ripples like cloth as the ball rolls over it; or the rim bends where the ball strikes it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one hole are there throughout.",
+      "fail": "The ball vanishes before reaching the cup or a second one appears; or a second hole appears on the green; or the ball turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour, the flag and the green stay the same.",
+      "fail": "The ball changes colour as it rolls; or the hole moves to a different part of the green between frames; or the surroundings of the green rearrange."
+    }
+  ]
+}

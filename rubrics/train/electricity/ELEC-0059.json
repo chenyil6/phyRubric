@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0059",
+  "caption": "The battery is unlatched from an e-bike, and the display on the handlebars goes dark.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An e-bike with a battery and a display on the handlebars."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The battery is unlatched from the bike."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The display goes dark."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The display is lit before the battery is unlatched."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is lit, unlatch, dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The display goes dark at the moment the battery is unlatched or lifted from its contacts, and only then.",
+      "fail": "The battery is off the bike and the display still shows; or the display goes dark before the battery is touched; or the display goes dark with the battery still latched and untouched; or the bike's lights stay on with the battery off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once dark, the display stays dark while the battery is off; it comes back only when the battery is clicked in again.",
+      "fail": "The display comes back with the battery off; or flickers; or the battery latches itself back in; or the display lights while the battery lies on the ground."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The battery is a heavy block that stays in the hand or is set down; if dropped it falls.",
+      "fail": "The battery floats free of the bike; or hangs in the air; or rises from the hand."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bike stays where it stands as the battery is unlatched; the wheels do not turn.",
+      "fail": "The bike rolls or tips as the battery comes out; or a wheel turns by itself; or the handlebars turn."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One battery and one bike; the battery leaves its cradle as a whole block and passes through nothing; the hand passes through nothing.",
+      "fail": "The battery passes through the frame; or a second battery appears; or the battery vanishes; or the frame changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bike's colour, the battery's casing and the background stay the same apart from the display.",
+      "fail": "The bike changes colour; or the battery changes shape or colour; or the background rearranges."
+    }
+  ]
+}

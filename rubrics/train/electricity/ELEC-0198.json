@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0198",
+  "caption": "A sticker is peeled from its backing sheet, and the thin backing curls toward the sticker and clings to it instead of lying flat.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sticker on its backing sheet."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sticker is peeled from the backing."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The thin backing curls toward the sticker."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The backing clings to the sticker instead of lying flat."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The backing is thin and flexible."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The peel comes first and the curl and cling follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the sticker lifts, the backing near it curls up toward the sticker and clings to it where they come close; it has to be pulled apart and does not drop flat straight away.",
+      "fail": "The backing lies flat and still as the sticker lifts, never rising toward it; or the backing curls away from the sticker; or the backing hangs a gap from the sticker without touching; or the backing drops flat the instant the sticker is off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The backing is a thin flexible sheet that curls and bends; the sticker is a thin flat film that keeps its shape and its printed face.",
+      "fail": "The backing stays rigid like a card; or stretches out like rubber; or the sticker stretches or tears as it lifts; or the sticker flows like liquid."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Parts of the backing not stuck to the sticker hang downward or lie on the table; if let go the backing falls.",
+      "fail": "A free part of the backing rises or floats with nothing near it; or the backing climbs up the hand; or the backing hangs in the air after the sticker is moved away."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The table and other items stay still while the sticker is peeled; the backing moves only toward the sticker or with the hand.",
+      "fail": "The backing slides across the table by itself; or other papers on the table jump; or the backing flaps repeatedly with nothing touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sticker and one backing sheet; both stay whole and pass through nothing.",
+      "fail": "The sticker duplicates or vanishes; or the backing splits into pieces; or the sticker passes through the backing; or the backing merges with the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sticker's printed design, the backing's colour and the table stay the same.",
+      "fail": "The sticker's design changes; or the backing changes colour; or the table changes."
+    }
+  ]
+}

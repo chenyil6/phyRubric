@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0074",
+  "caption": "A horse gallops toward a low fence, jumps over it, and lands on the far side.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A horse gallops toward a fence."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It jumps over the fence."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It lands on the far side."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The fence is low."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The gallop comes first, then the jump, then the landing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The horse leaves the ground before the fence, arcs over it, lands beyond it and carries on forward.",
+      "fail": "The horse takes off after passing the fence; or it changes direction in mid-air; or it lands behind where it took off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "After the peak the horse comes down, front legs first, without hovering.",
+      "fail": "The horse hovers above the fence; or it rises again after starting down; or it lands and bounces high."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The gallop carries into the jump, and after landing the horse runs on.",
+      "fail": "The horse stops dead on landing; or slides forward on planted legs; or speeds up in mid-air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The legs fold and extend through the jump, and the turf takes the landing.",
+      "fail": "The horse lands rigid; or it sinks into the ground; or the turf ripples like water."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One horse keeps its legs and shape, and it does not pass through the fence.",
+      "fail": "A leg detaches or vanishes; or the horse passes through a rail; or a second horse appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The horse's coat, the fence and the field stay the same.",
+      "fail": "The coat changes colour; or the fence changes height between frames; or the field rearranges."
+    }
+  ],
+  "note": "The horse is the projectile; its body is the physics. Jumping form is not judged."
+}

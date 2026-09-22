@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0178",
+  "caption": "Yellow and blue paint squeezed side by side on a palette are stirred together with a brush, and the mixture turns green.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Yellow paint and blue paint sit side by side on a palette."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A brush stirs them together."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mixture becomes green."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Green appears where the two colours meet, streaky at first."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The colours are separate first, then stirred, then green."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Green appears only where yellow and blue are stirred together and spreads as stirring continues; mixed areas stay mixed.",
+      "fail": "Green appears before the brush touches the paints; or a mixed area separates back into yellow and blue; or the green fades and returns; or green shows up in a spot the brush never reached."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The mixture is green, between the two parents; unstirred yellow stays yellow and unstirred blue stays blue.",
+      "fail": "The mixture comes out red, purple, brown or white; or the unstirred yellow turns another colour; or the parents swap colours."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The paints behave as thick liquids: they streak and smear under the brush, mounds flatten, and the brush leaves marks.",
+      "fail": "The paint stays as rigid blobs the brush passes through unchanged; or it flows like water and floods the palette; or it bounces like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Paint moves only where the brush pushes it.",
+      "fail": "Paint slides or swirls by itself; or the blobs move toward each other before the brush arrives; or the brush marks move after the brush has gone."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Paint is conserved: the amount does not grow or vanish, and the brush and palette keep their shape.",
+      "fail": "Paint appears from nowhere or the palette empties; or a second brush appears; or the brush passes through the palette; or the palette changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The palette, the brush handle and the background stay the same.",
+      "fail": "The palette changes colour or shape; or the brush handle changes; or background objects shift."
+    }
+  ]
+}

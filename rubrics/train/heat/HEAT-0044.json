@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0044",
+  "caption": "A car's frosted side mirror is switched to heat on a cold morning, and the frost turns to droplets in a patch that spreads across the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car's side mirror covered in frost."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A clear patch appears on the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The frost turns to droplets in that patch."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The patch spreads across the glass."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "No hand or scraper touches the glass."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The patch starts in one area and grows from there."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The clearing only spreads: the clear area grows outward from where it started and cleared glass stays clear.",
+      "fail": "Frost grows back over glass that had cleared; or the clear patch shrinks; or the glass clears and frosts in turn; or the frost thickens while the patch spreads."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The frost goes by turning wet: the white crust darkens to droplets at the patch's edge before the glass is clear behind it.",
+      "fail": "The frost goes and leaves the glass dry; or the whole mirror clears at once with no spreading edge; or the patch clears while the frost's edge stays a sharp white line with no wet band."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Droplets that grow large enough run downward over the glass and gather at its lower edge.",
+      "fail": "A droplet runs up the mirror; or a droplet leaves the glass and rises; or water gathers along the mirror's top edge and stays; or a run travels sideways and stays level with the car still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The mirror stays where it is set and the car stays still; only the frost changes.",
+      "fail": "The mirror swings or folds with nothing touching it; or the car rocks; or the mirror's glass turns in its housing by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mirror in one housing; the frost turns to water on the glass and nothing passes through it.",
+      "fail": "The mirror's glass vanishes; or a second mirror appears; or water appears inside the housing with none running there; or the mirror changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's paint, the mirror's housing and the surroundings stay the same.",
+      "fail": "The car changes colour; or the housing changes shape or colour; or the background behind the car changes between frames."
+    }
+  ]
+}

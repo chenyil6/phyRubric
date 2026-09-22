@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0191",
+  "caption": "A glass thermometer is lowered into a mug of hot water, and its red column climbs.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass thermometer."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The thermometer is lowered into a mug of hot water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its red column climbs."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The column slows as it settles."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bulb is in the water."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The lowering comes first and the climbing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The column starts to rise once the bulb is in the water and not before.",
+      "fail": "The column rises before the bulb reaches the water; or the bulb sits in the hot water and the column stays where it was to the end of the clip; or the column rises while the thermometer is held in the air; or the column falls as the bulb enters the hot water."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The column only rises while the bulb stays in the hot water and then holds; it does not fall back while the water stays hot.",
+      "fail": "The column falls back while the bulb stays in the hot water; or the column rises and falls in turn; or the column jumps up and down between frames; or the column rises past the tube's top and out of it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The column is a continuous thread of liquid in the tube that moves along it, and the glass stays rigid.",
+      "fail": "The column breaks into separate beads that move apart; or the column moves as a solid rod that sticks out of the tube; or the glass bends in the hot water; or the column spreads sideways to fill the tube unevenly."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The thermometer hangs or stands in the mug with its bulb down and the water lies level around it.",
+      "fail": "The thermometer floats out of the water and hangs above it; or the water climbs the thermometer's tube and stays; or the water's surface tilts and stays tilted with the mug level; or the thermometer rises bulb first out of the mug."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One thermometer in one mug; the glass stays whole and the column stays inside it.",
+      "fail": "The thermometer breaks and the liquid spills; or a second thermometer appears; or the column's liquid passes out through the glass; or the thermometer passes through the mug's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The thermometer's scale, the mug and the surroundings stay the same.",
+      "fail": "The scale's markings change; or the mug changes pattern; or items around the mug rearrange."
+    }
+  ],
+  "note": "How far the column climbs is not judged, only that it rises after the bulb is wetted and does not fall back."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0159",
+  "caption": "A travel chess board with magnetic pieces is tilted steeply, and the pieces stay in their squares while a coin placed on the board slides off.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A travel chess board with chess pieces standing on its squares."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The board is tilted steeply."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pieces stay in their squares as the board tilts."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A coin placed on the board slides off it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tilt is steep: the board ends up far from level."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The coin slides while the board is tilted, not before it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the board tilts, and while it is held tilted, every piece stays on its own square, standing on the board with nothing but the board touching it.",
+      "fail": "Pieces slide down the board as it tilts; or topple and roll toward the lower edge; or drop off the board; or lift away from the board and hang in the air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The coin slides down the slope toward the board's lower edge and drops from that edge, falling downward.",
+      "fail": "The coin moves up the slope; or slides off the board's upper edge; or leaves the lower edge and travels upward or stays in the air; or begins to slide and then halts part-way down with nothing touching it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The pieces move only with the board: none changes square, spins or hops on its own, and the board moves only while the hands tilt it.",
+      "fail": "A piece changes square while the board is held still; or a piece turns in place with nothing touching it; or the board tilts further or rights itself with no hand moving it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The coin travels in one line down the slope, leaves the edge, lands below the board and comes to rest.",
+      "fail": "The coin zigzags across the slope or reverses direction before reaching the edge; or slides off and returns onto the board; or, after landing, moves back toward the board."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The pieces and the coin keep their number and shapes throughout; nothing sinks into the board or passes through it.",
+      "fail": "A piece vanishes or a new piece appears; or two pieces merge or a piece turns into a different piece; or the coin passes through the board or a piece; or the coin vanishes before reaching the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pieces' colours, the board's squares and the coin's face stay the same.",
+      "fail": "A piece changes colour; or the board's squares change pattern; or the coin changes colour or size."
+    }
+  ]
+}

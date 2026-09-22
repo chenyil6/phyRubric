@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0050",
+  "caption": "A car tries to pull away from a snow-covered kerb, its rear wheels spin in place and throw up snow, and the car stays almost where it is.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car at a snow-covered kerb tries to pull away."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its rear wheels spin in place."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Snow is thrown up by the spinning wheels."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The car stays almost where it is."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "It is the rear wheels that spin."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The wheels start spinning first and the snow is thrown up afterwards."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The wheels turn fast while the car creeps forward at most a little, never surging away as the spin would carry it on dry road.",
+      "fail": "The car surges away at the speed its wheels are turning; or the car moves while the wheels are still; or the wheels spin with no snow or slush disturbed beneath them."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Snow thrown by the spinning wheels is flung backward, away from the way the car is trying to go, and falls back to the road.",
+      "fail": "Snow is flung forward ahead of the car from the driven wheels; or it rises away from the road and keeps rising; or the spray hangs in the air after the wheels have stopped."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The car moves only while the wheels are driving and stays put once they stop.",
+      "fail": "The car creeps forward with its wheels still; or it rolls backward along the level street with nothing pushing it; or it sets off again after the wheels have stopped turning."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The snow under the wheels is loose: it is churned, packed and thrown, while the tyre keeps its shape.",
+      "fail": "The snow stays a smooth unbroken sheet under the spinning wheel; or the snow acts as a solid slab that the wheel grips at once; or the tyre takes the shape of the rut and stays that shape."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car keeps its wheels and its shape at the kerb.",
+      "fail": "The car vanishes or a second one appears; or a wheel comes away and goes on spinning by itself; or the car passes through the kerb."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour, the snow cover and the street stay the same.",
+      "fail": "The car changes colour; or the snow on the road behind the car changes depth between frames; or the buildings alongside rearrange."
+    }
+  ]
+}

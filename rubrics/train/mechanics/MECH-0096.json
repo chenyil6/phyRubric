@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0096",
+  "caption": "A basket of wet laundry is hung from the middle of a clothesline strung between two posts, and the line sags under the weight.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A clothesline is strung between two posts."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A basket of laundry is hung from the middle of the line."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The line sags under the weight."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The laundry is wet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The basket is hung first and the sag follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The sag forms as the basket is hung, deepest at the basket, with the line running straight from basket to each post.",
+      "fail": "The line stays level with the basket hanging; or it sags in a rounded droop away from the basket; or it stretches longer and longer."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sag is downward and the basket hangs below the line's ends.",
+      "fail": "The line bows upward; or the basket rises; or the basket hangs out sideways."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The posts lean inward or the line tugs at them as the weight comes on.",
+      "fail": "The posts lean outward; or the line goes slack while the basket hangs; or the basket falls with the line intact and unbroken."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The basket swings a little and settles, and nothing else moves.",
+      "fail": "The basket swings harder and harder; or it slides along the line untouched; or the line moves before the basket is hung."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One line, one basket and two posts keep their number.",
+      "fail": "The basket vanishes or a second appears; or the line passes through the basket; or a post disappears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The basket, the laundry and the yard stay the same.",
+      "fail": "The basket changes colour; or the laundry changes; or the yard rearranges."
+    }
+  ]
+}

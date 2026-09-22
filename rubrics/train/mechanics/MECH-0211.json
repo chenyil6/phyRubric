@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0211",
+  "caption": "A bath towel is folded in half and then in half again.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bath towel is laid out."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is folded in half."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It is folded in half again."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The first fold comes before the second."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The towel gets smaller and thicker with each fold, and the halves lie flat on each other.",
+      "fail": "The towel stays the same size after folding; or it grows; or a fold produces more towel."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The towel bends along the fold line as soft cloth and does not stiffen or stretch.",
+      "fail": "It is rigid like cardboard; or it stretches; or it snaps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It folds only as the hands move it.",
+      "fail": "It folds on its own; or unfolds by itself; or slides."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The layers lie on each other, not through each other.",
+      "fail": "A layer passes through another; or the hands pass through the towel; or the towel passes through the surface beneath."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One towel keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The towel's colour and the surface stay the same.",
+      "fail": "The towel changes colour; or the surface changes; or the background rearranges."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged."
+}

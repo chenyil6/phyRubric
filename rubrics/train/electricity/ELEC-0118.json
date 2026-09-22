@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0118",
+  "caption": "A subway train pulls out of a station, and a flash of sparks lights the tunnel where its shoe touches the rail.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A subway train in a station."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The train pulls out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A flash of sparks appears at track level beside the train."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flash lights the tunnel or platform for an instant."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flash is low down, where the train meets the rail, not on the roof."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is brief and at track level where the train's shoe meets the rail; the light it throws on the tunnel walls comes and goes with it.",
+      "fail": "The flash stays lit at one spot for the rest of the clip; or the tunnel walls stay lit after the flash is gone; or sparks appear at track level with the train standing still and nothing moving; or the sparks appear on the train's roof or windows."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One train, one track; the flash leaves nothing behind on the rail or platform.",
+      "fail": "Glowing dots stay on the rail or the platform after the flash; or a second train appears; or a carriage vanishes; or the rail ends in mid-air."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Spark fragments fall to the track bed and go dark within a short distance.",
+      "fail": "Sparks rise and gather above the train; or hang in the air; or lie glowing on the platform for the rest of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The flash lights its surroundings: the tunnel wall, the platform edge and the train's side near the flash brighten during it, from the flash's direction.",
+      "fail": "The sparks are visible while the tunnel wall beside them stays as dark as before; or the far end of the platform lights up while the wall beside the flash stays dark; or the tunnel lights up while no spark is present."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The train stays on its rails and passes through nothing; the platform and tunnel keep their shape.",
+      "fail": "The train passes through the platform edge or a pillar; or the carriages merge or split; or the tunnel wall changes shape; or the train sinks into the track bed."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The train's livery, the platform's signs and the tunnel stay the same apart from the flash.",
+      "fail": "The train changes colour; or the signs change lettering; or the tunnel changes colour permanently."
+    }
+  ],
+  "note": "The train is a powered vehicle; its acceleration is not judged."
+}

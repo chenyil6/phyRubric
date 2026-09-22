@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0105",
+  "caption": "A distant lightning bolt strikes the sea far out from a cliff, so small in the distance that it is over before the eye can follow it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cliff with the sea stretching out from it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lightning bolt strikes the sea far out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bolt is small and distant."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bolt is brief: it is over almost as soon as it appears."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bolt strikes the sea, not the cliff or the shore."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The bolt and its flash are brief and gone; the sea around it is lit only during the flash and returns to dark.",
+      "fail": "The bolt stands as a steady lit line for the rest of the clip; or the sea keeps glowing where it struck; or the bolt fades in slowly; or the sky stays lit after the bolt is gone."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The cliff, the shore and the sea are the same across dark and lit frames; the flash reveals what was there.",
+      "fail": "Boats or rocks appear or vanish between dark and lit frames; or the cliff changes shape; or a glowing pillar stands on the sea after the flash; or a second bolt hangs frozen in the sky."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The bolt is a thin jagged line from cloud to sea, small with distance.",
+      "fail": "The bolt is a perfectly straight beam; or a smooth curve; or a wide glowing tube out of scale with its distance; or a bolt that hangs in mid-air touching neither cloud nor sea."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The flash lights the far sea and the cloud undersides around the bolt during the strike; the cliff and near shore brighten less or not at all.",
+      "fail": "The bolt is visible while the far sea and clouds stay as dark as before; or the near cliff lights up as brightly as the strike point; or the sea is lit while no bolt is present."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The sea stays water and the cliff stays rock; nothing passes through either.",
+      "fail": "The bolt continues below the sea surface as a lit line under the water; or the cliff becomes transparent; or the cliff face splits or moves; or the sea turns into solid ground."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sea, the cliff and the sky keep their colours apart from the flash.",
+      "fail": "The sea changes colour permanently; or the cliff changes colour; or the sky turns to daylight after the flash."
+    }
+  ]
+}

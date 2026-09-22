@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0297",
+  "caption": "A white delivery van drives along a street from beneath orange sodium lamps to beneath white LED lamps, and its paint looks amber and then white.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A white delivery van drives along a street."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It passes from beneath orange sodium lamps to beneath white LED lamps."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its paint looks amber and then white."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The colour changes as it passes from one kind of lamp to the next."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The van's colour follows the light falling on it: amber under the orange lamps and white under the white ones.",
+      "fail": "It looks white under the orange lamps; or amber under the white ones; or a colour neither lamp gives."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens as the van passes from one kind of lamp to the next.",
+      "fail": "It changes before reaching the new lamps; or long after; or changes with the van stopped under one kind."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lamps stay lit and still and the van drives steadily.",
+      "fail": "A lamp goes out; or the van jumps position; or the colour flickers under steady lamps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The van keeps its shape and markings.",
+      "fail": "It changes shape; or the markings change; or it turns into another vehicle."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One van.",
+      "fail": "It duplicates; or vanishes; or passes through a lamp post."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The street stays the same.",
+      "fail": "The buildings rearrange; or the road markings shift; or the lamps change shape."
+    }
+  ]
+}

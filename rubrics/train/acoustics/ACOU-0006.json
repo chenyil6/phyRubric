@@ -1,0 +1,82 @@
+{
+  "id": "ACOU-0006",
+  "caption": "A wine glass half full of water is tapped on the rim with a spoon, and the water surface inside breaks into fine ripples while the glass rings.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wine glass about half full of water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A spoon taps the rim of the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water surface breaks into ripples."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The ripples are fine and small, not a large slosh."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tap lands on the rim, not on the bowl or the stem."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The tap comes first and the ripples follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The water surface is flat and still until the spoon touches the rim; ripples appear at the tap and only then.",
+      "fail": "Ripples are on the surface before the spoon reaches the rim; or appear while the spoon is well away from the glass; or the spoon strikes the rim and the surface stays mirror-flat; or the water ripples again after settling with the spoon nowhere near."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The ripples are strongest right after the tap and fade steadily to a flat surface.",
+      "fail": "The ripples grow stronger after the tap with no second tap; or keep the same strength for the whole clip; or the surface goes flat and breaks up again on its own; or a fully rippled surface turns flat in a single instant."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ripples are a fine pattern on the water's surface; the glass stays a rigid vessel and the water stays inside it.",
+      "fail": "The glass bowl flexes or wobbles like rubber at the tap; or the water sloshes as one wave up the side of the bowl; or droplets fly out of the glass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The glass stands where it is; the rim tap leaves it in place and only the water surface moves.",
+      "fail": "The glass slides or rocks on its base at the tap; or tilts and holds the tilt; or moves across the surface it stands on with nothing touching it.",
+      "precondition": "The glass stands on a table or other surface rather than being held."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass, one spoon, the same amount of water; nothing passes through anything.",
+      "fail": "The spoon passes through the rim or into the bowl wall; or the water level jumps up or down; or a second glass appears; or the glass changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass's tint, the water's colour and the setting around them stay the same.",
+      "fail": "The water changes colour; or the glass's tint or pattern changes; or objects around the glass shift by themselves."
+    }
+  ],
+  "note": "The ringing is inaudible and is not judged; the ripples are its visible sign. The caption does not say whether the glass stands or is held, so P4 applies only when it stands on a surface."
+}

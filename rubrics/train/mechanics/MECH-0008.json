@@ -1,0 +1,82 @@
+{
+  "id": "MECH-0008",
+  "caption": "A boy takes a short run-up on a field, leaps forward off one foot, and after landing on both feet takes a few stumbling steps forward before he stops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A boy takes a run-up on a field."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "He leaps forward off one foot."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "He lands on both feet."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "He takes a few stumbling steps forward and comes to a stop."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The run-up is short rather than a long approach."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The run-up comes first, then the leap, then the landing, then the steps."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "He rises after the take-off, then comes down, falling quicker the nearer he gets to the ground.",
+      "fail": "He keeps rising until he leaves the frame; or he holds still at the top of the leap; or he drops straight down from the take-off point without ever rising."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "His flight carries him forward from where he took off, and the stumbling steps continue that way from the moment he lands.",
+      "fail": "He comes down behind where he took off, having travelled backward through the air; or he stumbles backward or sideways after landing; or he stops dead on the spot as his feet touch down."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Once in the air he keeps the course the leap gave him; he is carried along the ground only while his feet are driving him.",
+      "fail": "He changes direction in mid-air; or he gathers speed in mid-air; or he slides on across the grass with his feet planted and still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The grass flattens where he drives off and where he lands, and springs back or stays pressed.",
+      "fail": "Torn-up grass rises away and hangs in the air; or the ground ripples like water under his feet; or the turf stays untouched where he plainly drove off it.",
+      "precondition": "Grass or loose ground is visibly disturbed by his feet."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One boy keeps his limbs, his number and his shape, and he stays above the ground.",
+      "fail": "A limb stretches, detaches or vanishes; or he passes through the ground; or a second figure appears beside him; or his body morphs into another shape in mid-leap."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "His clothing, the field and the background stay the same.",
+      "fail": "His clothing changes colour; or the field markings shift between frames; or the background rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the boy is kept because his body is what carries the momentum. Athletic form, technique and how far he jumps are not judged; only the direction and order of the motion."
+}

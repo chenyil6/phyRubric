@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0265",
+  "caption": "The bleed valve on an old radiator is opened, and a hiss of steam escapes until water spurts out and the valve is shut.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bleed valve on a radiator is opened."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Steam escapes from the valve."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Water spurts from the valve."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The valve is shut and the escape stops."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The steam comes from the valve rather than elsewhere."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is open, steam, water, shut."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The steam and then the water come out of the valve while it is open and stop when it is shut.",
+      "fail": "Steam escapes from the valve while it is still shut tight; or the valve is opened and nothing comes out at all; or the escape carries on after the valve has been shut; or the water spurts before the valve is opened."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam rises from the valve and the spurted water arcs out and falls downward.",
+      "fail": "The steam sinks down the radiator and pools on the floor; or the water spurts upward and keeps climbing; or the steam pours downward through the radiator; or the water hangs in the air after leaving the valve."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The escape runs one way: steam first and then water, and it does not go back to steam once water is coming.",
+      "fail": "The water spurts first and steam follows; or the escape turns back from water to steam with the valve held open; or the escape stops and starts again with the valve untouched; or the water is drawn back into the valve."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The steam is a soft plume at the valve and the water is a thin liquid that spurts, runs down the radiator and wets what is below.",
+      "fail": "The steam holds a fixed rigid shape; or the water leaves as a solid lump; or the water beads up and rolls off the radiator without wetting it; or the radiator's metal bulges as the valve opens."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One radiator with one valve; the valve stays in the radiator and nothing passes through its body.",
+      "fail": "The valve falls out while the radiator keeps its shape; or a second valve appears; or water passes out through the radiator's panel; or the radiator vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The radiator's paint, the wall and the floor stay the same.",
+      "fail": "The radiator changes colour; or the wall changes colour; or the floor's covering changes."
+    }
+  ],
+  "note": "The hiss is sound and is not judged. Who opens the valve is not judged."
+}

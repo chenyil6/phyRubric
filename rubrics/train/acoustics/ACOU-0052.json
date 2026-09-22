@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0052",
+  "caption": "A chainsaw is revved in a garage, and the tools hanging on the pegboard behind it sway and tap against the board.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A chainsaw in a garage, in front of a pegboard hung with tools."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The chainsaw is revved: its chain runs or the saw shudders."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The tools sway and tap against the board."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tools stay on their pegs."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The revving comes first and the swaying follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The tools hang still until the saw runs and settle if it stops.",
+      "fail": "Tools sway before the saw starts; or go on swaying after the saw has stopped and settled; or a tool slides along the pegboard from one peg to another."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "While the saw runs the tools stir and each swing brings them back against the board.",
+      "fail": "The saw shudders for a spell and every tool hangs dead still; or the tools swing away from the board and stay held off it; or a tool swings out from the board and hangs in the air."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The tools hang down from their pegs and at rest hang straight.",
+      "fail": "A tool rests tilted with nothing touching it; or rises up the board; or a tool that leaves its peg floats rather than falling."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The tools and the pegboard are rigid; the sway is a swing on the peg.",
+      "fail": "A wrench bends; or the pegboard ripples; or a tool's handle stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The tools keep their count; one chainsaw; nothing passes through the board.",
+      "fail": "A tool appears or vanishes; or a tool passes through the board; or two tools merge; or the chainsaw duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tools' colours, the pegboard's colour and the saw's colour stay the same.",
+      "fail": "Tools change colour; or the pegboard changes colour; or the saw changes colour."
+    }
+  ],
+  "note": "The person revving the saw is a trigger and is not judged."
+}

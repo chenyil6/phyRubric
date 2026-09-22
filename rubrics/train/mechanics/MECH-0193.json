@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0193",
+  "caption": "A woman walks along a city sidewalk carrying a handbag, one foot after the other.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A woman walks along a city sidewalk."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "She carries a handbag."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Her feet move one after the other."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The setting is a city sidewalk."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Her legs alternate, her arms swing opposite to her legs, and her limbs bend only at hips, knees, elbows and shoulders.",
+      "fail": "Both legs move forward together; or a limb bends mid-bone; or her legs cross through each other."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "One foot is on the ground at all times and her feet land on the pavement, not in it.",
+      "fail": "Both feet are off the ground at once during the walk; or a foot sinks into the pavement; or she slides forward with her feet still."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "She stays upright with her weight over her feet.",
+      "fail": "She leans far over and does not fall; or she floats; or her body rises and drops far more than a step would."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The handbag stays in her hand or on her shoulder and swings with her.",
+      "fail": "The bag vanishes; or floats beside her; or passes through her body."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Her limbs keep their number and stay attached, and she passes through nothing.",
+      "fail": "A limb detaches, vanishes or a third arm appears; or she merges with a passer-by; or her head passes through a sign."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Her clothing, the bag and the street stay the same.",
+      "fail": "Her clothing changes colour; or the bag changes; or the buildings rearrange."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Gait, posture, style and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

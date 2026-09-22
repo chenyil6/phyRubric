@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0300",
+  "caption": "A red sock is dropped into a basin of hot soapy water holding white shirts, and the water around it turns pink.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A basin of hot soapy water holds white shirts."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A red sock is dropped in."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water around it turns pink."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shirts nearest the sock take on a faint pink tinge."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sock goes in first and the pink spreads after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The pink spreads out from the sock through the water and does not clear again.",
+      "fail": "The water clears again; or is pink before the sock; or the pink retreats to the sock."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The water is pink and the sock stays red; the nearest shirts take a faint tinge.",
+      "fail": "The sock turns white; or the water turns a colour other than pink; or far shirts turn deep red at once."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid and the dye drifts in it.",
+      "fail": "The water is rigid; or the dye is a solid lump; or beads bounce."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The sock sinks or settles among the shirts.",
+      "fail": "It floats above the water; or rises out; or hangs."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sock and the shirts keep their number.",
+      "fail": "A second sock appears; or a shirt vanishes; or the sock passes through the basin."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The basin and the room stay the same.",
+      "fail": "The basin changes colour; or the room rearranges; or the shirts change shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0059",
+  "caption": "A divided hot pot with spicy red oil broth on one side and clear broth on the other heats over a burner, and the red side comes to the boil while the clear side stays calm.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A divided hot pot sits over a burner, with red oil broth on one side and clear broth on the other."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The red side comes to the boil: bubbles rise and burst through it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The red side's surface churns."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The clear side stays nearly flat."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The divider keeps the two broths apart."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Each broth keeps to its own colour."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The red side's boil keeps up while the burner is under it and the clear side stays calmer throughout; the difference does not reverse.",
+      "fail": "The red side falls quiet and stays flat while the clear side churns; or the clear side boils harder than the red side; or the red side's boil stops and then starts again by itself; or the two sides swap which one is boiling."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The red side is a liquid with an oil layer on top through which large bubbles rise and burst; the clear side is a liquid showing at most small bubbles and faint steam.",
+      "fail": "The red layer holds a fixed shape while bubbles burst through it; or the oil layer stands in a heap above the broth; or the clear broth sets solid; or the red broth moves as one solid mass."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "Each broth keeps to its own side and its own colour: red on one side and clear on the other.",
+      "fail": "Red broth appears on the clear side with none crossing the divider; or the clear broth turns red all over; or the two broths swap sides; or the red broth's colour drains away and leaves it clear."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bubbles rise through each broth to its surface and any steam rises above the pot.",
+      "fail": "Bubbles sink from a surface toward the pot's floor; or hang still in the broth; or the steam sinks and pools around the burner; or broth climbs the divider and stays above it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pot with one divider and two broths; the broths stay on their own sides and nothing passes through the divider or the pot.",
+      "fail": "Broth passes through the divider; or the divider vanishes; or a third compartment appears; or broth passes through the pot's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot's rim, the burner and the table stay the same.",
+      "fail": "The pot changes shape; or the burner moves by itself; or items on the table rearrange."
+    }
+  ]
+}

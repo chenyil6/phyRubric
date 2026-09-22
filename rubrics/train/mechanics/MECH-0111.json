@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0111",
+  "caption": "An empty aluminum soda can lying on a driveway is stepped on, and it crumples flat and stays flat.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An empty soda can lies on a driveway."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A foot steps on it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The can crumples flat."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It stays flat after the foot lifts."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The can is empty before it is stepped on."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The step comes first, then the crumple, then the foot lifts."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The can crushes under the foot where the foot presses, the thin metal folding and creasing.",
+      "fail": "The can holds the foot up like a block; or it shatters into pieces; or it squashes like a soft sponge with no creases."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The crush happens under the foot, not before, and the can keeps its crushed shape after the foot lifts.",
+      "fail": "The can is flat before the foot reaches it; or it springs back to round after the foot lifts; or it goes on crumpling after the foot is gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The can stays where it lies apart from the foot's contact.",
+      "fail": "The can rolls off before the foot arrives; or it jumps away after being crushed; or it slides across the driveway with nothing touching it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The foot comes down onto the can and the can stays on the ground.",
+      "fail": "The can lifts off the ground; or the foot passes below the driveway surface; or the can floats up after crushing."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One can keeps its number, and the foot does not pass through it.",
+      "fail": "The can vanishes or a second one appears; or the foot passes through the can; or the can turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The can's label, the shoe and the driveway stay the same.",
+      "fail": "The label changes; or the shoe changes; or the driveway rearranges between frames."
+    }
+  ],
+  "note": "The foot is kept as the minimal trigger; the person is not judged."
+}

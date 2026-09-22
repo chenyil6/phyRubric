@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0280",
+  "caption": "A large stone is dropped into a bucket full of water, and water spills over the rim onto the ground.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bucket is full of water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A large stone is dropped into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Water spills over the rim onto the ground."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The drop comes first and the spill follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The splash and overflow happen as the stone enters, and the level stays at the rim afterward.",
+      "fail": "It overflows before; or the stone goes in and nothing overflows; or the level drops far below the rim."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The stone sinks to the bottom and does not pass through the bucket.",
+      "fail": "It passes through; or floats; or hangs."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water splashes and runs down the outside.",
+      "fail": "It is rigid; or beads; or the stone splashes like liquid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Spilled water runs downward.",
+      "fail": "It runs up; or floats; or hangs."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bucket and one stone keep their number.",
+      "fail": "The bucket duplicates; or the stone vanishes; or water appears elsewhere."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bucket and the ground stay the same.",
+      "fail": "The bucket changes colour; or the ground changes; or the background rearranges."
+    }
+  ]
+}

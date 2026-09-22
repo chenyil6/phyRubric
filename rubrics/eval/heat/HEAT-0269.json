@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0269",
+  "caption": "A moka pot on a stove starts to gurgle, and coffee sputters up into the top chamber with puffs of steam.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A moka pot stands on a stove."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Coffee appears in the top chamber."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The coffee rises in spurts."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Puffs of steam come from the spout."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The top chamber is empty at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The gurgling comes first and the coffee follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The coffee rises only after the pot has been on the heat and the gurgling has begun, in spurts that come and go with it.",
+      "fail": "Coffee appears in the top chamber before the pot has been on the heat; or the coffee rises in a smooth stream with no spurts while the pot gurgles; or the coffee keeps rising after the pot has been taken off and set aside; or the coffee rises with the pot cold and dry."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The coffee comes up the central spout into the top chamber and gathers in its base, and the steam rises from the spout.",
+      "fail": "The coffee runs back down into the lower chamber and stays; or the coffee gathers at the top chamber's lid and stays; or the steam pours downward into the pot; or the coffee climbs the outside of the pot."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The level in the top chamber only rises while the pot works and does not fall back.",
+      "fail": "The top chamber's level drops with the pot still on the heat; or the coffee rises and falls in turn; or the coffee in the top chamber clears back to nothing; or the lower chamber fills as the top empties."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The coffee is a thin dark liquid that sputters and streams, and the pot stays a rigid metal body.",
+      "fail": "The coffee leaves as solid lumps; or the pot's metal bulges as the coffee rises; or the coffee stands as a rigid column in the chamber; or the coffee sets solid in the pot."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pot in two chambers; the coffee that appears above came up from below and the pot stays whole.",
+      "fail": "Coffee appears in the top chamber with the lower chamber still full and the spout dry; or the pot's lid vanishes; or a second pot appears; or coffee passes through the pot's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot's finish, the hob and the surroundings stay the same.",
+      "fail": "The pot changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ],
+  "note": "The gurgle is sound and is not judged; it is read from the coffee's spurting."
+}

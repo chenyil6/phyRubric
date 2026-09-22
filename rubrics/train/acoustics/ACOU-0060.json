@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0060",
+  "caption": "A hand-held massager is switched on and set on a bed, and it shudders and wanders across the sheet.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hand-held massager is set down on a bed."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is switched on: a button is pressed or it begins to shudder."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It shudders."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It wanders across the sheet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "It is switched on and set down before it starts wandering."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The massager moves only while it shudders and is still when off.",
+      "fail": "It moves before it is switched on; or glides across the sheet with no shudder; or keeps moving after being switched off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shudder carries it along in small jerks that match the shuddering.",
+      "fail": "It plainly shudders yet stays pinned in place for the whole clip; or moves in one smooth glide as if pulled by a string; or shudders hard while frozen in place and then glides while its shudder has stopped."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It rests on the bed, pressing into the soft surface; if it reaches the edge it falls.",
+      "fail": "It hovers above the sheet; or climbs up the pillow and perches on end; or rises."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bed is soft and dimples under it; the massager is rigid.",
+      "fail": "The bed surface ripples like water; or the massager bends; or it leaves a hard groove carved in the mattress."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One massager; it does not sink into the mattress, duplicate or vanish.",
+      "fail": "A second massager appears; or it vanishes; or it sinks into the mattress and disappears; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Its colour, the sheet's pattern and the pillows stay the same.",
+      "fail": "It changes colour; or the sheet pattern changes; or the pillows change shape."
+    }
+  ],
+  "note": "The hand that switches it on and sets it down is a trigger and is not judged."
+}

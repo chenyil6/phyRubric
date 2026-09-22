@@ -1,0 +1,88 @@
+{
+  "id": "HEAT-0020",
+  "caption": "A hairdryer is aimed at crayons taped to the top of a canvas, and the crayons melt and run down the canvas in coloured streaks that harden lower down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Crayons are taped to the top of a canvas."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A hairdryer is aimed at the crayons."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The crayons melt."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Coloured wax runs down the canvas."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The streaks harden lower down the canvas."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is heat, melt, run down, harden."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The melted wax runs downward from each crayon's tip, straight down the canvas.",
+      "fail": "A streak runs upward from a crayon; or travels sideways across the canvas and stays level; or a drop of wax leaves the canvas and floats; or wax gathers above the crayons."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each streak only grows downward while heat is on it, and where it has stopped and set it stays set.",
+      "fail": "A streak retreats back up toward its crayon; or a set streak low on the canvas runs again with no fresh wax reaching it; or a streak's colour drains away leaving the canvas bare; or the crayons grow back as the streaks lengthen."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The wax is a thin liquid where the dryer plays on it and a raised dull ridge where it has cooled; the crayon bodies soften and slump at the tip.",
+      "fail": "A streak stays glossy and runny far from the dryer while wax nearer the heat has already set dull; or a streak sets as a spike standing out from the canvas; or the canvas sags or melts with the wax; or the crayons shatter dry."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The melting follows the dryer: crayons in its stream melt and run while ones away from it stay solid.",
+      "fail": "Crayons the dryer is not aimed at run while the ones in its stream stay solid; or every crayon runs at once while the dryer is plainly aimed at one; or a streak appears below a crayon that is still whole and dry.",
+      "precondition": "The hairdryer's nozzle and the direction it points are in view."
+    },
+    {
+      "id": "P5",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The canvas and the crayons stay put; the crayons change only by softening at the tip.",
+      "fail": "A crayon slides across the canvas with nothing pushing it; or the canvas swings or tips with nothing touching it; or a crayon leaves the canvas while its tape still holds it."
+    },
+    {
+      "id": "P6",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The crayons stay taped where they are and the wax on the canvas came down from them.",
+      "fail": "A streak appears with no crayon above it; or a crayon vanishes while still whole; or a new crayon appears on the canvas; or wax passes through the canvas and shows on its back."
+    },
+    {
+      "id": "P7",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Each streak keeps its crayon's colour, and the bare canvas and the wall behind stay the same.",
+      "fail": "A streak is a colour no crayon has; or the bare canvas changes shade; or the wall behind changes."
+    }
+  ]
+}

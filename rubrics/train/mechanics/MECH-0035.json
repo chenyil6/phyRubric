@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0035",
+  "caption": "A tennis ball is thrown hard against a brick wall and bounces back the way it came.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tennis ball is thrown hard at a brick wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It strikes the wall."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It bounces back the way it came."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wall is brick."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The throw and the strike come first, then the rebound."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The ball leaves the wall back along its incoming line and travels slower than it arrived.",
+      "fail": "The ball leaves the wall quicker than it arrived; or it drops straight down at the wall without coming back; or it carries on sideways along the face of the wall."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The ball meets the face of the wall and stays outside it.",
+      "fail": "The ball passes into the brickwork; or it sinks part way in and then comes back out; or it sticks to the wall and hangs there."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ball squashes briefly where it meets the brick and springs back round, and the wall is unmarked.",
+      "fail": "The ball stays flattened after the bounce; or it splatters like a wet lump against the brick; or the wall dents or bulges where the ball hits it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "After the rebound the ball's path bends downward toward the ground.",
+      "fail": "The ball climbs steadily after the bounce and keeps climbing; or it holds one flat line away from the wall to the edge of the frame; or it hangs in the air after the rebound."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one wall are there throughout.",
+      "fail": "The ball vanishes at the wall or a second one appears; or the ball turns into another object at the bounce; or a piece of the wall disappears where the ball strikes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour, the brick pattern and the surroundings stay the same.",
+      "fail": "The ball changes colour at the bounce; or the brick courses shift between frames; or the scene beside the wall rearranges."
+    }
+  ]
+}

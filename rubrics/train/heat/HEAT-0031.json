@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0031",
+  "caption": "Warm water is poured over a frosted car windshield on a cold morning, and the frost clears where the water runs.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A frosted car windshield."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Water is poured over the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The frost clears where the water runs."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The water runs down off the glass."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Parts of the glass the water misses stay frosted."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the clearing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The frost only clears along the water's path, and cleared glass stays clear while the water keeps coming.",
+      "fail": "Frost grows back on glass the water has just cleared; or the frost clears on a part of the glass the water never reached; or the clearing spreads and shrinks in turn; or the whole windshield clears at once while the water runs down one strip."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The water runs downward over the glass and off its lower edge or onto the bonnet.",
+      "fail": "The water runs up the windshield; or a run travels sideways and stays level with nothing tilting the car; or water leaves the glass and rises; or the water stands on the sloping glass without running down."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The glass shows the water arriving: it goes clear and wet where the water runs and the frost's edge is pushed back along that path.",
+      "fail": "Water runs over frosted glass and it stays white and dry; or the clear path lies away from where the water runs; or the frost's edge stays fixed while water pours across it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The frost is a thin white crust that wets and goes as the water passes, and the water is a thin liquid that sheets and streaks.",
+      "fail": "The frost lifts off as a rigid sheet and slides away; or the water beads up and rolls off without wetting the glass; or the water runs as a thick syrup."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One windshield; the water runs over the glass and off it and nothing passes through.",
+      "fail": "The water passes through the glass into the car; or the windshield changes shape; or a second windshield appears; or the frost returns all over at a stroke with the car untouched."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's paint, the wipers and the surroundings stay the same.",
+      "fail": "The car changes colour; or the wipers jump to a new position with nothing touching them; or the background changes between frames."
+    }
+  ]
+}

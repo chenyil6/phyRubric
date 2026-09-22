@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0111",
+  "caption": "A tuba is played next to a table where a row of dominoes stands on end, and the dominoes shiver on the low notes and one topples.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tuba is played next to a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A row of dominoes stands on end on the table."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dominoes shiver."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "One domino topples."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shivering comes in spells with still spells between."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The shiver comes first and the topple happens during it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The dominoes stand still except during shiver spells; the topple happens during a shiver; the row does not slide as a body.",
+      "fail": "The whole row slides along the table as one; or a domino topples while the row is dead still with no shiver; or dominoes hop into the air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Shiver spells come while the tuba is blown; once a domino is down it stays down.",
+      "fail": "The player blows for a spell and the dominoes stand frozen throughout; or a fallen domino stands back up; or a falling domino stops leaning in mid-fall and stays; or the dominoes shiver only while the player is plainly not blowing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The toppled domino falls flat onto the table toward the side it leans.",
+      "fail": "The domino falls upward; or hangs at an angle unsupported; or falls and rises again."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The dominoes, the table and the tuba are rigid.",
+      "fail": "A domino bends; or the table ripples; or the tuba's bell flexes like rubber."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The dominoes keep their count; one tuba; no domino passes through another.",
+      "fail": "A domino appears or vanishes; or two dominoes merge; or a domino passes through another; or the tuba changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dominoes' pips, the table and the tuba's colour stay the same.",
+      "fail": "The dominoes' pips change; or the table changes; or the tuba changes colour."
+    }
+  ],
+  "note": "The player is kept as the source of the notes; playing technique is not judged."
+}

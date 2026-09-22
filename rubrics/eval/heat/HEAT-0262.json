@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0262",
+  "caption": "A toy steam engine's boiler is heated by a small burner, and once the water boils, steam puffs from the cylinder and the flywheel begins to turn.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy steam engine has a burner under its boiler."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Steam puffs from the cylinder."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flywheel begins to turn."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flywheel speeds up as the puffs grow."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Nothing on the engine moves before the steam appears."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The steam comes first and the turning follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The flywheel stays still until steam puffs from the cylinder, turns while the puffs come and slows when they stop.",
+      "fail": "The flywheel turns before any steam appears; or it keeps turning at the same rate after the steam has stopped; or it turns while the burner is out and the boiler dry; or it stops and starts again while the puffs come steadily."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The puffs and the wheel's turning go together: each puff comes as the piston moves and the wheel turns with them.",
+      "fail": "The wheel turns while the cylinder is dry with no puff at all; or the puffs come while the wheel stands still to the end of the clip; or the puffs come from the boiler's filler cap rather than the cylinder; or the wheel turns faster as the puffs die away."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The steam leaves the cylinder going up and spreads and thins.",
+      "fail": "The steam pours down the engine's base and pools; or sinks below the engine; or hangs as a fixed shape without rising; or pours downward out of the cylinder onto the table."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The flywheel turns about its own axle in one direction and the piston moves back and forth in line with the cylinder.",
+      "fail": "The wheel reverses direction with nothing changing; or wobbles off its axle; or the piston moves across the cylinder rather than along it; or the wheel turns while the connecting rod stays still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One engine with one flywheel and one cylinder; the engine stays on the table and its parts stay attached.",
+      "fail": "The flywheel detaches and rolls away; or a second flywheel appears; or the piston passes out through the cylinder's wall; or the engine vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The engine's paint, the burner and the table stay the same.",
+      "fail": "The engine changes colour; or the burner changes shape; or items on the table rearrange."
+    }
+  ]
+}

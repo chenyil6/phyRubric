@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0154",
+  "caption": "A magnet held to a refrigerator is slid down the door, and it slides and stays stuck the whole way.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A magnet held to a refrigerator door."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The magnet is slid down the door."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The magnet stays stuck to the door the whole way."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The slide is downward."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The magnet stays on the door if released at the end."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The magnet stays in contact with the door throughout the slide, and holds where it is left when the hand lets go.",
+      "fail": "The magnet lifts off the door during the slide; or drops when released; or slides on by itself after the hand stops; or stands off the door at a gap."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The magnet moves only as pushed; if it comes off the door it falls straight down.",
+      "fail": "The magnet floats away from the door; or rises up the door with no hand on it; or hangs in the air after coming off; or drifts sideways away from the door."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The magnet moves only while the hand pushes it; other magnets and papers on the door stay put.",
+      "fail": "The magnet slides on after the hand has stopped; or moves before the hand touches it; or other magnets on the door slide or drop; or the door swings open."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The magnet stays a rigid piece; the door's surface stays flat and undented along the slide.",
+      "fail": "The magnet squashes or smears along the door; or the door dents or ripples where the magnet passes; or the magnet stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One magnet on the outside of the door; it does not sink into the door; the hand passes through nothing.",
+      "fail": "The magnet sinks into the door; or a second magnet appears along the path; or the magnet vanishes; or the fingers pass through the magnet."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The magnet's colour and design and the other items on the door stay the same.",
+      "fail": "The magnet changes colour or shape; or notes on the door change; or the door changes colour."
+    }
+  ]
+}

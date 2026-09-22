@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0054",
+  "caption": "A phone set to vibrate buzzes on a wooden table and creeps slowly across the surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A phone lies on a wooden table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The phone visibly buzzes: it shivers in place."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It moves across the table surface."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The motion is slow creeping in small jerks, not one glide."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shivering is under way when the creeping starts; the phone does not move first and buzz later."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The phone moves only while it visibly shivers; if the shiver stops, the phone stops at once and stays where it is.",
+      "fail": "The phone slides while lying perfectly still; or keeps gliding after the shiver has visibly stopped; or starts moving again with no buzz."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The creep is a series of small jerks in a roughly consistent direction, possibly with slow rotation; the phone stays flat on the table.",
+      "fail": "The phone shoots across the table in one smooth glide; or zigzags with large reversals; or stands up on an edge; or flips over."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The phone stays on the table surface throughout; if it reaches the edge it tips and falls.",
+      "fail": "The phone hovers above the table; or hangs over the edge unsupported well past its middle; or climbs onto an object."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The table is rigid and the phone a rigid slab.",
+      "fail": "The table surface ripples like water; or the phone flexes like rubber; or the phone leaves a trail carved in the wood."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One phone; it does not pass through the table, duplicate or vanish.",
+      "fail": "The phone duplicates or vanishes; or passes into the table; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The phone's case, screen state and the table grain stay the same.",
+      "fail": "The phone changes colour; or the screen content changes at random; or the table grain shifts."
+    }
+  ],
+  "note": "The caption does not require the buzzing to stop. A clip in which it never stops passes every SA item; if it does stop, the last two fail clauses of P1 apply to what follows."
+}

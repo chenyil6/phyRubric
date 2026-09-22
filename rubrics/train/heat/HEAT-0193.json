@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0193",
+  "caption": "Boiling water is poured into a thick glass tumbler taken straight from the fridge, and the glass cracks with a sharp snap.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass tumbler that reads as cold: frost or condensation on it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Boiling water is poured into the tumbler."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A crack appears in the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The crack runs through the glass."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The glass may split and leak."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the crack follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The glass is a brittle solid: a crack runs through it as a sharp line and the glass stays rigid, splitting rather than bending.",
+      "fail": "The glass bends or sags instead of cracking; or the glass stretches as the water goes in; or the glass crumbles to powder; or the crack closes and the glass flexes back."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The crack stays in the glass and any pieces stay as pieces; the glass does not heal.",
+      "fail": "The crack closes and the glass is whole again; or a piece that fell away reappears joined to the glass; or a second tumbler appears; or the glass vanishes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The crack appears after the hot water goes in and any water leaks out through the split.",
+      "fail": "The crack appears before the water reaches the glass; or the water goes in and the glass stays whole and unmarked to the end of the clip; or the glass splits open and the water stays in it with no leak."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The water falls downward into the tumbler and any leak runs down its outside and pools below.",
+      "fail": "The water travels upward from the kettle; or a leak runs up the glass; or the water climbs the glass's wall and stays above its level; or the leak hangs in the air beside the glass."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One tumbler; it stays a tumbler as it cracks and does not turn into another material.",
+      "fail": "The glass melts and drips; or the glass turns into another object; or the glass's shape changes without breaking; or the glass becomes a fabric that folds."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The counter, the kettle and the surroundings stay the same.",
+      "fail": "The counter changes pattern; or the kettle changes shape; or items around the glass rearrange."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0125",
+  "caption": "A coin is dropped into a tall clear vase of water, and the coin appears to jump sideways as it passes through the surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A coin is dropped into a tall clear vase of water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The coin appears to jump sideways as it passes through the surface."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It sinks to the bottom."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The coin is visible through the glass."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The apparent shift is at the waterline."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The apparent shift happens at the waterline; the coin itself falls straight.",
+      "fail": "The shift is above or below the surface; or the coin actually swerves; or it changes shape."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Underneath, the coin sinks straight to the bottom.",
+      "fail": "It floats; or hangs; or drifts sideways."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The coin is visible through the glass and water throughout.",
+      "fail": "The water hides it; or it vanishes below the surface; or a different coin appears."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water surface splashes and settles level; the vase is rigid.",
+      "fail": "The surface tilts and holds; or the vase bends; or the water goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One coin and one vase.",
+      "fail": "The coin duplicates; or the vase vanishes; or the coin passes through the vase."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The coin and the vase stay the same.",
+      "fail": "The coin changes colour; or the vase changes shape; or the table changes."
+    }
+  ]
+}

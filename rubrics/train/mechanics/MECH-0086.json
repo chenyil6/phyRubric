@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0086",
+  "caption": "A pyramid of empty soda cans at a carnival booth is hit by a tennis ball, and the cans fly off and fall to the counter.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pyramid of empty soda cans stands on a booth counter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A tennis ball hits the pyramid."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Cans fly off."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Cans fall to the counter."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cans are stacked as a pyramid."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The hit comes first, then the flying cans, then the fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Struck cans fly away from the ball, and cans above them lose their support and drop.",
+      "fail": "Cans fly toward the thrower; or all the cans move as one block; or cans on the far side move while the struck ones stay."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Cans come down to the counter or the floor and stay there.",
+      "fail": "A can hangs in the air; or rises; or lands and re-stacks."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Cans move only after being hit or losing support.",
+      "fail": "Cans topple before the ball arrives; or a landed can slides off untouched; or a can jumps from the base while the top stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Empty cans are light and dent easily; they clatter and roll rather than shatter.",
+      "fail": "A can shatters; or squashes flat and re-inflates; or the ball dents deeply and stays dented."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The cans keep their number and the ball stays one ball.",
+      "fail": "Cans vanish or multiply; or a can passes through another; or the ball vanishes at the hit."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cans' labels, the counter and the booth stay the same.",
+      "fail": "A can changes label or colour; or the counter changes between frames; or the booth rearranges."
+    }
+  ]
+}

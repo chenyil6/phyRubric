@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0174",
+  "caption": "A dog walks through an office with motion-sensor lights, and the ceiling panels switch on ahead of it and go off behind it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog walks through an office with motion-sensor lights."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The ceiling panels switch on ahead of it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They go off behind it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Each panel's patch of floor brightens as it lights."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each panel lights as the dog approaches and its patch of floor brightens.",
+      "fail": "Panels light far from the dog; or stay dark as it passes beneath; or the floor stays dark under a lit panel."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Panels behind the dog go dark after a delay and do not flicker.",
+      "fail": "They stay lit indefinitely; or go off before the dog has passed; or flicker."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lighting follows the dog's path.",
+      "fail": "Panels light in a pattern unrelated to the dog; or the dog jumps position; or lights come on with the dog gone."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The dog's shadow falls away from the lit panel above.",
+      "fail": "It points toward the panel; or in several directions; or there is none."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The panels keep their number.",
+      "fail": "A panel vanishes; or appears; or the dog duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The office stays the same.",
+      "fail": "Desks rearrange; or the panels change colour; or the dog changes."
+    }
+  ],
+  "note": "The dog is self-driven; only the lights' response to its position is judged. Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

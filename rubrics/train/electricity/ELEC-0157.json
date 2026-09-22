@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0157",
+  "caption": "A steel washer is dropped near a strong magnet on a table, and the washer swerves toward the magnet and sticks to it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A strong magnet on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A steel washer is dropped near the magnet."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The washer swerves toward the magnet as it falls."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The washer sticks to the magnet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The washer is let go from above, not placed."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first, the swerve follows, then the sticking."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The washer falls downward and, as it comes close to the magnet, its path bends toward the magnet and ends on its surface.",
+      "fail": "The washer curves away from the magnet; or falls straight to the table and then rises back up to the magnet; or veers in a direction that is neither downward nor toward the magnet; or lands where dropped with the magnet beside it and then slides to it only after coming to rest."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The washer on the magnet stays stuck; the magnet stays where it is; nothing else on the table moves.",
+      "fail": "The washer slides about on the magnet or drops off with nothing touching it; or the magnet lifts or turns as the washer lands; or other items on the table hop toward the magnet."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The fall is downward; the washer on the magnet is held even on its side; a washer that missed would lie on the table.",
+      "fail": "The washer hovers in the air touching nothing; or drifts upward after release; or hangs beside the magnet without touching it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The washer stays a flat rigid ring and the magnet a hard block; neither dents on contact.",
+      "fail": "The washer bends or folds; or the magnet dents where the washer strikes; or the washer melts onto the magnet."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One washer and one magnet; the washer does not vanish, split or pass into the magnet or the table.",
+      "fail": "The washer vanishes in mid-air; or two washers appear; or the washer sinks into the magnet or through the table; or the magnet changes into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The magnet's colour and shape, the washer's size and the table stay the same.",
+      "fail": "The magnet changes colour; or the washer changes size; or the table surface changes."
+    }
+  ]
+}

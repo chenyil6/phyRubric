@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0255",
+  "caption": "Morning sun falls on half of a frosted car windshield, and the frost on the sunlit half turns to droplets while the shaded half stays white.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A frosted car windshield with sunlight on part of it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The frost on the sunlit part turns to droplets."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The clearing spreads within the sunlit area."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The shaded part stays white with frost."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Drops run down the cleared glass."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The sunlit and shaded parts are plainly divided."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The clearing keeps to the sunlit area and the shaded frost stays white.",
+      "fail": "The frost clears on the shaded half while the sunlit half stays white; or the whole windshield clears at once including the shaded part; or the sunlit frost stays white and dry while the shaded part beads; or the clearing's edge lies away from the line between sun and shade."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The clearing only spreads within the sunlit area and cleared glass stays clear.",
+      "fail": "Frost grows back on glass the sun has cleared; or the clear area shrinks; or the glass clears and frosts in turn; or the frost thickens on the sunlit part as the sun rises on it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Drops that grow large enough run downward on the glass and gather at its lower edge.",
+      "fail": "A drop runs up the windshield; or a drop leaves the glass and rises; or water gathers along the glass's top edge and stays; or a run travels sideways and stays level with the car still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The frost is a white crust that wets and beads before the glass is clear, and the water runs as streaks.",
+      "fail": "The frost vanishes leaving the glass dry; or the frost lifts off as a rigid sheet and slides away; or the water beads up and rolls off without wetting the glass; or the frost turns to a hard glaze that stays dry."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One windshield; the frost turns to water on the glass and nothing passes through it.",
+      "fail": "The windshield changes shape; or a second windshield appears; or water passes through the glass into the car; or the frost returns all over at a stroke with the car untouched."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's paint, the wipers and the surroundings stay the same.",
+      "fail": "The car changes colour; or the wipers jump to a new position with nothing touching them; or the background changes between frames."
+    }
+  ]
+}

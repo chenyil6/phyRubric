@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0084",
+  "caption": "A baked potato fresh from the oven is split open with a fork, and steam rises from the white flesh inside.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A baked potato."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The potato is split open with a fork."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Steam rises from the flesh inside."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flesh inside is white and fluffy."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The split comes first and the steam follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The steam appears from the cut faces at the moment the potato opens and not from the unbroken skin.",
+      "fail": "Steam rises from the whole potato before it is opened; or the potato is opened and no steam appears from the cut to the end of the clip; or steam pours from the unbroken skin while the cut faces are clear; or steam appears above the potato with nothing leaving the cut."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam rises from the cut faces, spreading and thinning as it climbs.",
+      "fail": "The steam sinks onto the plate and pools; or pours downward out of the cut; or hangs as a fixed shape without rising; or flows sideways with nothing blowing it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The skin is a tough shell that tears along the fork's line and the flesh inside is soft and crumbly, while the fork stays rigid.",
+      "fail": "The skin stretches like rubber as the fork goes in; or the flesh runs out as a liquid; or the potato splits as a brittle shell into sharp shards; or the fork bends."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The split only opens wider and the steam only leaves; the potato does not close up again.",
+      "fail": "The split closes and the potato is whole again; or the cut faces knit back together; or the steam runs back into the potato; or the flesh draws back inside the skin."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One potato and one fork; the potato stays one potato in two halves and nothing passes through the plate.",
+      "fail": "A second potato appears; or the potato vanishes; or the fork passes through the plate; or the halves merge into a whole potato with no seam."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plate, the potato's skin away from the cut and the table stay the same.",
+      "fail": "The plate changes pattern; or the skin changes colour away from the cut; or items on the table rearrange."
+    }
+  ]
+}

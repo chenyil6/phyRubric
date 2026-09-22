@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0167",
+  "caption": "Bare feet walk across a stretch of dry beach sand, leaving a trail of footprints behind.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Bare feet walk across dry beach sand."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Footprints are left behind."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The feet are bare."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The prints trail behind, in the direction walked from."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "Each foot sinks a little and pushes sand up around the print.",
+      "fail": "The sand stays flat under the foot; or the foot sinks to the ankle; or the sand flows like liquid."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Prints appear only where a foot has stepped and stay behind.",
+      "fail": "Prints appear ahead of the walker; or where no foot went; or prints vanish or fill in behind."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The number of prints matches the steps taken.",
+      "fail": "Prints multiply; or a print disappears; or prints appear in a line with no walker."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Displaced sand falls back to the ground.",
+      "fail": "It rises; or hangs in the air; or floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The feet keep their number and shape, and they do not pass through the sand.",
+      "fail": "A foot detaches; or extra feet appear; or a foot passes below the sand's surface entirely."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sand's colour and the beach stay the same.",
+      "fail": "The sand changes colour; or the beach rearranges; or the feet change."
+    }
+  ],
+  "note": "The walker is kept because the feet are the physics. Gait is not judged."
+}

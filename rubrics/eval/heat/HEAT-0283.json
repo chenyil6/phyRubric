@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0283",
+  "caption": "A line of flame advances across a stubble field with the wind, smoke drifting ahead of it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A line of flame crosses a stubble field."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The line advances across the field."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Blackened ground is left behind the line."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Smoke drifts ahead of the flames."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The smoke leans the same way as the flames."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The line moves downwind."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The line only advances into unburnt stubble and the blackened ground behind it stays black.",
+      "fail": "The fire line retreats back over ground it has burnt; or blackened ground turns back to pale stubble; or the fire starts ahead of the line in stubble no flame has reached; or the burnt strip narrows behind the line."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The line advances the same way the smoke drifts and the stubble leans, and keeps that direction while they hold theirs.",
+      "fail": "The line advances against the way the smoke drifts; or the smoke drifts one way while the flames lean the other; or the line's direction swings about while the smoke holds steady; or the line advances while the smoke stands straight up and the stubble is dead still."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flames point upward from the stubble, leaning with the wind, and the smoke rises as it drifts.",
+      "fail": "The flames point downward into the soil; or the smoke sinks and lies on the field ahead of the line; or the flames hang above the stubble with a gap below them; or the smoke pours downward into the burnt ground."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The stubble ahead of the line catches as the flames reach it and burns down to black ground behind.",
+      "fail": "The stubble ahead catches before any flame reaches it; or the flames pass over stubble and leave it standing pale and unburnt; or the ground behind the line stays pale with the stubble gone; or the smoke rises from ground the line has not reached."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The field stays a field of stubble that burns to black ground; nothing turns into anything else.",
+      "fail": "The stubble turns into another material as it burns; or the ground opens up behind the line; or a second fire line appears from bare burnt ground; or the flames pass through a hedge and leave it whole."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The field's edges, the trees around and the sky stay the same.",
+      "fail": "The hedges change shape; or the trees change into different trees; or the sky changes colour permanently."
+    }
+  ]
+}

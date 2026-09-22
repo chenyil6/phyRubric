@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0296",
+  "caption": "A coil of rope is thrown onto a dock, and it lands in a loose tangle of loops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A coil of rope is thrown onto a dock."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It lands."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It lies in a loose tangle of loops."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The throw comes first and the landing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The loops lie on top of one another and the rope does not pass through itself.",
+      "fail": "It passes through itself; or through the dock; or the loops run into one another."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "It bends into loops and keeps its length.",
+      "fail": "It lands in a straight line; or stretches; or splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It falls and lies on the dock.",
+      "fail": "It floats; or rises; or hangs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The flexible rope flops.",
+      "fail": "It is rigid; or bounces high; or melts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One rope keeps its number and its two ends.",
+      "fail": "It duplicates; or vanishes; or the ends multiply."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rope's colour and the dock stay the same.",
+      "fail": "The rope changes colour; or the dock changes; or the water rearranges."
+    }
+  ]
+}

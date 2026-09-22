@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0075",
+  "caption": "A car with an overheated engine sits at the roadside with steam pouring out from under the hood.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car stands at a roadside."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Steam pours out from under its hood."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The steam rises."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The steam escapes at the hood's edges or the grille."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The steam drifts away and thins."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam leaves the hood's gaps going up and spreads and thins as it climbs.",
+      "fail": "The steam runs down the front of the car and pools on the road; or sinks under the car and stays; or hangs as a fixed shape without rising; or pours downward from the grille onto the road."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The plume moves outward and away from the car; puffs that have left keep going.",
+      "fail": "The plume runs back under the hood; or a puff retreats toward the grille; or steam appears in the air away from the car and drifts into it; or the plume grows with nothing leaving the car."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The steam comes out of the engine bay at the hood's edges, the grille or the wheel arch and is thickest there.",
+      "fail": "The steam comes out of the car's boot or its windows; or the plume is thickest far from the car with nothing carrying it there; or the hood's gaps are clear while steam appears above the roof with nothing leaving the bay."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The steam is a soft cloud that billows and fades and the car stays a rigid body with its hood shut or propped.",
+      "fail": "The steam holds a fixed rigid shape; or pours like a liquid over the bumper; or the hood bends like cloth; or the steam lifts the car."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car with one hood; the car keeps its panels and wheels and passes through nothing.",
+      "fail": "A wheel vanishes; or a second car appears; or the hood passes through the windscreen; or the car changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's paint, its number plate and the roadside stay the same.",
+      "fail": "The car changes colour; or the plate's characters change; or the roadside changes between frames."
+    }
+  ],
+  "note": "Whether the engine is running is not judged and no driver need be shown."
+}

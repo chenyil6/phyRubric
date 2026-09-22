@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0118",
+  "caption": "Loose snow is packed between mittened hands into a firm snowball that holds its shape when the hands open.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Loose snow is gathered in mittened hands."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The hands pack it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A firm snowball forms."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The hands open and the ball holds its shape."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hands are mittened."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The packing comes first, then the ball forms, then the hands open."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The snow compresses and sticks together under pressure, going from loose to a firm ball.",
+      "fail": "The snow stays powdery and falls through the fingers when packed; or it turns to liquid; or it hardens into a glassy ball."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The ball stays a ball after release and does not fall apart or spring back to loose snow.",
+      "fail": "It crumbles the instant the hands open; or it puffs back up into loose snow; or it splits into two balls."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The ball gets smaller and denser as it is packed, not larger.",
+      "fail": "It grows while being packed with no snow added; or it shrinks after the hands open; or it swells."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Loose snow that falls goes down.",
+      "fail": "Snow rises from the hands; or hangs in the air; or the ball floats between the hands."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One snowball forms and keeps its number.",
+      "fail": "The ball vanishes or a second appears; or it turns into another object; or it merges with a mitten."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mittens and the background stay the same.",
+      "fail": "The mittens change colour; or the snow changes colour; or the background rearranges."
+    }
+  ]
+}

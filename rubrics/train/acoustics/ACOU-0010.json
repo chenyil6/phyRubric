@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0010",
+  "caption": "Grains of rice lie on an upturned metal pot lid on a table; the lid is struck once with a spoon and the grains jump.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An upturned metal pot lid lies on a table with grains of rice on it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A spoon strikes the lid."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The grains jump."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The strike is a single hit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lid rests upturned on the table rather than sitting on a pot."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The strike comes first and the jump follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The grains lie still on the lid until the spoon lands; they jump at the strike and only then.",
+      "fail": "Grains skitter or hop before the spoon reaches the lid; or jump while the spoon is well away; or the spoon strikes and every grain stays put; or the grains lift one after another in a wave rather than together at the blow."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The first hop is the biggest; later hops are smaller until the grains lie still on the lid.",
+      "fail": "The grains keep hopping at the same height for the whole clip after the one strike; or hop higher with each bounce; or lie still and then hop again with the spoon away from the lid."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Grains that jump fall back onto the lid, onto the table or off the lid's edge.",
+      "fail": "Grains hang in the air above the lid; or drift upward and away; or grains that fell off the edge return onto the lid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The lid is a rigid metal disc: the spoon rebounds from it and the lid may chatter on the table but keeps its shape.",
+      "fail": "The spoon sinks into the lid or leaves a dent that stays; or the lid flexes like rubber; or the lid flips over and the grains stay stuck to it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The grains keep their number, allowing for some rolling off; one lid and one spoon; nothing passes through anything.",
+      "fail": "New grains appear on the lid after the strike; or all the grains disappear at once; or the spoon passes through the lid; or the lid sinks into the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lid's finish, the grains' colour and the table's surface stay the same.",
+      "fail": "The lid changes colour or gains a pattern; or the grains change colour; or the table surface changes texture."
+    }
+  ]
+}

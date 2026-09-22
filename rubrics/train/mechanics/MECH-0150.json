@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0150",
+  "caption": "A small air pump runs with its tube in a glass of soapy water, and bubbles rise and pile up in a foam at the top of the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An air pump's tube sits in a glass of soapy water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Bubbles come from the tube."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bubbles rise."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Foam piles up at the top of the glass."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The water is soapy."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The bubbles come first and the foam builds after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Bubbles form at the tube tip and rise to the surface, and none sink.",
+      "fail": "Bubbles sink; or hang mid-water; or form at the surface and go down."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The foam builds while the pump runs as a mass of small bubbles and spills over the rim if it gets tall.",
+      "fail": "Bubbles pop instantly leaving no foam; or the foam is a rigid dome; or the foam grows while the pump is off."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The foam only grows while pumping.",
+      "fail": "It shrinks while pumping; or it is there before pumping; or it jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The tube and the glass stay put.",
+      "fail": "The glass slides; or the tube whips about; or the water churns away from the tube."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass and one tube keep their number.",
+      "fail": "The glass duplicates; or the tube vanishes; or foam appears away from the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass, the pump and the background stay the same.",
+      "fail": "The water changes colour; or the glass changes shape; or the background rearranges."
+    }
+  ]
+}

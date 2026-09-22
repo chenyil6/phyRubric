@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0279",
+  "caption": "A pair of skis slides over an exposed rock, and sparks flash from their metal edges.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pair of skis on snow."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The skis slide over an exposed rock."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Sparks flash from their metal edges."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sparks come at the rock, not on the snow."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The scrape comes first and the sparks follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Sparks appear only while the edges cross the rock and are gone at once; none appear while the skis are on snow.",
+      "fail": "Sparks flash while the skis are on snow with no rock beneath; or continue after the skis have left the rock; or a spark stays lit on the rock; or the edges glow along their length."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Two skis throughout; the sparks leave nothing behind on the rock or the snow.",
+      "fail": "Glowing dots stay on the rock after the skis have passed; or a ski vanishes or a third appears; or the rock vanishes or appears from nowhere; or the skis merge into one."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any spark fragments fall to the snow and go dark within a short distance.",
+      "fail": "Sparks rise and gather above the skis; or hang in the air; or lie glowing on the snow for the rest of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The skis slide on in the direction of travel over the rock; the sparks flick out behind the edges.",
+      "fail": "The skis stop dead on the rock and then continue; or leap into the air off the rock; or the sparks fly ahead of the skis; or the skis slide uphill by themselves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The skis pass over the rock's surface; they pass through neither the rock nor the snow's surface; the skis keep their shape.",
+      "fail": "A ski passes through the rock; or sinks through the snow as if through air; or a ski bends double; or the rock passes through a ski."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The skis' colours, the snow and the rock stay the same.",
+      "fail": "A ski changes colour or length; or the snow changes colour; or the rock changes shape."
+    }
+  ],
+  "note": "The skier, if in view, is kept because the skis are under them; skiing form is not judged."
+}

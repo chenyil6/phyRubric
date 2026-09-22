@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0305",
+  "caption": "A wrecking ball swings into a brick wall, and bricks burst out of the far side as the ball is stopped and swings back.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wrecking ball swings into a brick wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Bricks burst out of the far side."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ball is stopped."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It swings back."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The impact comes first, then the bricks fly, then the swing back."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The bricks move only at impact and fly away from the ball, and the ball loses most of its speed and swings back less far than it came.",
+      "fail": "Bricks move before the impact; or the ball keeps its speed; or it swings back further than it came."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The ball does not pass through the wall and stops at contact.",
+      "fail": "It passes through; or stops before touching; or the wall passes through the ball."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bricks fall to the ground.",
+      "fail": "They hang; or rise; or float."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bricks break and scatter and the ball stays rigid.",
+      "fail": "The wall bends like rubber; or the ball squashes; or the bricks melt."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball keeps its number, and the bricks are the wall's.",
+      "fail": "The ball duplicates; or bricks appear from nowhere; or the wall is whole again."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball and the site stay the same.",
+      "fail": "The ball changes colour; or the wall's bricks change colour; or the site rearranges."
+    }
+  ]
+}

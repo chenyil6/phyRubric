@@ -1,0 +1,82 @@
+{
+  "id": "ELEC-0284",
+  "caption": "A neon sign's box shorts in the rain, and sparks drop from beneath the sign onto the wet pavement.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A neon sign in the rain."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sign's box shorts: sparks come from beneath the sign."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sparks drop onto the wet pavement."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Rain is falling."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sign flickers as the sparks come."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sparks fall downward from beneath the sign box and go dark before or as they land on the pavement.",
+      "fail": "Sparks rise from the box and gather above the sign; or hang in the air; or lie glowing on the pavement for the rest of the clip; or drift sideways without dropping."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Sparks are transient and leave nothing behind; the sign, its box and the pavement keep their shape.",
+      "fail": "Glowing dots stay on the pavement after the sparks; or a glowing pile builds; or the sign duplicates or vanishes; or the box changes shape."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Sparks come in bursts from the box and each is gone within a short fall; the sign's tubes flicker with the bursts and do not glow steadily brighter.",
+      "fail": "The sparks stream steadily as a fixed fountain to the end of the clip; or sparks flow back up into the box; or the tubes brighten steadily to a glare; or the tubes flicker while no sparks come and stay steady when they do."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The wet pavement mirrors each burst briefly beneath it; the rain falls downward.",
+      "fail": "The sparks fall over the wet pavement while it stays as dark as before; or the reflection lies far from the sparks; or rain rises or hangs still."
+    },
+    {
+      "id": "P5",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The sparks leave the box's underside and fall in arcs or straight lines to the pavement.",
+      "fail": "Sparks fly upward past the sign's face; or spray far out sideways from a still box; or sparks leave from the sign's top."
+    },
+    {
+      "id": "P6",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The sign stays fixed to its mounting; nothing passes through the wall or the sign; the sparks come from the box, not from inside the wall.",
+      "fail": "The sign detaches and hangs in the air; or sparks pass through the wall; or the box melts; or the sign merges with the shopfront."
+    },
+    {
+      "id": "P7",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sign's tube colours, the shopfront and the pavement stay the same apart from the flicker.",
+      "fail": "A tube changes colour; or the lettering changes; or the shopfront changes."
+    }
+  ]
+}

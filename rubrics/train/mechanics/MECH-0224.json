@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0224",
+  "caption": "A sheet of wrapping paper is folded around a shoebox, creasing at the corners.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A shoebox sits on a sheet of wrapping paper."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The paper is folded around the box."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It creases at the corners."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The folding comes first and the creases follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The paper wraps following the box's edges and the box's shape shows through, and the paper does not stretch or shrink.",
+      "fail": "The paper stretches; or shrinks; or the box changes shape."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The paper lies on the box, not through it.",
+      "fail": "It passes through the box; or the box passes through the paper; or the hands pass through."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The paper creases sharply where it is pressed.",
+      "fail": "It is rubbery; or a rigid plate; or it tears everywhere."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It moves only as the hands move it.",
+      "fail": "It wraps itself; or unwraps; or slides."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One box and one sheet keep their number.",
+      "fail": "The box duplicates; or the paper vanishes; or the box turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The paper's pattern and the box stay the same.",
+      "fail": "The pattern changes; or the box changes; or the background rearranges."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0280",
+  "caption": "A laser pointer's beam enters a tank of slightly milky water at an angle, and the beam bends where it crosses the surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A laser pointer's beam enters a tank of slightly milky water at an angle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The beam bends where it crosses the surface."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The beam is straight in the air and straight in the water."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The kink moves with the entry point."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The beam is straight in the air and in the water and kinks only at the surface, bending toward the vertical.",
+      "fail": "The beam curves in the air; or in the water; or passes straight through the surface with no kink at an angle."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The kink moves with the entry point and there would be no bend if the beam were aimed straight down.",
+      "fail": "The kink stays put while the entry point moves; or it bends the wrong way; or it splits into two beams."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The beam moves only with the pointer.",
+      "fail": "It drifts with the pointer still; or flickers; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water surface is level and the beam is visible in the milky water.",
+      "fail": "The surface tilts and holds; or the beam is invisible in the water; or the water is rigid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pointer, one beam and one tank.",
+      "fail": "A second beam appears; or the tank vanishes; or the beam becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tank and the room stay the same.",
+      "fail": "The tank changes shape; or the room rearranges; or the beam changes colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

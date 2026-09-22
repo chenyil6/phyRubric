@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0055",
+  "caption": "A pendulum clock swings in front of a hallway mirror, and the reflected pendulum swings in time with it, mirrored.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pendulum clock swings in front of a hallway mirror."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The reflected pendulum swings in time with it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The reflection is mirrored."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection stops when the pendulum stops."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflected swing is simultaneous with the real one and stops when the pendulum stops.",
+      "fail": "It swings out of time; or it swings while the pendulum hangs still; or it stops while the pendulum swings."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image: the pendulum's swing to one side of the frame appears on the same side in the mirror.",
+      "fail": "The reflected swing is on the other side of the frame, as in a rotated copy; or the reflection is upside down; or it shows a different clock."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It shifts or turns while the clock is still; or slides across the mirror with nothing moving."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mirror is flat and rigid: the reflection is undistorted.",
+      "fail": "The surface ripples; or the reflection warps; or the mirror bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One clock and one reflection; the reflection stays in the mirror.",
+      "fail": "A second clock appears; or the reflection leaves the mirror; or the pendulum vanishes; or the clock passes into the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The clock, the mirror frame and the hallway stay the same.",
+      "fail": "The clock changes colour; or the frame changes; or the hallway rearranges."
+    }
+  ],
+  "note": "Mirror geometry: each point of the image lies directly across the mirror surface from the real point, so the image is a mirror copy, not a rotated one."
+}

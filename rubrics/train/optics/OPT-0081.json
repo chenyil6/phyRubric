@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0081",
+  "caption": "A car passes a shop with a mirrored sign, and the car's headlights flash in the mirror as it goes by.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A shop has a mirrored sign."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A car passes the shop."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The car's headlights flash in the mirror as it goes by."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flash moves across the mirror with the car."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flash appears as the lights line up with the mirror and disappears as the car moves on.",
+      "fail": "The flash is there with no car; or it stays after the car has passed; or the car passes and no flash appears."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The flash moves across the mirror with the car.",
+      "fail": "It stays fixed; or moves the opposite way; or jumps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The flash does not move on its own.",
+      "fail": "It flickers with the car stopped; or drifts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The sign is flat and rigid.",
+      "fail": "It ripples; or bends; or the flash warps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and one sign.",
+      "fail": "A second car appears; or the sign duplicates; or the car vanishes; or the car passes through the sign."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sign and the shop stay the same.",
+      "fail": "The sign changes; or the shop front changes; or the street rearranges."
+    }
+  ]
+}

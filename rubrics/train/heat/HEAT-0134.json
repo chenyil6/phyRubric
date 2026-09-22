@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0134",
+  "caption": "A lid is slid over a small grease fire in a pan, and the flames go out.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pan with flames on its contents."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lid is slid over the pan."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flames go out."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Smoke seeps from the lid's edges."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lid covers the pan fully."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is flames, lid on, out."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flames go out once the lid covers the pan and do not keep burning under it.",
+      "fail": "The flames burn on under the closed lid; or the flames go out before the lid reaches the pan; or the flames go out with the lid still held clear; or the flames relight while the lid is still on."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once out the fire stays out while the lid is on, and any smoke only thins.",
+      "fail": "The flames relight under the closed lid; or the flames go out and come back with the lid on; or the smoke thickens steadily under the closed lid; or the fire grows as the lid comes down."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The smoke seeps out at the lid's rim and rises.",
+      "fail": "The smoke pours downward from under the lid onto the hob; or sinks and pools around the pan; or hangs as a fixed shape without rising; or runs back under the lid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The lid stays a rigid disc that sits on the pan's rim and the pan keeps its shape.",
+      "fail": "The lid bends or melts over the flames; or the pan's wall sags; or the lid sticks to the flames and lifts with them; or the lid sinks into the pan's contents."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pan with one lid; the pan stays on the hob and nothing passes through it.",
+      "fail": "The lid passes through the pan's rim; or a second lid appears; or the flames pass through the lid and burn above it; or the pan vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan's handle, the hob and the surroundings stay the same.",
+      "fail": "The handle changes shape; or the hob's knobs move by themselves; or items around the hob rearrange."
+    }
+  ],
+  "note": "Who slides the lid is not judged."
+}

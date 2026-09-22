@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0005",
+  "caption": "The power button on a remote pointed at a television is pressed, and the screen lights up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A television with a dark screen."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A remote is pointed at the television."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The power button on the remote is pressed."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The screen lights up."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The remote is aimed at the television, not elsewhere."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark, press, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The screen comes on at or just after the press, and only then.",
+      "fail": "The button is pressed and the screen stays dark to the end of the clip; or the screen is lit before the press; or the screen comes on while the remote lies untouched; or the screen comes on while the remote points away from the television."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the screen stays on for the rest of the clip and shows a steady picture or menu.",
+      "fail": "The screen goes dark again by itself; or flickers on and off; or the picture appears and shrinks back to black; or the screen turns on and off with each frame."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The screen's glow reaches its surroundings: the wall behind and the shelf beneath brighten with the screen, and the standby light, if any, changes state at the press.",
+      "fail": "The screen is lit while the room around it stays as dark as before; or the room brightens while the screen stays dark; or the standby light stays as it was while the screen comes on."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The television and the remote stay where they are, apart from the hand's movement; nothing else in the room moves at the press.",
+      "fail": "The television shifts or turns at the press; or the remote moves with no hand on it; or objects on the shelf jump."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One television and one remote; the television keeps its shape; the hand passes through nothing.",
+      "fail": "A second screen or remote appears; or the television vanishes; or the remote passes through the hand; or the television changes size or shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The television's frame, the remote's buttons and the room stay the same apart from the screen.",
+      "fail": "The frame changes colour; or the remote's button layout changes; or the room's contents rearrange."
+    }
+  ],
+  "note": "The picture that appears on the screen is not judged; any content counts as lit."
+}

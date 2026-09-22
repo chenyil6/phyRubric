@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0017",
+  "caption": "A long steel saw blade is dropped flat onto a bench, and the blade twangs and flutters for a moment before lying still.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A long steel saw blade and a bench."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The blade is dropped and lands on the bench."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The blade flutters on landing."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The blade lies still afterwards."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The blade lands flat, not on its edge or tip."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is landing, flutter, still."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The blade falls as a stiff sheet and starts to flutter as it hits the bench and only then; once still it stays still.",
+      "fail": "The blade flutters in mid-air before touching the bench; or lies on the bench and begins fluttering with nothing touching it; or hits the bench and lies dead still with no flutter at all; or starts fluttering again after lying still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flutter is strongest at the impact and dies away to stillness.",
+      "fail": "The flutter grows after the impact; or continues unchanged to the end of the clip; or the blade stops dead in mid-flutter with one end raised."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The blade falls downward onto the bench and stays on the bench surface.",
+      "fail": "The blade hovers before landing; or rises after landing; or a raised end stays lifted off the bench with nothing under it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The blade flexes as a springy steel strip: it bows and rings flat again; the bench stays rigid.",
+      "fail": "The blade folds and stays bent; or bends like rubber into a deep curve; or the bench top dents or ripples where it lands; or the teeth bend over."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One blade and one bench; the blade passes through nothing and stays one piece.",
+      "fail": "The blade passes into the bench; or splits in two; or vanishes; or a second blade appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blade's teeth, the bench and anything lying on it stay the same.",
+      "fail": "The blade's teeth change pattern; or the bench changes colour; or tools on the bench move by themselves."
+    }
+  ],
+  "note": "The twang is inaudible and is not judged; the flutter is its visible sign."
+}

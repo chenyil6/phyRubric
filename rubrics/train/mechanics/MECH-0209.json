@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0209",
+  "caption": "A man pushes a broken-down car along a flat empty street, and the car slowly starts to roll.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A man pushes a car along a flat street."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The car starts to roll."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The street is flat and empty."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The car starts slowly."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The push comes first and the roll follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The car begins to move only after he pushes and only while he pushes, and it gathers speed slowly.",
+      "fail": "The car moves before he touches it; or rolls with his hands off it; or surges away fast from a push."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "He leans forward with his arms against the car and drives with his legs, and his limbs bend at the joints.",
+      "fail": "His arms bend mid-forearm; or a limb detaches; or his hands pass through the car."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "His hands are on the car body and his feet on the road.",
+      "fail": "His hands pass through the car; or he passes into the car; or his feet sink into the road."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The car rolls in the direction he pushes, in a straight line.",
+      "fail": "It rolls toward him; or turns sharply on its own; or rolls backward."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "His limbs keep their number, and one car stays one car.",
+      "fail": "A limb detaches; or the car duplicates; or he merges with the car."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "His clothing, the car and the street stay the same.",
+      "fail": "His clothing changes colour; or the car changes colour; or the street rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Gait, posture, style and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

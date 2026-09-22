@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0045",
+  "caption": "A soccer ball rolled at a slant into a low garden wall bounces off at a slant the other way and rolls on across the lawn.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A soccer ball rolls at a slant toward a low garden wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It bounces off the wall."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It rolls on across the lawn in a new direction."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The approach is at a slant rather than square to the wall."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The approach comes first and the bounce follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The ball leaves the wall on the opposite slant, turned away from the wall face, and rolls on a little slower than it arrived.",
+      "fail": "The ball comes straight back along the line it arrived on after a slanting approach; or it stops dead at the wall; or it leaves the wall quicker than it arrived."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The ball stays outside the wall and turns at its face.",
+      "fail": "The ball passes into the stone of the wall; or it sinks part way in before coming back out; or it passes through to the other side of the wall."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The change of direction happens where the ball meets the wall and nowhere else.",
+      "fail": "The ball turns away before it reaches the wall; or it turns again out on the open lawn with nothing touching it; or it stops and sets off again untouched."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The ball stays down on the grass, rolling rather than flying, through the bounce and afterwards.",
+      "fail": "The ball lifts off the lawn and travels through the air after the bounce; or it hovers above the grass; or it sinks into the lawn."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one wall are there throughout.",
+      "fail": "The ball vanishes at the wall or a second one appears; or the ball turns into another object at the bounce; or a section of the wall disappears where the ball strikes it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's panels, the wall and the garden stay the same.",
+      "fail": "The ball changes colour or pattern at the bounce; or the wall changes height between frames; or the garden behind rearranges."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0105",
+  "caption": "A struck tuning fork is touched to the corner of a sheet of paper lying on a table, and the paper buzzes and skitters.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sheet of paper lies on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A tuning fork is touched to a corner of the paper."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The paper buzzes and skitters: it shivers and shifts."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The fork is shown being struck, or its prongs show a blur."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The touch comes first and the buzzing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The paper is still until the prongs touch it, moves only during contact and stops when the fork is lifted.",
+      "fail": "The paper skitters before the fork touches it; or moves while the fork is held away; or keeps skittering after the fork is lifted."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "While the prongs touch, the paper shivers and creeps, most at the touched corner.",
+      "fail": "The prongs rest on the corner for a spell and the paper lies dead still; or the far edge dances while the touched corner stays pinned; or the paper is flung across the table in one leap."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The paper stays flat on the table.",
+      "fail": "The paper lifts off the table and floats; or stands up on edge; or rises."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The paper flexes as paper and the fork is rigid.",
+      "fail": "The paper tears where the prongs touch; or the prongs bend; or the paper stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet, one fork; the prongs do not pass through the paper.",
+      "fail": "A second sheet appears; or the paper vanishes; or the prongs pass through the paper into the table; or the fork changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The paper's markings, the table and the fork's size stay the same.",
+      "fail": "The paper's markings change; or the table changes; or the fork changes size."
+    }
+  ],
+  "note": "The hand holding the fork is a trigger and is not judged."
+}

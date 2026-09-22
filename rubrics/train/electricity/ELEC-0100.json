@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0100",
+  "caption": "Lightning strikes a field of wind turbines, and one turbine's blade tip flashes brightly for an instant.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A field of wind turbines."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lightning strikes among the turbines."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "One turbine's blade tip flashes brightly for an instant."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flash is at a blade tip, not on the tower or the ground."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The blades are turning."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The bolt and the flash at the tip are brief and gone; the tip returns to its unlit look.",
+      "fail": "The bolt stands as a steady lit line for the rest of the clip; or the blade tip keeps glowing after the bolt is gone; or the glow travels along the blade; or the flash fades in slowly."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The turbines are the same before and after: the same towers, the same number of blades on each, in the same places.",
+      "fail": "A turbine or blade vanishes or appears; or a blade detaches at the flash; or a turbine changes place between dark and lit frames; or a bolt hangs frozen in the air after the flash."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The struck turbine's blades keep turning as before, about the hub, in the same direction; the other turbines keep their rhythm.",
+      "fail": "The blades stop dead at the flash; or reverse direction; or jump to a new angle between dark and lit frames; or a blade bends as it turns."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The flash lights the nearby towers, the ground and the cloud undersides during the bolt, from the bolt's direction.",
+      "fail": "The bolt is visible while the towers and ground stay as dark as before; or the field lights up while no bolt is present; or the ground far off is lit while the struck turbine's surroundings stay dark."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The bolt ends at the blade tip and does not pass through the blade or tower; the turbines stay solid.",
+      "fail": "The bolt passes through the blade and continues; or the tower lights up from within like a lamp; or the bolt passes through a tower; or a blade passes through another blade or the tower."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The turbines' colour, the ground and the sky keep their colours apart from the flash.",
+      "fail": "A tower changes colour; or the sky turns to daylight after the flash; or the ground changes colour."
+    }
+  ]
+}

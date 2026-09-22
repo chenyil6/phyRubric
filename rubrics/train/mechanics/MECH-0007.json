@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0007",
+  "caption": "A phone lying flat on the dashboard of a car slides forward toward the windshield when the car brakes suddenly at a red light.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A phone lies flat on the dashboard of a car."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The car brakes suddenly at a red light."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The phone slides forward toward the windshield."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "A red traffic light is visible ahead of the car."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The braking comes first and the slide follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The phone lies still while the car runs at a steady speed and starts to slide as the braking begins.",
+      "fail": "The phone slides while the car is still travelling steadily; or it slides with no braking visible; or it keeps sliding after the car has come to rest."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The slide carries the phone toward the front of the car and ends at the windshield or when the car stops.",
+      "fail": "The phone slides backward, away from the windshield, under braking; or it slides sideways across the dashboard while the car brakes in a straight line; or it gathers speed the longer it slides."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The phone keeps its face against the dashboard as it slides and stays on that surface.",
+      "fail": "The phone lifts off the dashboard and floats; or it stands up on edge and stays there; or it sinks into the dashboard."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Other loose objects in the cabin slide or swing forward at the same moment.",
+      "fail": "Another loose object stays put while the phone slides forward; or it slides backward under the same braking; or it moves before the braking begins.",
+      "precondition": "Other loose or hanging objects are visible inside the car."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One phone on one dashboard keeps its shape, and it stays inside the car.",
+      "fail": "The phone vanishes or a second one appears; or the phone passes through the windshield; or it turns into another object as it slides."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The phone's case, the dashboard and the street ahead stay consistent.",
+      "fail": "The phone changes colour or size; or the dashboard vents move between frames; or the traffic light shifts to another part of the scene."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0035",
+  "caption": "A toy car is lifted off a sunlit table, and its shadow stays on the table and grows fainter as the car is raised higher.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy car sits on a sunlit table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is lifted off the table."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its shadow stays on the table."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The shadow grows fainter as the car is raised higher."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lift comes first and the shadow separates as the car rises."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow separates from the car as it lifts and remains on the surface, on the side away from the sun.",
+      "fail": "The shadow rises with the car; or stays attached to the wheels in mid-air; or vanishes the instant the car lifts."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The shadow gets fainter and softer the higher the car is raised.",
+      "fail": "It gets sharper and darker as the car rises; or stays the same at every height; or flickers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the car's outline, blurring as it fades.",
+      "fail": "It is a different shape; or splits; or sharpens into a different object."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The car rises only as the hand lifts it, and the shadow stays down on the table.",
+      "fail": "The car floats up on its own; or the shadow lifts off the table; or the car sinks into the table."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and one shadow.",
+      "fail": "A second car or shadow appears; or the car vanishes; or the shadow becomes solid; or the hand passes through the car."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and the table stay the same, and the shadow stays dark.",
+      "fail": "The car changes colour; or the shadow turns coloured; or the table changes."
+    }
+  ],
+  "note": "The hand lifting is the minimal trigger; the person is not judged."
+}

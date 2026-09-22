@@ -1,0 +1,81 @@
+{
+  "id": "OPT-0049",
+  "caption": "A toy robot in front of a mirror raises its right arm, and its reflection raises the arm on the opposite side.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy robot stands in front of a mirror."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The robot raises one arm."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The robot's reflection is visible in the mirror."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The reflection raises an arm."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The reflection raises the arm that corresponds to the robot's raised arm: the one directly across the mirror from it."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The robot reads as a toy robot: blocky and mechanical."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection moves exactly when the robot moves: its arm rises together with the robot's arm and stops when it stops.",
+      "fail": "The robot's arm rises and the reflection's arms stay down; or the reflection moves first or later; or the reflection raises an arm while the robot is still; or the reflected arm goes down as the real one goes up."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image: the same robot in the same colours, facing the real one, with every part directly across the mirror surface from the real part, so the raised arm appears on the same side of the frame as the real raised arm.",
+      "fail": "The reflected raised arm is on the other side of the frame from the real one, as in a rotated copy rather than a mirror image; or the reflection shows the robot's back; or it is a different robot or colour; or it is upside down."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "The reflection turns, shifts or waves while the robot is stationary; or the reflection slides across the mirror with neither robot nor camera moving."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mirror is a flat rigid surface: the reflection is undistorted and keeps the robot's proportions.",
+      "fail": "The mirror surface ripples like water; or the reflection stretches or warps while the robot is unchanged; or the mirror bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One robot and one reflection; the reflection stays inside the mirror and the robot keeps all its parts.",
+      "fail": "The reflection steps out of the mirror or appears outside its frame; or a second robot appears; or the robot loses or gains an arm; or the robot passes into the mirror."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Robot colours and the mirror frame stay the same; the reflection's colours match the robot's throughout.",
+      "fail": "The robot or its reflection changes colour; or the frame changes; or the reflection's colours drift away from the robot's."
+    }
+  ],
+  "note": "Mirror geometry: each point of the image lies directly across the mirror from the real point, so the reflected raised arm is on the SAME side of the frame as the real raised arm. The caption's 'opposite side' refers to the reflected robot's own left and right, which are swapped because it faces the viewer. A reflection whose raised arm is on the other side of the frame is a rotated copy and fails P2."
+}

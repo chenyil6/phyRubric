@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0141",
+  "caption": "A row of tea-light candles is lit one after another with a long match, and each flame stands upright after it catches.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A row of tea-light candles."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A long match is held to the candles one after another."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Each candle lights when the match touches it."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Each flame stands upright once lit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The candles light in order along the row."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The candles not yet touched stay dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each candle lights only when the match touches its wick, and candles the match has not reached stay dark.",
+      "fail": "A candle lights before the match reaches it; or the match touches a wick and it stays dark to the end of the clip; or every candle lights at once when the first is touched; or a candle at the far end lights while the match works at the near end."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The candles keep their number and their places, and each keeps one wick and one flame.",
+      "fail": "A second flame appears on one wick; or a candle vanishes; or a new candle appears in the row; or two candles merge into one."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Each flame stands upward from its wick and the wax pools at the candle's top.",
+      "fail": "A flame points downward; or hangs below its wick; or melted wax climbs a candle's side; or a flame lies flat along the row with nothing blowing it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once lit a candle stays lit and the flames do not go out on their own.",
+      "fail": "A lit candle goes out with nothing touching it; or a flame flickers between lit and out; or a lit flame jumps to an unlit candle; or a lit candle's wax level rises."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The candles keep their cups and shapes and the match stays a stick; nothing passes through anything.",
+      "fail": "A candle's cup changes shape; or the match passes through a candle; or a flame detaches from its wick and floats; or a candle turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candles' colour, the surface they stand on and the surroundings stay the same.",
+      "fail": "A candle changes colour; or the surface changes pattern; or the background changes between frames."
+    }
+  ],
+  "note": "Who holds the match is not judged."
+}

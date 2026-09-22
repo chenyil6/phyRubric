@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0179",
+  "caption": "A flour tortilla lies on a wire rack over a gas flame, and pockets of the tortilla puff up into bubbles.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tortilla lies on a wire rack over a gas flame."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Pockets of the tortilla puff up."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The puffed pockets stand as bubbles on its upper side."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The underside darkens in spots."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tortilla is flat before it is over the flame."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The heating comes first and the puffing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The tortilla stays one flat round that raises separate domed pockets on its upper face, each still joined to the sheet.",
+      "fail": "A pocket detaches and floats free of the tortilla; or the whole tortilla swells into a ball; or the tortilla splits into separate pieces as it puffs; or the tortilla turns into another object."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The pockets only rise while the tortilla is over the flame and the darkening on the underside only deepens.",
+      "fail": "A pocket sinks flat and rises again with the tortilla still over the flame; or a darkened spot fades back to pale dough; or the pockets appear before the tortilla is over the flame; or the darkening spreads and then shrinks."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pockets rise upward on the upper face, the tortilla rests on the rack, and the flame points upward at it.",
+      "fail": "The pockets bulge downward through the rack; or the tortilla lifts off the rack and hangs in the air; or the flame points downward away from the tortilla; or a pocket rises and carries the tortilla up with it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The pockets and the dark spots appear where the flame reaches the tortilla from below.",
+      "fail": "The pockets rise on a part of the tortilla the flame never reaches; or the underside stays pale and unmarked while pockets rise all over; or the tortilla sits over the flame and stays flat and unmarked to the end of the clip."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tortilla on one rack; the tortilla stays one piece and the rack keeps its wires.",
+      "fail": "A second tortilla appears; or the tortilla vanishes; or the tortilla passes through the rack's wires; or a wire vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rack, the hob and the surroundings stay the same.",
+      "fail": "The rack changes spacing; or the hob's knobs move by themselves; or items around the hob rearrange."
+    }
+  ],
+  "note": "The browning of the tortilla is chemistry; what is judged is that the darkening runs one way and appears where the flame reaches it."
+}

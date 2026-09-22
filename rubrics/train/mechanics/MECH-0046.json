@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0046",
+  "caption": "A basketball thrown from the free-throw line hits the front of the rim, bounces up, and falls to the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A basketball is thrown from the free-throw line."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It hits the front of the rim."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It bounces up."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It falls to the floor."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "It strikes the front of the rim rather than passing through the hoop."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The throw comes first, then the rim, then the bounce, then the fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The bounce starts where the ball meets the rim and the ball leaves that point upward or outward, slower than it arrived.",
+      "fail": "The ball changes course before it reaches the rim; or it leaves the rim quicker than it arrived; or it carries on past the rim's line unchanged."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "After the bounce the ball rises, slows, and comes down to the floor.",
+      "fail": "The ball hangs above the rim after the bounce; or it keeps rising out of the frame; or it sinks from the rim at one unchanging slow drift."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The ball stays outside the metal of the rim and outside the backboard.",
+      "fail": "The ball passes through the ring of the rim; or it passes through the backboard; or it sinks into the rim and comes out the other side."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ball squashes briefly at the rim and on the floor and springs back round, and the rim stays rigid.",
+      "fail": "The ball stays flattened after a bounce; or the rim bends and stays bent where the ball strikes it; or the ball sticks to the rim."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one hoop are there throughout.",
+      "fail": "The ball vanishes at the rim or a second one appears; or the ball turns into another object at the bounce; or the rim disappears from the backboard."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and seams, the backboard markings and the court stay the same.",
+      "fail": "The ball changes colour at the bounce; or the square painted on the backboard shifts between frames; or the court behind rearranges."
+    }
+  ]
+}

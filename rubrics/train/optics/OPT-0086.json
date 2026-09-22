@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0086",
+  "caption": "A car's side mirror is adjusted from inside, and the view in the mirror sweeps from the sky down to the road behind.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car's side mirror is adjusted from inside."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The view in the mirror sweeps from the sky down to the road behind."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The view stops changing when the adjustment stops."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The mirror shows the scene behind the car."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The view moves smoothly as the mirror tilts and shows the scene behind the car, not in front.",
+      "fail": "It stays fixed as the mirror tilts; or it shows the road ahead; or it jumps."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The view changes only while the mirror moves and stops when the adjustment stops.",
+      "fail": "It sweeps with the mirror still; or keeps moving after the adjustment stops; or changes before it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The reflected scene is mirrored.",
+      "fail": "Lettering reads the right way round; or the scene is not mirrored; or it is upside down."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mirror is rigid: the view is undistorted.",
+      "fail": "It ripples; or warps; or bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mirror on one car.",
+      "fail": "The mirror duplicates or vanishes; or the reflection becomes solid; or the mirror passes through the door."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car and the surroundings stay the same.",
+      "fail": "The car changes colour; or the mirror housing changes; or the surroundings rearrange."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0136",
+  "caption": "An electric igniter is fired, and it sparks briefly at the wire ends before the fuse catches.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An electric igniter with wire ends at a fuse."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The igniter is fired."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It sparks briefly at the wire ends."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The fuse catches."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spark comes first and the fuse catches after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spark is a brief flash at the wire ends, and is gone; the fuse then glows at that spot and burns along its length in one direction, never back.",
+      "fail": "The spark glows on at the wire ends for the rest of the clip; or the fuse burns before the spark; or the burning point runs back the way it came; or the fuse relights where it has already burnt."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "After the spark, the fuse catches at the wire ends and a glowing point travels away along it.",
+      "fail": "The spark comes and the fuse stays unlit to the end of the clip; or the fuse catches at a point far from the wire ends; or the fuse burns along its whole length at once; or the glowing point jumps from place to place."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any sparks or embers thrown off fall and go dark within a short distance; smoke from the fuse rises.",
+      "fail": "Sparks rise and gather above the fuse; or hang in the air; or smoke sinks and pools; or embers lie glowing beside the fuse for the rest of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fuse is a thin cord that stays where it lies; behind the burning point it is blackened or gone, ahead it is unburnt.",
+      "fail": "The fuse stands rigid and stays whole behind the burning point; or the fuse grows longer; or the unburnt part ahead blackens before the point reaches it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One igniter, one fuse; the fuse's burnt part does not return; nothing appears, vanishes or passes through anything.",
+      "fail": "A second fuse appears; or the burnt part of the fuse comes back unburnt; or the igniter vanishes; or the wire ends pass through the fuse or the ground."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The igniter's colour, the unburnt fuse's colour and the ground stay the same.",
+      "fail": "The igniter changes colour; or the unburnt fuse changes colour ahead of the flame; or the ground changes."
+    }
+  ],
+  "note": "What the fuse leads to is not judged; the clip ends with the fuse burning."
+}

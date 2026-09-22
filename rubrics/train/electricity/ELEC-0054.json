@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0054",
+  "caption": "A battery pack is clipped into a remote-control car, and the car's lights come on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A remote-control car and a battery pack."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pack is clipped into the car."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The car's lights come on."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The car is dark and still before the pack goes in."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is pack in, then lights."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lights come on at the moment the pack clicks into place, and only then, and stay on.",
+      "fail": "The pack is in and the lights stay dark; or the lights are lit before the pack reaches the car; or the lights come on with the pack lying loose; or the lights go out again with the pack seated."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The car stays still: its wheels do not turn and it does not drive off, since no controller is used.",
+      "fail": "The wheels spin up when the pack goes in; or the car drives away by itself; or the car jerks or rocks with nothing touching it; or the steering turns."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lights' glow reaches the surface in front of or behind them.",
+      "fail": "The lamps glow while the surface in front stays as dark as before; or the surface brightens while the lamps stay dark; or the lit patch is far from the lamps.",
+      "precondition": "The surface in front of the lights is in view."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pack slides into its bay as a rigid block and seats with a stop; the car keeps its shape.",
+      "fail": "The pack squashes or bends as it goes in; or the car body deforms around it; or the pack hangs half out once clipped."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and one pack; the pack stays in once clipped; the pack enters the bay rather than the car's shell; fingers pass through nothing.",
+      "fail": "The pack vanishes after clipping in or a second pack appears; or the pack passes through the shell; or a wheel or light vanishes; or fingers pass through the car."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and decals and the surface stay the same apart from the lights.",
+      "fail": "The car changes colour; or its decals change; or the surface changes."
+    }
+  ]
+}

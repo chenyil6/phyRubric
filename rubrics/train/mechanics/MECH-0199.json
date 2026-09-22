@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0199",
+  "caption": "A cat crouches on a kitchen floor, jumps up onto the counter, and lands on it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cat crouches on a kitchen floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It jumps up."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It lands on the counter."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The crouch comes first, then the jump, then the landing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It pushes off with its hind legs, arcs upward, and lands front paws first.",
+      "fail": "It floats up; or lands before it has jumped; or rises straight up and hangs."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Its legs fold and extend at the joints and the body stretches in the air.",
+      "fail": "A leg detaches; or the body stretches like rubber; or the legs bend mid-bone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "After the peak it comes down onto the counter and stays.",
+      "fail": "It hovers; or rises through the ceiling; or bounces high off the counter."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "Its paws land on the counter top.",
+      "fail": "It passes through the counter; or sinks into it; or the counter passes through the cat."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One cat keeps its shape and stays one cat.",
+      "fail": "It splits; or merges with the counter; or turns into another animal."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cat's markings and the kitchen stay the same.",
+      "fail": "The markings change; or the kitchen rearranges; or the counter changes."
+    }
+  ],
+  "note": "The cat is self-driven: the timing of its jump is its own. Only the arc and the body's integrity are judged."
+}

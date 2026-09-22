@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0270",
+  "caption": "The cord of a window blind is pulled, and the blind gathers upward as the cord runs down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A window blind hangs with its cord."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cord is pulled."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The blind gathers upward."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The cord runs down."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pull comes first and the rise follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The blind rises only as fast as the cord is pulled and stops when the pulling stops.",
+      "fail": "It rises with no pull; or keeps rising after the pull stops; or the cord is pulled and the blind stays."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The cord stays taut on the pulled side and does not stretch.",
+      "fail": "It is slack while lifting; or stretches; or bunches."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The blind hangs from the head rail and the slats gather at the top.",
+      "fail": "They gather at the bottom; or the blind rises above the rail; or it floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The cord goes down as the blind goes up.",
+      "fail": "Both go up; or the cord is still while the blind moves; or the blind goes down as the cord is pulled."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One blind and one cord keep their number.",
+      "fail": "The blind duplicates; or the cord vanishes; or the blind turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blind and the window stay the same.",
+      "fail": "The blind changes colour; or the window changes; or the room rearranges."
+    }
+  ]
+}

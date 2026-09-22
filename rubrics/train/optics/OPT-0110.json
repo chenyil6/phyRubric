@@ -1,0 +1,65 @@
+{
+  "id": "OPT-0110",
+  "caption": "Seen from under the water, the wavering shapes of the trees and the pool ladder show through the surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "The view is from under the water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The wavering shapes of trees and a pool ladder show through the surface."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The shapes steady when the water is calm."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shapes are visible through the surface and their outlines ripple with it.",
+      "fail": "The surface is opaque; or the shapes are rigid on a plainly rippled surface; or they ripple on a flat calm."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The trees and ladder themselves do not move; only their image wavers.",
+      "fail": "The ladder bends; or the trees sway with no wind; or a different scene appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The surface is liquid: ripples pass and fade.",
+      "fail": "It is rigid; or ripples freeze; or the water leaps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The surface moves only with a visible cause.",
+      "fail": "It churns with nothing disturbing it; or the view jumps; or the ladder moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ladder and the trees.",
+      "fail": "The ladder vanishes; or a second appears; or the water becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pool and the trees stay the same.",
+      "fail": "The pool walls change; or the trees change colour; or the sky changes."
+    }
+  ]
+}

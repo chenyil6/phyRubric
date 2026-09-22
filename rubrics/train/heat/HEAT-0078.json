@@ -1,0 +1,84 @@
+{
+  "id": "HEAT-0078",
+  "caption": "A vent pipe on a factory roof releases a steady plume of white steam into the winter sky.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A vent pipe stands on a factory roof."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A plume of white steam leaves the pipe."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The plume rises."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The plume bends as it climbs."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The plume thins with distance."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The plume leaves the pipe's mouth going up, bends as it climbs and thins; it does not sink.",
+      "fail": "The plume falls back onto the roof and pools; or flows down the pipe's side; or hangs as a fixed shape without rising or drifting; or pours downward out of the pipe."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The plume moves outward and away from the pipe; puffs that have left keep going.",
+      "fail": "The plume runs back into the pipe; or a puff retreats toward the mouth; or steam appears in the sky away from the pipe and drifts into it; or the plume grows with nothing leaving the pipe."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The plume issues from the pipe's mouth and is densest there.",
+      "fail": "The plume is densest far from the pipe with nothing carrying it there; or the pipe's mouth is clear and the plume starts in the air above it; or the steam rises from the roof's surface rather than the pipe."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The plume leans the same way as the other signs of wind in the scene.",
+      "fail": "The plume leans against the direction the flags or trees show; or the plume stands straight up while nearby flags are stretched out; or the plume's lean changes while the flags hold steady.",
+      "precondition": "Flags, trees or other smoke in the scene show which way the wind blows."
+    },
+    {
+      "id": "P5",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The steam is a soft cloud that spreads, waves and fades, and the pipe stays a rigid stack.",
+      "fail": "The plume holds a fixed rigid shape; or pours like a liquid; or the pipe bends or sways with the plume; or the plume breaks into solid lumps."
+    },
+    {
+      "id": "P6",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pipe on one roof; the pipe stays in place and nothing passes through the roof.",
+      "fail": "The pipe vanishes; or a second pipe appears; or the pipe sinks into the roof; or the roof changes shape."
+    },
+    {
+      "id": "P7",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The roof, the pipe's paint and the buildings around stay the same.",
+      "fail": "The pipe changes colour; or the roof's fittings rearrange; or the buildings behind change between frames."
+    }
+  ],
+  "note": "The wind itself is invisible; a plume that leans while rising is not a violation."
+}

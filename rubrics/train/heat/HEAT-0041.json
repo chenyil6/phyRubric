@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0041",
+  "caption": "Molten sealing wax is dripped onto the flap of an envelope and a metal stamp is pressed into the pool, and the wax sets hard with the stamped pattern within seconds.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Molten wax is dripped onto the flap of an envelope."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A metal stamp is pressed into the pool of wax."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The stamp is lifted."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The wax holds the stamp's pattern."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The set wax looks dull rather than glossy."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is drip, press, lift, set pattern."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The wax is a thick liquid that mounds and spreads as it lands, takes the stamp's shape under pressure and sets as a firm solid that keeps it.",
+      "fail": "The wax runs off the envelope as thin as water; or the pool springs back to a dome as the stamp lifts; or the wax shatters under the stamp; or the set wax bends as the envelope is moved."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The stamp's pattern appears in the wax as a sunken print of the stamp's face and stays sharp after the stamp lifts.",
+      "fail": "The print sinks back and the wax ends smooth; or the print keeps changing shape after the stamp is away; or a pattern appears that the stamp's face does not carry; or the print appears before the stamp touches the wax."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The wax falls downward onto the flap and spreads out level in a pool, and the stamp comes down onto it.",
+      "fail": "The wax travels upward from the spoon; or the pool climbs the envelope's edge and stays; or the pool stands as a tall column above the flap; or wax lifts off the envelope and hangs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Pressing shows: the wax spreads wider under the stamp and rises around its edge.",
+      "fail": "The stamp presses in and the pool's width does not change; or wax rises on a part of the envelope away from the stamp; or the stamp presses down to the paper with no wax squeezing out."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pool of wax, one stamp and one envelope; the stamp stays outside the paper and the wax stays on the flap.",
+      "fail": "The stamp passes through the envelope; or a second seal appears; or the wax vanishes; or the envelope changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The envelope's paper, the stamp's handle and the table stay the same.",
+      "fail": "The envelope's paper changes colour; or the stamp's handle changes shape; or items on the table rearrange."
+    }
+  ]
+}

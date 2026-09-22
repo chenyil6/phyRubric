@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0045",
+  "caption": "A tree sways in the wind on a sunny day, and the pattern of leaf shadows on the ground beneath it shifts and dances.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tree sways in the wind on a sunny day."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pattern of leaf shadows on the ground beneath it shifts and dances."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The pattern settles when the wind drops."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pattern lies on the ground away from the sun."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow pattern moves in time with the branches and settles when the wind drops.",
+      "fail": "It is still while the branches sway; or it dances while the tree is still; or it moves out of time."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The pattern is dappled light and leaf-shaped shadows, not a solid shape.",
+      "fail": "It is one solid disc; or a geometric pattern unlike leaves; or it forms a recognisable object."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The pattern lies on the ground away from the sun, under the tree's crown.",
+      "fail": "It lies toward the sun; or far from the tree; or it is missing in sunlight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The branches move only with the wind.",
+      "fail": "They whip about in still air; or move against other wind signs; or a branch detaches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tree with its branches.",
+      "fail": "The tree duplicates or vanishes; or a branch vanishes; or the shadow pattern becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tree's leaves and the ground stay the same, and the shadows stay dark.",
+      "fail": "The leaves change colour; or the shadows turn coloured; or the ground changes."
+    }
+  ]
+}

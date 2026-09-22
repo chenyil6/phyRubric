@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0323",
+  "caption": "A person jumps down from a low garden wall, lands on both feet and bends deeply at the knees, then straightens up and walks on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A person jumps down from a low garden wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They land on both feet."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They bend deeply at the knees."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "They straighten up and walk on."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The jump comes first, then the landing, then the bend, then walking on."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "They fall faster to the ground, the knees bend on landing, and the body sinks before rising again.",
+      "fail": "They float down; or land stiff-legged; or bounce back up onto the wall."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "They go forward off the wall, land ahead of it, and walk on.",
+      "fail": "They go backward; or land back on the wall; or freeze."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The body bends at the joints.",
+      "fail": "It folds mid-bone; or a limb detaches; or a leg stretches."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The feet land on the ground.",
+      "fail": "They sink; or pass through the wall; or the ground passes through them."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Their limbs keep their number and stay attached.",
+      "fail": "A limb vanishes; or a second figure appears; or they merge with the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Their clothing and the garden stay the same.",
+      "fail": "The clothing changes colour; or the wall changes; or the garden rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Form, posture and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

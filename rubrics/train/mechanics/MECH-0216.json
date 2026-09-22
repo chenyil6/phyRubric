@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0216",
+  "caption": "A tablecloth is shaken out and let settle over a dining table, and the edges hang down over the sides.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tablecloth is shaken out over a dining table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It settles onto the table."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The edges hang down over the sides."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shake comes first and the settling follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The cloth billows, then falls and drapes, with the overhang hanging straight down.",
+      "fail": "It floats; or the edges hang upward; or it stays billowed in the air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The soft cloth billows, folds and drapes.",
+      "fail": "It is a rigid sheet; or it stretches; or it tears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "It settles and stays.",
+      "fail": "It rises again; or re-billows with no shake; or slides off."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "It lies on the table top, not through it.",
+      "fail": "It passes through the table; or the table passes through it; or it sinks into the top."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cloth keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cloth's pattern and the table stay the same.",
+      "fail": "The pattern changes; or the table changes; or the room rearranges."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged."
+}

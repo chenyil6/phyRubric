@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0058",
+  "caption": "A small paper rider sits on the string of a cello; a bow is drawn across that string and the rider is thrown off.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cello with a small paper rider sitting on one string."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A bow is drawn across that string."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The rider is thrown off the string."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bow is drawn on the string carrying the rider, not another."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bow moves first and the rider flies off after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The rider sits still until the bow touches the string.",
+      "fail": "The rider slides or hops before the bow touches the string; or flies off while the bow is held away; or riders on other strings jump too while their strings are not bowed."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Once the bowed string sounds, the rider is flicked off and does not return to the string.",
+      "fail": "The bow saws across the string and the rider sits unmoved; or the rider hops and settles back onto the same string; or the rider is thrown off and then reappears on the string."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The rider falls after being thrown, onto the cello's body or the floor.",
+      "fail": "The rider hangs in the air; or rises; or drifts sideways out of view without dropping."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The string flexes as a taut string and springs back; the bow is rigid; the cello body is rigid.",
+      "fail": "The string is pulled into a wide bent shape and stays bent after the bow leaves; or the bow bends like rubber; or the cello body ripples."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One rider; the strings keep their count; the bow does not pass through the strings.",
+      "fail": "A second rider appears; or the rider vanishes in mid-air; or the bow passes through the strings; or the strings change count."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rider's colour and size, the cello's finish and the string spacing stay the same.",
+      "fail": "The rider changes colour or size; or the cello changes colour; or the strings change spacing."
+    }
+  ],
+  "note": "The player's bow arm is a trigger and is not judged."
+}

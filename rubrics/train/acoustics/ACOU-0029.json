@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0029",
+  "caption": "A heavy door is slammed shut, and a picture frame on the nearby wall swings from side to side before hanging still.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A door and a picture frame on a nearby wall are present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The door slams shut."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The frame swings from side to side afterwards."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The frame comes to rest."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The frame hangs on the wall rather than standing on a surface."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is slam, swing, still."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The frame hangs still until the slam, starts swinging at the slam, and does not start again by itself.",
+      "fail": "The frame swings before the door moves; or starts long after the door has shut with nothing else happening; or starts again after coming to rest."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The swings shrink: each is smaller than the one before, until the frame hangs still.",
+      "fail": "The swings grow; or stay the same size for the whole clip; or the frame stops dead at the end of a large swing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The frame swings about its hanging point, staying on the wall, moving side to side in an arc.",
+      "fail": "The frame slides along the wall; or rotates fully; or jumps between positions."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The frame stays rigid, the wall does not deform, and the door stays a rigid slab as it slams.",
+      "fail": "The frame bends; or the wall ripples at the slam; or the door flexes like rubber."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One frame and one door; the frame stays on the wall and does not pass into it; nothing appears or vanishes.",
+      "fail": "The frame passes into the wall; or falls off and is then back on the wall; or a second frame appears; or the picture inside the frame vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The picture inside the frame, the wall and the door stay the same.",
+      "fail": "The picture changes; or the wall colour changes; or the door changes design."
+    }
+  ]
+}

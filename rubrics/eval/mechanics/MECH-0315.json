@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0315",
+  "caption": "A car reverses slowly into a lamp post, and its rear bumper dents inward and stays dented after it pulls forward.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car reverses slowly toward a lamp post."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The rear bumper hits the post."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bumper dents inward."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It stays dented after the car pulls forward."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The impact comes first, then the dent, then the car pulls away."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The dent forms at the point of contact at the moment of impact, and the post does not bend.",
+      "fail": "No dent forms; or the post bends; or the bumper shatters."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The dent remains when the car moves away.",
+      "fail": "It springs back; or the dent vanishes; or the dent is there before contact."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The car stops at the post and does not pass into it.",
+      "fail": "It passes through the post; or the post passes through the car; or the car sinks into the road."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The post stays put.",
+      "fail": "It moves; or vanishes; or leans and stays leaning."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and one post keep their number.",
+      "fail": "The car duplicates; or the post vanishes; or the car turns into another vehicle."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and the street stay the same.",
+      "fail": "The car changes colour; or the post changes; or the street rearranges."
+    }
+  ]
+}

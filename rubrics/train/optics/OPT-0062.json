@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0062",
+  "caption": "A luggage trolley is pushed across a polished marble lobby floor, and its reflection moves upside down beneath it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A luggage trolley is pushed across a polished marble lobby floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its reflection moves upside down beneath it."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflection meets the trolley at its wheels."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection is dimmer than the trolley."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection meets the trolley at its wheels and moves exactly with it.",
+      "fail": "It is offset from the wheels; or stays still while the trolley moves; or lags."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is inverted, the trolley's shape hanging downward from the wheels.",
+      "fail": "It is upright; or a different object; or it is beside the trolley rather than beneath."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It moves with the trolley stopped; or drifts across the floor."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The floor is flat and rigid: the reflection is undistorted.",
+      "fail": "The floor ripples; or the reflection warps; or the floor bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One trolley and one reflection; the reflection stays in the floor.",
+      "fail": "A second trolley appears; or the reflection rises out of the floor; or the trolley sinks into it; or the trolley vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The trolley and the lobby stay the same.",
+      "fail": "The trolley changes colour; or the floor changes; or the lobby rearranges."
+    }
+  ]
+}

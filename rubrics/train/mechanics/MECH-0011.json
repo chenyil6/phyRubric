@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0011",
+  "caption": "A wagon loaded with pumpkins is pulled along a path by its handle and the pull stops suddenly; the wagon rolls on a little and the pumpkins tip forward.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wagon loaded with pumpkins is pulled along a path by its handle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pull stops suddenly."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The wagon rolls on a little."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The pumpkins tip forward."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Several pumpkins are loaded in the wagon rather than one."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pull stops first, then the wagon rolls on and the pumpkins tip."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The wagon keeps rolling after the pull stops and comes to rest as the handle checks it.",
+      "fail": "The wagon stops in the same instant the pull does; or it rolls on although nothing ever pulled it; or it sets off again after coming to rest."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The pumpkins carry on the way the wagon was travelling and tip toward the front of the bed.",
+      "fail": "The pumpkins tip toward the back of the wagon; or they tip sideways while the wagon travels straight; or they stay fixed in place while the wagon jolts to a stop."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Pumpkins that tip fall against the front wall or roll down onto one another, and any that leave the wagon drop to the path.",
+      "fail": "A pumpkin rises out of the wagon and floats; or one climbs the wagon's side; or one hangs above the bed after tipping."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pumpkins stay round and firm as they knock together and against the wagon, and the bed stays rigid under them.",
+      "fail": "A pumpkin flattens like dough where it lands and stays flat; or one stretches as it tips; or the wagon's bed sags like cloth beneath them."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The pumpkins keep their number and the wagon stays one wagon with its handle attached.",
+      "fail": "A pumpkin vanishes or a new one appears; or a pumpkin passes through the wagon's wall; or the wagon passes through the kerb of the path."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pumpkins' colour, the wagon and the path stay the same.",
+      "fail": "A pumpkin changes colour or size; or the wagon changes colour; or the path behind rearranges between frames."
+    }
+  ]
+}

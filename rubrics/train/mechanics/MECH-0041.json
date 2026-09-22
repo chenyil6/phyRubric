@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0041",
+  "caption": "A toy train runs along a track, hits a wooden block lying across the rails, and stops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy train runs along a track."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A wooden block lies across the rails in its path and the train reaches it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The train stops at the block."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The block lies across the rails rather than beside them."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The train runs first and the stop at the block follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The train is stopped where it meets the block, and the block may be shoved along a little.",
+      "fail": "The train stops before it reaches the block; or it runs over the block and carries on unaffected; or the block flies away before the train touches it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The train is checked at the block: it halts there or comes off the rails, rather than carrying on at its old speed.",
+      "fail": "The train carries on at the same speed after meeting the block; or it is thrown back up the track quicker than it came; or it stops and then sets off again on its own."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The train, the block and the rails stay solid and separate.",
+      "fail": "The train passes through the block; or the block passes through the rails; or a wheel passes through the track."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The train and the wooden block stay rigid at the contact, the block sliding or tipping rather than folding.",
+      "fail": "The block bends or squashes where the train hits it; or the train's body crumples; or the block flows out of the way like a liquid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One train and one block are there throughout.",
+      "fail": "The block vanishes as the train reaches it; or a second block appears on the rails; or a carriage disappears from the train."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The train's livery, the block and the track stay the same.",
+      "fail": "The train changes colour at the stop; or the block changes size or colour between frames; or the track's layout changes."
+    }
+  ]
+}

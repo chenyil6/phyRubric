@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0024",
+  "caption": "A tennis ball is tossed straight up in a backyard and comes back down to the same spot.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tennis ball is tossed straight up in a backyard."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It rises and then comes back down."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It comes down to the spot it went up from."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The toss goes straight up rather than off to one side."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rise comes first and the fall follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The ball slows as it rises, hangs for an instant at the top, and falls quicker and quicker on the way back down.",
+      "fail": "The ball climbs at an unchanging speed all the way to the top; or it stays at the top instead of coming back; or it goes quicker the higher it rises."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It comes down along nearly the line it went up and lands near the spot it left.",
+      "fail": "The ball comes down well away from where it went up with nothing pushing it aside; or it curves off to one side in the open air; or it keeps rising out of the frame and never returns."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Once in the air nothing but the fall changes the ball's motion.",
+      "fail": "The ball jinks sideways in mid-air with nothing touching it; or it halts in mid-flight and hangs there; or it sets off again after coming to rest on the ground."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ball stays round and firm, squashing only briefly where it lands.",
+      "fail": "The ball stretches as it flies; or it stays flattened after landing; or it wobbles like jelly in the air."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball is in the air throughout and it stays above the ground.",
+      "fail": "The ball vanishes at the top of its flight or a second one appears; or it passes through the ground; or it turns into another object in mid-air."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour, the yard and the background stay the same.",
+      "fail": "The ball changes colour in flight; or the fence or wall behind changes between frames; or the yard rearranges."
+    }
+  ]
+}

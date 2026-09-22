@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0104",
+  "caption": "A large hanging sheet of thin steel is struck once with a mallet, and waves ripple visibly across the metal as it booms.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A large thin steel sheet hangs."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A mallet strikes it once."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Waves ripple across the metal."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The strike is a single hit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike comes first and the ripples follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Ripples spread out from the point of impact across the sheet.",
+      "fail": "The mallet lands and the sheet hangs flat and still; or the waves start at the far edge and travel toward the impact point; or the sheet ripples while the mallet is held away."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The ripples are strongest just after the strike and fade until the sheet hangs flat; they do not grow or restart.",
+      "fail": "The waves grow after the strike; or the sheet keeps waving unchanged to the end; or it goes flat and then starts waving again with no second strike; or it freezes in a bent shape."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The sheet hangs from its top and returns to hanging straight after any sway.",
+      "fail": "The sheet rises on its hanger; or hangs at an angle with nothing touching it; or its bottom edge lifts and stays out."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The thin steel flexes as a sheet and the mallet rebounds from it.",
+      "fail": "The mallet sinks into the sheet; or the sheet tears; or it crumples like foil and stays crumpled."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet, one mallet; the mallet does not pass through the sheet.",
+      "fail": "A second sheet appears; or the mallet passes through the sheet; or the sheet vanishes; or splits into two."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sheet's colour, the hanger and the mallet stay the same.",
+      "fail": "The sheet changes colour; or the hanger changes; or the mallet's head changes size."
+    }
+  ],
+  "note": "The hand on the mallet is a trigger and is not judged."
+}

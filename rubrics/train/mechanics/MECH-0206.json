@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0206",
+  "caption": "Two hands struggle to twist the lid off a tight jar and finally get it open, lid in hand.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two hands grip a jar and its lid."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They twist against each other."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lid comes off."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The lid ends up in a hand."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The effort is visible before the lid gives."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The twist comes first and the lid comes off after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lid turns and comes off only after the twist, not before.",
+      "fail": "The lid comes off before any twist; or the hands twist with the lid fixed for the whole clip and then it is in hand; or the lid lifts off with no turn."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The hands grip, the forearms twist in opposite directions, and the fingers stay attached.",
+      "fail": "Fingers pass through the lid; or a hand detaches; or the hands merge with the jar."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The jar stays still in one hand and the lid moves only with the other.",
+      "fail": "The lid spins on its own; or the jar turns while the hands are still; or the lid floats off."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The jar and the lid stay rigid.",
+      "fail": "The jar bends; or the lid stretches; or the jar shatters from the twist."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One jar and one lid keep their number.",
+      "fail": "The lid duplicates; or the jar vanishes; or the lid turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jar's label and the background stay the same.",
+      "fail": "The label changes; or the hands change; or the background rearranges."
+    }
+  ],
+  "note": "The hands are the physics here: grip and twist. The person behind them is not judged."
+}

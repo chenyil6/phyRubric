@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0033",
+  "caption": "A square of chocolate lies in a skillet over low heat, and it melts into a spreading pool.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A skillet."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A square of chocolate lies in the skillet."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The square melts: it goes glossy and loses its edges."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A pool of chocolate spreads around it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The square starts with straight sharp edges."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The melting comes first and the pool follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The square only softens and shrinks while the pool grows; nothing hardens again in the warm pan.",
+      "fail": "The square regains its sharp edges; or the pool draws back into the square; or the chocolate sets firm and matt again in the pan; or the square alternates between firmer and softer."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The melted chocolate is a thick glossy liquid that flows slowly and levels, and the square is a soft solid that slumps and smears.",
+      "fail": "The melted chocolate runs as thin as water; or the square shatters into dry shards; or the pool stands as a rigid dome; or the square keeps sharp edges while glossy and flowing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pool spreads outward and downhill across the pan's floor and runs to its low side.",
+      "fail": "The pool climbs the pan's wall and stays; or a run travels uphill; or melted chocolate lifts off the pan and floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The square melts where it touches the pan: it goes glossy underneath first and the pool spreads from beneath it.",
+      "fail": "The square melts from its top face while its underside stays matt and sharp; or a pool spreads on a part of the pan the square never touched; or the square slumps while the pan around it stays dry."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One square; the chocolate goes only into the pool.",
+      "fail": "The square grows; or a second square appears; or the square vanishes while still whole; or chocolate appears across the pan with none flowing there."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pool keeps the square's dark colour, and the pan's finish and the hob stay the same.",
+      "fail": "The chocolate turns pale; or the pan changes colour; or items around the hob rearrange."
+    }
+  ]
+}

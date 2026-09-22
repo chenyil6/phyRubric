@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0170",
+  "caption": "A dented ping-pong ball is dropped into a bowl of very hot water, and the dent pops back out.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ping-pong ball with a dent in it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The ball is dropped into a bowl of hot water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dent pops out."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The ball ends round."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The ball floats."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the dent's popping out follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The dent moves outward until the ball's surface is round again, and the ball stays one hollow sphere of the same size.",
+      "fail": "The dent deepens instead of popping out; or a new dent appears elsewhere on the ball; or the ball swells much larger than it was; or the ball turns into another shape such as an egg."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The change runs one way in the hot water: the dent only comes out and does not return.",
+      "fail": "The dent pops out and then presses back in while the ball stays in the hot water; or the dent comes and goes in turn; or the dent pops out before the ball reaches the water; or the ball's surface ripples back and forth."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The ball floats at the surface, bobbing, and the water stays level in the bowl.",
+      "fail": "The ball sinks to the bowl's floor and stays; or hangs motionless in mid-water; or rises out of the water and hangs above it; or the water's surface tilts and stays tilted with the bowl level."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The drop has an effect: the water splashes and ripples where the ball lands and the ball is wetted.",
+      "fail": "The ball enters and the surface stays glassy; or the water ripples before the ball reaches it; or the ball stays dry while floating; or the dent pops out while the ball is still in the air above the water."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one bowl; the ball stays in the water and nothing passes through the bowl.",
+      "fail": "The ball vanishes; or a second ball appears; or the ball passes through the bowl's wall; or the bowl changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and markings, the bowl and the surroundings stay the same.",
+      "fail": "The ball changes colour; or its printed markings change; or the bowl changes pattern."
+    }
+  ]
+}

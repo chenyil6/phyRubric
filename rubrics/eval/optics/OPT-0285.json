@@ -1,0 +1,65 @@
+{
+  "id": "OPT-0285",
+  "caption": "A car with its headlights on turns a corner at night, and the beams sweep across a row of parked cars.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car with its headlights on turns a corner at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The beams sweep across a row of parked cars."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "Each parked car brightens as the beams cross it and darkens after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each parked car brightens as the beams cross it and darkens after, and the lit area moves with the turning car.",
+      "fail": "Cars stay lit after the beams pass; or brighten before; or the lit area stays put while the car turns."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The lit area moves only as the car moves.",
+      "fail": "It sweeps with the car stopped; or jumps; or moves the opposite way."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The beams are two cones from the headlights.",
+      "fail": "There are more; or one; or they are a flood in all directions."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The parked cars stay still.",
+      "fail": "One moves; or vanishes; or a car changes colour rather than brightness."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One moving car and the parked cars keep their number.",
+      "fail": "A parked car vanishes; or appears; or the moving car duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The street stays the same.",
+      "fail": "The buildings rearrange; or the road markings shift; or the cars change colour."
+    }
+  ]
+}

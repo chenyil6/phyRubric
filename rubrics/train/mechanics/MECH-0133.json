@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0133",
+  "caption": "A tuft of cotton candy is pulled off the top of a cone and comes away as a separate wisp.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Cotton candy sits on a cone."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A tuft is pulled off the top."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It comes away as a separate wisp."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pull comes first and the separate wisp follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The floss stretches into strands before parting and leaves a ragged surface on the cone.",
+      "fail": "It snaps like a solid; or it flows like a liquid; or the strands do not stretch."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The tuft stays separate and the cone does not regrow.",
+      "fail": "The tuft rejoins the cone; or it vanishes; or the cone grows back."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The cone shows where the tuft came from.",
+      "fail": "The cone is unchanged after the pull; or a gap appears elsewhere; or the gap is there before the pull."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Loose strands droop.",
+      "fail": "They rise; or hang unsupported; or float."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One cone of candy keeps its number, and the hand does not pass through it.",
+      "fail": "The hand passes through the floss; or a second cone appears; or the candy turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candy's colour and the background stay the same.",
+      "fail": "The candy changes colour; or the cone changes; or the background rearranges."
+    }
+  ]
+}

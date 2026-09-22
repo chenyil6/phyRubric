@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0279",
+  "caption": "A cup of hot coffee stands on the dashboard of a cold car, and a patch of fog spreads on the windshield above it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cup of hot coffee stands on a car's dashboard."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Steam rises from the cup."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A patch of fog forms on the windshield above the cup."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The patch grows outward."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rest of the glass stays clear."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The steaming comes first and the patch follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The patch forms on the glass directly above the cup, where the steam reaches it, and the glass away from it stays clear.",
+      "fail": "The patch forms below the cup on the glass; or the patch forms on a part of the windshield the steam never reaches; or the whole windshield fogs evenly while the steam rises from one cup; or the patch forms on the outside of the glass."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The patch only grows while the coffee steams and does not clear on its own.",
+      "fail": "The patch clears while the coffee still steams; or the patch grows and shrinks in turn; or the glass is fogged before the cup is on the dashboard; or the patch jumps to a new place on the glass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The steam rises from the cup to the glass and drops in the patch run downward on the inner face.",
+      "fail": "The steam sinks onto the dashboard and pools; or a drop in the patch runs up the glass; or the steam pours downward from the cup; or drops gather along the patch's top edge and stay."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fog is a fine haze that beads and streaks, and the glass stays rigid and clear.",
+      "fail": "The fog stands off the glass as a thick crust; or peels away as a film; or the glass flexes where the patch lies; or the haze turns opaque white like paint."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cup on one dashboard; the cup stays upright and nothing passes through the glass.",
+      "fail": "The cup vanishes; or a second cup appears; or the cup passes into the dashboard; or the coffee passes through the windshield."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dashboard, the cup's markings and the view outside stay the same.",
+      "fail": "The dashboard changes colour; or the cup's markings change; or the scene outside jumps to a different place."
+    }
+  ]
+}

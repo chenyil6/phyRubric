@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0268",
+  "caption": "A pot of potatoes boils with its lid on, and the lid rattles and lifts as steam escapes around its edge.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot of potatoes boils with its lid on."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lid rattles: it lifts and drops on its seat."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Steam escapes around the lid's edge."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lid's jumps come with the puffs of steam."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rattling stops when the heat is turned down."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The lid lifts and drops as the puffs of steam push it and settles when the boil eases, and the pot itself stays put.",
+      "fail": "The lid jumps with no steam escaping anywhere; or the lid lifts and stays up; or the pot slides or turns on the burner with nothing touching it; or the lid rattles while the water below is glassy still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam escapes at the lid's rim and rises, and the lid falls back onto its seat after each lift.",
+      "fail": "The steam pours down the pot's sides and pools on the hob; or the lid rises and hangs above the pot; or the steam sinks below the pot; or the lid falls upward off the pot."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The rattle goes with the boil: the water churns, bubbles break the surface and steam puffs out as the lid lifts.",
+      "fail": "The lid rattles while nothing rises below it; or the water churns hard while the lid sits dead still and no steam escapes; or the steam puffs out while the lid is plainly clamped down tight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The lid stays a rigid disc that knocks on the rim and the potatoes stay firm lumps that jostle in the water.",
+      "fail": "The lid bends or ripples as it lifts; or a potato dissolves into the water; or the lid sticks to the pot and the pot lifts with it; or the potatoes merge into one lump."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pot with one lid; the potatoes keep their number and stay in the pot.",
+      "fail": "A potato vanishes; or a new potato appears; or the lid passes through the pot's rim; or a second lid appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the lid's handle and the hob stay the same.",
+      "fail": "The pot changes colour; or the lid's handle changes shape; or the hob's knobs move by themselves."
+    }
+  ],
+  "note": "The rattle is sound and is not judged; it is read from the lid's visible lifting and dropping."
+}

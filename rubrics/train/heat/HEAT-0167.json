@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0167",
+  "caption": "A paper pinwheel is held above a lit candle, and it begins to spin in the rising warm air.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A paper pinwheel is held above a lit candle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pinwheel begins to spin."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pinwheel stops when it is moved away from the candle."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The candle is lit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pinwheel is still before it is brought over the flame."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The bringing over comes first and the spinning follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The pinwheel spins only while it is over the flame and slows and stops when it is moved away.",
+      "fail": "The pinwheel spins while held well away from the candle; or it spins over an unlit candle; or it stays still directly over the flame; or it keeps spinning at the same rate after being taken away."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flame's rising air turns the wheel: the spin starts once the wheel is over the flame and not before.",
+      "fail": "The wheel spins before it is brought over the flame; or the wheel is held over the flame and stays still to the end of the clip; or the wheel spins while the candle is out; or the flame is blown out and the wheel spins faster."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The wheel turns about its pin in one direction and slows gradually rather than stopping dead.",
+      "fail": "The wheel reverses direction with nothing changing; or stops dead in a single frame while still over the flame; or wobbles off its pin; or its vanes move at different rates."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flame points upward and leans only as the wheel or a draught disturbs it, and the wheel is held above it.",
+      "fail": "The flame points downward; or the flame is drawn up into the wheel and burns above it; or the flame hangs below the candle; or the wheel is pushed downward toward the flame."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pinwheel with its vanes on one pin and one candle with one flame.",
+      "fail": "A vane vanishes; or a second pinwheel appears; or the flame detaches and floats up to the wheel; or the wheel comes off its pin and hangs in the air."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pinwheel's colours, the candle and the surroundings stay the same.",
+      "fail": "A vane changes colour; or the candle changes colour; or items around the candle rearrange."
+    }
+  ],
+  "note": "Whoever holds the pinwheel is not judged. Whether the paper scorches is not judged."
+}

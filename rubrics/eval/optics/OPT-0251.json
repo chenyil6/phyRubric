@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0251",
+  "caption": "A rowing boat drifts across a clear shallow bay in sunshine, and its shadow slides along the sandy bottom beneath it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A rowing boat drifts across a clear shallow bay in sunshine."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its shadow slides along the sandy bottom beneath it."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The shadow keeps the boat's outline."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow lies on the side away from the sun."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the sea floor away from the sun and moves with the boat.",
+      "fail": "It lags behind; or floats on the surface; or points toward the sun."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the boat's outline.",
+      "fail": "It is a different shape; or splits; or is a plain blob."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move on its own.",
+      "fail": "It moves with the boat still; or drifts across the sand by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The boat floats at the surface and the shadow lies on the bottom.",
+      "fail": "The boat sinks; or the shadow rises off the sand; or the boat lifts out of the water."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One boat and one shadow.",
+      "fail": "A second boat or shadow appears; or the boat vanishes; or the shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The boat and the bay stay the same, and the shadow stays dark.",
+      "fail": "The boat changes colour; or the shadow turns coloured; or the sand changes."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "ELEC-0092",
+  "caption": "A jagged lightning bolt descends from a cloud to a hilltop, branching as it comes down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cloud above a hilltop."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lightning bolt descends from the cloud to the hilltop."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bolt is jagged."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The bolt branches as it comes down."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bolt reaches the hilltop, not the slope or the valley."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The bolt is a jagged line with one main channel from cloud to hilltop and side branches that leave the channel and end in the air; the main channel is brightest.",
+      "fail": "The bolt is a perfectly straight beam; or a smooth wave; or a wide glowing tube; or every branch reaches the ground so that several equal bolts stand side by side; or branches join back into the channel to form loops."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The bolt appears and is gone within a moment, perhaps flickering; the hilltop and sky return to dark.",
+      "fail": "The bolt stands as a steady lit line for the rest of the clip; or grows slowly from cloud to ground like a line being drawn; or retracts back up into the cloud; or the hilltop keeps glowing after the bolt is gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The flash lights the hill, the cloud's underside and the surrounding ground during the bolt, from the bolt's direction.",
+      "fail": "The bolt is visible while the hill and cloud stay as dark as before; or the ground is lit while no bolt is present; or the lit area is far from the bolt while the hill under it stays dark."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Rain falls downward and blown items move with the storm and settle.",
+      "fail": "Rain rises or hangs still; or leaves or debris climb steadily; or rain falls sideways while the trees stand still.",
+      "precondition": "Rain or wind-blown items are visible."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The hill, the cloud and any trees or structures are the same before and after; the flash reveals what was there.",
+      "fail": "Trees or structures appear or vanish between dark and lit frames; or the hill changes shape; or the bolt leaves a glowing pillar standing on the hilltop; or the bolt passes through the hill."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hill's colour, the cloud and the sky keep their colours apart from the flash.",
+      "fail": "The hill changes colour rather than brightness; or the sky turns to daylight after the flash; or the cloud changes colour permanently."
+    }
+  ],
+  "note": "The data record declares gravity_direction; nothing about a bolt has a gravity direction, so it is covered only by the gated rain item. Consider replacing it with missing_consequence on the data record."
+}

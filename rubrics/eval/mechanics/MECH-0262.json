@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0262",
+  "caption": "A wet bar of soap is squeezed in a hand in the bath, slips out of the grip and skids across the bottom of the tub.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wet bar of soap is squeezed in a hand in a bath."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It slips out of the grip."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It skids across the bottom of the tub."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The squeeze comes first, then the slip, then the skid."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "It leaves the hand as the fingers close and not before, then skids and slows or stops against the side.",
+      "fail": "It hovers; or changes direction on its own; or stays stuck to the hand."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It shoots out in one direction and skids in a straight line.",
+      "fail": "It curves; or reverses; or goes straight up."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It drops to the tub bottom and stays on it.",
+      "fail": "It floats; or rises; or hangs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The slippery soap slides on the wet surface.",
+      "fail": "It sticks dead on landing; or bounces like rubber; or dissolves instantly."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bar of soap keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The soap and the tub stay the same.",
+      "fail": "The soap changes colour; or the tub changes; or the bathroom rearranges."
+    }
+  ],
+  "note": "The hand is kept as the minimal trigger; the person is not judged."
+}

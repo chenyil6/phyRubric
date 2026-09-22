@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0140",
+  "caption": "A campfire is fed with damp wood, and thick white smoke pours off the logs while the flames struggle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A campfire burns with damp-looking wood."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Thick white smoke pours off the logs."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flames stay small and flicker."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The smoke drifts with the wind."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The smoke is thicker than the flames are tall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The smoke leaves the logs going up, spreading and thinning; it may lean with the wind but does not settle to the ground.",
+      "fail": "The smoke sinks and lies on the ground around the fire; or pours downward through the logs; or hangs as a fixed shape without rising; or the flames point downward."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The smoke keeps leaving the wood and what has left keeps moving away and fading, while the wood only chars.",
+      "fail": "The plume runs back into the logs; or a puff retreats to the wood; or a charred log turns back to pale unburnt wood; or smoke appears downwind with none leaving the fire."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The smoke comes off the wood where it is heated and the logs darken and steam there.",
+      "fail": "The smoke pours from a log that stays bright and unmarked to the end of the clip; or the smoke rises from the ground beside the fire while the logs are clear; or the logs char while no smoke leaves them at all."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The smoke is a thick soft cloud that billows and fades, the flames are small soft tongues, and the wood stays solid and charring.",
+      "fail": "The plume holds a fixed rigid shape; or the smoke pours like a liquid; or a log melts or flows; or the flames hold fixed rigid shapes like blades."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The fire's logs keep their number and char rather than vanishing.",
+      "fail": "A log vanishes at a stroke; or a new log appears; or a log passes through another log; or the flames detach and float away."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stones, the ground and the surroundings stay the same.",
+      "fail": "The stones rearrange; or the ground changes texture; or the background changes between frames."
+    }
+  ]
+}

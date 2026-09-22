@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0043",
+  "caption": "A curling stone glides down the ice, strikes another stone sitting in the house, and knocks it away while itself slowing to a stop.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A curling stone glides down the ice."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It strikes another stone sitting in the house."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The struck stone is knocked away."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The striking stone slows to a stop."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The target stone is still before the contact."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The glide comes first, then the contact, then the two stones' outcomes."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The resting stone starts moving at the moment the gliding stone reaches it, and only then.",
+      "fail": "The resting stone moves before the gliding stone arrives; or the stones touch and the resting stone stays put; or the gliding stone stops short and the other moves away anyway."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The struck stone leaves roughly along the line of the hit while the striking stone loses most of its speed.",
+      "fail": "The struck stone moves off back toward the thrower; or the striking stone keeps its speed through the contact; or both stones travel on together side by side at the same speed."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The two stones meet at their edges and stay outside one another and on top of the ice.",
+      "fail": "The stones overlap or pass through each other; or one rides up over the other and keeps going; or a stone sinks into the ice."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "On the ice each stone slides along its own line, curling only gradually and slowing steadily; a stone at rest stays at rest until it is struck.",
+      "fail": "A stone turns sharply on the open ice with nothing touching it; or a stone gathers speed as it slides; or a stone that has come to rest sets off again untouched."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The stones keep their number and shape on the sheet.",
+      "fail": "A stone vanishes at the contact or a third appears; or a stone's handle comes away and floats; or a stone turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stones' handles, the painted house and the ice stay the same.",
+      "fail": "A stone's handle changes colour at the contact; or the rings of the house shift between frames; or the markings on the sheet change."
+    }
+  ]
+}

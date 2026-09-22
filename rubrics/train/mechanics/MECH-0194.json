@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0194",
+  "caption": "A man jogs across a park lawn from one side to the other.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A man jogs across a park lawn."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "He goes from one side to the other."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The pace is a jog rather than a walk."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The setting is a park lawn."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "His legs alternate, his arms swing in rhythm, and his limbs bend at the joints.",
+      "fail": "Both legs swing together; or a leg bends mid-bone; or his legs pass through each other."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Both feet leave the ground briefly between strides and come back, and the body bobs with each step.",
+      "fail": "He glides with his feet never lifting; or he floats up and stays; or he sinks into the grass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "His feet land on the grass, not in it.",
+      "fail": "His feet sink to the ankle in the turf; or he passes through a bench; or the grass passes through his feet."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "He travels steadily across the lawn.",
+      "fail": "He jumps position between frames; or moves backward while running forward; or stops dead mid-stride hanging in the air."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "His limbs keep their number and stay attached.",
+      "fail": "A limb detaches or vanishes; or a second figure appears from him; or he merges with a tree."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "His clothing and the park stay the same.",
+      "fail": "His clothing changes colour; or the park rearranges; or the lawn changes."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Gait, posture, style and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

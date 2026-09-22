@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0006",
+  "caption": "A balloon drifts across the beam of a projector during a slideshow, and its dark silhouette appears on the screen over the slides.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A projector shows slides on a screen."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A balloon drifts across the beam."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its dark silhouette appears on the screen over the slides."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The silhouette moves with the balloon."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The balloon enters the beam first and the silhouette appears with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The silhouette appears where the balloon blocks the beam and moves with it.",
+      "fail": "The silhouette appears with the balloon outside the beam; or it stays still while the balloon drifts; or it moves the opposite way."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The slide image is missing inside the silhouette and returns when the balloon has passed.",
+      "fail": "The slide shows through the silhouette; or the silhouette leaves a dark patch after the balloon has gone; or the silhouette is a different shape from the balloon."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The silhouette does not move on its own.",
+      "fail": "It drifts with the balloon still; or it appears before the balloon enters; or it lingers after the balloon has left."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The balloon drifts gently and does not shoot or drop like a stone.",
+      "fail": "It shoots off; or drops like a stone; or hangs rigidly still in a draught."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon and one silhouette; the projector and screen stay one each.",
+      "fail": "A second silhouette appears under one beam; or the balloon vanishes; or the silhouette becomes solid; or the balloon passes through the screen."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour and the slides stay the same, and the silhouette stays dark.",
+      "fail": "The balloon changes colour; or the silhouette turns bright; or the slide changes with no click."
+    }
+  ]
+}

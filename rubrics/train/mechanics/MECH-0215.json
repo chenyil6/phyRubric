@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0215",
+  "caption": "A long garden hose is coiled into loops on the lawn.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A garden hose lies on a lawn."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is coiled into loops."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The loops lie on the lawn."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The coiling proceeds loop by loop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "Each loop lies on top of the last, and the hose does not pass through itself.",
+      "fail": "It passes through itself; or passes through the lawn; or loops run into one another."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The length of hose still on the ground shrinks as the coil grows, and the hose bends smoothly without kinking.",
+      "fail": "The loose hose does not shrink; or the hose stretches; or it kinks like wire."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "One continuous hose with two ends.",
+      "fail": "The hose splits; or the ends multiply; or a loop vanishes."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It coils only as the hands move it.",
+      "fail": "It coils itself; or uncoils; or slides."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The hose stays one hose and the hands keep their shape.",
+      "fail": "The hose merges with itself; or the hands pass through it; or it turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hose's colour and the lawn stay the same.",
+      "fail": "The hose changes colour; or the lawn changes; or the garden rearranges."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged."
+}

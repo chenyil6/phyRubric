@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0093",
+  "caption": "Lightning jumps between two clouds high over a plain, lighting both from inside, with no bolt reaching the ground.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two clouds high over a plain."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lightning flashes between the clouds, lighting both from inside."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "No bolt reaches the ground."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The plain below is flat open land."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The two clouds are separate, with the flash spanning the gap or lighting both."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is brief; both clouds return to dark; flashes may repeat but each ends.",
+      "fail": "The clouds stay lit for the rest of the clip; or the glow brightens steadily; or the sky turns to daylight; or the flash fades in slowly."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The two clouds and the plain are the same across dark and lit frames: the same cloud shapes and the same ground features.",
+      "fail": "A cloud appears or vanishes between frames; or the cloud shapes change abruptly at the flash; or features on the plain appear or vanish; or a third cloud appears already lit."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light comes from within and between the clouds: their bodies and edges glow with their texture revealed, and the plain brightens only faintly as a glow from above.",
+      "fail": "The plain lights up brightly while the clouds stay dark; or the glow is a flat wash over the frame with no cloud structure; or a spot on the ground lights up as if struck while no bolt reaches it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The clouds drift only slowly; the plain and anything on it stay still through the flash.",
+      "fail": "The clouds jump or swirl at the flash; or objects on the plain shift at the flash; or the horizon tilts at the flash."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Clouds stay cloud and the plain stays ground; nothing on the ground is struck or changed.",
+      "fail": "A cloud turns into a solid object; or a bolt strikes the plain and leaves a glowing mark; or the ground splits or heaves; or the plain turns into water or sky."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sky's night colour and the plain's colour are consistent before and after the flash.",
+      "fail": "The sky changes colour permanently after the flash; or the plain changes colour; or the clouds change colour when not lit."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0236",
+  "caption": "A large hardcover book is pushed into a shoebox that is too small for it, and the book will not go in.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A large hardcover book and a smaller shoebox are present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The book is pushed toward the box's opening."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The book does not go in."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The box is too small for the book."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The book stops against the box's edges or bends the box outward, and it does not pass through the sides.",
+      "fail": "It passes through the sides; or slides in with the box unchanged; or the box passes through the book."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Neither the book nor the box shrinks.",
+      "fail": "The book shrinks; or the box grows; or the book folds."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cardboard bows or dents, and the book stays rigid.",
+      "fail": "The book bends like rubber; or the box shatters; or the box stretches."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "They move only by the hand.",
+      "fail": "The book jumps in; or the box slides away; or the book floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One book and one box keep their number.",
+      "fail": "The book duplicates; or the box vanishes; or the book turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The book's cover and the box stay the same.",
+      "fail": "The cover changes; or the box changes colour; or the background rearranges."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0107",
+  "caption": "Breath is blown onto a cold hand mirror, and the fog on the glass hides the reflection for a moment before it clears.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hand mirror."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Breath is blown onto the mirror."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Fog appears on the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The fog hides the reflection."
+    },
+    {
+      "id": "S5",
+      "weight": "core",
+      "check": "The fog clears."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is breath, fog, clear."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog appears during the exhale, then thins and shrinks until gone, and once clear it stays clear without another breath.",
+      "fail": "The patch grows after the breath has stopped; or the fog comes back with no second breath; or the fog flickers on and off; or the patch moves across the glass with nothing blowing it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The fog is a haze on the glass: it hides the reflection only where it lies and the same reflection returns as it clears.",
+      "fail": "The reflection that returns shows something the fog did not hide before; or the fog detaches from the glass and drifts as a cloud; or the mirror shows no reflection at all once the fog clears; or the fog appears behind the glass rather than on it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The breath makes the fog: the patch appears on the glass in front of the mouth during the exhale.",
+      "fail": "Breath is blown at the mirror and the glass stays clear; or the fog appears on the mirror's back; or the fog appears far from where the breath lands; or the fog appears before any breath reaches the glass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fog is fine condensation: a matte haze that thins evenly and may bead.",
+      "fail": "The patch hardens into frost; or the patch peels off as a film; or the haze turns opaque white like paint; or the glass flexes where the fog lies."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One mirror in one frame; the mirror keeps its shape and nothing passes through the glass.",
+      "fail": "The mirror changes shape; or a second mirror appears; or a hand passes through the glass; or the frame vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mirror's frame, the hand holding it and the background stay the same.",
+      "fail": "The frame changes colour; or the background changes between frames; or the mirror's handle changes shape."
+    }
+  ],
+  "note": "The breath is the moisture's source; the person is judged only as its origin."
+}

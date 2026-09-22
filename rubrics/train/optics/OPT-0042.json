@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0042",
+  "caption": "A bus passes a row of parked cars on a sunny street, and its shadow slides over the cars one after another.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bus passes a row of parked cars on a sunny street."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its shadow slides over the cars one after another."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The shadow darkens each car as it passes."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow moves at the bus's speed."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow moves at the bus's speed and darkens each car in turn as it passes.",
+      "fail": "It lags or leads; or a car stays dark after the bus has passed; or a car darkens before the shadow reaches it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the bus's outline, draping over the cars' shapes.",
+      "fail": "It is a different shape; or splits; or the cars change shape under it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side away from the sun and does not appear on the sunlit side of the bus.",
+      "fail": "It lies toward the sun; or on both sides; or it is missing in sunlight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The parked cars stay still and the shadow moves only with the bus.",
+      "fail": "A car moves; or the shadow moves with the bus stopped; or the shadow drifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bus and one shadow, and the cars keep their number.",
+      "fail": "A second bus appears; or a car vanishes; or the shadow becomes solid; or the bus passes through a car."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bus's livery and the cars stay the same, and the shadow stays dark.",
+      "fail": "The livery changes; or the shadow turns coloured; or a car changes colour rather than brightness."
+    }
+  ]
+}

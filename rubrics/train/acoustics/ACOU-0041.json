@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0041",
+  "caption": "A door slams in a hallway, and a set of keys hanging on a hook beside it swings and jingles.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hallway door with a set of keys hanging on a hook beside it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The door slams shut."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The keys swing and shake on the hook."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The keys stay on the hook."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The slam comes first and the swing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The keys hang still until the door slams and start moving at the slam.",
+      "fail": "The keys swing before the door reaches its frame; or the door slams and the keys hang dead still; or the keys start swinging again after settling with the door already closed."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "After the slam the swing shrinks until the keys hang still.",
+      "fail": "The arcs grow after the slam; or the keys stop dead in a tilted pose; or they swing at the same width until the end with no second slam."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The keys hang below the hook and at rest hang straight down.",
+      "fail": "The keys rest tilted with nothing touching them; or rise above the hook; or float off the hook without falling."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The door turns on its hinges into its frame and stops there.",
+      "fail": "The door slides sideways rather than turning on its hinges; or halts short of the frame and is then shown shut with no movement between; or swings shut and open again with nothing touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One set of keys, one hook, one door; nothing passes through the wall or frame.",
+      "fail": "A second set of keys appears; or the keys vanish; or the door passes through its frame or wall; or the hook moves through the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The keys' fobs, the door's colour and the wall stay the same.",
+      "fail": "The keys change number or colour; or the door changes colour; or the wall changes."
+    }
+  ]
+}

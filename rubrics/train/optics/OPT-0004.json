@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0004",
+  "caption": "A desk lamp is moved from the left side of a vase to the right side, and the vase's shadow swings from the right side of the vase to the left.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A desk lamp stands to the left of a vase."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lamp is moved to the right side of the vase."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The vase's shadow is visible."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The shadow swings from the right of the vase to the left."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lamp moves first and the shadow follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow always falls on the side of the vase opposite the lamp and moves smoothly as the lamp moves.",
+      "fail": "The shadow stays put while the lamp moves; or it moves with the lamp to the same side; or it jumps from one side to the other."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the vase's outline, stretching or shortening with the angle.",
+      "fail": "It becomes a different shape; or splits into two under one lamp; or keeps a fixed shape while the lamp plainly moves."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow moves only while the lamp moves.",
+      "fail": "It moves with the lamp still; or it keeps moving after the lamp has stopped; or it moves before the lamp."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow starts at the vase's base and lies on the table.",
+      "fail": "It floats detached from the base; or it appears on the ceiling; or it is missing with the lamp plainly on."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp, one vase and one shadow; nothing appears, vanishes or passes through the table.",
+      "fail": "A second vase or shadow appears; or the vase vanishes; or the lamp passes through the vase; or the shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The vase, the lamp and the table stay the same, and the shadow stays dark.",
+      "fail": "The vase changes colour; or the shadow turns coloured; or the table pattern shifts."
+    }
+  ]
+}

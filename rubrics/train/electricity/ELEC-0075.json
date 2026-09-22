@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0075",
+  "caption": "A nightlight is plugged into a low wall socket, and it begins to glow.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A nightlight and a wall socket set low on the wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The nightlight is pushed into the socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The nightlight glows."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The socket is low, near the floor."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The nightlight is dark before it goes in."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is plug in, then glow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow appears when the nightlight's prongs seat in the socket, and only then.",
+      "fail": "The nightlight is seated and stays dark; or it glows while still held away from the wall; or it lights up while lying on the floor."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once in, the nightlight glows steadily for the rest of the clip and goes dark only if pulled out.",
+      "fail": "The glow fades out with the nightlight still in the socket; or switches on and off; or the nightlight glows on after being pulled out of the socket."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The glow lights the wall around the socket and the floor beneath, centred on the nightlight.",
+      "fail": "The nightlight glows while the wall around it stays as dark as before; or the wall brightens while the nightlight is dark; or the pool of light sits away from the nightlight.",
+      "precondition": "The room is dim."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Once seated the nightlight hangs on the socket with nothing else holding it and does not sag or fall.",
+      "fail": "The nightlight drops off the socket once the hand withdraws; or slides down the wall; or hovers a gap away from the socket."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One nightlight and one socket; the prongs enter the socket holes rather than the wall; fingers stay outside the wall.",
+      "fail": "The nightlight passes into the wall beside the socket; or a second nightlight appears; or the socket moves along the wall or vanishes; or the nightlight changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The nightlight's colour and shape, the wall and the skirting stay the same apart from the glow.",
+      "fail": "The nightlight changes colour rather than brightness; or the wall changes colour; or the socket changes design."
+    }
+  ]
+}

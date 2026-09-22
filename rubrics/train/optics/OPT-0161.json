@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0161",
+  "caption": "A door to a lit hallway is opened into a dark room, and a wedge of light spreads across the floor as the door swings.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A door leads from a lit hallway into a dark room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The door is opened."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A wedge of light spreads across the floor as the door swings."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wedge widens with the door."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lit wedge widens with the door and would narrow as it closes, and the door's shadow edge moves with it.",
+      "fail": "The wedge is there with the door shut; or stays narrow with the door wide; or the shadow edge stays fixed."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The wedge changes only as the door moves.",
+      "fail": "It grows with the door still; or before the door moves; or flickers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The wedge is a bright fan on the floor spreading from the doorway.",
+      "fail": "It is a round spot; or splits; or is on the ceiling only."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The door swings in an arc on its hinges.",
+      "fail": "It slides; or lifts; or spins."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One door and one wedge.",
+      "fail": "A second door appears; or the wedge becomes solid; or the door passes through the frame."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room and the hallway stay the same.",
+      "fail": "Furniture rearranges; or the walls change; or the light changes colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

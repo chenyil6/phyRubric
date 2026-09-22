@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0311",
+  "caption": "A round-bottomed roly-poly toy on a table is pushed over onto its side and let go, and it rocks back upright and settles.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A round-bottomed roly-poly toy is on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is pushed over onto its side and let go."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It rocks back upright."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It settles standing."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The release comes first, then the rocking, then the settling."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It swings back toward upright as soon as it is released, rocks with shrinking swings, and ends standing.",
+      "fail": "It stays on its side; or tips over the other way; or the swings grow."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Nothing touches it after the release.",
+      "fail": "It is pushed again; or slides; or restarts after settling."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It stays on the table.",
+      "fail": "It floats; or lifts; or sinks."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "It is rigid.",
+      "fail": "It squashes; or melts; or splits."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One toy keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The toy's colours and the table stay the same.",
+      "fail": "The toy changes colour; or the table changes; or the background rearranges."
+    }
+  ],
+  "note": "The hand is kept as the minimal trigger; the person is not judged."
+}

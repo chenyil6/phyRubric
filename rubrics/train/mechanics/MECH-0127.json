@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0127",
+  "caption": "A sheet of coloured paper is cut in half with scissors, and the two halves fall apart on the table.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sheet of coloured paper and a pair of scissors are present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The scissors cut across the sheet."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sheet ends up as two separate pieces."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pieces lie apart on a table."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cut runs through the sheet roughly in half rather than snipping a corner."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The cut comes first and the halves separate after it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The paper parts exactly where the blades close and only as far as they have closed; the cut edge advances with the blades.",
+      "fail": "The blades close through the paper and it stays whole; or the sheet splits ahead of the blades or along a line the blades never touched; or the paper is already in two before the scissors reach it."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once cut, the edges stay cut; the two pieces separate and do not rejoin.",
+      "fail": "A cut heals or the halves fuse back into one sheet; or the cut line shifts position after it is made."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Freed parts of the paper drop or slide down onto the table and stay there.",
+      "fail": "A half hangs in the air unsupported; or drifts upward; or slides across the table on its own after settling."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The paper behaves as a thin sheet: it flexes, its cut edge is a clean line, and the scissors stay rigid.",
+      "fail": "The paper stretches like rubber before parting; or shatters like glass; or the scissor blades bend or pass through each other."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet becomes exactly two pieces that together make up the original; the scissors stay one pair.",
+      "fail": "A third piece appears or a half vanishes; or the pieces change size after the cut; or the scissors duplicate or merge with the paper; or the blades pass through the hand."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The paper's colour and the table stay the same on both pieces.",
+      "fail": "One half changes colour; or the paper's printed side changes; or the table surface shifts."
+    }
+  ]
+}

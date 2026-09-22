@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0119",
+  "caption": "A carillon bell in a tower is struck by its hammer, and the hammer swings back while the bell rocks slightly on its mount.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A carillon bell in a tower with a hammer beside it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The hammer strikes the bell."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The hammer swings back after the strike."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The bell rocks on its mount."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rocking is slight."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The strike comes first; the swing back and the rocking follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The bell is still before the hammer lands and rocks only from the strike.",
+      "fail": "The bell rocks before the hammer lands; or rocks while the hammer stays retracted; or starts rocking again after settling with no second strike."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The hammer strikes and retreats; the bell rocks at the strike and the rocking dies down.",
+      "fail": "The hammer lands and the bell hangs perfectly rigid; or the hammer stays pressed against the bell after landing; or the bell's rocking grows after the strike; or the hammer swings back before it has reached the bell."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bell hangs below its mount and returns to hanging straight; the hammer returns to its rest.",
+      "fail": "The bell rests tilted with nothing holding it; or rises on its mount; or the hammer hangs in mid-air away from its pivot."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bell and the hammer are rigid.",
+      "fail": "The bell's wall dents; or the hammer bends; or the bell wobbles like rubber."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bell, one hammer; the hammer does not pass through the bell.",
+      "fail": "A second hammer appears; or the hammer passes through the bell; or the bell vanishes; or the bell splits."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bell's colour, the tower stones and the hammer's size stay the same.",
+      "fail": "The bell changes colour; or the tower stones change; or the hammer changes size."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0192",
+  "caption": "A fleece jacket is pulled off over a cotton shirt in the dark, and tiny sparks crackle where the fabrics separate.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A person wears a fleece jacket over a cotton shirt, in the dark."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The jacket is pulled off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Tiny sparks flash where the fabrics separate."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The room is dark."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sparks come as the fabrics part, not while the jacket is still."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The sparks appear only along the line where the fleece is parting from the shirt and each is gone at once; nothing glows before the jacket moves or after it is off.",
+      "fail": "The fabric glows steadily like a lamp; or sparks keep flashing after the jacket has been laid still; or a spark stays lit at one spot; or sparks appear on parts of the jacket far from where it is parting."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One jacket and one shirt; the sparks leave nothing behind on either.",
+      "fail": "Glowing dots stay on the shirt or jacket after the flash; or a second jacket appears; or the jacket vanishes; or the sparks detach and float about the room."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Both garments are soft cloth: the fleece stretches and folds as it comes off and the shirt stays on the body.",
+      "fail": "The jacket stays a rigid shape as it lifts; or stretches out like elastic and snaps back; or the shirt comes off with the jacket as one piece; or the fabric flows like liquid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The sparks are small: they brighten only the fabric right around them and not the room.",
+      "fail": "The room lights up with each spark as if a lamp came on; or the sparks throw shadows across the walls; or the sparks stay lit and light the room."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One person with the same body throughout; the jacket comes off over the body, not through it.",
+      "fail": "The jacket passes through the body or arms; or the body changes shape; or the jacket merges with the shirt; or an arm detaches with the sleeve."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jacket's colour, the shirt's colour and the room stay the same apart from the sparks.",
+      "fail": "The jacket changes colour; or the shirt changes colour; or the room's contents rearrange."
+    }
+  ],
+  "note": "The person is kept because the fabrics on the body are the physics; their movements are not judged. The crackle is sound and is not judged."
+}

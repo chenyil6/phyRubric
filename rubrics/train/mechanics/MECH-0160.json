@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0160",
+  "caption": "A bag of sugar is poured into a large mixing bowl, and the sugar builds up into a mound in the bowl.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Sugar is poured from a bag into a mixing bowl."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sugar builds up into a mound in the bowl."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The bowl is large."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pour comes first and the mound builds after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The sugar streams down as loose grains and the mound grows as a cone that slumps at the sides.",
+      "fail": "It pours as one solid lump; or it stacks into a column; or it flows like a liquid with a flat surface."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The stream falls straight down and the mound builds from the bottom up.",
+      "fail": "The stream curves upward; or grains rise; or the mound forms hanging from the bag."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The mound only grows while pouring.",
+      "fail": "It shrinks; or it is there before the pour; or it jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The bag's tilt produces the stream.",
+      "fail": "Sugar pours from an upright bag; or the bag is tipped and nothing comes out; or the stream continues after the bag is righted.",
+      "precondition": "The bag's tilt is visible in the clip."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bag and one bowl, and sugar comes only from the bag.",
+      "fail": "Sugar appears in the bowl with no stream; or the bowl duplicates; or sugar passes through the bowl."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag, the bowl and the kitchen stay the same.",
+      "fail": "The sugar changes colour; or the bowl changes shape; or the kitchen rearranges."
+    }
+  ]
+}

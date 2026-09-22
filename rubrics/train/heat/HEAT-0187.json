@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0187",
+  "caption": "A hairdryer is aimed at a wet patch on a bathroom mirror, and the patch shrinks from its edges.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wet patch lies on a bathroom mirror."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A hairdryer is aimed at the patch."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The patch shrinks."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The patch's border moves inward."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The dry area spreads from where the warm air hits."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drying comes first at the patch's edges."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The patch only shrinks while the dryer plays on it and dried glass stays dry.",
+      "fail": "The patch grows while the dryer plays on it; or a dried part of the glass goes wet again with nothing wetting it; or the patch shrinks and grows in turn; or the patch shrinks before the dryer is aimed at it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The water goes by drying from the patch's edge inward and does not appear elsewhere on the glass.",
+      "fail": "A new wet patch appears on dry glass; or the patch jumps to a new place on the mirror; or the patch vanishes at a stroke while still large; or the patch shrinks while a matching patch grows beside it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The drying starts where the warm air hits and spreads from there, while glass the dryer does not reach stays wet.",
+      "fail": "The patch dries from its far side while the dryer plays on its near side; or the whole mirror dries at once while the dryer plays on one spot; or the dryer plays on the patch and it stays as wet as before to the end of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any water the air pushes runs downward on the glass and gathers at the mirror's lower edge.",
+      "fail": "A run travels up the mirror; or a drop leaves the glass and rises; or water gathers along the mirror's top edge and stays; or the pushed water hangs in the air beside the glass."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One mirror in its frame; the mirror keeps its shape and the dryer stays outside the glass.",
+      "fail": "The mirror changes shape; or the dryer passes into the glass; or a second mirror appears; or the frame vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The frame, the bathroom fittings and the room behind stay the same.",
+      "fail": "The frame changes colour; or the fittings move; or the room behind changes between frames."
+    }
+  ]
+}

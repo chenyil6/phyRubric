@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0198",
+  "caption": "A flat bag of microwave popcorn lies in a running microwave, and the bag swells and puffs up as popping begins inside.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flat bag of popcorn lies in a running microwave."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bag stays flat at first."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bag rises and rounds out."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Popping happens inside as it swells."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pops come faster as the bag fills."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The bag stays flat before the popping starts."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bag stays flat until popping starts inside it and then rises with it; it does not inflate before any pop.",
+      "fail": "The bag is fully puffed before any popping shows; or the bag stays flat while pops plainly shake it to the end of the clip; or the bag flattens while the popping goes on; or the bag swells with the microwave off and still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The bag stays one bag whose flat sides bow out and whose folds open as it fills, keeping its printed faces.",
+      "fail": "The bag swells into a smooth sphere with no folds or seams; or the bag splits into separate bags; or the bag turns into another object; or the bag keeps its sharp flat creases while plainly full and round."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bag rises upward off the turntable's floor as it fills and stays on the turntable.",
+      "fail": "The bag swells downward into the turntable; or the bag lifts off the turntable and hangs in the air; or the bag sinks as it fills; or the bag rises and sticks to the microwave's roof."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The bag only fills while the popping goes on and the pops grow more frequent and then ease; the bag does not deflate mid-way.",
+      "fail": "The bag deflates and inflates again while the popping goes on; or the popping stops and starts again with the microwave running steadily; or the bag's size jumps between frames; or the popped bag flattens to its first shape with the microwave still running."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bag in one microwave; the bag stays inside and nothing passes through it.",
+      "fail": "Popcorn appears outside the sealed bag; or a second bag appears; or the bag passes through the microwave's door; or the bag vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag's printing, the turntable and the microwave's interior stay the same.",
+      "fail": "The bag's printing changes; or the turntable changes shape; or the interior changes."
+    }
+  ],
+  "note": "The pops are sound; they are read from the bag jumping and from its filling."
+}

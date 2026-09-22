@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0251",
+  "caption": "A bank of switches in a school gym is flipped one at a time, and the rows of ceiling lights come on one row at a time.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A school gym with rows of ceiling lights and a bank of switches."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The switches are flipped one at a time."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The rows of ceiling lights come on one row at a time."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lights are dark before the first flip."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Each row lights after its own flip, in the order the switches are flipped."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each flip is followed at that moment by one row lighting; rows whose switch is untouched stay dark.",
+      "fail": "A switch is flipped and no row lights; or a row lights with no switch flipped; or several rows light at one flip; or a row lights before its switch is touched."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The rows that light are the fixtures seen dark: the same number of rows and fixtures in the same positions.",
+      "fail": "A lit row appears where no fixtures hung; or fixtures vanish when lit; or the number of rows changes between frames; or fixtures shift along the ceiling."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The floor under each lit row brightens, with the lit area growing row by row.",
+      "fail": "A row glows while the floor beneath stays as dark as before; or the whole floor brightens at the first row; or the floor brightens while the fixtures stay dark."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once a row is lit it stays lit; the sequence only adds rows.",
+      "fail": "A lit row goes dark by itself; or rows flicker; or a row goes dark when the next switch is flipped; or rows go dark and relight."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The gym's walls, floor markings and fixtures keep their shapes; the hand passes through nothing.",
+      "fail": "The fixtures change shape; or the hand passes through the switch plate; or the floor markings change; or the gym's layout changes between dark and lit frames."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wall and floor colours and the switch plate stay the same apart from brightness.",
+      "fail": "The floor changes colour rather than brightness; or the switch plate changes layout; or the walls change colour."
+    }
+  ]
+}

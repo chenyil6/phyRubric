@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0113",
+  "caption": "Liquid nitrogen is poured into a metal bowl, and a cloud of white fog rolls over the rim and cascades down the sides.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Liquid nitrogen is poured into a metal bowl."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The liquid boils in the bowl."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "White fog rolls over the bowl's rim."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The fog cascades down the bowl's sides."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fog spreads along the surface it falls onto."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the fog follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The fog spills over the rim and falls down the outside, hugging the surface it lands on and spreading as it thins.",
+      "fail": "The fog rises off the bowl like steam and climbs; or hangs above the rim without falling; or shoots upward in a plume; or rises from the table back into the bowl."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog keeps coming while the liquid boils and what has left keeps moving away and fading.",
+      "fail": "The fog runs back into the bowl; or a puff retreats over the rim; or the fog rolls out before the liquid is poured; or the fog thickens steadily after the boiling has stopped."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The bowl shows the liquid boiling: it churns hard in the bowl and the fog comes from there.",
+      "fail": "The liquid lies glassy still while thick fog pours off it; or the fog pours from the bowl's outside while the inside is calm and clear; or the liquid is poured in and no fog appears at all."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The liquid is a thin clear liquid that boils and skitters, the fog is a dense low cloud that pours and fades, and the bowl stays a rigid metal bowl.",
+      "fail": "The liquid sits as a still clear pool with no movement; or the fog holds a fixed rigid shape; or the fog pools as a liquid with a flat surface; or the bowl's metal sags or melts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bowl and one pour; the liquid goes from the flask into the bowl and boils away.",
+      "fail": "Liquid appears in the bowl with none poured; or the liquid's level jumps up with nothing added; or the liquid passes through the bowl's wall; or a second bowl appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bowl's metal, the flask and the table stay the same.",
+      "fail": "The bowl changes colour; or the flask changes shape; or items on the table rearrange."
+    }
+  ],
+  "note": "Fog from liquid nitrogen sinks; that is what this caption asks for and it is not a violation."
+}

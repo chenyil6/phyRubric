@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0093",
+  "caption": "The top of a tall unanchored bookshelf is pulled forward; the shelf tips forward and falls, spilling books.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tall bookshelf stands with books on its shelves."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The top of the shelf is pulled forward."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shelf tips forward and falls."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Books spill out."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pull is at the top of the shelf."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pull comes first, then the tip, then the spill."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The shelf leans toward the pull, the top moving first, and falls to that side.",
+      "fail": "The shelf falls backward; or the bottom moves first; or it stops mid-tilt and hangs."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The books slide off the shelves as it tilts and fall to the floor, and the shelf comes down.",
+      "fail": "Books stay on the shelves through the fall; or rise; or hang in the air."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves until the pull.",
+      "fail": "The shelf leans before it is pulled; or books slide off while it stands upright; or it rights itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The shelf stays a rigid case, and the books thud and fan.",
+      "fail": "The shelf folds like cardboard; or books bounce high; or the shelf passes into the floor."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One shelf and its books keep their number.",
+      "fail": "The shelf vanishes or a second appears; or books multiply; or the shelf turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shelf's wood, the books and the room stay the same.",
+      "fail": "The shelf changes colour; or the books change covers; or the room rearranges."
+    }
+  ]
+}

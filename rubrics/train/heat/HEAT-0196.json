@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0196",
+  "caption": "An iron rod rests with one end buried in the glowing coals of a forge, and the buried end begins to glow dull red and brightens toward orange.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An iron rod rests with one end in the glowing coals of a forge."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The buried end begins to glow."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The glow brightens."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The glow spreads a short way along the rod."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The far end of the rod stays dark."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rod is dark before it is in the coals."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The glow only brightens and spreads a little while the end stays in the coals; it does not fade or retreat.",
+      "fail": "The glow fades while the end stays buried in the coals; or the glow brightens and dims in turn; or the glowing part goes dark and glows again; or the glow spreads to the far end and then retreats."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow appears only on the part in the coals and spreads a short way out of them, while the rest of the rod stays dark.",
+      "fail": "The glow appears at the rod's far end away from the coals; or the whole rod glows evenly including the end held clear; or the rod's buried end stays dark while the coals glow around it to the end of the clip; or the glow appears before the rod is in the coals."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The rod stays a rigid bar that keeps its shape while glowing and can be moved as one piece.",
+      "fail": "The glowing end sags or droops with nothing bending it; or the rod drips as a liquid; or the rod bends into a curve by itself; or the rod swells where it glows."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The rod rests on the coals or the forge's edge and any sparks or smoke from the coals rise.",
+      "fail": "The rod lifts off the coals and hangs in the air; or sparks fall through the forge and lie glowing below; or the smoke sinks and pools around the forge; or the rod floats above the fire."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One rod and one bed of coals; the rod stays one bar and the coals keep their number.",
+      "fail": "The rod vanishes; or a second rod appears; or the rod passes through the forge's floor; or a coal vanishes leaving no ash."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The forge's body, the coals' bed and the surroundings stay the same.",
+      "fail": "The forge changes colour; or the coals rearrange away from the rod; or items around the forge rearrange."
+    }
+  ],
+  "note": "How bright the glow gets is not judged, only that it brightens one way and appears where the rod is in the coals."
+}

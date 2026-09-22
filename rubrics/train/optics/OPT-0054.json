@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0054",
+  "caption": "A car drives past an office building with a glass front, and the car's reflection glides across the windows.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car drives past an office building with a glass front."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The car's reflection glides across the windows."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflection is mirrored."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection disappears where the glass ends."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection moves in step with the car and appears only in the glass, jumping slightly at the frames between panes.",
+      "fail": "It stays still while the car moves; or continues across solid wall; or it is missing in plainly reflective glass."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image of the car, same colours and size, with any lettering reversed.",
+      "fail": "It is a different vehicle or colour; or upside down; or its lettering reads the right way round."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves in the reflection that is not moving in reality.",
+      "fail": "The reflection moves while the car has stopped; or shows the car heading a different way."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The panes are flat and rigid: the reflection is undistorted and the interior is seen through.",
+      "fail": "The glass ripples; or the reflection warps as it slides; or the frames bend."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and one reflection per pane.",
+      "fail": "A second car appears; or the car drives into the glass; or the reflection steps out; or the car vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The building, the car and the street stay the same.",
+      "fail": "The car changes colour; or the building's frames change; or the street rearranges."
+    }
+  ]
+}

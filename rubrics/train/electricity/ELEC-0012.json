@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0012",
+  "caption": "A power strip with four lamps plugged into it is switched on, and all four lamps come on at once.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A power strip with four lamps plugged into it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The strip's switch is turned on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "All four lamps come on."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lamps come on at the same moment, not one after another."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lamps are dark before the switch."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "All four lamps come on at the moment the strip's switch is pressed, and only then.",
+      "fail": "The switch is pressed and one or more lamps stay dark; or a lamp is lit before the switch is touched; or the lamps light one after another; or the lamps come on with the switch untouched."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The four lamps seen dark are the four lamps seen lit: the same lamps in the same places, none appearing or vanishing.",
+      "fail": "A fifth lamp appears lit; or a lamp vanishes at the switch; or a lamp changes place; or the strip gains or loses sockets."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once on, all four lamps stay lit while the switch stays on.",
+      "fail": "A lamp goes out again with the switch untouched; or lamps flicker; or the switch flips back by itself; or a lamp dims to dark while the others glow."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lamps' light reaches their surroundings: shades glow and the surfaces beneath brighten, with shadows pointing away from each lamp.",
+      "fail": "The bulbs glow while the shades and surfaces stay as dark as before; or the surroundings brighten while the lamps stay dark; or the light comes from elsewhere."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One strip with four plugs in it; the strip and lamps keep their shape; cords stay attached; the hand passes through nothing.",
+      "fail": "A plug passes into the strip's body beside a socket; or a cord splits or detaches; or a lamp changes shape; or the hand passes through the strip."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lamps' shade colours, the strip's colour and the floor stay the same apart from the light.",
+      "fail": "A shade changes colour rather than brightness; or the strip changes colour; or the cords change colour."
+    }
+  ]
+}

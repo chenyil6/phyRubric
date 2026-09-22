@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0084",
+  "caption": "A hand wipes a streak across a steamed-up mirror, and the room appears in the clear streak.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A mirror is steamed up."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A hand wipes a streak across it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The room appears in the clear streak."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection is blurred elsewhere."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The streak slowly fogs over again."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection appears only where the fog is wiped away and is blurred elsewhere.",
+      "fail": "The reflection is sharp through the fog; or the wiped streak stays blank; or a sharp reflection appears where the hand never wiped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The streak matches the hand's path and slowly fogs over again.",
+      "fail": "The streak is a different shape from the wipe; or it clears further by itself; or it fogs instantly."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The reflection in the streak is the room, mirrored.",
+      "fail": "It is a different room; or upright where it should be mirrored; or objects appear that are not in the room."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fog is a film of moisture the hand smears.",
+      "fail": "It is a solid coating; or it peels; or the hand passes through the mirror."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mirror and one hand.",
+      "fail": "The mirror duplicates; or a second hand appears; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mirror frame and the room stay the same.",
+      "fail": "The frame changes; or the room rearranges; or the wall changes colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

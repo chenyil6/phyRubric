@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0122",
+  "caption": "A stick of incense is lit in a quiet room, and a thin ribbon of smoke rises from its tip and curls in the still air.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stick of incense stands in a holder."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its tip glows."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A thin ribbon of smoke rises from the tip."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The ribbon curls and waves as it rises."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The room is still: nothing else moves."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The smoke comes from the tip rather than along the stick."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The smoke leaves the tip going up in a thin stream that waves and spreads higher up.",
+      "fail": "The smoke sinks from the tip to the table and pools; or the ribbon runs straight down the stick; or the smoke hangs as a fixed shape without rising; or the smoke streams sideways and stays level with nothing blowing it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The smoke keeps leaving the tip and what has left keeps rising and spreading, while the glowing point creeps down the stick.",
+      "fail": "The ribbon runs back into the tip; or a puff retreats to the stick; or the burnt part of the stick returns to unburnt incense; or the stick grows longer as it burns."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The smoke comes from the glowing point: the ribbon starts there and the stick behind it is ash.",
+      "fail": "The ribbon starts in the air above the stick with a gap below it; or the smoke comes from the stick's base or holder; or the tip glows while no smoke leaves it at all; or the smoke leaves a part of the stick that has not burnt."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The smoke is a fine thread that waves and spreads and the ash is a fragile grey column that bends and may drop.",
+      "fail": "The ribbon holds a fixed rigid shape like a wire; or the smoke pours like a liquid; or the ash stays straight and bright like fresh incense; or the ash falls upward."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One stick in one holder; the stick shortens only by burning and the holder stays put.",
+      "fail": "The stick lengthens; or a second stick appears already lit; or the stick vanishes while still long; or the glowing point jumps to a new place on the stick."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The holder, the table and the room stay the same.",
+      "fail": "The holder changes shape; or the table's pattern changes; or items in the room rearrange."
+    }
+  ]
+}

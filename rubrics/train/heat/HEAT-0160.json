@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0160",
+  "caption": "Popcorn kernels in a covered pot with hot oil begin to pop, jumping and turning into fluffy white pieces that fill the pot.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot with kernels in oil is shown, seen through a clear lid or from inside."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Kernels pop: they change into fluffy white pieces."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Popping pieces jump."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The pot fills with popcorn as popping continues."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pot is covered with a lid."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Kernels come first and the popped pieces accumulate afterwards."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The transformation is one way: kernel to popped piece, popped pieces stay popped, and the amount of popcorn only increases.",
+      "fail": "A popped piece shrinks back into a kernel; or pieces vanish so the pot empties again; or popping stops and starts with the pot emptying in between."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Each pop is an abrupt change at the kernel from a small hard grain to a much larger irregular white puff; unpopped kernels stay small and dark until they pop.",
+      "fail": "Kernels swell gradually and smoothly like balloons; or popped pieces turn back yellow and smooth; or the popcorn forms one continuous mass rather than separate pieces."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Pieces that jump come down again onto the pile or the pot floor; the pot fills from the bottom up.",
+      "fail": "Pieces hang in the air; or gather at the lid while the bottom is empty; or rise steadily and stay up."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The kernels are solid grains and the oil a thin liquid; the lid stays rigid and at most rattles.",
+      "fail": "Kernels melt or dissolve into the oil; or the popped mass flows and settles level like a liquid; or the lid bends like cloth."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Popcorn appears only from kernels in the pot; the pot and lid keep their shape and nothing passes through them.",
+      "fail": "Popped pieces appear outside the pot with the lid on; or the pot changes shape or size; or pieces pass through the lid or wall; or the kernel count grows with none added."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the lid handle and the stove stay the same; popcorn stays white to pale yellow.",
+      "fail": "The pot changes colour; or the popcorn turns a different colour; or the stove background changes."
+    }
+  ]
+}

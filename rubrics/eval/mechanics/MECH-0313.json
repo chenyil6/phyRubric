@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0313",
+  "caption": "A wet blanket is thrown over a thin washing line, the line sags deeply, then snaps, and the blanket falls to the grass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wet blanket is thrown over a thin washing line."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The line sags deeply."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The line snaps."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The blanket falls to the grass."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sag comes first, then the snap, then the fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The sag deepens under the weight before the break, and at the snap the ends spring apart.",
+      "fail": "The line holds unchanged; or stretches like elastic; or rejoins."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The blanket drops straight down after the snap.",
+      "fail": "It floats; or rises; or hangs on nothing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The line no longer holds anything after breaking.",
+      "fail": "It holds the load after breaking; or the blanket falls with the line intact; or the line vanishes."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wet blanket is heavy and limp.",
+      "fail": "It is rigid; or floats like dry cloth; or tears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One blanket keeps its number and one line becomes two ends.",
+      "fail": "The blanket duplicates; or the line is whole again; or the blanket turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blanket's colour and the yard stay the same.",
+      "fail": "The blanket changes colour; or the posts change; or the yard rearranges."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0026",
+  "caption": "An egg is cracked on the rim of a bowl and the shell pulled apart above it, and the yolk and white drop into the bowl.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An egg is cracked on the rim of a bowl."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The shell is pulled apart above the bowl."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The yolk and white drop into the bowl."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bowl stays below the shell throughout."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The crack comes first, then the shell opens, then the contents fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The contents leave the shell downward as soon as it opens and land in the bowl below.",
+      "fail": "The contents stay suspended between the shell halves after the shell is open; or they rise out of the shell; or they drift sideways past the bowl."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The white runs as a thick, stringy liquid and the yolk keeps its rounded blob shape until it lands.",
+      "fail": "The contents pour out as thin water; or the yolk breaks apart like a brittle solid before it lands; or the white holds a rigid shape in the air."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The shell is brittle: it cracks and comes apart in pieces rather than bending.",
+      "fail": "The shell stretches like rubber as it is pulled apart; or it flows like a liquid; or the crack closes and the shell becomes whole again."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "What leaves the shell arrives in the bowl: the pool inside grows as the contents land.",
+      "fail": "The contents fall into the bowl and the bowl stays empty; or a pool appears in the bowl before the shell opens; or the shell empties with nothing arriving below."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One egg's contents fall, and nothing passes through the bowl.",
+      "fail": "A second yolk appears; or the contents pass through the bottom of the bowl; or the shell halves merge back into an uncracked egg."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The yolk's colour, the bowl and the worktop stay the same.",
+      "fail": "The yolk changes colour as it falls; or the bowl changes size or pattern between frames; or the worktop behind rearranges."
+    }
+  ]
+}

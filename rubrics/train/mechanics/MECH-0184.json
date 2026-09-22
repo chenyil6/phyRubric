@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0184",
+  "caption": "A hairdryer is aimed at a long-haired wig on a stand, and the hair streams away from the nozzle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A long-haired wig sits on a stand."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A hairdryer is aimed at it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The hair streams away from the nozzle."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The dryer is aimed first and the hair moves after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The hair blows in the direction the dryer points.",
+      "fail": "It blows toward the nozzle; or sideways; or straight up when the dryer points across."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The hair moves only while the dryer is running and aimed, and falls back when the dryer moves away.",
+      "fail": "The hair streams with the dryer off; or stays streaming after the dryer moves away; or moves before the dryer is aimed."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The hair flows in strands and flutters.",
+      "fail": "It moves as a rigid block; or stretches; or detaches all at once."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "When the airflow stops the hair falls back down.",
+      "fail": "It stays up; or rises; or hangs out sideways."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One wig on one stand keeps its number.",
+      "fail": "The wig merges with the dryer; or the stand duplicates; or hair passes through the stand."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wig's colour and the surroundings stay the same.",
+      "fail": "The hair changes colour; or the stand changes; or the background rearranges."
+    }
+  ]
+}

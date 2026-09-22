@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0322",
+  "caption": "A gust through an open window blows the bedroom door shut with a bang.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bedroom window is open and a door stands ajar."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A gust comes through the window."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The door swings shut."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Other signs of wind, such as curtains, are visible."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The gust comes first and the door shuts after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The door swings closed in the direction the curtains blow and not in still air.",
+      "fail": "It closes in still air; or swings against the wind; or closes before the gust."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "It stops at the frame.",
+      "fail": "It passes through the frame; or through the wall; or the frame passes through the door."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "It swings on its hinges in an arc.",
+      "fail": "It slides; or lifts; or spins."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The door is rigid and may rebound slightly.",
+      "fail": "It bends; or bounces fully open again; or shatters."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One door keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The door and the room stay the same.",
+      "fail": "The door changes colour; or the room rearranges; or the window changes."
+    }
+  ]
+}

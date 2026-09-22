@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0189",
+  "caption": "The valve of an inflated air mattress is opened and the mattress pressed down, and it hisses and sags flat.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An inflated air mattress is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its valve is opened."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mattress is pressed down."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It sags flat."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The valve opens first, then the press, then the sag."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The mattress deflates and stays flat, and it does not reinflate.",
+      "fail": "It reinflates on its own; or goes flat and puffs back; or is flat before the valve opens."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "It collapses most where it is pressed, sagging as fabric over the remaining air.",
+      "fail": "It stays a rigid block under the press; or shrinks to a tiny size; or splits into two mattresses."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The mattress stays put.",
+      "fail": "It slides; or lifts; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pressed surface goes down and the fabric lies on the floor.",
+      "fail": "It rises; or floats; or hangs."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mattress keeps its number.",
+      "fail": "It duplicates; or passes through the floor; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mattress's colour and the room stay the same.",
+      "fail": "The mattress changes colour; or the room rearranges; or the hands change."
+    }
+  ]
+}

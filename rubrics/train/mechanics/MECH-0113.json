@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0113",
+  "caption": "A foam pillow is pressed down and released, and it puffs back to its shape.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A foam pillow is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is pressed down."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The press is released."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The pillow puffs back to its shape."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The press comes first, then the release, then the recovery."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The pillow sinks only where pressed and recovers after the release.",
+      "fail": "The pillow stays dented after the release; or it does not compress under the press; or it compresses everywhere at once."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The recovery follows the release and is gradual, not an instant snap like rubber.",
+      "fail": "It snaps back the instant the hand lifts; or it starts expanding while still pressed; or it keeps sinking after the release."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The pillow stays where it is apart from being pressed.",
+      "fail": "It slides away; or it jumps up off the surface; or it moves before being pressed."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pillow lies on its surface and the press comes from above.",
+      "fail": "The pillow lifts off the surface; or the dent forms on the underside; or it floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One pillow keeps its number, and the hand does not pass through it.",
+      "fail": "The pillow splits; or the hand passes through it; or a second pillow appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pillow's cover and the surroundings stay the same.",
+      "fail": "The cover changes colour or pattern; or the bed or sofa changes; or the room rearranges."
+    }
+  ]
+}

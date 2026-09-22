@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0032",
+  "caption": "A fingertip holds down the doorbell button beside a front door, and a small light in the button glows while it is pressed and goes out when it is released.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A doorbell button beside a front door."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A fingertip holds the button down."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A small light in the button glows while it is pressed."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The light goes out when the button is released."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The button is dark before the press."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark, press and glow, release and dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light comes on when the fingertip presses the button and goes out when the finger lifts; it glows only while pressed.",
+      "fail": "The button is pressed and stays dark; or glows before the finger reaches it; or stays lit after the finger has lifted; or goes out while the finger still holds it down."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "While the button is held the glow is steady; after release the button stays dark for the rest of the clip.",
+      "fail": "The glow flickers while the button is held steady; or comes back on after release with nothing touching it; or the button lights and goes out repeatedly during one press."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The door, the frame and the button plate stay still; only the finger and the button's small travel move.",
+      "fail": "The door opens at the press with no one behind it; or the plate slides on the wall; or the button sinks deep into the wall and stays sunk."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The glow is small: it lights the button and its rim and no more.",
+      "fail": "The whole doorway lights up when the button glows; or the glow appears on the wall away from the button; or the porch light comes on at the press."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One button on one plate; the finger touches the button and passes through nothing; the door keeps its shape.",
+      "fail": "A second button appears; or the finger passes into the wall; or the plate vanishes; or the door changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The door's colour, the plate's finish and the wall stay the same apart from the glow.",
+      "fail": "The door changes colour; or the plate changes shape or finish; or the glow changes colour."
+    }
+  ],
+  "note": "The hand is kept because the caption's event is the press; the person is otherwise not judged. The chime is sound and is not judged."
+}

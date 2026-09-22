@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0115",
+  "caption": "A steel cocktail shaker filled with ice is shaken, and its outside turns white with frost within seconds.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A steel cocktail shaker is filled with ice."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The shaker is shaken."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its outside turns white with frost."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The frost is thickest over the part the ice fills."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shaking comes first and the frost follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The frost appears on the shaker's outside while it is shaken with ice inside, thickest over the part the ice fills.",
+      "fail": "The frost appears before the shaking starts; or the shaker is shaken with ice in it and its outside stays bright and dry to the end of the clip; or the frost appears on the cap while the body over the ice stays bright; or the frost appears on the hands rather than the metal."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The frost only builds while the shaker stays cold and any later change is toward wetness as it warms.",
+      "fail": "The frost thickens, goes and thickens again while the shaking goes on; or wet drops turn back into dry white frost as the shaker warms; or the frost retreats while the ice is still inside; or the frost thins and thickens in turn."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Once the frost turns to drops they run downward on the shaker's sides and drip from its base.",
+      "fail": "A drop runs up the shaker; or water gathers on the cap's top and stays as a dome; or a drop leaves the shaker and rises; or a run travels sideways round the shaker and stays level."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The frost is a fine white bloom on the metal that softens into beads, and the shaker stays a rigid steel vessel.",
+      "fail": "The frost stands off as thick spikes of ice; or the frost peels away as a sheet; or the shaker's metal flexes as it is shaken; or the frost sets as a hard glaze that stays dry as the shaker warms."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One shaker with its cap on; the shaker keeps its shape and nothing passes through it.",
+      "fail": "The shaker changes shape; or a second shaker appears; or the cap passes into the body; or ice passes out through the steel."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shaker's finish away from the frost, the hands and the bar stay the same.",
+      "fail": "The shaker changes colour; or the bar's bottles rearrange; or the background changes between frames."
+    }
+  ],
+  "note": "The hands are kept because the shaking is the caption's action; they are otherwise not judged."
+}

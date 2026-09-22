@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0197",
+  "caption": "A layer of white sugar in a dry pan over heat melts from the edges into a clear liquid that turns amber and then deep brown.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A layer of white sugar lies in a dry pan over heat."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sugar melts from the edges inward."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The melt is a clear liquid."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The liquid darkens to amber and then deep brown."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Thin smoke may rise at the end."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The melting comes first and the darkening follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The melting only advances inward from the edges and the darkening only deepens; neither reverses.",
+      "fail": "A melted part turns back into white grains; or the melting spreads and then retreats; or the dark liquid lightens back to amber or clear; or the sugar melts at the centre first and works out to the edges."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The colour change happens in the liquid itself and runs one way from clear to amber to brown.",
+      "fail": "The pan's surface changes colour rather than the sugar; or the liquid is brown before any sugar has melted; or the liquid's colour goes back and forth between amber and brown; or the dry grains turn brown while still unmelted."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The melted sugar runs to the pan's low places and spreads across its floor, and any smoke rises.",
+      "fail": "The melt climbs the pan's wall and stays; or a run travels uphill; or melted sugar lifts off the pan; or the smoke sinks over the rim and pools on the hob."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The sugar goes from loose dry grains to a thick glossy liquid that flows slowly and levels.",
+      "fail": "The melt runs as thin as water; or the grains stay dry and separate while the layer flows; or the melt sets solid in the hot pan; or the liquid stands as a rigid dome."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The sugar in the pan is the sugar that was there; it melts rather than appearing or vanishing.",
+      "fail": "Sugar appears in the pan with none added; or the layer vanishes at a stroke; or a second pan appears; or the melt passes through the pan's floor."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan's finish, the hob and the surroundings stay the same.",
+      "fail": "The pan changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ],
+  "note": "The sugar's browning is the caption's asserted outcome; the chemistry of it is not judged, only that the colour runs one way and the melting starts at the edges."
+}

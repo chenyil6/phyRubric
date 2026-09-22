@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0142",
+  "caption": "A stubborn weed is pulled out of the soil by its leaves, and the whole plant comes up with its roots and clinging soil.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A weed grows in soil."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is pulled by its leaves."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The whole plant comes up."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Roots and clinging soil come up with it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pull is by the leaves."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pull comes first and the plant comes up after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The soil around the stem lifts and breaks as the roots come free, and soil clings to the roots.",
+      "fail": "The soil stays smooth and unbroken where the roots came out; or the roots slide out clean as from water; or the soil flows like liquid."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "A hole is left where the plant was.",
+      "fail": "There is no hole; or the hole is there before the pull; or the hole is elsewhere."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Loose soil falls back to the ground.",
+      "fail": "It rises; or hangs in the air; or floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The plant moves only as it is pulled.",
+      "fail": "It rises on its own; or jumps; or moves before the pull."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One weed keeps its number, and the hand does not pass through it.",
+      "fail": "The hand passes through the plant; or a second weed appears; or the weed turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The weed's leaves and the surrounding garden stay the same.",
+      "fail": "The leaves change colour; or the garden rearranges; or the hand changes."
+    }
+  ]
+}

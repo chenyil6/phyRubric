@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0001",
+  "caption": "An ice cream cone stands in a holder on a sunny picnic table, and the ice cream is melting and dripping down the side of the cone.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An ice cream cone stands in a holder."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The ice cream is visibly melting: it sags and softens."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Drips run down the side of the cone."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The setting is a sunny outdoor picnic table."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "No hand holds the cone; it stays upright in the holder."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The ice cream softens and sags progressively: it slumps and loses its peaks, and each change persists; it never firms up or regains a shape it has lost.",
+      "fail": "The ice cream regains a firm shape or ridges it had lost; or a drip retreats back into the scoop; or the melt alternates between more and less melted."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Melted ice cream runs downward along the cone; drips fall or pool at the base.",
+      "fail": "A drip climbs upward or moves sideways around the cone against gravity; or melt collects on top of the scoop; or a drop leaves the cone and floats."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The melting ice cream turns glossy and flows as a thick liquid; the cone stays a crisp solid, softening only where soaked.",
+      "fail": "The cone melts or sags like the ice cream; or the melt runs as thin water rather than a thick coating; or a drip hardens into a spike standing out sideways."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The melt has a source: drips originate from the softening scoop and the cone gets wetter where they pass.",
+      "fail": "Drips run down a cone whose ice cream stays fully firm and unchanged; or the cone's surface stays dry where drips have passed."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cone, one scoop; matter only moves from scoop to cone to table.",
+      "fail": "The scoop grows larger while dripping; or a second scoop appears; or the cone vanishes or changes into another object; or ice cream appears on the table with no drip reaching it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ice cream's colour, the cone's pattern and the holder stay the same.",
+      "fail": "The ice cream changes colour or flavour; or the cone's waffle pattern changes; or the holder moves or vanishes."
+    }
+  ]
+}

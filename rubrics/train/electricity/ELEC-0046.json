@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0046",
+  "caption": "The batteries are pulled out of a walking toy robot, and the robot stops mid-step.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy robot walks."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its batteries are pulled out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The robot stops mid-step."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The robot's lights, if any, go off with the batteries."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is walking, batteries out, stopped."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The robot's movement and any lights stop at the moment the batteries come out, and only then.",
+      "fail": "The batteries are out and the robot walks on; or the robot stops before the batteries move; or the robot's lights stay lit with the batteries out; or the robot finishes its step and takes another with the batteries out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Once stopped the robot stays frozen in its pose and does not move again while the batteries are out.",
+      "fail": "The robot moves again with the batteries out; or twitches or rocks by itself; or its arms or head move after the stop; or the robot walks before the batteries were in."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The stopped robot stands on the surface or falls over if off balance; the removed batteries are held or fall to the surface.",
+      "fail": "The robot hangs in mid-step with a foot in the air and does not settle; or the robot floats; or a dropped battery rises or hangs in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "While walking the robot moves forward in the direction it faces, its feet lifting and landing in turn.",
+      "fail": "The robot slides without moving its legs; or moves sideways to its facing; or its feet pass through the floor; or it lifts off the floor as it walks."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One robot with its limbs attached; the batteries come out of an opening; nothing vanishes or passes through the robot's body.",
+      "fail": "The batteries pass through the robot's shell; or a limb detaches; or a second robot appears; or the batteries vanish in the hand."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The robot's colours and markings and the surface stay the same apart from the lights.",
+      "fail": "The robot changes colour; or its markings change; or the surface changes."
+    }
+  ],
+  "note": "The robot is a powered toy; its walking before the batteries come out is the caption's setup and is not judged for gait."
+}

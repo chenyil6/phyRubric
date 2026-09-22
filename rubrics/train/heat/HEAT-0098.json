@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0098",
+  "caption": "A motorcyclist stops at a light on a cold day, and the inside of the helmet visor fogs with each breath.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A motorcyclist in a helmet has stopped at a light."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The inside of the visor fogs."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The fog thickens with each breath."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The fog thins between breaths."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The setting reads as cold."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The fog is on the visor's inner face."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each breath thickens the fog and it thins between breaths; if the visor is lifted it clears.",
+      "fail": "The fog thickens while the rider is drawing breath in; or the fog thickens steadily with no breathing at all; or the fog clears while breath still reaches it with the visor down; or the fog stays unchanged through every breath."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The fog lies on the visor's inner face and what is behind it is unchanged when it thins.",
+      "fail": "The fog forms on the visor's outer face; or objects seen through the fogged visor are missing when it thins; or the fog detaches from the visor and drifts as a cloud; or the fog appears on the helmet's shell rather than the visor."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Drops that gather on the visor run downward on its inner face.",
+      "fail": "A drop runs up the visor; or a drop leaves the visor and rises; or water gathers along the visor's top edge and stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fog is a fine haze that beads and streaks, and the visor stays a rigid clear shield on its pivot.",
+      "fail": "The fog stands off the visor as a thick crust; or the fog peels away as a film; or the visor flexes or ripples; or the haze turns opaque white like paint."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One helmet with one visor; the helmet keeps its shape and nothing passes through the visor.",
+      "fail": "The visor vanishes; or a second visor appears; or a hand passes through the visor; or the helmet changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The helmet's paint, the bike and the street stay the same.",
+      "fail": "The helmet changes colour; or the bike changes colour; or the street's traffic lights change layout."
+    }
+  ],
+  "note": "The rider is kept because the breath is the moisture's source; the rider is otherwise not judged."
+}

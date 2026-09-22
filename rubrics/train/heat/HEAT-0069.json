@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0069",
+  "caption": "A hot pot bubbles in the centre of a dinner table, and thin slices of meat dropped into the broth curl up and rise to the surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hot pot bubbles in the centre of a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Thin slices of meat are dropped into the broth."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The slices curl up."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The slices rise to the surface."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Steam rises from the broth."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first, then the curling, then the rise."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each slice only curls further and, once it is at the surface, stays up, while the broth keeps bubbling.",
+      "fail": "A curled slice flattens out again in the broth; or a slice that has surfaced sinks back to the bottom and stays there; or the slices curl and uncurl in turn; or the bubbling stops and then starts again by itself."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The slices move as the churning broth carries them and as they curl, and they jostle at the surface.",
+      "fail": "A slice darts across the pot with the broth still; or a slice travels against the churn; or a slice leaps out of the broth with nothing lifting it; or a slice spins fast on the spot with nothing turning it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The slices sink as they go in, then rise to the surface and ride there partly submerged, while the bubbles and steam rise.",
+      "fail": "A slice sits wholly on top of the broth like a leaf on a sheet; or a slice hangs motionless in mid-broth; or bubbles sink toward the pot's floor; or the steam sinks and pools on the table."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The slices are limp sheets that curl and fold and hold together, and the broth closes round them.",
+      "fail": "A slice stays a flat rigid plate while rising; or a slice breaks into crumbs; or the slices fuse into one lump; or the broth holds a dent around a slice."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The slices in the pot are the slices that were dropped in and they keep their number.",
+      "fail": "A slice vanishes; or new slices appear with none added; or a slice passes through the pot's wall; or two slices merge into one thicker piece."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the table and the broth's colour stay the same.",
+      "fail": "The pot changes colour; or the table's setting rearranges; or the broth changes colour."
+    }
+  ],
+  "note": "The meat's colour change as it cooks is chemistry and is not judged."
+}

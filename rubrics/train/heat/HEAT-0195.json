@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0195",
+  "caption": "Grey raw shrimp are dropped into a hot pan, and they curl and turn pink.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Grey raw shrimp are dropped into a hot pan."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Each shrimp tightens into a curve."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shrimp turn from grey to pink."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The change starts on the side touching the pan."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shrimp look translucent at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the curling follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The curling and the colour change only advance and do not reverse.",
+      "fail": "A curled shrimp straightens out again in the hot pan; or a pink shrimp turns grey again; or the shrimp curl and uncurl in turn; or the colour change spreads and then retreats."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The change is in the shrimp themselves, starting on the side touching the pan and spreading through each one.",
+      "fail": "The pan's surface changes colour rather than the shrimp; or a shrimp turns pink on its upper side while the side on the metal stays grey; or the shrimp are pink before they reach the pan; or the shrimp all change colour in a single frame with no spreading."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "Each shrimp stays one shrimp that draws into a tighter curve, keeping its tail and body.",
+      "fail": "A shrimp splits into pieces with nothing cutting it; or the shrimp fuse into one mass; or a shrimp curls into a closed ring with no seam; or a shrimp turns into another object."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The shrimp rest in the pan and any juices run to its low places.",
+      "fail": "A shrimp lifts off the pan and hangs; or the juices climb the pan's wall and stay; or a shrimp rolls uphill in a tilted pan; or the juices gather on top of a shrimp and stay."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The shrimp keep their number in the pan and none appears or vanishes.",
+      "fail": "A shrimp vanishes; or a new shrimp appears in the pan; or two shrimp merge into one; or a shrimp passes through the pan's floor."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the hob and the surroundings stay the same.",
+      "fail": "The pan changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ],
+  "note": "The shrimp's colour change is the caption's asserted outcome; the chemistry of it is not judged, only that it runs one way and starts where the shrimp meet the pan."
+}

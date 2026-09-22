@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0061",
+  "caption": "A candle burns on a table by a dark window at night, and a second flame appears in the glass beside the real one.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A candle burns on a table by a dark window at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A second flame appears in the glass beside the real one."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflected flame flickers in step with the real one."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflected flame is mirrored."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflected flame flickers in step with the real one and would vanish if the candle went out.",
+      "fail": "It flickers out of time; or it stays steady while the real flame flickers; or it remains with the candle out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image of the candle and flame, dimmer, at the same height across the glass.",
+      "fail": "It is a different candle; or brighter than the real flame; or at a different height; or upside down."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It slides across the glass; or shifts while the candle is still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Both flames point upward.",
+      "fail": "The real flame points sideways in still air; or the reflected flame points down; or a flame detaches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One candle and one reflection; the reflection stays in the glass.",
+      "fail": "A second candle appears in the room; or the reflection comes out of the glass; or the candle vanishes; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candle, the table and the window frame stay the same.",
+      "fail": "The candle changes colour; or the frame changes; or the table changes."
+    }
+  ]
+}

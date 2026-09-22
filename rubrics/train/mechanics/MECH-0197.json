@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0197",
+  "caption": "A dog runs across a yard to a ball lying on the grass and picks it up in its mouth.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog runs across a yard."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A ball lies on the grass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dog picks up the ball in its mouth."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The run comes first and the pick-up follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Its four legs move in a galloping rhythm, the body stretches and bunches with each bound, and the legs bend at the joints.",
+      "fail": "The legs move together like a rocking horse; or a leg bends mid-bone; or the legs pass through each other."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "It keeps four legs and one tail, and there is one ball.",
+      "fail": "A leg or the tail vanishes or a fifth leg appears; or the ball duplicates; or the ball vanishes before the dog reaches it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "It slows and lowers its head to take the ball, and the ball leaves the grass in its mouth.",
+      "fail": "The ball rises to the mouth by itself; or the dog runs past and the ball is in its mouth anyway; or the mouth closes and the ball stays on the grass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "Its paws land on the grass and the ball is held in the mouth, not passing through it.",
+      "fail": "Paws sink into the ground; or the ball passes through the jaw; or the dog passes through a fence."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One dog keeps its shape and stays one dog.",
+      "fail": "The dog splits into two; or merges with the ball; or turns into another animal."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dog's coat, the ball and the yard stay the same.",
+      "fail": "The coat changes pattern; or the ball changes colour; or the yard rearranges."
+    }
+  ],
+  "note": "The dog is self-driven: its speed, path and how neatly it picks up the ball are not judged."
+}

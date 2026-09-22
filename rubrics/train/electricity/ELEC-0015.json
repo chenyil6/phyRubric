@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0015",
+  "caption": "The call button beside an elevator is pressed, and the button lights up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A call button beside an elevator."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The button is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The button lights up."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The button is dark before the press."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, press, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The button lights at the moment it is pressed, and only then.",
+      "fail": "The button is pressed and stays dark; or the button is lit before it is pressed; or the button lights with nothing touching it; or a different button lights instead."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once lit, the button stays lit for the rest of the clip, or goes out only when the elevator doors open.",
+      "fail": "The button goes dark again with the doors still closed; or flickers on and off; or brightens and dims repeatedly; or lights and goes out with each frame."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The button and its plate stay in the wall as they are pressed; the doors stay closed until they open in one motion.",
+      "fail": "The plate moves along the wall; or the button sinks deep into the wall and stays sunk; or the doors jerk open and shut repeatedly; or the floor indicator numbers spin."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The button's glow lights the plate around it faintly; the glow is at the button and nowhere else.",
+      "fail": "The glow appears on the wall away from the button while the button stays dark; or the whole plate lights up as brightly as the button; or the glow floats in front of the wall."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One button plate with its buttons in fixed places; the doors and wall keep their shape; the finger passes through nothing.",
+      "fail": "Buttons appear or vanish; or a second plate appears; or the finger passes into the wall; or the elevator doors change shape or vanish."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plate's finish, the doors' colour and the wall stay the same apart from the glow.",
+      "fail": "The plate changes colour; or the doors change colour; or the floor numbers change style."
+    }
+  ]
+}

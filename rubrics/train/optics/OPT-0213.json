@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0213",
+  "caption": "A tattoo shop's red neon sign shines on the wet white van parked outside, and the van's side glows pink-red.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A white van is parked outside a tattoo shop."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The shop's red neon sign shines on its wet side."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The van's side glows pink-red."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The van is white where the sign's light does not reach."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The van looks pink-red only where the sign's light reaches and while it is on.",
+      "fail": "The van is pink-red with the sign off; or stays white under the pink-red light; or turns a different colour from the light."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens at the same instant as the sign and is confined to where its light falls.",
+      "fail": "The van changes before the sign; or long after; or surfaces the light cannot reach change too."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wet side shows a shimmering reflection of the sign.",
+      "fail": "The side is dry and matt with a sharp reflection; or the reflection is rigid on rippling water; or the van's paint changes."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves; only the light changes.",
+      "fail": "The van moves; or the sign moves by itself; or the lit area wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sign and one van.",
+      "fail": "A second sign appears; or the van vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The van's shape and the surroundings stay the same.",
+      "fail": "The van changes shape; or the surroundings rearrange; or the sign changes shape."
+    }
+  ]
+}

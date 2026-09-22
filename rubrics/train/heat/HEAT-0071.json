@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0071",
+  "caption": "Rain falls on a sun-baked road, and steam rises from the hot asphalt as the drops hit.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Rain falls on a road."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Steam rises from the road's surface."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The road reads as sun-baked: bright and dry away from the wet patches."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Wet patches spread on the road."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rain falls first and the steam follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The rain falls downward onto the road and the steam rises upward off the surface.",
+      "fail": "The rain rises from the road; or the steam sinks and flows along the road like water; or the steam pours downward into the asphalt; or the raindrops hang still in the air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The wet patches only spread while the rain falls and the steaming only eases as the road cools; steam that has left keeps rising.",
+      "fail": "The steam runs back into the road; or a puff retreats to the surface; or a wet patch dries back to bright dry asphalt while the rain still falls on it; or the steaming grows stronger the longer the rain falls."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The steam rises where drops land on hot asphalt and not from surfaces the rain misses.",
+      "fail": "Steam rises from a dry patch no rain has reached; or drops land and the road stays dry with no steam and no wet mark; or the steam pours from the grass verge rather than the road."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The drops splash and spread on the asphalt, the steam is a soft cloud that waves and fades, and the road stays a hard surface.",
+      "fail": "The drops bounce off the road as solid beads and stay round; or the steam holds a fixed rigid shape; or the asphalt ripples like water; or the drops stand as domes on the road."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One road; the rain falls onto it and the wet marks come from the drops.",
+      "fail": "A wet patch appears where no rain fell; or the road's surface opens up; or a puddle vanishes at a stroke; or the road changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The road markings, the kerb and the surroundings stay the same.",
+      "fail": "The road markings change; or the kerb changes shape; or the buildings or trees behind change between frames."
+    }
+  ]
+}

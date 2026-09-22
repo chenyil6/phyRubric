@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0081",
+  "caption": "A garment steamer is run slowly down a wrinkled shirt hanging on a rail, and the creases relax and drop out where the steam passes.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wrinkled shirt hangs on a rail."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A steamer head is moved down the shirt."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Steam rises from the steamer head."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The creases drop out where the head has passed."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fabric darkens where it is damp."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The steaming comes first and the smoothing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The fabric smooths only along the path the head has taken, and wrinkles away from that path stay.",
+      "fail": "The whole shirt smooths at once while the head is at one spot; or creases drop out on a part of the shirt the head never reached; or the head passes over a crease and the fabric behind it is unchanged; or the shirt smooths before any steam appears."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Creases only drop out and smoothed fabric stays smooth.",
+      "fail": "A crease comes back on fabric the head has just passed over; or the fabric wrinkles more where the head has been; or the fabric dries and creases again while the steamer works on it; or the shirt smooths and wrinkles in turn."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The steam rises from the head and the shirt hangs downward from the rail, its hem swinging and settling.",
+      "fail": "The steam pours downward through the shirt; or sinks and pools on the floor; or the shirt's hem rises and stays up with nothing lifting it; or the shirt lifts off the rail."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The shirt is cloth that hangs, sways and relaxes as it dampens, and the steamer head is a rigid tool.",
+      "fail": "The shirt stays board-stiff and keeps its shape as the head passes; or the fabric stretches like elastic under the head; or the head bends or droops; or the shirt sticks to the head and lifts with it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One shirt on one rail and one steamer head; the shirt stays on its hanger and nothing passes through it.",
+      "fail": "The head passes through the shirt; or a second shirt appears; or the shirt vanishes; or the shirt's collar or sleeve detaches."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shirt's colour and pattern, the rail and the room stay the same.",
+      "fail": "The shirt changes colour or pattern; or the rail changes shape; or items in the room rearrange."
+    }
+  ]
+}

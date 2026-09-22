@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0054",
+  "caption": "A piece of chalk is drawn in a large circle across a blackboard, and a white line appears where it has passed.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A piece of chalk is drawn across a blackboard."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is moved in a large circle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A white line appears where it has passed."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The line traces the circle the chalk made."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The chalk moves first and the line appears behind it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The line grows at the chalk tip and only while the chalk is touching the board.",
+      "fail": "A length of line appears ahead of the chalk tip; or a line appears where the chalk has been lifted clear of the board; or the chalk is drawn across the board leaving no mark at all."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The part of the line already drawn stays where it is for the rest of the clip.",
+      "fail": "A drawn part of the line fades away; or a drawn part shifts to another place on the board; or the whole line disappears and is laid down again."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shape on the board matches the path the chalk travelled.",
+      "fail": "The line on the board is a different shape from the path the chalk took; or the circle closes before the chalk has gone all the way round; or the line jumps across a gap the chalk never crossed."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The chalk leaves a dusty, slightly broken mark and dust falls from the tip down the face of the board.",
+      "fail": "The line is laid down as an even glowing stripe with no dusty texture; or dust rises upward from the tip and stays up; or the chalk bends or melts against the board."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One piece of chalk and one board are there throughout.",
+      "fail": "The chalk vanishes mid-stroke or a second piece appears; or the chalk passes through the board; or the chalk turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The line's colour and the board's surface stay the same.",
+      "fail": "The drawn line changes colour after it is laid down; or the board changes colour behind the line; or the frame and the things around the board rearrange."
+    }
+  ]
+}

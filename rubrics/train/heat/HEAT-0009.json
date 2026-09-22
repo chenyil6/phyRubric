@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0009",
+  "caption": "An ice cube is dropped into a mug of hot tea, and it melts quickly.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A mug of hot tea."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "An ice cube is dropped into the tea."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cube melts: its corners round off and it gets smaller."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Steam rises from the tea."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cube floats at the surface."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the melting follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The cube only shrinks and rounds off, and each corner it loses stays lost.",
+      "fail": "The cube regains a sharp corner; or grows; or alternates between smaller and larger; or freezes into a clear block again in the hot tea."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The cube is a hard solid that floats mostly submerged and bobs, and the tea is a thin liquid that closes round it.",
+      "fail": "The cube sinks to the bottom like a stone and stays there; or sits wholly on top of the tea like a ball on a sheet; or the cube bends or sags; or the tea holds a dent around the cube like a solid."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The cube's melt joins the tea and the tea's surface stays level in the mug.",
+      "fail": "The tea's surface tilts and stays tilted with the mug upright; or water rises out of the mug and hangs above it; or the cube lifts out of the tea into the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The drop has an effect: the tea splashes or ripples as the cube enters.",
+      "fail": "The cube enters and the surface stays glassy; or the tea ripples before the cube reaches it; or the level drops as the cube goes in."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cube and one mug; the cube passes into the tea and nowhere else.",
+      "fail": "The cube vanishes in a single frame while still large; or a second cube appears; or the cube passes through the mug's wall; or the mug changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mug's pattern, the tea's colour and the table stay the same.",
+      "fail": "The mug changes pattern; or the tea changes colour other than paling where the melt mixes in; or items on the table rearrange."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0286",
+  "caption": "A flashlight is pressed against the back of a large leaf in a dark room, and the leaf glows green with its veins showing dark.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flashlight is pressed against the back of a large leaf in a dark room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The leaf glows green."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its veins show dark."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The glow is brightest where the lens touches."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow is brightest where the lens touches and fades toward the leaf's edges, and would disappear when the flashlight is off.",
+      "fail": "The whole leaf glows evenly; or the edges are brightest; or the leaf glows with the light off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The glow is green and the veins are darker than the blade.",
+      "fail": "The glow is white; or the veins are brighter than the blade; or the leaf changes colour when the light is off."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The leaf and the flashlight stay put.",
+      "fail": "The leaf moves; or the flashlight moves by itself; or the glow wanders."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The glow follows the leaf's outline.",
+      "fail": "It is a round spot larger than the leaf; or splits; or the leaf changes shape."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One leaf and one flashlight.",
+      "fail": "A second leaf appears; or the flashlight vanishes; or the light passes through the leaf as a beam."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room stays the same.",
+      "fail": "The room rearranges; or the flashlight changes; or the leaf's stem changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged. Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

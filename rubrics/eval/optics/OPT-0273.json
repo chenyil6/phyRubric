@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0273",
+  "caption": "A menu is slid under the clear glass top of a café table, and it stays legible through the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A menu is slid under the clear glass top of a café table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It stays legible through the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "Only a faint reflection lies over it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The menu is seen sharply through the glass with only a faint reflection over it.",
+      "fail": "The glass hides it; or the reflection swamps it; or it is warped by a flat pane."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The menu goes under the glass, not through it.",
+      "fail": "It passes through the glass; or the glass passes through it; or it is inside the pane."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The menu moves only as pushed.",
+      "fail": "It slides by itself; or jumps; or the glass moves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The glass is flat and rigid.",
+      "fail": "It ripples; or bends; or goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One menu and one table.",
+      "fail": "The menu duplicates; or the table vanishes; or the menu turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The menu's print and the café stay the same.",
+      "fail": "The print changes; or the café rearranges; or the table changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

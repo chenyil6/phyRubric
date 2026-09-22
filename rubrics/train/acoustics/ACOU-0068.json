@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0068",
+  "caption": "Sand is sprinkled on a cymbal and a violin bow is drawn along its edge, and the sand jumps and gathers into lines.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Sand is sprinkled onto a cymbal, or lies sprinkled on it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A violin bow is drawn along the cymbal's edge."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sand jumps."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The sand gathers into lines."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bow moves first and the sand jumps after; the lines form from the jumping."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The sand lies still until the bow touches the edge, hops while the bow moves and settles when it lifts.",
+      "fail": "Sand hops before the bow touches the cymbal; or hops while the bow is held away; or the bow is drawn and the sand lies dead still; or the sand goes on hopping well after the bow has lifted."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The hopping gathers the sand into lines or patches that stay after the bow lifts; no pattern exists before the bowing.",
+      "fail": "Lines appear fully formed before or without any hopping; or a pattern forms and then dissolves back to an even sprinkle while the sand is still; or the pattern slides as a whole around the cymbal like a picture."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Grains fall back onto the cymbal or off its edge.",
+      "fail": "Grains hang in the air; or float up; or grains that fell off return up onto the cymbal."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cymbal is a rigid metal disc that may wobble; the bow is rigid; the grains stay separate.",
+      "fail": "The cymbal ripples like water; or the bow bends double; or the sand flows as a liquid puddle."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cymbal, one bow; the sand keeps its amount, allowing for grains falling off.",
+      "fail": "Sand appears from nowhere; or all the sand vanishes; or the bow passes through the cymbal; or the cymbal changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cymbal's colour, the bow's length and the stand stay the same.",
+      "fail": "The cymbal changes colour; or the bow changes length; or the stand changes."
+    }
+  ],
+  "note": "The hand on the bow is a trigger and is not judged."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0121",
+  "caption": "The blade of a chop saw comes down on a steel bar clamped in its jaws, and a long plume of sparks shoots out behind the blade and rains onto the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A chop saw with a steel bar clamped in its jaws."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The blade comes down onto the bar."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A long plume of sparks shoots out behind the blade."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The sparks rain down onto the floor."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The plume points away from the cut, behind the blade."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The blade meets the bar first and the plume follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The plume leaves the cut along the direction the blade's rim is moving, away from the operator's side, as one long stream that curves downward.",
+      "fail": "The plume points into the blade against the rim's motion; or sparks radiate equally in all directions; or the plume's direction jumps about while the saw is steady."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sparks arc downward and fade before or as they reach the floor.",
+      "fail": "Sparks rise steadily and gather above the saw; or hang in the air; or lie on the floor glowing like lamps for the rest of the clip; or the plume climbs without arcing down."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Sparks appear only while the blade is in the bar and stop when it lifts clear.",
+      "fail": "Sparks stream while the blade is above the bar; or continue after the blade has lifted; or sparks flow back into the cut."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "Sparks are transient: each fades in flight and none accumulate; the saw and bar keep their number.",
+      "fail": "Sparks persist as fixed bright dots; or a glowing pile builds on the floor; or sparks appear from a point away from the cut; or a second blade appears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The blade cuts into the bar along a narrow line; the bar stays clamped and the saw keeps its shape.",
+      "fail": "The blade passes through the bar leaving it whole; or the bar passes through the jaws; or the blade bends like rubber; or the saw changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The saw's colour, the bar and the floor stay the same apart from the cut and any scorch marks.",
+      "fail": "The saw changes colour; or the bar changes length or thickness away from the cut; or the floor pattern changes."
+    }
+  ]
+}

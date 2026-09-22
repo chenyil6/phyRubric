@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0037",
+  "caption": "A finger tips over the first domino in a long row standing on a table, and the whole row falls one after another.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A long row of dominoes stands on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A finger tips over the first domino."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The whole row falls one after another."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Only the first domino is touched by the finger."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The finger's push comes first and the rest fall in turn."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each domino starts to fall only after the one before it strikes it.",
+      "fail": "A domino falls before the one behind it reaches it; or a domino is struck and stays standing while the wave carries on past it; or dominoes further down the row fall while the ones before them still stand."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The wave runs steadily from the pushed end toward the far end and does not turn back; fallen dominoes stay down.",
+      "fail": "The wave reverses and runs back up the row; or a fallen domino stands itself up again; or the row falls from the far end back toward the finger."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Each domino topples the way the wave is travelling, landing on the next one or on the table.",
+      "fail": "A domino topples backward against the wave; or one is flung clear off the table by the touch of its neighbour; or one spins on the spot instead of toppling."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The dominoes stay rigid tiles that clack and slide a little, and the table stays flat under them.",
+      "fail": "A domino bends as it falls; or a domino bounces high off the table; or the table surface ripples as the wave passes along it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The dominoes keep their number and stay on top of the table.",
+      "fail": "A domino vanishes as it falls or a new one appears in the row; or a domino passes through the one beside it; or a domino sinks into the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dominoes' colour and spots, the table and the room stay the same.",
+      "fail": "A domino changes colour or its spots as it falls; or the table's surface changes pattern between frames; or the room behind rearranges."
+    }
+  ],
+  "note": "The finger is kept as the minimal trigger for the first domino; the hand behind it is not judged."
+}

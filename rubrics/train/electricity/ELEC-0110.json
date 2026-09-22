@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0110",
+  "caption": "The second jumper-cable clamp is touched to a car battery terminal, and a spark jumps at the contact.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car battery with jumper cables; one clamp is already attached."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The second clamp is touched to a battery terminal."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A spark jumps at the contact."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The clamp is a jumper-cable clamp: a sprung jaw on a thick cable."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spark comes as the clamp meets the terminal, not before."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spark is a brief flash at the point where the clamp meets the terminal, and is gone; there is no spark while the clamp is held away.",
+      "fail": "A spark appears while the clamp is still clear of the terminal; or the spark glows on at the contact for the rest of the clip; or sparks keep flashing while the clamp sits seated and untouched; or the spark appears somewhere other than where the clamp touches."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Two clamps on one battery; the clamps, cables and terminals keep their number and stay whole; the spark leaves nothing behind.",
+      "fail": "A third clamp appears or one vanishes; or a cable splits or detaches; or a terminal vanishes; or a glowing dot stays on the terminal after the spark."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any spark fragments fall from the contact point toward the engine bay floor and go dark within a short distance.",
+      "fail": "Sparks rise and gather above the battery; or hang in the air; or lie glowing on the engine parts for the rest of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The clamp is a rigid jaw that grips the post; the cable hangs slack from the clamp.",
+      "fail": "The clamp bends like rubber around the post; or hangs on the post with its jaws still wide open; or the cable stands rigid in the air or stretches like elastic."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The clamp meets the outside of the terminal and stays outside the battery casing; nothing passes through anything.",
+      "fail": "The clamp passes into the battery casing; or the cable passes through the bonnet or an engine part; or the battery changes shape; or a hand passes through the clamp."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cable colours, the battery's label and the engine bay stay the same.",
+      "fail": "A cable changes colour; or the battery's label changes; or engine parts change shape or place."
+    }
+  ]
+}

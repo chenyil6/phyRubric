@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0127",
+  "caption": "A phone charger is plugged into a worn socket, and a small spark flashes at the plug as it goes in.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A phone charger with its plug, and a wall socket."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The plug is pushed into the socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A small spark flashes at the plug as it goes in."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The socket looks worn: scuffed, loose or discoloured."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spark comes as the prongs enter, not before."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spark is a single brief flash at the socket as the prongs make contact, and is gone; nothing glows afterwards.",
+      "fail": "The spark glows on at the socket after the plug is seated; or sparks appear while the plug is still held away from the wall; or sparks keep flashing with the plug seated and untouched; or the flash appears on the cord or the charger body."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One plug, one cord, one socket; the plug goes in whole and the spark leaves nothing behind.",
+      "fail": "The plug vanishes or a second plug appears; or the socket vanishes or moves along the wall; or a glowing dot stays on the socket after the flash; or the cord splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any spark fragments fall from the socket and go dark within a short distance.",
+      "fail": "Sparks rise from the socket and gather above it; or hang in the air; or lie glowing on the floor for the rest of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Once seated, the charger works: its indicator light, if it has one, comes on and stays on.",
+      "fail": "The charger's indicator light comes on while the plug is still clear of the wall; or the indicator flickers on and off with the plug seated and untouched; or the indicator lights and then goes dark for the rest of the clip while the plug stays in.",
+      "precondition": "The charger has an indicator light in view."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The prongs enter the socket's holes; the plug and hand pass through nothing; the charger keeps its shape.",
+      "fail": "The plug passes into the wall beside the socket; or fingers pass through the plug or the wall; or the charger changes shape; or the plug merges with the socket."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The charger's colour, the cord and the wall stay the same.",
+      "fail": "The charger changes colour; or the cord changes colour or thickness; or the wall changes colour."
+    }
+  ]
+}

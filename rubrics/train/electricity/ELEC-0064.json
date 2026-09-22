@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0064",
+  "caption": "A battery pack is clipped into a cordless drill and the trigger pulled, and the drill bit spins.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cordless drill with a bit in its chuck, and a separate battery pack."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The battery pack is clipped into the drill."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The trigger is pulled."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The drill bit spins."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "No cord runs from the drill."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is pack in, trigger pulled, bit spins."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bit starts turning when the trigger is pulled with the pack seated, and only then.",
+      "fail": "The trigger is pulled with the pack in and the bit stays still; or the bit spins before the trigger is pulled; or the bit spins with the pack lying loose beside the drill."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The bit turns only while the trigger is held: it stops when the trigger is released and does not start, stop or reverse on its own.",
+      "fail": "The bit stops dead and restarts while the trigger is held steady; or reverses direction on its own; or keeps spinning to the end of the clip after the finger has lifted off the trigger."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The bit spins about its own axis, held in the chuck; chuck and bit turn together.",
+      "fail": "The bit wobbles off its axis or bends while turning; or the chuck turns while the bit stays still; or the bit turns while the chuck is still; or the whole drill body spins with the bit."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pack slides onto the drill as a rigid block and seats with a stop; drill and pack keep their shapes.",
+      "fail": "The pack squashes or bends as it goes in; or the drill handle deforms around it; or the pack hangs a gap away from the drill once clipped."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One drill, one pack, one bit; the pack stays clipped once in and fingers stay outside the drill.",
+      "fail": "The pack vanishes after clipping in or a second pack appears; or the bit vanishes or a second bit appears; or the pack passes into the handle rather than onto it; or fingers pass through the drill."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The drill's colour, the pack's label and the bench stay the same.",
+      "fail": "The drill changes colour; or the bit changes length or type; or items on the bench rearrange."
+    }
+  ]
+}

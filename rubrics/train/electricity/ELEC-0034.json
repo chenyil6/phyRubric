@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0034",
+  "caption": "The power button on a handheld game console is pressed, and the screen lights up with the start logo.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A handheld game console with its screen dark."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The power button is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The screen lights up."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A start logo appears on the screen."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The screen shows nothing before the press."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark, press, lit with logo."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The screen lights after the press, and only then.",
+      "fail": "The button is pressed and the screen stays dark to the end of the clip; or the screen is lit before the press; or the screen comes on with nothing touching the console; or the buttons light while the screen stays dark to the end."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the screen stays lit for the rest of the clip; the logo appears and may give way to a menu but the screen does not return to dark.",
+      "fail": "The screen goes dark again by itself; or flickers on and off; or the logo appears and the screen shrinks back to black; or the logo fades in and out repeatedly."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The screen's glow reaches the console's face and the fingers near it.",
+      "fail": "The screen is lit while the console's bezel and the fingers beside it stay as dark as before; or the surroundings brighten while the screen stays dark."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The console moves only with the hands; nothing else nearby moves at the press.",
+      "fail": "The console jumps or twists with no hand moving it; or objects nearby shift at the press; or the console's buttons press themselves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One console with one screen; it keeps its shape; the finger passes through nothing.",
+      "fail": "A second screen appears; or the console changes shape; or the finger passes into the console; or the buttons rearrange."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The console's colour and button layout stay the same apart from the screen.",
+      "fail": "The console changes colour; or the buttons change layout; or the logo changes into a different logo and back."
+    }
+  ],
+  "note": "What the logo looks like is not judged; any picture appearing at start-up counts."
+}

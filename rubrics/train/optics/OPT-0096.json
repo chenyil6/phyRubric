@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0096",
+  "caption": "A red ball rolls along a hallway of polished steel panels, and a blurry reflection rolls alongside in each panel.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A red ball rolls along a hallway of polished steel panels."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A blurry reflection rolls alongside in each panel."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The copies vanish at the gaps between panels."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Each copy is mirrored and slightly warped."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each panel shows a copy of the ball moving in step, and the copies vanish at the gaps between panels.",
+      "fail": "A copy stays still while the ball rolls; or a copy shows across a gap; or a panel shows no copy."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Each copy is a mirrored, slightly warped red ball.",
+      "fail": "A copy is a different colour; or a different object; or perfectly sharp on a plainly brushed surface."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The ball rolls straight and slows gently.",
+      "fail": "It curves; or speeds up; or restarts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The panels are rigid metal.",
+      "fail": "A panel ripples; or bends; or the ball dents it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one copy per panel.",
+      "fail": "A second ball appears in the hallway; or a copy steps out; or the ball vanishes; or the ball passes into a panel."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and the hallway stay the same.",
+      "fail": "The ball changes colour; or the panels change; or the hallway rearranges."
+    }
+  ]
+}

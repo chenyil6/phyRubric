@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0124",
+  "caption": "A ripe avocado is pressed firmly between finger and thumb and the skin dents inward and stays dented.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An avocado is held between finger and thumb."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is pressed firmly."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The skin dents inward."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The dent stays after the fingers lift."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The press comes first, then the dent, then the fingers lift."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The dent forms under the fingers; the avocado does not spring back like a ball or crack like a shell.",
+      "fail": "It springs back; or the skin cracks open; or it does not dent."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The dent remains after the fingers lift.",
+      "fail": "It fills back in; or it is present before the press; or it deepens after the fingers have gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The fruit stays in the hand.",
+      "fail": "It drops; or jumps; or moves before the press."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The dents are where the finger and thumb pressed.",
+      "fail": "Dents appear elsewhere; or the press leaves no dent; or the whole fruit collapses."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One avocado keeps its number, and the fingers do not pass through it.",
+      "fail": "The fruit splits; or the fingers pass through it; or a second avocado appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The avocado's colour and the background stay the same.",
+      "fail": "The skin changes colour; or the hand changes; or the background rearranges."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0118",
+  "caption": "A candle on a table is blown out, and a thin trail of smoke rises from the wick.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lit candle stands on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flame is blown at: a puff of breath, a face or a visible lean of the flame."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flame goes out."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A thin trail of smoke rises from the wick afterwards."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is lit, blown, out, smoke."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The blow acts on the flame: it leans away from the puff, flickers, and goes out during it.",
+      "fail": "The flame keeps burning steadily as the candle is blown; or it leans toward the source of the blow rather than away."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once out the flame stays out; the wick may glow briefly then darkens; the smoke follows the extinction rather than preceding it.",
+      "fail": "The flame relights by itself; or flickers back and forth between lit and out; or smoke rises from the wick while the flame is still fully burning."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The smoke trail rises from the wick, thinning and wavering as it climbs.",
+      "fail": "Smoke sinks down the candle or pools on the table; or runs horizontally along the table with no draught; or flows back into the wick."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The candle stays where it is; only the flame and the smoke move.",
+      "fail": "The candle slides or topples while being blown; or rotates; or the smoke stands as a fixed, unmoving shape."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One candle with one wick and one flame; the flame does not detach or split, and the candle keeps its shape.",
+      "fail": "The flame separates from the wick and floats; or a second flame or candle appears; or the candle shortens or grows abruptly; or the wick vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candle's colour, the holder and the table stay the same; the room dims only by the loss of the flame.",
+      "fail": "The candle changes colour; or the room gets brighter after the flame is out; or the table pattern shifts."
+    }
+  ],
+  "note": "The puff of breath is invisible. Its effect (the lean and the extinction) is what is judged; a flame that simply goes out with no visible puff is not a violation."
+}

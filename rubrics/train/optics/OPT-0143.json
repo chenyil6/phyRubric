@@ -1,0 +1,81 @@
+{
+  "id": "OPT-0143",
+  "caption": "A single candle burns in a dark room, and it lights the objects nearest to it while the far wall stays dark.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A single lit candle is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The room is dark and the candle is the only light."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Objects near the candle are lit by it."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The far wall stays dark."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The light flickers gently with the flame."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "There are objects near the candle for it to light."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Light comes from the flame: surfaces facing the candle are lit, farther ones are dimmer, and the far wall stays dark.",
+      "fail": "The far wall is as bright as the nearby objects; or the brightest surfaces are far from the candle; or nearby objects are dark while the room is lit; or the light comes from somewhere other than the flame."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Brightness changes only with the flame: a steady flame gives steady light and a flicker gives a flicker.",
+      "fail": "The room brightens or darkens while the flame is unchanged; or the light pulses with no flicker; or the lit area moves while the candle stays."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Objects near the candle cast shadows pointing away from it.",
+      "fail": "Shadows point toward the candle; or shadows fall in different directions from a single flame; or an object between the candle and the wall casts no shadow.",
+      "precondition": "Shadows of the nearby objects are visible."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flame points upward from the wick.",
+      "fail": "The flame points down or sideways in still air; or floats above the wick; or is detached from the candle."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One candle and one flame; objects in the room keep their number and do not pass through each other.",
+      "fail": "A second flame or candle appears; or objects appear or vanish as the light flickers; or the candle passes through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The objects keep their colours and positions; only their brightness varies with the flame.",
+      "fail": "An object changes colour rather than brightness; or an object shifts position; or the wall's texture changes."
+    }
+  ]
+}

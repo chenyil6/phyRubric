@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0148",
+  "caption": "Two bar magnets are brought together end to end, and they snap together with a click.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two bar magnets."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They are brought together end to end."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They snap together."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The ends meet squarely, end to end rather than side by side."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The approach comes first and the snap follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The magnets move only in the hands until the last short gap, then jump together; once joined they stay joined and still.",
+      "fail": "A magnet jumps while they are still far apart; or the joined pair drifts apart with nothing pulling; or the magnets slide about on the table after joining; or a magnet moves before either hand has moved."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Over the last short gap the ends pull into contact and stay pressed together; if one is lifted the other comes with it.",
+      "fail": "The ends stop with a gap between them and stay that way; or touch and then fall apart; or one is lifted and the other stays behind; or the ends push apart as they near."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The jump is along the line joining the two ends, toward each other, and they meet face to face and stop.",
+      "fail": "A magnet jumps away from the other; or darts sideways past it; or the two slide toward and away several times before joining; or they spin round each other in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The magnets are rigid bars that keep their shape as they meet.",
+      "fail": "A bar bends or squashes at the meeting; or the ends flatten together; or a bar stretches like rubber."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two bars throughout, joined but separate; neither passes into the other or vanishes.",
+      "fail": "The two bars merge into one longer bar with no seam; or a third bar appears; or a bar vanishes; or one bar passes through the other."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bars' colours and markings and the surface beneath stay the same.",
+      "fail": "A bar changes colour or its markings change; or a bar changes length; or the surface changes."
+    }
+  ],
+  "note": "The click is sound and is not judged."
+}

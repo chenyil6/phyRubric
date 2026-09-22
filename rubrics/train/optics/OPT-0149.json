@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0149",
+  "caption": "A desk lamp is moved closer to an open book, and the page becomes brighter.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A desk lamp lights an open book."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lamp is moved closer to the book."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The page becomes brighter."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lamp moves first and the page brightens with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The page brightens as the lamp approaches and would dim as it moved back.",
+      "fail": "The page stays the same brightness; or dims as the lamp nears; or brightens with the lamp still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The brightness changes only as the lamp moves.",
+      "fail": "It flickers with the lamp still; or changes before the lamp moves."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow of the book's edge shifts as the lamp moves.",
+      "fail": "The shadow stays fixed; or points toward the lamp; or there is no shadow."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The lit area is a soft pool over the book.",
+      "fail": "It is a sharp spot; or splits; or floods the room."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp and one book.",
+      "fail": "A second lamp appears; or the book vanishes; or the lamp passes through the book."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The book and the desk stay the same.",
+      "fail": "The page changes colour rather than brightness; or the desk changes; or the lamp changes colour."
+    }
+  ],
+  "note": "Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

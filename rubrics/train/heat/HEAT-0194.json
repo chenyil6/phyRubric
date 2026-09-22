@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0194",
+  "caption": "Pancake batter is poured onto a hot griddle, and the pale liquid sets from the edge inward while small bubbles rise through its top.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Pancake batter is poured onto a hot griddle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The batter spreads into a round."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The batter sets from its edge inward."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Small bubbles rise and burst on its upper side."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The set part turns matte."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the setting follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The setting only advances inward from the edge and the set part does not turn back to liquid.",
+      "fail": "A set part turns back to glossy liquid on the hot griddle; or the setting spreads and then retreats; or the batter sets from its centre outward to the edge; or the batter sets and softens in turn."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The batter arrives as a thick liquid that spreads and levels and becomes a soft solid that holds its shape and can be lifted.",
+      "fail": "The batter runs as thin as water over the griddle; or the batter stays a glossy liquid while being lifted whole; or the set pancake shatters; or the batter stands as a rigid dome as it is poured."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The batter spreads outward and downhill over the griddle and the bubbles rise to its upper surface and burst there.",
+      "fail": "The batter climbs the griddle's raised edge and stays; or the bubbles sink through the batter to the griddle; or a bubble rises off the pancake and floats; or the batter runs uphill."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The batter sets where it touches the hot metal first: its underside and rim firm up while the middle is still wet.",
+      "fail": "The middle of the top sets while the rim is still liquid; or the pancake's underside stays wet and glossy while its top has set; or the batter sits on the griddle and stays fully liquid to the end of the clip."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pour makes one pancake; the batter stays on the griddle and nothing appears or vanishes.",
+      "fail": "A second pancake appears with nothing poured; or the pancake vanishes; or batter passes through the griddle; or the pancake grows with no batter added."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The griddle, the jug and the surroundings stay the same.",
+      "fail": "The griddle changes colour; or the jug changes shape; or items around the griddle rearrange."
+    }
+  ],
+  "note": "The underside browning as it cooks is chemistry and is not judged."
+}

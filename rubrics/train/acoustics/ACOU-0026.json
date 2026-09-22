@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0026",
+  "caption": "The taut skin of a tambourine is struck, and the skin shivers and the metal jingles rattle before quieting.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tambourine with a skin and metal jingles."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The skin is struck."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The skin shivers and the jingles rattle."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The tambourine quiets: skin and jingles are still."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike lands on the skin, not on the rim."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The strike comes first; the shiver and rattle follow, then the quiet."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The skin is still and the jingles hang at rest until the hand lands on the skin; both begin moving at the strike and only then.",
+      "fail": "The jingles are already rattling before the hand reaches the skin; or the skin trembles while the hand is well away; or the hand strikes and neither skin nor jingles move; or the jingles start rattling again after quieting while the tambourine is held still and nothing strikes it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The skin's shiver and the jingles' rattle are strongest right after the strike and fade together until both are still.",
+      "fail": "The rattle grows after the strike; or the jingles keep rattling unchanged for the whole clip; or the jingles stop dead in mid-rattle."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The skin flexes as a stretched membrane and springs back flat; the frame stays rigid and the jingles stay on their pins.",
+      "fail": "The hand's print stays pressed into the skin; or the frame bends or wobbles like rubber; or a jingle bends or folds; or the skin sags loose."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The jingles move only within their slots, pivoting on their pins, and settle hanging or lying in place.",
+      "fail": "A jingle slides along the frame to another slot; or spins free of its pin while staying in the frame; or a jingle stays frozen while its partner on the same pin rattles."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tambourine with its skin, frame and the same jingles; the hand passes through nothing.",
+      "fail": "The hand passes through the skin; or jingles appear or vanish from the frame; or the skin vanishes leaving an open ring; or the tambourine changes into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The skin's colour, the frame's finish and the jingles' shine stay the same.",
+      "fail": "The skin changes colour or gains a pattern; or the frame changes colour; or the jingles change colour or size."
+    }
+  ],
+  "note": "The tambourine may be held; small movements of the holding hand are not judged as strikes. Sound is not judged."
+}

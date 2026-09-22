@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0021",
+  "caption": "The top of a touch-sensitive lamp is tapped, and it lights up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lamp with a touch-sensitive body."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The top of the lamp is tapped."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lamp lights up."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lamp is dark before the tap."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, tap, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lamp lights at the moment the fingertip touches it, and only then.",
+      "fail": "The lamp is tapped and stays dark; or the lamp is lit before the touch; or the lamp comes on while the hand is still away from it; or the lamp lights when the table beside it is tapped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once lit the lamp stays lit steadily until it is touched again.",
+      "fail": "The lamp goes dark again with nothing touching it; or flickers on and off; or changes brightness repeatedly with the hand withdrawn; or lights and fades out at once."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lamp's light reaches its surroundings: the shade glows and nearby surfaces brighten, with shadows pointing away from the lamp.",
+      "fail": "The bulb glows while the shade and table stay as dark as before; or the surroundings brighten while the lamp stays dark; or the light comes from a place other than the lamp."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lamp stays put as it is tapped; nothing else on the table moves.",
+      "fail": "The lamp slides, tips or lifts at the tap; or items on the table jump; or the shade turns by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp; it keeps its shape; the finger touches its surface and passes through nothing.",
+      "fail": "A second lamp appears; or the lamp vanishes; or the finger passes into the lamp; or the lamp changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lamp's colour and shade, the table and the wall stay the same apart from the light.",
+      "fail": "The shade changes colour rather than brightness; or the base changes; or the table's contents rearrange."
+    }
+  ]
+}

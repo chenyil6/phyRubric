@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0108",
+  "caption": "A spinning angle grinder is pressed against a metal pipe clamped in a vise, and a fan of orange sparks streams off the wheel.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An angle grinder with a spinning wheel."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A metal pipe is clamped in a vise."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The wheel is pressed against the pipe."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A fan of orange sparks streams off the wheel."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sparks are orange to yellow."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Contact comes first and the sparks follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Sparks leave the contact point along the direction the wheel's rim is moving, in one fan, and curve downward as they fly.",
+      "fail": "Sparks radiate equally in all directions from the contact; or the fan points opposite to the rim's motion; or the fan direction jumps around while the grinder is steady."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Sparks that fly far arc downward and go out; they do not rise or hover.",
+      "fail": "Sparks rise steadily and gather above the grinder; or hang in the air; or lie on the bench glowing like lamps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Sparks appear only while the wheel is on the metal and stop when it lifts.",
+      "fail": "Sparks stream while the wheel is off the pipe; or continue after the grinder is withdrawn; or sparks flow back to the wheel."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "Sparks are transient: each fades in flight and none accumulate.",
+      "fail": "Sparks persist as fixed dots; or a glowing pile builds on the floor; or sparks appear from a point away from the contact."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The wheel touches the pipe's surface and grinds it; it does not pass through the pipe, and grinder, pipe and vise keep their shape and number.",
+      "fail": "The wheel sinks through the pipe; or the pipe passes through the vise; or the grinder duplicates; or the pipe changes shape without being cut."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The grinder's colour, the pipe and the vise stay the same apart from a grinding mark.",
+      "fail": "The grinder changes colour; or the pipe changes diameter; or the vise moves along the bench."
+    }
+  ]
+}

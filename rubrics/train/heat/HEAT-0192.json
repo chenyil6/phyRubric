@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0192",
+  "caption": "A limp balloon is stretched over the neck of an empty glass bottle, and the bottle is set in a bowl of hot water; the balloon begins to stand up and inflate.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A limp balloon is stretched over the neck of a bottle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bottle is set in a bowl of hot water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The balloon lifts and stands up."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The balloon swells."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The balloon is limp before the bottle goes into the water."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The setting in comes first and the swelling follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The balloon lifts and swells once the bottle stands in the hot water and not before.",
+      "fail": "The balloon is standing and swollen before the bottle is in the water; or the bottle sits in the hot water and the balloon stays flat against the neck to the end of the clip; or the balloon swells while the bottle stands on the dry counter; or the balloon sags as the bottle enters the hot water."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The swelling only advances while the bottle stays in the hot water and the balloon does not sag back.",
+      "fail": "The balloon sags back flat while the bottle stays in the hot water; or the balloon swells and shrinks in turn; or the balloon swells all at once in a single frame; or the balloon stays fully swollen after the bottle is lifted into cold air and left."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The balloon rises above the neck and the bottle stands in the water with the water level around it.",
+      "fail": "The balloon hangs downward from the neck while swollen; or the bottle floats up out of the bowl; or the water climbs the bottle's outside and stays; or the balloon lifts the bottle out of the water."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The balloon is a thin elastic skin that stretches smooth as it fills and stays gripped on the neck, and the bottle stays rigid glass.",
+      "fail": "The balloon stays limp and wrinkled while plainly full; or the balloon stays rigid as it rises; or the bottle's glass bulges as the balloon fills; or the balloon slides off the neck and stays inflated in the air."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon on one bottle in one bowl; the balloon stays on the neck and the bottle stays whole.",
+      "fail": "A second balloon appears; or the balloon vanishes; or the balloon passes into the bottle; or the bottle passes through the bowl's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour, the bottle's label and the bowl stay the same.",
+      "fail": "The balloon changes colour; or the label changes; or the bowl changes pattern."
+    }
+  ]
+}

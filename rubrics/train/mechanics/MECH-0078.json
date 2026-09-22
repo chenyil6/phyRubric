@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0078",
+  "caption": "A tall stack of cardboard boxes in a hallway is pushed from one side and topples, boxes tumbling to the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tall stack of cardboard boxes stands in a hallway."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The stack is pushed from one side."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The stack topples and boxes fall to the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Several boxes are stacked vertically."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The push comes first, then the lean, then the fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The stack leans away from the side it is pushed from, the top moving furthest first, and falls on that far side.",
+      "fail": "The stack leans or falls toward the pusher; or the bottom box moves first while the top stays put; or the boxes drop straight down in place without leaning."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Every box that leaves the stack moves downward until it meets the floor or another box, and comes to rest on the floor.",
+      "fail": "A box floats or hangs in the air; or moves upward after leaving the stack; or drifts along the hallway with nothing pushing it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves until the push arrives; boxes that have landed stay where they land.",
+      "fail": "The stack begins leaning before anything touches it; or a landed box slides, rights itself or restacks by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Boxes stay boxy: corners may dent or crush on impact, but they do not bounce high, wobble like jelly or fold like cloth.",
+      "fail": "A box bounces back up as high as it fell; or ripples like fabric; or flattens completely and re-inflates."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The boxes keep their number and identity and pass through nothing.",
+      "fail": "Boxes vanish, multiply or merge as they fall; or a box passes through another box, the wall or the floor; or a box changes into a different object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Box labels, tape and colours, and the hallway itself, stay the same through the fall.",
+      "fail": "A box's colour or printing changes between frames; or the hallway walls shift; or a box changes size mid-fall."
+    }
+  ]
+}

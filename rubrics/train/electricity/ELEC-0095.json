@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0095",
+  "caption": "Lightning strikes a dry hillside, and after the flash a small patch of grass smoulders and smokes.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dry hillside."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lightning bolt strikes the hillside."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "After the flash a small patch of grass smoulders and smokes."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The smoking patch is at the point where the bolt struck."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bolt and flash come first and the smoke follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The bolt and flash are brief and gone; the smoke appears at the strike point only afterwards and grows from there; the bolt does not remain.",
+      "fail": "The bolt stands as a steady lit line for the rest of the clip; or smoke rises from the patch before the bolt arrives; or the smoke shrinks back into the ground; or the patch glows like a lamp after the bolt is gone."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The hillside, its grass, rocks and any trees are the same before and after the flash; the only new thing is smoke at the strike point.",
+      "fail": "Rocks or trees appear or vanish between dark and lit frames; or the hill changes shape; or a second smoking patch appears where no bolt struck; or a burnt object appears at the strike point that was not there."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The smoke rises from the patch and drifts upward and away; anything thrown up by the strike falls back to the ground.",
+      "fail": "The smoke sinks and flows down the slope like water; or hangs as a fixed shape; or soil or grass thrown up by the strike rises and stays aloft."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The bolt is a jagged, branching bright line with a main channel from the sky to the strike point.",
+      "fail": "The bolt is a perfectly straight beam; or a smooth wave; or a wide glowing tube; or a bolt that hangs in mid-air not reaching the hillside while the patch starts smoking."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The ground stays ground: the bolt ends at the surface and does not pass through it, and the hillside stays whole.",
+      "fail": "The bolt continues below the surface as a lit line under the ground; or the hillside splits open; or the strike point turns into a hole that swallows the grass; or the ground becomes transparent."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The grass colour, the sky and the ground keep their colours apart from the flash and the scorched patch.",
+      "fail": "The grass changes colour away from the strike point; or the sky turns to daylight after the flash; or the ground changes colour over the whole slope."
+    }
+  ]
+}

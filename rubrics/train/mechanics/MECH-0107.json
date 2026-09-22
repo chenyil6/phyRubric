@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0107",
+  "caption": "A necklace catches on a door handle as a woman walks past; the chain goes tight and jerks her head back.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A woman walks past a door handle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Her necklace catches on the handle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The chain goes tight."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Her head is jerked back."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The catch comes first, then the tight chain, then the jerk."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The chain goes from loose to straight at the moment it catches, and it either holds or snaps; it does not stretch like elastic.",
+      "fail": "The chain stretches longer and longer; or it goes tight while still hanging in a curve; or it passes through the handle."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The jerk happens at the instant the chain goes taut, not before.",
+      "fail": "Her head jerks before the chain is tight; or the chain is tight and she walks on unaffected; or her head is jerked forward."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Her body carries on for a step while her head is checked, and she stops or turns back.",
+      "fail": "Her whole body stops dead as one; or she is thrown forward; or she keeps walking with the chain stretched."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The door handle holds, and the door may rattle.",
+      "fail": "The handle comes off; or the door swings open with her; or the chain detaches from her neck without breaking."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The woman, the chain and the door keep their number and shape.",
+      "fail": "A limb detaches; or the chain passes through her neck; or a second figure appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Her clothing, the necklace and the door stay the same.",
+      "fail": "Her clothing changes colour; or the necklace changes; or the door rearranges."
+    }
+  ],
+  "note": "The woman is kept because her neck is what the chain acts on. Her expression and stride are not judged; only the timing of the jerk and the chain's behaviour."
+}

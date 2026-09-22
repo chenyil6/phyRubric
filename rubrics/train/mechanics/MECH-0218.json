@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0218",
+  "caption": "A wet shirt is hung on a clothesline by its shoulders, and the shirt hangs down and drips.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wet shirt is hung on a clothesline by its shoulders."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The shirt hangs down."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It drips."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shirt is wet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hanging comes first and the dripping follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The shirt drapes straight down from the pegs, and drips fall from its lowest edge.",
+      "fail": "It stands out stiffly; or floats; or drips rise."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The wet fabric clings and hangs heavy.",
+      "fail": "It is rigid; or billows like dry cloth in still air; or stretches."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The dripping continues and slows.",
+      "fail": "Drips stop and then restart; or the shirt gets wetter; or it drips before it is hung."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The pegs hold the shoulders on the line.",
+      "fail": "The shirt passes through the line; or the pegs pass through the shirt; or the shirt hangs with nothing holding it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One shirt keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shirt's colour and the yard stay the same.",
+      "fail": "The shirt changes colour; or the line changes; or the yard rearranges."
+    }
+  ]
+}

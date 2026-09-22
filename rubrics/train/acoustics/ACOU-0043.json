@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0043",
+  "caption": "A concert speaker stack blasts a bass note, and the fabric grille on its front visibly pulses in and out.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stack of concert speakers with a fabric grille on the front."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The grille pulses in and out."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The pulses are repeated, in beats."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The speakers are a stack of several cabinets, not one."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The grille is cloth, not a metal mesh."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The grille moves in and out relative to the cabinet, ballooning and flattening, while the cabinet stays put.",
+      "fail": "The whole cabinet moves in and out with the grille; or the grille slides up or sideways across the front; or the grille peels off and floats; or it flaps only at one corner like a loose flag."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Between pulses and after the last one the grille lies flat over its frame.",
+      "fail": "The grille freezes bulged outward or sucked inward and stays so; or it is flat in one frame and bulged in the next and never flattens; or it comes to rest hanging loose off its frame."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fabric stretches and flexes as cloth; the cabinet is rigid.",
+      "fail": "The cabinet's wooden sides bulge; or the grille shatters or cracks; or the grille stretches longer and stays longer."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "A loose cable, banner or cloth near the stack stirs with the pulses.",
+      "fail": "The cloth hangs dead still while the grille pulses hard; or it flaps while the grille is still; or it streams steadily as in a wind while the grille pulses in beats.",
+      "precondition": "A loose cable, banner or cloth hangs near the stack."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The cabinets keep their count and shape; the grille does not pass into the cabinet.",
+      "fail": "A cabinet appears or vanishes; or cabinets merge; or the grille passes into the cabinet; or the stack changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The grille's colour, the logos and the stage backdrop stay the same.",
+      "fail": "The grille changes colour; or a logo moves; or the stage backdrop changes."
+    }
+  ]
+}

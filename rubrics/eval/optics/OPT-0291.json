@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0291",
+  "caption": "A lump of red play-dough is kneaded together with a lump of blue, and the mixture turns purple.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lump of red play-dough and a lump of blue are present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They are kneaded together."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mixture turns purple."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Purple appears where the colours fold together."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The kneading comes first and the purple follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Purple appears where the two colours fold together and spreads until no streaks remain; it does not separate again.",
+      "fail": "Purple appears before the kneading; or the colours separate back; or the streaks return."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The mix is purple, and unmixed red and blue stay red and blue.",
+      "fail": "The mix is a colour other than purple; or the pure lumps change; or the whole mass turns one colour at once."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The dough is a soft paste that folds and stretches under the hands.",
+      "fail": "It is rigid; or flows like water; or bounces like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The dough moves only where the hands work it.",
+      "fail": "It moves by itself; or the table moves; or it folds with no hands."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The amount of dough stays the same.",
+      "fail": "Dough appears from nowhere; or vanishes; or the hands pass through it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The table and the background stay the same.",
+      "fail": "The table changes; or the background rearranges; or the hands change."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0014",
+  "caption": "A car drives under a highway bridge on a sunny day, and its shadow disappears in the bridge's shade and reappears on the far side.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car drives under a highway bridge."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The day is sunny."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The car's shadow disappears in the bridge's shade."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It reappears on the far side."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shadow vanishes when the car enters the shade and returns when it leaves."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The car's own shadow vanishes while the car is in the larger shadow and comes back as soon as it is in sunlight again.",
+      "fail": "The shadow stays visible in the bridge's shade; or it is missing in sunlight; or it returns before the car is out of the shade."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The car itself is unchanged by entering and leaving the shade.",
+      "fail": "The car vanishes in the shade; or a second car appears; or the car changes when it comes out."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "In sunlight the shadow lies on the side away from the sun, attached at the wheels.",
+      "fail": "It lies toward the sun; or is detached from the wheels; or switches sides."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The car drives steadily and the shadow moves only with it.",
+      "fail": "The shadow moves with the car stopped; or the car jumps position; or the shadow drifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and one shadow; the bridge stays one bridge.",
+      "fail": "A second shadow appears in sunlight; or the shadow becomes solid; or the car passes through a pier."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and the road stay the same, and the shadow stays dark.",
+      "fail": "The car changes colour; or the shadow turns coloured; or the bridge changes."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0030",
+  "caption": "A flag flutters on a pole in the sun, and its shadow flutters on the wall behind it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flag flutters on a pole in the sun."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its shadow flutters on the wall behind it."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The shadow moves in time with the cloth."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow stops when the flag hangs still."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow moves in time with the cloth and stops when the flag hangs still.",
+      "fail": "It is still while the flag flutters; or it flutters while the flag hangs still; or it moves out of time."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the flag's outline, rippling as the flag ripples.",
+      "fail": "It is a different shape; or a rigid rectangle while the flag ripples; or it splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the wall away from the sun, joined to the pole's shadow.",
+      "fail": "It lies toward the sun; or detached from the pole's shadow; or it is missing in sunlight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The flag moves only with the wind, and the shadow only with the flag.",
+      "fail": "The flag whips in still air; or the shadow moves before the flag; or the shadow drifts along the wall by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One flag, one pole and one shadow.",
+      "fail": "A second flag or shadow appears; or the flag vanishes; or the shadow becomes solid; or the flag passes through the pole."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The flag's colours and the wall stay the same, and the shadow stays dark.",
+      "fail": "The flag changes colours; or the shadow turns coloured; or the wall changes."
+    }
+  ]
+}

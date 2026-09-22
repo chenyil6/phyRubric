@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0273",
+  "caption": "A vacuum-packed foam mattress is cut open, and the flat compressed slab swells and puffs up toward its full thickness.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A vacuum-packed foam mattress lies as a flat slab."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bag is cut open."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The slab swells and puffs up."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "It grows toward its full thickness."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cut comes first and the swelling follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The foam expands as soon as the bag opens, thickening and slowing as it nears full size.",
+      "fail": "It stays flat; or expands before the cut; or springs up instantly like a spring."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "It stays a mattress shape and does not shrink or grow beyond it.",
+      "fail": "It shrinks; or balloons round; or splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "It only expands and then holds.",
+      "fail": "It deflates again; or pulses; or grows then shrinks."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It stays put while expanding.",
+      "fail": "It slides; or jumps; or lifts off."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mattress keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The foam's colour and the room stay the same.",
+      "fail": "The foam changes colour; or the bag changes; or the room rearranges."
+    }
+  ]
+}

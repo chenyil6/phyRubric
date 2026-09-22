@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0121",
+  "caption": "Wind gusts across a campfire, and the flames lean over and stretch out sideways before standing up again.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A campfire burns."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flames lean over to one side."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flames stretch out sideways."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flames stand up again afterwards."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Other signs of wind show: smoke, grass or clothing move the same way."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is upright, leaning, upright again."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The flames lean the way the wind blows, as the smoke and anything loose in the scene show, and stand up again when the gust passes.",
+      "fail": "The flames lean against the way the smoke and grass are blown; or the flames lean while the smoke rises straight up and nothing else moves; or the flames stay leaning after everything else has settled; or each flame leans a different way at the same moment."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Between gusts the flames point upward from the wood.",
+      "fail": "The flames point downward between gusts; or hang below the logs; or lie flat along the ground with no sign of wind; or point upward while the smoke above them sinks."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The leaning follows the gust and eases as it passes; the flames do not go out and relight on their own.",
+      "fail": "A flame goes out and relights with nothing touching it; or the lean grows steadily with no gust; or the flames flatten and stand in a rhythm unrelated to any visible sign of wind; or the flames stay flat while the smoke rises straight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The smoke leans with the flames and streams downwind.",
+      "fail": "The smoke rises straight while the flames are flattened; or the smoke leans one way and the flames the other; or the smoke stops while the flames lean hard."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One fire with its logs; the flames stay on the wood and the logs keep their number.",
+      "fail": "A flame detaches from the wood and floats; or a second fire appears beside the first; or a log vanishes; or the flames pass through a log and out below it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The logs, the stones and the surroundings stay the same.",
+      "fail": "The logs rearrange; or the stones change shape; or the background changes between frames."
+    }
+  ]
+}

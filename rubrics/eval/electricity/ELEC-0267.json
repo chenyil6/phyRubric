@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0267",
+  "caption": "A wireless earbud is dropped into its charging case, and a small light on the case begins to blink.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wireless earbud and its charging case, open."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The earbud is dropped into the case."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A small light on the case begins to blink."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The case's light is off before the earbud is in."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is drop, seat, blink."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light starts blinking once the earbud is seated in its slot, and only then.",
+      "fail": "The earbud is seated and the light stays dark to the end of the clip; or the light blinks before the earbud reaches the case; or the light blinks with the earbud lying beside the case; or the earbud's own light blinks while the case stays dark."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once started, the light blinks steadily while the earbud stays in; it stops only if the earbud is taken out or the lid is shut.",
+      "fail": "The light stops blinking with the earbud seated and the lid open; or blinks at a rhythm that jumps about; or the earbud pops back out by itself; or the light stays lit steadily after one blink."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The earbud falls down into its slot and comes to rest there.",
+      "fail": "The earbud hovers above the slot; or rises out of the case; or falls and bounces out onto the table and rises back in."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The case stays where it sits as the earbud drops in; the lid does not move by itself.",
+      "fail": "The case slides or flips; or the lid snaps shut by itself; or the second earbud jumps out of its slot."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One earbud dropped into one case; the earbud stays a separate piece in its slot; nothing merges or vanishes.",
+      "fail": "The earbud merges into the case; or vanishes on the way in; or a second identical earbud appears in the hand; or the case changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The case's colour, the earbud's colour and the table stay the same apart from the light.",
+      "fail": "The case changes colour; or the earbud changes colour or size; or the table's contents rearrange."
+    }
+  ]
+}

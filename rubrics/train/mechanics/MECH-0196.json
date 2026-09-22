@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0196",
+  "caption": "An elderly man lowers himself into an armchair and sits down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A man stands in front of an armchair."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "He lowers himself into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "He sits down."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lowering comes first and the sitting follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "He bends at the hips and knees, and his body folds only at the joints.",
+      "fail": "He folds mid-torso like cloth; or his legs bend mid-shin; or an arm detaches."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "He sinks down under his own weight in a controlled way and settles onto the seat.",
+      "fail": "He floats down slower than a feather; or he rises; or he sinks through the seat."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "He sits on the cushion, which compresses under him.",
+      "fail": "He passes into the chair; or the chair passes through him; or the cushion stays rigid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "He leans forward slightly as he sinks and settles back.",
+      "fail": "He falls backward over the chair; or tips sideways and hangs; or the chair moves toward him."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "His limbs keep their number and stay attached.",
+      "fail": "A limb detaches or vanishes; or a second figure appears; or he merges with the chair."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "His clothing, the chair and the room stay the same.",
+      "fail": "His clothing changes colour; or the chair changes; or the room rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Gait, posture, style and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

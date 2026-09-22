@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0087",
+  "caption": "Two heavy sacks sit on opposite ends of a level seesaw; one sack is dragged off its end, and the other end drops to the ground.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two sacks sit on opposite ends of a seesaw."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The seesaw is level at the start."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "One sack is dragged off its end."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The other end drops to the ground."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sack is dragged off first and the drop follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The drop happens as soon as the sack's weight leaves the seat, not before and not long after.",
+      "fail": "The beam stays level after one sack is gone; or the end drops before the sack has left it; or the still-loaded end rises."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The loaded end goes down to the ground and the emptied end rises at the same time.",
+      "fail": "Both ends go down; or the loaded end rises; or the beam floats level with only one sack on it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The beam pivots about its centre, and the remaining sack rides down with its end and may slide toward the low end.",
+      "fail": "The beam slides off its pivot; or the sack slides uphill; or the sack lifts off the seat."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The beam stays rigid, and the sacks are heavy and floppy, sagging where they sit.",
+      "fail": "The beam bends like rubber; or a sack bounces high; or a sack stays rigid as a box."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two sacks and one seesaw keep their number and shape.",
+      "fail": "A sack vanishes or a third appears; or a sack passes through the beam; or the seesaw turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sacks' colour, the seesaw and the ground stay the same.",
+      "fail": "A sack changes colour or size; or the seesaw changes length between frames; or the ground rearranges."
+    }
+  ]
+}

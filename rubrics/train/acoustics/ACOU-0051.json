@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0051",
+  "caption": "A speaker on the floor of a room plays a deep bass note, and a lit candle on the same floor flickers in time with the beats.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A speaker stands on the floor of a room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lit candle stands on the same floor."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flame flickers."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flicker comes in repeated pulses rather than one continuous waver."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The candle stays lit throughout."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The flame stays on the wick and points up between pulses; each flicker is a bend or shiver of the flame.",
+      "fail": "The flame detaches and floats away; or lies flat along the floor and stays so; or the candle slides across the floor without any tremble."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flame flickers while the cone pumps and burns steady when the cone is still.",
+      "fail": "The cone pumps and the flame burns without a stir; or the flame flickers hard while the cone is plainly still; or the flame goes on flickering unchanged after the cone has stopped.",
+      "precondition": "The speaker's cone is in view."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "At rest the flame points up and any wax drips run down the candle.",
+      "fail": "The flame points downward or sideways when at rest; or wax runs up the candle; or the candle rises off the floor."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The candle body stays rigid and the flame stays a flame.",
+      "fail": "The candle bends like rubber; or the flame turns into a solid glowing ball; or the wick stretches longer."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One candle with one flame, one speaker; nothing passes into the floor.",
+      "fail": "A second flame appears on the same wick; or the candle vanishes; or the speaker duplicates; or the candle sinks into the floor."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candle's colour, the speaker's shape and the floor pattern stay the same.",
+      "fail": "The candle changes colour; or the speaker changes shape; or the floor pattern shifts."
+    }
+  ]
+}

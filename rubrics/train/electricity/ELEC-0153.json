@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0153",
+  "caption": "A horseshoe magnet is lowered over a steel key on a table, and the key jumps up and sticks to the magnet.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A steel key lies on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A horseshoe magnet is lowered over the key."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The key jumps up and sticks to the magnet."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The magnet is horseshoe shaped."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lowering comes first and the jump follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The key lies still until the magnet is close above it, then leaps up to the magnet's poles; it does not move while the magnet is far off, and stays put on the magnet.",
+      "fail": "The key jumps while the magnet is still high above; or slides about the table before the magnet is near; or the key springs off the magnet with nothing touching it; or the magnet is drawn down to the table instead."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The key hangs from the magnet's poles in contact with them and rises with the magnet; if it comes off it falls back to the table.",
+      "fail": "The key hangs in the air below the magnet without touching it; or floats up past the magnet; or a key that comes off drifts sideways or upward; or the key stays in the air after the magnet is moved away."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The key moves straight up from the table to the magnet's poles and stops there.",
+      "fail": "The key flies past the magnet and off; or circles the magnet; or bounces off and back several times; or the key moves away from the magnet."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The key stays a rigid piece of metal and the magnet a hard block; the table does not dent.",
+      "fail": "The key bends as it jumps; or the magnet squashes; or the key melts onto the magnet; or the table dents."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One key and one magnet; the key stays outside the magnet's body; nothing appears, vanishes or passes through the table.",
+      "fail": "A second key appears; or the key vanishes in mid-air; or the key sinks into the magnet; or the magnet passes through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The magnet's colours, the key's shape and the table stay the same.",
+      "fail": "The magnet changes colour; or the key changes shape or size; or the table changes."
+    }
+  ]
+}

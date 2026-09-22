@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0185",
+  "caption": "A leaf blower is pointed at a pile of dry leaves on a path, and the leaves scatter and tumble away from the nozzle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A leaf blower is pointed at a pile of dry leaves on a path."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The leaves scatter."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They tumble away from the nozzle."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The leaves are dry."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The blast comes first and the scatter follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Leaves move away from the blower in the direction of the blast, some lifting into the air.",
+      "fail": "They move toward the blower; or sideways across the blast; or straight up and hover."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Leaves move only while the blast is on them.",
+      "fail": "They scatter with the blower off; or keep tumbling after it is switched off and the air is still; or move before it is aimed."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Lifted leaves come down and settle further along.",
+      "fail": "They hang; or rise indefinitely; or float."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The leaves flutter and tumble as thin dry things.",
+      "fail": "They move as rigid discs; or as rolling balls; or as one solid sheet."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One blower keeps its number, and the leaves are the pile's.",
+      "fail": "The blower duplicates; or leaves appear from nowhere; or leaves pass through the path."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blower, the path and the surroundings stay the same.",
+      "fail": "The blower changes colour; or the path rearranges; or the leaves change colour."
+    }
+  ]
+}

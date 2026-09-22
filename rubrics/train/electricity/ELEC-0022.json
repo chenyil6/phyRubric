@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0022",
+  "caption": "The switch on the underside of a remote-controlled toy car is flicked on, and its headlights light up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A remote-controlled toy car, upside down or tilted so its underside is in view."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A switch on the underside is flicked on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The car's headlights light up."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "No controller is used: no hand holds a transmitter."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, flick, headlights lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The headlights come on at the moment the switch is flicked, and only then, and stay on.",
+      "fail": "The switch is flicked and the headlights stay dark; or the headlights are lit before the switch moves; or they come on with the switch untouched; or they go out again with the switch still on."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The car stays still: its wheels do not turn and it does not drive off, since no controller is used.",
+      "fail": "The wheels spin up when the switch is flicked; or the car drives away by itself; or the car jerks or rocks with nothing touching it; or the steering turns by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The headlights' glow reaches the surface in front of them.",
+      "fail": "The lamps glow while the surface in front of them stays as dark as before; or the surface brightens while the lamps stay dark; or the lit patch lies behind the car.",
+      "precondition": "The surface in front of the headlights is in view."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The car is a rigid plastic body on wheels; it keeps its shape as it is handled and set down.",
+      "fail": "The body bends or squashes in the hand; or the wheels sag; or the car flexes like rubber when set down."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car with its wheels and lights attached; the finger passes through nothing.",
+      "fail": "A wheel or light vanishes or appears; or a second car appears; or the finger passes into the car; or the car changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and decals and the surface it sits on stay the same apart from the light.",
+      "fail": "The car changes colour; or its decals change; or the surface changes."
+    }
+  ]
+}

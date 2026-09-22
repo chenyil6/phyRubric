@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0202",
+  "caption": "A balloon rubbed on a carpet is rolled near a pile of fine sawdust, and sawdust jumps onto the balloon.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A balloon is rubbed on a carpet."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A pile of fine sawdust."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The balloon is rolled near the pile."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Sawdust jumps onto the balloon."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sawdust is fine, like powder or small flakes."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rub comes first, then the roll near, then the jump."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The sawdust lies still until the balloon is close, then leaps only from the part of the pile near the balloon; the rest of the pile stays put and the leaping stops when the balloon is taken away.",
+      "fail": "Sawdust leaps before the balloon is brought near; or the whole pile stirs at once; or dust rises from parts of the pile far from the balloon; or dust keeps leaping after the balloon is well away."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The dust that lifts coats the side of the balloon facing the pile and stays on as the balloon is lifted; any that comes loose falls back to the pile.",
+      "fail": "Dust hovers in the air around the balloon without touching it; or the dust falls off the balloon as soon as it is lifted; or loose dust drifts upward; or the whole pile rises from the floor."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The balloon is a light elastic shell that keeps its round shape; the sawdust is loose fine particles that lift as separate specks.",
+      "fail": "The balloon keeps a deep dent after the hand leaves; or stretches out like taffy; or the sawdust lifts as a solid slab; or the dust flows up like liquid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The balloon rolls along the carpet as a ball; the dust moves from the pile to the balloon's near side and stops there.",
+      "fail": "The balloon slides without rolling or rolls uphill by itself; or dust flies past the balloon and off; or dust circles the balloon in the air; or dust moves away from the balloon."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon and one pile; the dust on the balloon came from the pile; the balloon passes through nothing.",
+      "fail": "Dust multiplies on the balloon; or dust vanishes in mid-air; or the balloon passes into the floor or the pile; or a second balloon appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour, the carpet's pattern and the sawdust's colour stay the same.",
+      "fail": "The balloon changes colour or size; or the carpet changes pattern; or the sawdust changes colour."
+    }
+  ]
+}

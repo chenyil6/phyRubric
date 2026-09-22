@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0188",
+  "caption": "Wet footprints on a sun-baked pool deck dry in the heat, shrinking and fading from their edges.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Wet footprints lie on a pool deck."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The prints shrink."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The prints fade from their edges inward."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The deck reads as sun-baked: bright and dry around the prints."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The dark wet area gets smaller and lighter."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each print only shrinks and lightens from its thin edges inward and does not darken or spread again.",
+      "fail": "A print darkens again with nothing wetting it; or a print spreads outward; or a print fades and then returns; or the prints go from pale to dark."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The prints go by drying, in place, and no new prints appear on the dry deck.",
+      "fail": "A new print appears on dry deck with nobody walking there; or a print jumps to a new place on the deck; or a print vanishes at a stroke while still dark and wet; or the prints multiply."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The deck under each print is a shade darker while it is wet and matches the dry deck once the print is gone.",
+      "fail": "A print's area stays dark after the print has plainly dried; or the deck around an untouched print goes as dark as the print; or the prints show no difference from the dry deck at all."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The prints lie flat on the deck and any water in them soaks in or runs downhill on a slope.",
+      "fail": "The water in a print rises off the deck as beads that hang; or a print's water runs uphill across the deck; or a print lifts off the deck as a film; or the water in a print stands as a dome."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One deck; the prints stay flat marks on it and the deck keeps its surface.",
+      "fail": "A print becomes a hole in the deck; or the deck's surface opens up; or a print turns into another shape such as a hand print; or the deck changes into water."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The deck's colour and texture away from the prints and the surroundings stay the same.",
+      "fail": "The deck changes colour; or its texture changes pattern; or items around the deck rearrange."
+    }
+  ]
+}

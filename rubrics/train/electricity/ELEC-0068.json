@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0068",
+  "caption": "A digital alarm clock is unplugged, and its glowing display goes blank.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A digital alarm clock with its display glowing."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its plug is pulled out of the socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The display goes blank."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "A cord runs from the clock to the plug."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is glowing, unplugged, blank."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The display goes blank at the moment the plug leaves the socket, and only then.",
+      "fail": "The plug is out and the digits still glow; or the display goes blank before the plug moves; or it goes blank with the plug still seated and the cord slack."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once unplugged the display stays blank while the plug is out; digits do not return while no plug sits in a socket.",
+      "fail": "The digits come back while the plug is out; or the display switches between lit and blank after unplugging; or the display lights up blinking with the plug lying loose."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The clock stays where it sits as the plug is pulled, apart from a tug along the cord; the cord hangs slack once the plug is free.",
+      "fail": "The clock slides or turns with the cord slack; or the cord stands rigid in the air or floats; or the socket shifts along the wall."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "When plugged in again the display lights, blinking or showing a reset time, once the plug seats.",
+      "fail": "The plug is seated again and the display stays blank to the end of the clip; or the display lights before the plug reaches the socket; or the display comes on and then goes blank again with the plug seated.",
+      "precondition": "The plug is pushed into a socket again."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One clock, one cord, one plug, one socket; the plug leaves the socket whole and nothing passes through the wall or the table.",
+      "fail": "The plug vanishes or a second plug appears; or the plug passes through the wall; or the cord splits or detaches from the clock; or the clock changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The clock's casing colour, its buttons and the surface it sits on stay the same apart from the display.",
+      "fail": "The casing changes colour; or the buttons rearrange; or the digits change colour or font before going blank."
+    }
+  ]
+}

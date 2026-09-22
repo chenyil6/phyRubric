@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0145",
+  "caption": "A lighthouse beam sweeps around in the night, lighting up the sea and cliffs in turn as it passes.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lighthouse beam sweeps around in the night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It lights up the sea and cliffs in turn as it passes."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The beam rotates steadily."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each part of the scene brightens only as the beam crosses it and darkens again after.",
+      "fail": "A patch stays lit after the beam has passed; or brightens before the beam arrives; or the whole scene is lit at once."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The beam rotates steadily and the lit patch moves with it.",
+      "fail": "The beam stops and starts; or reverses; or the lit patch moves while the beam is still."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The beam is one straight cone from the lamp.",
+      "fail": "It bends; or splits into several; or it is a flood in all directions."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The lit patch sweeps one way round.",
+      "fail": "It jumps; or sweeps the opposite way to the beam; or moves crosswise."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lighthouse and one beam.",
+      "fail": "A second beam appears; or the lighthouse vanishes; or the beam becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cliffs and the sea stay the same.",
+      "fail": "The cliffs change shape; or the sea changes; or the beam changes colour."
+    }
+  ],
+  "note": "Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

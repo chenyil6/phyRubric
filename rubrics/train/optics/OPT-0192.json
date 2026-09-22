@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0192",
+  "caption": "A smart bulb is switched from white to purple, and the room's white ceiling turns purple.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A smart bulb lights a room with a white ceiling."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is switched from white to purple."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ceiling turns purple."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Surfaces the bulb does not reach are unchanged."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The switch comes first and the colour changes with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The ceiling looks purple only where the bulb's light reaches and while it is on.",
+      "fail": "The ceiling is purple with the bulb off; or stays white under the purple light; or turns a different colour from the light."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens at the same instant as the bulb and is confined to where its light falls.",
+      "fail": "The ceiling changes before the bulb; or long after; or surfaces the light cannot reach change too."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The ceiling's features show as darker and lighter purple, not as colour changes.",
+      "fail": "Features are a different colour; or the ceiling is flat purple with no shading; or features vanish."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves; only the light changes.",
+      "fail": "The ceiling moves; or the bulb moves by itself; or the lit area wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bulb and one ceiling.",
+      "fail": "A second bulb appears; or the ceiling vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ceiling's shape and the surroundings stay the same.",
+      "fail": "The ceiling changes shape; or the surroundings rearrange; or the bulb changes shape."
+    }
+  ]
+}

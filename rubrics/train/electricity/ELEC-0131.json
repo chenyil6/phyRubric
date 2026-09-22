@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0131",
+  "caption": "A loose wire in an open junction box shorts against the box, and a flash and puff of smoke come from the spot.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An open junction box with wires inside."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A loose wire touches the box."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A flash comes from the spot."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A puff of smoke comes from the spot."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flash comes first and the smoke follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is brief at the point where the wire meets the box, and is gone; the smoke appears after the flash and rises; the wire does not glow afterwards.",
+      "fail": "The wire glows on after the flash; or the flash stays lit at the spot for the rest of the clip; or smoke rises before the flash; or the smoke shrinks back into the box."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One box with its wires; the wires stay continuous and in the box; the flash leaves nothing glowing behind.",
+      "fail": "A wire vanishes or a new wire appears; or the box vanishes or duplicates; or a glowing dot stays at the spot after the flash; or a wire's end detaches and floats."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The smoke rises from the spot and spreads; any spark fragments fall and go dark within a short distance.",
+      "fail": "The smoke sinks from the box and pools below; or hangs as a fixed shape; or sparks rise and gather above the box; or sparks lie glowing on the floor for the rest of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wire is flexible and lies where it fell; the box is a rigid metal or plastic housing that keeps its shape.",
+      "fail": "The wire stands rigid like a rod; or the box bends or ripples at the flash; or the box melts and sags."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The wire touches the inside of the box and stays inside it; nothing passes through the box's walls.",
+      "fail": "The wire passes through the box's wall; or the box sinks into the wall behind it; or the wires merge into one; or the box changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wires' insulation colours, the box's finish away from the spot and the wall stay the same.",
+      "fail": "A wire changes colour; or the box changes colour away from the spot; or the wall changes colour."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0290",
+  "caption": "A person walking along a pavement catches a foot on a raised kerb, stumbles forward with arms flung out, and recovers balance after two quick steps.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A person walks along a pavement."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A foot catches on a raised kerb."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They stumble forward with arms flung out."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "They recover balance after quick steps."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The trip comes first, then the stumble, then the recovery."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The stumble begins at the trip.",
+      "fail": "It begins before; or with no kerb contact; or on flat pavement away from the kerb."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The body pitches forward and the recovery steps are in the direction of travel.",
+      "fail": "They fall backward; or freeze mid-fall; or step sideways."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "They stay on their feet and end upright.",
+      "fail": "They float; or hover leaning; or sink."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The arms come up at the joints.",
+      "fail": "They detach; or bend mid-bone; or the body folds mid-torso."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Their limbs keep their number and stay attached.",
+      "fail": "A limb vanishes; or a second figure appears; or they merge with the kerb."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Their clothing and the pavement stay the same.",
+      "fail": "The clothing changes colour; or the kerb moves; or the street rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Form, posture and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

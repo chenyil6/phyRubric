@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0109",
+  "caption": "The plug of a running heater is yanked out of the wall socket, and a small spark snaps at the prongs as they come out.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A heater runs with its plug in a wall socket."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The plug is yanked out of the socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A small spark snaps at the prongs as they come out."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pull is quick: a yank rather than a slow withdrawal."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spark comes as the plug leaves the socket, not before."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spark is a single brief flash at the socket at the instant the prongs part from it, and is gone; the heater's glow or fan stops after the plug is out.",
+      "fail": "The spark glows on at the prongs after the plug is clear of the wall; or sparks appear while the plug is still seated and untouched; or a spark appears at the prongs while the plug lies loose on the floor; or the heater keeps running at full glow to the end of the clip with the plug out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One plug, one cord, one socket; the plug comes out whole and the socket stays on the wall; the spark leaves nothing behind.",
+      "fail": "The plug vanishes or a second plug appears; or the socket comes off the wall or vanishes; or the cord splits or detaches; or a glowing dot stays on the wall where the spark was."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any spark fragments fall from the socket toward the floor and go dark within a short distance.",
+      "fail": "Sparks rise from the socket and gather above it; or hang in the air; or lie glowing on the floor for the rest of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord follows the plug: it goes slack and drops once the plug is free and stays attached at both ends.",
+      "fail": "The cord stretches like elastic during the yank; or stands rigid in the air after the plug is out; or the cord floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The plug leaves the socket through its holes; the hand and plug pass through nothing; the heater keeps its shape.",
+      "fail": "The plug passes out through the wall beside the socket; or fingers pass through the plug or the wall; or the heater changes shape; or the plug merges with the socket."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The heater's colour, the socket's design and the wall stay the same.",
+      "fail": "The heater changes colour; or the socket changes design or moves along the wall; or the cord changes colour."
+    }
+  ],
+  "note": "The heater's stopping is read from its visible glow or fan; how quickly it fades is not judged."
+}

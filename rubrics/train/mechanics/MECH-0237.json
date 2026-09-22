@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0237",
+  "caption": "A bucket with a tennis ball inside is tipped over, and the ball rolls out onto the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bucket stands upright with a tennis ball inside."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bucket is tipped over."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ball rolls out onto the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tip comes first and the roll out follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "It is the same ball, hidden while the bucket is upright, and it comes out only through the opening.",
+      "fail": "A different ball comes out; or two balls; or the ball passes through the bucket's side."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The ball comes out only when the rim tilts low enough and rolls down and away from the opening.",
+      "fail": "It comes out while the bucket is upright; or rolls uphill back in; or floats."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The ball is not visible through the bucket.",
+      "fail": "It shows through; or the bucket passes through the ball; or the ball passes through the floor."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It rolls straight and slows.",
+      "fail": "It curves; or speeds up; or stops and restarts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One bucket and one ball keep their shape.",
+      "fail": "The bucket changes shape; or the ball turns into another object; or the ball merges with the bucket."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bucket's colour and the floor stay the same.",
+      "fail": "The bucket changes colour; or the ball changes; or the floor rearranges."
+    }
+  ]
+}

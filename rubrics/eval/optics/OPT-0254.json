@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0254",
+  "caption": "An upside-down bicycle's front wheel is spun in front of a wall lit by a lamp, and the shadows of its spokes whirl across the wall.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An upside-down bicycle's front wheel is spun in front of a wall lit by a lamp."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The shadows of its spokes whirl across the wall."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The rim's shadow stays put while the spokes' shadows move."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The spin comes first and the whirl follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The spoke shadows turn in step with the wheel and slow as it slows.",
+      "fail": "They are still while the wheel turns; or keep whirling after it stops; or turn the opposite way."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The shadows move only as the wheel moves, and the rim's shadow stays put.",
+      "fail": "The rim's shadow moves; or the spokes' shadows move with the wheel still; or the shadows drift."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadows fall on the side away from the lamp.",
+      "fail": "They fall toward the lamp; or on the ceiling; or are missing with the lamp on."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The shadows are thin spoke lines radiating from the hub.",
+      "fail": "They are unrelated shapes; or merge into a solid disc while the spokes are plainly separate; or there are more than the spokes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bicycle and one lamp.",
+      "fail": "A second wheel appears; or the lamp vanishes; or a shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bicycle and the wall stay the same, and the shadows stay dark.",
+      "fail": "The frame changes colour; or the shadows turn coloured; or the wall changes."
+    }
+  ],
+  "note": "The hand spinning the wheel is the minimal trigger; the person is not judged."
+}

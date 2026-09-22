@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0116",
+  "caption": "A frayed lamp cord is bumped, and a spark flashes at the bare spot and the lamp flickers.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lamp is lit, its cord in view."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cord has a frayed or bare spot."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cord is bumped."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A spark flashes at the bare spot."
+    },
+    {
+      "id": "S5",
+      "weight": "core",
+      "check": "The lamp flickers."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The bump comes first; the spark and flicker follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spark is a brief flash at the bare spot at the moment of the bump, and is gone; it does not stay lit or spread along the cord.",
+      "fail": "The spark glows on at the bare spot after the bump; or a spark appears while the cord lies untouched; or the spark appears at a part of the cord away from the bare spot; or the whole cord glows."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lamp flickers at the same moment as the spark and then returns to steady light or goes out.",
+      "fail": "The lamp flickers with no spark at the cord and no bump; or the spark flashes while the lamp stays perfectly steady; or the lamp flickers long before the bump; or the flicker continues to the end of the clip after a single bump."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light the lamp casts on its surroundings dips and returns with the flicker.",
+      "fail": "The bulb dims while the light on the table and wall stays constant; or the surroundings dim while the bulb stays steady."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord is a limp flexible cord: it shifts where bumped and lies slack afterwards.",
+      "fail": "The cord stands rigid in the air; or stretches like elastic; or springs about like a coil after the bump."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp with one cord; the cord stays continuous and the lamp stays where it is; nothing passes through anything.",
+      "fail": "The cord splits into two at the bare spot; or the lamp vanishes or duplicates; or the bare spot moves along the cord; or a hand passes through the cord."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lampshade's colour, the cord's colour and the table stay the same apart from the light.",
+      "fail": "The shade changes colour rather than brightness; or the cord changes colour; or the table's contents rearrange."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0256",
+  "caption": "A vase on a table is lit by two lamps from different sides and casts two shadows; one lamp is switched off, and the shadow on the far side of that lamp vanishes while the other stays.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A vase on a table is lit by two lamps from different sides."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It casts two shadows."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "One lamp is switched off."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The shadow on the far side of that lamp vanishes while the other stays."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The switch comes first and the shadow vanishes with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each shadow lies away from its own lamp, and when one lamp goes off only the shadow opposite it disappears.",
+      "fail": "Both shadows vanish; or the wrong shadow vanishes; or both remain with one lamp off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The remaining shadow does not move or darken, and the vase stays lit by the other lamp.",
+      "fail": "The remaining shadow moves; or the vase goes dark; or a new shadow appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "Each shadow keeps the vase's outline.",
+      "fail": "A shadow is a different shape; or splits; or the two merge."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The vase and lamps stay put.",
+      "fail": "The vase slides; or a lamp moves by itself; or a shadow drifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One vase and two lamps.",
+      "fail": "The vase duplicates; or a lamp vanishes; or a shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The vase and the table stay the same, and the shadows stay dark.",
+      "fail": "The vase changes colour; or a shadow turns coloured; or the table changes."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0223",
+  "caption": "A stripe of translucent blue watercolour is painted over a dry yellow stripe, and the overlap looks green.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dry yellow stripe is on paper."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A stripe of translucent blue watercolour is painted over it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The overlap looks green."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The yellow and blue outside the overlap keep their colours."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "Only the overlapping band is green, and the yellow and blue outside it keep their colours.",
+      "fail": "The overlap is a colour other than green; or the pure stripes change; or the whole sheet turns green."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The green appears as the blue is painted over the yellow and only there.",
+      "fail": "Green appears before the brush arrives; or where the stripes do not cross; or the brush passes and no green appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The watercolour is translucent and lies as a wash on the dry paper.",
+      "fail": "It is opaque and hides the yellow; or it beads off; or the paper dissolves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Paint goes only where the brush puts it.",
+      "fail": "It spreads by itself on dry paper; or the brush moves by itself; or the paper moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet and one brush.",
+      "fail": "The sheet duplicates; or the brush vanishes; or paint appears from nowhere."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The paper and the table stay the same.",
+      "fail": "The paper changes shape; or the table changes; or the brush changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

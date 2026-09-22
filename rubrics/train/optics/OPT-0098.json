@@ -1,0 +1,81 @@
+{
+  "id": "OPT-0098",
+  "caption": "Goldfish swim in an aquarium and are clearly visible through the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An aquarium filled with water is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Goldfish are inside it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The fish are visible through the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The fish swim: they move through the water."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "There are several goldfish, orange in colour."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The tank is transparent on the side facing the viewer."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The fish stay inside the water; the glass is a barrier they never cross, and tank decorations are solid to them.",
+      "fail": "A fish passes through the glass or swims out into the room; or a fish appears outside the tank; or fish swim through decorations as if they were not there."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glass and water are transparent: fish are seen through them wherever the tank is in view.",
+      "fail": "The glass turns opaque and hides the fish; or the water blocks the view of fish at the back while the front is clear."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The fish stay submerged; the water surface stays level at the top of the tank.",
+      "fail": "A fish hovers above the water surface; or the water surface tilts and holds; or the water level changes with no cause."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The fish move as fish: smooth swimming with tail motion and turning without jumps in position.",
+      "fail": "A fish slides with a rigid body and no tail motion; or moves backwards at speed tail-first; or spins in place like a propeller."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The number of fish is constant; each keeps its shape and identity with no merging or splitting.",
+      "fail": "Fish appear or vanish; or two fish merge; or a fish splits; or a fish changes into something else; or a fish jumps from one place to another between frames."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Fish colours, decorations and the tank frame stay the same; refraction may shift things slightly but the layout is constant.",
+      "fail": "A fish changes colour; or decorations move on their own; or the tank frame changes shape."
+    }
+  ],
+  "note": "Fish are self-driven: where they go, when they start and stop is not judged. This caption has no triggered event; the physics is transparency and containment."
+}

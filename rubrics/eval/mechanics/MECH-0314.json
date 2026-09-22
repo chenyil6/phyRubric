@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0314",
+  "caption": "A brick is set on top of a coil spring standing on a table, the spring compresses under it, and when the brick is lifted off the spring extends again.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A coil spring stands on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A brick is set on top of it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The spring compresses."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The brick is lifted off."
+    },
+    {
+      "id": "S5",
+      "weight": "core",
+      "check": "The spring extends again."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The brick is set on first, then lifted, then the spring recovers."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The spring shortens only while the brick is on it and returns to its full height after the brick is removed.",
+      "fail": "It stays compressed; or does not compress; or stretches longer than it started."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The spring keeps its coil shape.",
+      "fail": "It bends sideways and stays; or splits; or melts."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The brick sits on top of the spring.",
+      "fail": "It floats; or passes through the spring; or hangs beside it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The spring moves only with the brick.",
+      "fail": "It bounces by itself; or slides; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One spring and one brick keep their number.",
+      "fail": "The spring duplicates; or the brick vanishes; or the spring turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The spring and the table stay the same.",
+      "fail": "The spring changes colour; or the brick changes; or the table rearranges."
+    }
+  ]
+}

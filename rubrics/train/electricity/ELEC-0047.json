@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0047",
+  "caption": "A charging cable is plugged into a phone lying on a table, and a charging symbol appears on the screen.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A phone lies on a table with its screen in view."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A charging cable is plugged into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A charging symbol appears on the screen."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The screen shows no charging symbol before the cable is in."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is plug in, then symbol."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The charging symbol appears right after the connector seats in the phone, and only then.",
+      "fail": "The connector is seated and no symbol appears to the end of the clip; or the symbol is on the screen before the connector reaches the phone; or the symbol appears while the cable lies loose; or the screen goes dark as the connector seats."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once shown, the symbol stays while the cable stays in; if the cable is pulled the symbol goes.",
+      "fail": "The symbol vanishes with the cable still seated; or flashes on and off; or the symbol stays after the cable is pulled out; or the connector backs out by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cable is a flexible cord that lies in a curve on the table and stays attached to the connector.",
+      "fail": "The cable stands rigid in the air; or stretches like elastic; or floats; or the connector detaches from the cable."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The phone stays where it lies as the cable goes in, apart from a small nudge; nothing else on the table moves.",
+      "fail": "The phone slides across the table; or lifts; or flips over; or items on the table jump."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One phone and one connector on one cable; the connector enters the port rather than the phone's body; fingers pass through nothing.",
+      "fail": "The connector passes into the phone's side away from the port; or a second connector appears; or the connector vanishes; or the phone changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The phone's case, the cable's colour and the table stay the same apart from the screen.",
+      "fail": "The phone changes colour; or the cable changes colour; or the table's contents rearrange."
+    }
+  ]
+}

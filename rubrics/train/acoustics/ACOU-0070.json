@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0070",
+  "caption": "The keys of a toy piano are banged, and the small hammers inside can be seen jumping up with each key press.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy piano with its hammers visible."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Keys are pressed hard."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A hammer jumps up with each key press."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Several keys are banged."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Each key press comes before its hammer's jump."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "A hammer moves only when its key is pressed; hammers of untouched keys stay down.",
+      "fail": "A hammer jumps while no key is pressed; or hammers of untouched keys jump along with the pressed one; or a hammer rises before its key goes down."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each pressed key sends its own hammer up; the hammer falls back and the key returns.",
+      "fail": "A key goes down and no hammer moves; or the hammer rises and stays up after the key is released; or the hammer that jumps is far from the pressed key; or the key stays down after release."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Hammers fall back down after each jump.",
+      "fail": "A hammer hangs in the air; or floats up; or falls sideways out of the frame."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The hammers, keys and piano body are rigid.",
+      "fail": "Keys bend like rubber; or hammers stretch; or the piano body ripples."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The hammers and keys keep their count; nothing passes through the lid.",
+      "fail": "Hammers appear or vanish; or a hammer passes through the lid; or keys change count; or two hammers merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The piano's colour, the keys' colours and the hammers' colour stay the same.",
+      "fail": "The piano changes colour; or the keys' colours swap; or the hammers change colour."
+    }
+  ],
+  "note": "The hands on the keys are a trigger and are not judged."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0079",
+  "caption": "A checkerboard card is reflected in the bowl of a shiny spoon, and as the spoon turns slowly the reflected pattern stretches and shifts.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A checkerboard card is reflected in the bowl of a shiny spoon."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The spoon turns slowly."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The reflected pattern stretches and shifts."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection is small and warped by the curve."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spoon turns first and the pattern shifts with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflected pattern is small and warped by the curve and stays inside the metal.",
+      "fail": "It is flat and undistorted; or larger than the spoon's bowl; or it appears outside the metal."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The pattern changes with the spoon's angle and only then.",
+      "fail": "It stays fixed as the spoon turns; or it shifts with the spoon still; or it shows a different card."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The card stays put.",
+      "fail": "It slides; or turns by itself; or lifts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The spoon is rigid polished metal.",
+      "fail": "It bends; or its surface ripples; or it goes dull."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One spoon and one card.",
+      "fail": "The spoon duplicates; or the card vanishes; or the reflection becomes solid; or the hand passes through the spoon."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The card's pattern and the table stay the same.",
+      "fail": "The card changes pattern; or the table changes; or the spoon changes shape."
+    }
+  ],
+  "note": "The hand turning the spoon is the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0087",
+  "caption": "A pair of glasses is brought in from the cold street into a warm café, and the lenses fog over.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pair of glasses."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The glasses are brought in from outside into a warm room."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lenses fog over."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lenses are clear while still outside."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fogging comes after the glasses are inside."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog appears once the glasses are inside and then holds or clears; it does not appear while they are still out in the cold.",
+      "fail": "The lenses are fogged while still outside in the cold; or the fog appears, clears and appears again with the glasses held still indoors; or the fog thickens after the lenses have cleared; or the fog appears before the glasses have moved."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The change is a haze on the lenses themselves: what lies behind them blurs where the haze is and comes back as it clears.",
+      "fail": "The frames change colour rather than the lenses; or the haze lies on the frame and not on the glass; or the view behind the lenses changes to a different scene as the fog clears; or the lenses turn a colour instead of hazing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Droplets that gather run downward on the lens and any drip falls away.",
+      "fail": "A droplet runs up the lens; or a drip leaves the lens and rises; or water gathers along the lens's top edge and stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The fog lies on the glass surface and nothing else appears or vanishes behind it.",
+      "fail": "Objects seen through the fogged lens are missing when it clears; or new objects appear behind the fog; or the fog detaches from the lens and drifts as a cloud; or the lens vanishes behind the fog."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One pair of glasses with two lenses in one frame; the frame keeps its shape and nothing passes through the lenses.",
+      "fail": "A lens vanishes; or a third lens appears; or a hand passes through a lens; or the frame bends into another shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The frames, the room behind and the clothing stay the same.",
+      "fail": "The frames change colour; or the room's furniture rearranges; or the clothing changes."
+    }
+  ],
+  "note": "The glasses may be on a face or in a hand; the person is not judged."
+}

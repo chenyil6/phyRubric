@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0039",
+  "caption": "Ice cubes are dropped into a glass of warm cola, and they crack with a snap as they hit the liquid, splitting and fizzing.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass of cola."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Ice cubes are dropped into the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Cracks appear in the cubes."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Some of the cubes split."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cola fizzes around the cubes."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the cracking follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The cubes are brittle solids: cracks run through them in lines and pieces come apart along those cracks, each piece staying hard.",
+      "fail": "A cube bends or squashes instead of cracking; or a cube crumbles to slush all over; or a cube stretches as it splits; or the pieces stay joined by a soft thread."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The pieces in the glass came from the cubes that were dropped, and no new ice appears.",
+      "fail": "Pieces fuse back into a whole cube; or new cubes appear in the glass with none dropped; or a cube vanishes in a single frame while still large; or the ice in the glass grows."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The cubes fall downward into the cola, sink and rise to ride at the surface, and the bubbles rise.",
+      "fail": "A cube sits wholly on top of the cola like a ball on a sheet; or a cube sinks and stays on the glass's floor while others float; or bubbles sink to the bottom; or a cube rises out of the glass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The drop has an effect: the cola splashes and foams where the cubes land and the level rises.",
+      "fail": "The cubes enter and the surface stays glassy with no bubbles; or the cola foams before the cubes reach it; or the foam appears on the far side of the glass from the cubes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The cubes stay in the cola inside the glass and nothing passes through the glass.",
+      "fail": "A cube passes through the glass's wall; or the glass changes shape; or a cube passes through another cube; or the glass vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass's shape, the cola's colour and the table stay the same.",
+      "fail": "The glass changes shape or pattern; or the cola changes colour; or items on the table rearrange."
+    }
+  ],
+  "note": "The snap is sound and is not judged; the cracking is read from the cracks appearing in the ice."
+}

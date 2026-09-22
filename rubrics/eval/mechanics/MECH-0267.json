@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0267",
+  "caption": "A house of playing cards stands on a table; the table is bumped and the house collapses into a heap.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A house of playing cards stands on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The table is bumped."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The house collapses into a heap."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bump comes first and the collapse follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The collapse begins at the bump and runs through the structure quickly.",
+      "fail": "It collapses before the bump; or the table is bumped and it stands; or only part falls and the rest hangs in place."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Every card ends flat or leaning on the table, and none stays in the air.",
+      "fail": "A card hangs in the air; or rises; or stays balanced on nothing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cards flex slightly, slide and flutter.",
+      "fail": "They bounce like rigid blocks; or fold like cloth; or shatter."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The cards keep their number.",
+      "fail": "Cards vanish; or multiply; or restack themselves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The cards and the table keep their shape.",
+      "fail": "A card turns into another object; or the table changes; or cards merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cards' faces and the table stay the same.",
+      "fail": "The faces change; or the table changes colour; or the room rearranges."
+    }
+  ]
+}

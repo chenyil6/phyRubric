@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0118",
+  "caption": "Raindrops cover a window, and the street outside appears as many tiny warped pictures within the drops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Raindrops cover a window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The street outside appears as many tiny warped pictures within the drops."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The pictures move as the drops run down."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The view between the drops is normal."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Each drop shows a small distorted picture of the scene, and the view between drops is normal.",
+      "fail": "The drops are blank; or the view between them is warped; or a drop shows a different scene."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The pictures move as the drops run down.",
+      "fail": "The pictures stay put while drops run; or drops run with the pictures fixed; or pictures move with the drops still."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The drops run downward.",
+      "fail": "They run up; or sideways on a vertical pane; or hang without moving."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The drops are liquid beads that merge and run.",
+      "fail": "They are rigid; or bounce; or freeze."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One window and the street outside.",
+      "fail": "A second window appears; or the street vanishes; or a drop becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The frame and the street stay the same.",
+      "fail": "The frame changes; or the street rearranges; or the drops change colour."
+    }
+  ]
+}

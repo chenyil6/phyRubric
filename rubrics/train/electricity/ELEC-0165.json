@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0165",
+  "caption": "A handful of steel pins is dropped near a magnet, and the pins swing toward it as they fall and stick along its sides.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A magnet is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A handful of steel pins is dropped near it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The falling pins swing toward the magnet."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Pins end up stuck along the magnet's sides."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pins are let go together as a handful, not placed one by one."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first; the swing and the sticking follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Each pin falls downward and, as it comes close to the magnet, its path bends toward the magnet's body and ends on its surface.",
+      "fail": "Pins curve away from the magnet; or fall straight past it onto the surface below and then rise back up to it; or veer in a direction that is neither downward nor toward the magnet."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Pins stuck on the magnet stay stuck; pins that land away from it lie where they fall; the magnet stays where it is.",
+      "fail": "Pins on the magnet crawl over it or drop off while nothing touches it; or pins lying on the table hop back into the air; or the magnet lifts or turns with nothing touching it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pins fall downward; those that miss the magnet land on the surface below, and the pins on the magnet hang along its sides or lie on top of it.",
+      "fail": "Pins float in the air touching nothing; or drift upward after release; or pins that missed the magnet stay suspended above the table."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pins stay straight rigid pins and the magnet stays a hard block; the pins attach with their sides or tips on the magnet's surface.",
+      "fail": "Pins bend or curl in flight or on the magnet; or the magnet's body dents where pins strike; or pins soften and drape over the magnet's edges like threads."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The pins that were dropped are the pins that end on the magnet and on the table; none passes into the magnet or through the table.",
+      "fail": "Pins vanish in mid-air; or new pins appear on the magnet without having fallen; or a pin passes into the magnet's body; or pins pass through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The magnet's colour and shape, the table and any background items stay the same.",
+      "fail": "The magnet changes colour; or changes shape; or the table surface changes pattern."
+    }
+  ]
+}

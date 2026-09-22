@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0255",
+  "caption": "A parked bicycle casts a sharp shadow on a sunny wall, and a passing cloud makes the shadow fade and then return.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A parked bicycle casts a sharp shadow on a sunny wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A cloud passes."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shadow fades."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It returns."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cloud comes first, then the fade, then the return."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow softens and vanishes as the cloud covers the sun and comes back in the same place when the sun returns.",
+      "fail": "It stays sharp with the sun covered; or returns in a different place; or fades with the sun still shining."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fade and return follow the cloud smoothly.",
+      "fail": "The shadow flickers; or snaps off and on; or fades and never returns in sunlight."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bike does not move.",
+      "fail": "It rolls; or tips; or its shadow moves while it stands."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The returned shadow is the same bicycle outline.",
+      "fail": "It is a different shape; or splits; or is missing the wheels."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bicycle and one shadow.",
+      "fail": "A second bicycle appears; or the shadow becomes solid; or the bike vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bicycle and the wall stay the same, and the shadow stays dark.",
+      "fail": "The bike changes colour; or the shadow turns coloured; or the wall changes."
+    }
+  ]
+}

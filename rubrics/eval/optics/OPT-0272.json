@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0272",
+  "caption": "Rain drips from a twig, and each hanging drop shows a tiny upside-down image of the garden behind it that vanishes when the drop falls.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Rain drips from a twig."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Each hanging drop shows a tiny upside-down image of the garden behind it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The image vanishes when the drop falls."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The image swells with the drop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The image is inverted and confined to the drop, and the garden itself is unchanged.",
+      "fail": "The image is upright; or extends beyond the drop; or the garden changes."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The image swells with the drop and disappears the instant the drop falls.",
+      "fail": "It stays after the drop falls; or is there with no drop; or two images in one drop."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The drops hang below the twig and fall downward.",
+      "fail": "They hang above; or rise; or fall sideways in still air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The drops are liquid beads that swell and let go.",
+      "fail": "They are rigid; or bounce back up; or freeze."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One twig.",
+      "fail": "It duplicates; or vanishes; or a drop becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The twig and the garden stay the same.",
+      "fail": "The twig changes; or the garden rearranges; or the drops change colour."
+    }
+  ]
+}

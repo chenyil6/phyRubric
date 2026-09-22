@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0264",
+  "caption": "A water balloon is lobbed over a garden fence and arcs over into a paddling pool on the other side.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A water balloon is lobbed over a garden fence."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It arcs over the fence."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It lands in a paddling pool on the other side."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lob comes first, then the arc, then the landing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It follows one smooth arc, clearing the fence near the top.",
+      "fail": "It flies flat; or hangs above the fence; or changes direction."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It falls after the peak and lands in the pool with a splash.",
+      "fail": "It rises again; or hovers; or floats down."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "It wobbles in flight as a bag of liquid and splashes or bursts on landing.",
+      "fail": "It is a rigid ball; or deflates in the air; or bounces out whole and high."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "It clears the fence and does not pass through it.",
+      "fail": "It passes through the fence; or sinks into the pool bottom; or the pool passes through it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon keeps its number.",
+      "fail": "It duplicates; or vanishes in flight; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon, the fence and the pool stay the same.",
+      "fail": "The balloon changes colour; or the fence changes; or the pool rearranges."
+    }
+  ]
+}

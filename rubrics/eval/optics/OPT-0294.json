@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0294",
+  "caption": "A pigeon walks past outside a window fitted with coloured glass panes and appears red, then blue, then yellow as it passes behind each pane.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pigeon walks past outside a window fitted with coloured glass panes."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It appears red, then blue, then yellow as it passes behind each pane."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "It looks its normal grey through the clear frame between panes."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The colour changes at each pane's edge."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The pigeon takes the colour of whichever pane it is behind and looks grey through the clear gaps.",
+      "fail": "It is grey behind a coloured pane; or coloured through a clear gap; or a colour the panes do not have."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The colour changes exactly at each pane's edge.",
+      "fail": "It changes mid-pane; or lags behind the edge; or changes with the bird still."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The panes themselves do not change colour and the bird keeps its shape.",
+      "fail": "A pane changes colour; or the bird changes shape; or the panes rearrange."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bird walks steadily and the window stays still.",
+      "fail": "The bird jumps position; or the window moves; or the colours shift with the bird still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bird and one window.",
+      "fail": "A second bird appears; or a pane vanishes; or the bird passes through the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The window frame and the ground stay the same.",
+      "fail": "The frame changes; or the ground changes; or the bird's true colour changes when seen through clear glass."
+    }
+  ],
+  "note": "The pigeon is self-driven; only the tint through the panes is judged."
+}

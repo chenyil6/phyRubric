@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0140",
+  "caption": "A page is torn out of a spiral notebook, leaving a fringe of paper on the coil.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A spiral notebook is open."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A page is torn out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A fringe of paper is left on the coil."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tear comes first and the fringe remains."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The page rips along the perforated edge as it is pulled, leaving a ragged fringe.",
+      "fail": "It stretches like rubber; or the coil unwinds instead; or the page passes through the coil."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The page is a separate sheet and the notebook does not regain it.",
+      "fail": "It rejoins; or the page vanishes; or a second page appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The fringe stays on the coil where the page was torn.",
+      "fail": "There is no fringe; or the fringe is there before the tear; or the page tears elsewhere."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The loose page droops or lies flat.",
+      "fail": "It floats; or rises; or hangs unsupported."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One notebook keeps its number, and the hand does not pass through it.",
+      "fail": "The hand passes through the notebook; or a second notebook appears; or the page turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The notebook's cover and the writing stay the same.",
+      "fail": "The cover changes; or the writing changes; or the desk rearranges."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0075",
+  "caption": "A microphone on a stand is tapped, and the mic head jiggles on its clip with each tap.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A microphone on a stand."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The microphone is tapped."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mic head jiggles on its clip."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "There are several taps in the clip."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Each tap comes before its jiggle."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The mic is still until tapped and each jiggle begins at a tap.",
+      "fail": "The mic jiggles before the finger touches it; or jiggles with the hand away; or the finger taps and the mic stays dead still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each jiggle shrinks after its tap and settles before or as the next tap comes.",
+      "fail": "The jiggle grows after a tap with the hand away; or stops dead in a tilted pose; or the mic keeps jiggling unchanged with no further taps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The mic moves away from the finger's push and swings back about its clip.",
+      "fail": "The mic moves toward the tapping finger; or moves in a direction unrelated to the tap; or jumps up out of the clip and settles back."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The stand and the mic body are rigid; the clip flexes.",
+      "fail": "The stand bends like rubber; or the mic body flexes; or the cable stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One microphone on one stand; the finger does not pass through the mic.",
+      "fail": "A second microphone appears; or the mic vanishes; or the finger passes through the mic; or the stand changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mic's colour, the stand's height and the background stay the same.",
+      "fail": "The mic changes colour; or the stand changes height; or the background changes."
+    }
+  ],
+  "note": "The tapping hand is a trigger and is not judged."
+}

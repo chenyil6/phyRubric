@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0078",
+  "caption": "A seagull walks across a wet beach at low tide, and its reflection shows beneath it on the thin sheet of water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A seagull walks across a wet beach at low tide."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its reflection shows beneath it on the thin sheet of water."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflection appears only where the sand is covered by water."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection breaks up in the bird's footprints."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The inverted reflection appears only where the sand is covered by water and follows the bird's steps.",
+      "fail": "It appears on dry sand; or stays still while the bird walks; or it is missing on plainly wet sand."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is inverted and joined at the feet.",
+      "fail": "It is upright; or detached; or a different bird."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is a thin liquid sheet: the reflection breaks up in the footprints.",
+      "fail": "It is rigid like glass; or the footprints leave the reflection intact; or the water flows uphill."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It moves with the bird still; or drifts across the sand."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One seagull and one reflection.",
+      "fail": "A second bird appears; or the reflection rises off the sand; or the bird vanishes; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plumage and the beach stay the same.",
+      "fail": "The plumage changes; or the beach rearranges; or the sea changes."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the reflection's relation to it is."
+}

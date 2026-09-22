@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0014",
+  "caption": "A long wooden fishing rod is tapped against a post, and the tip whips back and forth in a blur before settling.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A long fishing rod and a post are present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The rod is tapped against the post."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The tip whips back and forth in a blur."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The tip settles."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rod is long and wooden."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The tap comes first and the whipping follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The rod is still until it meets the post; the tip begins to whip at the tap and only then.",
+      "fail": "The tip is already whipping before the rod touches the post; or whips while the rod is held away from the post; or the rod knocks the post and the tip stays rigid; or the tip settles and starts whipping again with no second tap."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The tip's swings are largest right after the tap and shrink steadily until the rod is still; the blur narrows.",
+      "fail": "The swings grow after the tap; or hold the same width for the whole clip; or the tip stops dead from a wide swing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The rod bends as a tapered springy pole: the tip flexes most, the handle end stays nearly straight, and the rod returns straight.",
+      "fail": "The rod kinks and stays bent; or the handle end whips while the tip stays still; or the rod bends into a loop like a rope."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The post stays fixed and upright; only the rod moves.",
+      "fail": "The post sways or leans at the tap; or the post's top whips like the rod; or the ground around the post ripples."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One rod and one post; the rod stays one piece and passes through nothing.",
+      "fail": "The rod passes through the post; or the tip breaks off; or a second rod appears; or the post vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rod's colour and its line guides, the post and the background stay the same.",
+      "fail": "The rod changes colour; or the line guides move along the rod; or the post changes shape or colour; or the background changes."
+    }
+  ]
+}

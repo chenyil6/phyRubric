@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0004",
+  "caption": "A pat of butter on a small plate is heated in a microwave and slowly melts.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pat of butter sits on a small plate."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The plate is inside a microwave."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The butter melts: it slumps and turns to liquid."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A pool of butter spreads on the plate."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pat starts with sharp edges."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is solid pat, slumping, pool."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The melting runs one way: the pat shrinks while the pool grows, and each change persists.",
+      "fail": "The pat regains its sharp edges or its height; or the pool shrinks back into the pat; or the butter sets solid again while the microwave runs; or the pat alternates between softer and firmer."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The butter that leaves the pat is the butter in the pool: one pat on one plate, and nothing appears or vanishes.",
+      "fail": "The pat grows while the pool spreads; or a second pat appears; or butter appears past the plate's rim with none crossing it; or butter appears on the plate away from both the pat and the pool."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pool spreads outward and settles level in the plate's well.",
+      "fail": "The pool climbs the plate's rim and stays above it; or a run of butter travels up the rim; or liquid butter lifts off the plate and hangs above it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The liquid butter is thin and glossy and finds its own level; the pat is a soft solid that slumps.",
+      "fail": "The pool holds a dome or a fixed ridge; or the melt moves as a solid slab; or the pat shatters into dry pieces; or the pool keeps its shape when the plate is moved."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The plate keeps its shape and the butter stays on it; nothing passes through the plate.",
+      "fail": "Butter passes through the plate; or the plate changes shape or vanishes; or a second plate appears; or the plate merges with the surface under it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plate's pattern and the microwave's interior stay the same.",
+      "fail": "The plate's pattern changes; or the microwave's interior changes; or the walls inside change colour."
+    }
+  ],
+  "note": "Spitting or popping of the butter is expected and is not judged."
+}

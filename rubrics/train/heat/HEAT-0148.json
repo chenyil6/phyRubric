@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0148",
+  "caption": "A lit match is dropped into a fire pit filled with kindling, and the fire catches and grows from the bottom up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A fire pit is filled with kindling."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lit match is dropped into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The kindling catches where the match lands."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flames spread upward through the kindling."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Smoke rises from the pit."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The fire grows from the bottom up rather than starting at the top."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The kindling catches at the spot the match lands and the fire spreads from there.",
+      "fail": "The kindling catches before the match lands; or the match lands among the kindling and nothing catches at all; or the fire starts at the top of the pile while the match lies at the bottom; or the fire starts at a corner of the pit the match never reached."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fire only spreads and the charred kindling stays charred.",
+      "fail": "Charred kindling turns back to pale wood; or the flame front retreats leaving unburnt kindling behind it; or the fire catches, goes out and catches again with nothing added; or the pile grows as it burns."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The flames climb upward through the pile and the smoke rises, while embers and ash settle down.",
+      "fail": "The flames travel downward from the top of the pile; or the smoke sinks and pools around the pit; or the flames hang below the pit's floor; or ash rises and stays aloft."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The kindling sticks char, curl and crumble and the pile settles as they burn, while the pit stays a rigid ring.",
+      "fail": "A stick melts and drips; or the sticks stay pale and straight while flames cover them; or the pile lifts as one solid block; or the pit's stones sag."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The kindling in the pit is the kindling that burns and the match is one stick; nothing appears from nowhere.",
+      "fail": "New kindling appears in the pit; or a stick vanishes leaving no ash; or a second lit match appears; or the match passes through the pit's floor."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pit's stones, the ground and the surroundings stay the same.",
+      "fail": "The stones rearrange; or the ground changes texture; or the background changes between frames."
+    }
+  ],
+  "note": "Who drops the match is not judged."
+}

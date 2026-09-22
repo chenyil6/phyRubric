@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0018",
+  "caption": "A bead of hot glue is squeezed from a glue gun onto a piece of wood, a button is pressed into it, and the glue sets hard around the button.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glue gun squeezes a bead of glue onto a piece of wood."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A button is pressed into the glue."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The glue sets: it stops moving and holds the button."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The glue comes out clear and runny."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "A thin string of glue trails as the gun lifts."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is bead, button pressed in, glue set."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The glue flows while it leaves the nozzle, then stops spreading and stays put with the button in it.",
+      "fail": "The set glue turns runny again and flows on with nothing heating it; or the bead draws back into the nozzle; or the glue sets and then spreads again with none added; or the button rises back out of the set glue."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The glue leaves the nozzle as a thick liquid that mounds and strings, and where it sets it is a firm cloudy solid that holds the button and does not flow.",
+      "fail": "The glue runs off the wood as thin as water; or the set glue stretches like elastic as the button is pushed; or the bead keeps a rigid shape as it leaves the nozzle; or the glue soaks into the wood and disappears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bead falls from the nozzle down onto the wood and the string of glue hangs and sags from the nozzle.",
+      "fail": "The bead travels upward from the nozzle; or the string stands straight up from the wood; or the bead hangs in the air between nozzle and wood; or glue runs up the gun's nozzle."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Pressing the button spreads the glue: it squeezes out around the button's edge and the button sits down into the bead.",
+      "fail": "The button presses in and the glue stays a smooth untouched mound; or glue squeezes out on a part of the wood away from the button; or the button rests on top of the bead with no glue rising around it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One button on one bead on the wood; the button sits in the glue and the gun stays outside it; nothing passes through the wood.",
+      "fail": "The button sinks through the wood; or the nozzle passes into the wood; or a second button appears; or the button vanishes into the glue leaving no bulge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wood's grain away from the bead, the button's face and the gun stay the same.",
+      "fail": "The wood's grain changes pattern; or the button's face changes design; or the gun changes colour."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0277",
+  "caption": "A fridge door is opened in a steamy kitchen, and the cold glass shelves inside fog over.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A fridge door is opened in a steamy kitchen."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The glass shelves inside fog over."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The fog thickens while the door stays open."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The fog is on the cold surfaces inside."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The outside of the door stays clear."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The opening comes first and the fogging follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The fog appears on the cold shelves and inner walls once the door is open and not before.",
+      "fail": "The shelves are fogged before the door opens; or the door opens and the cold shelves stay clear and bright to the end of the clip; or the fog appears on the warm outside of the door while the shelves stay clear; or the fog appears on the kitchen's walls rather than inside the fridge."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog only thickens while the door stays open and the warm air keeps reaching the shelves.",
+      "fail": "The fog clears while the door stays open in the steamy kitchen; or the fog thins and thickens in turn; or the fog thickens after the door has been shut and the cold has returned; or the fog retreats to the shelves' edges while the door stays open."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Drops that gather on the shelves run downward and drip to the shelf below.",
+      "fail": "A drop runs up a shelf's face; or a drop leaves a shelf and rises; or water gathers along a shelf's top edge and stays; or drops hang in the air between shelves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fog is a fine haze that beads on the glass, and the shelves stay rigid clear plates.",
+      "fail": "The fog stands off the glass as a thick crust; or peels away as a film; or a shelf flexes as it fogs; or the haze turns opaque white like paint."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One fridge with its shelves and contents; the contents keep their number while the door is open.",
+      "fail": "An item on a shelf vanishes; or new items appear; or a shelf vanishes; or the door passes through the cabinet's frame."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fridge's interior, its door seal and the kitchen stay the same.",
+      "fail": "The interior changes colour; or the seal changes shape; or items in the kitchen rearrange."
+    }
+  ]
+}

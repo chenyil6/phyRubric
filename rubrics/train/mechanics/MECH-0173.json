@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0173",
+  "caption": "A box of dry pasta is tipped into a pot of boiling water, and the pasta sinks and settles at the bottom.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A box of dry pasta is tipped into a pot of boiling water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pasta sinks."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It settles at the bottom."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The water is boiling."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tip comes first, then the sinking, then the settling."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The pieces slide out, splash in, and sink to the bottom.",
+      "fail": "They float on the surface; or hang mid-water; or rise."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The pieces are rigid dry pasta that clatter and pile loosely.",
+      "fail": "They bend like cooked pasta at once; or dissolve; or land as one block."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "A splash and a disturbed surface appear where the pasta lands.",
+      "fail": "The surface is undisturbed; or the splash is elsewhere; or the splash comes before the pasta."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The pot stays put.",
+      "fail": "It slides; or tips; or the pasta moves after settling."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One box and one pot, and pasta comes only from the box.",
+      "fail": "Pasta appears with no tip; or the pot duplicates; or pasta passes through the pot."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the box and the stove stay the same.",
+      "fail": "The pot changes; or the box changes; or the stove rearranges."
+    }
+  ]
+}

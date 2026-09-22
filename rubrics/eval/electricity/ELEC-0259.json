@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0259",
+  "caption": "The switch for a porch light is flipped at dusk, and the porch is lit while the garden beyond stays dark.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A porch with a light, and the garden beyond, at dusk."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The porch light's switch is flipped."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The porch is lit."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The garden beyond stays dark."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sky is dim: dusk, not full night or daylight."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dim, flip, porch lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The porch light comes on at the flip, and only then, and the porch brightens with it.",
+      "fail": "The switch is flipped and the porch stays as it was; or the porch is lit before the flip; or the light comes on with the switch untouched; or the fixture glows while the porch stays as dark as before."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the light stays lit and the porch stays lit for the rest of the clip.",
+      "fail": "The light goes out again by itself; or flickers; or dims back to dusk; or the switch flips back by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light falls off with distance: the porch is brightest near the fixture and the garden beyond stays at its dusk level.",
+      "fail": "The garden lights up as brightly as the porch; or the garden brightens while the porch stays dark; or the light comes from the garden side; or the porch brightens evenly with no falloff."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing on the porch or in the garden moves at the flip; the fixture stays fixed.",
+      "fail": "Porch furniture shifts at the flip; or the fixture swings; or plants in the garden jump; or the door opens by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One porch light and one switch; the porch's and garden's contents are the same before and after; the hand passes through nothing.",
+      "fail": "Objects appear or vanish between dim and lit frames; or a second light appears; or the hand passes into the wall; or the fixture vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The porch's colours, the fixture and the garden's plants stay the same apart from brightness.",
+      "fail": "The porch changes colour rather than brightness; or the fixture changes shape; or the sky jumps from dusk to full night or back."
+    }
+  ]
+}

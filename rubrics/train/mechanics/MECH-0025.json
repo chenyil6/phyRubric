@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0025",
+  "caption": "A stack of coins on the corner of a kitchen counter is knocked off by an elbow and the coins scatter on the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stack of coins stands on the corner of a kitchen counter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "An elbow knocks the stack off the counter."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The coins scatter on the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Several coins are involved rather than a single one."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The knock comes first and the scattering follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The coins that leave the counter are the coins that arrive on the floor, keeping their number.",
+      "fail": "Coins appear on the floor that were never in the stack; or a coin vanishes on the way down; or the stack still stands whole on the counter after the coins have landed."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Every coin travels downward from the counter to the floor.",
+      "fail": "A coin rises after being knocked; or a coin hangs in the air beside the counter; or a coin climbs back onto the counter."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The stack breaks apart as it goes and the coins spread out on the floor below the corner, each spinning or bouncing to rest.",
+      "fail": "The coins fall as one rigid column and land still stacked; or they gather themselves back into a neat stack on the floor; or a coin rebounds higher than the counter it fell from."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The coins stay flat rigid discs, ringing and spinning on the floor.",
+      "fail": "A coin bends or folds where it lands; or a coin splashes on the tiles; or a coin sinks into the floor as if into mud."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The coins, the counter and the floor stay solid and separate.",
+      "fail": "A coin passes through the counter or through the floor; or two coins merge into one; or a coin turns into another object mid-fall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The coins' colour, the counter and the kitchen stay the same.",
+      "fail": "A coin changes colour or size as it falls; or the counter's surface changes pattern between frames; or the kitchen behind rearranges."
+    }
+  ],
+  "note": "The elbow is kept as the minimal trigger for the fall; the person behind it is not judged."
+}

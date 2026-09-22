@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0191",
+  "caption": "A feather is dropped in front of a running box fan and is carried away by the airflow before drifting to the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A box fan is running."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A feather is dropped in front of it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The feather is carried away by the airflow."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It drifts to the floor."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drop comes first, then the carry, then the landing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The feather moves away from the fan, tumbling, and lands some distance off.",
+      "fail": "It falls straight down in front of the fan; or moves toward the fan; or shoots off fast like a dart."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It sinks as it drifts and reaches the floor.",
+      "fail": "It rises indefinitely; or hangs still; or drops like a stone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The feather moves with the airflow only.",
+      "fail": "It changes direction sharply with the fan steady; or moves before it is released; or hangs motionless in the airflow."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The feather is light and flutters and spins.",
+      "fail": "It is rigid; or folds like cloth; or splits."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One feather and one fan keep their number.",
+      "fail": "The feather duplicates; or vanishes in the air; or the fan turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The feather's colour and the room stay the same.",
+      "fail": "The feather changes colour; or the fan changes; or the room rearranges."
+    }
+  ]
+}

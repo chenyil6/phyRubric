@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0277",
+  "caption": "A ball rolls past a wall of glass bricks, and seen through the bricks it appears as a broken row of warped pieces that move together.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ball rolls past a wall of glass bricks."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Seen through the bricks it appears as a broken row of warped pieces."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pieces move together."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The ball looks whole and normal past the open edge of the wall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The ball is whole and normal where it passes the open edge; the broken pieces are appearances through the bricks.",
+      "fail": "The ball is broken past the edge; or it is whole and sharp through the bricks; or it changes shape."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The distorted pieces move in step with the ball and only within the bricks.",
+      "fail": "The pieces lag; or appear outside the bricks; or remain after the ball has passed."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The ball rolls straight and slows gently.",
+      "fail": "It curves; or speeds up; or restarts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bricks are rigid glass.",
+      "fail": "They ripple; or bend; or go opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one wall.",
+      "fail": "A second ball appears; or the wall vanishes; or the ball passes through a brick."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and the wall stay the same.",
+      "fail": "The ball changes colour; or the wall changes; or the floor changes."
+    }
+  ]
+}

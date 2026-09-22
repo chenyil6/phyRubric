@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0158",
+  "caption": "A plastic ketchup bottle is squeezed over a plate of fries, and ketchup comes out of the nozzle onto the fries.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A plastic ketchup bottle is held over a plate of fries."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is squeezed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Ketchup comes out of the nozzle."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It lands on the fries."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The squeeze comes first and the flow follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Ketchup flows only while the bottle is squeezed.",
+      "fail": "It flows from an unsqueezed bottle; or the bottle is squeezed and nothing comes out; or it keeps flowing after the squeeze is released."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The bottle dents where pressed and refills its shape when released, and the ketchup comes out as a thick stream.",
+      "fail": "The bottle stays dented; or it does not dent; or the ketchup pours thin like water."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The stream falls straight down onto the fries.",
+      "fail": "It curves upward; or hangs; or flows back into the nozzle."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The ketchup on the plate only accumulates.",
+      "fail": "It shrinks back; or it is there before the squeeze; or it jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bottle, and ketchup comes only from the nozzle.",
+      "fail": "Ketchup appears with no stream; or the bottle duplicates; or ketchup passes through the bottle wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bottle's label, the plate and the fries stay the same.",
+      "fail": "The label changes; or the plate changes; or the fries rearrange."
+    }
+  ]
+}

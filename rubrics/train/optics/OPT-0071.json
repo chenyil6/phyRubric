@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0071",
+  "caption": "A dog sits in front of a glossy black oven door and tilts its head, and its reflection tilts its head the other way.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog sits in front of a glossy black oven door."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It tilts its head."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its reflection tilts its head the other way."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection is dimmer than the real dog."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflected dog moves at the same time as the real one.",
+      "fail": "It moves first or later; or it stays still while the dog tilts; or it tilts while the dog is still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image: the same dog facing the real one, tilting to the mirrored side.",
+      "fail": "It tilts the same way as a rotated copy would; or it is a different dog; or it shows the dog's back."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It shifts while the dog is still; or it slides across the door."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The door is flat and rigid: the reflection is undistorted and dim.",
+      "fail": "The door ripples; or the reflection warps; or it is brighter than the dog."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One dog and one reflection; the reflection stays in the door.",
+      "fail": "A second dog appears; or the reflection steps out; or the dog vanishes; or the dog passes into the door."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dog's coat and the kitchen stay the same.",
+      "fail": "The coat changes; or the oven changes; or the kitchen rearranges."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the reflection's relation to it is. Mirror geometry: each point of the image lies directly across the mirror surface from the real point, so the image is a mirror copy, not a rotated one."
+}

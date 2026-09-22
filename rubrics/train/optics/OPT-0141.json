@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0141",
+  "caption": "A clear lid is lifted from a pot, and the food that was visible through the lid is seen the same underneath.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A clear lid is on a pot."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Food is visible through the lid."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lid is lifted."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The same food is seen underneath."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lift comes first and the food is seen after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The food seen through the lid matches what is there when the lid comes off.",
+      "fail": "The lid hides the food; or different food is underneath; or the food changes as the lid lifts."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The lid did not hide or change the food.",
+      "fail": "Food vanishes when the lid lifts; or appears; or doubles."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lid moves only with the hand and the pot stays put.",
+      "fail": "The lid floats off; or the pot slides; or the food moves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The lid is rigid and clear, possibly steamed.",
+      "fail": "It bends; or ripples; or goes solid opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lid and one pot.",
+      "fail": "The lid duplicates; or the pot vanishes; or the lid passes through the pot."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot and the stove stay the same.",
+      "fail": "The pot changes colour; or the stove changes; or the food changes colour abruptly."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

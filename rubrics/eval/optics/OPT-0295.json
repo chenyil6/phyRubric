@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0295",
+  "caption": "A rainbow appears in the mist at the foot of a waterfall on a sunny day, and fades when a cloud covers the sun.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A rainbow appears in the mist at the foot of a waterfall on a sunny day."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A cloud covers the sun."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The rainbow fades."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rainbow sits within the mist opposite the sun."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The rainbow sits within the mist opposite the sun and disappears when the sun is hidden.",
+      "fail": "It is on the rock; or stays bright with the sun hidden; or appears with no sun."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The rainbow keeps its arc while the sun shines and does not move across the scene.",
+      "fail": "It moves; or changes shape; or a second rainbow appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The bands show the spectrum's order.",
+      "fail": "They are in random order; or a single colour; or change colours."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The waterfall falls and the mist drifts.",
+      "fail": "The water rises; or the mist hangs rigidly; or falls upward."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One waterfall.",
+      "fail": "A second waterfall appears; or it vanishes; or the rainbow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rocks and the trees stay the same.",
+      "fail": "The rocks rearrange; or the trees change; or the water changes colour."
+    }
+  ]
+}

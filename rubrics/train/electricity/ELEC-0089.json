@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0089",
+  "caption": "Lightning flashes over a wet city street at night, and the flash is mirrored in the puddles and the wet pavement.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A city street at night with wet pavement and puddles."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lightning flashes over the street."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flash is mirrored in the puddles and the wet pavement."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Streetlights are lit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The mirrored flash appears with the flash in the sky, not before it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is brief; the sky and its reflections return to dark together; flashes may repeat but each ends.",
+      "fail": "The sky stays lit for the rest of the clip; or the reflection remains lit after the sky is dark; or the flash fades in slowly; or the sky turns to daylight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflections lie in the wet surfaces below the lit sky, with the dark shapes of buildings between; they appear only during the flash.",
+      "fail": "The sky flashes while puddles and pavement stay as dark as before; or the puddles brighten while the sky stays dark; or the bright patch in a puddle sits under a building where no sky is above it; or the reflection appears before the sky flashes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Streetlights, lit windows and signs keep their steady glow through the flash; nothing in the street moves at the flash.",
+      "fail": "Streetlights blink out at the flash or all change together; or lit windows go dark at once; or parked cars or bins shift at the flash."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "Buildings, cars and street furniture are the same across dark and lit frames.",
+      "fail": "Buildings or cars appear or vanish between dark and lit frames; or puddles appear or vanish between frames; or a sign changes place."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The street stays a street: the puddles are thin water on a solid surface, buildings keep their shape and nothing passes through anything.",
+      "fail": "A puddle swallows an object; or a building changes shape; or a bolt passes through a building and lights its inside; or the street surface ripples like open water."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Building and sign colours and the pavement stay the same apart from brightness.",
+      "fail": "Signs change lettering or colour; or buildings change colour; or a puddle changes shape while nothing disturbs it."
+    }
+  ]
+}

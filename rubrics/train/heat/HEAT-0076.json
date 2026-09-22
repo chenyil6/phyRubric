@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0076",
+  "caption": "A lid is lifted from a pan of steamed vegetables, and steam rises to fog the range hood above.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pan of vegetables with a lid stands under a range hood."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lid is lifted."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Steam rises from the pan."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The hood above fogs where the steam reaches it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The steam spreads under the hood."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is lift, rise, fogging."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam rises straight from the pan to the hood and spreads under it.",
+      "fail": "The steam sinks toward the counter and pools; or pours down the pan's sides; or hangs as a fixed shape without rising; or travels down from the hood into the pan."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The steam keeps leaving the pan and the fogging on the hood only builds while the steam reaches it.",
+      "fail": "The plume runs back into the pan; or the fog on the hood clears while steam still hits it; or the hood fogs before the lid is off; or a puff retreats toward the pan."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The hood fogs where the steam meets it and stays clearer away from the plume.",
+      "fail": "The hood fogs evenly all over while the plume hits one spot; or the hood fogs in a place the steam never reaches; or the steam hits the hood and its metal stays dry and bright."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The steam is a soft cloud that spreads and fades, the fog on the hood is a fine haze that may bead, and the lid is a rigid piece.",
+      "fail": "The steam holds a fixed rigid shape; or the fog on the hood stands out as a thick crust; or the lid bends like cloth as it lifts; or the steam pours like a liquid over the hood's lip."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pan with one lid under one hood; the vegetables keep their number and stay in the pan.",
+      "fail": "A vegetable vanishes; or new vegetables appear; or the lid passes through the pan's rim; or the hood changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hood's metal away from the fog, the pan and the hob stay the same.",
+      "fail": "The hood changes colour; or the pan changes shape; or the hob's knobs move by themselves."
+    }
+  ]
+}

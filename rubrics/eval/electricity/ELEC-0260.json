@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0260",
+  "caption": "A running record player is unplugged, and the turntable slows to a stop while the needle still rests on the record.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A record player runs, its turntable spinning with the needle on the record."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The player is unplugged."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The turntable slows to a stop."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The needle stays resting on the record."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The turntable slows before it stops rather than halting at once."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is spinning, unplug, slowing, stopped."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The turntable begins to slow after the plug leaves the socket, not before, and comes to rest.",
+      "fail": "The plug is out and the turntable spins at full speed to the end of the clip; or the turntable slows before the plug moves; or the turntable slows with the plug still seated; or the player's light stays lit with the plug out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The turntable coasts down one way and, once stopped, does not move again while the plug is out.",
+      "fail": "The turntable halts dead at the instant the plug comes out; or starts again with the plug out; or speeds up after the pull; or reverses direction."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The tone arm stays resting where it is on the record; it does not lift or swing by itself.",
+      "fail": "The arm lifts and returns to its rest by itself; or the needle skips across the record; or the arm swings out; or the record lifts off the platter."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord follows the plug: it slackens and drops once the plug is free and stays attached at both ends.",
+      "fail": "The cord stretches like elastic; or stands rigid in the air after the plug is out; or the player is dragged by the pull."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One player, one record, one arm; the plug leaves the socket whole; nothing vanishes or passes through the wall.",
+      "fail": "The record vanishes or a second appears; or the plug passes through the wall; or the arm detaches; or the cord splits."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The player's casing, the record's label and the surface stay the same.",
+      "fail": "The casing changes colour; or the record's label changes; or the surface's contents rearrange."
+    }
+  ],
+  "note": "The sound stopping is not judged; how many turns the platter coasts is not judged."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0038",
+  "caption": "A park bench stands beside a wall at dusk as the streetlights come on, and a shadow of the bench appears on the wall away from the nearest light.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A park bench stands beside a wall at dusk."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The streetlights come on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A shadow of the bench appears on the wall, away from the nearest light."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow appears only when the lights come on."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow appears only when the lights come on and points away from the lamp that lit up.",
+      "fail": "It is there before the lights; or it points toward the lamp; or the lights come on and no shadow appears."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the bench's outline, slats and legs.",
+      "fail": "It is a different shape; or splits under one lamp; or it is a plain blob."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move with the bench and lamp fixed.",
+      "fail": "It drifts across the wall; or swings round; or changes length."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow is attached at the bench's legs and lies on the wall and ground behind it.",
+      "fail": "It floats detached; or appears on the lamp side; or it is missing with the lamp on."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bench and one shadow per lamp.",
+      "fail": "The bench duplicates or vanishes; or the shadow becomes solid; or the bench passes through the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bench and the wall stay the same, and the shadow stays dark.",
+      "fail": "The bench changes colour; or the shadow turns coloured; or the wall changes."
+    }
+  ]
+}

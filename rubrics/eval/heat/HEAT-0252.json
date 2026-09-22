@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0252",
+  "caption": "A handful of gummy bears is scattered on a hot baking tray, and they soften, slump and spread into flat glossy blobs.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Gummy bears are scattered on a baking tray."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bears soften and slump."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bears spread into flat glossy blobs."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Each bear loses its shape from the bottom up."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bears keep their own colours."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The softening comes first and the spreading follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Each bear loses its ears, arms and face from the bottom upward and becomes a wider, lower blob.",
+      "fail": "A bear keeps its sharp ears and face while flat and glossy; or a bear shrinks upward into a taller narrower shape; or a bear's features sharpen as it melts; or a bear turns into another figure."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The slumping only advances and the blobs do not firm up again on the hot tray.",
+      "fail": "A blob draws back up into a standing bear; or a blob's edges pull inward and it stands taller; or the bears set firm and matt again on the hot tray; or a bear alternates between standing and slumped."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Each bear sinks downward onto the tray and its blob spreads outward and downhill.",
+      "fail": "A bear rises off the tray; or a blob climbs the tray's rim and stays; or a blob spreads uphill on a tilted tray; or melted gummy lifts off the tray."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The gummy softens into a thick glossy liquid that flows slowly and keeps a rounded edge.",
+      "fail": "A blob runs as thin as water; or a bear shatters dry; or a blob stands as a rigid dome with sharp edges; or a bear stretches into a thread that snaps back like elastic."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The bears on the tray are the bears that were scattered; none appears or vanishes.",
+      "fail": "A bear vanishes; or a new bear appears on the tray; or a blob grows with nothing added; or a blob passes through the tray."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Each blob keeps its bear's colour, and the tray and the surroundings stay the same.",
+      "fail": "A blob is a different colour from its bear; or the tray changes colour; or items around the tray rearrange."
+    }
+  ]
+}

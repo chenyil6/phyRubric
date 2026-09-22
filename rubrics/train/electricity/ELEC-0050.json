@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0050",
+  "caption": "A charging cable is plugged into an electric car, and a light on the charging port comes on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An electric car with its charging port open."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A charging cable is plugged into the port."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A light on the port comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The port light is off before the cable is in."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is plug in, then light."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The port light comes on after the connector seats in the port, and only then.",
+      "fail": "The connector is seated and the light stays dark to the end of the clip; or the light is on before the connector reaches the port; or the light comes on with the cable hanging loose; or a light elsewhere on the car comes on while the port light stays dark."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the light stays on or settles to a steady pattern while the cable stays in; it goes off only if the cable is removed.",
+      "fail": "The light goes out again with the cable seated; or switches off and on at random; or the light stays on after the cable is pulled; or the connector backs out by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cable is a thick flexible lead that hangs in a curve from the connector to the charger and stays attached.",
+      "fail": "The cable stands rigid in the air; or stretches like elastic; or floats; or the connector detaches from the cable."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The car stays still as the cable goes in; the port flap does not move by itself.",
+      "fail": "The car rolls or rocks; or the flap closes on the cable by itself; or the charger post shifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One connector in one port; the connector enters the port rather than the body panel; the hand passes through nothing.",
+      "fail": "The connector passes into the panel beside the port; or a second connector appears; or the connector vanishes; or the car's panel changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's paint, the cable's colour and the surroundings stay the same apart from the light.",
+      "fail": "The car changes colour; or the cable changes colour; or the charger post changes shape."
+    }
+  ]
+}

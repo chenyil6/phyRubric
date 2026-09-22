@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0130",
+  "caption": "A stovetop lighter is clicked, and a blue spark jumps between its two metal tips.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stovetop lighter with two metal tips."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lighter is clicked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A spark jumps between the two tips."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The spark is blue."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The click comes first and the spark follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spark is a brief bridge between the two tips at the click, and is gone; there is no spark while the button is not pressed.",
+      "fail": "The spark glows on between the tips after the click; or a spark appears while the lighter lies untouched; or the spark appears at a place other than between the tips; or the spark drifts away from the tips as a lit point."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One lighter with two tips; the tips stay in place and the spark leaves nothing behind.",
+      "fail": "A tip vanishes or a third tip appears; or a second lighter appears; or a glowing dot stays between the tips after the flash; or the lighter changes shape."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The spark is a thin line or arc spanning the gap between the tips.",
+      "fail": "The spark is a ball that hangs in the gap; or a wide glowing sheet; or a line that spans from a tip to somewhere other than the other tip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lighter moves only in the hand; the tips do not move relative to each other; nothing nearby moves at the click.",
+      "fail": "The tips spread apart or close at the click; or the lighter jumps in the hand at the spark; or objects nearby shift at the click."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The lighter stays a rigid tool; the tips do not pass through each other or into the body; the hand passes through nothing.",
+      "fail": "The tips merge into one; or the tips pass through each other; or the lighter melts or bends; or fingers pass through the lighter."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lighter's colour and the background stay the same.",
+      "fail": "The lighter changes colour; or the tips change length; or the background rearranges."
+    }
+  ]
+}

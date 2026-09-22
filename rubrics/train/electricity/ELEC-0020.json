@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0020",
+  "caption": "A neon shop sign is switched on, and the tubes flicker and then glow steadily.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A neon shop sign, dark."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sign is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The tubes flicker."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The tubes then glow steadily."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sign is dark before the switch."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark, switch, flicker, steady glow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The tubes begin to light at the switch, and only then.",
+      "fail": "The switch is thrown and the sign stays dark to the end of the clip; or the tubes glow before the switch is touched; or the sign lights up with the switch untouched; or only the frame lights and the tubes stay dark."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flicker comes first and settles into a steady glow that lasts for the rest of the clip; the sign does not go back to flickering or dark.",
+      "fail": "The sign glows steadily and then starts flickering; or goes dark again after glowing; or flickers to the end of the clip without ever settling; or the glow fades out and returns."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The lit tubes are the tubes seen dark: the same shapes and letters in the same places; the glow follows the tube's path.",
+      "fail": "Lit letters appear where no tube was; or a tube seen dark is gone once lit; or the glow spreads off the tubes into the air; or the letters change shape or spelling."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The sign's glow reaches its surroundings: the wall behind and the pavement below take on the sign's colour.",
+      "fail": "The tubes glow while the wall behind stays as dark as before; or the wall brightens while the tubes stay dark; or the glow on the wall is a different colour from the tubes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The sign keeps its tubes, frame and mounting; nothing passes through the wall.",
+      "fail": "The sign vanishes or a second sign appears; or the tubes bend into new shapes; or the sign passes into the wall; or the frame melts."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sign's tube colours and the shopfront stay the same apart from the glow.",
+      "fail": "A tube changes colour once steady; or the shopfront changes; or the lettering changes font."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0167",
+  "caption": "A magnet is held against a plastic toy and released, and the magnet falls to the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A plastic toy."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnet is held against the toy."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The magnet is released: the hand lets go."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The magnet falls to the floor."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The toy looks like moulded plastic."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is hold, release, fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The instant the hand opens, the magnet leaves the plastic surface and begins to fall.",
+      "fail": "The magnet stays on the plastic after release with nothing supporting it; or creeps down the toy's surface still in contact with it; or hangs at a gap from the toy; or the toy lifts away with the magnet."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The magnet falls straight down from where it was let go and comes to rest on the floor below.",
+      "fail": "The magnet drifts upward or sideways after release; or halts in mid-air; or lands and then rises back up to the toy."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The toy stays put as the magnet is released and falls; once landed the magnet lies still.",
+      "fail": "The toy tips, slides or lifts as the magnet drops; or the landed magnet slides toward the toy with nothing pushing it; or the magnet starts moving again after coming to rest."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The toy and the magnet keep their shapes; the floor stays flat where the magnet lands.",
+      "fail": "The toy stays dented after the magnet has left it; or the magnet squashes or flattens on landing; or the floor dents under the magnet."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One magnet and one toy; the magnet passes through neither the toy nor the floor and does not vanish on the way down.",
+      "fail": "The magnet vanishes in mid-fall; or a second magnet appears; or the magnet passes into the toy or through the floor; or the toy turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The toy's colours, the magnet's colour and shape and the floor stay the same.",
+      "fail": "The toy changes colour; or the magnet changes shape or colour between release and landing; or the floor pattern changes."
+    }
+  ],
+  "note": "P1 assumes the toy shown is plastic, as the caption says. A toy that plainly reads as metal fails S1 and S5; the magnet holding on such a toy is then not a P1 failure."
+}

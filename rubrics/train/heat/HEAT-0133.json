@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0133",
+  "caption": "Air is blown gently onto the embers of a fire, and they glow brighter and a small flame springs up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Embers of a fire."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Air is blown onto the embers."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The embers glow brighter."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A small flame springs up."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flame appears at the brightest spot."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The glow eases when the blowing stops."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The embers brighten where the air reaches them while the blowing lasts, and the flame appears at the brightest spot.",
+      "fail": "The embers brighten before any air reaches them; or the air is blown onto the embers and nothing brightens; or the embers brighten on the far side from the blowing; or the flame appears away from the brightened embers."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The brightening follows the blowing and eases when it stops, and the embers do not turn back into unburnt wood.",
+      "fail": "The glow keeps brightening after the blowing has stopped; or a glowing ember turns back into pale unburnt wood; or the glow eases while the blowing goes on; or the flame appears before the embers brighten."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flame points upward from the embers and any ash or sparks lifted by the air rise and then settle.",
+      "fail": "The flame points downward into the ash; or ash blown up keeps rising and stays aloft; or sparks fall through the grate and lie glowing below; or the flame hangs below the embers."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The embers are crumbling glowing lumps and the ash is loose dust that lifts in the moving air.",
+      "fail": "An ember bounces like a rubber ball as the air hits it; or the ash stays a rigid crust as the air blows over it; or the embers flow like a liquid; or the ash lifts as one solid sheet."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The embers are the embers that were there; none appears from nowhere or vanishes at a stroke while bright.",
+      "fail": "A glowing ember appears from nowhere; or an ember vanishes at a stroke while still bright; or the flame detaches and floats away from the wood; or a second fire appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The grate, the surround and the surroundings stay the same.",
+      "fail": "The grate changes shape; or the surround changes colour; or the background changes between frames."
+    }
+  ],
+  "note": "The breath is invisible; the embers brightening is what shows it. Who blows is not judged."
+}

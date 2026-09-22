@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0089",
+  "caption": "A motorboat crosses a glassy lake at low speed, and its reflection travels with it, broken only by the wake.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A motorboat crosses a glassy lake at low speed."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its reflection travels with it."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflection is broken only by the wake."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection is attached at the waterline."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection travels with the boat and distorts only in the wake behind.",
+      "fail": "It stays still while the boat moves; or it is broken ahead of the boat; or it lags."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is inverted and attached at the waterline.",
+      "fail": "It is upright; or detached; or a different boat."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid: the wake spreads behind and the surface ahead is flat.",
+      "fail": "It is rigid; or the wake runs ahead; or the water leaps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It moves with the boat stopped; or drifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One boat and one reflection; the reflection stays on the water.",
+      "fail": "A second boat appears; or the reflection rises off the water; or the boat vanishes; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The boat and the shore stay the same.",
+      "fail": "The boat changes colour; or the shore rearranges; or the sky changes abruptly."
+    }
+  ]
+}

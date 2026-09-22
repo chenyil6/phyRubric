@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0068",
+  "caption": "Water is poured onto the hot coals of a barbecue after cooking, and a hissing cloud of steam rises from the grill.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A barbecue holds hot coals."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Water is poured onto the coals."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A cloud of steam rises from the grill."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The coals darken where the water lands."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The coals glow before the water is poured."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the steam follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The water falls downward onto the coals while the steam rises from them, spreading and thinning.",
+      "fail": "The water travels upward from the jug; or the steam pours down over the barbecue's sides and pools; or the steam sinks below the grill; or the cloud hangs as a fixed shape without rising."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The coals' glow only fades where the water lands and does not return there; the burst of steam comes at the pour and then eases.",
+      "fail": "A doused coal glows brightly again with no more fuel; or the glow spreads to coals the water has already darkened; or steam bursts before the water reaches the coals; or the burst grows stronger with no more water poured."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The water that lands turns to steam or soaks the ash rather than lying in a pool on the glowing coals.",
+      "fail": "The poured water stands in a clear pool on the glowing coals and stays; or the water goes with no steam appearing; or steam appears above the grill with no water poured; or the coals vanish where the water lands."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water falls as a thin liquid, the steam is a soft cloud that spreads, and the coals stay hard lumps that may crack and darken.",
+      "fail": "The water bounces off the coals as a solid lump; or the steam holds a fixed rigid shape; or the coals sag or flow like wax; or the steam pours like a liquid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The coals keep their number and lumpy shapes in the grill, and the barbecue keeps its shape.",
+      "fail": "A coal changes into another object; or the coals merge into one smooth mass; or a coal vanishes leaving no ash; or the barbecue's bowl changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The barbecue's body, the grill bars and the surroundings stay the same.",
+      "fail": "The barbecue changes colour; or the grill bars change spacing; or items around the barbecue rearrange."
+    }
+  ]
+}

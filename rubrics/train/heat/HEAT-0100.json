@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0100",
+  "caption": "A car's air conditioning is turned to full blast on a humid day, and faint mist drifts out of the dashboard vents.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car's dashboard vents."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Faint mist drifts out of the vents."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The mist disappears a short way into the cabin."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The mist comes from the vents rather than elsewhere."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The mist is faint rather than a thick cloud."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The mist keeps coming from the vents while the fan runs and fades a short way out; puffs that have left keep moving away.",
+      "fail": "The mist runs back into the vents; or a puff retreats to a vent's grille; or the mist thickens the further it gets from the vents; or mist appears deep in the cabin with none leaving the vents."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The mist drifts out along the vents' direction and fades; it does not pour down and pool.",
+      "fail": "The mist pours down the dashboard and pools on the floor like a liquid; or sinks in a stream from the vents onto the seats; or hangs as a fixed shape without drifting; or gathers at the roof as a thick standing layer."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The mist comes out of the vents' openings and is thickest at their mouths.",
+      "fail": "The mist comes out of the dashboard's solid face away from the vents; or the mist is thickest far from the vents with nothing carrying it there; or the vents are clear while mist appears in front of them with nothing leaving them."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mist is a soft faint haze that spreads and fades, and the vents and dashboard stay rigid.",
+      "fail": "The mist holds a fixed rigid shape; or pours as a liquid with a flat surface; or the vents' louvres bend as the mist leaves; or the mist turns into solid lumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One dashboard with its vents in fixed places; the cabin's contents stay the same.",
+      "fail": "A vent vanishes; or new vents appear; or the dashboard changes shape; or items in the cabin appear or vanish."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dashboard's colour, its dials and the cabin stay the same.",
+      "fail": "The dashboard changes colour; or the dials change layout; or the seats change colour."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0102",
+  "caption": "A pair of reading glasses is slid across a menu, and the text seen through the lenses appears slightly larger than the text around the frames.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pair of reading glasses is slid across a menu."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The text seen through the lenses appears slightly larger than the text around the frames."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The enlargement moves with the glasses."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens only in the area seen through the lenses and moves with the glasses.",
+      "fail": "Text outside the frames is enlarged; or text under the lenses is unchanged; or the enlarged patch stays put while the glasses slide."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The menu itself does not change; the enlarged text is the same text.",
+      "fail": "The text under the lenses is different; or the menu changes; or the enlarged text is mirrored."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The menu stays put and the glasses move only as pushed.",
+      "fail": "The menu slides; or the glasses move by themselves; or the image shifts with the glasses still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The lenses are rigid.",
+      "fail": "They bend; or ripple; or go opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pair of glasses and one menu.",
+      "fail": "The glasses duplicate; or the menu vanishes; or the hand passes through the glasses."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The menu and the frames stay the same.",
+      "fail": "The menu changes colour; or the frames change; or the table changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

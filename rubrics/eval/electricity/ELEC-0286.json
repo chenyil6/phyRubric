@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0286",
+  "caption": "A toy fishing rod with a magnet on its line is dangled over paper fish fitted with steel clips, and a fish jumps up to the magnet and hangs from it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy fishing rod with a magnet on its line."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Paper fish fitted with steel clips lie below."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The magnet is dangled over the fish."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A fish jumps up to the magnet and hangs from it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fish attaches by its clip."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The dangle comes first and the jump follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The fish lie still until the magnet is close, then one leaps by its clip to the magnet; fish away from the magnet stay put.",
+      "fail": "A fish jumps while the magnet is still high above; or fish across the pool slide toward the rod; or fish move before the magnet is lowered; or a fish jumps by its tail with the clip untouched."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Once the clip meets the magnet the fish hangs from it and rises with the line as the rod is lifted, staying attached until pulled off.",
+      "fail": "The clip touches the magnet and the fish drops back; or the fish hangs a gap below the magnet without touching it; or the fish rises beside the magnet unattached; or the fish stays in the air when the rod is moved away."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The line hangs straight down from the rod tip with the magnet at its end; the fish hangs below the magnet; anything that comes loose falls.",
+      "fail": "The line stands out sideways or curves upward; or the fish hangs above the magnet; or a fish that comes off floats; or the magnet rises up the line."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fish are paper cut-outs that flex and swing; the line is a limp thread; the rod is a rigid stick.",
+      "fail": "A fish is a rigid slab; or the line stands stiff like wire; or the rod bends double under a paper fish; or the fish stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The fish on the magnet is one of the fish from below; fish keep their number; nothing merges or passes through the floor.",
+      "fail": "A fish appears on the magnet from nowhere; or a fish vanishes; or two fish merge; or the magnet passes through the floor of the pool."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fish's colours, the rod and the pool stay the same.",
+      "fail": "A fish changes colour or shape; or the rod changes colour; or the pool changes."
+    }
+  ],
+  "note": "Who holds the rod is not judged."
+}

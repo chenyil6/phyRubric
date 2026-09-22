@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0076",
+  "caption": "A hat on a mannequin head is turned from side to side in front of a shop mirror, and the reflection turns in mirror image.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hat is on a mannequin head in front of a shop mirror."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The head is turned from side to side."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The reflection turns in mirror image."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection wears the same hat."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection turns at the same time as the head.",
+      "fail": "It turns first or later; or it stays still while the head turns; or it turns while the head is still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection turns to the mirrored side, facing the real head across the surface, wearing the same hat.",
+      "fail": "It turns the same way as a rotated copy would; or it wears a different hat; or it shows the back of the head."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It shifts while the head is still; or slides across the mirror."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mirror is flat and rigid: the reflection is undistorted.",
+      "fail": "The surface ripples; or the reflection warps; or the mirror bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One head, one hat and one reflection; the reflection stays in the mirror.",
+      "fail": "A second head appears; or the reflection steps out; or the hat vanishes; or the head passes into the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hat's colour and the shop stay the same.",
+      "fail": "The hat changes colour; or the frame changes; or the shop rearranges."
+    }
+  ],
+  "note": "Mirror geometry: each point of the image lies directly across the mirror surface from the real point, so the image is a mirror copy, not a rotated one. The hand turning the head is the minimal trigger; the person is not judged."
+}

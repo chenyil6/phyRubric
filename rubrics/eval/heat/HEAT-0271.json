@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0271",
+  "caption": "A bottle from the fridge and an identical bottle from a cupboard stand side by side on a warm counter, and only the cold one beads with water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two identical bottles stand side by side on a counter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "One bottle has come from a fridge and reads as cold."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Mist and then drops form on the cold bottle."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The room-temperature bottle stays dry."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Drops run down the cold bottle."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The counter wets beneath the cold bottle."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The beading appears only on the cold bottle and the other stays dry throughout.",
+      "fail": "The room-temperature bottle beads while the cold one stays dry; or both bottles bead equally; or neither bottle beads at all while one is plainly frosted from the fridge; or the dry bottle's label wets while its glass stays dry."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The beading on the cold bottle only builds while it stays cold: drops grow, join and run.",
+      "fail": "The drops shrink or go while the bottle stays cold and frosted; or the cold bottle beads and dries in turn; or the beading eases while the frost is still on it; or the drops turn back into dry white frost on the warm counter."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Drops that grow large enough run downward on the cold bottle and wet the counter beneath it.",
+      "fail": "A drop runs up the bottle; or water gathers on the cap's top and stays; or a drop leaves the bottle and rises; or a run travels sideways round the bottle and stays level."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The beads behave as water on glass: rounded, merging when they touch and running as streaks, and the counter darkens where it wets.",
+      "fail": "Touching drops overlap without merging; or drops jump about on the glass; or the counter stays dry-looking under a spreading pool; or the beads stand as tall columns on the glass."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two bottles on one counter; the water on the cold bottle comes out of the air and its contents stay inside.",
+      "fail": "The cold bottle's level drops as the pool grows; or beads form on the inside of a bottle; or a third bottle appears; or a bottle passes through the counter."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bottles' labels, their caps and the counter stay the same.",
+      "fail": "A label changes; or a cap changes colour; or items on the counter rearrange."
+    }
+  ]
+}

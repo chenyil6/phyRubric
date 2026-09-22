@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0015",
+  "caption": "The taut mat of a trampoline is slapped with a hand, and the mat ripples outward and shivers before going flat.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A trampoline with its mat in view."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A hand slaps the mat."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mat ripples outward from the slap and shivers."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The mat goes flat again."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The mat is flat and taut before the slap."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The slap comes first; the rippling and then the flat mat follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The mat lies flat and still until the palm lands; the ripple starts at the point of the slap and only then.",
+      "fail": "The mat is already shivering before the hand arrives; or a ripple starts far from where the hand lands; or the hand slaps and the mat stays flat; or the mat shivers again after going flat with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The ripples travel outward from the slap point toward the springs and the shiver fades to a flat mat.",
+      "fail": "Ripples travel inward from the edge toward the slap point; or the shiver grows after the slap; or keeps the same strength for the whole clip; or the mat freezes rigid in a rippled shape."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mat behaves as a stretched fabric: it dips under the palm and springs back; the springs and frame stay rigid.",
+      "fail": "The palm's dent stays after the hand lifts; or the mat tears; or the frame bends with the slap; or the mat sags like a loose sheet after springing back."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The frame and legs stay fixed on the ground; only the mat and springs move.",
+      "fail": "The frame rocks or jumps at the slap; or a leg lifts off the ground; or the frame slides across the ground."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One mat in one frame; the hand passes through nothing and the mat stays one sheet.",
+      "fail": "The hand passes through the mat; or the mat splits or a hole opens; or the frame or springs vanish; or the trampoline changes into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mat's colour, the spring cover and the surroundings stay the same.",
+      "fail": "The mat changes colour; or the spring cover changes pattern; or the ground or background changes."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0068",
+  "caption": "A wristwatch lying on a sunny table is turned so its face catches the sunlight, and a bright spot of light appears on the wall and slides as the watch turns.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wristwatch lies on a sunny table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is turned so its face catches the sunlight."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A bright spot of light appears on the wall."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The spot slides as the watch turns."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spot disappears when the angle is lost."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The spot appears when the watch face is angled to the sun, moves as the watch turns, and disappears when the angle is lost.",
+      "fail": "The spot is there with the face turned away; or it stays still while the watch turns; or it remains when the angle is lost."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The spot does not move on its own.",
+      "fail": "It slides with the watch still; or it moves before the watch; or it flickers with the watch steady."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The spot is one bright patch, small and roughly the face's shape.",
+      "fail": "It splits into several; or it is a huge flood of light; or it is a sharp geometric shape unlike the face."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The spot moves the opposite way to the watch's tilt, as a reflected beam does.",
+      "fail": "It moves the same way as the tilt; or it jumps; or it moves crosswise."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One watch and one spot.",
+      "fail": "A second spot appears; or the watch duplicates; or the spot becomes solid; or the hand passes through the watch."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The watch, the table and the wall stay the same.",
+      "fail": "The watch changes; or the wall changes colour; or the table changes."
+    }
+  ],
+  "note": "The hand turning the watch is the minimal trigger; the person is not judged."
+}

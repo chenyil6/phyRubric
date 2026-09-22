@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0225",
+  "caption": "A spoonful of matcha powder is stirred into a glass of milk, and the milk turns pale green.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass of milk is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A spoonful of matcha powder is stirred in."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The milk turns pale green."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Green swirls spread from the spoon and even out."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The pale green spreads from the spoon through the milk in swirls from the spoon, evening out and never gathers back; coloured areas stay coloured.",
+      "fail": "The milk returns to its original colour where it was pale green; or the pale green gathers back into the spoon; or the pale green appears before the spoon arrives."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The result is pale green, and un-reached milk keeps its original colour.",
+      "fail": "The milk turns a colour other than pale green; or the un-reached milk changes; or the pale green is darker than the spoon itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The milk behaves as it should: streaks and swirls where stirred or spread, settling where it flows.",
+      "fail": "The milk is rigid and unmarked; or it flows like water when it is a paste; or it bounces like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The milk moves only where stirred or where the pale green flows.",
+      "fail": "The milk swirls by itself; or the pale green spreads faster than stirring or flow carries it; or the container moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The amount of milk stays the same and the container keeps its shape.",
+      "fail": "The container fills or empties on its own; or a second container appears; or the spoon passes through the container."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The container and the background stay the same.",
+      "fail": "The container changes colour; or the background rearranges; or the tool changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

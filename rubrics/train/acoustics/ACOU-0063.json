@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0063",
+  "caption": "The pedal of a bass drum is pressed repeatedly, and the beater swings into the drumhead with each press and the head dips each time.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bass drum with a pedal and a beater."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pedal is pressed repeatedly."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The beater swings into the drumhead with each press."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The head dips with each hit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "There are several presses in the clip."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Each press comes before its beater swing and dip."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The beater moves only when the pedal is pressed and rests between presses.",
+      "fail": "The beater swings while the pedal is up and untouched; or moves toward the head before the pedal goes down; or keeps bouncing between presses with the pedal still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each time the beater lands the head dips and springs back; no dip without the beater.",
+      "fail": "The beater lands and the head stays flat; or the head dips while the beater is away from it; or the head stays dented after the beater has left; or the pedal is pressed and the beater does not move."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The beater arcs about its pivot and the pedal hinges at its base.",
+      "fail": "The beater slides straight toward the head without arcing; or the pedal moves up and down as a whole without hinging; or the beater moves in a different direction from the pedal's press."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The head flexes as a skin and the rigid beater rebounds from it.",
+      "fail": "The beater sinks into the head and stays; or the head shatters; or the beater rod bends double."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One beater, one pedal, one drum; the beater does not pass through the head.",
+      "fail": "A second beater appears; or the beater passes through the head; or the drum changes shape; or the pedal vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The drum's finish, the head's logo and the pedal's colour stay the same.",
+      "fail": "The drum changes colour; or the head's logo changes; or the pedal changes colour."
+    }
+  ],
+  "note": "The foot on the pedal is a trigger and is not judged."
+}

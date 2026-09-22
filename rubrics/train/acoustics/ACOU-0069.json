@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0069",
+  "caption": "A generator runs on a building site, and its frame shakes and the loose bolts on it rattle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A generator on a building site."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its frame shakes."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Loose bolts on the frame rattle."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The generator is running: exhaust, spinning parts or its shake mark it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bolts stay on the frame."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The frame trembles in place and the bolts rattle in their holes; the generator does not glide.",
+      "fail": "The generator slides across the ground in a glide; or the bolts rattle while the frame is plainly still; or a bolt hops out and travels away across the ground on its own."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "While the frame shakes the loose bolts rattle; a bolt that shakes free falls.",
+      "fail": "The frame shakes hard and every bolt sits frozen; or a bolt spins in place while the frame is not trembling; or the shaking stops while the bolts go on rattling."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The generator rests on the ground; any bolt that comes free drops.",
+      "fail": "The generator lifts; or a loosened bolt rises; or a bolt hangs in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The frame is rigid steel and the casing rigid.",
+      "fail": "The frame bends like rubber; or the casing ripples; or the bolts stretch."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One generator; the bolts keep their count; nothing passes through the frame.",
+      "fail": "A second generator appears; or the generator vanishes; or bolts appear on the frame from nowhere; or a bolt passes through the frame."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The generator's colour, its labels and the site behind stay the same.",
+      "fail": "The generator changes colour; or the site background changes; or the labels change."
+    }
+  ]
+}

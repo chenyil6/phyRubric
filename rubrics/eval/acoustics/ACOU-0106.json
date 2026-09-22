@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0106",
+  "caption": "A ping-pong ball rests on the head of a drum; the drum is struck once and the ball bounces high off the head.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ping-pong ball rests on the head of a drum."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The drum is struck once."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ball bounces off the head."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bounce is high."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike is a single hit."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The strike comes first and the bounce follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The ball is still until the strike and leaves the head at the strike.",
+      "fail": "The ball rises before the stick lands; or hops with the stick held away; or the stick lands and the ball stays seated."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The ball rises, falls back and bounces lower each time in near-vertical arcs.",
+      "fail": "The ball rises and hangs; or bounces higher on a later bounce with no second strike; or changes direction in mid-air; or stops dead at the top of its arc."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The ball comes back down onto the head or falls off the drum.",
+      "fail": "The ball floats upward out of view; or drifts sideways at a steady height; or comes to rest in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The head flexes as a skin, the stick rebounds and the ball stays round.",
+      "fail": "The stick sinks into the head; or the ball squashes flat and stays so; or the head tears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball, one drum, one stick; the stick does not pass through the head.",
+      "fail": "A second ball appears; or the ball vanishes in mid-air; or the stick passes through the head; or the drum changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and size, the drum's shell and the stick stay the same.",
+      "fail": "The ball changes colour or size; or the drum changes colour; or the stick changes length."
+    }
+  ]
+}

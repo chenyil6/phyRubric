@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0162",
+  "caption": "Two identical white vases stand at different distances from a single lamp in a dark room, and the nearer one is lit far more brightly than the farther one.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two identical white vases stand in a dark room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A single lamp lights them from different distances."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The nearer one is lit far more brightly than the farther one."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The far vase would brighten if moved toward the lamp."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Brightness falls off with distance from the lamp: the near vase is bright and the far one dim.",
+      "fail": "Both are equally bright; or the far one is brighter; or neither is lit with the lamp on."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "Both vases are white; only their brightness differs.",
+      "fail": "One changes colour; or the far one is a different colour; or both change colour."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Each vase's shadow points away from the lamp.",
+      "fail": "Shadows point toward the lamp; or in different directions; or there are none."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The vases and the lamp stay put.",
+      "fail": "A vase slides; or the lamp moves by itself; or the lit side changes with nothing moving."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two vases and one lamp.",
+      "fail": "A third vase appears; or one vanishes; or the lamp duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room stays the same.",
+      "fail": "The table changes; or the walls change; or the vases change shape."
+    }
+  ],
+  "note": "Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

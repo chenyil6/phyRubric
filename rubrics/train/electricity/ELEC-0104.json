@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0104",
+  "caption": "A lightning bolt forks into two branches before reaching the ground, both branches lighting up together.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lightning bolt descends from the sky toward the ground."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bolt forks into two branches before reaching the ground."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Both branches light up together."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The two branches share one trunk above the fork."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The branches appear at the same moment, not one after the other."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The bolt is a jagged bright line with a single trunk from the cloud that splits at one point into two jagged branches, each continuing downward.",
+      "fail": "The bolt is a perfectly straight beam or a smooth curve; or a wide glowing tube; or the two branches have no trunk and start separately from the cloud; or the branches cross or rejoin below the fork; or a branch turns and climbs back upward."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The whole bolt, trunk and both branches, appears and vanishes together within a moment, perhaps flickering; the sky returns to dark.",
+      "fail": "One branch appears after the other has vanished; or the bolt stands as a steady lit line for the rest of the clip; or the bolt grows slowly like a line being drawn; or one branch remains lit after the rest is gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The flash lights the ground beneath both branches and the cloud underside during the bolt.",
+      "fail": "The bolt is visible while the ground and cloud stay as dark as before; or the ground is lit under one branch only while the other branch is as bright; or the ground lights up while no bolt is present."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The ground, trees and structures below stay still through the flash; only the light changes.",
+      "fail": "Trees or structures shift at the flash; or the horizon tilts; or objects on the ground jump between dark and lit frames."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The landscape below is the same before and after the flash; the flash reveals what was there.",
+      "fail": "Trees or structures appear or vanish between dark and lit frames; or the landscape changes layout; or a bolt hangs frozen in the sky after the flash; or a glowing pillar stands where a branch struck."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sky's night colour and the ground's colour are consistent before and after the flash.",
+      "fail": "The sky turns to daylight after the flash; or the ground changes colour; or the cloud changes colour permanently."
+    }
+  ]
+}

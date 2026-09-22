@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0043",
+  "caption": "Thick white icing is piped onto cinnamon rolls fresh from the oven, and it softens and runs down into the gaps between them.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Cinnamon rolls fresh from the oven."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Thick white icing is piped onto the rolls."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The icing softens: it loses its piped ridges and goes glossy."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The icing runs down into the gaps between the rolls."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The icing is thick and holds its ridges when first piped."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The piping comes first and the running follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The icing runs downward off the rolls' high points and gathers in the gaps and hollows between them.",
+      "fail": "The icing climbs a roll's side and stays; or a run travels uphill onto a roll's top; or icing lifts off a roll and hangs; or icing gathers in a gap and then rises back onto the roll above."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The icing only softens, flattens and flows, and the ridges it loses do not come back.",
+      "fail": "A flattened ridge stands up sharply again; or a run draws back up onto a roll's top; or the icing sets stiff again on the hot rolls; or the icing alternates between ridged and flat."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The icing is a thick liquid that slumps, glosses over and flows slowly with a rounded edge, and the rolls stay soft bread.",
+      "fail": "The icing runs as thin as water; or the icing stays a rigid white cap with sharp ridges while glossy and flowing; or the icing shatters or crumbles; or the rolls squash flat under the icing's weight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The rolls show the icing arriving: their surface goes wet and glossy where it lies and the gaps fill from the icing above.",
+      "fail": "The icing runs over a roll and the surface under it stays dry and matt; or a gap fills with icing while none runs into it from above; or the icing softens while no roll's surface changes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The icing on the rolls is the icing that was piped, and the rolls keep their number and shape.",
+      "fail": "Icing appears in a gap with none coming from above; or a roll vanishes or a new roll appears; or the icing grows in amount with none piped; or a roll passes through the tray."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The icing's white, the rolls' colour and the tray stay the same.",
+      "fail": "The icing changes colour; or the rolls change colour; or the tray changes shape."
+    }
+  ]
+}

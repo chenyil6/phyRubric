@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0272",
+  "caption": "Lightning flashes over a snowy village at night, and the snow-covered roofs and street flash white for an instant.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A snowy village at night with snow-covered roofs and a street."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lightning flashes over the village."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The roofs and street flash white for an instant."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The houses' own lights are on."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The scene returns to dark after the flash."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is brief: the village brightens and returns to dark; flashes may repeat but each ends.",
+      "fail": "The village stays lit for the rest of the clip; or brightens steadily; or the flash fades in slowly; or the sky turns to daylight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The whole scene brightens together during the flash: the snow on roofs and street turns bright white, lit from the sky; the house lights stay steady.",
+      "fail": "The sky flashes while the snow stays as dim as before; or the snow lights up while the sky stays dark; or the house lights blink out at the flash; or the light sweeps across the village roof by roof."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The houses, roofs and street are the same across dark and lit frames.",
+      "fail": "Houses appear or vanish between dark and lit frames; or a roof changes shape; or the street changes route; or lit windows change pattern all at once."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Falling snow, if any, keeps falling downward through the flash; snow on the roofs stays put.",
+      "fail": "Snowflakes rise or hang still; or snow slides off every roof at the flash; or flakes change direction at the flash.",
+      "precondition": "Snow is falling."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Houses and street keep their shapes; nothing passes through anything; any bolt seen ends in the air or at the ground.",
+      "fail": "A house changes shape or merges with another; or a bolt passes through a house and lights it from within; or the snow turns into water; or the street becomes a river."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The houses' colours, the snow and the sky are consistent before and after the flash.",
+      "fail": "A house changes colour permanently; or the snow changes colour permanently; or the sky turns to daylight after the flash."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0298",
+  "caption": "A plastic pen rubbed on a wool sleeve is held over pepper grains scattered on a plate, and the grains jump onto the pen.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A plastic pen is rubbed on a wool sleeve."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Pepper grains are scattered on a plate."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pen is held over the grains."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Grains jump onto the pen."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The grains are scattered loose on the plate, not in a pile."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rub comes first, then the hold, then the jump."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The grains lie still until the pen is close above them, then leap up to it; grains far from the pen stay put and the leaping stops when the pen is taken away.",
+      "fail": "Grains leap before the pen is brought near; or grains across the plate slide toward the pen; or the whole plate of grains stirs at once; or grains keep leaping after the pen is well away."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The grains that lift cling to the pen's underside and sides; any that let go fall back to the plate.",
+      "fail": "Grains hover in the air between plate and pen without touching either; or a grain that lets go drifts upward or sideways; or grains rise past the pen and continue up; or the plate lifts toward the pen."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Each grain moves straight up from the plate to the pen and stops on it.",
+      "fail": "Grains fly past the pen and off; or circle the pen in the air; or bounce off and back several times; or grains move away from the pen."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pen is a rigid stick; the grains are separate hard specks that lift individually.",
+      "fail": "The pen bends toward the plate; or the grains lift as one lump; or grains smear into a paste; or the plate bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pen and one plate; the grains on the pen came from the plate; nothing appears, vanishes or passes through the plate.",
+      "fail": "Grains multiply on the pen; or grains vanish in mid-air; or the pen passes into the plate; or a second pen appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pen's colour, the plate and the sleeve stay the same.",
+      "fail": "The pen changes colour or shape; or the plate changes pattern; or the sleeve changes colour."
+    }
+  ],
+  "note": "Who holds the pen is not judged."
+}

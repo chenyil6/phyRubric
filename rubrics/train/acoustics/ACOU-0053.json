@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0053",
+  "caption": "A large speaker's cone pumps in and out as a bass-heavy track plays, and it stops moving when the music is paused.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A large speaker with its cone visible."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cone moves in and out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The movement stops at some point, as the music is paused."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The stop is clean rather than a slow petering out."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The speaker is a large woofer."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The cone moves as a piston along its axis, in and out about its rest position.",
+      "fail": "The cone drifts sideways or rotates; or moves in only one direction and stays displaced; or keeps twitching irregularly after stopping."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "When the music stops the cone stops: it returns to its rest position and stays there.",
+      "fail": "The cone keeps pumping after the pause; or stops frozen away from its rest position; or alternates between moving and still several times."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The cone keeps its round shape and its dust cap; it flexes as one piece with the surround stretching.",
+      "fail": "The cone ripples like water; or changes size; or the dust cap detaches; or the cone splits."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The cabinet stays still; only the cone and its surround move.",
+      "fail": "The cabinet rocks, walks or jumps with each beat; or the grille moves independently of the cone."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cone in one speaker; nothing passes through the cabinet.",
+      "fail": "A second cone appears; or the cone vanishes; or the cone passes through the cabinet; or the speaker changes into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The speaker's colour, logo and the room stay the same.",
+      "fail": "The cone changes colour; or the logo moves; or the background changes."
+    }
+  ]
+}

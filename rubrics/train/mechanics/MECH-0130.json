@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0130",
+  "caption": "A strip of packing tape is ripped off a cardboard box and the box flaps come free.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cardboard box is sealed with a strip of packing tape."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The tape is ripped off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The box flaps come free."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rip comes first and the flaps follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The tape peels up along its length as it is pulled, sometimes taking the top layer of cardboard with it.",
+      "fail": "The tape shatters; or it stretches long like rubber; or it lifts off all at once with no pull."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flaps open only after the tape is off.",
+      "fail": "The flaps open with the tape still on; or the tape is off and the flaps stay sealed; or the flaps open before the pull."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The box stays put.",
+      "fail": "It slides; or lifts; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The tape stays one strip and the box stays one box.",
+      "fail": "The tape vanishes; or it regrows on the box; or the box splits."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One box keeps its number, and the hands do not pass through it.",
+      "fail": "The hands pass through the box; or a second box appears; or the box turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The box's printing and the tape's colour stay the same.",
+      "fail": "The printing changes; or the tape changes colour; or the room rearranges."
+    }
+  ]
+}

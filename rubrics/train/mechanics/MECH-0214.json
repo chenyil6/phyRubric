@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0214",
+  "caption": "A yoga mat is rolled up from one end into a tight cylinder and stood against the wall.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A yoga mat lies flat."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is rolled up from one end."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It forms a cylinder."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It is stood against the wall."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The roll is tight."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rolling comes first and the standing up follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The layers sit on top of each other and do not pass through one another.",
+      "fail": "A layer passes through another; or the mat passes through the floor; or the hands pass through the mat."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The roll grows thicker as more mat winds on, and the flat part shrinks.",
+      "fail": "The roll stays the same thickness; or the flat part does not shrink; or the mat grows."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The mat rolls only as the hands roll it.",
+      "fail": "It rolls itself; or unrolls itself; or slides."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Stood against the wall, it leans on it and stays.",
+      "fail": "It floats; or falls through the wall; or stands balanced away from the wall with nothing holding it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mat keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mat's colour and the room stay the same.",
+      "fail": "The mat changes colour; or the wall changes; or the room rearranges."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged."
+}

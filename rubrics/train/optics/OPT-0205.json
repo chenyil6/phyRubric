@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0205",
+  "caption": "Sunlight passes through a blue glass bottle on a windowsill, and a blue patch of light lies on the counter beside it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A blue glass bottle stands on a windowsill in sunlight."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Sunlight passes through it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A blue patch of light lies on the counter beside it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The patch is on the side away from the sun."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The patch moves when the bottle is moved."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The patch is on the side away from the sun and moves when the bottle is moved.",
+      "fail": "It lies on the sun side; or stays put while the bottle moves; or is there with no bottle."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The patch matches the bottle's blue.",
+      "fail": "It is white; or a different colour; or it changes colour with the bottle still."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The patch does not move on its own.",
+      "fail": "It drifts with the bottle still; or flickers in steady sun."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The patch is one soft shape roughly the bottle's footprint.",
+      "fail": "It splits; or is a sharp square; or floods the counter."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bottle and one patch.",
+      "fail": "A second bottle appears; or the patch becomes solid; or the bottle vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sill and the counter stay the same.",
+      "fail": "The sill changes; or the counter changes colour; or the bottle changes shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

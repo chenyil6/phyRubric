@@ -1,0 +1,82 @@
+{
+  "id": "ELEC-0066",
+  "caption": "An electric kettle is lifted off its base while it is boiling, and the kettle's light goes off and the boiling quiets.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An electric kettle sits on its base, with steam or churning water showing it is boiling."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The kettle's light is lit at the start."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The kettle is lifted off its base."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The kettle's light goes off."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The steaming or churning eases after the lift."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is boiling on the base, lift, light off."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light goes out at the moment the kettle parts from the base, and only then.",
+      "fail": "The kettle is off its base and its light still shines; or the light goes out before the kettle moves; or the light goes out with the kettle still seated and only afterwards is the kettle lifted."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "After the lift the boil dies down one way: the steam plume thins and any churning at the surface settles, and neither returns while the kettle is off its base.",
+      "fail": "The steam plume grows thicker after the lift; or the water churns harder once off the base; or the boil dies down and then returns with the kettle still in the air; or the light comes back on with the kettle off the base."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Steam leaves the spout and rises, drifting upward and spreading; it does not sink or pool.",
+      "fail": "Steam falls from the spout toward the counter; or hangs as a fixed shape that moves with the kettle like a solid; or steam rises from the empty base after the kettle is lifted.",
+      "precondition": "Steam is visible."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The base stays on the counter as the kettle lifts off it; the counter and nearby items do not move.",
+      "fail": "The base lifts with the kettle and hangs beneath it; or the base slides across the counter by itself; or nearby items jump as the kettle is lifted."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One kettle and one base; the kettle keeps its shape with the lid on and does not pass through the base or the counter.",
+      "fail": "The kettle passes through its base or the counter; or a second kettle appears; or the base vanishes; or the kettle changes shape or its spout moves."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The kettle's colour, the base and the counter stay the same apart from the light and steam.",
+      "fail": "The kettle changes colour; or the base changes design; or items on the counter change."
+    }
+  ],
+  "note": "'The boiling quiets' is read visually: the steam plume thins and any visible churning settles. Sound is not judged, nor how far the boil has died down by the end of the clip."
+}

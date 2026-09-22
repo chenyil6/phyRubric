@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0195",
+  "caption": "Snow falls under an orange streetlamp, and the snow on the ground beneath the lamp looks orange while the snow farther away looks white.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Snow falls under an orange streetlamp."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The snow on the ground beneath the lamp looks orange."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The snow farther away looks white."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tint fades with distance from the lamp."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The snow looks orange only where the lamp's light reaches and while it is on.",
+      "fail": "The snow is orange with the lamp off; or stays white under the orange light; or turns a different colour from the light."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens at the same instant as the lamp and is confined to where its light falls.",
+      "fail": "The snow changes before the lamp; or long after; or surfaces the light cannot reach change too."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The snow falls downward through the light.",
+      "fail": "It rises; or hangs; or falls sideways in still air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves; only the light changes.",
+      "fail": "The snow moves; or the lamp moves by itself; or the lit area wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp and one snow.",
+      "fail": "A second lamp appears; or the snow vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The snow's shape and the surroundings stay the same.",
+      "fail": "The snow changes shape; or the surroundings rearrange; or the lamp changes shape."
+    }
+  ]
+}

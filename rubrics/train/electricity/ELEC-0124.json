@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0124",
+  "caption": "A metal rake is dragged along a concrete path in the dark, and faint sparks flick from the tines.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A concrete path in the dark."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A metal rake is dragged along the path."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Faint sparks flick from the tines."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sparks are at the tines, where the metal meets the concrete."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drag comes first and the sparks follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Sparks appear only where the tines scrape the concrete and only while the rake is moving; each flick is brief and gone; they stop when the rake lifts.",
+      "fail": "Sparks appear while the rake is lifted clear of the path; or continue after the rake has stopped; or a spark stays lit at one spot for the rest of the clip; or sparks come from the handle or the rake's back."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One rake with its tines; the sparks leave nothing behind on the path.",
+      "fail": "Glowing dots stay on the path after the rake has passed; or tines appear or vanish; or a second rake appears; or the rake vanishes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The sparks flick out behind the tines, along the direction of the drag, and drop to the path.",
+      "fail": "Sparks fly ahead of the tines against the drag; or radiate equally in all directions; or climb steadily and stay aloft."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The rake is a rigid tool: the tines bend only slightly as they scrape and the handle stays straight.",
+      "fail": "The tines bend back like rubber and stay bent; or the handle bows or wobbles like a rope; or the concrete grooves or ripples under the tines."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The tines scrape the path's surface and stay above it; the rake passes through nothing.",
+      "fail": "The tines sink through the concrete; or the rake passes through a wall, kerb or plant; or the rake merges with the path; or the path surface opens."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rake's colour, the path's surface and the surroundings stay the same.",
+      "fail": "The rake changes colour; or the path changes texture; or the surroundings rearrange."
+    }
+  ],
+  "note": "Who or what drags the rake is not judged."
+}

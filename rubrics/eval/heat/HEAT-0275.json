@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0275",
+  "caption": "A metal water bottle packed with ice sits on a gym bench, and a wet patch spreads on the bench beneath it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A metal water bottle stands on a gym bench."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Droplets form on the bottle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The droplets run down to its base."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A wet patch spreads on the bench beneath it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bottle reads as packed with ice: frost or chill on its surface."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The beading comes first and the patch follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The beading and the patch only grow while the bottle stays cold.",
+      "fail": "The droplets shrink or go while the bottle stays cold and frosted; or the wet patch shrinks; or the bottle beads and dries in turn; or the droplets turn back into dry frost in the warm room."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The droplets run downward on the bottle to its base and the patch grows out from under it.",
+      "fail": "A droplet runs up the bottle; or water gathers on the cap and stays as a dome; or a drop leaves the bottle and rises; or the patch grows away from the bottle with no water running to it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The water forms on the outside of the cold metal and the patch lies under the bottle where the runs reach the bench.",
+      "fail": "The water appears on the bench away from the bottle with none running there; or the bottle's own level drops as the patch grows; or beads form inside the bottle's mouth while its outside stays dry; or the bench stays dry under a bottle streaming with runs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The beads behave as water on metal: rounded, merging when they touch and running as streaks, and the bench darkens where it wets.",
+      "fail": "Touching drops overlap without merging; or drops jump about on the metal; or the bench stays dry-looking under a spreading patch; or the beads stand as tall columns on the metal."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One bottle on one bench; the bottle keeps its shape and nothing passes through it.",
+      "fail": "The bottle changes shape; or a second bottle appears; or the cap passes into the bottle; or water passes out through the metal wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bottle's finish, the bench and the gym behind stay the same.",
+      "fail": "The bottle changes colour; or the bench changes pattern; or the gym's equipment rearranges."
+    }
+  ]
+}

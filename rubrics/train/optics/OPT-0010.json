@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0010",
+  "caption": "A frog jumps straight up from a sunlit stone, and its shadow stays on the stone and separates from its feet while it is in the air.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A frog sits on a sunlit stone."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It jumps straight up."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its shadow stays on the stone."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The shadow separates from its feet while it is in the air."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The gap closes when the frog lands."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow remains on the surface the whole time, and the gap between the frog's feet and the shadow opens as it rises and closes when it lands.",
+      "fail": "The shadow rises with the frog; or stays attached to its feet in mid-air; or the gap stays open after landing."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The frog rises, slows, and comes back down onto the stone.",
+      "fail": "It hangs in the air; or keeps rising; or lands somewhere else with a straight-up jump."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the frog's outline.",
+      "fail": "It becomes a different shape; or splits; or vanishes in mid-jump."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side away from the sun.",
+      "fail": "It lies toward the sun; or switches sides during the jump; or it is missing in plain sunlight."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One frog and one shadow; the frog keeps its legs.",
+      "fail": "A second frog or shadow appears; or the frog vanishes; or the shadow becomes solid; or a leg detaches."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The frog's colour and the stone stay the same, and the shadow stays dark.",
+      "fail": "The frog changes colour; or the shadow turns coloured; or the stone changes."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the shadow's relation to it is."
+}

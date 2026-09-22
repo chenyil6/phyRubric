@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0261",
+  "caption": "A bottle cap spun on a kitchen counter spins in place, slows, and rattles to a stop.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bottle cap is spun on a kitchen counter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It spins in place."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It slows."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It rattles to a stop."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spin comes first, then the slowing, then the stop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "It slows steadily and wobbles more as it slows.",
+      "fail": "It speeds up; or the wobble shrinks; or it stops instantly."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Nothing touches it after the spin.",
+      "fail": "It is driven along; or reverses; or restarts."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It stays on the counter and settles flat.",
+      "fail": "It lifts; or hangs on its edge; or floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cap is rigid and rattles.",
+      "fail": "It bends; or melts; or splits."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cap keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cap and the counter stay the same.",
+      "fail": "The cap changes colour; or the counter changes; or the kitchen rearranges."
+    }
+  ]
+}

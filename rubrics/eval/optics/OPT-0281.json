@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0281",
+  "caption": "A lit lantern is lowered into a well on a rope, and the circle of lit stone around it slides down the shaft.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lit lantern is lowered into a well on a rope."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The circle of lit stone around it slides down the shaft."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The wall above darkens as the lantern passes."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The brightest ring of wall is level with the lantern and moves down with it, and the wall above darkens as it passes.",
+      "fail": "The light stays at the top; or the whole shaft is lit evenly; or the bright ring is far from the lantern."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The lit ring moves only as the lantern moves.",
+      "fail": "It moves with the lantern still; or before the lantern; or jumps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The rope stays taut and straight above the lantern.",
+      "fail": "It goes slack while the lantern hangs; or stretches; or bends."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The lantern hangs below the rope and goes down.",
+      "fail": "It rises; or hangs sideways; or floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lantern and one rope.",
+      "fail": "A second lantern appears; or the rope vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The well's stone and the lantern stay the same.",
+      "fail": "The stone changes; or the lantern changes colour; or the rope changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged. Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

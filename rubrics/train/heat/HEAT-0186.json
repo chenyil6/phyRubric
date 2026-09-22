@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0186",
+  "caption": "Boiling water is poured into a collapsed vacuum-packed camping meal pouch, and the pouch swells and stands up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A collapsed camping meal pouch."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Boiling water is poured into the pouch."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pouch fills out."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The pouch stands up."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Steam rises from its opening."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the swelling follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The pouch stays one bag whose flat sides bow out as it fills and which stands on its base once full.",
+      "fail": "The pouch keeps its flat collapsed shape while plainly full and standing; or the pouch swells into a ball far larger than its seams allow; or the pouch splits into separate bags; or the pouch turns into another object."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The pouch only fills and rises while the water goes in and does not collapse again with the water in it.",
+      "fail": "The pouch collapses flat again while still full; or the pouch fills and flattens in turn; or the pouch stands up before any water is poured; or the water's level drops while pouring goes on."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The water falls downward from the kettle into the pouch, lies in its base and the steam rises from the opening.",
+      "fail": "The water travels upward from the kettle; or the water gathers at the pouch's top and stays; or the steam pours downward out of the opening; or the pouch rises off the ground as it fills."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pouch is a limp foil bag that creases and bulges and holds the water, and the water is a thin liquid that finds its level.",
+      "fail": "The pouch stays a rigid box as it fills; or the pouch stretches like elastic; or the water stands in a heap above the pouch's opening; or the pouch sets hard once full."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pouch and one pour; the water goes from the kettle into the pouch and nowhere else.",
+      "fail": "Water appears in the pouch with no stream reaching it; or the water passes through the pouch's wall; or a second pouch appears; or the pouch vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pouch's printing, the kettle and the surroundings stay the same.",
+      "fail": "The pouch's printing changes; or the kettle changes shape; or items around the pouch rearrange."
+    }
+  ]
+}

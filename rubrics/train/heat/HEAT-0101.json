@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0101",
+  "caption": "A cold metal water pipe runs along a basement wall on a humid day, and it sweats droplets that drip onto the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A metal pipe runs along a basement wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Droplets form on the pipe."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Droplets fall from the pipe onto the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A wet line builds on the floor below the pipe."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The droplets gather on the pipe's underside."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The forming comes first and the dripping follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The drops gather on the pipe's underside, hang and fall straight down to the floor below.",
+      "fail": "A drop runs up the pipe; or a drop leaves the pipe and rises; or drops gather on the pipe's top and stay as a dome; or a drop falls sideways and lands far from the pipe with nothing blowing it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The water comes out of the air onto the cold pipe and leaves only by falling, and the wet line lies under the pipe.",
+      "fail": "Drops appear on the warm wall away from the pipe; or the wet line lies away from the pipe with no drop falling there; or a drop vanishes in mid-air; or water appears inside the pipe and passes out through its wall."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The beading only builds while the pipe stays cold and the wet line on the floor only grows.",
+      "fail": "The drops shrink or go while the pipe stays cold; or the wet line shrinks; or the pipe beads and dries in turn; or the drops turn to dry frost on the sweating pipe."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The drops behave as water on metal: rounded, merging when they touch, and running along the pipe to its lowest point before falling.",
+      "fail": "Touching drops overlap without merging; or drops jump about on the pipe; or the drops stand as tall columns under the pipe; or the pipe's metal sags where it is wet."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One pipe on its brackets; the pipe keeps its shape and stays on the wall.",
+      "fail": "The pipe bends or sags; or a second pipe appears; or the pipe sinks into the wall; or a bracket vanishes and the pipe hangs in the air."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wall away from the wet line, the brackets and the basement stay the same.",
+      "fail": "The wall changes colour away from the wet patch; or a bracket changes shape; or items in the basement rearrange."
+    }
+  ]
+}

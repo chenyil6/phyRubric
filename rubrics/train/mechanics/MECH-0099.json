@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0099",
+  "caption": "A heavy sack is dropped into an empty hammock strung between two trees, and the hammock sags deeply under it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An empty hammock hangs between two trees."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A sack is dropped into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The hammock sags deeply under the sack."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The hammock is empty before the drop."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drop comes first and the sag follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The sag forms as the weight lands, deepest under the sack, with the ropes pulling straight to the trees.",
+      "fail": "The hammock stays flat with the sack in it; or the ropes go slack while it sags; or the cloth stretches down and down."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sack falls into the hammock and rests at the low point, and the sag is downward.",
+      "fail": "The sack bounces out; or hangs above the cloth; or the hammock bows upward."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The hammock swings gently after the drop and settles.",
+      "fail": "It swings harder and harder; or stays rigid and still; or spins."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The trees or knots show the pull: branches dip or the ropes pull tight.",
+      "fail": "The ropes float slack while the hammock sags; or the tree leans away; or the hammock sags with no ropes attached."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One hammock and one sack keep their number.",
+      "fail": "The sack vanishes or a second appears; or the sack passes through the cloth; or the hammock turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hammock, the sack and the trees stay the same.",
+      "fail": "The hammock changes colour; or the sack changes size; or the trees rearrange."
+    }
+  ]
+}

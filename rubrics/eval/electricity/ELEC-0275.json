@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0275",
+  "caption": "Lightning flashes over a city at night, and the flash is mirrored at the same instant in hundreds of windows of a glass tower.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A city at night with a glass tower."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lightning flashes over the city."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flash is mirrored in many windows of the tower."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflections appear at the same instant as the flash."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tower's interior lights are on."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Every window facing the flash brightens together with it and darkens together after it; the reflections last only as long as the flash.",
+      "fail": "The sky flashes while the tower's windows stay as they were; or the windows brighten one after another; or the reflections stay bright after the sky is dark; or the windows brighten while the sky stays dark."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The tower and its windows are the same across dark and lit frames: the same grid of windows, the same lit interiors; the reflections add no new windows.",
+      "fail": "Windows appear or vanish between dark and lit frames; or the tower changes shape; or lit interior windows go dark all at once at the flash; or a second tower appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The flash is brief: sky and reflections return to dark together; flashes may repeat but each ends.",
+      "fail": "The sky stays lit for the rest of the clip; or brightens steadily; or the flash fades in slowly; or the sky turns to daylight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The tower's interior lights stay steady through the flash; nothing in the city moves at the flash.",
+      "fail": "Interior lights blink out at the flash; or street lights all change together; or vehicles jump between frames; or the tower sways."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The tower and the buildings around it keep their shapes; the flash does not pass through the tower.",
+      "fail": "The tower changes shape or merges with a neighbour; or a bolt passes through the tower and lights its floors like lamps; or the tower becomes transparent showing the flash through it; or the tower vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tower's glass colour, the city lights and the sky are consistent before and after the flash.",
+      "fail": "The glass changes colour permanently; or the city lights change colour; or the sky turns to daylight after the flash."
+    }
+  ]
+}

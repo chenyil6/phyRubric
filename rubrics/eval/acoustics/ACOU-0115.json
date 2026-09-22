@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0115",
+  "caption": "A motorcycle idles at a kerb, and its rear-view mirror blurs and the reflection in it shakes until the engine is switched off.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A motorcycle stands at a kerb with a rear-view mirror in view."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The mirror blurs and the reflection in it shakes."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The engine is switched off: a key or switch is worked, or the shaking stops."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bike stays at the kerb."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The mirror shakes first, the engine is switched off, and the shaking stops."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The mirror shakes only while the engine runs and is sharp after the engine is cut.",
+      "fail": "The mirror shakes after the engine has been switched off and the bike stands still; or the mirror is blurred while the rest of the bike shows no tremble at all; or the blur comes and goes while nothing changes at the engine."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The housing's tremble carries into the reflection: the image jitters with the housing and steadies once the engine cuts.",
+      "fail": "The mirror housing trembles while the reflection inside stays rock steady; or the reflection jitters while the housing is sharp and still; or the switch is worked and the blur continues unchanged to the end."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bike rests on its stand or wheels.",
+      "fail": "The bike lifts; or leans past its stand and hangs; or rises."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mirror and its stalk are rigid; the blur is motion, not a change of shape.",
+      "fail": "The mirror stalk bends like rubber; or the mirror glass bulges; or the housing stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bike; the mirrors keep their count and stay attached.",
+      "fail": "A second mirror appears; or the mirror vanishes; or the mirror detaches and hangs in the air; or the bike changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bike's colour, the kerb and the mirror's shape stay the same.",
+      "fail": "The bike changes colour; or the kerb changes; or the mirror changes shape."
+    }
+  ],
+  "note": "What the reflection shows is not judged; only whether it jitters together with the housing. The rider is a trigger."
+}

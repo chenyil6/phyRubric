@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0063",
+  "caption": "The switch on a battery pack attached to a garland of lights is slid on, and the garland lights up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A garland of small lights with a battery pack attached to it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The switch on the battery pack is slid to its on position."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The garland lights up."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The garland is dark before the switch is slid."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, slide, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bulbs come on at the moment the switch slides across, and only then.",
+      "fail": "The switch is slid and the garland stays dark; or the bulbs are lit before the switch moves; or the garland lights up while the switch sits untouched."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The lit bulbs are the same bulbs seen dark: the same number at the same spots along the wire, and the whole string comes on together.",
+      "fail": "Lit points appear along the wire where no bulb hung before; or bulbs seen on the dark string are gone once lit; or lit bulbs multiply or shift along the wire; or the bulbs come on one after another from one end rather than together."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once on, the garland stays lit while the switch stays in its on position, and the glow sits at the bulbs.",
+      "fail": "The garland goes dark again with the switch untouched; or the switch slides back by itself; or the glow spreads onto the bare wire between the bulbs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Sliding the switch moves only the switch: the pack, wire and garland stay where they lie apart from a small nudge.",
+      "fail": "The garland jumps or rearranges as the switch is slid; or the pack slides away with nothing touching it; or the wire lifts off the surface by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The pack keeps its box shape, the garland stays one continuous wire and fingers stay outside the pack.",
+      "fail": "The pack changes shape or turns into another object; or the string splits in two or fuses with itself; or fingers pass through the pack; or the pack vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wire's colour, the pack's markings and the background stay the same apart from the light.",
+      "fail": "The wire changes colour; or the pack's markings change; or the background rearranges."
+    }
+  ]
+}

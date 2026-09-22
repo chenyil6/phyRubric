@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0031",
+  "caption": "A battery-powered lantern in a tent is switched on, and the tent lights up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lantern inside a tent."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lantern is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The tent lights up."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lantern is battery powered: no cord runs from it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, switch, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lantern lights at the moment its switch is moved, and only then.",
+      "fail": "The switch is moved and the lantern stays dark; or the tent is lit before the switch is touched; or the lantern comes on with nothing touching it; or the tent brightens while the lantern stays dark."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the lantern stays lit steadily and the tent stays lit for the rest of the clip.",
+      "fail": "The lantern goes out again by itself; or flickers; or dims back to dark; or the switch moves back by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light comes from the lantern: the tent's walls and floor brighten most nearest it, and shadows of objects point away from it.",
+      "fail": "The lantern glows while the tent walls stay as dark as before; or the light comes from a place other than the lantern; or shadows point toward the lantern; or the tent is lit evenly with no brighter side."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lantern stays where it is as it is switched on; the tent and its contents stay put.",
+      "fail": "The lantern slides or swings with nothing touching it; or the tent walls billow at the switch; or objects in the tent shift."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lantern; the tent's contents are the same before and after; the hand passes through nothing.",
+      "fail": "A second lantern appears; or objects appear or vanish between dark and lit frames; or the hand passes through the lantern; or the tent changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tent's fabric colour, the lantern's colour and the gear inside stay the same apart from brightness.",
+      "fail": "The fabric changes colour rather than brightness; or the lantern changes colour; or the gear rearranges."
+    }
+  ]
+}

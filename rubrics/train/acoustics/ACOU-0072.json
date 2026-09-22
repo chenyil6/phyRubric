@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0072",
+  "caption": "Grains of rice lie on the head of a banjo; a string is plucked and the grains jump.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A banjo with grains of rice lying on its head."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A string is plucked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The grains jump."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "A single string is plucked once."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pluck comes first and the jump follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The grains lie still until the string is plucked and jump at the pluck.",
+      "fail": "Grains hop before the string is plucked; or jump with the hand nowhere near the strings; or the string is plucked and the grains lie dead still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The hop is largest at the pluck and dies down until the grains lie still.",
+      "fail": "The grains keep hopping at the same height for the whole clip; or hop higher and higher after the pluck; or settle and start again with no second pluck."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Grains that jump come back down onto the head or fall off its edge.",
+      "fail": "Grains hang in the air; or float upward; or leave the head and come back up onto it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The string springs back after the pluck, the head flexes as a skin and the grains stay separate.",
+      "fail": "The string is pulled far out and stays bent after release; or the head tears; or the grains merge into a lump or flow like liquid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The grains keep their number, allowing for some falling off; the strings keep their count; the banjo keeps its shape.",
+      "fail": "Grains appear from nowhere; or all the grains vanish at once; or the strings change count; or the banjo changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The banjo's finish, the head's colour and the strings stay the same.",
+      "fail": "The banjo changes colour; or the head changes texture; or the strings change colour."
+    }
+  ],
+  "note": "The plucking hand is a trigger and is not judged."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0199",
+  "caption": "A cold egg is lowered into a pot of boiling water, and its shell cracks and a thread of white leaks out and sets into a pale wisp.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An egg is lowered into a pot of boiling water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The shell cracks."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A thread of white leaks out through the crack."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The white sets into a pale wisp in the water."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The crack appears after the egg is in the water."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The wisp trails from the crack."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The leaking white is a runny liquid that streams out and becomes an opaque soft solid trailing in the water.",
+      "fail": "The leaking white stays clear and runny in the boiling water to the end of the clip; or the white sets into a hard brittle shard; or the white dissolves away into the water; or the white stretches like elastic."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The white in the water came out through the crack and stays as a wisp; it does not return to the shell or appear elsewhere.",
+      "fail": "The wisp draws back into the shell; or a wisp appears in the water away from the egg with none leaking there; or the wisp vanishes; or a second egg appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The crack only opens and the white only leaves; the shell does not heal.",
+      "fail": "The crack closes and the shell is whole again; or the white leaks and is drawn back in turn; or the crack appears before the egg reaches the water; or the set wisp turns clear again."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The egg sinks in the water, the wisp trails and drifts with the boil, and bubbles rise.",
+      "fail": "The egg rises out of the water and hangs above it; or the wisp rises out of the water and stays above the surface; or bubbles sink toward the pot's floor; or the egg hangs motionless in mid-water while the boil churns around it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One egg with one shell; the shell stays a shell that cracks and the pot keeps its shape.",
+      "fail": "The shell melts; or the egg turns into another object; or the shell peels away entirely leaving a bare egg; or the egg passes through the pot's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the hob and the water stay the same.",
+      "fail": "The pot changes colour; or the water turns a colour; or items around the hob rearrange."
+    }
+  ]
+}

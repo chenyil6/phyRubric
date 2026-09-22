@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0145",
+  "caption": "A gust blows across a row of candles on a windowsill, and the flames bend sideways and two of them go out, leaving smoke trails.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A row of candles stands on a windowsill."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flames bend sideways."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Two of the flames go out."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Smoke trails rise from the ones that went out."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The surviving flames straighten afterwards."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "All the flames lean the same way."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "All the flames lean the same way at the same moment as the gust reaches them, and the survivors straighten when it passes.",
+      "fail": "The flames lean in different directions at the same moment; or a flame leans against the way the others lean; or the flames stay leaning after the curtains and everything else have settled; or a flame leans while nothing else in the scene moves at all."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flames that go out are the ones the gust flattened, and they go out during the gust.",
+      "fail": "A flame goes out before the gust reaches it; or a flame goes out while it stands straight and untouched; or the flames go out one after another over the clip with no gust; or a flame that went out relights during the same gust."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The smoke trails rise from the wicks that went out and the surviving flames point upward between gusts.",
+      "fail": "A smoke trail sinks down the candle and pools on the sill; or a trail pours downward off the sill; or a surviving flame points downward; or a trail hangs as a fixed shape without rising."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once out a candle stays out and its smoke trail only rises and thins.",
+      "fail": "A candle relights by itself; or a trail runs back into its wick; or a flame flickers between lit and out after the gust has passed; or a wick's glow brightens into a flame with nothing touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The candles keep their number and places and each keeps one wick; no flame detaches.",
+      "fail": "A flame separates from its wick and floats; or a second flame appears on one wick; or a candle vanishes; or a new candle appears on the sill."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candles' colour, the sill and the window stay the same.",
+      "fail": "A candle changes colour; or the sill's surface changes; or the view through the window jumps to a different place."
+    }
+  ]
+}

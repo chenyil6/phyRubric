@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0272",
+  "caption": "A snorkelling mask worn in warm water fogs on the inside with each breath.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A snorkelling mask is worn."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The inside of the mask's glass fogs."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The fog thickens with each breath."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The outside of the glass stays clear."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The mask is clear at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The breathing comes first and the fogging follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog only thickens with each breath while the mask stays on; it does not clear on its own.",
+      "fail": "The fog clears while the mask stays on and breathing goes on; or the fog thins and thickens with no breath; or the mask is fogged before any breath; or the fog retreats to the glass's edges while breathing continues."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The haze lies on the inner face of the glass and the outer face stays clear.",
+      "fail": "The fog forms on the outside of the glass; or both faces fog equally; or the mask's skirt changes colour rather than the glass; or the water outside the mask clouds rather than the glass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Drops that gather in the fog run downward on the inner face and pool at the mask's lower rim.",
+      "fail": "A drop runs up the glass; or a drop leaves the glass and rises; or water gathers along the glass's top edge and stays; or the drops inside the mask float free of the glass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fog is a fine haze that beads and streaks, and the glass stays rigid and clear.",
+      "fail": "The fog stands off the glass as a thick crust; or peels away as a film; or the glass flexes or ripples; or the haze turns opaque white like paint."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One mask with one lens; the mask keeps its shape on the face and nothing passes through the glass.",
+      "fail": "The lens vanishes; or a second lens appears; or a hand passes through the lens; or the mask changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mask's skirt and strap and the water around stay the same.",
+      "fail": "The skirt changes colour; or the strap changes shape; or the water's colour changes between frames."
+    }
+  ],
+  "note": "The diver is kept because the breath is the moisture's source; the person is otherwise not judged."
+}

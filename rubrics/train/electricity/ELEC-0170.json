@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0170",
+  "caption": "One block is lifted out of a box of magnetic building blocks, and the others cling to it in a hanging chain.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A box of magnetic building blocks."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "One block is lifted out of the box."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Other blocks come up with it, hanging from it in a chain."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The chain hangs below the lifted block, one block from another."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lift comes first and the chain forms as the block rises."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the lifted block rises, blocks in contact with it come up too, each held to the one above, forming a chain that hangs from the lifted block.",
+      "fail": "The top block comes up alone while the blocks that were touching it stay behind; or blocks rise alongside it with gaps between them; or blocks leave the box before the top block has moved."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The chain hangs downward from the lifted block; a block that lets go falls down into the box or onto the table.",
+      "fail": "Blocks stand up above the lifted block or trail off sideways in the air; or a block that comes loose floats or drifts upward; or a detached block hangs in the air below the chain without touching it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The hanging chain swings beneath the lifted block as it moves and settles below it.",
+      "fail": "The chain stays fixed in the air where it was while the top block moves on; or the chain swings with nothing touching it while the top block is held still; or the lower blocks move before the top block does."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The blocks left in the box stay still as the chain lifts away; the box stays where it is.",
+      "fail": "Blocks left in the box shift or rearrange as the chain rises with nothing touching them; or the box slides across the table; or a chained block spins on its own while the rest of the chain hangs still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The blocks keep their number and shapes; those in the chain plus those in the box are the blocks that were in the box; no block passes through another or through the box.",
+      "fail": "Blocks appear in the chain that were not in the box; or blocks vanish in mid-air; or two blocks merge into one longer piece; or a block passes through the box's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blocks keep their colours; the box and the table stay the same.",
+      "fail": "A block changes colour as it rises; or the box changes pattern; or the table surface changes."
+    }
+  ]
+}

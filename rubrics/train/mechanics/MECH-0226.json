@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0226",
+  "caption": "The lid of a small wooden box is closed over a set of keys lying inside, then opened again.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A set of keys lies inside a small wooden box."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lid is closed over them."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lid is opened again."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The closing comes first and the opening follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The same keys are there when the lid opens, and they do not vanish, change, or appear outside while it is closed.",
+      "fail": "The keys are gone when the lid opens; or different keys are there; or keys appear outside while the box is shut."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The keys keep their number and shape.",
+      "fail": "The keys multiply; or a key changes shape; or the keys merge."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The keys are hidden while the lid is shut and do not show through it.",
+      "fail": "They show through the lid; or the lid passes through the keys; or the keys pass through the box."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The box and the keys stay put, and the lid moves only by the hand.",
+      "fail": "The lid opens by itself; or the keys jump; or the box slides."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One box keeps its number.",
+      "fail": "The box duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The box's wood and the background stay the same.",
+      "fail": "The box changes colour; or the keys change colour; or the background rearranges."
+    }
+  ]
+}

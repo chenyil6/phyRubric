@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0120",
+  "caption": "A striker is scraped down a ferro rod held over a pile of tinder, and sparks spray onto the tinder below.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ferro rod is held over a pile of tinder."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A striker is scraped down the rod."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Sparks spray from the rod onto the tinder below."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rod is above the tinder, so the sparks travel downward to it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The scrape comes first and the sparks follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The sparks leave the rod in the direction of the stroke, in a spray, and continue downward toward the tinder.",
+      "fail": "Sparks fly back up the rod against the stroke; or spray equally in all directions; or leave the rod sideways away from the tinder while the stroke points down at it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sparks fall onto the tinder below, arcing downward, and go dark on the way or as they land.",
+      "fail": "Sparks rise above the rod and gather; or hang in the air; or drift sideways without dropping; or bounce back up from the tinder and climb."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Sparks appear only during the stroke, while the striker is moving along the rod, and stop when it stops.",
+      "fail": "Sparks stream from the rod while the striker is held still on it; or continue after the striker has left the rod; or sparks flow back into the rod."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "Sparks are transient: each fades within a short flight and none accumulate as lasting lights; the rod and striker keep their number.",
+      "fail": "Sparks persist as fixed bright dots on the tinder for the rest of the clip; or a glowing pile builds without any flame; or sparks appear from a point away from the rod; or a second rod appears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The striker scrapes along the rod's surface; rod, striker and hands stay whole and pass through nothing.",
+      "fail": "The striker passes through the rod; or the rod passes through the hand; or the tinder pile turns into a solid block; or the rod vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rod's colour and length, the tinder and the ground stay the same.",
+      "fail": "The rod changes colour or length; or the tinder changes colour before any glow; or the ground changes."
+    }
+  ],
+  "note": "Whether the tinder catches is not judged; a glow or flame appearing where sparks landed is not a violation."
+}

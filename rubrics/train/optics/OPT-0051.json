@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0051",
+  "caption": "A mountain stands beside a still lake at dawn, and an upside-down image of the mountain lies on the water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A mountain stands beside a still lake at dawn."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "An upside-down image of the mountain lies on the water."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The image meets the real mountain at the shoreline."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lake is still."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The image is inverted, its peak pointing downward, and meets the real mountain at the shoreline.",
+      "fail": "The image is upright; or it is offset from the shoreline; or it is a different mountain's outline."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The image blurs where the surface is disturbed and is sharp where the water is still.",
+      "fail": "It stays sharp across plain ripples; or blurs on a glassy surface; or it is missing on still water."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The image does not move with the mountain and water still.",
+      "fail": "It drifts across the lake; or shifts while the surface is calm; or the mountain moves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The image has the mountain's colours, slightly dimmer.",
+      "fail": "It is a different colour; or brighter than the mountain; or it changes colour on its own."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mountain and one reflection of it; the reflection stays on the water.",
+      "fail": "A second mountain appears; or the reflection rises off the water; or the mountain vanishes; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sky, the shore and the mountain stay the same.",
+      "fail": "The sky changes colour abruptly; or the shore rearranges; or the mountain changes shape."
+    }
+  ]
+}

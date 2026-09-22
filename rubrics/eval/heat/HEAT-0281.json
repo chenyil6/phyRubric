@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0281",
+  "caption": "The door of a wood stove is opened, and the flames inside lean out toward the opening and flare up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wood stove with flames inside."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The stove's door is opened."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flames lean out toward the opening."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flames flare up."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flames settle back when the door is shut."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The opening comes first and the leaning follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The flames lean toward the opening as the door swings wide and settle back when it closes.",
+      "fail": "The flames lean away from the opening deeper into the stove as the door opens; or the flames lean out while the door is still shut; or the flames stay leaning out after the door has been shut; or the flames lean out before the door has moved."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The flames point upward from the logs, leaning only toward the draught, and the smoke rises to the flue.",
+      "fail": "The flames point downward into the ash; or the flames lie flat along the stove's floor with the door shut and no draught; or the smoke sinks out of the open door and pools on the hearth; or the flames hang below the logs."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The flare follows the door's opening and eases as the air settles, and the logs only char.",
+      "fail": "The flare comes before the door moves; or the flare keeps growing after the door has been shut; or a charred log turns back to pale wood; or the flames go out and relight by themselves as the door opens."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The flames are soft tongues that stretch toward the opening and the logs stay solid charring wood, while the door is a rigid panel on its hinge.",
+      "fail": "The flames hold fixed rigid shapes as they lean; or a log melts or flows; or the door bends as it opens; or the flames leave solid pieces behind."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One stove with one door; the logs keep their number and stay inside the firebox.",
+      "fail": "A log vanishes; or a new log appears; or a log passes through the stove's wall; or the door passes through its frame."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stove's body, its glass and the hearth stay the same.",
+      "fail": "The stove changes colour; or the door's glass changes shape; or items on the hearth rearrange."
+    }
+  ],
+  "note": "Who opens the door is not judged."
+}

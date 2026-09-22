@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0281",
+  "caption": "A pad of steel wool is touched to the terminals of a battery, and sparks race through the wool as its strands glow orange.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pad of steel wool and a battery."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The wool is touched to the battery's terminals."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The strands glow orange and the glow races through the wool."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wool is dark before the contact."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The contact comes first and the glow follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow starts at the point of contact with the terminals and runs outward along the strands in branching lines.",
+      "fail": "The wool is touched to the terminals and stays dark to the end of the clip; or the glow starts at a part of the pad far from the contact; or the whole pad lights at once with no spreading; or the glow appears while the wool is held away from the battery."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The glow spreads one way through the wool; burnt strands go dark and crumble behind the glowing front and do not relight.",
+      "fail": "The glow retreats back toward the contact; or burnt strands relight; or the glow flashes on and off across the pad; or the pad returns to its unburnt look."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Sparks and burnt fragments that fall off drop downward and go dark; smoke, if any, rises.",
+      "fail": "Sparks rise and gather above the pad; or hang in the air; or fragments float; or smoke sinks and pools."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wool is a tangle of fine strands: it compresses under the fingers, and burnt strands thin and crumble to dark specks.",
+      "fail": "The pad stays a rigid block; or burnt strands stay thick and bright grey; or the pad melts into a pool; or the strands stretch like elastic."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pad and one battery; the pad stays one tangle, shrinking only as it burns; nothing appears, vanishes or passes through the battery.",
+      "fail": "A second pad appears; or the pad vanishes in one step; or the pad passes into the battery; or the battery changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The battery's label and the surface beneath stay the same; the glow keeps one orange colour.",
+      "fail": "The battery's label changes; or the surface changes; or the glow turns blue or green."
+    }
+  ],
+  "note": "The hands are kept because they bring the wool to the terminals; the person is otherwise not judged. How far the glow spreads by the end is not judged."
+}

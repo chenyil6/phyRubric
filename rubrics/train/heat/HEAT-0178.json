@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0178",
+  "caption": "Hot water is poured over a pot of dried seaweed, and the crisp sheets swell and soften into flowing strands.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot of dried seaweed sheets."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Hot water is poured over the seaweed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sheets swell."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The sheets soften into limp strands."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sheets are crisp and flat at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the swelling follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The seaweed goes from crisp flat sheets to slippery limp strands that move with the water.",
+      "fail": "The sheets stay crisp and flat while fully wetted and moving; or a sheet shatters into dry shards under the water; or the seaweed melts into a liquid; or the strands stiffen into wire."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The swelling and softening only advance and the seaweed does not go crisp again in the water.",
+      "fail": "A softened strand goes crisp and flat again in the water; or the seaweed swells and shrinks in turn; or the seaweed is limp before the water reaches it; or the strands draw back into flat dry sheets."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Each sheet keeps being one piece of seaweed as it opens out and unfurls into strands.",
+      "fail": "A sheet splits into many separate whole sheets; or the seaweed turns into another material; or the sheets fuse into one smooth mass; or a sheet grows into a shape it never had, such as a ball."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The poured water falls downward into the pot, the seaweed sinks or drifts in it, and the water lies level.",
+      "fail": "The water travels upward from the jug; or a strand rises out of the water and hangs above it; or the water's surface tilts and stays tilted with the pot level; or the seaweed climbs the pot's wall and stays."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The seaweed in the pot is the seaweed that was there and the water comes only from the pour.",
+      "fail": "Seaweed appears in the pot with none added; or a sheet vanishes; or the water's level jumps with nothing poured; or seaweed passes through the pot's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the jug and the surroundings stay the same.",
+      "fail": "The pot changes colour; or the jug changes shape; or items around the pot rearrange."
+    }
+  ],
+  "note": "The seaweed darkening as it soaks is expected; its colour is not judged."
+}

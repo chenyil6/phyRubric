@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0038",
+  "caption": "A key on a toy piano is pressed, and the key lights up while it is held down and goes dark when it is released.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy piano with keys."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A key is pressed and held down."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The key lights up while it is held."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The key goes dark when it is released."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The key is dark before the press."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark, press and lit, release and dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The key lights when it is pressed down and goes dark when it is released; it glows only while held.",
+      "fail": "The key is pressed and stays dark; or lights before the finger reaches it; or stays lit after the finger lifts; or goes dark while the finger still holds it down."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Only the pressed key moves and lights; the other keys stay still and dark; the piano stays put.",
+      "fail": "Other keys light or move while only one is pressed; or a key sinks by itself; or the piano slides or rocks at the press; or the pressed key stays down after release."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "While held the glow is steady; after release the key stays dark for the rest of the clip.",
+      "fail": "The glow flickers while the key is held steady; or comes back on after release; or the key lights and goes dark repeatedly during one press."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The key is a rigid lever that dips at the press and springs back up on release.",
+      "fail": "The key bends or squashes under the finger; or sinks into the body and stays sunk; or the whole keyboard dips as one piece."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One piano with a fixed row of keys; the finger passes through nothing.",
+      "fail": "Keys appear or vanish; or the finger passes into the key or body; or a second piano appears; or the piano changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The piano's colours and the key layout stay the same apart from the glow.",
+      "fail": "The piano changes colour; or the keys change order or colour; or the glow changes colour during the press."
+    }
+  ],
+  "note": "The hand is kept because the press is the caption's cause; the person is otherwise not judged. Sound is not judged."
+}

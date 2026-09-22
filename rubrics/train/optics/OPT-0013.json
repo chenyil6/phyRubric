@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0013",
+  "caption": "A patio umbrella is opened in the sun, and a round shadow appears on the ground beneath it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A patio umbrella is opened."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is in sunlight."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A round shadow appears on the ground beneath it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow appears as the umbrella opens."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shadow moves when the umbrella is tilted."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow appears as the umbrella opens and lies on the side away from the sun.",
+      "fail": "The shadow is there before the umbrella opens; or it lies toward the sun; or it is missing with the umbrella open in sunlight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow matches the umbrella's round outline.",
+      "fail": "It is a different shape; or splits; or stays small when the umbrella is fully open."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow moves only when the umbrella moves.",
+      "fail": "It drifts by itself; or it stays put when the umbrella is tilted; or it moves before the umbrella."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The canopy opens as taut fabric on ribs.",
+      "fail": "It is rigid like a plate; or floats off; or tears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One umbrella and one shadow.",
+      "fail": "A second shadow appears; or the umbrella vanishes; or the shadow becomes solid; or the pole passes through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The umbrella's colour and the patio stay the same, and the shadow stays dark.",
+      "fail": "The canopy changes colour; or the shadow turns coloured; or the patio changes."
+    }
+  ]
+}

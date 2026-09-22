@@ -1,0 +1,80 @@
+{
+  "id": "OPT-0179",
+  "caption": "A drop of red food colouring is added to a glass of white icing and stirred, and the icing turns pink.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A container of white icing is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A drop of red food colouring is added to it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The icing is stirred."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The icing turns pink."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Red streaks appear first and blend toward an even pink."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is drop, stir, pink."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Colour spreads from the drop through the icing as it is stirred; coloured areas stay coloured, and the pink deepens or evens out but never returns to white.",
+      "fail": "The icing turns white again where it was pink; or the red gathers back into a drop; or the pink appears before the drop lands; or the colour flickers."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The result is pink, a lighter tint of the red, with red streaks where unmixed; the white stays white until the colour reaches it.",
+      "fail": "The icing turns a colour other than pink or red; or the red streaks turn white instead of blending; or the icing becomes darker red than the drop itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The icing behaves as a thick paste: the spoon leaves furrows, streaks stay where drawn until stirred, and the drop sits on it rather than dispersing like ink in water.",
+      "fail": "The icing flows like water and the colour disperses in swirls on its own; or the icing is rigid and the spoon passes through it without marking; or it bounces like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The icing moves only where stirred; the colouring does not spread faster than stirring carries it.",
+      "fail": "Colour spreads through unstirred icing on its own; or the icing swirls with no spoon; or the bowl turns by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One container and one spoon; the amount of icing stays the same and nothing passes through the container.",
+      "fail": "The container fills or empties on its own; or a second spoon appears; or the spoon passes through the container; or the container changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The container, the spoon and the table keep their appearance.",
+      "fail": "The container changes colour; or the spoon changes; or the table pattern shifts."
+    }
+  ]
+}

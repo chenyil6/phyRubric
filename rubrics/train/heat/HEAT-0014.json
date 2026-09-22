@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0014",
+  "caption": "A cube of cold butter is dropped into a bowl of hot soup, and the butter melts and spreads across the surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bowl of hot soup."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A cube of butter is dropped into the soup."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The butter melts: the cube shrinks and loses its edges."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A film of melted butter spreads across the soup's surface."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Steam rises from the soup."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the spreading follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The cube only shrinks while the film at the surface grows, and the film does not gather back into a cube.",
+      "fail": "The cube regains its square edges; or grows; or the film draws back together into a solid lump; or the butter sets into a firm pat on the hot soup."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The cube floats at the surface and the film stays at the surface, spreading outward across it.",
+      "fail": "The cube sinks whole to the bottom and stays there; or the film climbs the bowl's wall and stays above the soup; or butter lifts off the surface and hangs above it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The melted butter is a thin glossy film that spreads and breaks into drifting patches, and the cube is a soft solid that floats mostly submerged.",
+      "fail": "The melted butter stands as a dome on the soup; or the film keeps a fixed shape while the soup swirls beneath it; or the cube shatters dry; or the cube sits wholly on top of the soup like a ball on a sheet."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The film spreads out from the melting cube and drifts with the soup's movement.",
+      "fail": "A film covers the soup while the cube is still sharp-edged and matt; or the film appears on the far side of the bowl with none spreading from the cube; or the cube shrinks while the surface stays clear of any film."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cube and one bowl; the butter goes only into the film.",
+      "fail": "The cube vanishes in a single frame while still large; or a second cube appears; or the cube passes through the bowl's wall; or the soup's level drops with nothing taken out."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bowl's pattern, the soup's colour and the table stay the same.",
+      "fail": "The bowl changes pattern; or the soup changes colour away from where the butter's sheen lies; or items on the table rearrange."
+    }
+  ]
+}

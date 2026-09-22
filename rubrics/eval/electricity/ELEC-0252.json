@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0252",
+  "caption": "The key switch on the base of a desk lamp is turned, and the lamp lights.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A desk lamp with a key switch on its base."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The key switch is turned."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lamp lights."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lamp is dark before the turn."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, turn, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lamp lights at the moment the key clicks over, and only then.",
+      "fail": "The key is turned and the lamp stays dark; or the lamp is lit before the key moves; or the lamp comes on with the key untouched; or the lamp comes on well after the turn with nothing else happening."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the lamp stays lit steadily for the rest of the clip.",
+      "fail": "The lamp goes off again by itself; or flickers on and off; or dims back to dark; or the key turns back by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lamp's light reaches its surroundings: the shade glows and the desk beneath brightens, with shadows pointing away from the lamp.",
+      "fail": "The bulb glows while the shade and desk stay as dark as before; or the surroundings brighten while the lamp stays dark; or the light comes from a place other than the lamp."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lamp stays put as the key is turned; nothing else on the desk moves.",
+      "fail": "The lamp slides, tips or lifts at the turn; or the shade swings by itself; or items on the desk jump."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp with one key switch; the lamp keeps its shape; the hand passes through nothing.",
+      "fail": "A second lamp appears; or the lamp vanishes; or the hand passes through the base; or the lamp changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shade's colour, the base and the desk stay the same apart from the light.",
+      "fail": "The shade changes colour rather than brightness; or the base changes shape; or the desk's contents rearrange."
+    }
+  ]
+}

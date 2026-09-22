@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0200",
+  "caption": "An inflated balloon drifts down onto a burning candle, and it bursts the instant the flame touches it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An inflated balloon drifts down toward a burning candle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The balloon meets the flame."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The balloon bursts."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The candle keeps burning afterwards."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Shreds or fragments show where the balloon was."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The contact comes first and the burst follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The balloon is a stretched elastic skin that bursts at once rather than deflating or melting slowly.",
+      "fail": "The balloon deflates slowly through a hole and sags; or the balloon melts and drips onto the candle; or the balloon bounces off the flame and stays whole; or the balloon shrinks away to nothing without bursting."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The balloon is whole until it meets the flame and bursts at that moment.",
+      "fail": "The balloon bursts before it reaches the flame; or the balloon rests on the flame and stays whole to the end of the clip; or the balloon passes through the flame and drifts on unchanged; or the balloon bursts while the candle is out."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The balloon drifts downward onto the candle, any shreds fall afterwards, and the flame points upward.",
+      "fail": "The balloon rises away from the candle with nothing lifting it; or shreds rise and stay aloft; or the flame points downward; or shreds hang in the air where the balloon was."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once burst the balloon stays burst and the candle keeps burning.",
+      "fail": "Shreds gather back into a whole balloon; or the balloon fills out again; or the candle's flame goes out and relights by itself; or the burst repeats with nothing new arriving."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon and one candle; the candle keeps its wick and flame and nothing passes through the table.",
+      "fail": "A second balloon appears; or the candle vanishes; or the flame detaches from the wick and floats; or a shred passes through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candle's colour, the holder and the surroundings stay the same.",
+      "fail": "The candle changes colour; or the holder changes shape; or a shred is a different colour from the balloon."
+    }
+  ],
+  "note": "The bang is sound and is not judged. Whether the shreds stay in view is not required; what is judged is that the balloon goes at the moment of contact."
+}

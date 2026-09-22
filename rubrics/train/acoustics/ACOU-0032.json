@@ -1,0 +1,77 @@
+{
+  "id": "ACOU-0032",
+  "caption": "A marching band's bass drum passes close to a shop window, and a paper sign taped to the inside of the glass quivers with each beat.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A paper sign taped to the inside of a shop window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A marching band with a bass drum passes outside the window."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sign quivers."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The quivering comes in twitches rather than one steady flutter."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sign is still before the drum arrives and after the band has gone."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each visible beat of the drum is followed by a twitch of the sign.",
+      "fail": "The beater strikes repeatedly and the sign never moves; or the sign twitches at moments when the beater is held away; or the sign shakes hardest after the drum has gone and is still while the drum is beside the window.",
+      "precondition": "The drummer and the beater are in view."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The sign's motion is a tremble at its loose edges with its taped points fixed; with no band outside it hangs still.",
+      "fail": "The sign flaps while the street is empty and stays still as the band passes; or the taped corners slide across the glass; or the sign floats away from the glass; or it swings in slow wide arcs like a curtain."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The sign bends as paper: its loose edges curl and flap.",
+      "fail": "The sign stays rigid like a board while shifting; or stretches or shrinks; or tears with nothing touching it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Loose corners hang downward and settle back after each twitch.",
+      "fail": "A loose corner rises and stays up; or the sign lifts up the glass; or it drifts upward."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sign; the band and its drum keep their count; nothing passes through the glass.",
+      "fail": "A second sign appears; or the sign vanishes; or the drum passes through the glass; or band members merge or vanish."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sign's lettering and colour and the goods in the window stay the same.",
+      "fail": "The sign's lettering changes; or its colour changes; or goods in the window change shape or colour."
+    }
+  ],
+  "note": "The band members are the source of the beats; their marching is not judged."
+}

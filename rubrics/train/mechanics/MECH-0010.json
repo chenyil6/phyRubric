@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0010",
+  "caption": "A ceiling fan running at full speed is switched off at the wall, and the blades keep turning for a while before coming to a stop.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ceiling fan is running at full speed."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is switched off at the wall."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The blades keep turning after the switch."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "They come to a stop."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The wall switch is visible."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The switch is thrown first, then the blades run on, then they stop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "After the switch the blades slow steadily, keeping the direction they were already turning, until they stop.",
+      "fail": "The blades speed up after the switch; or they reverse direction as they slow; or they slow and then pick up again."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The blades come to rest only by slowing down, and they stay at rest once stopped.",
+      "fail": "The blades halt in the same frame the switch is thrown; or they stop dead while still turning quickly; or they start turning again after coming to rest."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The blades stay flat and rigid and turn together about the hub.",
+      "fail": "A blade bends or droops as it slows; or the blades turn at different speeds from one another; or a blade flexes like cloth."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The fan hangs from its mount on the ceiling and stays there while the blades slow.",
+      "fail": "The fan drifts down away from the ceiling; or it tilts and stays tilted with nothing holding it; or it rises up into the ceiling."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The fan keeps its number of blades and its shape throughout.",
+      "fail": "A blade vanishes or an extra one appears; or a blade passes through the ceiling or through the hub; or the fan turns into another fixture."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blades' colour, the fixture and the room stay the same.",
+      "fail": "The blades change colour; or the light fitting under the fan changes shape; or the room behind rearranges between frames."
+    }
+  ]
+}

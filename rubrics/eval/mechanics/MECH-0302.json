@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0302",
+  "caption": "A tablecloth is pulled sharply out from under a set of plates and glasses, and the dishes stay almost where they were on the bare table.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Plates and glasses stand on a tablecloth."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cloth is pulled sharply out from under them."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dishes stay almost where they were on the bare table."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pull comes first and the dishes settle after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The cloth leaves in one quick motion while the dishes shift only slightly and settle.",
+      "fail": "The dishes fly off with the cloth; or rise; or slide far across the table."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "All the dishes remain on the table with the same count.",
+      "fail": "A dish vanishes; or appears; or a dish is found under the cloth."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The dishes do not move before the pull.",
+      "fail": "They move before; or move after settling; or jump."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cloth flows out flat and the dishes are rigid.",
+      "fail": "The cloth is rigid; or the dishes bend; or the cloth tears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The dishes keep their shape and the table stays one table.",
+      "fail": "A dish turns into another object; or the table duplicates; or dishes merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dishes and the room stay the same.",
+      "fail": "The dishes change pattern; or the table changes; or the room rearranges."
+    }
+  ],
+  "note": "The hands pulling are kept as the minimal trigger; the person is not judged."
+}

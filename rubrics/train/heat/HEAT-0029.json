@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0029",
+  "caption": "A spoonful of solid white coconut oil is dropped into a hot frying pan, and it melts into clear liquid.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A frying pan."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A spoonful of white solid coconut oil is dropped into the pan."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The oil melts."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The melted oil is clear liquid."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "A clear pool spreads out around the shrinking lump."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is white lump, melting, clear pool."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The lump only shrinks while the clear pool grows; it does not firm up again in the pan.",
+      "fail": "The lump regains the shape it was spooned in; or the pool draws back into the lump; or the oil sets white and solid again in the pan; or the lump alternates between larger and smaller."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The change from white to clear happens in the oil where it melts, starting at the pan, and the clear pool stays clear.",
+      "fail": "The clear pool turns white again while the pan is hot; or the lump melts into a liquid that stays milky; or the pan's surface changes colour rather than the oil; or the lump turns clear before it has begun to melt."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pool spreads outward and downhill over the pan's floor and runs to its low side.",
+      "fail": "The pool climbs the pan's wall and stays; or a run of oil travels uphill; or oil lifts off the pan and floats; or the pool gathers above the lump."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lump melts where it touches the metal: it goes clear and glossy underneath and the pool spreads from beneath it.",
+      "fail": "The lump melts from its top while its underside stays white and matt; or a pool spreads on a part of the pan the lump never touched; or the lump shrinks while the pan around it stays dry."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One spoonful of oil; the oil goes only from the lump into the pool.",
+      "fail": "The lump grows; or a second lump appears; or the lump vanishes while still large; or oil appears across the pan with none flowing there."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan's finish, the spoon and the hob stay the same.",
+      "fail": "The pan changes colour; or the spoon changes shape; or items around the hob rearrange."
+    }
+  ],
+  "note": "Browning or foaming of the oil is chemistry and is not judged; the caption's point is that the melt is clear rather than white."
+}

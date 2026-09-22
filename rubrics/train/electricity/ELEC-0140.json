@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0140",
+  "caption": "A small magnet is pressed against a refrigerator door and released, and it stays stuck on the door.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A refrigerator door is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A small magnet is pressed against it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The magnet is released: the hand or tool withdraws."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The magnet stays on the door."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The magnet is small, fridge-magnet sized."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is press, release, stays."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "After release the magnet holds where it was placed on the vertical door, with nothing supporting it.",
+      "fail": "The magnet drops when the hand lets go; or slides slowly down the door; or floats away from the door; or hangs a gap away from the surface without touching."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Once released the magnet stays put: it does not slide, rotate or creep.",
+      "fail": "The magnet moves across the door after release with nothing touching it; or rotates; or jumps to a new spot."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "An item tucked under the magnet stays too, held against the door.",
+      "fail": "The item falls while the magnet stays; or the item floats up; or the item is held while the magnet is off the door.",
+      "precondition": "A photo, note or other item is tucked under the magnet."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The magnet stays a rigid solid and the door does not dent.",
+      "fail": "The magnet squashes like putty against the door; or the door surface deforms around it; or the magnet bounces off and then sticks."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One magnet on the outside of the door; the door and hand keep their shape.",
+      "fail": "The magnet sinks into the door; or a second magnet appears; or the magnet vanishes; or fingers pass through the magnet."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The magnet's colour and design and the other items on the door stay the same.",
+      "fail": "The magnet changes colour or shape; or other magnets or notes on the door move or vanish; or the door changes colour."
+    }
+  ]
+}

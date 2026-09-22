@@ -1,0 +1,77 @@
+{
+  "id": "ELEC-0112",
+  "caption": "A moth flies into a hanging bug zapper on a porch, and there is a brief crackle and flash at the grid.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bug zapper hangs on a porch."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A moth flies toward the zapper."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The moth reaches the grid."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A brief flash appears at the grid."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flash comes as the moth meets the grid, not before."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is brief and at the point where the moth meets the grid; the grid is dark before and after.",
+      "fail": "The grid flashes while the moth is still well clear of it; or the flash glows on for the rest of the clip; or the flash appears at a place on the grid away from the moth; or the grid flashes repeatedly with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One zapper and one moth; the zapper keeps its shape and place; the flash leaves nothing glowing behind.",
+      "fail": "A second zapper or moth appears from nowhere; or the zapper vanishes; or a glowing spot stays on the grid after the flash; or the moth passes through the grid and flies on unchanged."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "After the flash the moth drops or falls away from the grid; anything that falls goes downward.",
+      "fail": "The moth rises from the grid after the flash and hangs in the air; or falls upward; or a fallen moth rises back to the grid.",
+      "precondition": "The moth's fate after the flash is in view."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The zapper hangs still or swings only gently; the porch furniture stays put.",
+      "fail": "The zapper swings hard at the flash with nothing touching it; or jumps to a new spot; or porch furniture shifts at the flash."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The zapper is a rigid cage that stays whole; the moth meets the grid from outside.",
+      "fail": "The grid bends or melts; or the moth passes through the cage wall and out the other side unchanged; or the zapper's housing changes shape; or the hook detaches and the zapper hangs in the air."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The zapper's colour and the porch's colours stay the same apart from the flash.",
+      "fail": "The zapper changes colour; or the porch wall changes colour; or the zapper's glow changes colour when it is not flashing."
+    }
+  ],
+  "note": "The moth is an animal and its flight is not judged. The crackle is sound and is not judged."
+}

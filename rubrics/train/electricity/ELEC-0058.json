@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0058",
+  "caption": "A string of fairy lights is unplugged from the wall, and the whole string goes dark.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A string of fairy lights, lit, with its plug in a wall socket."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The plug is pulled out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The whole string goes dark."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Every bulb goes dark, none stays lit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is lit, pull, dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "All the bulbs go dark at the moment the plug leaves the socket, and only then, together.",
+      "fail": "The plug is out and bulbs still glow; or the string goes dark before the plug moves; or the bulbs go out one after another along the string; or the string goes dark with the plug still seated."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The dark bulbs are the same bulbs seen lit: the same number at the same spots along the wire.",
+      "fail": "Bulbs vanish rather than going dark; or new bulbs appear along the wire; or bulbs shift along the wire; or the wire shortens or lengthens."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once unplugged the string stays dark while the plug is out.",
+      "fail": "Bulbs come back on with the plug out; or the string flickers; or the plug jumps back into the socket by itself; or the bulbs glow faintly on."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord follows the plug: it slackens and drops once the plug is free; the string stays where it hangs.",
+      "fail": "The cord stretches like elastic; or stands rigid in the air after the plug is out; or the string falls from its hooks as the plug is pulled."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One string, one plug, one socket; the plug leaves the socket whole; nothing passes through the wall.",
+      "fail": "The plug passes through the wall beside the socket; or the wire splits or detaches; or a second plug appears; or the socket comes off the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wire's colour, the socket and the background stay the same apart from the light.",
+      "fail": "The wire changes colour; or the socket changes design; or the background rearranges."
+    }
+  ]
+}

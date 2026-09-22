@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0112",
+  "caption": "Water is poured into a clear jug standing in front of a patterned tile wall, and the pattern seen through the jug shifts as the water rises.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A clear jug stands in front of a patterned tile wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Water is poured into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pattern seen through the jug shifts as the water rises."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The boundary of the shift is at the water level."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The pattern looks different behind the filled part than behind the empty part, with the boundary at the water level.",
+      "fail": "The pattern is the same above and below the water; or the boundary is away from the water level; or the shift is beside the jug."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The wall itself does not change.",
+      "fail": "The tiles move; or the pattern changes; or a different wall appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The water level rises steadily while pouring.",
+      "fail": "It falls while pouring; or jumps; or is full before the pour."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The stream falls as liquid and the jug is rigid.",
+      "fail": "The stream is a rod; or the jug bends; or the water goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One jug, and water comes only from the pour.",
+      "fail": "Water appears with no stream; or the jug duplicates; or water passes through the jug."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tiles' colours and the jug stay the same.",
+      "fail": "The tiles change colour; or the jug changes shape; or the counter changes."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0144",
+  "caption": "A flashlight is switched on under a blanket, and the blanket glows from inside where the light is.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flashlight is under a blanket."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The blanket glows from inside where the light is."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The glow is brightest where the flashlight is nearest the cloth."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The switch comes first and the glow follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow is brightest where the flashlight is nearest the cloth and moves if the light moves.",
+      "fail": "The glow is far from the flashlight; or the whole blanket glows evenly; or the glow stays put while the light moves."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The glow appears with the switch and stops when the light is switched off.",
+      "fail": "The blanket glows with the light off; or the glow lingers after switching off; or it appears before the switch."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The glow is one soft patch through the cloth.",
+      "fail": "It is a sharp-edged spot as if on a wall; or it splits into several; or it is a geometric shape."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The blanket is cloth that drapes over the flashlight.",
+      "fail": "It is rigid; or transparent; or floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One flashlight and one blanket.",
+      "fail": "A second glow appears with one flashlight; or the blanket vanishes; or the flashlight passes through the cloth."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blanket's colour and the room stay the same.",
+      "fail": "The blanket changes colour; or the room rearranges; or the glow changes colour."
+    }
+  ],
+  "note": "Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0136",
+  "caption": "A bonfire on a beach burns high, and sparks and embers rise into the dark sky and wink out.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bonfire burns on a beach."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Sparks and embers rise from the fire."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sparks go dark high above the fire."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flames point upward."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flames lean with the breeze."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The sky is dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sparks rise with the hot air above the flames, drift and go dark, and the flames point upward from the wood.",
+      "fail": "The sparks fall to the sand and lie there glowing; or sink below the fire; or the flames point downward into the sand; or the sparks travel downward into the ground."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Each spark fades in flight and none accumulate, and the fire's wood keeps its number.",
+      "fail": "Sparks persist as fixed bright dots in the sky; or a glowing pile builds on the sand; or sparks appear in the sky far from the fire with none rising there; or a log vanishes at a stroke."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each spark only fades as it rises and the fire's wood only chars.",
+      "fail": "A spark brightens again after fading; or a charred log turns back to pale unburnt wood; or the sparks stream out and then stream back into the fire; or the ash gathers back into whole logs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The flames lean the same way as the smoke and anything loose in the scene.",
+      "fail": "The flames lean against the way the smoke streams; or the flames stand straight while the smoke is flattened; or the flames lean while the smoke rises straight and nothing else moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The fire's logs keep their shapes as they char and the beach stays sand.",
+      "fail": "A log turns into another object; or the logs merge into one smooth mass; or the sand opens up under the fire; or the flames pass through a log and out below it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sand, the sea behind and the surroundings stay the same.",
+      "fail": "The sand changes colour; or the sea's edge jumps to a new place; or the background changes between frames."
+    }
+  ]
+}

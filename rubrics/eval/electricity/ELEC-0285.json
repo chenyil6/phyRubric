@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0285",
+  "caption": "A magnet is touched to a steel food can and holds; touched to an aluminium drink can beside it, it falls off.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A steel food can and an aluminium drink can side by side."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnet is touched to the steel can and holds there."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The magnet is touched to the aluminium can."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The magnet falls off the aluminium can."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The steel can comes first and the drink can second."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The same magnet is used on both cans."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "On the steel can the magnet stays where it is placed after the hand withdraws; on the drink can it leaves the surface as the hand lets go.",
+      "fail": "The magnet drops or slides down the steel can after release; or stays on the drink can with nothing holding it; or hangs a gap away from either can; or the drink can lifts away with the magnet."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The magnet touches the outside of each can and stays outside; the cans keep their shape; the hand passes through nothing.",
+      "fail": "The magnet sinks into a can; or passes through a can's wall; or a can dents deeply at the touch and stays dented; or the hand passes through a can."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Leaving the drink can, the magnet falls straight down and lands on the surface below.",
+      "fail": "The magnet drifts upward or sideways after release; or halts in mid-air; or lands and rises back to the can."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The cans stay where they stand; neither slides, tips or rolls on its own as the magnet is placed or falls.",
+      "fail": "A can slides toward the magnet; or tips over with nothing touching it; or the drink can rolls away as the magnet falls; or the magnet creeps across the steel can."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One magnet and two cans throughout; nothing appears, vanishes or passes through the table.",
+      "fail": "A second magnet appears so that one is on each can; or a can vanishes; or the magnet vanishes in mid-fall; or the magnet passes through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cans' labels and colours, the magnet and the surface stay the same.",
+      "fail": "A can's label changes; or the magnet changes colour or shape; or the surface changes."
+    }
+  ],
+  "note": "P1 assumes the cans are as the caption says; a drink can that plainly reads as steel fails S1, and the magnet holding on it is then not a P1 failure."
+}

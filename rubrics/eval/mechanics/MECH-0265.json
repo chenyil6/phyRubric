@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0265",
+  "caption": "A weighted fishing line is cast far out over a lake from the bank, and the weight splashes into the water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A weighted fishing line is cast from a bank over a lake."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The weight flies out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It splashes into the water."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The line trails behind the weight."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cast comes first and the splash follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The weight flies in an arc pulling the line behind it.",
+      "fail": "It flies flat; or stops in the air; or changes direction."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It falls after the peak into the water.",
+      "fail": "It rises; or hovers; or floats on top."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "A splash and rings appear where it enters.",
+      "fail": "No splash; or the splash is elsewhere; or the splash comes before it lands."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The line is a limp thread trailing behind.",
+      "fail": "It is a rigid rod; or stretches; or leads the weight."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One weight and one line keep their number.",
+      "fail": "The weight duplicates; or vanishes; or the line splits."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rod and the lake stay the same.",
+      "fail": "The rod changes; or the lake changes colour; or the bank rearranges."
+    }
+  ]
+}

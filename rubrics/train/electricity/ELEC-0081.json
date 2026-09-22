@@ -1,0 +1,77 @@
+{
+  "id": "ELEC-0081",
+  "caption": "A storm rolls over a farm at night, and a bolt of lightning flashes from the clouds to the ground, lighting up the fields for an instant.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A farm landscape at night under storm clouds."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lightning bolt spans from the clouds to the ground."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The fields are lit briefly by the flash."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bolt is jagged or branched."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fields go dark again afterwards."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The bolt and the flash are brief: they appear, may flicker, and are gone; the landscape is lit only during the flash and returns to dark.",
+      "fail": "The bolt stands as a steady lit line for the whole clip; or the fields stay lit after the bolt has gone; or the sky brightens without a bolt and stays bright."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flash lights the scene: fields, farm buildings and cloud undersides brighten during the bolt, lit from the bolt's direction.",
+      "fail": "The bolt is visible but the ground and clouds stay as dark as before; or the lit area is far from the bolt; or the fields are lit while no bolt is present."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The bolt is a jagged, branching bright line with a main channel.",
+      "fail": "The bolt is a perfectly straight beam; or a smooth wave; or a solid glowing tube that persists; or a shape with no connection between cloud and ground while the ground lights up."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Rain falls downward and wind-blown items move with the storm.",
+      "fail": "Rain rises or hangs still; or leaves blow upward steadily; or rain falls sideways while the trees stand still.",
+      "precondition": "Rain or wind-blown items are visible."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The farm's buildings, trees and fences are the same before and after the flash; the flash reveals what was there, it does not create or remove anything.",
+      "fail": "Buildings or trees appear or vanish between dark and lit frames; or the landscape changes layout after the flash; or a bolt passes through a building leaving it lit like a lamp."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The scene's colours are consistent: the flash whitens or blues the scene briefly and it returns to the same night colours.",
+      "fail": "The sky changes to daylight after the flash; or the fields change colour permanently; or clouds change shape abruptly between frames."
+    }
+  ],
+  "note": "The caption's violation_types include gravity_direction; nothing about a bolt itself has a gravity direction, so it is covered only by the rain item P4, which is gated. Consider replacing gravity_direction with shape_identity on the data record."
+}

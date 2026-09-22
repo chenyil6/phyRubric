@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0049",
+  "caption": "A stadium crowd stamps in unison, and the beer in a cup on a railing shows a steady wobble in time with the stamps.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stadium crowd stamps their feet together."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A cup of beer stands on a railing."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The beer's surface wobbles."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wobble is steady and rhythmic."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The wobble keeps time with the stamping."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each stamp is followed by a wobble; when the crowd stops, the surface settles.",
+      "fail": "The crowd stamps repeatedly and the beer stays glassy; or the beer wobbles hard while the crowd is not stamping; or the wobble runs on unchanged well after the stamping has stopped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The beer stays in the cup and wobbles about level; the cup stays put on the railing.",
+      "fail": "The beer rises out of the cup with the cup still; or the cup slides along the railing in one glide; or the beer swirls round as if stirred; or the surface stays tilted to one side."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The cup stays down on the railing and any spilled drops fall.",
+      "fail": "The cup hovers; or foam lifts off and floats up; or drops fall upward."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cup and the railing stay rigid and the beer stays liquid.",
+      "fail": "The cup crumples with nothing touching it; or the railing bends; or the beer turns into a solid block."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cup; the people in the crowd keep their count; nothing passes through the railing.",
+      "fail": "A second cup appears; or the cup vanishes; or sinks into the railing; or people in the crowd merge or vanish."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cup's logo, the railing's colour and the beer's colour stay the same.",
+      "fail": "The cup's colour or logo changes; or the railing changes colour; or the beer changes colour."
+    }
+  ],
+  "note": "The crowd is kept as the source of the stamping; only the timing of the stamps is used, not their behaviour."
+}

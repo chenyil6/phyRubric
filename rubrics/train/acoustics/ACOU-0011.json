@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0011",
+  "caption": "A small scrap of paper rests on a bass string inside a grand piano with the lid open; the key for that string is pressed, and the paper jumps off the string.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A grand piano with its lid open and its strings in view."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A small scrap of paper rests on one of the bass strings."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A key is pressed: a hand on the keyboard or a hammer rising to the strings."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The paper jumps off the string."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The paper sits on a thick bass string, not a thin treble one."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The key press comes first and the paper's jump follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The paper lies still on its string until the key is pressed; it is flung off as the hammer strikes and only then.",
+      "fail": "The paper hops or slides before any key goes down or hammer moves; or jumps while the keys and hammers are seen at rest; or the hammer strikes the string and the paper stays flat on it; or paper on a string that was not struck jumps too."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once flung off, the paper falls and comes to rest on neighbouring strings or the frame and stays there.",
+      "fail": "The paper returns to its spot on the string it left; or keeps hopping on and off the string for the whole clip after a single press; or is at rest on the frame and then jumps back up with no further key press."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "After the flick the paper falls, fluttering down onto the strings below or the frame.",
+      "fail": "The paper hangs in the air above the strings; or drifts upward toward the raised lid; or slides along a string without dropping."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Only the struck string and its hammer move: the string blurs, the hammer rises and falls back; the neighbouring strings stay sharp and the other hammers stay down.",
+      "fail": "Several hammers rise for one key press; or the neighbouring strings blur along with the struck one; or the strings sway like slack ropes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One scrap of paper and the same strings and hammers; the paper passes through nothing and nothing appears or vanishes.",
+      "fail": "The paper vanishes in mid-air; or a second scrap appears; or the paper passes through a string or the frame; or a string or hammer vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The piano's frame colour, the strings' spacing and the lid stay the same.",
+      "fail": "The frame changes colour; or the strings change spacing while untouched; or the lid changes angle by itself; or the paper changes colour or size while at rest."
+    }
+  ],
+  "note": "The keyboard may be out of frame; a hammer rising toward the strings counts as the key press for S3 and P1. The sound of the note is not judged."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0102",
+  "caption": "Steam from a hot shower drifts against the cool tiled wall, and the tiles bead with water that runs in streaks.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Steam drifts against a tiled wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The tiles bead with water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water runs down in streaks."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tiles look wet where the steam reaches them."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drops join before they run."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The drops join and run downward over the tiles and gather at the grout lines and the wall's foot.",
+      "fail": "A streak runs up the tiles; or water gathers along the wall's top and stays; or a drop leaves the tiles and rises; or a streak travels sideways and stays level."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The beading only builds while steam keeps arriving, and runs only advance downward.",
+      "fail": "The tiles dry while steam still drifts against them; or the beads grow and shrink in turn; or the tiles are wet before any steam reaches them; or a streak retreats up the wall."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The tiles are wet where the steam reaches them and drier where it does not.",
+      "fail": "The wall beads evenly all over while the steam drifts against one part; or the tiles bead in a corner the steam never reaches; or the steam drifts against the tiles and they stay dry to the end of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The drops behave as water on glazed tile: rounded, merging when they touch and running as streaks, and the grout darkens as it wets.",
+      "fail": "Touching drops overlap without merging; or drops jump about on the tile; or the water sets as frost on the warm wall; or the tiles' glaze bubbles as the water runs."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The wall keeps its tiles in their courses and nothing passes through it.",
+      "fail": "A tile vanishes; or a new tile appears; or water passes through the wall; or the wall changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tiles' colour and pattern away from the wet area and the fittings stay the same.",
+      "fail": "The tiles change colour; or the pattern changes; or the fittings move."
+    }
+  ]
+}

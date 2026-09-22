@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0072",
+  "caption": "A coin is flipped into the air and caught as it comes down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A coin is flipped into the air."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It rises and comes back down."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It is caught as it comes down."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The coin tumbles as it flies rather than travelling flat."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flip comes first and the catch follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The coin slows as it rises, peaks, and falls quicker on the way down.",
+      "fail": "The coin hangs at the top; or it rises at an unchanging speed; or it falls at one slow unchanging drift."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It goes up and comes back along nearly the same line to the hand.",
+      "fail": "The coin drifts far to one side with nothing touching it; or it jinks in mid-air; or it keeps rising out of the frame."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The coin tumbles end over end in the air and stops only in the hand.",
+      "fail": "The coin stops spinning in mid-air and hangs; or it reverses its spin; or it sets off again after being caught."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The hand closes on the coin and the coin stops there.",
+      "fail": "The coin passes through the hand; or the hand closes and the coin keeps falling; or the coin stops above the open hand."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One coin is in the air throughout.",
+      "fail": "The coin vanishes at the top or a second one appears; or it turns into another object; or it merges with the hand."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The coin's colour and size and the background stay the same.",
+      "fail": "The coin changes colour or size in flight; or the background rearranges between frames; or the hand changes."
+    }
+  ],
+  "note": "The hand is kept as the minimal trigger and catcher; the person behind it is not judged."
+}

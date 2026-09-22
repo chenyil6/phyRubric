@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0254",
+  "caption": "A snowball thrown against a warm sunlit window sticks for a moment, then slides down the glass as it melts, leaving a wet streak.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A snowball hits a window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The snowball sticks to the glass for a moment."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The snowball slides down the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A wet streak is left behind it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The window is sunlit."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is hit, stick, slide, streak."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The snowball only softens and shrinks and the streak only grows; nothing freezes again on the warm glass.",
+      "fail": "The snowball regains its round firm shape; or the streak draws back into the snowball; or the wet streak freezes to frost on the sunlit glass; or the snowball alternates between firmer and softer."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The snowball slides downward on the glass, the streak runs down behind it and water gathers at the sill.",
+      "fail": "The snowball slides up the window; or the streak runs upward above where the ball struck; or the snowball leaves the glass and rises; or water gathers along the window's top and stays."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The streak lies along the path the ball took and the glass there is wet, while glass the ball missed stays dry.",
+      "fail": "The streak lies away from the ball's path; or the glass stays dry behind a sliding snowball; or a streak appears on a pane the ball never touched; or the streak runs ahead of the sliding ball."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The snowball is a wet crumbling solid that flattens where it struck, sheds crumbs and shrinks, and the glass stays rigid.",
+      "fail": "The snowball bounces off the glass like a rubber ball and stays round; or the snowball shatters into dry powder that stays on the glass; or the glass flexes where the ball struck; or the ball smears into a paste that keeps its shape."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One snowball on one window; the snow leaves only as water and crumbs.",
+      "fail": "The snowball vanishes at a stroke while still large; or a second snowball appears on the glass; or the snowball passes through the glass; or the streak appears with no ball sliding down it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The window's frame, the view through the glass and the surroundings stay the same.",
+      "fail": "The frame changes colour; or the view through the glass jumps to a different place; or the sill changes shape."
+    }
+  ],
+  "note": "Who throws the snowball is not judged."
+}

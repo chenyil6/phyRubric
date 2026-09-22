@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0184",
+  "caption": "In a dark hallway a fingertip is brought slowly toward a metal doorknob, and a tiny spark jumps from the fingertip to the knob just before they touch.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dark hallway with a metal doorknob."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A fingertip is brought slowly toward the knob."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A tiny spark jumps from the fingertip to the knob just before they touch."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The approach is slow."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spark comes as the finger nears the knob, not while it is far away."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The spark is a thin bright line spanning the last small gap between fingertip and knob, appearing when they are almost touching.",
+      "fail": "The spark appears while the finger is still well away from the knob; or the spark spans from the finger to a place other than the knob; or the spark is a glow on the knob with no line to the finger; or the finger touches the knob and only then a spark appears at a distance."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spark is a single brief flash and is gone; nothing glows before or after, and the knob is dark once the finger touches it.",
+      "fail": "The spark glows on between finger and knob for the rest of the clip; or the knob glows before the finger approaches; or sparks flash repeatedly while the finger rests on the knob; or the spark drifts away as a lit point."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The knob and door stay still as the finger approaches; the finger's movement is the only motion.",
+      "fail": "The knob turns or the door swings as the spark jumps with no hand on it; or the finger is thrown back without the arm moving it; or objects in the hallway shift at the flash."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The spark's light is small: it brightens the fingertip and the knob for an instant and no more.",
+      "fail": "The whole hallway lights up at the spark as if a lamp came on; or the knob's surroundings stay lit after the spark; or the fingertip glows on."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The finger stops at the knob's surface or touches it; neither passes through the other; the knob stays on the door.",
+      "fail": "The finger passes into the knob or the door; or the knob detaches and floats; or the door changes shape; or a second hand appears from nowhere."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The door's colour, the knob's finish and the hallway stay the same apart from the flash.",
+      "fail": "The door changes colour; or the knob changes shape or finish; or the hallway's contents rearrange."
+    }
+  ],
+  "note": "The hand is kept because the spark jumps from it; the person is otherwise not judged."
+}

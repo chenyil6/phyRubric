@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0251",
+  "caption": "A slice of cheese is laid on a hot dog straight off the grill, and the cheese softens and slumps over the sides.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A slice of cheese lies on a hot dog."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cheese softens: it goes glossy and loses its stiff edges."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cheese drapes down over the sausage's sides."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The slice is square-edged at the start."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The softening comes first and the draping follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The cheese only softens and drapes further and does not stiffen again on the hot sausage.",
+      "fail": "The slice regains its square edges; or the drape pulls back up onto the sausage's top; or the cheese sets firm and matt again on the hot sausage; or the cheese alternates between stiff and slack."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The cheese is a thin sheet that softens, stretches and hangs over the sausage's curve while staying one piece.",
+      "fail": "The slice keeps its flat stiff shape while draped over the curve; or the cheese runs off as thin as water; or the slice shatters dry; or the cheese stretches into a thread that snaps back like elastic."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The softened cheese hangs downward over the sides and any drip runs down to the bun or the plate.",
+      "fail": "The cheese drapes upward away from the sausage; or a drip climbs the sausage; or melted cheese gathers on the slice's top and stays; or a drip leaves the cheese and floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The cheese softens where it touches the hot sausage: it goes glossy from underneath and moulds to the sausage's shape.",
+      "fail": "The cheese softens on its upper face while its underside stays stiff and matt; or the slice drapes without touching the sausage anywhere; or the slice lies on the hot sausage and stays stiff and square to the end of the clip."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One slice on one sausage; the cheese goes only from the slice onto the sausage and the bun.",
+      "fail": "A second slice appears; or the slice vanishes; or the slice grows; or cheese appears on the plate with none running there."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bun, the sausage's surface and the plate stay the same.",
+      "fail": "The bun changes shape; or the plate changes pattern; or the sausage changes colour."
+    }
+  ],
+  "note": "Browning of the cheese is chemistry and is not judged."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0176",
+  "caption": "An inflated balloon held shut at the neck is let go without being tied, and it shoots off around the room until it drops limp to the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An inflated balloon is held shut at the neck."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is let go."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It shoots off around the room."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It drops limp to the floor."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The neck is not tied."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The release comes first, then the flight, then the drop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The balloon flies erratically while air escapes, changing direction as the neck whips.",
+      "fail": "It flies in a straight steady line like a thrown ball; or it hangs in the air; or it flies while still held shut."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "It shrinks as it goes and ends limp, and it does not reinflate.",
+      "fail": "It stays fully round while flying; or it reinflates on the floor; or it grows."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It falls to the floor once empty and stays there.",
+      "fail": "It stays aloft after going limp; or rises steadily to the ceiling; or bounces back up on its own."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It moves only while air escapes and nothing else pushes it.",
+      "fail": "It moves before release; or keeps zipping about after going limp; or is pushed along the floor by nothing."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon keeps its number and passes through nothing.",
+      "fail": "It duplicates; or passes through a wall; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour and the room stay the same.",
+      "fail": "The balloon changes colour; or the room rearranges; or the furniture changes."
+    }
+  ]
+}

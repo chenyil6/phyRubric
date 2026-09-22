@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0102",
+  "caption": "Lightning flashes behind a lighthouse on a stormy coast, and the lighthouse is silhouetted while its own beam keeps sweeping.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lighthouse on a stormy coast."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its beam sweeps."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Lightning flashes behind the lighthouse."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The lighthouse stands as a dark silhouette against the flash."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The beam keeps sweeping through and after the flash."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is brief: the sky behind the lighthouse brightens and returns to dark; flashes may repeat but each ends.",
+      "fail": "The sky stays lit for the rest of the clip; or brightens steadily; or the flash fades in slowly; or the sky turns to daylight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light comes from behind the lighthouse: the sky beyond it brightens while its near face stays dark; its own beam keeps sweeping at the same steady pace through the flash.",
+      "fail": "The near face of the lighthouse lights up while the sky behind stays dark; or the beam stops, jumps or reverses at the flash; or the beam goes out at the flash and returns afterwards; or the lighthouse glows brighter than the sky behind it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The beam turns steadily about the lantern room in one direction, sweeping the sea and cloud.",
+      "fail": "The beam sweeps in one direction and then the other; or turns about a point other than the lantern; or two beams sweep in opposite directions from one lantern; or the beam bends."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The lighthouse, the rocks and the coastline are the same across dark and lit frames.",
+      "fail": "The lighthouse changes place or a second one appears; or rocks appear or vanish between frames; or the coastline changes shape; or the lantern room vanishes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The lighthouse keeps its tower shape and stays solid; the flash does not pass through it or light it from within.",
+      "fail": "The tower becomes transparent with the flash seen through it; or the tower bends or changes shape; or a bolt emerges from the tower; or the tower merges with the rocks."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tower's paint, the rocks and the sea keep their colours apart from the flash and the beam.",
+      "fail": "The tower changes colour or stripe pattern; or the sea changes colour permanently; or the sky changes colour permanently after the flash."
+    }
+  ]
+}

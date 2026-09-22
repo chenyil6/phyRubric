@@ -1,0 +1,72 @@
+{
+  "id": "ACOU-0030",
+  "caption": "Thunder rolls over a house, and a strip of paper taped to a loose window pane quivers with each rumble.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A window pane with a strip of paper taped to it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The strip quivers."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The quivering comes in bouts with still spells between them, as with separate rumbles."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The setting is a house: the window belongs to a room or a house wall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The strip's free part trembles while its taped end stays fixed to the glass; between bouts it hangs still against the pane.",
+      "fail": "The taped end slides across the glass; or the strip drifts away from the pane and floats as if in a breeze; or it swings in slow wide arcs rather than trembling; or it rises up the pane and stays lifted."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Other light loose things at the window stir at the same moments as the strip and hang still with it between bouts.",
+      "fail": "A curtain edge, blind cord or second strip hangs dead still while the strip quivers hard; or it flutters while the strip is still; or the two move in bouts that never overlap.",
+      "precondition": "Another light loose object hangs at or near the window."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The strip bends as thin paper: its free end curls and flaps while the taped end holds.",
+      "fail": "The strip stays flat and rigid like a board while shifting; or stretches longer or shorter; or the tape lets go and the strip stays stuck to the glass with nothing holding it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "When still, the strip rests against or hangs from the glass under its tape; any untaped part hangs downward.",
+      "fail": "The untaped part points upward or stands out from the glass while still; or the strip floats upward; or it settles higher on the pane after each bout."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One strip on one pane; nothing passes through the glass.",
+      "fail": "A second strip appears; or the strip vanishes; or the strip passes through the glass; or the pane changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The strip's colour and length, the tape and the window frame stay the same.",
+      "fail": "The strip changes colour or length; or the tape moves to a new spot; or the window frame changes."
+    }
+  ],
+  "note": "Thunder cannot be seen and lightning need not be in view; the strip's motion is judged on its own shape. A clip with bouts of quivering and no visible storm passes P1."
+}

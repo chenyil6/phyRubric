@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0159",
+  "caption": "An inflated beach ball is pushed under the water in a swimming pool and let go, and it pops back up to the surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An inflated beach ball is pushed under the water in a pool."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is let go."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It pops back up to the surface."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The release comes first and the rise follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The ball rises as soon as it is released, breaks the surface, bobs, and settles floating mostly above the water.",
+      "fail": "It stays under; or sinks; or hovers mid-water."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It rises roughly straight up, may leap above the surface, and then settles.",
+      "fail": "It shoots off sideways underwater; or leaps and stays airborne; or comes up far from where it was released with nothing moving it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "A splash and ripples spread where it breaks the surface.",
+      "fail": "The surface stays glassy; or ripples appear before it arrives; or the splash is elsewhere."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ball stays round and taut.",
+      "fail": "It squashes flat and stays flat; or deflates; or splits."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball keeps its number.",
+      "fail": "The ball vanishes or a second appears; or it turns into another object; or it passes through the pool wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colours and the pool stay the same.",
+      "fail": "The ball changes colours; or the pool's tiles shift; or the surroundings rearrange."
+    }
+  ]
+}

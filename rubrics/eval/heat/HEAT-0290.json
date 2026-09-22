@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0290",
+  "caption": "A burning sheet of newspaper is held up inside a fireplace opening, and its flames are pulled upward into the chimney.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A burning sheet of newspaper is held inside a fireplace opening."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flames bend upward toward the flue."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The smoke goes up the chimney."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The paper is consumed from its burning edge inward."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flames do not lean out into the room."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The paper blackens behind the flame front."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The flames and smoke go upward into the flue rather than out into the room or downward.",
+      "fail": "The flames lean out into the room away from the flue; or the smoke pours into the room and sinks to the hearth; or the flames point downward at the hearth; or the smoke hangs as a fixed shape without rising."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The flames lean toward the flue where the draught pulls them and keep that lean while the sheet is held in the opening.",
+      "fail": "The flames lean toward the room's open side against the draught; or the flames' lean swings about while the sheet is held still and nothing else moves; or the flames stand dead straight while the smoke is drawn hard up the flue; or the flames lean out before the sheet is in the opening."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The burn advances from the burning edge into unburnt paper and the blackened paper stays black.",
+      "fail": "Blackened paper turns white again; or the flame front retreats leaving unburnt paper behind it; or the sheet grows as it burns; or the paper catches at a spot no flame reached."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The burning paper curls, blackens and thins and its ash flakes away; it does not melt or drip.",
+      "fail": "The paper melts and runs like plastic; or stays flat and white while flames sit on it; or turns to ash without ever blackening or curling; or the sheet stiffens into a board as it burns."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet held in one fireplace; the paper shrinks to ash rather than vanishing while whole.",
+      "fail": "The sheet vanishes in a single frame while still large; or a second sheet appears already burning; or ash appears on the hearth with none falling there; or the sheet passes through the fireplace's back wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fireplace's surround, the hearth and the room stay the same.",
+      "fail": "The surround changes colour; or the hearth changes pattern; or items in the room rearrange."
+    }
+  ],
+  "note": "Whoever holds the sheet is not judged."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0037",
+  "caption": "Two identical ice cubes sit side by side, one on a thick metal block and one on a plastic block, and the cube on the metal is melting faster in a spreading pool.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two ice cubes sit side by side, one on a metal block and one on a plastic block."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cube on the metal is melting: it is rounder and lower."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A pool spreads under the cube on the metal."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The two cubes start alike."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pool on the metal block is the larger of the two."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The difference shows on the metal side: the cube on the metal rounds off and its pool grows more than the cube on the plastic.",
+      "fail": "The cube on the plastic rounds off and pools while the cube on the metal stays sharp; or both cubes melt alike with one plainly on metal and one on plastic; or the pool under the plastic block grows while the metal stays dry."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Both cubes only shrink and round off, neither grows back, and the difference between them does not reverse.",
+      "fail": "A cube regains a sharp corner; or a pool draws back into its cube; or the cube on the metal ends sharper than the cube on the plastic after being rounder; or a cube freezes solid again on its block."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Each pool spreads outward on its block's flat top and runs off the edges.",
+      "fail": "A pool climbs its block's side and stays above the top; or meltwater travels uphill; or a drop leaves a block and rises."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cubes stay hard solids that keep their corners until those corners melt away, and the melt is a thin film on each block.",
+      "fail": "A cube sags or bends as a soft lump; or a cube crumbles to dry powder; or a pool stands as a dome on its block; or a cube smears across its block as it shrinks."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two cubes and two blocks; water comes only from the cubes.",
+      "fail": "A third cube appears; or a cube vanishes in a single frame while still large; or water appears on a block with no cube on it; or a cube passes into its block."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blocks' surfaces away from the water and the surroundings stay the same.",
+      "fail": "A block changes colour; or the metal block's finish changes pattern; or items around the blocks rearrange."
+    }
+  ]
+}

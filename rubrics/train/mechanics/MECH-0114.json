@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0114",
+  "caption": "A heavy bowling ball is dropped onto the middle of a bed, the mattress dips under it, and it bounces slightly before settling.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bowling ball is dropped onto the middle of a bed."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The mattress dips under it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ball bounces slightly."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The ball settles."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bounce is slight rather than high."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first, then the dip, then the bounce, then the settling."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The dip appears as the ball lands and the mattress springs back as the ball rises; the bed does not stay rigid like a floor.",
+      "fail": "The mattress does not dip at all under the heavy ball; or it stays deeply dented with the ball off it; or it ripples like water."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The rebound is smaller than the drop, and the ball comes back down and settles in the dip.",
+      "fail": "The ball bounces higher than it fell from; or it bounces the same height again and again; or it flies off sideways."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The ball falls straight down and after bouncing comes down again.",
+      "fail": "It hangs in the air; or rises; or drifts sideways in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ball stays a hard sphere.",
+      "fail": "It squashes; or bends; or splits."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one bed keep their number.",
+      "fail": "The ball vanishes or a second appears; or it passes through the mattress; or it turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball, the bedding and the room stay the same.",
+      "fail": "The ball changes colour; or the bedding changes pattern; or the room rearranges."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0188",
+  "caption": "Red and white paint on a paper plate are swirled together with a brush, and the swirl turns pink.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Red and white paint sit on a paper plate."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A brush swirls them together."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The swirl turns pink."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The streaks become uniform with more mixing."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The colours are separate first, then swirled, then pink."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The pink spreads from the brush through the paint where the brush blends the two, streaks becoming uniform and never gathers back; coloured areas stay coloured.",
+      "fail": "The paint returns to its original colour where it was pink; or the pink gathers back into the brush; or the pink appears before the brush arrives."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The result is pink, and un-reached paint keeps its original colour.",
+      "fail": "The paint turns a colour other than pink; or the un-reached paint changes; or the pink is darker than the brush itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The paint behaves as it should: streaks and swirls where stirred or spread, settling where it flows.",
+      "fail": "The paint is rigid and unmarked; or it flows like water when it is a paste; or it bounces like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The paint moves only where stirred or where the pink flows.",
+      "fail": "The paint swirls by itself; or the pink spreads faster than stirring or flow carries it; or the container moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The amount of paint stays the same and the container keeps its shape.",
+      "fail": "The container fills or empties on its own; or a second container appears; or the brush passes through the container."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The container and the background stay the same.",
+      "fail": "The container changes colour; or the background rearranges; or the tool changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

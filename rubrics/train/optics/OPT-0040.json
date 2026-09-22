@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0040",
+  "caption": "A pendulum swings in front of a wall lit by a lamp, and its shadow on the wall swings with it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pendulum swings in front of a wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lamp lights the wall."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pendulum's shadow on the wall swings with it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow moves in the same rhythm as the pendulum."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "When the pendulum stops the shadow stops."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow moves in step with the pendulum, in the same rhythm, and never leads it or moves on its own.",
+      "fail": "It swings out of time; or it leads the pendulum; or it swings while the pendulum hangs still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The string's shadow stays joined to the shadow of the pivot and the bob's shadow to the string's.",
+      "fail": "The bob's shadow detaches from the string's; or the pivot's shadow moves; or the shadow splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow falls on the wall on the side away from the lamp.",
+      "fail": "It falls on the lamp side; or on the ceiling; or it is missing with the lamp on."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The string stays taut and straight through the swing.",
+      "fail": "It goes slack at the ends; or bends mid-length; or stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pendulum and one shadow.",
+      "fail": "A second bob or shadow appears; or the bob vanishes; or the shadow becomes solid; or the string passes through the bob."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pendulum and the wall stay the same, and the shadow stays dark.",
+      "fail": "The bob changes colour; or the shadow turns coloured; or the wall changes."
+    }
+  ]
+}

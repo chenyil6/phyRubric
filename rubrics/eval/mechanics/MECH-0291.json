@@ -1,0 +1,66 @@
+{
+  "id": "MECH-0291",
+  "caption": "A person carries a full bucket of water in one hand and leans the body to the other side to balance the load.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A person carries a full bucket of water in one hand."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They lean their body to the other side."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The bucket is full."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The lean is away from the bucket and appears as soon as it is lifted.",
+      "fail": "They lean toward the bucket; or walk upright as if it weighed nothing; or lean before lifting it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bucket's weight shows: the arm is straight and the shoulder drops.",
+      "fail": "The arm is bent casually; or the bucket floats; or the bucket swings up."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water level in the bucket stays flat, sloshing a little.",
+      "fail": "It is rigid; or spills upward; or tilts steeply."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The body bends at the joints.",
+      "fail": "It folds mid-torso; or a limb detaches; or the arm stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Their limbs keep their number, and one bucket stays one bucket.",
+      "fail": "A limb vanishes; or the bucket duplicates; or they merge with the bucket."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Their clothing and the bucket stay the same.",
+      "fail": "The clothing changes colour; or the bucket changes; or the background rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Form, posture and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

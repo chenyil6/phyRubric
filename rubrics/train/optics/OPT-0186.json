@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0186",
+  "caption": "Blue ink is dripped into a glass of clear water, and the blue spreads in swirls until the water is evenly tinted.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass of clear water is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Blue ink is dripped into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The blue spreads in swirls."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The water becomes evenly tinted."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drop comes first and the spread follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The blue spreads from the drop through the water in swirls, outward and downward, getting paler as it spreads and never gathers back; coloured areas stay coloured.",
+      "fail": "The water returns to its original colour where it was blue; or the blue gathers back into the drop; or the blue appears before the drop arrives."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The result is blue, and un-reached water keeps its original colour.",
+      "fail": "The water turns a colour other than blue; or the un-reached water changes; or the blue is darker than the drop itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water behaves as it should: streaks and swirls where stirred or spread, settling where it flows.",
+      "fail": "The water is rigid and unmarked; or it flows like water when it is a paste; or it bounces like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The water moves only where stirred or where the blue flows.",
+      "fail": "The water swirls by itself; or the blue spreads faster than stirring or flow carries it; or the container moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The amount of water stays the same and the container keeps its shape.",
+      "fail": "The container fills or empties on its own; or a second container appears; or the drop passes through the container."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The container and the background stay the same.",
+      "fail": "The container changes colour; or the background rearranges; or the tool changes."
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "ELEC-0160",
+  "caption": "A scrapyard crane lowers a large round magnet onto a pile of scrap steel and lifts, and a clump of steel rises with it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A scrapyard crane with a large round magnet hanging from it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A pile of scrap steel below the magnet."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The magnet is lowered onto the pile."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The magnet lifts and a clump of scrap rises with it, hanging from its underside."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The magnet is a large round disc."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is lower, touch the pile, lift."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "When the magnet lifts off the pile, pieces of scrap come up with it, held against its underside and touching it.",
+      "fail": "The magnet rises with nothing attached; or scrap rises beside the magnet with a gap between them; or pieces leave the pile and rise while the magnet is still high above it and not descending."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The held scrap hangs from the underside of the magnet, below it; pieces that come loose during the lift fall straight down onto the pile.",
+      "fail": "Scrap sits on top of the magnet or clings to its cable; or a loose piece drifts upward or sideways after separating; or a piece hangs in the air below the clump without touching it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The rest of the pile stays as it was; only scrap where the magnet touched is disturbed.",
+      "fail": "Scrap elsewhere in the pile shifts or jumps as the magnet lifts with nothing touching it; or the whole pile heaves; or pieces on the ground slide toward the crane."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cable hangs straight and taut from the boom to the magnet while the magnet hangs from it; the scrap pieces stay rigid metal and keep their bent shapes.",
+      "fail": "The cable goes slack and curls while the magnet hangs from it; or the cable stretches like elastic as the load lifts; or scrap pieces sag or flow like dough."
+    },
+    {
+      "id": "P5",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "When the magnet lets go, all the held pieces drop at once, straight down, and land below the magnet.",
+      "fail": "Released pieces hang in the air below the magnet; or drift upward or sideways as they fall; or land and then bounce back up onto the magnet.",
+      "precondition": "The magnet releases its load during the clip."
+    },
+    {
+      "id": "P6",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One magnet on one cable; scrap pieces keep their number and shapes and stay outside the magnet; the magnet does not pass into the pile.",
+      "fail": "Scrap pieces multiply on the magnet as it rises; or pieces vanish in mid-air; or the magnet sinks into the pile and rises through it; or the clump merges into one smooth mass."
+    },
+    {
+      "id": "P7",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The magnet's colour, the crane and the yard behind stay the same.",
+      "fail": "The magnet changes colour or size; or the crane's boom changes shape; or the untouched parts of the pile change contents."
+    }
+  ]
+}

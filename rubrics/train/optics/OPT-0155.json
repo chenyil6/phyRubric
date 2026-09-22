@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0155",
+  "caption": "A headlamp is turned from side to side in a dark cave, and the beam sweeps across the cave walls with each turn.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A headlamp is worn in a dark cave."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is turned from side to side."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The beam sweeps across the cave walls with each turn."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wall the lamp turns away from goes dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lit patch moves exactly with the lamp and the wall it turns away from goes dark.",
+      "fail": "The patch stays put while the lamp turns; or the wall stays lit after the beam leaves; or the patch moves opposite."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The patch moves only as the lamp turns.",
+      "fail": "It drifts with the lamp still; or moves before the turn; or flickers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The patch is one bright spot, brightest at its centre.",
+      "fail": "It splits; or is a sharp square; or it is even edge to edge."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Shadows on the wall point away from the lamp.",
+      "fail": "They point toward it; or in several directions; or there are none on rough rock."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp and one patch.",
+      "fail": "A second patch appears; or the lamp vanishes; or the beam becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cave walls stay the same.",
+      "fail": "The rock changes shape; or changes colour rather than brightness; or the cave rearranges."
+    }
+  ],
+  "note": "The head turning is the trigger; the person is not judged. Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0176",
+  "caption": "A garage door rolls up in the morning, and daylight moves across the floor from the front to the back as the door opens.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A garage door is shut in the morning."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It rolls up."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Daylight moves across the floor from the front to the back."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rear of the garage brightens last."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lit region on the floor grows inward as the door rises and the rear brightens last.",
+      "fail": "The rear brightens first; or the floor is lit with the door shut; or the lit region shrinks as the door rises."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The lit region moves only as the door moves.",
+      "fail": "It grows with the door still; or before the door moves; or flickers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The door rises steadily and the light grows with it.",
+      "fail": "The door jumps; or reverses; or the light jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The lit region is a band across the floor spreading from the doorway.",
+      "fail": "It is a round spot; or splits; or is on the ceiling only."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One door and one garage.",
+      "fail": "A second door appears; or the garage vanishes; or the door passes through the frame."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The garage and its contents stay the same.",
+      "fail": "Items rearrange; or the walls change; or the door changes colour."
+    }
+  ]
+}

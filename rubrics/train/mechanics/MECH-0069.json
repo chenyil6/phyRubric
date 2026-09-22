@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0069",
+  "caption": "A snowball thrown across a snowy yard hits a wooden fence post and bursts into loose snow.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A snowball is thrown across a yard."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It hits a wooden fence post."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It bursts into loose snow."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The yard is snowy."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The throw comes first, then the hit, then the burst."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The snowball follows one arc to the post.",
+      "fail": "The snowball flies flat; or it hangs in mid-air; or it changes direction with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "It breaks apart on impact and the snow scatters and falls; it does not bounce off whole.",
+      "fail": "The snowball bounces off whole like rubber; or it sticks to the post as one lump and stays; or it passes the post unchanged."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The loose snow falls to the ground after the burst.",
+      "fail": "Snow hangs in the air after the burst; or it rises; or it stays stuck in a cloud."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The post shows the hit: a patch of snow on it or snow at its base.",
+      "fail": "The post is pristine and the ground bare after the burst; or snow appears at the post before the ball arrives; or the post is knocked over by the snowball."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The post stays solid and the snowball does not pass through it.",
+      "fail": "The snowball passes through the post; or the post vanishes; or a second snowball appears in flight."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The post, the fence and the yard stay the same.",
+      "fail": "The post changes colour or height; or the fence rearranges between frames; or the yard changes."
+    }
+  ]
+}

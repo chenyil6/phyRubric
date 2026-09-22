@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0269",
+  "caption": "A bin standing in a yard is knocked by the swinging end of a long ladder and tips over.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bin stands in a yard."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The swinging end of a long ladder knocks it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bin tips over."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The knock comes first and the tip follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The bin tips at the moment the ladder end hits it and falls in the direction of the swing.",
+      "fail": "It tips toward the ladder; or before contact; or the ladder passes without touching and the bin falls anyway."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It falls to the ground and stays, and any contents spill downward.",
+      "fail": "It hovers; or rights itself; or the contents rise."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bin does not move before the contact.",
+      "fail": "It moves before; or slides with nothing touching it; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bin is rigid and may dent.",
+      "fail": "It folds; or bounces high; or melts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bin and one ladder keep their number.",
+      "fail": "The bin duplicates; or vanishes; or the ladder passes through it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bin and the yard stay the same.",
+      "fail": "The bin changes colour; or the yard rearranges; or the ladder changes."
+    }
+  ]
+}

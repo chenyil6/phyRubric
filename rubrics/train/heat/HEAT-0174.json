@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0174",
+  "caption": "A lidded plastic container of leftovers is heated in a microwave, and the lid domes upward and pops loose.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A plastic container with its lid on sits in a microwave."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lid domes upward."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dome grows."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The lid lifts at one corner."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "A puff of steam escapes as the lid lifts."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The doming comes first and the popping loose follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The dome only grows while the food heats and the lid does not sink back before it lifts.",
+      "fail": "The dome sinks inward while the microwave runs; or the dome grows and shrinks in turn; or the lid domes before the microwave has started; or the lid lifts, re-seats itself and domes again."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The lid stays one lid whose flat top bows upward and springs back or hangs loose once it lifts.",
+      "fail": "The lid keeps a perfectly flat top while plainly lifting at its rim; or the lid swells into a balloon much larger than the container; or the lid splits into pieces; or the lid turns into another object."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The dome bulges upward rather than downward, and the lid falls back onto the container or lies on it once loose.",
+      "fail": "The lid bows downward into the food; or the loose lid rises and hangs above the container; or the lid flies up and sticks to the microwave's roof; or the food climbs the container's wall and stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The food shows the heating: it steams or bubbles, and the steam escapes where the lid lifts.",
+      "fail": "The lid domes while the food below is still with no steam at all; or the steam escapes from the container's base; or the lid lifts and no steam or movement shows in the food to the end of the clip."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One container with one lid; the lid stays a separate piece and the food stays inside.",
+      "fail": "The lid merges into the container's rim; or a second lid appears; or food passes through the container's wall; or the container vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The container's colour, the food's look and the microwave's interior stay the same.",
+      "fail": "The container changes colour; or the food changes into something else; or the interior changes."
+    }
+  ]
+}

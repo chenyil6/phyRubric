@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0282",
+  "caption": "A bucket with a hole near its bottom is filled from a tap, and a thin stream squirts out of the hole and arcs onto the ground.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bucket with a hole near its bottom is filled from a tap."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A thin stream squirts out of the hole."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It arcs onto the ground."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The filling comes first and the squirt follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The stream arcs outward and down.",
+      "fail": "It squirts upward; or goes straight out level; or hangs."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The stream is thin liquid that breaks into drops.",
+      "fail": "It is a rigid rod; or beads; or is solid."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The stream comes only from the hole.",
+      "fail": "It comes from elsewhere; or there is no stream with water above the hole; or a stream comes from an empty bucket."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The stream is stronger with more water above the hole.",
+      "fail": "It is unchanged when the bucket empties; or stops while the bucket is full; or reverses."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bucket keeps its number.",
+      "fail": "It duplicates; or vanishes; or the hole moves."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bucket and the tap stay the same.",
+      "fail": "The bucket changes colour; or the tap changes; or the ground rearranges."
+    }
+  ]
+}

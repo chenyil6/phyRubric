@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0287",
+  "caption": "A magnet is slid up the outside of a glass of water, and a steel nut lying at the bottom rises up the inside of the glass behind it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass of water with a steel nut lying at the bottom."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnet is slid up the outside of the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The nut rises up the inside of the glass behind the magnet."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The nut stays on the inner face of the glass, opposite the magnet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The magnet's movement comes first and the nut follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The nut moves only where and when the magnet moves, staying opposite it on the inner face, and stops when the magnet stops.",
+      "fail": "The nut moves in a different direction from the magnet; or keeps rising after the magnet has stopped; or stays at the bottom while the magnet passes up beside it; or the nut sets off before the magnet has moved."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The glass wall stays between magnet and nut: the nut stays inside the water and the magnet outside; neither passes through the glass.",
+      "fail": "The nut passes through the glass onto the magnet; or the magnet passes into the water; or nut and magnet are seen touching with no glass between; or the nut passes through the bottom of the glass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "If the magnet is taken away the nut sinks back down through the water; the water stays level in the glass.",
+      "fail": "The nut hangs in the water with the magnet gone; or rises on its own; or the water heaps up on the magnet's side; or the water rises out of the glass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The nut is a hard piece that slides along the inner face; the glass stays rigid; the water moves only in small ripples.",
+      "fail": "The nut squashes against the glass; or the glass bends where the magnet presses; or the water moves as a solid block; or the nut leaves a groove in the glass."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One nut, one magnet, one glass; nothing appears, vanishes or merges.",
+      "fail": "A second nut appears; or the nut vanishes; or nut and magnet fuse; or the glass duplicates or changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass, the water's colour and the magnet stay the same.",
+      "fail": "The water changes colour; or the magnet changes colour or shape; or the glass changes shape."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0264",
+  "caption": "A frying pan straight off a high flame is put under a running tap, and the water hisses into a burst of steam and spits.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A frying pan is held under a running tap."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A burst of steam rises as the water meets the pan."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water spits from the pan."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The steam fades as the pan cools."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pan comes off the flame first and goes under the tap after."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The burst is fiercest at first."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The steam bursts at the instant the water meets the pan and not before.",
+      "fail": "The steam bursts before the water reaches the pan; or the water runs onto the pan and no steam appears at all; or the steam bursts from the pan's handle rather than its face; or the steam appears with the pan held clear of the stream."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The burst is fiercest at first and then eases as the pan cools; it does not build up again with the tap running steadily.",
+      "fail": "The burst grows steadily stronger the longer the tap runs; or the burst stops and then starts again with nothing changed; or the steam runs back into the pan; or the pan's steam thickens after it has been taken out of the stream."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The water falls downward from the tap onto the pan while the steam rises and the spat droplets arc down again.",
+      "fail": "The water travels upward from the tap; or the steam sinks into the sink and pools; or the spat droplets rise and hang in the air; or the steam pours downward out of the pan."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is a thin liquid that bursts into fine droplets on the hot metal and runs off into the sink, and the pan stays a rigid pan.",
+      "fail": "The water beads up and rolls off the pan without wetting it or steaming; or the pan's metal visibly sags as the water hits; or the steam holds a fixed rigid shape; or the water sets solid in the pan."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pan under one stream; the water goes from the tap onto the pan and into the sink.",
+      "fail": "Water appears in the pan with no stream reaching it; or the pan vanishes; or a second pan appears; or the water passes through the pan's base."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan's finish, the sink and the tap stay the same.",
+      "fail": "The pan changes colour; or the sink changes shape; or the tap changes design."
+    }
+  ],
+  "note": "The hiss is sound and is not judged. Who holds the pan is not judged."
+}

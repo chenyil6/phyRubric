@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0260",
+  "caption": "A marble rolls across a table and hits a heavy steel ball at rest; the marble bounces back the way it came while the steel ball barely moves.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A marble rolls across a table toward a heavy steel ball at rest."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The marble hits the steel ball."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The marble bounces back the way it came."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The steel ball barely moves."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The approach comes first and the rebound follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "At contact the marble reverses and rolls back slower, and the steel ball shifts at most slightly.",
+      "fail": "The steel ball shoots off; or the marble keeps going; or the marble leaves faster."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "Neither passes through the other.",
+      "fail": "They pass through each other; or overlap; or sink into the table."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Motion changes only at the contact.",
+      "fail": "The marble reverses before contact; or the steel ball moves before; or the marble restarts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Both are hard and the contact is a brief click.",
+      "fail": "A ball dents; or they stick; or a ball wobbles like jelly."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two balls stay two.",
+      "fail": "A ball vanishes; or a third appears; or they merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balls and the table stay the same.",
+      "fail": "The marble changes colour; or the steel ball changes size; or the table rearranges."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0012",
+  "caption": "A few grains of salt lie on a xylophone bar; the bar is struck with a mallet and the grains jump off.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A xylophone with a few grains of salt lying on one bar."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A mallet strikes that bar."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The grains jump off the bar."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The salt is a few grains, not a heap."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The mallet strikes the bar carrying the salt, not a different bar."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The strike comes first and the jump follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The grains lie still until the mallet hits the bar; they leap at the strike and only then; salt or dust on other bars stays put.",
+      "fail": "Grains hop before the mallet lands; or leap while the mallet is still on its way down, clear of the bar; or the mallet lands and the grains stay where they are; or grains on a bar that was not struck jump too."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The grains leave the bar and come to rest in the gaps, on the frame or on neighbouring bars; they do not return to the struck bar or keep hopping.",
+      "fail": "Grains settle back onto the struck bar in their original places; or keep hopping on the bar for the whole clip after one strike; or come to rest and then jump again with the mallet away."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The grains fall after the leap, landing on the frame, in the gaps between bars or on other bars.",
+      "fail": "Grains hang in the air above the bar; or rise and drift away upward; or grains that fell between the bars climb back up onto a bar."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bar is a rigid slab: the mallet rebounds from it and the bar stays seated in its cradle.",
+      "fail": "The mallet sinks into the bar; or the bar bends like rubber under the stroke; or the bar leaps out of its cradle."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The grains keep their number, allowing for some passing out of view; one mallet; the bars keep their count and shape, and nothing passes through anything.",
+      "fail": "New grains appear on the bar after the strike; or all the grains vanish in one frame; or the mallet passes through a bar; or bars change count or merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bars' colours and lettering, the frame and the mallet head stay the same.",
+      "fail": "A bar changes colour or its letter changes; or the mallet head changes colour or size; or the frame changes."
+    }
+  ]
+}

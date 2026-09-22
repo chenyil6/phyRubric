@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0149",
+  "caption": "A candle is set beside an open window on a windy night, and its flame streams sideways and flickers wildly.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A candle stands beside an open window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flame streams sideways."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flame flickers."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The curtain moves the same way."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flame leans away from the window."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The night is dark outside."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The flame leans away from the window the same way the curtain blows, and it dances as the gusts come and go.",
+      "fail": "The flame leans toward the window against the way the curtain blows; or the flame streams hard while the curtain hangs dead still; or the flame's direction swings about while the curtain holds steady; or the flame stays flat after the curtain has settled."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Between gusts the flame stands upward from the wick and the melted wax runs down the candle.",
+      "fail": "The flame points downward between gusts; or hangs below the wick; or melted wax climbs the candle's side; or the flame lies flat while the curtain hangs still and nothing moves."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The flame stays alight through the gusts unless it is blown out, and once out it stays out.",
+      "fail": "The flame goes out and relights by itself; or shrinks to nothing and returns with each gust; or the wick's glow brightens into a flame with no gust passing; or the flame splits into two flames."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The flame is a soft tongue that stretches and waves and the candle's body stays solid with a wax pool at its top.",
+      "fail": "The flame holds a fixed rigid shape as it leans; or the candle's body bends with the wind; or the flame breaks into solid pieces; or the wax pool sets hard while the flame burns in it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One candle with one wick and one flame; the flame stays on the wick.",
+      "fail": "The flame separates from the wick and floats; or a second flame or candle appears; or the candle vanishes; or the wick vanishes while the flame burns on."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candle's colour, the curtain's pattern and the room stay the same.",
+      "fail": "The candle changes colour; or the curtain changes pattern; or items in the room rearrange."
+    }
+  ]
+}

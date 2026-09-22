@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0155",
+  "caption": "A magnet is moved toward a steel saucepan on the counter, and the magnet jumps the last gap and clicks onto the pan.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A steel saucepan on a counter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnet is moved toward the pan."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The magnet jumps the last gap and lands on the pan."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The magnet stays on the pan when released."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The magnet is moved by hand until the last gap, then jumps on its own."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is approach, jump, hold."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The magnet moves only in the hand until the last small gap, jumps that gap onto the pan, and then stays still on it.",
+      "fail": "The magnet jumps from far away; or slides about on the pan after landing; or springs off the pan with nothing pulling it; or the pan slides toward the magnet."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Over the last small gap the magnet is drawn onto the pan and stays pressed to it with nothing else holding it once the hand withdraws.",
+      "fail": "The magnet stops a gap short of the pan and hangs there; or drops when the hand lets go; or slides down the pan's side; or bounces off and falls."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The jump is toward the pan along the line between them, and the magnet stops on contact.",
+      "fail": "The magnet jumps away from the pan; or darts sideways past it; or slides toward and away several times before settling; or keeps moving over the pan's surface after landing."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The pan stays where it is on the counter; nothing else on the counter moves.",
+      "fail": "The pan slides or tips as the magnet lands; or the lid rattles or lifts; or other items on the counter shift."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One magnet on one pan; the magnet touches the pan's surface and does not sink in; the hand passes through nothing.",
+      "fail": "The magnet sinks into the pan; or a second magnet appears; or the magnet vanishes; or the hand passes through the pan."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The magnet's colour, the pan's finish and the counter stay the same.",
+      "fail": "The magnet changes colour or shape; or the pan changes colour; or the counter's contents rearrange."
+    }
+  ],
+  "note": "The click is sound and is not judged."
+}

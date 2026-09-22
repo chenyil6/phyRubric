@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0083",
+  "caption": "A spoonful of salt is tipped into a pot of boiling water, and the water froths up sharply for a moment before settling back to a rolling boil.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot of boiling water sits on a hob."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A spoonful of salt is tipped in."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water froths up sharply."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The froth dies back to a rolling boil."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The froth climbs the pot's sides at its peak."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is boiling, salt in, surge, settle."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The surge comes at the moment the salt goes in and rises from where it lands.",
+      "fail": "The water froths up before the salt reaches it; or the salt goes in and the surface does not change at all; or the surge rises on the far side of the pot from where the salt landed; or the surge appears with the spoon still held clear of the pot."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The surge rises and then dies back to the boil it came from, and it does not surge again with no more salt.",
+      "fail": "The froth stays up for the rest of the clip; or the froth surges again with nothing added; or the froth dies back to a still glassy surface; or the surge builds steadily higher after the salt is in."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The froth climbs the pot's inside wall and falls back into the water, and anything that goes over the rim runs down the outside.",
+      "fail": "The froth climbs the pot's outside and goes in over the rim; or froth lifts off the pot and hangs above it; or froth runs upward on the outside; or the froth stands above the rim without falling back or spilling."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The froth is a mass of fine bubbles that swells and collapses, and the salt falls as loose grains that sink and disappear into the water.",
+      "fail": "The froth stands as a rigid dome; or the salt grains float on top and stay; or the salt clumps into a solid lump that sits on the surface; or the water sets solid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pot of water; the salt goes in and the water stays in the pot.",
+      "fail": "The water's level jumps up with nothing added; or water passes through the pot's wall; or a second pot appears; or the salt appears in the pot before the spoon tips."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the spoon and the hob stay the same.",
+      "fail": "The pot changes colour; or the spoon changes shape; or the hob's knobs move by themselves."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0047",
+  "caption": "A pot of pasta water boils over on a stove, and foamy water spills down the outside of the pot onto the burner.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot sits on a stove."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Foam rises inside the pot and over the rim."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Foamy water runs down the outside of the pot to the burner."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The water is pasta water: cloudy, starchy foam, pasta may be visible."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is foam rises, spills over, runs down."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The foam climbs from inside the pot up and over the rim, and spilled foam is on its way down the outside: inside to out, up then over then down.",
+      "fail": "Foam climbs back up the outside into the pot; or the spill retreats over the rim; or the outside is wet before any foam reaches the rim."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Once over the rim the foam and water run downward on the pot wall and onto the burner.",
+      "fail": "Foam runs sideways round the pot or upward; or falls up; or hangs off the rim as a static curtain without descending."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The overflow is a frothy liquid: bubbles collapse, the liquid streaks, and it steams or spits on the hot burner.",
+      "fail": "The foam sits as a rigid dome that does not deform; or the spill behaves as a solid sheet peeling off; or the liquid on the hot burner lies still with no steam or reaction."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Foam over the rim means the level inside has reached the rim; the spill wets the pot wall and leaves it wet.",
+      "fail": "Foam pours over while the visible inside is calm and far from full; or the wall is dry again right after foam ran down it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pot that keeps its shape; foam passes only over the rim, not through the wall.",
+      "fail": "Foam appears on the outside with none crossing the rim; or the pot changes shape or size; or a second pot appears; or foam passes through the pot wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Pot colour, stove knobs and burner layout stay the same.",
+      "fail": "The pot changes colour; or the burner moves; or the stovetop pattern changes."
+    }
+  ]
+}

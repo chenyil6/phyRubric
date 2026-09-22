@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0020",
+  "caption": "Small paper riders sit on the strings of an acoustic guitar; the body of the guitar is tapped with a palm and the riders jump.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An acoustic guitar with small paper riders resting on its strings."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A palm taps the body of the guitar."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The riders jump."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tap is on the body; the strings are not plucked."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The riders are small scraps of paper sitting on the strings."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The tap comes first and the jump follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The riders sit still until the palm lands on the body; they hop at the tap and only then.",
+      "fail": "Riders hop or slide before the palm reaches the body; or jump while the hand is well away; or the palm lands and every rider stays put; or the riders hop again after settling with nothing touching the guitar."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The hop is largest at the tap; the riders then come to rest on the strings, the soundboard or the floor and stay there.",
+      "fail": "The riders keep hopping at the same height for the whole clip after one tap; or hop higher with each bounce; or a fallen rider climbs back onto its string."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Riders that leave their string fall onto the soundboard, the strings below or the floor.",
+      "fail": "A rider hangs in the air above the strings; or drifts upward away from the guitar; or a fallen rider lifts off the soundboard by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The guitar body is rigid under the palm; the strings stay taut at nut and bridge and shiver in place rather than swinging.",
+      "fail": "The soundboard dents in under the palm and stays dented; or the strings sag and swing like slack ropes; or the neck bends with the tap; or a string comes off the bridge."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The riders keep their number, allowing for some falling out of view; the guitar keeps its strings and shape; nothing passes through anything.",
+      "fail": "Riders appear on the strings after the tap; or all the riders vanish at once; or the palm passes into the soundboard; or strings appear or vanish."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The guitar's finish, the fret markers and the riders' colour stay the same.",
+      "fail": "The guitar changes colour; or the fret markers shift; or a rider changes colour or size while at rest."
+    }
+  ]
+}

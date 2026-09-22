@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0316",
+  "caption": "A lawnmower runs across an overgrown lawn, and the grass behind it is cut short with clippings scattered.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lawnmower runs across an overgrown lawn."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The grass behind it is cut short."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Clippings are scattered behind it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lawn is overgrown ahead of the mower."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The mower passes first and the cut grass follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The grass is shorter only where the mower has passed, and the cut edge follows the mower's path.",
+      "fail": "Grass is cut ahead of the mower; or the mower passes and the grass stays tall; or the cut appears elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The grass ahead stays tall and does not grow back behind.",
+      "fail": "It grows back behind; or the tall grass ahead becomes short; or the cut strip vanishes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The clippings are small and scatter.",
+      "fail": "The grass is rigid; or the clippings rise indefinitely; or they form a solid block."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The clippings fall.",
+      "fail": "They hang; or rise; or float away."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mower keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mower and the garden stay the same.",
+      "fail": "The mower changes colour; or the garden rearranges; or the grass changes colour."
+    }
+  ]
+}

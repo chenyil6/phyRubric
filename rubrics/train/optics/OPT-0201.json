@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0201",
+  "caption": "A pair of yellow-tinted sunglasses is held up in front of a white wall, and the wall looks yellow through the lenses.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pair of yellow-tinted sunglasses is held up in front of a white wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The wall looks yellow through the lenses."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "When the glasses are lowered the wall is white."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The wall looks yellow only where the lens's light reaches and while it is on.",
+      "fail": "The wall is yellow with the lens off; or stays white under the yellow light; or turns a different colour from the light."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens at the same instant as the lens and is confined to where its light falls.",
+      "fail": "The wall changes before the lens; or long after; or surfaces the light cannot reach change too."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The wall through the lenses is the same wall, tinted.",
+      "fail": "A different scene appears; or it is mirrored; or it is heavily warped by flat lenses."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves; only the light changes.",
+      "fail": "The wall moves; or the lens moves by itself; or the lit area wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lens and one wall.",
+      "fail": "A second lens appears; or the wall vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wall's shape and the surroundings stay the same.",
+      "fail": "The wall changes shape; or the surroundings rearrange; or the lens changes shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

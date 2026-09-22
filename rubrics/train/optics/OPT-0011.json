@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0011",
+  "caption": "A tractor drives along a sunlit field track, and its shadow rolls along the ground beside it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tractor drives along a field track."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The track is in sunlight."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The tractor's shadow rolls along the ground beside it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow shows the wheels turning."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shadow touches the tractor at the wheels."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow moves at the same speed as the tractor and touches it at the wheels.",
+      "fail": "It lags or leads; or is detached from the wheels on flat ground; or stays still while the tractor moves."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the tractor's outline and its wheels turn in step.",
+      "fail": "It is a different vehicle's shape; or its wheels are still while the tractor's turn; or it splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side away from the sun.",
+      "fail": "It lies toward the sun; or switches sides with the sun fixed; or it is missing in sunlight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move on its own.",
+      "fail": "It moves with the tractor stopped; or changes length with the tractor still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tractor and one shadow.",
+      "fail": "The tractor duplicates or vanishes; or a second shadow appears; or the shadow becomes solid; or the tractor passes through a fence."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tractor's paint and the field stay the same, and the shadow stays dark.",
+      "fail": "The tractor changes colour; or the shadow turns coloured; or the field changes."
+    }
+  ]
+}

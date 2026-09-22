@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0294",
+  "caption": "A plastic comb rubbed on a wool scarf is held near a thin stream of water from a tap, and the stream bends toward the comb.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A plastic comb is rubbed on a wool scarf."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A thin stream of water runs from a tap."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The comb is held near the stream."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The stream bends toward the comb."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The stream is thin and steady."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rub comes first, then the approach, then the bend."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The stream runs straight down until the comb is close, bends only while the comb is near and straightens when the comb is moved away.",
+      "fail": "The stream bends before the comb is brought near; or stays bent after the comb has been taken well away; or bends back and forth with the comb held still; or the stream bends while the comb is far off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bend is toward the comb: the stream curves to the comb's side below the point where the comb is held.",
+      "fail": "The stream bends away from the comb; or bends above the comb's height; or the stream breaks up and stops flowing when the comb nears; or the comb draws the water up to it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The water keeps falling downward throughout, bent or straight, and lands in the basin.",
+      "fail": "The water rises toward the comb; or hangs in the air; or the stream flows upward from the basin; or drops fly sideways away from the comb."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is a continuous thin stream that flexes as a liquid; the comb is a rigid piece.",
+      "fail": "The stream moves as a stiff rod; or the water forms a solid strand that clings to the comb; or the comb bends toward the water; or the stream splits into a fan."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One comb and one stream from one tap; the comb passes through nothing; the water does not vanish in mid-air.",
+      "fail": "A second comb or stream appears; or the water vanishes before reaching the basin; or the comb passes into the tap; or the tap changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The comb's colour, the scarf and the basin stay the same.",
+      "fail": "The comb changes colour or shape; or the scarf changes pattern; or the basin changes."
+    }
+  ],
+  "note": "Who holds the comb is not judged."
+}

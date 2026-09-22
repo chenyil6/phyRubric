@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0187",
+  "caption": "A plastic shopping bag lying on an empty parking lot inflates and tumbles away across the lot as the wind rises.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A plastic shopping bag lies on an empty parking lot."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It inflates."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It tumbles away across the lot."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lot is empty."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bag inflates first and then tumbles."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The bag moves as the wind picks up and not before.",
+      "fail": "It moves before any sign of wind; or keeps moving steadily after the wind drops; or jumps."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It moves downwind, rising and dipping with the gusts.",
+      "fail": "It moves against the wind; or in a straight line at constant height; or crosswise to other wind signs."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It dips back to the ground between gusts.",
+      "fail": "It rises indefinitely; or hangs; or rolls along without lifting."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "It fills with air, flaps and crumples.",
+      "fail": "It is rigid; or tears into strips; or stays flat while moving."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bag keeps its number and passes through nothing.",
+      "fail": "It duplicates; or passes through a kerb; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag's colour and the lot stay the same.",
+      "fail": "The bag changes colour; or the lot markings shift; or the surroundings rearrange."
+    }
+  ]
+}

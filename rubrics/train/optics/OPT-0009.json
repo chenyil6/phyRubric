@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0009",
+  "caption": "The shadow of a cloud sweeps across a sunlit hillside, darkening the grass as it passes.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hillside is in sunlight."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The shadow of a cloud sweeps across it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The grass darkens as the shadow passes."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow has a soft edge."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The grass brightens again once the shadow has passed."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The dark patch moves steadily in one direction, and the grass under it dims and brightens again once it has passed.",
+      "fail": "The patch jumps; or stops dead; or the grass stays dark after the patch has gone."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The trees' own shadows fade inside the patch and return behind it.",
+      "fail": "Tree shadows stay sharp inside the cloud shadow; or they vanish outside it; or they point a different way inside it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The patch darkens the ground and never brightens it.",
+      "fail": "The ground is brighter inside the patch; or the patch is a colour rather than a darkening; or it glows."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The patch is one soft-edged region.",
+      "fail": "It has a hard geometric edge; or splits into many small patches; or forms a recognisable object shape."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The hillside keeps its trees and features.",
+      "fail": "Trees appear or vanish as the shadow passes; or the hillside changes shape; or the patch becomes a solid object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The grass colour and the landscape stay the same apart from the dimming.",
+      "fail": "The grass changes colour rather than brightness; or the landscape rearranges; or the sky changes."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "ACOU-0073",
+  "caption": "A dental drill is switched on and held up, and its tip becomes a blur.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dental drill is held up."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its tip becomes a blur."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tip is sharp before the switch-on."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The switch-on comes first and the blur follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The blur is at the tip only; the handpiece stays sharp and the blur does not appear before the switch.",
+      "fail": "The tip blurs before the switch; or the whole handpiece blurs while the hand holding it is sharp; or the tip wanders about on its own away from the handpiece."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Once on, the tip blurs and stays blurred while the drill runs; once off, it is sharp.",
+      "fail": "The switch is pressed and the tip stays sharp for the rest of the clip; or the drill is switched off and the blur remains unchanged; or the blur flickers on and off while nothing at the switch changes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The handpiece is rigid and the tip stays attached and straight.",
+      "fail": "The handpiece bends; or the tip stretches longer; or the tip flops like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "A hose or cord attached to the drill hangs downward from it.",
+      "fail": "The hose arcs upward and stays; or floats; or hangs rigid sideways.",
+      "precondition": "A hose or cord is attached to the drill."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One drill with one tip; nothing duplicates or vanishes.",
+      "fail": "The tip vanishes; or a second drill appears; or the tip passes through the handpiece; or the drill turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The handpiece's colour, the tip's shape when still and the background stay the same.",
+      "fail": "The handpiece changes colour; or the background changes; or the tip changes shape when still."
+    }
+  ],
+  "note": "The hand holding the drill is a trigger and is not judged."
+}

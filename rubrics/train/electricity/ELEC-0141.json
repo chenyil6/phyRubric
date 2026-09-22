@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0141",
+  "caption": "A magnet is lowered toward a pile of paperclips on a desk, and the clips jump up and cling to it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pile of paperclips on a desk."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnet is lowered toward the pile."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The clips jump up and cling to the magnet."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The clips are loose in a pile, not in a box."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lowering comes first and the jump follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The clips lie still until the magnet is close above them, then leap up to it; clips far from the magnet stay put, and the leaping stops when the magnet is taken away.",
+      "fail": "Clips jump while the magnet is still high above or off to one side; or clips across the desk slide toward the magnet; or clips move before the magnet has been lowered; or clips keep hopping after the magnet is well away."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Clips on the magnet hang from its underside and sides in chains, touching it or each other; any that drop off fall back to the desk.",
+      "fail": "Clips hover in the air between desk and magnet touching nothing; or a clip that lets go drifts upward or sideways; or clips rise past the magnet; or the chains stand straight up above the magnet."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Each clip moves along the line from its spot to the magnet and stops on it or on a clip already there; the chains travel with the magnet as it moves.",
+      "fail": "A clip flies past the magnet and off; or clips circle the magnet in the air; or chains stay hanging in place when the magnet is moved away; or clips bounce off and back several times."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The clips stay rigid bent wire; the magnet stays a hard block; the desk does not dent.",
+      "fail": "Clips bend or straighten as they jump; or melt together into a lump; or the magnet squashes; or the desk surface dents under the pile."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The clips on the magnet are the clips from the pile; none appear from nowhere or vanish; the magnet passes through nothing.",
+      "fail": "Clips multiply on the magnet; or clips vanish in mid-air; or the magnet passes into the desk; or two clips merge into one."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The magnet's colour and shape, the clips' colour and the desk stay the same.",
+      "fail": "The magnet changes colour or shape; or the clips change colour; or the desk's contents rearrange."
+    }
+  ]
+}

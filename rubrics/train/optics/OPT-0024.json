@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0024",
+  "caption": "An empty swing sways in the afternoon sun, and its shadow swings back and forth across the ground.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An empty swing sways in the afternoon sun."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its shadow swings back and forth across the ground."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The shadow stretches and shortens as the seat rises and falls."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The swing moves first and the shadow follows in time."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow moves in time with the swing, stretching and shortening as the seat rises and falls.",
+      "fail": "It is still while the swing moves; or it swings out of time; or it keeps one length while the seat plainly rises."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the seat and chains' outline and stays joined to the frame's shadow.",
+      "fail": "It is a different shape; or the chains' shadow detaches from the seat's; or it splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side away from the sun.",
+      "fail": "It lies toward the sun; or switches sides; or it is missing in sunlight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The swing dies down and the shadow with it; nothing else moves the shadow.",
+      "fail": "The shadow swings with the seat still; or it swings harder as the seat dies down."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One swing and one shadow.",
+      "fail": "A second seat or shadow appears; or the seat vanishes; or the shadow becomes solid; or a chain detaches."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The swing and the playground stay the same, and the shadow stays dark.",
+      "fail": "The seat changes colour; or the shadow turns coloured; or the ground changes."
+    }
+  ]
+}

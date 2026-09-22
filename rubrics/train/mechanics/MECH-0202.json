@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0202",
+  "caption": "A swimmer does front crawl across a pool and reaches the far wall.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A swimmer swims front crawl in a pool."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They cross the pool."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They reach the far wall."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The stroke is front crawl, with the arms coming over one at a time."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The arms come over one at a time and pull through, the legs kick, the head turns to breathe, and the arms bend at elbow and shoulder.",
+      "fail": "Both arms come over together; or an arm bends mid-forearm; or the legs pass through each other."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Each arm stays attached and the swimmer stays one person.",
+      "fail": "An arm detaches or vanishes; or a second swimmer appears in the lane; or a limb duplicates."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Each stroke splashes and leaves a wake.",
+      "fail": "The arms move through the water leaving the surface glassy; or splashes appear where no arm is; or the wake runs ahead of the swimmer."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The body stays at the surface, mostly under the water.",
+      "fail": "It floats above the water; or sinks and swims along the bottom; or rises out of the pool."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The swimmer keeps their shape and passes through nothing.",
+      "fail": "They pass through the lane rope; or merge with the wall; or turn into another figure."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The swimsuit and the pool stay the same.",
+      "fail": "The swimsuit changes colour; or the lane markings shift; or the pool changes."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Gait, posture, style and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0257",
+  "caption": "A garden parasol is tilted in bright sun, and its round shadow slides across the patio.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A garden parasol is tilted in bright sun."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its round shadow slides across the patio."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The shadow keeps roughly its round shape."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tilt comes first and the slide follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The shadow moves only as the canopy tilts.",
+      "fail": "It slides with the parasol still; or moves before the tilt; or keeps moving after."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps roughly its round shape and does not detach from the pole's base.",
+      "fail": "It becomes a different shape; or detaches from the pole; or splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow moves opposite to the tilt of the canopy and stays on the side away from the sun.",
+      "fail": "It moves the same way as the tilt; or lies toward the sun; or it is missing in sunlight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The canopy is taut fabric on ribs.",
+      "fail": "It is rigid like a plate; or floats off; or tears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One parasol and one shadow.",
+      "fail": "A second shadow appears; or the parasol vanishes; or the shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The parasol and the patio stay the same, and the shadow stays dark.",
+      "fail": "The canopy changes colour; or the shadow turns coloured; or the patio changes."
+    }
+  ],
+  "note": "The hand tilting is the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0228",
+  "caption": "A dog trots along a street and passes behind a wide pillar, disappearing and then emerging on the far side.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog trots along a street."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It passes behind a wide pillar."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It emerges on the far side."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The disappearance comes first and the emergence follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The same dog reappears at the same size and gait.",
+      "fail": "A different dog emerges; or two dogs; or nothing emerges and the dog appears elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It is hidden for a moment consistent with its pace and emerges continuing the same way.",
+      "fail": "It emerges instantly; or after far too long; or emerges going back."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "Its body does not show through the pillar.",
+      "fail": "It shows through; or passes through the pillar face; or the pillar passes through the dog."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "It keeps its legs and tail across the occlusion.",
+      "fail": "The leg count changes; or the tail vanishes; or its size changes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One dog stays one dog.",
+      "fail": "It splits into two; or merges with the pillar; or turns into another animal."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dog's coat and the street stay the same.",
+      "fail": "The coat changes pattern; or the pillar changes; or the street rearranges."
+    }
+  ],
+  "note": "The dog is self-driven: its pace is its own. Only permanence and the timing of the reappearance are judged."
+}

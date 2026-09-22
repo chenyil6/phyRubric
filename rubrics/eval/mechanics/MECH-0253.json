@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0253",
+  "caption": "A stack of newspapers rides a conveyor belt in a printing plant, and when the belt is stopped the stack slides on a little before halting.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stack of newspapers rides a conveyor belt."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The belt is stopped."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The stack slides on a little."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It halts."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The setting is a printing plant."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The belt stops first and the slide follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The slide starts as the belt stops and not before, and the stack stops within a short distance.",
+      "fail": "It slides while the belt is running steadily; or slides with no stop; or keeps sliding to the end of the belt."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The slide is in the belt's former direction.",
+      "fail": "It slides backward; or sideways; or the stack lifts off."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The stack stays a stack, shearing a little at most.",
+      "fail": "The papers fly everywhere; or the stack merges with the belt; or the stack grows."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It stays down on the belt.",
+      "fail": "It floats; or sinks into the belt; or hangs over the edge unsupported."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One stack and one belt keep their number.",
+      "fail": "The stack duplicates; or vanishes; or the belt turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The newspapers and the plant stay the same.",
+      "fail": "The papers change; or the belt changes colour; or the plant rearranges."
+    }
+  ]
+}

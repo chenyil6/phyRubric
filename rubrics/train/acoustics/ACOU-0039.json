@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0039",
+  "caption": "A subwoofer is turned up in a living room, and a picture frame on the wall behind it slowly tilts askew with the bass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A living room with a subwoofer and a picture frame hanging on the wall behind it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The frame tilts out of level."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The tilt is slow and gradual."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The frame stays on the wall."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Something marks the volume being raised: a hand at a knob, a remote, or the cone beginning to pump."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The frame turns about its hanging point in small jerks, staying against the wall.",
+      "fail": "The frame swings out from the wall on its hook; or slides sideways along the wall keeping level; or turns in one smooth even sweep; or swings back to level by itself."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The frame moves only while the cone pumps and is still when the cone is still.",
+      "fail": "The cone pumps for a long spell and the frame never shifts; or the frame jerks while the cone is plainly still; or the frame goes on moving after the cone has stopped.",
+      "precondition": "The subwoofer's cone or grille is in view."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The frame hangs from its hook and, once tilted, rests in its new pose held by the wall.",
+      "fail": "The frame rises up the wall; or hangs above its hook; or floats off the wall."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The frame is rigid and the wall solid.",
+      "fail": "The frame bends; or the wall ripples; or the hanging wire stretches visibly."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One frame, one subwoofer; nothing passes through the wall.",
+      "fail": "A second frame appears; or the frame vanishes; or sinks into the wall; or the subwoofer turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The picture inside the frame, the wall colour and the subwoofer's look stay the same.",
+      "fail": "The picture inside the frame changes; or the wall colour changes; or the subwoofer changes size or colour."
+    }
+  ]
+}

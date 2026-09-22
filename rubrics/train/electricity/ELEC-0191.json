@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0191",
+  "caption": "A sheet of cling film is lifted off a bowl, and the film clings back to the bowl's rim and to itself.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bowl covered with cling film."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The film is lifted off the bowl."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The film clings back to the bowl's rim."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The film clings to itself."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The film is thin and transparent."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The lift comes first and the clinging follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the film is lifted, parts that touch the rim stay stuck to it and folds that meet stick to each other; they part only when pulled.",
+      "fail": "The film lifts cleanly away and hangs straight like paper touching nothing; or a part on the rim falls away by itself; or folds that meet slide apart with nothing pulling them; or the film stands out stiff from the hand."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The film is a thin limp sheet: it wrinkles, folds and stretches slightly where it is pulled from the rim, and peels off with a tug.",
+      "fail": "The film holds a flat rigid shape like a lid; or drapes in heavy folds like cloth; or stretches out long like rubber and snaps back; or tears into shards."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Parts of the film not stuck to anything hang downward from the hand; if let go the film falls onto the bowl or table.",
+      "fail": "A free edge rises or stands out sideways with nothing near it; or the film floats when let go; or the film climbs up the hand."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bowl stays where it is while the film is lifted, apart from a small drag; the film moves only with the hand or as it settles.",
+      "fail": "The bowl lifts off the table with the film and hangs from it; or the bowl slides across the table by itself; or the film crawls over the rim after settling."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet of film and one bowl; the film stays one piece and passes through nothing; the bowl keeps its shape.",
+      "fail": "The film splits into several pieces; or vanishes; or passes through the bowl; or the bowl changes shape or duplicates; or the bowl's contents appear or vanish."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bowl's colour and pattern, its contents and the table stay the same.",
+      "fail": "The bowl changes colour; or its contents change; or the table changes."
+    }
+  ]
+}

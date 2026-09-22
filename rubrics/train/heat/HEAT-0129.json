@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0129",
+  "caption": "A kerosene lamp is lit with a match, and the wick catches and the flame steadies inside the glass chimney.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A kerosene lamp with a wick and a glass chimney."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A match is held to the wick."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The wick catches: a flame appears at it."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flame steadies inside the chimney."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The match is withdrawn and the flame keeps burning."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is match to wick, catch, steady."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flame starts at the wick where the match touches it and keeps burning after the match is taken away.",
+      "fail": "The wick is alight before the match reaches it; or the match touches the wick and no flame appears at all; or the flame goes out as soon as the match is withdrawn; or the flame appears above the chimney rather than at the wick."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The flame stands upward from the wick inside the chimney.",
+      "fail": "The flame points downward from the wick; or lies flat inside the chimney with nothing blowing it; or hangs below the wick; or rises out through the chimney's top and burns in the air above it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once steady the flame holds and does not go out and relight by itself.",
+      "fail": "The flame goes out and relights with nothing touching the lamp; or grows and shrinks in turn with the wick untouched; or splits into two flames; or drifts off the wick and burns in the chimney's middle."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wick stays a soft charring cord, the chimney a rigid clear glass, and the lamp's body solid.",
+      "fail": "The chimney melts or bends over the flame; or the wick stretches upward as the flame burns; or the glass ripples as the flame steadies; or the lamp's base sags."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp with one wick, one chimney and one flame, and the match is a separate stick.",
+      "fail": "A second flame appears on the wick; or the chimney vanishes; or the match passes through the glass; or the flame detaches and floats out of the lamp."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lamp's metal, the glass's shape and the room stay the same.",
+      "fail": "The lamp changes colour; or the chimney changes shape; or items in the room rearrange."
+    }
+  ],
+  "note": "Whoever holds the match is not judged."
+}

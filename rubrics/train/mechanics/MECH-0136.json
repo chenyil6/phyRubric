@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0136",
+  "caption": "The two sides of a bag of chips are pulled apart at the top seam and the bag pops open.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sealed bag of chips is held."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The two sides are pulled apart at the top seam."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bag pops open."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pull comes first and the pop follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The seal gives suddenly as the sides are pulled, sometimes tearing down one side, and the foil crinkles.",
+      "fail": "The bag stretches like rubber; or it shatters; or it opens by itself with no pull."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bag opens where it is pulled, after the pull, and the chips inside are visible.",
+      "fail": "It opens before the pull; or the pull leaves it sealed; or it opens at the bottom."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "One bag stays one bag and the chips keep their number.",
+      "fail": "The bag duplicates; or chips appear from nowhere; or the bag reseals."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Chips that spill fall.",
+      "fail": "They float; or rise; or hang."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One bag keeps its number, and the hands do not pass through it.",
+      "fail": "The hands pass through the bag; or a second bag appears; or the bag turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag's printing and the background stay the same.",
+      "fail": "The printing changes; or the hands change; or the background rearranges."
+    }
+  ]
+}

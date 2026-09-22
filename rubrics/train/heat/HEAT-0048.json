@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0048",
+  "caption": "A saucepan of water on high heat is at a rolling boil, with large bubbles bursting at the surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A saucepan of water sits on a hob."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Bubbles rise through the water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Bubbles burst at the surface."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The surface churns."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bubbles are large."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The bubbles form at the pan's bottom and rise to the surface, growing as they go, and burst there.",
+      "fail": "Bubbles sink from the surface to the bottom; or form at the surface and travel down; or hang still in mid-water; or rise part-way and then fall back."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The boil keeps up: bubbles keep arriving from below and the churn goes on, and bubbles that have left the floor keep rising.",
+      "fail": "The surface goes glassy still while bubbles keep streaming below it; or the bubbling stops and then starts again by itself; or bubbles run back into the pan's floor; or bubbles shrink as they rise and vanish before the surface while the surface still churns."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Each burst shows at the surface: it breaks through, throws a small splash and leaves a ring that spreads.",
+      "fail": "A bubble reaches the surface and the surface stays glassy; or rings spread from spots where no bubble arrived; or the surface churns while nothing rises below it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water behaves as a liquid: it churns, splashes and finds its level, and wisps of steam rise from it.",
+      "fail": "The surface holds a fixed shape while bubbles burst through it; or the water stands in a heap above the pan's rim; or the churning water moves as a solid mass; or the steam sinks and pools around the pan."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pan of water; the water stays in the pan and its level changes only by boiling away or spilling.",
+      "fail": "Water passes through the pan's wall; or the level jumps up with nothing added; or a second pan appears; or the pan changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the hob and the surroundings stay the same.",
+      "fail": "The pan changes colour; or its handle changes shape; or the hob's knobs move by themselves."
+    }
+  ]
+}

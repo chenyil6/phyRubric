@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0044",
+  "caption": "A car drives along a road with the morning sun on its left, and its shadow runs along the ground on its right.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car drives along a road."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The morning sun is on its left."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its shadow runs along the ground on its right."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow stays attached at the wheels."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shadow moves with the car."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow stays on the car's right, attached at the wheels, and moves with the car.",
+      "fail": "It is on the left with the sun on the left; or it switches sides while the sun stays put; or it lags or is detached."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the car's outline and its wheels turn in step.",
+      "fail": "It is a different vehicle's shape; or its wheels are still; or it splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move on its own.",
+      "fail": "It moves with the car stopped; or changes length with the car still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The car travels steadily along the road.",
+      "fail": "It jumps position; or moves backward; or swerves with no cause."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and one shadow.",
+      "fail": "A second car or shadow appears; or the car vanishes; or the shadow becomes solid; or the car passes through a sign."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and the road stay the same, and the shadow stays dark.",
+      "fail": "The car changes colour; or the shadow turns coloured; or the road markings shift."
+    }
+  ]
+}

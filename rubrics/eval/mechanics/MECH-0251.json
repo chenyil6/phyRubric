@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0251",
+  "caption": "A cyclist riding along a flat street stops pedalling and rests both feet on the pedals, and the bicycle coasts on down the street, gradually slowing.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cyclist rides along a flat street."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cyclist stops pedalling and rests both feet on the pedals."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bicycle coasts on down the street."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It gradually slows."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The street is flat."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pedalling stops first and the coasting follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The bicycle keeps rolling after the legs stop, with no pause or jolt at that moment, and slows only gently.",
+      "fail": "It stops dead when the pedalling stops; or it speeds up with the feet still; or it rolls backward."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The path stays straight and the wheels keep turning.",
+      "fail": "It swerves on the open street with no steering; or the wheels stop turning while it moves; or it jumps position between frames."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bicycle stays upright on its wheels with the rider seated.",
+      "fail": "It tips over while coasting at speed; or floats; or sinks into the road."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The rider's legs stay still on the pedals and the pedals stop turning.",
+      "fail": "The pedals keep turning with the feet still; or a leg bends mid-shin; or the rider detaches from the bike."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One rider and one bicycle keep their number and shape.",
+      "fail": "A limb detaches; or the bicycle duplicates; or the rider merges with the bike."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rider's clothing, the bike and the street stay the same.",
+      "fail": "The clothing changes colour; or the bike changes; or the street rearranges."
+    }
+  ],
+  "note": "Inertia scene: the cyclist is kept because stopping the legs is the cause. Riding form is not judged."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0266",
+  "caption": "A tennis ball rolls off the end of a table and curves down to the floor, landing a short distance out from the table's edge, and bounces on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tennis ball rolls off the end of a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It curves down to the floor."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It lands a short distance out from the edge."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It bounces on."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The roll off comes first, then the curve down, then the bounce."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It keeps moving forward as it leaves the edge and lands beyond it, not straight below.",
+      "fail": "It drops straight down at the edge; or stops in the air; or reverses."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The curve steepens as it falls and it falls faster.",
+      "fail": "It flies flat; or hangs; or slows."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "It bounces lower than it dropped.",
+      "fail": "It bounces higher; or the same height; or stops dead."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "It squashes briefly and springs back round.",
+      "fail": "It stays flat; or sinks into the floor; or splashes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball and the table stay the same.",
+      "fail": "The ball changes colour; or the table changes; or the room rearranges."
+    }
+  ]
+}

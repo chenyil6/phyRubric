@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0076",
+  "caption": "A dolphin swimming fast bursts out of the sea, arcs through the air, and splashes back in.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dolphin swims fast near the surface."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It bursts out of the sea."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It arcs through the air."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It splashes back in."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "It is moving fast before the leap."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The burst comes first, then the arc, then the splash."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The dolphin follows one arc, its forward motion carrying through the leap.",
+      "fail": "The dolphin goes straight up and comes straight down; or it changes direction in mid-air; or it stops in the air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It rises, slows at the top, and falls back to the water.",
+      "fail": "The dolphin hovers above the surface; or it rises again after starting to fall; or it lands and rests on top of the water."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The water breaks and sprays where the dolphin leaves, and there is a splash where it enters.",
+      "fail": "The dolphin exits leaving the surface flat; or it enters with no splash; or the splash appears where it did not enter."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Water streams off the body in the air and the splash falls back to the sea.",
+      "fail": "The splash hangs in the air; or the water stands rigid like glass; or the body squashes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One dolphin keeps its fins and shape.",
+      "fail": "A fin detaches or vanishes; or a second dolphin appears from nowhere; or the dolphin turns into another creature."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dolphin's colour, the sea and the horizon stay the same.",
+      "fail": "The dolphin changes colour; or the horizon shifts between frames; or the sea changes colour."
+    }
+  ]
+}

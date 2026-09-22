@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0147",
+  "caption": "A motorboat speeds across a calm lake, leaving a spreading wake behind it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A motorboat moves fast across a lake."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A wake spreads behind it."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The lake is calm apart from the wake."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wake is behind the boat, not ahead of it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The wake is a V opening behind the boat with foam at the stern, and the water ahead stays calm.",
+      "fail": "The boat moves and leaves no wake; or the wake runs ahead of the boat; or the water ahead churns as if already crossed."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The wake widens and fades with distance behind the boat.",
+      "fail": "The wake narrows behind the boat; or it stays sharp all the way back; or it appears in pieces unconnected to the boat's path."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The boat travels in a line and the wake follows its path.",
+      "fail": "The wake curves where the boat went straight; or the boat jinks; or the wake detaches and drifts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Spray and the bow wave fall back to the surface.",
+      "fail": "Spray hangs in the air; or rises; or the boat floats above the water."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One boat keeps its number and shape.",
+      "fail": "The boat vanishes or a second appears; or it turns into another vessel; or the wake appears with no boat."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The boat's colour and the shoreline stay the same.",
+      "fail": "The boat changes colour; or the shore rearranges; or the lake changes colour."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0266",
+  "caption": "A saucer that has been covering a steaming mug of tea is lifted off, and a puff of steam escapes while the saucer's underside is beaded with drops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A saucer covers a mug of tea."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The saucer is lifted off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A puff of steam escapes from the mug."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The saucer's underside is beaded with drops."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drops run to the saucer's lowest point as it tilts."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The lift comes first and the puff follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The puff escapes as the saucer lifts and not before, and the saucer's underside is wet where the steam met it.",
+      "fail": "The puff escapes while the saucer still sits flat on the mug; or the saucer lifts and no steam leaves the mug at all; or the saucer's underside is dry after covering a steaming mug; or the drops lie on the saucer's upper face while its underside is dry."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The puff rises from the mug while the drops on the saucer run to its lowest point and hang or fall from there.",
+      "fail": "The puff sinks over the mug's rim and pools on the table; or the drops run up toward the saucer's raised side; or a drop leaves the saucer and rises; or drops stay fixed in place on a steeply tilted saucer."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The steam keeps leaving the mug and the drops on the saucer only gather, run and fall.",
+      "fail": "The puff runs back into the mug; or a puff retreats to the tea; or the saucer's underside beads up again while held clear of the steam; or a fallen drop returns to the saucer."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The drops behave as water on china: rounded, merging when they touch and running as streaks, and the saucer stays a rigid disc.",
+      "fail": "Touching drops overlap without merging; or drops jump about on the saucer; or the drops set as frost on the warm china; or the saucer bends as it lifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mug and one saucer; the drops come from the tea's steam and the tea stays in the mug.",
+      "fail": "The tea's level jumps; or a second saucer appears; or the saucer passes through the mug's rim; or tea passes through the mug's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mug's pattern, the saucer and the table stay the same.",
+      "fail": "The mug's pattern changes; or the saucer changes colour; or items on the table rearrange."
+    }
+  ]
+}

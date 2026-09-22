@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0080",
+  "caption": "An electric lawnmower reaches the end of its cord and the plug pulls out of the socket, and the mower stops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An electric lawnmower on a lawn with a cord running from it to a socket."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The plug pulls out of the socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mower stops."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The cord is drawn straight and taut before the plug comes out."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is mowing, cord taut, plug out, mower stops."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The mower stops when the plug leaves the socket: its travel ends and any stream of cut grass from the chute ceases.",
+      "fail": "The plug is out and the mower carries on mowing to the end of the clip; or the mower halts and its grass stream stops before the cord has gone taut; or grass keeps flying from the chute with the plug lying loose."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once the plug is out the mower stays stopped; it does not start again with the plug lying loose, and the cut strip behind it stays cut.",
+      "fail": "The mower starts up again with the plug out; or grass discharge resumes with the plug on the ground; or the plug jumps back into the socket by itself; or the cut strip behind the mower returns to uncut."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord is drawn straight and taut before the plug comes out; once free it goes slack and drops to the grass.",
+      "fail": "The plug comes out while the cord hangs slack; or the cord stays stretched straight in the air after the plug is free; or the cord stretches like elastic; or the plug flies upward and stays aloft."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The mower stays on the grass on its wheels; if it moves after the plug comes out it only coasts on in the direction it was going.",
+      "fail": "The mower reverses direction on its own as the plug comes out; or lifts off the grass; or slides sideways across the lawn."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mower, one cord, one plug, one socket; the plug leaves the socket whole and the mower passes through nothing.",
+      "fail": "The plug vanishes or a second plug appears; or the cord splits or detaches from the mower; or the mower passes through a fence or tree; or the mower changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mower's colour, the cord's colour and the socket or reel stay the same.",
+      "fail": "The mower changes colour; or the cord changes colour; or the socket or reel changes design."
+    }
+  ],
+  "note": "The motor and blades are hidden under the deck: 'the mower stops' is read from the mower's travel, the grass stream from the chute and any visible blade blur; sound is not judged. Who or what pushes the mower is not judged."
+}

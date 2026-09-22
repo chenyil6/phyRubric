@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0115",
+  "caption": "A clear plastic ruler is laid over a line of text, and the text is readable through the ruler.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A clear plastic ruler is laid over a line of text."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The text is readable through the ruler."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "There is at most a slight shift at the ruler's edges."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The letters are seen through the plastic and the ruler does not hide them.",
+      "fail": "The ruler hides the text; or it shows different text; or the text is heavily warped by a flat ruler."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The text is unchanged; any shift is at the ruler's edges only.",
+      "fail": "The text changes; or letters move under the ruler; or the text is mirrored."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The ruler and the page stay put unless moved.",
+      "fail": "The ruler slides by itself; or the page moves; or the text shifts with both still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ruler is rigid and clear.",
+      "fail": "It bends; or goes opaque; or ripples."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ruler and one page.",
+      "fail": "The ruler duplicates; or the page vanishes; or the ruler passes through the page."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The page and the ruler's markings stay the same.",
+      "fail": "The paper changes colour; or the markings change; or the desk changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

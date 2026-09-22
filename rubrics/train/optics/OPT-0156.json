@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0156",
+  "caption": "A laser pointer's red dot moves across a projected slide as the pointer is moved.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A laser pointer's red dot is on a projected slide."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pointer is moved."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dot moves across the slide."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The dot appears only while the button is pressed and disappears when released."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The dot moves with the pointer and appears only while the button is pressed.",
+      "fail": "The dot stays put while the pointer moves; or it remains after release; or it appears with no pointer."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The dot does not move on its own or linger.",
+      "fail": "It drifts with the pointer still; or leaves a trail; or jumps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The dot is one small red spot.",
+      "fail": "It splits; or is a large patch; or changes shape."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The dot is red on every part of the slide.",
+      "fail": "It changes colour; or is white; or the slide changes with no click."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pointer and one dot.",
+      "fail": "A second dot appears; or the pointer vanishes; or the dot becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The slide and the screen stay the same.",
+      "fail": "The slide changes with no click; or the screen changes; or the room changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged. Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

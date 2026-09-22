@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0089",
+  "caption": "A hot shower runs with the bathroom door closed, and the bathroom window is misting over from the bottom up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A shower runs in a bathroom with the door closed."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The window mists over."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mist thickens from the bottom upward."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Steam shows in the room."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The window is clear at the start."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The mist only thickens while the shower runs and misted glass does not clear.",
+      "fail": "The glass clears while the shower still runs; or the mist thins and thickens in turn; or the window is fully misted before the shower starts; or the mist retreats down the glass while steam still fills the room."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Heavier drops that gather in the mist run downward in streaks, and the mist builds up the glass from its lower part.",
+      "fail": "A streak runs up the window; or the mist builds from the top down while steam fills the room from below; or drops gather along the window's top edge and stay; or a drop leaves the glass and rises."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The mist lies on the room side of the glass, thickest where the steam reaches, and the room shows the steam.",
+      "fail": "The mist forms on the outside face of the glass; or the window mists while the room shows no steam at all; or the mist is thickest in a corner the steam never reaches; or the mirror and tiles stay bone dry while the window runs with water."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mist is a fine haze that beads and streaks, and the glass stays a rigid clear pane.",
+      "fail": "The mist stands off the glass as a thick crust; or the mist peels away as a film; or the glass flexes; or the haze turns opaque white like paint."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One window in one frame; what is seen through the clear glass is the same before and after the misting.",
+      "fail": "The window changes size; or a second window appears; or objects seen through the glass are missing once it clears; or the frame vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The frame, the tiles and the fittings stay the same.",
+      "fail": "The frame changes colour; or the tiles change pattern; or the fittings move."
+    }
+  ],
+  "note": "Whoever is in the shower is not judged."
+}

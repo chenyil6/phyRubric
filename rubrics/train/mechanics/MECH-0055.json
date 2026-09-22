@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0055",
+  "caption": "A heavy wooden barrel being rolled up a plank onto a truck bed is let go halfway up, and it rolls back down to the ground.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A heavy wooden barrel is being rolled up a plank toward a truck bed."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is let go part way up the plank."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It rolls back down to the ground."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The plank leads up onto a truck bed."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The release comes first and the roll back follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The barrel goes up only while it is pushed; the roll back begins at the release and not before, and once on the ground it stays there.",
+      "fail": "The barrel rolls back while it is still being pushed up; or it stays put on the slope after being released; or it sets off again after coming to rest on the ground."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "After the release it goes downhill along the plank, quicker the further it rolls.",
+      "fail": "The barrel carries on up the plank after being let go; or it slows as it rolls down; or it leaves the plank and floats."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The barrel turns as it rolls, keeps to the plank's line, and runs out onto the ground at the bottom.",
+      "fail": "The barrel slides down without turning; or it turns sharply off the side of the plank with nothing touching it; or it stops dead at the foot of the plank as though it had hit a wall."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The barrel stays a rigid drum and the plank stays a rigid board under it.",
+      "fail": "The barrel squashes or wobbles like rubber; or the plank sags and springs like a trampoline; or the barrel's staves come apart as it rolls."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One barrel, one plank and one truck keep their number and shape.",
+      "fail": "The barrel vanishes or a second one appears; or it passes through the plank or the truck bed; or it turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The barrel's wood and hoops, the plank and the truck stay the same.",
+      "fail": "The barrel changes colour or size; or the plank changes length between frames; or the truck changes shape."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0181",
+  "caption": "Sunlight shines through a stained-glass window, and coloured patches of light lie across the church floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Sunlight shines through a stained-glass window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Coloured patches of light lie across the church floor."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "Each patch has the colour of the glass it came through."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The patches lie on the side away from the window."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "Each patch has the colour of the glass it came through.",
+      "fail": "A patch is a colour not in the window; or all patches are white; or the patches swap colours."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The patches lie on the floor away from the window and would fade if a cloud covered the sun.",
+      "fail": "They lie on the window side; or on the ceiling; or they stay bright with the sun plainly gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The patches together form the window's pattern, stretched by the angle.",
+      "fail": "They form a different pattern; or are round blobs; or one patch splits."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The patches do not move with the sun steady.",
+      "fail": "They drift across the floor; or flicker; or swing round."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One window and its patches.",
+      "fail": "A second window's patches appear; or the window vanishes; or a patch becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The window and the floor stay the same.",
+      "fail": "The glass changes pattern; or the floor changes; or the pews rearrange."
+    }
+  ]
+}

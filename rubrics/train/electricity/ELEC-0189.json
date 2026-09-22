@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0189",
+  "caption": "A wool hat is pulled off, and the hair underneath stays lifted in the shape of the hat's inside before slowly settling.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A person wears a wool hat."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The hat is pulled off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The hair underneath stays lifted in the shape of the hat's inside."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The hair slowly settles."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hat is a knitted wool hat."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The hair is flat under the hat, lifted as it comes off, and settled at the end."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The hair rises as the hat leaves it and settles gradually afterwards; it does not stand up before the hat moves and does not rise again once settled.",
+      "fail": "The hair stands up before the hat has moved; or drops flat the instant the hat is off and then rises; or rises again after settling with nothing near it; or the hair follows the hat across the room."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The lifted strands stay rooted to the head and fall back down onto it as they settle.",
+      "fail": "Strands detach and float upward; or the hair settles upward; or the hair stays lifted as a rigid shape to the end of the clip; or the hair hangs sideways with nothing pulling it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The hat stretches and folds as knitwear as it is pulled off; the hair is fine strands that lift individually.",
+      "fail": "The hat stays a rigid shape as it lifts; or the hair lifts as one stiff sheet; or the hat stretches out like elastic and snaps back."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Once off, the hat moves only with the hand; nothing else in the scene stirs.",
+      "fail": "The hat floats or slides by itself; or objects nearby jump as the hat comes off; or the person's collar or scarf rises with nothing touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One person with one head of hair and one hat; the hat passes over the head, not through it; the head keeps its shape.",
+      "fail": "The hat passes through the head; or the head changes shape; or a second hat appears; or a clump of hair detaches and stays in the hat as it lifts away."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hat's colour and pattern, the hair's colour and the background stay the same.",
+      "fail": "The hat changes colour; or the hair changes colour or length; or the background rearranges."
+    }
+  ],
+  "note": "The person is kept because the hair is the physics; their movements are not judged."
+}

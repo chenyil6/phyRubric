@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0067",
+  "caption": "A car approaches from behind a parked car, and its image appears in the parked car's side mirror and grows larger.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car approaches from behind a parked car."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its image appears in the parked car's side mirror."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The image grows larger."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The image leaves the mirror as the car draws alongside."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The image appears in the mirror before the car passes and grows as it nears.",
+      "fail": "It stays one size; or shrinks as the car nears; or appears only after the car has passed."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The image is a mirror image of the approaching car, seen behind.",
+      "fail": "It is a different car; or it shows the road ahead; or it is upside down."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The image moves only as the car moves.",
+      "fail": "It jumps; or moves with the car stopped; or drifts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mirror is rigid: the image is undistorted.",
+      "fail": "The mirror ripples; or the image warps; or the mirror bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two cars and one image of the approaching one.",
+      "fail": "A third car appears; or the image leaves the mirror; or a car vanishes; or the cars pass through each other."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cars' colours and the street stay the same.",
+      "fail": "A car changes colour; or the mirror changes; or the street rearranges."
+    }
+  ]
+}

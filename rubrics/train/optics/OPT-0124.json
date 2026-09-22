@@ -1,0 +1,65 @@
+{
+  "id": "OPT-0124",
+  "caption": "A field slides past a train window and is clearly visible through the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A field slides past a train window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is clearly visible through the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The view moves continuously."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The view moves continuously past the window and stays visible.",
+      "fail": "The glass is opaque; or the view freezes; or it jumps."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The scene does not vanish or turn into a different scene.",
+      "fail": "The field vanishes; or a different landscape appears abruptly; or the view is a static picture."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The view slides one way at a steady pace.",
+      "fail": "It reverses; or speeds up and stops jerkily; or the near and far ground move the wrong way relative to each other."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pane is flat and rigid.",
+      "fail": "It ripples; or bends; or goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One window in one carriage.",
+      "fail": "A second window appears; or the frame vanishes; or the field passes into the carriage."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The carriage interior stays the same.",
+      "fail": "The seats change; or the frame changes; or the field changes colour abruptly."
+    }
+  ]
+}

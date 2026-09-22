@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0292",
+  "caption": "A squirt of yellow mustard and a squirt of red ketchup are stirred together on a plate, and the mixture turns orange.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A squirt of yellow mustard and a squirt of red ketchup are on a plate."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They are stirred together."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mixture turns orange."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Orange appears where the two sauces meet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The stir comes first and the orange follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Orange appears where the sauces meet and spreads with stirring until the streaks are gone; it does not separate again.",
+      "fail": "Orange appears before stirring; or the sauces separate back; or the orange retreats."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The mix is orange, and unstirred yellow and red stay as they were.",
+      "fail": "The mix is a colour other than orange; or the pure sauces change; or the plate turns one colour at once."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The sauces are thick liquids that streak under the stirrer.",
+      "fail": "They are rigid; or flow like water; or bounce."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The sauces move only where stirred.",
+      "fail": "They swirl by themselves; or the plate moves; or they mix with no stirrer."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The amount of sauce stays the same and the plate keeps its shape.",
+      "fail": "Sauce appears from nowhere; or the plate duplicates; or the stirrer passes through the plate."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plate and the table stay the same.",
+      "fail": "The plate changes colour; or the table changes; or the stirrer changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

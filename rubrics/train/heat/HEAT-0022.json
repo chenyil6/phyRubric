@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0022",
+  "caption": "Melted butter is poured onto a plate that has just come out of the freezer, and the butter turns cloudy and firm on the plate.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A plate that reads as very cold: frost or chill haze on it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Melted butter is poured onto the plate."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The butter turns cloudy."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The butter stops flowing and becomes firm."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The butter is clear and runny as it is poured."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is pour, cloud over, firm up."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The change runs one way on the cold plate: the butter slows, clouds and stops, and where it has set it stays set.",
+      "fail": "A clouded patch turns clear and runny again with nothing heating it; or the butter clouds and clears in turn; or the set butter flows on across the plate with none added; or the pool draws back toward the point where it was poured."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The change from clear to cloudy happens in the butter where it lies on the cold plate and spreads through it.",
+      "fail": "The plate's pattern changes rather than the butter; or the butter clouds in the jug before it is poured; or a clouded area returns to clear while still on the plate; or the cloudiness appears on a part of the plate with no butter on it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The poured butter falls downward into the plate and spreads out level in its well.",
+      "fail": "The butter climbs the plate's rim and stays above it; or the stream travels upward from the jug; or the pool stands as a dome above the plate's rim; or butter lifts off the plate and hangs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The butter flows as a thin liquid while it is warm and becomes a soft opaque solid that keeps its shape when the plate is tilted.",
+      "fail": "The set butter runs off a tilted plate as a liquid; or the butter sets into a glassy sheet that shatters; or the pool stretches like elastic; or the butter soaks into the plate."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One plate and one pour; the butter that lands stays on the plate.",
+      "fail": "Butter appears on the plate with none pouring there; or the pool vanishes; or the butter passes through the plate; or a second plate appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plate's pattern away from the butter, the jug and the surroundings stay the same.",
+      "fail": "The plate's pattern changes; or the jug changes shape; or items around the plate rearrange."
+    }
+  ]
+}

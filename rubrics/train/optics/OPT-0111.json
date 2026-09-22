@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0111",
+  "caption": "Cakes on display are clearly visible through a bakery's front window as a tram passes behind the camera.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Cakes are on display behind a bakery's front window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They are clearly visible through the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "A tram passes behind the camera, reflected faintly."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Nothing is hidden by the pane."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The cakes appear sharp and in place behind the glass, with the street's reflection faint over them.",
+      "fail": "The glass hides the cakes; or the reflection swamps the view; or the cakes are distorted by a flat pane."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The cakes stay behind the glass and the reflection stays in it.",
+      "fail": "A cake passes through the glass; or the reflected tram enters the shop; or the glass passes through a cake."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The cakes stay put.",
+      "fail": "A cake slides; or rotates; or lifts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pane is flat and rigid.",
+      "fail": "It ripples; or bends; or goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The cakes keep their number.",
+      "fail": "A cake vanishes; or appears; or a cake turns into another."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The display and the shop front stay the same.",
+      "fail": "The cakes change colour; or the shelves rearrange; or the frame changes."
+    }
+  ]
+}

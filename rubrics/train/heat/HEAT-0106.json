@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0106",
+  "caption": "A cold pane of glass is held over a steaming kettle, and it fogs and then drips from its lower edge.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pane of glass is held over a steaming kettle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pane's underside fogs."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Drops gather on the pane."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Drops drip from its lower edge."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The top face of the pane stays dry."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The fogging comes first and the dripping follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The drops on the underside run to the pane's lowest edge and fall from there straight down.",
+      "fail": "Drops run up the pane's underside; or drops fall upward off the pane; or drops stay fixed on a steeply tilted pane; or drops gather along the pane's highest edge and drip from there."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fogging and the beading only build while the steam keeps reaching the pane, and the drops only gather and fall.",
+      "fail": "The pane's underside dries while steam still reaches it; or the drops shrink and grow in turn; or the pane is wet before any steam reaches it; or a drop that has fallen returns to the pane."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The fog and the drops are on the face toward the steam and the top face stays dry.",
+      "fail": "The top face fogs while the underside stays dry; or both faces fog equally; or the pane fogs in a part the steam never reaches; or the steam plays on the pane and it stays clear and dry to the end of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The drops behave as water on glass: rounded, merging when they touch and running as streaks, and the pane stays rigid and clear.",
+      "fail": "Touching drops overlap without merging; or drops jump about on the pane; or the water sets as frost over a steaming kettle; or the pane flexes as the water runs."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pane and one kettle; the drops come from the steam and leave only by falling.",
+      "fail": "A drop vanishes in mid-air; or drops appear on the top face with none crossing the edge; or the pane passes through the kettle; or a second pane appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The kettle, the pane's edges and the surroundings stay the same.",
+      "fail": "The kettle changes colour; or the pane changes size; or items around the kettle rearrange."
+    }
+  ],
+  "note": "Whoever holds the pane is not judged."
+}

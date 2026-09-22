@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0079",
+  "caption": "A battery-powered toy car slows and stops as its battery runs flat, and its headlights dim and go out.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy car drives along with its headlights lit."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The car slows and stops."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The headlights dim and go out."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The car is battery powered: no cord or track feeds it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lights dim before they go out."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Moving and lit comes first, slowing and dimming follow, and the car is stopped and dark at the end."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The headlights dim as the car slows and go out around the time it stops; the two fade together.",
+      "fail": "The car stops while the headlights stay at full brightness to the end of the clip; or the lights go out while the car drives on to the end of the clip; or the lights go out well before the car begins to slow."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Slowing, stopping and dimming run one way: the car does not speed up or move again, and the lights do not brighten or come back.",
+      "fail": "The car speeds up again after slowing; or moves off again after stopping with nothing touching it; or the headlights come back on after going out; or the lights brighten as the car slows."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The car rolls on its wheels along the surface in the direction it faces; its wheels turn while it moves and stop when it stops.",
+      "fail": "The car slides sideways or drifts with its wheels still; or the wheels keep turning after the body has stopped; or the car lifts off the surface as it slows."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing else on the floor moves when the car slows and stops.",
+      "fail": "Objects nearby shift as the car stops; or the car rocks or slides after halting with nothing touching it; or the rug slides beneath it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One toy car with its wheels and lights attached; it stays on the surface and passes through nothing.",
+      "fail": "The car vanishes or a second car appears; or a wheel detaches or a headlight vanishes rather than going dark; or the car passes through a piece of furniture or a wall; or it changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and markings and the floor stay the same apart from the lights.",
+      "fail": "The car changes colour; or its decals change; or the floor pattern changes."
+    }
+  ],
+  "note": "The car is a powered toy: its slowing and stopping are the caption's event, not causeless motion. How quickly it slows is not judged."
+}

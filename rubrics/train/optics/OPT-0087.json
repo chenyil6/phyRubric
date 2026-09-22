@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0087",
+  "caption": "A soap bubble drifts past a bright window, and a tiny reflection of the window curves across the bubble's surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A soap bubble drifts past a bright window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A tiny reflection of the window curves across the bubble's surface."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflection moves across the bubble as it drifts."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection vanishes when the bubble pops."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The window shows as a small curved highlight that moves across the bubble as it drifts.",
+      "fail": "The highlight stays fixed on the bubble while it drifts past the window; or it is missing beside a bright window; or it shows something not in the room."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The highlight is curved to the bubble and stays on its surface.",
+      "fail": "It is a flat rectangle; or it floats off the bubble; or it is larger than the bubble."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bubble is a thin iridescent film that wobbles and pops into nothing.",
+      "fail": "It is rigid; or bounces like a ball; or pops into shards."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bubble drifts and sinks slowly.",
+      "fail": "It rises steadily; or drops like a stone; or hangs still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bubble and one highlight.",
+      "fail": "A second bubble appears from nowhere; or the popped bubble reappears; or the highlight becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The window and the room stay the same.",
+      "fail": "The window changes; or the room rearranges; or the bubble changes colour abruptly."
+    }
+  ]
+}

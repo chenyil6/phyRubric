@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0102",
+  "caption": "A metal bucket half full of water is struck once with a stick, and the water inside jumps into ripples.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A metal bucket half full of water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A stick strikes the bucket once."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water surface jumps into ripples."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The strike is a single hit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike comes first and the ripples follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The surface is still until the strike and the ripples begin at it.",
+      "fail": "Ripples run over the surface before the stick lands; or appear with the stick held away; or the stick lands and the surface stays glassy."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The ripples are a fine shiver over the whole surface that fades; the water does not slosh.",
+      "fail": "The water sloshes up one side as if the bucket had been tipped; or a single ring spreads from the centre as if something had been dropped in; or the ripples grow stronger after the strike; or the water leaps out of the bucket."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The water stays level in the bucket and any drops fall back.",
+      "fail": "Water rises out of the bucket; or the surface stays tilted; or the bucket lifts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bucket is rigid metal and the stick rebounds from it.",
+      "fail": "The stick sinks into the bucket wall; or the bucket crumples like paper; or the bucket wall ripples like cloth."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bucket, one stick; the water keeps its amount.",
+      "fail": "A second bucket appears; or the stick passes through the bucket; or the water vanishes; or the bucket changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bucket's colour, the water's colour and the stick stay the same.",
+      "fail": "The bucket changes colour; or the water changes colour; or the stick changes length."
+    }
+  ],
+  "note": "The hand on the stick is a trigger and is not judged."
+}

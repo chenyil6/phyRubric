@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0021",
+  "caption": "The string of a helium balloon tied to a park bench comes loose, and the balloon floats up into the sky.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A helium balloon is tied by its string to a park bench."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The string comes loose from the bench."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The balloon floats up into the sky."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The string comes loose first and the rise follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The balloon stays by the bench while it is tied and starts to rise only once the string is free.",
+      "fail": "The balloon rises while its string is still tied to the bench; or it drifts off with the string never coming loose; or it hangs still above the bench long after coming free."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The balloon climbs with the string hanging beneath it, the loose end trailing as the lowest part.",
+      "fail": "The balloon drops to the ground once free; or it climbs with the string standing above it; or the string holds out straight sideways and stays there."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The rise is a steady drift upward that keeps going while the balloon is in view.",
+      "fail": "The balloon shoots upward like a thrown ball; or it stops in mid-air and hangs at bench height; or it reverses and comes back down."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The balloon stays a taut rounded shape and the string stays a limp line of fixed length.",
+      "fail": "The balloon deflates and keeps climbing; or the string goes rigid like a rod; or the string grows longer as the balloon climbs."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon on one string keeps its shape and passes through nothing.",
+      "fail": "The balloon vanishes or a second one appears; or the string comes away from the balloon and the balloon goes on trailing it; or the balloon passes through a branch or through the bench."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour, the bench and the park stay the same.",
+      "fail": "The balloon changes colour as it rises; or the bench changes shape between frames; or the park behind rearranges."
+    }
+  ]
+}

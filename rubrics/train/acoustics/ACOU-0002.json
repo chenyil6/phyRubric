@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0002",
+  "caption": "The low string of an acoustic guitar is plucked, and the string blurs into a wide band before slowly sharpening to a line again.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An acoustic guitar is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The low, thickest string is plucked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The plucked string blurs: it vibrates visibly."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The blur narrows back to a sharp line."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Only that string is plucked; the others are not."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is pluck, wide blur, narrowing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The string is a sharp line until plucked, blurs at the pluck, and only then; the other strings stay sharp.",
+      "fail": "The string blurs before it is touched; or a different string blurs; or all strings blur together; or the string blurs with no pluck."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The blur is widest right after the pluck and only narrows; it does not widen again without another pluck.",
+      "fail": "The blur widens again after narrowing; or stays the same width for the whole clip; or the string goes sharp and then blurs again with no second pluck."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The string stays anchored at the nut and the bridge: the blur is a band between the two fixed ends, widest near the middle.",
+      "fail": "The string's ends move along the neck; or the blur is widest at the bridge; or the string sags or swings like a slack rope."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The guitar body, neck and other strings stay still; only the plucked string vibrates.",
+      "fail": "The neck bends with the pluck; or the guitar body wobbles; or the other strings swing."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The guitar's set of strings stays the same count; the plucked string stays one string and does not pass through the fretboard.",
+      "fail": "Strings appear or vanish; or the string splits into two; or the string passes through the frets or body; or the guitar changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The guitar's finish, the fret markers and the strings' spacing stay the same.",
+      "fail": "The guitar changes colour; or frets move; or the strings change spacing."
+    }
+  ]
+}

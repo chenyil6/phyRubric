@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0253",
+  "caption": "A cat walks up the steps of a dark porch, and the motion-sensor light above the door comes on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dark porch with steps and a light above the door."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A cat walks up the steps."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The light above the door comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The light is above the door, not on the steps or in the garden."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cat's approach comes first and the light follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light comes on as the cat comes up the steps, and not before; the porch brightens at that instant.",
+      "fail": "The light is on before the cat appears; or the cat reaches the door and the light stays dark to the end of the clip; or the light comes on with the cat nowhere near and nothing else moving; or the fixture glows while the porch stays dark."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Nothing on the porch moves apart from the cat; the fixture stays still and the door stays shut.",
+      "fail": "The door opens by itself; or objects on the porch shift as the light comes on; or the fixture swings; or the cat is carried up the steps without its legs moving."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once on, the light stays on while the cat is on the porch.",
+      "fail": "The light goes out while the cat still moves on the porch; or flickers on and off; or dims back down and up."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light comes from above the door: the door and the top steps brighten most, with shadows pointing down and away from the fixture.",
+      "fail": "The porch brightens evenly as if lit from the garden; or the shadows point toward the fixture; or the light comes from a place other than the fixture."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One cat with its body, legs and tail; the porch keeps its shape; the cat passes through nothing.",
+      "fail": "The cat gains or loses a limb or changes size; or passes through the door or railing; or a second cat appears; or the steps change shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cat's coat, the door's colour and the porch furniture stay the same apart from brightness.",
+      "fail": "The coat changes colour or pattern; or the door changes colour; or the furniture rearranges."
+    }
+  ],
+  "note": "The cat is an animal and its walking is not judged; it is kept because its motion is the sensor's trigger."
+}

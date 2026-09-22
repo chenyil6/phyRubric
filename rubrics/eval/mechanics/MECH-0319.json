@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0319",
+  "caption": "A snow plough drives down a street, and the snow rolls up along its blade and is left in a ridge at the roadside.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A snow plough drives down a street."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Snow rolls up along its blade."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It is left in a ridge at the roadside."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The plough passes first and the ridge is left after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Snow piles against the blade and spills off its end, leaving a continuous ridge behind and a cleared strip in its path.",
+      "fail": "No ridge forms; or snow returns to the cleared strip; or the ridge appears ahead of the plough."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "Snow does not pass through the blade.",
+      "fail": "It passes through the blade; or the blade passes through the snow; or the plough sinks into the road."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The snow rolls, breaks and piles.",
+      "fail": "It moves as a rigid block; or flows like liquid; or bounces."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "It is pushed to the side the blade is angled toward.",
+      "fail": "It goes to the opposite side; or straight up; or ahead of the plough."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One plough keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another vehicle."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plough and the street stay the same.",
+      "fail": "The plough changes colour; or the buildings rearrange; or the street changes."
+    }
+  ]
+}

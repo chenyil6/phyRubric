@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0101",
+  "caption": "A bolt of lightning strikes the ground in a desert, and a puff of dust rises from the spot after the flash.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A desert landscape."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A bolt of lightning strikes the ground."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A puff of dust rises from the strike point after the flash."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The strike point is on open ground, not on a rock or plant."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bolt and flash come first and the dust follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The bolt and flash are brief and gone; the dust appears at the strike point only afterwards and spreads from there; no glow is left on the sand.",
+      "fail": "The bolt stands as a steady lit line for the rest of the clip; or the dust rises before the bolt arrives; or the dust puff shrinks back into the ground; or the strike point glows like an ember afterwards."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The desert and whatever is in it are the same before and after; the flash reveals what was there and the dust is the only new thing.",
+      "fail": "Rocks or plants appear or vanish between dark and lit frames; or the dunes change shape; or an object appears at the strike point; or a second dust puff rises where no bolt struck."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The dust rises as a puff, billows upward and spreads, then thins; grains thrown up fall back to the sand.",
+      "fail": "The dust flows along the ground like water and never rises; or hangs as a fixed shape; or grains rise steadily and stay aloft; or the puff moves as a solid ball."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The bolt is a jagged, branching bright line with a main channel from the sky to the strike point.",
+      "fail": "The bolt is a perfectly straight beam; or a smooth wave; or a wide glowing tube; or a bolt that hangs in mid-air not reaching the ground while the dust rises."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The ground stays ground: the bolt ends at the surface and does not continue beneath it; the sand does not open.",
+      "fail": "The bolt continues below the surface as a lit line under the sand; or the ground splits open; or a hole appears that swallows the sand; or the sand becomes transparent."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sand's colour, the sky and any distant features keep their colours apart from the flash.",
+      "fail": "The sand changes colour; or the sky turns to daylight after the flash; or distant hills change shape or colour."
+    }
+  ]
+}

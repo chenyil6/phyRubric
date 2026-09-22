@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0063",
+  "caption": "A running garden hose propped at an upward angle beside a vegetable bed sends its stream over the bed, and the water comes down on the far side.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A running garden hose is propped at an upward angle beside a vegetable bed."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its stream arcs over the bed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water comes down on the far side of the bed."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The hose is propped in place rather than held."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bed lies between the hose and the spot where the water lands."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The stream leaves the nozzle along the hose's angle and curves over in one smooth arc.",
+      "fail": "The stream travels in a straight line to the far side; or it bends upward after leaving the nozzle; or it kinks or changes direction in mid-air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The arc peaks and comes down, and the water lands on the far side and stays on the ground.",
+      "fail": "The water hangs in the air at the top of the arc; or it rises again after starting to fall; or it lands and rises back up."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The stream is a continuous jet that breaks into drops and spray as it falls, and the soil darkens and puddles where it lands.",
+      "fail": "The stream is a rigid rod that stays whole all the way to the ground; or it lands and the ground stays dry; or the water gathers into balls."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The hose stays propped and still and the arc of the stream stays steady.",
+      "fail": "The hose whips about with nothing touching it; or the stream jumps to a new arc; or the hose rises off its prop."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One hose and one stream: water appears only from the nozzle.",
+      "fail": "A second stream appears from nowhere; or the stream vanishes in mid-air; or the hose turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hose's colour, the bed's plants and the garden stay the same.",
+      "fail": "The hose changes colour; or the plants in the bed rearrange between frames; or the garden behind changes."
+    }
+  ]
+}

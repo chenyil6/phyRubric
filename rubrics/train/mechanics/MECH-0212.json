@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0212",
+  "caption": "A sheet of paper is crumpled into a tight ball and dropped on the desk.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sheet of paper is held."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is crumpled into a ball."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ball is dropped on the desk."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The ball is tight rather than loose."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The crumpling comes first and the drop follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The ball keeps its crumpled shape and creases after release and does not unfold flat.",
+      "fail": "It unfolds flat on its own; or the creases vanish; or it re-crumples by itself."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The sheet wrinkles and folds in on itself as it is crushed, getting smaller.",
+      "fail": "It stays flat under crushing; or it grows; or it tears into pieces."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Dropped, it falls to the desk and stays.",
+      "fail": "It floats; or rises; or hangs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The paper creases sharply and is light.",
+      "fail": "It is rubbery; or melts; or is a rigid plate."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet becomes one ball.",
+      "fail": "The ball duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The paper's colour and the desk stay the same.",
+      "fail": "The paper changes colour; or the desk changes; or the background rearranges."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged."
+}

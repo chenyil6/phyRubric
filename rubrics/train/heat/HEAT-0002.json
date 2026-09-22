@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0002",
+  "caption": "Hot water is poured from a kettle over a large block of ice on the ground, and the ice melts where the water hits it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A large block of ice sits on the ground."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Hot, steaming water is poured onto the block from a kettle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ice melts visibly where the water lands: wet, hollowed, running."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The kettle is visible as the source of the water."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Meltwater runs off the block."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the melting follows it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Where the hot water lands the ice turns glossy, hollows and shrinks; the change is cumulative and grows only while water keeps coming.",
+      "fail": "The hollow fills back in or the surface refreezes matt; or the block grows; or the melt spot moves to where no water fell."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The stream leaves a visible effect: wetting, a pit, run-off and possibly steam; the ice under the stream does not stay dry and sharp.",
+      "fail": "Water runs over the ice and it stays dry, frosted and unchanged; or the block melts evenly everywhere at once including where no water touched."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The poured water and the meltwater run down the block and pool on the ground.",
+      "fail": "Water climbs the block or flows uphill; or pools on top of the block's sloping face; or steam sinks and hugs the ground."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Ice stays a hard solid where the water has not reached; it may crack sharply from the heat but does not bend, sag or flow.",
+      "fail": "The block sags or bends like wax; or ice flows as a viscous lump; or the ice turns into snow or slush all over at once."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One block, one kettle; the block only loses matter and water comes only from the kettle.",
+      "fail": "The block vanishes at a stroke or a second block appears; or water appears on the ice with no stream; or the kettle vanishes; or the stream passes through the block."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ground, the kettle and the ice's colour stay consistent.",
+      "fail": "The kettle changes colour or shape; or the ice turns coloured; or the ground changes texture away from the water."
+    }
+  ]
+}

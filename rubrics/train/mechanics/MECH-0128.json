@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0128",
+  "caption": "A loaf of crusty bread is torn in two at a dinner table.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A loaf of crusty bread is at a dinner table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is torn."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It ends up as two pieces."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The setting is a dinner table."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tear comes first and the two pieces follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The crust cracks and the loaf pulls apart with a ragged tear where it is pulled, crumbs falling.",
+      "fail": "The loaf stretches like rubber; or it parts along a clean straight line like a cut; or it shatters like glass."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The two pieces stay separate and together make up the loaf.",
+      "fail": "They rejoin; or a third piece appears; or the loaf is whole again."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The tear runs where the hands pull.",
+      "fail": "The loaf splits before the hands pull; or it splits elsewhere; or the hands pull and it stays whole."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Crumbs fall down onto the table.",
+      "fail": "Crumbs rise; or hang in the air; or return to the loaf."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One loaf becomes two pieces, and the hands do not pass through it.",
+      "fail": "The hands pass through the loaf; or the loaf turns into another object; or a second loaf appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bread's crust and the table setting stay the same.",
+      "fail": "The crust changes colour; or the table setting rearranges; or the hands change."
+    }
+  ]
+}

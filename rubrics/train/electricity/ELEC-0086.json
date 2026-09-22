@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0086",
+  "caption": "A lightning bolt strikes the sea beyond a beach at night, and the water and the wet sand flash bright and then go dark.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A beach at night with the sea beyond it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lightning bolt comes down to the sea."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water and the wet sand flash bright."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The scene goes dark again."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bolt ends at the sea, not on the beach."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is bolt, flash, dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The bolt and flash are brief; sea, sand and sky return to dark together.",
+      "fail": "The bolt stands as a steady line for the rest of the clip; or the sea keeps glowing after the bolt is gone; or the sand stays lit while the sky is dark again; or the flash fades in slowly."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The beach, the shoreline and the sea are the same before and after: the flash reveals what was there.",
+      "fail": "Rocks, boats or structures appear or vanish between dark and lit frames; or the shoreline moves; or a bolt hangs in place after the flash as a glowing pillar on the water; or a second bolt stands frozen beside the first."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The flash is mirrored in the wet sand and the sea surface: bright patches lie below the lit sky, strongest where the surfaces are wettest, during the flash only.",
+      "fail": "The sky flashes while the wet sand and sea stay as dark as before; or the reflection lies on the dry sand and not on the wet; or the mirrored light remains after the sky is dark; or the reflection appears before the sky flashes."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The bolt is a jagged, branching bright line with a main channel from cloud to sea.",
+      "fail": "The bolt is a perfectly straight beam; or a smooth curve; or a wide glowing tube; or a bolt that hangs in mid-air touching neither cloud nor sea."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The sea stays a surface of water with waves and the sand stays ground; nothing passes through either.",
+      "fail": "The bolt continues below the sea surface as a lit line under the water; or the sand splits open or heaves at the strike; or the sea's surface turns into a solid sheet; or the sea vanishes leaving bare ground."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sand, the sea and the sky keep their night colours apart from the flash.",
+      "fail": "The sky turns to daylight after the flash; or the sand changes colour; or the sea changes colour permanently."
+    }
+  ]
+}

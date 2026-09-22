@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0286",
+  "caption": "A model rocket reaches the top of its flight, its nose pops off and a parachute unfolds, and the rocket drifts slowly down under the canopy.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A model rocket reaches the top of its flight."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its nose pops off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A parachute unfolds."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The rocket drifts slowly down under the canopy."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The nose comes off first, then the canopy opens, then the drift down."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The canopy fills above the rocket and the fall slows sharply the moment it opens.",
+      "fail": "The rocket keeps falling fast with the canopy open; or slows before the canopy; or the canopy opens below the rocket."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The rocket hangs below the canopy and descends, not rising.",
+      "fail": "It rises; or hovers indefinitely; or the rocket is above the canopy."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "It drifts with the wind.",
+      "fail": "It drifts against visible wind; or straight down with visible wind; or jinks."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The canopy is cloth that fills and billows, and the cords are taut.",
+      "fail": "It is a rigid dome; or the cords are slack while hanging; or the canopy shreds."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One rocket and one parachute keep their number.",
+      "fail": "The rocket duplicates; or vanishes; or the parachute turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rocket's colours and the sky stay the same.",
+      "fail": "The rocket changes colour; or the canopy changes; or the field rearranges."
+    }
+  ]
+}

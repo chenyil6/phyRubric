@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0304",
+  "caption": "A drone hovering over a field loses power, and it drops straight down into the grass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A drone hovers over a field."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It loses power and its rotors stop."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It drops straight down into the grass."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rotors stop first and the drop follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "It falls the moment the rotors stop and not before.",
+      "fail": "It falls with the rotors spinning; or stays up with the rotors still; or rises."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It accelerates downward and lands below where it hovered.",
+      "fail": "It glides away; or slows before landing; or hovers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "It goes straight down with no gliding.",
+      "fail": "It goes sideways; or curves; or spins away."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "It is rigid and may break on landing.",
+      "fail": "It bounces high; or melts; or floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One drone keeps its number.",
+      "fail": "It duplicates; or vanishes in the air; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The drone and the field stay the same.",
+      "fail": "The drone changes colour; or the field rearranges; or the sky changes."
+    }
+  ]
+}

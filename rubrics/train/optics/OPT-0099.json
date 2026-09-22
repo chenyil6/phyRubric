@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0099",
+  "caption": "A bird hops across a lawn outside a clear window and is seen through the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bird hops across a lawn outside a clear window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is seen through the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The bird is fully visible and undistorted through the pane."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bird is fully visible through the pane and moves continuously behind it.",
+      "fail": "The glass hides the bird; or the bird flickers in and out of view behind clear glass; or it is distorted by a flat pane."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The glass does not make the bird vanish or appear inside the room.",
+      "fail": "The bird vanishes behind the glass; or it appears inside the room; or a second bird appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The bird stays outside the window.",
+      "fail": "It passes through the glass; or the glass passes through it; or it perches inside the pane."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pane is flat and rigid.",
+      "fail": "It ripples; or bends; or goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One bird keeps its shape.",
+      "fail": "It splits; or turns into another animal; or merges with the frame."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plumage, the lawn and the window frame stay the same.",
+      "fail": "The plumage changes; or the lawn rearranges; or the frame changes."
+    }
+  ],
+  "note": "The bird is self-driven; only transparency and containment are judged."
+}

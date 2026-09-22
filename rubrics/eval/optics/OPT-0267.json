@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0267",
+  "caption": "A shopping trolley rolls along an aisle under a convex security mirror, and its small curved reflection slides across the mirror.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A shopping trolley rolls along an aisle under a convex security mirror."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its small curved reflection slides across the mirror."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflection is much smaller than the trolley and bulges with the curve."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection leaves the mirror when the trolley leaves its view."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is much smaller than the trolley and bulges with the mirror's curve.",
+      "fail": "It is life-size; or flat and undistorted on a plainly convex mirror; or a different object."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The reflection moves the same way as the trolley and only then.",
+      "fail": "It moves the opposite way; or with the trolley still; or stays while the trolley leaves."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The reflection leaves the mirror when the trolley leaves its view.",
+      "fail": "It stays after; or is missing while the trolley is plainly in view; or appears before."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mirror is rigid.",
+      "fail": "It ripples; or bends; or goes dull."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One trolley and one mirror.",
+      "fail": "A second trolley appears; or the mirror vanishes; or the reflection steps out."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The aisle and the trolley stay the same.",
+      "fail": "The shelves rearrange; or the trolley changes; or the mirror changes shape."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0297",
+  "caption": "The protective film is peeled off a new television screen, and it clings to the hand holding it and crackles.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A new television with a protective film on its screen."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The film is peeled off the screen."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The film clings to the hand holding it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The film is thin and transparent."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The peel comes first and the clinging follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the film comes off it wraps onto the hand and arm where it touches and its folds stick to each other; it has to be pulled free and does not drop straight down.",
+      "fail": "The film hangs straight down from the fingers like paper and touches nothing; or a part on the hand falls away on its own; or folds that meet slide apart with nothing pulling them; or the film stands out stiff from the hand."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The film is a thin limp sheet: it wrinkles, folds and stretches slightly, and peels off with a tug.",
+      "fail": "The film holds a flat rigid shape like a board; or drapes in heavy folds like cloth; or stretches out long like rubber and snaps back; or tears into shards like glass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Parts of the film not stuck to anything hang downward; if the film is let go entirely it falls.",
+      "fail": "A free edge rises or stands out sideways with nothing near it; or the film floats when let go; or the film climbs up the arm."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The television stays where it stands; the film moves only with the hand or as it settles onto it.",
+      "fail": "The television tips or slides; or the film crawls over the hand after settling; or the film jumps between spots on the arm with nothing touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One film from one screen; the film stays one piece and passes through nothing; the screen keeps its shape.",
+      "fail": "The film splits into several pieces after the peel; or vanishes; or passes through the screen; or a second television appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The television's frame, the screen beneath the film and the room stay the same.",
+      "fail": "The frame changes colour; or the screen shows a picture that changes with the peel; or the room's contents rearrange."
+    }
+  ],
+  "note": "The hand is kept because the cling to it is the physics; the person is otherwise not judged. The crackle is sound and is not judged."
+}

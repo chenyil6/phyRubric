@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0013",
+  "caption": "A skateboarder riding along a sidewalk hits a raised crack, the board stops dead, and the rider is thrown forward off the board.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A skateboarder rides along a sidewalk."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The board hits a raised crack."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The board stops dead."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The rider is thrown forward off the board."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The crack stands raised above the surrounding pavement."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The board hits the crack and stops first, then the rider is thrown."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The board stops where it meets the raised crack and not before, and the rider's fall begins at that moment.",
+      "fail": "The board stops before it reaches the crack; or the rider is thrown while the board is still rolling freely; or the board stops with nothing in its path."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The rider carries on the way he was travelling and comes down ahead of the stopped board.",
+      "fail": "The rider is thrown backward, behind the board; or the rider stops with the board and stays standing on it; or the rider is thrown sideways off a board that was running straight."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Once off the board the rider drops toward the ground and lands on it.",
+      "fail": "The rider hangs in the air after leaving the board; or the rider keeps rising after being thrown; or the rider floats forward at the same height without coming down."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The crack checks the board: it stops there, or is thrown back, rather than carrying on as though nothing were in its way.",
+      "fail": "The board rolls over the crack unaffected while the rider is thrown; or the board runs on ahead of the rider; or the crack flattens away as the board reaches it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The board, the rider and the sidewalk stay solid and keep their number.",
+      "fail": "A wheel passes through the sidewalk; or the rider passes through the board or through the ground; or the board vanishes at the crack; or a second board appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rider's clothing, the board's deck and the sidewalk stay the same.",
+      "fail": "The rider's clothing changes colour; or the graphic on the deck changes; or the sidewalk's slabs and joints rearrange between frames."
+    }
+  ],
+  "note": "Inertia scene: the rider is kept because the body carrying on past the stopped board is the physics. Skill, stance and whether the fall is graceful are not judged."
+}

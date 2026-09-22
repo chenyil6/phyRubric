@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0139",
+  "caption": "A glass of water is placed on a line drawn on a piece of paper, and the line under the glass appears broken from the line outside it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A line is drawn on a piece of paper."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A glass of water is placed on it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The line under the glass appears broken from the line outside it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The line returns to one straight line when the glass is lifted."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The apparent break is at the glass edges and the line returns to one straight line when the glass is lifted.",
+      "fail": "The break is away from the glass; or the line is unbroken under the glass; or the break stays after the glass is lifted."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The paper and its line are unchanged; the break is an appearance.",
+      "fail": "The drawn line moves; or the paper bends; or a second line appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The glass is rigid and the water level.",
+      "fail": "The glass bends; or the water tilts and holds; or goes opaque."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The glass and the paper stay put unless moved.",
+      "fail": "The glass slides; or the paper moves; or the image shifts with both still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass and one sheet.",
+      "fail": "The glass duplicates; or the paper vanishes; or the glass passes through the paper."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The paper and the glass stay the same.",
+      "fail": "The paper changes colour; or the glass changes shape; or the table changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

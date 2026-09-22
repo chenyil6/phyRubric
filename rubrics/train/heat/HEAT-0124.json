@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0124",
+  "caption": "The glowing embers in a fireplace are poked with a poker, and they brighten and send up a swirl of sparks.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Glowing embers lie in a fireplace."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A poker pokes the embers."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The embers brighten where they are disturbed."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A swirl of sparks rises."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The glow settles again afterwards."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The poke comes first and the brightening follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The embers brighten where the poker disturbs them and sparks rise from that spot.",
+      "fail": "The embers brighten before the poker reaches them; or the poker stirs the embers and nothing brightens or lifts; or the embers brighten at the far side of the grate from the poker; or sparks rise from a part of the grate the poker never touched."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sparks rise with the hot air, drift and go dark, while the embers stay down in the grate.",
+      "fail": "The sparks fall to the hearth and lie there glowing; or sink below the grate; or an ember lifts and hangs in the air; or the sparks travel downward into the ash."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The brightening eases after the poking stops and the embers do not turn back into unburnt wood.",
+      "fail": "A glowing ember turns back into pale unburnt wood; or the glow keeps brightening after the poker is withdrawn; or the embers go dark and glow again with nothing touching them; or the ash gathers back into a whole log."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The embers are crumbling glowing lumps that break and shift under the poker and the ash is loose, while the poker stays rigid.",
+      "fail": "An ember bounces off the poker like a rubber ball; or the embers flow like a liquid; or the poker bends where it touches the embers; or the ash holds a rigid shape when pushed."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The embers in the grate are the embers that were there, breaking up rather than appearing or vanishing, and the poker stays outside them.",
+      "fail": "A glowing ember appears in the grate from nowhere; or an ember vanishes at a stroke while still bright; or the poker passes through the grate's floor; or a second poker appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fireplace's surround, the grate and the hearth stay the same.",
+      "fail": "The surround changes colour; or the grate changes shape; or items on the hearth rearrange."
+    }
+  ],
+  "note": "Who holds the poker is not judged."
+}

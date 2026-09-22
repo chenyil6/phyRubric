@@ -1,0 +1,87 @@
+{
+  "id": "MECH-0039",
+  "caption": "A dodgeball thrown hard hits a heavy punching bag hanging in a gym, bounces off it, and drops to the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dodgeball is thrown hard at a punching bag hanging in a gym."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The ball hits the bag."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It bounces off the bag."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It drops to the floor."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bag hangs from above rather than standing on the floor."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The hit comes first, then the bounce, then the drop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bag gives at the impact: it dents shallowly and swings back where the ball struck it.",
+      "fail": "The bag stays still while the ball plainly strikes it; or the ball rebounds off a bag that never moves at all; or the ball buries itself in the bag with no swing following."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The ball rebounds back off the bag more slowly than it arrived, and its path then bends down toward the floor.",
+      "fail": "The ball rebounds quicker than it arrived; or it sticks to the bag and hangs there; or it carries on past the bag and out the other side."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves before the ball arrives; the bag's swing dies away afterwards and the ball stays put once it has settled.",
+      "fail": "The bag swings before the ball reaches it; or the bag swings wider and wider after the single hit; or the ball sets off again across the floor with nothing touching it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "After the rebound the ball falls to the floor and settles near the bag.",
+      "fail": "The ball hangs in the air after the rebound; or it climbs steadily after the bounce and keeps climbing; or it travels along in mid-air without ever reaching the floor."
+    },
+    {
+      "id": "P5",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bag is heavy and stiff, swinging as one mass, while the ball squashes briefly and springs back round.",
+      "fail": "The bag folds around the ball and holds that shape; or the bag flies off like a light empty sack at the hit; or the ball stays flattened after the bounce."
+    },
+    {
+      "id": "P6",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The ball, the bag and its chain stay solid and keep their number.",
+      "fail": "The ball passes through the bag; or the bag passes through the floor; or the ball vanishes at the contact or a second one appears."
+    },
+    {
+      "id": "P7",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour, the bag's covering and the gym stay the same.",
+      "fail": "The ball changes colour at the impact; or the bag changes colour or markings between frames; or the gym behind rearranges."
+    }
+  ]
+}

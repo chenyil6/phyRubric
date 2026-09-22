@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0028",
+  "caption": "A heavy truck rumbles past a house, and a teaspoon resting on a stack of plates by the window jiggles and chatters against the top plate.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A teaspoon rests on a stack of plates near a window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A truck passes outside: seen through the window, or by its shadow or lights."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The spoon jiggles and chatters on the top plate."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The jiggle is small; the spoon does not slide off."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The truck approaches, the spoon moves, the truck is gone, the spoon is still."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The spoon's shaking follows the truck: it begins as the truck comes near, is strongest as it passes and dies away after it has gone.",
+      "fail": "The truck passes and the spoon lies dead still; or the spoon shakes hardest after the truck has left; or the spoon shakes while the street is empty and stays unchanged as the truck passes.",
+      "precondition": "The truck or its passage is visible through the window."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The spoon's motion is a small tremble in place on the plate: it does not walk far or leap, and it stops when the shaking stops.",
+      "fail": "The spoon leaps into the air; or slides across the plate and off the stack by itself; or spins; or keeps trembling unchanged for the whole clip."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The plates stay a stack of rigid plates that may chatter slightly but stay stacked; the spoon stays rigid.",
+      "fail": "Plates wobble like rubber; or the stack slides apart; or the spoon bends."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The spoon stays on the plate under gravity; if it hops it comes back down.",
+      "fail": "The spoon hovers above the plate; or rises; or the plates lift."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One spoon and the same plates; nothing passes through anything.",
+      "fail": "A second spoon appears; or the plates change count; or the spoon sinks into the plate; or the spoon vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plates' pattern, the spoon and the window scene stay consistent apart from the truck.",
+      "fail": "Plate patterns change; or the spoon changes colour; or the window view jumps."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0010",
+  "caption": "A candle burns on a dinner table, and melted wax spills over the rim and runs down one side.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lit candle stands on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A pool of melted wax sits at the candle's top."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Wax spills over the rim."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The wax runs down one side of the candle."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pool lies around the flame at the candle's top."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is pool, spill over the rim, run down."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The overflow runs downward along the candle's side from the rim where it spilled.",
+      "fail": "Wax runs up the candle's side; or climbs back over the rim into the pool; or a run travels sideways round the candle and stays level; or a drop leaves the candle and floats."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The run only advances down the side and stops where it has cooled, and what has set stays set.",
+      "fail": "A set run high on the candle turns liquid again with no fresh wax reaching it; or the run retreats up the candle; or the candle grows taller as the wax runs; or the run advances and withdraws in turn."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wax is a thin liquid in the pool near the flame and a dull raised ridge where it has run and cooled.",
+      "fail": "A run stays glossy and runny far below wax that has already set dull above it; or a run sets as a spike standing out sideways from the candle; or the candle's body sags or bends as a whole; or the pool sets into a hard skin while the flame burns in it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The pool sits at the top around the flame and the spill starts at its rim.",
+      "fail": "Wax spills over the rim while the candle's top is dry and solid; or the pool lies away from the flame while the wax beside the flame stays solid; or a run appears part-way down the candle with no wax coming over the rim above it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One candle with one wick and one flame; wax moves from pool to side to table.",
+      "fail": "The candle grows taller; or a second candle or flame appears; or the flame detaches from the wick and floats; or wax appears on the table with no run reaching it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candle's colour, the holder and the table stay the same.",
+      "fail": "The candle changes colour; or the table's pattern changes; or the holder moves or vanishes."
+    }
+  ]
+}

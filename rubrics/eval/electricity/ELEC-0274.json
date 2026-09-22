@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0274",
+  "caption": "Lightning flickers inside a thunderhead over a desert highway, lighting the cloud from within again and again.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A thunderhead over a desert highway."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lightning flickers inside the cloud, lighting it from within."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flickers repeat: the cloud lights up more than once."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "No bolt reaches the road or the ground."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flickers are inside the cloud, not below it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each flicker is brief with the cloud dark between; the flickers repeat but never merge into a steady glow.",
+      "fail": "The cloud stays lit for the rest of the clip; or the glow brightens steadily; or the sky turns to daylight; or a flicker fades in slowly."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The cloud, the highway and the desert are the same across dark and lit frames.",
+      "fail": "The cloud changes shape abruptly between flickers; or the road changes route; or vehicles or signs appear or vanish between frames; or a second cloud appears already lit."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light comes from within the cloud: its body and edges glow with their texture revealed, and the road below brightens only faintly as a glow from above.",
+      "fail": "The road lights up brightly while the cloud stays dark; or the glow is a flat wash over the frame with no cloud structure; or a spot on the road lights up as if struck while no bolt reaches it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The cloud drifts only slowly; the road and anything on it stay still or move steadily through the flickers.",
+      "fail": "The cloud jumps or swirls at a flicker; or a vehicle jumps ahead between dark and lit frames; or signs or poles shift at the flash."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Cloud stays cloud and the road stays ground; nothing on the ground is struck or changed.",
+      "fail": "The cloud turns into a solid object; or a bolt strikes the road and leaves a glowing mark; or the road splits; or the desert turns into water."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sky's night colour, the road and the desert are consistent before and after each flicker.",
+      "fail": "The sky changes colour permanently; or the road changes colour; or the cloud changes colour when not lit."
+    }
+  ],
+  "note": "Vehicles on the highway, if any, are driven and are not judged."
+}

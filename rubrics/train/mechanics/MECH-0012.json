@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0012",
+  "caption": "A bowling ball is released at the top of the lane and rolls the full length of the lane to the pins at the far end.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bowling ball is released at the top of a lane."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It rolls along the lane."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It reaches the pins at the far end."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "It travels the full length of the lane rather than part of it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The release comes first and the roll down the lane follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The ball holds close to the speed it left the hand with for the whole length of the lane, on a straight or gently curving line.",
+      "fail": "The ball slows to a stop before reaching the pins; or it gathers speed as it travels; or it wanders from side to side across the lane."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "After the release nothing touches the ball; it turns only gradually and keeps going forward.",
+      "fail": "The ball changes direction sharply on the open lane with nothing touching it; or it reverses back up the lane; or it stops and then sets off again."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The ball stays down on the lane surface, its weight on the wood.",
+      "fail": "The ball lifts off the lane and travels through the air; or it sinks into the lane; or it hangs over the gutter without dropping into it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ball stays a hard sphere and turns as it rolls; the lane surface stays flat under it.",
+      "fail": "The ball squashes or wobbles like rubber as it goes; or its surface ripples while it rolls; or it leaves a dent in the lane behind it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball travels the lane and the rack keeps its pins standing until the ball reaches them.",
+      "fail": "The ball vanishes or a second one appears on the lane; or a pin disappears before the ball arrives; or the ball passes through the lane surface."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and finger holes, the lane markings and the pins stay the same.",
+      "fail": "The ball changes colour as it rolls; or the arrows on the lane shift between frames; or the standing pins change their arrangement before being hit."
+    }
+  ]
+}

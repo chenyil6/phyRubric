@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0201",
+  "caption": "A bag of styrofoam beads is poured into a bowl, and beads stick to the bag's sides and to the rim rather than all falling in.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bag of styrofoam beads and a bowl."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The beads are poured from the bag into the bowl."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Beads stick to the bag's sides and to the bowl's rim rather than all falling in."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Most of the beads do fall into the bowl."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pour comes first and the clinging shows as it goes on."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the beads pour, some stay pressed against the inside of the bag and on the rim of the bowl, hanging on with nothing else holding them, and remain until brushed off.",
+      "fail": "Every bead pours out and none stays on the bag or rim; or beads cling a gap away from the plastic without touching; or the clinging beads drop off all together the instant the pour stops; or beads cling to the far side of the room."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Beads that do not cling fall from the bag into the bowl and come to rest there; clinging beads sit on the bag's sides, even its underside, and on the rim.",
+      "fail": "Falling beads rise or drift upward; or hang in the air between bag and bowl; or land and then hop back up into the bag; or beads roll up the bowl's side and out."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The beads are light foam spheres that bounce a little and lie loose; the bag is thin flexible plastic that crumples.",
+      "fail": "The beads splat or flatten like dough; or merge into a foam mass; or the bag stays rigid like a box; or the bag stretches like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The beads leave through the bag's opening in a stream into the bowl beneath it.",
+      "fail": "Beads fly out sideways far across the room; or leave through the bag's closed sides; or the stream bends away from the bowl with nothing deflecting it; or a pile grows where no bead has landed."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The beads in the bowl and on the bag came from the bag; none appear from nowhere or vanish; the bag and bowl stay one each.",
+      "fail": "Beads multiply in the bowl beyond what poured; or beads vanish in mid-air; or the bag duplicates; or the bag passes through the bowl."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag's colour and printing, the beads' colour and the bowl stay the same.",
+      "fail": "The bag changes colour; or the beads change colour or size; or the bowl changes."
+    }
+  ]
+}

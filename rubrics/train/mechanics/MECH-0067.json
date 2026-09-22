@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0067",
+  "caption": "A lawn sprinkler sends jets of water up and out over a garden, and the water falls onto the grass some distance away.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lawn sprinkler is running in a garden."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It sends jets of water up and outward."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water comes down on the grass some distance from the sprinkler."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "There are several jets rather than one."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Each jet leaves the sprinkler along one direction and curves over in an arc.",
+      "fail": "A jet travels in a straight line to the ground; or it bends upward in mid-air; or it kinks."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The water comes down after the peak and lands, and the higher jets land further out.",
+      "fail": "Water hangs at the top of an arc; or it rises again after starting to fall; or it lands and lifts off the grass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The jets break into drops and spray as they fall, and the grass darkens and glistens where they land.",
+      "fail": "The jets are rigid rods; or the grass stays dry where the water lands; or the water gathers into balls."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The sprinkler head turns or oscillates steadily and the pattern moves with it, while the sprinkler itself stays put.",
+      "fail": "The sprinkler slides across the lawn; or the jets jump between directions unrelated to the head; or the head stops and the jets keep sweeping."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sprinkler is the only source of water.",
+      "fail": "A second sprinkler appears; or water appears from nowhere away from the head; or the sprinkler turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sprinkler, the lawn and the garden stay the same.",
+      "fail": "The sprinkler changes colour or shape; or the lawn changes texture between frames; or the garden behind rearranges."
+    }
+  ]
+}

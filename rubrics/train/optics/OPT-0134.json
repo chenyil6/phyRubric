@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0134",
+  "caption": "A clear glass beaker of water is placed in front of a ruled sheet, and the lines behind the beaker appear closer together and shifted.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ruled sheet is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A clear glass beaker of water is placed in front of it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lines behind the beaker appear closer together and shifted."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The change vanishes when the beaker is emptied or moved."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change is confined to the view through the water and vanishes when the beaker is moved aside.",
+      "fail": "Lines beside the beaker change; or lines behind it are unchanged; or the change stays after the beaker is gone."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The sheet is unchanged; the shift is an appearance.",
+      "fail": "The lines on the sheet move; or the sheet bends; or a different pattern appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The beaker is rigid and the water level.",
+      "fail": "The beaker bends; or the water tilts and holds; or goes opaque."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The beaker and the sheet stay put unless moved.",
+      "fail": "The beaker slides; or the sheet moves; or the image shifts with both still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One beaker and one sheet.",
+      "fail": "The beaker duplicates; or the sheet vanishes; or the beaker passes through the sheet."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sheet and the beaker stay the same.",
+      "fail": "The sheet changes colour; or the beaker changes shape; or the table changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

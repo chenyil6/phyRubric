@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0289",
+  "caption": "A train runs through a tunnel with its headlight on, lighting the walls ahead of it while the walls behind fall back into darkness.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A train runs through a tunnel with its headlight on."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It lights the walls ahead of it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The walls behind fall back into darkness."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The far end is not lit until the beam reaches it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lit stretch stays ahead of the train and moves with it, and the wall darkens once the train has passed.",
+      "fail": "The walls behind stay lit; or the far end is lit before the beam reaches it; or the lit stretch is behind the train."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The lit stretch moves only as the train moves.",
+      "fail": "It moves with the train stopped; or jumps; or the beam swings."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The beam is one cone from the headlight.",
+      "fail": "It bends; or splits; or floods the whole tunnel."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The train travels steadily along the track.",
+      "fail": "It jumps position; or reverses; or leaves the rails."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One train and one tunnel.",
+      "fail": "A second train appears; or the tunnel vanishes; or the train passes through the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tunnel walls and the train stay the same.",
+      "fail": "The walls change; or the train changes colour; or the track changes."
+    }
+  ],
+  "note": "Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

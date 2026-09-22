@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0151",
+  "caption": "A glass jar is lowered over a burning tea light on a plate, and the flame shrinks and goes out within seconds, leaving a wisp of smoke inside the jar.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tea light burns on a plate."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A glass jar is lowered over it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flame shrinks and dims."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flame goes out."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "A wisp of smoke hangs inside the jar."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The jar's rim rests on the plate."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flame shrinks after the jar comes down over it and then goes out.",
+      "fail": "The flame burns at full size under the closed jar to the end of the clip; or the flame shrinks before the jar reaches it; or the flame goes out with the jar still held well clear; or the flame grows as the jar comes down."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flame only shrinks and goes out under the jar and does not relight while the jar stays down; the smoke inside only thins or hangs.",
+      "fail": "The flame relights under the closed jar; or the flame shrinks and grows in turn under the jar; or the smoke inside clears and the flame returns; or the wick's glow brightens into a flame with the jar down."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The smoke rises from the wick inside the jar and gathers at its top, and the candle stays on the plate.",
+      "fail": "The smoke sinks to the plate and pools under the wick; or pours downward out through the plate; or the candle lifts inside the jar and hangs; or the smoke hangs as a fixed shape without rising."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The jar stays a rigid clear glass over the candle and the candle keeps its shape with a wax pool at its top.",
+      "fail": "The jar melts or sags over the flame; or the glass ripples as the flame dies; or the candle's body slumps as the jar comes down; or the jar sticks to the flame and lifts with it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The jar's rim sits on the plate and the candle stays inside it; nothing passes through the glass.",
+      "fail": "The smoke passes out through the glass and rises outside the jar; or the jar passes through the plate; or the candle passes through the jar's wall; or a second jar appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plate, the candle's cup and the surroundings stay the same.",
+      "fail": "The plate changes pattern; or the candle's cup changes colour; or items around the plate rearrange."
+    }
+  ],
+  "note": "Who lowers the jar is not judged."
+}

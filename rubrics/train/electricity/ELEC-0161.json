@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0161",
+  "caption": "A magnetic name badge is placed on a jacket hanging on a hook by putting the magnet inside the fabric, and the badge holds in place.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A jacket hangs on a hook."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A name badge is placed on the outside of the jacket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A magnet is put inside the jacket, behind the fabric beneath the badge."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The badge holds in place after the hands withdraw."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The badge is a name badge: a small flat plate or label."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is badge placed, magnet inside, hands away, badge holds."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The badge and the inner magnet sit on opposite faces of the cloth with the fabric between them: the badge stays outside and the magnet inside, and neither passes through the jacket.",
+      "fail": "The badge sinks into the fabric; or the inner magnet, once inside, emerges through the cloth beside the badge; or badge and magnet are seen touching with no cloth between them; or the badge passes through the jacket and hangs inside it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "After the hands withdraw the badge stays where it was placed on the hanging jacket, flat against the cloth with nothing visible supporting it.",
+      "fail": "The badge drops to the floor as the hands leave; or slides down the jacket front; or lifts off the cloth and hangs in the air; or the inner magnet falls out of the jacket while the badge stays on."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The jacket is cloth: it dimples or wrinkles where badge and magnet press it, hangs from the hook and swings when touched.",
+      "fail": "The fabric stays board-stiff and flat while pushed on; or stretches and sags like elastic below the badge; or the jacket stands out rigid instead of hanging."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Once placed the badge stays still on the jacket; the jacket swings only when hands touch it and then comes to rest.",
+      "fail": "The badge creeps across the jacket after the hands leave; or turns on its own; or the jacket, hanging still, starts swinging with nothing touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One badge, one inner magnet, one jacket and one hook; the jacket stays on the hook; hands pass through nothing.",
+      "fail": "A second badge appears; or the badge vanishes; or the jacket passes through the hook and falls; or a hand passes through the jacket; or the hook detaches from the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The badge's lettering and colour, the jacket's colour and the hook stay the same.",
+      "fail": "The badge's lettering changes; or the jacket changes colour; or the hook moves along the wall."
+    }
+  ]
+}

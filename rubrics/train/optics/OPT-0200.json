@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0200",
+  "caption": "A white lamp is seen through a jar of yellow juice and looks yellow through the jar.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A jar of yellow juice is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A white lamp is seen through it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lamp looks yellow through the jar."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Beside the jar the lamp looks white."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The lamp looks yellow only where the jar's light reaches and while it is on.",
+      "fail": "The lamp is yellow with the jar off; or stays white under the yellow light; or turns a different colour from the light."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens at the same instant as the jar and is confined to where its light falls.",
+      "fail": "The lamp changes before the jar; or long after; or surfaces the light cannot reach change too."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The lamp is the same lamp, tinted, and shifted only by the jar's curve.",
+      "fail": "A different lamp appears; or it is mirrored; or it is enlarged far beyond the jar."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves; only the light changes.",
+      "fail": "The lamp moves; or the jar moves by itself; or the lit area wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One jar and one lamp.",
+      "fail": "A second jar appears; or the lamp vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lamp's shape and the surroundings stay the same.",
+      "fail": "The lamp changes shape; or the surroundings rearrange; or the jar changes shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

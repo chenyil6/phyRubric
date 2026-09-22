@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0126",
+  "caption": "A rubber band stretched between two fingers is let slip at one end; the band snaps back and drops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A rubber band is stretched between two fingers."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is let slip at one end."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The band snaps back."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It drops."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The release comes first, then the snap back, then the drop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The band shrinks back to its unstretched size at release.",
+      "fail": "It stays stretched; or it snaps in two; or it stretches further."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The band flies toward the finger still holding it at the instant of release.",
+      "fail": "It flies away from the holding finger; or it moves before release; or it hangs in the air stretched."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "After snapping back it drops.",
+      "fail": "It floats; or rises; or hangs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The band moves only at release.",
+      "fail": "It moves before release; or sets off again after landing; or jinks."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One band keeps its number.",
+      "fail": "The band vanishes or a second appears; or it turns into another object; or it merges with a finger."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The band's colour and the background stay the same.",
+      "fail": "The band changes colour; or the hands change; or the background rearranges."
+    }
+  ]
+}

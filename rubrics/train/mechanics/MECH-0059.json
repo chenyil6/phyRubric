@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0059",
+  "caption": "A log is rolled off the back of a trailer onto a slight downhill slope and rolls down to the bottom.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A log is rolled off the back of a trailer."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It lands on a downhill slope."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It rolls down to the bottom."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The slope is slight rather than steep."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The log leaves the trailer first and the roll down follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The log drops from the trailer to the ground and then goes downhill, quicker as it goes, coming to rest at the bottom or against something.",
+      "fail": "The log rolls uphill; or it stops on the open slope with nothing in its way; or it hangs in the air after leaving the trailer."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It turns about its length as it rolls and keeps roughly a straight line down the slope.",
+      "fail": "The log slides down end-on without turning; or it turns sharply on the open slope with nothing touching it; or it bounces higher than the trailer bed."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Once on the ground nothing but the slope moves the log, and at the bottom it stays.",
+      "fail": "The log speeds up after reaching the flat; or it sets off again after coming to rest; or it changes direction with nothing touching it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The log stays a rigid cylinder and the ground takes the impact.",
+      "fail": "The log bends as it rolls; or it splashes where it lands; or the ground ripples under it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One log and one trailer keep their number and shape.",
+      "fail": "The log vanishes or a second one appears; or it passes through the trailer or the ground; or it turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The log's bark, the trailer and the slope stay the same.",
+      "fail": "The log changes colour or length; or the trailer changes shape between frames; or the slope rearranges."
+    }
+  ]
+}

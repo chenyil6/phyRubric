@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0064",
+  "caption": "Traffic lights change from red to green above a wet street at night, and their reflections on the road change colour at the same moment.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Traffic lights hang above a wet street at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They change from red to green."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Their reflections on the road change colour at the same moment."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflections lie below the lights and stretch toward the viewer."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The coloured streaks on the wet road switch colour when the lights do, at the same moment.",
+      "fail": "The streaks stay red after the light is green; or they change before the light; or they show a colour the lights never show."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The streaks match the lights' colours and lie below them.",
+      "fail": "They are a different colour from the lights; or they lie above the lights; or they are the wrong number."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The streaks do not move on their own.",
+      "fail": "They drift across the road; or flicker with steady lights; or shift sideways."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The road is wet: the streaks shimmer where puddles ripple and are absent where the road is dry.",
+      "fail": "They are sharp mirror images on rough tarmac; or they appear on dry patches; or the water is rigid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The lights keep their number and stay on their pole.",
+      "fail": "A light vanishes or appears; or the pole moves; or a streak becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pole, the street and the buildings stay the same.",
+      "fail": "The pole changes; or the buildings rearrange; or the road markings shift."
+    }
+  ]
+}

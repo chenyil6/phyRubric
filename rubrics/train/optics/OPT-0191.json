@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0191",
+  "caption": "Morning sun shines through red curtains, and the white bedroom walls take on a red tint.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Morning sun shines through red curtains."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The white bedroom walls take on a red tint."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The tint is strongest where the light through the curtain falls."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The walls are white where ordinary light reaches them."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The wall looks red only where the curtain's light reaches and while it is on.",
+      "fail": "The wall is red with the curtain off; or stays white under the red light; or turns a different colour from the light."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens at the same instant as the curtain and is confined to where its light falls.",
+      "fail": "The wall changes before the curtain; or long after; or surfaces the light cannot reach change too."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The tint follows the shape of the light through the curtain.",
+      "fail": "The tint is a hard-edged square unlike the window; or covers walls the window cannot light; or splits."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves; only the light changes.",
+      "fail": "The wall moves; or the curtain moves by itself; or the lit area wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One curtain and one wall.",
+      "fail": "A second curtain appears; or the wall vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wall's shape and the surroundings stay the same.",
+      "fail": "The wall changes shape; or the surroundings rearrange; or the curtain changes shape."
+    }
+  ]
+}

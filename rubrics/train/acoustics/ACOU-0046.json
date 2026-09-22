@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0046",
+  "caption": "An excavator drops a load of rubble into a steel skip, and a nearby chain-link fence shivers along its length.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An excavator holds a load of rubble above a steel skip."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The rubble drops into the skip."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A chain-link fence nearby shivers."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shiver runs along the fence's length, not just one post."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drop comes first and the shiver follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The fence is still until the rubble lands and starts shivering at the impact.",
+      "fail": "The fence shivers before the rubble hits the skip; or the rubble lands and the fence stays dead still; or the fence starts shivering again after settling with no second load."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The shiver is strongest at the impact and fades afterwards.",
+      "fail": "The shiver grows after the impact; or keeps the same strength to the end; or the fence stops dead bowed out in a bent pose."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The rubble falls downward into the skip and stays there.",
+      "fail": "Rubble rises out of the skip after landing; or hangs in the air below the bucket; or pieces fall upward; or the bucket opens and the rubble stays in it hanging in place."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mesh flexes between fixed posts; the skip is rigid steel.",
+      "fail": "The mesh stretches like elastic and stays stretched; or a post bends and springs back like rubber; or the skip's side ripples like cloth."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One excavator, one skip, a continuous fence; the rubble does not pass through the skip.",
+      "fail": "Rubble passes through the skip's floor or side; or the skip vanishes; or the fence gains or loses a section; or the excavator's arm passes through the skip."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The excavator's colour, the skip's markings and the fence posts stay the same.",
+      "fail": "The excavator changes colour; or the skip's markings change; or the fence posts move."
+    }
+  ]
+}

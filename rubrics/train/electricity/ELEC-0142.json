@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0142",
+  "caption": "A magnet is swept over a mix of nails and plastic beads spilled on the floor, and the nails stick to the magnet while the beads stay behind.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Nails and plastic beads spilled together on a floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnet is swept over the mix."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The nails stick to the magnet."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The beads stay behind on the floor."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The beads are plastic: coloured, round, not metallic."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The sweep comes first and the nails lift as it passes."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the magnet passes close over the mix, nails beneath it jump up and cling to it; the beads do not move toward the magnet.",
+      "fail": "The magnet passes close over nails and they stay on the floor; or beads jump up and cling to the magnet; or nails rise beside the magnet without touching it; or nails stick to the magnet while it is still high above them."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The nails on the magnet are nails from the floor; nails and beads keep their number and kind; the beads left behind are the beads that were there.",
+      "fail": "Nails multiply on the magnet; or nails vanish in mid-air; or a bead turns into a nail or a nail into a bead; or beads vanish as the magnet passes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The nails hang from the magnet in contact with it; any that drop fall back to the floor; the beads lie where they were.",
+      "fail": "Nails hang in the air below the magnet without touching it; or a nail that comes off drifts sideways or upward; or beads float; or the nails stand upright above the magnet."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Beads move only if nudged by the magnet or a nail; nothing else on the floor stirs; nails on the magnet stay put.",
+      "fail": "Beads roll toward or away from the magnet with nothing touching them; or nails on the magnet crawl about; or the mix rearranges away from the magnet's path."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "Nails and beads stay outside the magnet's body and above the floor; the magnet passes through nothing.",
+      "fail": "A nail sinks into the magnet; or the magnet passes through the floor; or nails pass through beads; or the magnet merges with the nails into one lump."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The magnet's colour, the beads' colours and the floor stay the same.",
+      "fail": "The magnet changes colour or shape; or the beads change colour; or the floor pattern changes."
+    }
+  ]
+}

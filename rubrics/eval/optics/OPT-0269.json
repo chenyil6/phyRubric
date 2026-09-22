@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0269",
+  "caption": "A car drives past a puddle at night, and the reflections of its headlights slide across the puddle's surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car drives past a puddle at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The reflections of its headlights slide across the puddle's surface."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflections appear only within the puddle's edges."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "They vanish when the car has passed."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflected lights move with the car and appear only within the puddle's edges.",
+      "fail": "They show on dry pavement; or stay still while the car moves; or remain after the car has passed."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The reflections move only as the car moves.",
+      "fail": "They drift with the car stopped; or flicker; or jump."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "There are as many reflected lights as headlights.",
+      "fail": "There are more; or one; or they are a different shape from the lights."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The puddle is liquid: the reflections shimmer where it ripples.",
+      "fail": "It is rigid glass; or the reflections are sharp on a rippled surface; or the water flows uphill."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and one puddle.",
+      "fail": "A second car appears; or the puddle moves; or a reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car and the street stay the same.",
+      "fail": "The car changes colour; or the street rearranges; or the puddle changes shape."
+    }
+  ]
+}

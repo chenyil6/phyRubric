@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0253",
+  "caption": "A sunlit glass door swings open, and the shadow of its frame sweeps across the floor as it turns.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sunlit glass door swings open."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The shadow of its frame sweeps across the floor as it turns."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The glass panes cast little shadow while the frame casts a dark one."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The door moves first and the shadow follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The frame's shadow turns with the door and does not move before the door does.",
+      "fail": "It moves before the door; or stays still while the door swings; or swings the opposite way."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The frame casts a dark shadow and the panes cast little, and the shadow stays attached at the hinge side.",
+      "fail": "The panes cast solid dark shadow; or the shadow detaches from the hinge; or it is a different shape from the frame."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the floor away from the sun.",
+      "fail": "It lies toward the sun; or on the ceiling; or it is missing in sunlight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The door swings in an arc on its hinges.",
+      "fail": "It slides; or lifts; or spins."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One door and one shadow.",
+      "fail": "A second door appears; or the shadow becomes solid; or the door passes through the frame."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The door and the floor stay the same, and the shadow stays dark.",
+      "fail": "The frame changes colour; or the shadow turns coloured; or the floor changes."
+    }
+  ]
+}

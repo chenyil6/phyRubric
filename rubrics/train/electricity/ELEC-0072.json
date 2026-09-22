@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0072",
+  "caption": "A running sewing machine is unplugged, and the needle stops and its work light goes out.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sewing machine runs with its needle moving up and down and its work light lit."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its plug is pulled out of the socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The needle stops."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The work light goes out."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "A cord runs from the machine to the plug."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is running, unplugged, needle still and light off."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The needle stops and the work light goes out together at the moment the plug leaves the socket.",
+      "fail": "The plug is out and the needle keeps stitching; or the light stays lit with the plug out; or the needle stops long before the plug moves; or the light goes out while the needle carries on running."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once unplugged the needle stays still and the light stays off; the machine does not run again while the plug is out.",
+      "fail": "The needle starts stitching again with the plug out; or the light comes back on while unplugged; or the handwheel keeps turning after the needle has stopped."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "While running, the needle moves straight up and down at one spot and the fabric passes under it in one direction.",
+      "fail": "The needle wanders across the fabric; or the fabric reverses direction while the needle runs; or the fabric keeps feeding after the needle has stopped."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord slackens and drops when the plug is free; the thread stays a limp thread and the fabric drapes as cloth.",
+      "fail": "The cord stands rigid in the air or stretches like elastic; or the thread stands stiff above the fabric like wire; or the fabric moves like a rigid plate."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One machine, one needle, one plug; the needle passes only through the fabric and the hole in the plate; the plug leaves the socket whole.",
+      "fail": "The needle passes through the plate beside its hole; or a second needle appears; or the plug vanishes; or the machine changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The machine's colour, the fabric's pattern and the thread stay the same apart from the light.",
+      "fail": "The machine changes colour; or the fabric changes pattern; or the thread changes colour."
+    }
+  ]
+}

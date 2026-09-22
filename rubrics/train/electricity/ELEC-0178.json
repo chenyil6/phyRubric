@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0178",
+  "caption": "A balloon rubbed on a wool sweater is held near a head of long hair, and the hair rises toward the balloon.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A balloon and a wool sweater; the balloon is rubbed on the sweater."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The balloon is held near a head of long hair."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The hair rises toward the balloon."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The hair is long."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rub comes first, then the approach, then the hair rises."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The hair lies as it was until the balloon is close, lifts toward the balloon only where it is near, follows the balloon as it moves, and falls back when the balloon is taken away.",
+      "fail": "The hair rises before the balloon is brought near; or stays lifted after the balloon has been taken well away; or hair on the far side of the head rises while the balloon is on the near side; or the hair leans away from the balloon."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The lifted strands point toward the balloon and stay rooted to the head; strands not near the balloon hang down.",
+      "fail": "Strands detach and float up to the balloon; or hair far from the balloon stands straight up; or the whole head of hair hangs sideways with nothing pulling it; or lifted strands stay standing after the balloon is gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The balloon is a light elastic shell that keeps its round shape and dents only where pressed; the hair is fine strands that lift individually.",
+      "fail": "The balloon keeps a deep dent after the hand leaves; or stretches out like taffy; or the hair lifts as one stiff sheet like a board; or the hair sticks to the balloon as a solid mass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The sweater, once the rub is done, lies still; other light items nearby do not stir.",
+      "fail": "The sweater slides or lifts by itself; or paper or fabric near the balloon jumps while the balloon is far from it; or the balloon moves through the air with no hand on it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon and one head of hair; the balloon passes through nothing and does not vanish or duplicate; the hair stays attached to the head.",
+      "fail": "The balloon passes into the head or the hair; or a second balloon appears; or the balloon vanishes; or a clump of hair detaches and hangs on the balloon."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour, the sweater's pattern and the hair's colour stay the same.",
+      "fail": "The balloon changes colour or size, small dents aside; or the sweater changes pattern; or the hair changes colour or length."
+    }
+  ],
+  "note": "The person is kept because the hair is the physics; their posture and movement are not judged."
+}

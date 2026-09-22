@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0015",
+  "caption": "A small snowball is set on a hot griddle, and it hisses and collapses into water and steam.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A griddle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A snowball is set on the griddle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The snowball collapses: it loses its round shape and slumps."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Water spreads around it and steam rises."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The snowball is white and firm at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The setting down comes first and the collapse follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The snowball only darkens, slumps and shrinks, and the wet patch around it only grows.",
+      "fail": "The snowball regains its round shape; or turns white and firm again on the griddle; or the wet patch draws back into the ball; or the ball alternates between firmer and softer."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The water and steam come from the snowball, which loses matter and gains none.",
+      "fail": "The snowball grows; or a second snowball appears; or the ball vanishes in a single frame while still round; or water appears across the griddle with none running there from the ball."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The ball settles downward as it slumps, the meltwater spreads outward across the griddle, and the steam rises.",
+      "fail": "The ball lifts off the griddle; or the meltwater climbs the griddle's edge and stays; or the steam sinks and pools around the griddle."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The snow collapses as a wet crumbling solid that slumps from the bottom where it meets the metal, and the melt is a thin film that sizzles.",
+      "fail": "The ball melts from its top while its underside stays white and dry; or the ball bends and flows as one soft lump; or the melt stands as a dome on the griddle; or the ball bounces on the metal."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The snowball sits on top of the griddle's surface and nothing passes through the metal.",
+      "fail": "The ball sinks into the griddle's metal; or the melt passes through the griddle; or the griddle changes shape; or a second griddle appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The griddle's finish and the surroundings stay the same.",
+      "fail": "The griddle changes colour; or its surface pattern changes; or items around it rearrange."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0186",
+  "caption": "A hand strokes a cat's back on a dry winter day, and the fur stands up along its back and clings to the hand.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cat, with a hand stroking its back."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The fur stands up along its back."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The fur clings to the hand."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The setting reads as a dry winter day: indoors or wintry, no water."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The stroke comes first and the fur rises where it has passed."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The fur lifts where the hand passes and follows the hand slightly as it lifts away; fur the hand has not touched lies flat; the fur settles after the stroking stops.",
+      "fail": "The fur stands up all over before the hand has touched it; or fur on the belly or legs rises while the hand strokes the back; or the fur stays fully standing to the end with the hand gone; or the fur rises and falls repeatedly with the hand still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the hand lifts off the back, the fur beneath it rises toward the hand and follows it for a small distance before settling.",
+      "fail": "The hand lifts and the fur beneath stays as flat as before; or the fur leans away from the hand; or the fur follows the hand across the room at a distance; or the fur rises toward a hand that has not touched it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The standing fur stays rooted to the cat and fans out from its back; when it settles it falls back onto the body.",
+      "fail": "Tufts detach and float up to the hand; or the fur settles upward; or the fur stands as a stiff crest that never moves; or the fur hangs sideways away from the hand."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fur is fine hairs that lift individually; the cat's body gives under the hand as a soft animal.",
+      "fail": "The fur lifts as one stiff sheet like a board; or the cat's back stays rigid as the hand presses; or the fur stretches like elastic."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One cat with its head, legs and tail throughout; the hand touches its surface and passes through nothing.",
+      "fail": "The cat gains or loses a limb or its body changes shape; or the hand passes into the cat; or a second cat appears; or the cat merges with the surface it lies on."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cat's coat colour and pattern, the hand and the surroundings stay the same.",
+      "fail": "The coat changes colour or pattern; or the surroundings rearrange; or the hand changes."
+    }
+  ],
+  "note": "The cat is an animal and may move on its own; its movements are not causeless motion. The hand is kept because it charges the fur."
+}

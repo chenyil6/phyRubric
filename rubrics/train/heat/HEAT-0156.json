@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0156",
+  "caption": "A metal spoon rests across a stand with its bowl just above a candle flame, and black soot builds up on the underside where the flame touches.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A metal spoon rests across a stand with its bowl above a candle flame."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A black patch appears on the spoon's underside."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The patch grows darker and wider."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The patch is where the flame licks the metal."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rest of the spoon stays bright."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The black patch appears only where the flame touches the metal and grows from there.",
+      "fail": "The patch appears on the spoon's handle away from the flame; or the flame licks the spoon and its underside stays bright to the end of the clip; or the patch appears on the spoon's upper face while its underside stays clean; or the whole spoon blackens evenly while the flame licks one spot."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The patch only darkens and widens and does not fade while the flame plays on it.",
+      "fail": "The black patch fades back to bright metal with the flame still under it; or the patch shrinks; or the patch darkens and lightens in turn; or the soot lifts off by itself and leaves the metal clean."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flame points upward at the spoon's bowl and any smoke rises past it.",
+      "fail": "The flame points downward away from the spoon; or hangs below the candle; or the smoke sinks and pools under the spoon; or the smoke pours downward from the spoon's underside."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The spoon stays rigid metal that takes the soot as a loose black film, and the candle keeps its shape with a wax pool.",
+      "fail": "The spoon sags or melts over the flame; or the spoon's metal bubbles; or the soot sets as a hard shell that keeps the spoon's shape once the spoon moves away; or the candle's body slumps as a whole."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One spoon on one stand over one candle; the spoon stays in place and the candle stays below it.",
+      "fail": "A second spoon appears; or the spoon vanishes; or the spoon passes through the stand; or the flame detaches from the wick and floats up to the spoon."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stand, the candle's holder and the surroundings stay the same.",
+      "fail": "The stand changes shape; or the holder changes colour; or items around the stand rearrange."
+    }
+  ]
+}

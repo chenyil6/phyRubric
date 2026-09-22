@@ -1,0 +1,66 @@
+{
+  "id": "MECH-0198",
+  "caption": "A horse gallops across an open field from one end to the other.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A horse gallops across an open field."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It goes from one end to the other."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The gait is a gallop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The legs move in a galloping sequence and bend at the joints, and the mane and tail stream back.",
+      "fail": "The legs move in pairs like a rocking horse; or a leg bends mid-bone; or the legs pass through each other."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "There are moments when all four hooves are off the ground and then they come back down, the body rising and falling with the strides.",
+      "fail": "It glides with hooves never lifting; or floats up and stays; or sinks into the ground."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The hooves land on the turf.",
+      "fail": "They sink deep into the turf; or pass through a fence; or the turf passes through the hooves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "It travels steadily across the field.",
+      "fail": "It jumps position between frames; or runs backward; or freezes mid-stride in the air."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One horse keeps its legs and shape.",
+      "fail": "A leg detaches or vanishes; or a second horse appears from it; or it turns into another animal."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The horse's coat and the field stay the same.",
+      "fail": "The coat changes colour; or the field rearranges; or the fence changes."
+    }
+  ],
+  "note": "The horse is self-driven: its speed and path are not judged."
+}

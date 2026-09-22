@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0008",
+  "caption": "Icicles hanging from a roof gutter drip steadily in the afternoon sun.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Icicles hang from a roof gutter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The icicles drip: drops form and leave their tips."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dripping is steady: more than one drop falls."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The setting is sunlit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Drops gather at the tips rather than along the shafts."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Each drop gathers at an icicle's tip, hangs, and then falls straight down away from it.",
+      "fail": "A drop climbs the icicle; or leaves the tip sideways with nothing blowing it; or hangs at the tip and draws back into the ice; or a drop travels upward toward the gutter."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The icicles only shorten or thin; they do not build up while they drip.",
+      "fail": "An icicle lengthens while drops fall from it; or a fallen drop returns and freezes onto the tip; or an icicle thickens; or a drip retreats into the ice."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The icicles are hard ice that stays rigid; they glisten as they melt and may snap off.",
+      "fail": "An icicle sags or bends like a rope; or flows as a soft lump; or the ice turns to snow all over at once; or an icicle stretches longer as a drop pulls on its tip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The melt has an effect below: drops land on whatever lies beneath and wet it.",
+      "fail": "Drops land and leave the ground below dry; or drops vanish in mid-air before landing; or the ground is wet in a place no drop reaches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The icicles keep their number and stay attached to the gutter until they break away.",
+      "fail": "An icicle vanishes while still hanging; or a new icicle appears fully formed; or an icicle passes through the gutter; or the gutter changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The roof, the gutter and the look of the ice stay the same.",
+      "fail": "The gutter changes colour; or the roof tiles change pattern; or the ice turns a colour."
+    }
+  ]
+}

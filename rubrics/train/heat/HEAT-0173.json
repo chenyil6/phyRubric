@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0173",
+  "caption": "A few drops of water are flicked onto a hot griddle, and the drops skitter around and vanish.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hot griddle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A few drops of water are flicked onto the griddle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The drops skitter across the surface."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The drops disappear."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drops stay whole beads while they skitter."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The flick comes first and the skittering follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Each drop shrinks as it skitters and goes by shrinking away, and the drops that skitter are the drops that were flicked.",
+      "fail": "A drop vanishes in a single frame while still large; or new drops appear on the griddle with none flicked; or a drop grows as it skitters; or drops merge into a puddle that stays."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The drops glide and swerve because they were flicked and because they ride on their own steam; their paths bend only at the griddle's slope or edge.",
+      "fail": "A drop darts off at a new angle with nothing met and no slope; or a drop stops dead and sets off again from rest; or a drop climbs the griddle's raised edge and hangs there; or a drop travels against the flick before touching anything."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The drops stay rounded beads that skitter without wetting the metal, and any steam they give off is a fine wisp.",
+      "fail": "A drop spreads into a flat wet film that stays; or a drop bounces high off the griddle like a ball; or a drop sets solid on the metal; or a drop stands as a tall column."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The drops stay on the griddle's surface and any steam rises.",
+      "fail": "A drop lifts off the griddle and hangs in the air; or a drop rises and stays above the metal; or the steam sinks and pools around the griddle; or a drop falls upward off the griddle."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The drops stay on top of the griddle's surface and nothing passes through the metal.",
+      "fail": "A drop sinks into the griddle's metal; or a drop passes through the griddle; or the griddle changes shape; or a second griddle appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The griddle's finish and the surroundings stay the same.",
+      "fail": "The griddle changes colour; or its surface pattern changes; or items around it rearrange."
+    }
+  ]
+}

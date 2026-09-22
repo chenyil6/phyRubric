@@ -1,0 +1,77 @@
+{
+  "id": "ELEC-0111",
+  "caption": "A tram passes under a wire on a wet night, and its pole throws off blue-white sparks where it rubs the wire.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tram at night on a wet street."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A pole on the tram's roof reaches up to an overhead wire."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Sparks fly off where the pole rubs the wire."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sparks are blue-white."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The street or the tram's surfaces look wet."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Sparks appear only at the point where the pole touches the wire, travel along with the tram, and each flash is gone at once.",
+      "fail": "Sparks appear at a point on the wire away from where the pole touches; or a flash stays lit at one spot on the wire after the tram has moved on; or sparks come from the pole while it is clear of the wire; or the whole wire glows."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One tram, one pole, one wire; sparks leave nothing behind on the wire or the street.",
+      "fail": "Glowing dots stay on the wire or the street after the tram passes; or a second pole appears; or the wire ends in mid-air; or the tram duplicates or changes shape."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Spark fragments fall from the contact point and go dark within a short distance; they do not reach the street as burning drops.",
+      "fail": "Sparks rise and gather above the wire; or hang in the air; or fall to the street and lie there glowing like lamps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The wet street and the tram's wet surfaces mirror each flash briefly below it.",
+      "fail": "The sparks flash while the wet street below stays as dark as before; or a reflection lies on the street where no spark is above it; or the reflection stays lit after the spark is gone.",
+      "precondition": "The wet street below the wire is in view."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The pole touches the underside of the wire and stays a rigid arm; the tram runs on its rails and passes through nothing.",
+      "fail": "The pole passes through the wire; or the wire passes through the pole; or the tram passes through a vehicle, pole or building; or the pole detaches and floats."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tram's livery, the wire's route and the street stay the same.",
+      "fail": "The tram changes colour; or the wire changes route between frames; or the street's markings change."
+    }
+  ],
+  "note": "The tram is a powered vehicle; its motion is not judged. Spark count and brightness are not judged."
+}

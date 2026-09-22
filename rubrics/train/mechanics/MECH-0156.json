@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0156",
+  "caption": "A woman paddles a kayak across a calm lake, pulling the blade back through the water, and the kayak moves forward.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A woman sits in a kayak on a lake."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "She pulls the paddle blade back through the water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The kayak moves forward."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lake is calm."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The stroke comes first and the movement follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The kayak starts moving with the stroke, not before, and from rest it does not move before the first stroke.",
+      "fail": "The kayak moves before the blade enters the water; or it moves with the paddle held clear; or it stops dead between strokes."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The kayak moves opposite to the blade's pull, forward as the blade goes back, and between strokes it glides and slows gently.",
+      "fail": "The kayak moves backward while she pulls back; or sideways; or it speeds up between strokes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Each stroke leaves a swirl behind the blade and a ripple at the hull.",
+      "fail": "The blade passes through the water leaving no swirl; or swirls appear where no blade went; or the surface stays glassy around a moving hull."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The kayak floats level and drips from the paddle fall.",
+      "fail": "The kayak lifts out of the water; or tilts and stays tilted; or drips rise."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One kayak, one paddler and one paddle keep their number and shape.",
+      "fail": "The paddle passes through the hull; or a second kayak appears; or a limb detaches."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The kayak's colour, her clothing and the shore stay the same.",
+      "fail": "The kayak changes colour; or her clothing changes; or the shore rearranges."
+    }
+  ],
+  "note": "The paddler is self-driven: her form is not judged. Only the timing and direction of the kayak's response to the stroke are."
+}

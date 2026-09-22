@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0208",
+  "caption": "A fountain's spray in a park is lit at night by coloured lamps, and the falling water glows in the lamps' colours.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A fountain's spray in a park is lit at night by coloured lamps."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The falling water glows in the lamps' colours."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The water changes colour when the lamps change."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Unlit water is dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The water takes the colour of whatever lamp lights it and unlit water is dark.",
+      "fail": "The water is white under coloured lamps; or glows with the lamps off; or is a colour the lamps do not show."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The water changes colour when the lamps change, at the same moment.",
+      "fail": "It changes before the lamps; or long after; or the lamps change and the water does not."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The spray rises and falls back.",
+      "fail": "It rises indefinitely; or hangs; or falls upward."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid spray that breaks into drops.",
+      "fail": "It is a rigid rod; or beads bounce; or it is solid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One fountain and its lamps.",
+      "fail": "A second fountain appears; or a lamp vanishes; or the spray becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fountain and the park stay the same.",
+      "fail": "The basin changes; or the park rearranges; or the lamps change shape."
+    }
+  ]
+}

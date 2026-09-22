@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0172",
+  "caption": "A magnet is moved in circles under a shallow dish of water with a paperclip floating on a piece of foam, and the clip follows the magnet around the dish.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A shallow dish of water with a paperclip riding on a piece of foam floating on it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnet is moved in circles beneath the dish."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The clip on its foam follows the magnet round the dish."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The dish is shallow, with the water surface in view."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The magnet is under the dish, not in the water."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The magnet's movement comes first and the clip follows it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The foam with its clip moves only where and when the magnet below moves, staying above it, and stops when the magnet stops.",
+      "fail": "The clip moves in a different direction from the magnet beneath it; or keeps circling after the magnet has stopped; or stays still while the magnet passes beneath it; or the clip sets off before the magnet has begun to move."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The magnet stays beneath the dish's bottom, outside the water; the clip rides on top of the foam at the surface.",
+      "fail": "The magnet passes up through the dish bottom into the water; or the clip sinks through the foam; or the clip passes through the dish's wall; or the magnet is seen inside the water."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The foam floats level on the surface; the water stays in the dish with a flat surface apart from ripples.",
+      "fail": "The foam sinks below the surface while moving; or the water heaps up on one side of the dish while the dish is still; or the foam lifts off the water into the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The dish stays still on the table; the water moves only as ripples and eddies from the moving foam.",
+      "fail": "The dish slides or rotates on the table; or the water swirls as a whole before the foam moves; or other items on the table shift as the magnet passes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One magnet, one clip, one piece of foam and one dish; the clip stays on its foam; nothing appears, vanishes or merges.",
+      "fail": "A second clip or magnet appears; or the foam vanishes leaving the clip afloat by itself; or clip and foam fuse into one object; or the dish changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dish's colour, the foam's and clip's colours and the table surface stay the same.",
+      "fail": "The foam changes colour or size; or the clip changes shape; or the dish's pattern changes."
+    }
+  ],
+  "note": "The magnet may be hidden by the dish for parts of the clip; P1 is judged on the moments when both magnet and clip are in view. The clip moving while no magnet is in view is not a violation."
+}

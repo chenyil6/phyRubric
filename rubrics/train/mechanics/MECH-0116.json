@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0116",
+  "caption": "A hand is pressed into a slab of memory foam and lifted away, and the hand-shaped dent slowly fills back in.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hand is pressed into a slab of memory foam."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The hand is lifted away."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A hand-shaped dent remains."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The dent slowly fills back in."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The press comes first, then the lift, then the dent fades."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The dent matches the hand, palm and fingers, and persists for a few seconds before disappearing gradually.",
+      "fail": "No dent forms under the hand; or the dent is a shapeless hollow unlike a hand; or the foam cracks."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The dent fills in slowly and steadily, neither instantly nor never.",
+      "fail": "The dent vanishes the instant the hand lifts; or it stays for the rest of the clip; or it deepens after the hand has gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The foam stays put.",
+      "fail": "The slab slides; or lifts; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The dent is where the hand pressed.",
+      "fail": "A dent appears elsewhere; or the hand presses and leaves no mark; or the dent appears before the hand touches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One slab keeps its number, and the hand does not pass through it.",
+      "fail": "The slab splits; or the hand passes through it; or a second slab appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The foam's colour and the surroundings stay the same.",
+      "fail": "The foam changes colour; or the hand changes; or the background rearranges."
+    }
+  ]
+}

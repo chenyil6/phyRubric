@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0104",
+  "caption": "A cat pounces onto a spider web strung between two garden plants and the web tears apart under it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A spider web is strung between two garden plants."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A cat pounces onto the web."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The web tears apart under the cat."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pounce comes first and the tear follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The strands stretch and break at the moment the cat lands, clinging to its fur; the web does not hold the cat up.",
+      "fail": "The web holds the cat like a net; or the strands snap back whole; or the web tears before the cat touches it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The torn strands stay torn and the web does not reform.",
+      "fail": "The web is whole again later; or torn strands vanish; or a new web appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The cat comes down through the web to the ground.",
+      "fail": "The cat hangs in the web above the ground; or rises; or bounces off the web."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The plants the web was anchored to shake as it tears.",
+      "fail": "The plants stay rigid; or they shake before the cat arrives; or the web's anchor points float free."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One cat keeps its limbs and shape.",
+      "fail": "A limb detaches; or a second cat appears; or the cat passes through a plant."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cat's markings, the plants and the garden stay the same.",
+      "fail": "The markings change; or the plants rearrange; or the garden changes between frames."
+    }
+  ],
+  "note": "The cat is self-driven: its leap and landing are not judged. Only the web's response is."
+}

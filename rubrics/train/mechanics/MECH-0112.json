@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0112",
+  "caption": "Two thumbs press into a ball of modelling clay on a table, and the clay keeps the thumbprints after the hands lift away.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ball of modelling clay sits on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Two thumbs press into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The hands lift away."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The thumbprints remain in the clay."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Two thumbs make two dents."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The press comes first, then the lift, then the prints remain."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The clay dents where pressed and bulges beside the thumbs, deforming smoothly without cracking or crumbling.",
+      "fail": "The clay cracks like a dry shell; or it does not dent under the thumbs; or it flows like a liquid."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The prints stay after the thumbs lift, and the ball does not pop back into a sphere.",
+      "fail": "The dents fill back in after the hands lift; or the prints are there before the thumbs touch; or the dents deepen after the thumbs have gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The ball stays put on the table apart from being pressed.",
+      "fail": "The ball rolls away before the thumbs reach it; or it slides while pressed; or it moves after the hands leave."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The dents match where the thumbs pressed: two thumb-sized hollows.",
+      "fail": "Dents appear where no thumb touched; or a thumb presses and no dent forms; or the whole ball flattens from two thumb presses."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One ball of clay keeps its number, and the thumbs do not pass through it.",
+      "fail": "The ball splits in two; or the thumbs pass through the clay; or the clay merges with the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The clay's colour, the hands and the table stay the same.",
+      "fail": "The clay changes colour; or the hands change; or the table rearranges between frames."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0092",
+  "caption": "A person carrying a stack of dinner plates in one hand trips on a rug, and the plates slide off and shatter on the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A person carries a stack of dinner plates in one hand."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The person trips on a rug."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The plates slide off the hand."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "They shatter on the floor."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rug is where the trip happens."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The trip comes first, then the slide, then the shattering."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The plates leave the hand as the person stumbles and fall to the floor.",
+      "fail": "The plates hang in the air; or they rise; or they stay on the hand while the person falls."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The plates break on impact and the pieces scatter; they do not break in the air or bounce whole.",
+      "fail": "They break in mid-air; or bounce off the floor whole; or flatten like dough."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The foot catches on the rug and the body pitches forward, and the plates go with it.",
+      "fail": "The person trips on bare floor away from the rug; or the plates fly before the trip; or they fly backward."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The plates are thrown forward, the way the person was going.",
+      "fail": "They go backward; or straight up; or scatter from a point on the floor before landing."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The person keeps their limbs and shape, and the plates keep their number until they break.",
+      "fail": "A limb detaches; or plates multiply in the air; or the person passes through the floor."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plates' pattern, the rug and the room stay the same.",
+      "fail": "The plates change pattern; or the rug changes colour; or the room rearranges."
+    }
+  ],
+  "note": "The person is kept because their stumble is what launches the plates. Their balance and how they fall are not judged."
+}

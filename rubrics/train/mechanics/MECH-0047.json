@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0047",
+  "caption": "A soccer ball rolled across a paved yard hits an empty plastic bucket standing in its path; the bucket is knocked over and the ball rolls on more slowly.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A soccer ball rolls across a paved yard."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "An empty plastic bucket stands in its path and the ball reaches it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bucket is knocked over."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The ball rolls on more slowly."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bucket is empty and standing upright before the contact."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The ball arrives first, then the bucket topples."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bucket starts to move at the moment the ball reaches it and not before.",
+      "fail": "The bucket topples before the ball arrives; or the ball reaches the bucket and the bucket stays standing; or the ball stops short of the bucket and it falls over anyway."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The bucket is knocked away from the ball, the way the ball was travelling, and the ball slows at the contact while carrying on roughly the same way or stopping.",
+      "fail": "The bucket topples toward the ball, against its direction of travel; or the ball gathers speed after the contact; or the ball rebounds off the light empty bucket quicker than it arrived."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The ball and the bucket stay outside one another and above the paving.",
+      "fail": "The ball passes through the bucket; or the bucket sinks into the paving; or the ball passes through the ground."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The empty bucket is light and stiff: it tips, skids and clatters on the paving rather than folding or flying apart.",
+      "fail": "The bucket crumples like paper where the ball hits it; or it breaks into pieces at the contact; or it stays put as though bolted down while the ball bounces off it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one bucket are there throughout.",
+      "fail": "The bucket vanishes as it is struck or a second one appears; or the ball vanishes after the contact; or the bucket turns into another object as it topples."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's panels, the bucket's colour and the yard stay the same.",
+      "fail": "The ball changes colour at the contact; or the bucket changes colour or size between frames; or the paving pattern of the yard changes."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0053",
+  "caption": "A wheeled suitcase pulled from a smooth airport floor onto a cobblestone street starts bumping and rattling over the stones.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wheeled suitcase is pulled along a smooth airport floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is pulled onto a cobblestone street."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It starts bumping and rattling over the stones."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The boundary between the smooth floor and the cobbles is visible."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The smooth rolling comes first and the bumping follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The case rolls smoothly on the flat floor and starts jolting where its wheels cross onto the cobbles.",
+      "fail": "The case bumps while still on the smooth floor; or it rolls over the cobbles as smoothly as it did on the floor; or the jolting begins well after the wheels are onto the stones."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "Each jolt comes from a wheel riding up and off a stone, so the case lifts and drops with the stones it is passing over.",
+      "fail": "The case shakes without its wheels meeting any stone; or the cobbles flatten under the wheels as the case passes; or the case buzzes evenly like a machine with no relation to the stones beneath it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The case comes back down onto the cobbles after each bump and its wheels stay on the ground.",
+      "fail": "The case stays up in the air between bumps; or it climbs steadily as it is pulled along; or it sinks into the cobbles."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The case follows the handle: it goes where the handle takes it and stops when the handle stops.",
+      "fail": "The case rolls on ahead of the handle with nothing pushing it; or it stops dead while the handle keeps moving forward; or it turns aside on the open street with nothing touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One suitcase keeps its wheels, its handle and its shape.",
+      "fail": "The suitcase vanishes at the kerb or a second one appears; or a wheel comes away and the case rolls on as before; or the case passes through the cobbles."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The suitcase's colour, the cobbles and the street stay the same.",
+      "fail": "The suitcase changes colour or size at the kerb; or the pattern of the cobbles changes between frames; or the buildings along the street rearrange."
+    }
+  ]
+}

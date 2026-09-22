@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0180",
+  "caption": "A wool sweater is pulled off over the head in a dry room, and the hair underneath stands up in all directions.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A person wears a wool sweater."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sweater is pulled off over the head."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The hair underneath stands up in all directions."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The room is indoors and dry-looking: no water or steam."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hair is flat before the sweater moves and stands up as it comes off."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The hair lies flat until the sweater passes over it, rises as the sweater comes off, stays up for a moment and then settles; it does not rise on its own before.",
+      "fail": "The hair stands up before the sweater has moved; or rises long after the sweater is off with nothing near it; or stays fully standing to the end of the clip with no sweater near; or rises and falls repeatedly with the sweater gone."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The standing strands stay rooted to the head and fan outward; when they settle they fall back down onto the head.",
+      "fail": "Strands detach and float up to the ceiling; or the hair settles upward; or the hair stands as a stiff column; or strands hang toward the sweater across the room."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The sweater stretches and folds as knitwear as it comes off; the hair is fine strands that lift individually.",
+      "fail": "The sweater stays a rigid shape as it lifts; or the hair lifts as one stiff sheet; or the sweater stretches out like elastic and snaps back."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Once off, the sweater lies still where it is put; nothing else in the room stirs.",
+      "fail": "The sweater floats or slides by itself; or objects nearby jump as the sweater comes off; or the person's clothing underneath ripples with nothing touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One person with one head of hair; the sweater passes over the head, not through it; the person and the room keep their shapes.",
+      "fail": "The sweater passes through the head or body; or the head changes shape; or a second sweater appears; or hair detaches and hangs in the air."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sweater's colour and pattern, the hair's colour and the room stay the same.",
+      "fail": "The sweater changes colour; or the hair changes colour or length; or the room's contents rearrange."
+    }
+  ],
+  "note": "The person is kept because the hair is the physics; their movements are not judged."
+}

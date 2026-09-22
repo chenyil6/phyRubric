@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0090",
+  "caption": "A chest freezer is opened, and a low mist rolls out over the rim and sinks toward the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A chest freezer is opened."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Mist rolls out over its rim."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mist sinks toward the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The mist hugs the freezer's sides as it falls."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The opening comes first and the mist follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The mist spills over the rim and falls, hugging the freezer's sides and spreading along the floor, thinning as it goes.",
+      "fail": "The mist rises off the freezer like steam and climbs to the ceiling; or hangs above the open lid without falling; or shoots upward in a plume; or sinks and then rises back into the freezer."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The mist keeps spilling while the lid is open and what has left keeps moving away and fading.",
+      "fail": "The mist runs back into the freezer; or a puff retreats over the rim; or the mist rolls out before the lid has moved; or the mist thickens steadily after the lid has been shut."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The mist comes out of the cold cabinet at its open mouth and is thickest at the rim.",
+      "fail": "The mist pours from the freezer's closed side; or the mist is thickest far across the floor with nothing carrying it there; or the mist appears above the lid with none crossing the rim."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mist is a soft low cloud that spreads, waves and fades, and the lid is a rigid panel on its hinge.",
+      "fail": "The mist holds a fixed rigid shape; or pools as a liquid with a flat surface; or the lid bends as it opens; or the mist breaks into solid lumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One freezer with one lid; the contents keep their number and stay inside.",
+      "fail": "A packet in the freezer vanishes; or new packets appear; or the lid passes through the cabinet's wall; or the freezer changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The freezer's casing, the floor and the room stay the same.",
+      "fail": "The casing changes colour; or the floor's pattern changes; or items in the room rearrange."
+    }
+  ],
+  "note": "Cold mist that sinks is what this caption asks for; it is not steam and it does not rise."
+}

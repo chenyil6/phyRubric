@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0082",
+  "caption": "A basket of laundry fresh from a hot dryer is set outside on a freezing morning, and vapour rises off the warm clothes.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A basket of laundry stands outside."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Vapour rises off the clothes."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The setting reads as freezing: frost, snow or bare winter ground."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The vapour is thickest at first."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The vapour thins as it drifts."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The vapour leaves the clothes going up, spreading and thinning as it rises.",
+      "fail": "The vapour sinks over the basket's rim and pools on the ground; or flows away across the ground like water; or hangs as a fixed shape without rising; or pours downward through the basket."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The vapour only eases as the clothes cool; it does not build up again with nothing added.",
+      "fail": "The vapour thickens steadily the longer the basket stands; or the vapour stops and then starts again with nothing touching the clothes; or the plume runs back into the clothes; or a puff retreats to the laundry."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The vapour comes off the clothes themselves and is thickest just above them.",
+      "fail": "The vapour rises from the ground beside the basket while the clothes are clear; or the vapour is thickest high above the basket with nothing carrying it there; or the vapour rises from the empty part of the basket."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The vapour is a soft cloud that spreads and fades and the clothes are limp folded cloth in the basket.",
+      "fail": "The vapour holds a fixed rigid shape; or pours like a liquid over the rim; or the clothes stand stiff like boards; or the vapour lifts a garment out of the basket."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One basket of laundry; the garments keep their number and stay in the basket.",
+      "fail": "A garment vanishes; or new garments appear; or a garment passes through the basket's wall; or the basket changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The clothes' colours, the basket and the surroundings stay the same.",
+      "fail": "A garment changes colour; or the basket changes colour; or the frost or snow around changes between frames."
+    }
+  ]
+}

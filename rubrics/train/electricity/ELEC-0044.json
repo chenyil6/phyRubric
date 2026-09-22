@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0044",
+  "caption": "A desk fan with its switch already on is plugged into a socket, and the blades start turning.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A desk fan is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its plug is inserted into a socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The blades start turning after the plug goes in."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The fan is still before it is plugged in."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Plugging in comes first, spinning after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The blades begin to turn when the plug seats in the socket, and only then.",
+      "fail": "The plug is in and the blades stay still; or the blades start before the plug reaches the socket; or they start with the plug lying loose."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Before the plug is in the blades are still; after, they speed up and settle to a steady spin; they do not stop or reverse on their own.",
+      "fail": "The blades spin while unplugged; or turn slowly by themselves before plugging; or stop and restart with the plug in; or reverse direction."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The blades spin about the hub as one piece with a smooth speed-up; the head may oscillate if built to.",
+      "fail": "The blades wobble off the hub; or the spin jumps abruptly between fast and still; or blades move independently of each other."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Light items in front of the fan flutter in the airflow once the blades spin and are still before.",
+      "fail": "Ribbons or paper flutter before the blades turn; or nothing in front moves while the fan blows; or the flutter blows toward the fan.",
+      "precondition": "Light items such as paper, ribbons or hair are in front of the fan."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One fan with a fixed number of blades, one plug and cord; the plug enters the socket rather than passing into the wall.",
+      "fail": "Blades appear or vanish; or the fan duplicates; or the plug passes through the wall beside the socket; or the cord detaches or splits."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fan's colour, the desk and the socket stay the same.",
+      "fail": "The fan changes colour; or the cage changes pattern; or the socket moves along the wall."
+    }
+  ]
+}

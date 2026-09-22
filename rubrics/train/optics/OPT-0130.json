@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0130",
+  "caption": "Vegetable pieces lie at the bottom of a pot of clear water, and they seem to shift and swim as the water is stirred.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Vegetable pieces lie at the bottom of a pot of clear water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The water is stirred."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pieces seem to shift and swim."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "They look still again when the stirring stops."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The pieces on the bottom stay put while the moving water makes their images wobble.",
+      "fail": "The pieces actually slide about; or they change shape; or pieces appear and vanish."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The wobble follows the stirring and stops when the water settles.",
+      "fail": "The images wobble with the water still; or they are sharp while the water is plainly moving; or the wobble goes on after the water settles."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The pieces are visible through the water.",
+      "fail": "The water hides them; or a different set appears; or they are seen only above the surface."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid: it swirls and settles.",
+      "fail": "It is rigid; or the swirl freezes; or the water leaps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The pieces keep their number.",
+      "fail": "Pieces vanish; or appear; or merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot and the pieces' colours stay the same.",
+      "fail": "The pot changes; or the pieces change colour; or the stove changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

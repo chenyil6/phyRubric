@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0009",
+  "caption": "A string of fairy lights is plugged into a wall socket, and the whole string lights up along its length.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A string of fairy lights and a wall socket."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The string's plug is pushed into the socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The whole string lights up along its length."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The string is dark before the plug goes in."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, plug in, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bulbs come on at the moment the plug seats in the socket, and only then, all together.",
+      "fail": "The plug is in and the string stays dark; or the bulbs are lit before the plug reaches the socket; or the string lights up while the plug lies loose; or the bulbs come on one after another from one end rather than together."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The lit bulbs are the same bulbs seen dark: the same number at the same spots along the wire, and none stays dark while the rest glow.",
+      "fail": "Lit points appear along the wire where no bulb hung; or bulbs seen on the dark string are gone once lit; or lit bulbs multiply or shift along the wire; or a stretch of the string stays dark while the rest glows."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once on, the string stays lit while the plug stays in, and the glow sits at the bulbs.",
+      "fail": "The string goes dark again with the plug seated and untouched; or flickers on and off; or the glow spreads onto the bare wire between bulbs; or the plug backs out of the socket by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wire hangs or lies slack in curves and stays attached at both ends; the plug enters the socket as a rigid piece.",
+      "fail": "The wire stands rigid in the air; or stretches like elastic as the plug is pushed in; or the wire floats; or the plug bends as it goes in."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One string, one plug, one socket; the plug enters the socket rather than the wall; fingers stay outside the wall.",
+      "fail": "The plug passes into the wall beside the socket; or the wire passes through a wall or piece of furniture; or the string splits in two; or a second plug appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wire's colour, the socket's design and the background stay the same apart from the light.",
+      "fail": "The wire changes colour; or the socket changes design or moves; or the background rearranges."
+    }
+  ]
+}

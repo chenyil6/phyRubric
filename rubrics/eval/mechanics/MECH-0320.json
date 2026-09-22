@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0320",
+  "caption": "The base of a steep pile of dry sand in a sandbox is scraped away, and a section of the slope above slides down as a sheet and comes to rest at a gentler angle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A steep pile of dry sand is in a sandbox."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its base is scraped away."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A section of the slope above slides down as a sheet."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It comes to rest at a gentler angle."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The scrape comes first and the slide follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The slide starts where the support was removed.",
+      "fail": "It starts before the scrape; or elsewhere; or the base is scraped and nothing moves."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It moves downhill with the grains flowing, and the pile ends flatter than it began.",
+      "fail": "It steepens; or rebuilds itself; or slides uphill."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "It flows as grains, not as a block.",
+      "fail": "It moves as a block; or flows like liquid; or bounces."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "It slides and then settles.",
+      "fail": "It keeps flowing indefinitely; or reverses; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pile keeps its total of sand.",
+      "fail": "Sand appears from nowhere; or vanishes; or the pile duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sand's colour and the sandbox stay the same.",
+      "fail": "The sand changes colour; or the box changes; or the background rearranges."
+    }
+  ]
+}

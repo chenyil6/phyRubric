@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0123",
+  "caption": "A fresh green twig is bent into a curve and one end let go, and the twig springs back to nearly straight.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A green twig is held."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is bent into a curve."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "One end is let go."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The twig springs back to nearly straight."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The twig is fresh and green."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The bend comes first, then the release, then the spring back."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The twig bends smoothly without snapping and straightens on release.",
+      "fail": "It snaps; or it stays curved; or it kinks like a wire."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spring back follows the release and happens quickly.",
+      "fail": "It straightens before the end is released; or it stays bent for the rest of the clip; or it bends further after release."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The twig moves only as it is bent and released.",
+      "fail": "It whips about on its own; or flies off; or bends with no hands on it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The released end swings back toward straight and may overshoot slightly.",
+      "fail": "The released end swings further into the curve; or the held end moves while the released end stays; or the twig spins."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One twig keeps its number.",
+      "fail": "The twig vanishes or a second appears; or it turns into another object; or it merges with the hand."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The twig's colour and the background stay the same.",
+      "fail": "The twig changes colour; or the hands change; or the background rearranges."
+    }
+  ]
+}

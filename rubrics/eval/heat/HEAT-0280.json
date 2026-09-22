@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0280",
+  "caption": "A horse snorts in a cold stable, and clouds of breath puff from its nostrils and fade.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A horse stands in a stable."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A cloud of breath appears at its nostrils."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cloud spreads and fades."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A cloud appears at each snort."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Nothing is visible between breaths."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The setting reads as cold."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Each cloud appears at the nostrils as the horse breathes out and moves away from them; nothing appears between breaths.",
+      "fail": "A cloud appears in the air away from the horse's head with nothing leaving its nostrils; or a cloud appears while the horse is drawing breath in; or a cloud hangs unchanged for the rest of the clip; or the cloud moves toward the nostrils and is drawn in."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each cloud only spreads and fades and does not come back once gone.",
+      "fail": "A faded cloud thickens again with no new breath; or the clouds appear and disappear in a rhythm unrelated to the horse's breathing; or a cloud runs back into the nostrils; or the cloud thickens the further it gets from the head."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The clouds drift and spread as they thin and do not sink to the floor as a liquid.",
+      "fail": "The clouds sink to the stable floor and pool; or a cloud falls in a stream from the nostrils; or a cloud hangs as a fixed shape without drifting; or the clouds pour downward over the horse's chest."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Each cloud is a soft haze that spreads, waves and fades and holds no edges.",
+      "fail": "A cloud holds a fixed rigid shape; or turns into solid lumps; or pours like a liquid; or keeps a sharp outline as it drifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One horse with the same head, body and legs; the clouds stay outside its body.",
+      "fail": "The horse gains or loses a limb; or a second horse appears; or a cloud passes into the horse's chest and out the back; or the horse's head changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The horse's coat, the stable's walls and the straw stay the same.",
+      "fail": "The coat changes colour or pattern; or the stable's walls change; or the straw rearranges."
+    }
+  ],
+  "note": "The horse is an animal and its movements are not judged; it is kept because its breath is the caption's subject."
+}

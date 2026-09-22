@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0001",
+  "caption": "Grains of rice lie on the head of a snare drum; the drum is struck once with a stick and the grains jump.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A snare drum with grains of rice lying on its head."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A stick strikes the drum once."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The grains jump."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The strike is a single hit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike comes first and the jump follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The grains lie still until the stick hits, jump at the strike, then settle; they do not move before the strike.",
+      "fail": "Grains bounce or shift before the stick reaches the head; or jump with the stick nowhere near; or stay still as the stick hits."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The hop is largest right after the strike and dies down: later bounces are smaller until the grains lie still.",
+      "fail": "The grains keep bouncing at the same height for the whole clip; or bounce higher and higher after the strike; or start moving again after settling with no second strike."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Grains that jump come back down onto the head or fall off its edge.",
+      "fail": "Grains hang in the air; or float away upward; or leave the head and come back up onto it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The head flexes as a skin at the strike, the stick rebounds, and the grains stay separate grains.",
+      "fail": "The stick sinks into the head and stays; or the head shatters like glass; or the grains merge into a lump or flow like liquid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The grains keep their number, allowing for some falling off; the drum and stick keep their shape and the stick does not pass through the head.",
+      "fail": "Grains appear from nowhere in the air; or the drum changes shape; or the stick passes through the head; or the grains vanish all at once."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The drum's shell, the head's colour and the stick stay the same.",
+      "fail": "The drum changes colour; or the head changes texture; or the stick changes length."
+    }
+  ]
+}

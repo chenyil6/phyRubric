@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0123",
+  "caption": "A power hammer in a forge pounds a red-hot steel bar, and tiny sparks fly off with each blow.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A power hammer in a forge."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A red-hot steel bar is under the hammer."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The hammer pounds the bar with repeated blows."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Tiny sparks fly off with each blow."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bar glows red or orange."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Each blow comes first and its sparks follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "At each blow the sparks scatter outward from the point of impact, away from the hammer face, and curve downward as they fly.",
+      "fail": "Sparks fly upward into the hammer's face; or move toward the impact point instead of away; or the scatter direction jumps about while the hammer and bar are steady."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sparks arc downward and go dark as they fall; none rise or hover.",
+      "fail": "Sparks rise steadily and gather above the hammer; or hang in the air; or lie on the anvil or floor glowing like lamps for the rest of the clip."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Sparks appear only at the moment of each strike and are gone before the next; between blows none fly.",
+      "fail": "Sparks stream from the bar while the hammer is raised and not in contact; or continue after the hammer has stopped; or sparks flow back into the bar."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "Sparks are transient: each fades in flight and none accumulate; the bar and hammer keep their number.",
+      "fail": "Sparks persist as fixed bright dots; or a glowing pile builds on the floor; or sparks appear from a point away from the impact; or a second bar appears under the hammer."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The hammer strikes the bar's surface and squashes it; it does not pass through the bar or the anvil; the bar stays one piece.",
+      "fail": "The hammer passes through the bar leaving it unchanged; or the bar passes into the anvil; or the bar splits into pieces with no cut; or the hammer changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hammer's colour, the anvil and the forge behind stay the same; the bar's glow changes only in brightness.",
+      "fail": "The hammer changes colour; or the forge background rearranges; or the bar's glow changes colour from red toward blue or green."
+    }
+  ],
+  "note": "The bar flattening under the hammer is the expected material response; how much it deforms is not judged."
+}

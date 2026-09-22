@@ -1,0 +1,77 @@
+{
+  "id": "ELEC-0057",
+  "caption": "A portable generator at a campsite is started, and the string of lights connected to it comes on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A portable generator at a campsite with a string of lights connected to it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The generator is started."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The string of lights comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lights are dark before the generator starts."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is start, then lights."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lights come on once the generator is running, and only then: after the start action, not before.",
+      "fail": "The lights are lit before the start action; or the generator is started and the lights stay dark to the end of the clip; or the lights come on with nothing done to the generator; or the lights come on while the generator is being switched off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the lights stay lit while the generator runs; they go out only if it is switched off.",
+      "fail": "The lights go out again with the generator running; or flicker on and off; or the string lights up one bulb at a time along its length; or the lights go out and come back with nothing touched."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The generator running shows: its pull cord returns, its housing vibrates or exhaust shimmer or smoke appears; the lights' glow reaches the tent or ground near them.",
+      "fail": "The bulbs glow while the ground and tent near them stay as dark as before; or exhaust or vibration appear before the start action; or the generator's cord stays pulled out in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any exhaust or smoke from the generator rises and drifts; the pull cord hangs or retracts.",
+      "fail": "Exhaust sinks and pools on the ground; or hangs as a fixed shape; or the pull cord stands rigid in the air after release.",
+      "precondition": "Exhaust or the pull cord is visible."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One generator and one string; the string stays continuous and attached; nothing passes through the generator.",
+      "fail": "The string splits or detaches; or a second generator appears; or the generator vanishes; or a hand passes through the generator."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The generator's colour, the string's bulbs and the campsite stay the same apart from the light.",
+      "fail": "The generator changes colour; or bulbs change colour; or the campsite rearranges."
+    }
+  ],
+  "note": "The generator's engine sound is not judged; the start is read from the hand's action on the starter and the lights responding."
+}

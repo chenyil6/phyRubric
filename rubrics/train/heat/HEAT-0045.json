@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0045",
+  "caption": "Two wet ice cubes straight from the freezer are pressed together for a moment and let go, and they stay stuck as one piece.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two ice cubes are held, wet from the freezer."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cubes are pressed together."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The hands let go."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The cubes stay stuck together."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cubes look wet at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is press, release, stay stuck."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The cubes are hard solids that meet face to face and join at the film of water between them, and the join holds when the pair is lifted or tilted.",
+      "fail": "The cubes squash or deform where they are pressed; or the pair bends at the join like a hinge; or the cubes merge into one smooth block with no seam; or the join stretches as the pair is lifted."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Two cubes throughout: they stay two pieces stuck together and neither appears, vanishes nor grows.",
+      "fail": "The two cubes merge into a single larger cube with no seam; or a third cube appears; or a cube vanishes; or the pair ends larger than the two cubes were."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "After the hands let go the cubes stay in contact along the pressed faces with nothing else holding them.",
+      "fail": "The cubes fall apart as the hands open; or the cubes slide off each other and drop; or the pair holds together with a gap between the faces; or one cube hangs from the other without touching it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The stuck pair rests or hangs under its own weight and falls if let go entirely, and meltwater runs downward off it.",
+      "fail": "The pair floats when released; or a cube rises away from the other; or meltwater runs up a cube's face; or the pair hangs in the air with the hands gone."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The cubes stay outside each other, touching at their faces, and nothing passes through either cube or through the hands.",
+      "fail": "One cube passes into the other; or a finger passes through a cube; or a cube passes through the surface it rests on; or a cube passes through the other and out the far side."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cubes' clear look, the hands and the surroundings stay the same.",
+      "fail": "A cube turns a colour; or the surface under them changes pattern; or the background changes between frames."
+    }
+  ],
+  "note": "The hands are kept because pressing is the caption's action; they are otherwise not judged."
+}

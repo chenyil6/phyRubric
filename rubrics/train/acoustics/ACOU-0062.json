@@ -1,0 +1,71 @@
+{
+  "id": "ACOU-0062",
+  "caption": "A lawnmower is started, and its handle shakes visibly.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lawnmower stands on grass or ground."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The mower is started: a cord is pulled or a button or key is used."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The handle shakes."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The start comes first and the shaking follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The handle is still before the start and shakes only after it.",
+      "fail": "The handle shakes before the cord is pulled or the start is made; or the shaking stops and starts while nothing changes at the engine; or the handle swings as a pendulum in slow wide arcs rather than trembling."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Once the start is made the engine shows itself: the handle shakes and keeps shaking while the mower runs.",
+      "fail": "The cord is pulled and the handle stays dead still for the rest of the clip; or exhaust puffs come from the engine while the handle stays still; or the pull cord stays hanging out slack after the pull instead of retracting."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The mower rests on its wheels on the ground.",
+      "fail": "The mower lifts off the ground; or tips and hangs at an angle; or rises."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The handle is a rigid tube that shakes as a whole; the deck is rigid.",
+      "fail": "The handle bends like rubber; or stretches; or the deck ripples."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mower; the handle stays attached.",
+      "fail": "A second mower appears; or the mower vanishes; or the handle detaches and floats; or the mower passes into the ground."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mower's colour, the grass and the wheels stay the same.",
+      "fail": "The mower changes colour; or the grass pattern changes; or the wheels change size."
+    }
+  ],
+  "note": "The person starting the mower is a trigger and is not judged."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0051",
+  "caption": "A woman in smooth-soled shoes steps onto a patch of ice on a sidewalk, her foot slides forward, and she stumbles.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A woman walks along a sidewalk."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "She steps onto a patch of ice."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Her foot slides forward."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "She stumbles."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Her shoes are smooth-soled."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The step onto the ice comes first, then the slide, then the stumble."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Her foot grips the pavement before and after, and the slide starts where the sole lands on the ice.",
+      "fail": "Her foot slides on the bare pavement away from the ice; or she slips before her foot has reached the ice; or her foot holds on the ice as firmly as on the pavement and nothing slides."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The sliding foot shoots forward, her body goes down and back behind it, and her arms come up as she catches her balance.",
+      "fail": "The sliding foot shoots backward while she topples forward over it; or she stays upright and rigid while her foot slides out from under her; or her whole body slides along the ice with her legs unmoving."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "She stays on the ground, her weight coming down through her feet or onto the sidewalk.",
+      "fail": "She rises off the ground as she slips; or she hangs in the air part way through the stumble; or she sinks into the sidewalk."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Once the stumble is over she stands still; nothing carries her along.",
+      "fail": "She keeps sliding along the pavement past the ice with her feet planted; or she is dragged sideways with nothing touching her; or she starts sliding again after regaining her footing."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One woman keeps her limbs, her number and her shape.",
+      "fail": "A limb stretches, detaches or vanishes; or she passes through the sidewalk; or a second figure appears beside her."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Her clothing, the sidewalk and the street stay the same.",
+      "fail": "Her clothing changes colour during the stumble; or the patch of ice moves to another part of the sidewalk between frames; or the street behind rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the woman is kept because her body is what shows the slip. Posture, footwear style and how gracefully she recovers are not judged; only where the sliding starts and which way it goes."
+}

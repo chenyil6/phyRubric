@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0241",
+  "caption": "An opaque metal jug is tipped over an empty glass, and water pours out of it into the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An opaque metal jug is tipped over an empty glass."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Water pours out of the spout."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water goes into the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The glass is empty at the start."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tip comes first and the pour follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Water appears only from the spout once the jug tilts far enough, and the level in the glass rises.",
+      "fail": "Water appears in the glass with no stream; or water comes from the jug's side; or the glass level does not rise."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The stream is a liquid, and the jug's sides stay opaque and rigid.",
+      "fail": "The stream is a rigid rod; or the jug becomes transparent; or the jug bulges."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The stream falls straight down into the glass.",
+      "fail": "It curves upward; or hangs; or flows back into the jug."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Pouring happens only while the jug is tilted.",
+      "fail": "It pours upright; or is tilted with nothing coming out; or continues after it is righted."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One jug and one glass keep their number.",
+      "fail": "The jug duplicates; or water passes through the glass; or the jug vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jug, the glass and the background stay the same.",
+      "fail": "The jug changes colour; or the glass changes; or the background rearranges."
+    }
+  ]
+}

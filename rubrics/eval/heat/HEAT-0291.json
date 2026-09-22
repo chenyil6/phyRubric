@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0291",
+  "caption": "A sugar cube is dropped into a glass of hot water and another into a glass of cold water at the same moment, and the cube in hot water crumbles and vanishes first.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two glasses of water stand side by side, one hot and one cold."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A sugar cube is dropped into each at the same moment."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Both cubes sink."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The cube in the hot water darkens, slumps and disappears."
+    },
+    {
+      "id": "S5",
+      "weight": "core",
+      "check": "The cube in the cold water is still a visible lump at that point."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Steam or ice shows which glass is which."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each cube only shrinks and crumbles and neither grows back; the difference between them does not reverse.",
+      "fail": "A cube grows; or a crumbled cube gathers back into a whole cube; or the cube in the cold water disappears while the hot one is still a lump; or a cube alternates between larger and smaller."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Each cube goes by dissolving into its own glass; the sugar does not appear elsewhere or vanish at a stroke while whole.",
+      "fail": "A cube vanishes in a single frame while still square; or a third cube appears; or a cube passes through a glass's wall; or a cube moves from one glass to the other."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Both cubes fall downward into their glasses and sink to the bottom, and the sweet streams sink and spread.",
+      "fail": "A cube floats at the surface and stays; or a cube hangs motionless in mid-water; or a cube rises out of the water; or the streams climb out of the water."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Each cube is a pressed block of grains that wets, darkens and crumbles at its edges, and the water closes round it.",
+      "fail": "A cube stays dry and sharp-edged under the water; or a cube melts into a glossy liquid lump; or a cube bounces off the glass's floor like a ball; or the water holds a dent around a cube like a solid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Two glasses and two cubes; the glasses keep their shapes and the cubes stay sugar as they crumble.",
+      "fail": "A glass changes shape; or a cube turns into another object; or a cube fuses with the glass's floor; or a glass vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glasses' shapes, the table and the water's clarity stay the same.",
+      "fail": "A glass changes pattern; or the table's setting rearranges; or a glass's water turns a colour."
+    }
+  ]
+}

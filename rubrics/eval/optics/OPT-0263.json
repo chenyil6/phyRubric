@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0263",
+  "caption": "A dog barks at its own reflection in a shop window, and the reflected dog barks back, faint over the goods on display behind the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog barks at its own reflection in a shop window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The reflected dog barks back."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflection is faint over the goods on display behind the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection is mirrored."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflected dog moves at the same instant as the real one.",
+      "fail": "It moves first or later; or stays still while the dog barks; or barks while the dog is still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It moves while the dog sits still; or turns away by itself; or slides across the glass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image, fainter than the real dog, overlapping the display.",
+      "fail": "It is a different dog; or brighter than the real one; or it hides the display completely; or it is a rotated copy."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pane is flat and rigid.",
+      "fail": "It ripples; or warps; or bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One dog and one reflection; the reflection stays in the glass.",
+      "fail": "A second dog appears; or the reflection steps out; or the dog passes into the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dog's coat and the display stay the same.",
+      "fail": "The coat changes; or the goods rearrange; or the frame changes."
+    }
+  ],
+  "note": "Self-driven animal: where it goes is not judged. Only the reflection's relation to it is. Mirror geometry: each point of the image lies directly across the surface from the real point, so the image is a mirror copy, not a rotated one."
+}

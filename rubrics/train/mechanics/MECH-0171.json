@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0171",
+  "caption": "A used coffee filter is knocked against the rim of a bin, and the puck of wet grounds drops out and breaks apart in the bin.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A used coffee filter is knocked against the rim of a bin."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The puck of grounds drops out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It breaks apart in the bin."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The grounds are wet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The knock comes first, then the drop, then the break-up."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The puck comes loose on the knock as one damp mass and breaks into clumps and crumbs as it lands.",
+      "fail": "It stays in the filter; or pours like liquid; or bounces like rubber."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It falls straight down into the bin.",
+      "fail": "It floats; or rises; or drifts sideways."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The knock frees the puck, and the filter is emptier afterward.",
+      "fail": "The puck falls before the knock; or the knock frees nothing; or the filter is still full after the puck lands."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bin stays put.",
+      "fail": "It slides; or tips; or the puck moves after landing."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One filter and one bin keep their number.",
+      "fail": "The filter duplicates; or the puck vanishes in mid-air; or the bin turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The filter, the bin and the kitchen stay the same.",
+      "fail": "The filter changes colour; or the bin changes; or the kitchen rearranges."
+    }
+  ]
+}

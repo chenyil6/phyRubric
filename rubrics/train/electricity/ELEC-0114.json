@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0114",
+  "caption": "A flint gas-lighter is clicked over a stove burner, and a spark jumps from its tip and the gas ignites.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stove burner."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A flint gas-lighter is held over the burner and clicked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A spark jumps from the lighter's tip."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The gas at the burner ignites."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flame is on the burner, not on the lighter."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The click and spark come first and the flame follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spark is a brief flash at the lighter's tip at the click, and is gone; it does not stay lit.",
+      "fail": "The spark glows on at the tip after the click; or a spark appears while the lighter is not being clicked; or the spark appears somewhere other than the tip; or the spark drifts away from the tip as a lit point."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flame appears at the burner after the spark and spreads round the burner's ring; once lit it stays alight.",
+      "fail": "The flame appears before the spark; or the spark comes and no flame appears though the click is repeated to the end of the clip; or the flame appears at a part of the stove away from the burner under the lighter; or the flame goes out by itself and relights."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flame stands upward from the burner; any spark fragments fall.",
+      "fail": "The flame hangs downward or streams sideways with nothing blowing it; or the flame detaches from the burner and floats; or sparks rise and hang in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The lighter is a rigid tool held over the burner; the burner and its grate stay hard and keep their shape.",
+      "fail": "The lighter bends or droops; or the burner ring deforms as it lights; or the grate melts or sags."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lighter and one burner; the flame is at the burner alone; nothing appears, vanishes or passes through the stove.",
+      "fail": "A second lighter appears; or the burner vanishes; or the lighter passes through the grate; or the flame appears at a second burner that was not lit."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stove top, the grate and the lighter keep their colours and the burner keeps its place.",
+      "fail": "The stove changes colour; or the burner moves on the stove top; or the lighter changes colour or shape."
+    }
+  ],
+  "note": "The gas is invisible before ignition; a flame appearing after the spark is the caption's event and needs no visible gas."
+}

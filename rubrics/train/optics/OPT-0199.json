@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0199",
+  "caption": "A red and a blue spotlight are crossed on a white backdrop, and the area where they overlap glows purple.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A red and a blue spotlight are crossed on a white backdrop."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The area where they overlap glows purple."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The single-colour areas stay red and blue."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The overlap disappears when one light is turned off."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The overlap is a different colour from either beam alone, and the single-colour areas stay red and blue.",
+      "fail": "The overlap is red or blue; or the single areas change colour; or the overlap is a colour unrelated to both."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The overlap exists only where both beams fall and would disappear if one light were turned off.",
+      "fail": "The purple area is outside both beams; or stays with one light off; or there is no overlap where the beams plainly cross."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The beams and the coloured areas do not move with the lights fixed.",
+      "fail": "An area drifts; or the beams swing; or the colours flicker."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "Each beam is one soft-edged patch and the overlap is their intersection.",
+      "fail": "A beam splits; or the overlap is larger than either beam; or the patches are sharp squares."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two spotlights and one backdrop.",
+      "fail": "A third light appears; or the backdrop vanishes; or a patch becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The backdrop and the stage stay the same.",
+      "fail": "The backdrop changes shape; or the stage rearranges; or the lights change shape."
+    }
+  ]
+}

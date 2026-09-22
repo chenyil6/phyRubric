@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0169",
+  "caption": "Dried beans are poured from a bag into a glass jar until it is full and beans spill over onto the counter.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Dried beans are poured from a bag into a glass jar."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The jar fills."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Beans spill over onto the counter."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pour comes first, then the fill, then the spill."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The beans fill the jar from the bottom up as loose grains, and overflow beans bounce and roll on the counter.",
+      "fail": "Beans pour as a lump; or flow like liquid; or the overflow sticks in a heap on the rim."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The overflow begins when the jar is full and not before.",
+      "fail": "Beans spill with the jar half-full; or the jar overfills into a dome with none spilling; or beans spill before pouring."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The stream falls and spilled beans fall to the counter.",
+      "fail": "Beans rise; or hang; or float."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The jar only fills.",
+      "fail": "It empties; or jumps; or is full before the pour."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bag and one jar, and beans come only from the bag.",
+      "fail": "Beans appear with no stream; or the jar duplicates; or beans pass through the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jar, the bag and the counter stay the same.",
+      "fail": "The jar changes shape; or the beans change colour; or the counter rearranges."
+    }
+  ]
+}

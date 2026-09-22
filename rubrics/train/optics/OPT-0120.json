@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0120",
+  "caption": "A clear glass jar of water is held in front of a printed face on a poster, and the eyes seen through the jar look stretched wide.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A printed face is on a poster."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A clear glass jar of water is held in front of it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The eyes seen through the jar look stretched wide."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The face beside the jar is normal."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The stretch changes as the jar moves."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The stretching appears only in the part of the face seen through the water and changes as the jar moves.",
+      "fail": "The face is stretched beside the jar; or unchanged through it; or the stretch stays fixed as the jar moves."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The poster is unchanged; the stretch is an appearance.",
+      "fail": "The poster bends; or the printed face changes; or a different face appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The jar is rigid and the water level.",
+      "fail": "The jar warps; or the water tilts and holds; or goes opaque."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The jar moves only with the hand.",
+      "fail": "It floats; or slides; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One jar and one poster.",
+      "fail": "The jar duplicates; or the poster vanishes; or the jar passes through the poster."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The poster's colours and the jar stay the same.",
+      "fail": "The poster changes colour; or the jar changes shape; or the wall changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

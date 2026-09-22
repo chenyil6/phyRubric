@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0053",
+  "caption": "The cord of a running vacuum cleaner snags on a doorframe and jerks out of the socket, and the vacuum stops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A vacuum cleaner runs, its cord running to a socket."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cord snags on a doorframe."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The plug jerks out of the socket."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The vacuum stops."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cord is drawn taut against the doorframe before the plug comes out."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is running, snag, plug out, stopped."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The vacuum stops at the moment the plug leaves the socket, and only then: its brush roll or the fluff at its head stops moving and any light on it goes out.",
+      "fail": "The plug is out and the vacuum runs on to the end of the clip; or the vacuum stops before the cord has gone taut; or the vacuum stops with the plug still seated; or the vacuum's light stays lit with the plug out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once unplugged the vacuum stays stopped; it does not start again while the plug is out.",
+      "fail": "The vacuum starts again with the plug out; or runs in bursts; or the plug jumps back into the socket by itself; or the cord re-threads itself round the frame."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord is drawn taut against the frame before the plug comes out; once free it goes slack and drops.",
+      "fail": "The plug comes out while the cord hangs slack; or the cord stays stretched straight in the air after the plug is free; or the cord stretches like elastic; or the plug flies up and stays aloft."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The vacuum keeps moving only as far as it was being pushed; the cord's snag does not throw it about.",
+      "fail": "The vacuum is flung backward by the snag; or lifts off the floor; or reverses on its own; or spins round."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One vacuum, one cord, one plug, one socket; the cord stays continuous and passes through neither the frame nor the wall.",
+      "fail": "The cord passes through the doorframe; or splits or detaches; or the plug vanishes; or a second vacuum appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The vacuum's colour, the cord and the doorframe stay the same.",
+      "fail": "The vacuum changes colour; or the cord changes colour; or the doorframe changes."
+    }
+  ],
+  "note": "The motor's sound is not judged; stopping is read from visible motion at the head, any indicator light and the dust or fluff settling. Who pushes the vacuum is not judged."
+}

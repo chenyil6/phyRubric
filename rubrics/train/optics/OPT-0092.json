@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0092",
+  "caption": "A cat bats at its reflection in a shiny chrome kettle, and the reflected paw bats back from inside the metal.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cat is in front of a shiny chrome kettle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It bats at its reflection."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The reflected paw bats back from inside the metal."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection is warped by the curve of the kettle."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection moves at the same time as the cat.",
+      "fail": "It moves first or later; or stays still while the cat bats; or bats while the cat is still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image, warped by the curve, and the reflected paw cannot leave the surface.",
+      "fail": "The reflected paw comes out of the kettle; or the reflection is flat and undistorted on a plainly curved surface; or it is a different animal."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The kettle stays put.",
+      "fail": "It slides; or rocks by itself; or lifts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The kettle is rigid polished metal.",
+      "fail": "It dents under the paw; or its surface ripples; or it goes dull."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cat and one kettle; the reflection stays in the metal.",
+      "fail": "A second cat appears; or the reflection steps out; or the cat passes into the kettle; or the cat vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cat's markings and the kitchen stay the same.",
+      "fail": "The markings change; or the kettle changes colour; or the kitchen rearranges."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the reflection's relation to it is."
+}

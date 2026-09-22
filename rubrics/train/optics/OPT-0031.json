@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0031",
+  "caption": "A cat walks along a sunlit windowsill inside a house, and its shadow moves across the floor of the room.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cat walks along a sunlit windowsill inside a house."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its shadow moves across the floor of the room."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The shadow shows the cat's outline including the tail."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow falls on the room side, away from the window."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow moves with the cat and falls on the room side away from the window.",
+      "fail": "It is still while the cat walks; or it falls on the window side; or it moves the opposite way."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow shows the cat's outline including the tail, legs moving in step.",
+      "fail": "It is a different shape; or the tail is missing while the cat's is plain; or it splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move on its own.",
+      "fail": "It moves with the cat sitting still; or it drifts across the floor by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow is stretched across the floor by the low angle and does not float.",
+      "fail": "It floats above the floor; or it is a tiny patch under a plainly low sun; or it is missing in sunlight."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cat and one shadow.",
+      "fail": "A second cat or shadow appears; or the cat vanishes; or the shadow becomes solid; or the cat passes through the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cat's markings and the room stay the same, and the shadow stays dark.",
+      "fail": "The markings change; or the shadow turns coloured; or the room rearranges."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the shadow's relation to it is."
+}

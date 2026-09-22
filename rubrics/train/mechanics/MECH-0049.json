@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0049",
+  "caption": "A rubber ball rolls across a polished wooden floor onto a thick shaggy rug and comes to a stop on the rug.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A rubber ball rolls across a polished wooden floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It runs onto a thick shaggy rug."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It comes to a stop on the rug."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The change of surface from bare wood to rug is visible."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The roll on the wood comes first, then the rug, then the stop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The ball rolls freely on the wood, and the marked slowing starts where it reaches the rug, ending in a stop a short way onto it.",
+      "fail": "The ball comes to a stop on the bare wood with nothing in its way; or it crosses onto the rug without slowing at all; or it slows on the rug and then rolls on quicker again."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The ball keeps a straight line and stays at rest once it has stopped.",
+      "fail": "The ball curves on the open floor with nothing touching it; or it gathers speed on the rug; or it sets off again after coming to rest."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The ball stays down on the floor and on top of the rug throughout.",
+      "fail": "The ball lifts off the floor and travels through the air; or it hovers above the pile of the rug; or it sinks into the floorboards."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The shaggy pile is pressed down under the ball and springs back, while the ball stays round and firm.",
+      "fail": "The rug's pile stays undisturbed where the ball plainly rolls over it; or the rug ripples like water right across the room; or the ball squashes into the pile and stays flattened."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball, one rug and one floor are there throughout.",
+      "fail": "The ball vanishes at the edge of the rug or a second one appears; or the ball passes through the rug to the floor beneath; or the rug turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour, the rug's pattern and the room stay the same.",
+      "fail": "The ball changes colour as it rolls; or the rug changes pattern or size between frames; or the room behind rearranges."
+    }
+  ]
+}

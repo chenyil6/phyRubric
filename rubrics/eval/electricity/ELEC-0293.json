@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0293",
+  "caption": "A plastic cup pulled from a stack clings to the fingers and has to be shaken off.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stack of plastic cups."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A cup is pulled from the stack."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cup clings to the fingers."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The cup is shaken off."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cup stays on the hand when the fingers open, before the shake."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is pull, cling, shake, drop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "When the fingers open the cup stays against the hand with nothing gripping it, and comes away only with a shake.",
+      "fail": "The cup drops the instant the fingers open; or hangs a gap away from the hand; or stays on the hand through the shake to the end of the clip; or the cup clings to the far side of the room."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Once shaken free the cup falls downward and lands; the other cups in the stack stay where they are.",
+      "fail": "The freed cup floats or rises; or hangs in the air after the shake; or the stack rises toward the hand; or the cup climbs the arm."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cup is thin plastic that flexes in the fingers and springs back; the stack is cups nested one in another.",
+      "fail": "The cup crumples like paper and stays crumpled; or stretches like rubber; or the stack moves as one solid block; or the cup melts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The stack stays put as the cup is pulled; the cups do not move by themselves.",
+      "fail": "The stack slides across the table; or several cups come up with the one pulled and then fly apart; or cups in the stack hop; or the cup crawls across the hand."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cup pulled from the stack; the cup stays whole and passes through nothing; the hand keeps its fingers.",
+      "fail": "The cup vanishes; or two cups appear on the hand; or the cup passes through the hand; or fingers pass through the cup."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cups' colour, the stack and the table stay the same.",
+      "fail": "The cup changes colour; or the stack changes height between frames with no cup taken; or the table changes."
+    }
+  ],
+  "note": "The hand is kept because the cling to the fingers is the physics; the person is otherwise not judged."
+}

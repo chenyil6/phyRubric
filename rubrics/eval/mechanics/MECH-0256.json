@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0256",
+  "caption": "A phone balanced on a balcony rail slips off and falls into the swimming pool below with a splash.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A phone is balanced on a balcony rail."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It slips off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It falls into the swimming pool below."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It makes a splash."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The slip comes first, then the fall, then the splash."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It falls straight down, faster as it goes, and enters the water.",
+      "fail": "It drifts outward; or floats; or slows."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It lands below the rail, not far out.",
+      "fail": "It lands far from the rail; or curves; or hangs."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "There is a splash at entry and the phone sinks.",
+      "fail": "No splash; or it floats on top; or the splash is elsewhere."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The phone is rigid and the water splashes and closes over it.",
+      "fail": "The phone bends; or the water is rigid; or the phone bounces off the water."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One phone keeps its number.",
+      "fail": "It duplicates; or vanishes in the air; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rail, the pool and the surroundings stay the same.",
+      "fail": "The rail changes; or the pool changes colour; or the surroundings rearrange."
+    }
+  ]
+}

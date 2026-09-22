@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0294",
+  "caption": "A sock is pulled over a foot, the opening stretching as the fabric is drawn up over the heel and ankle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sock is pulled over a foot."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The opening stretches."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The fabric is drawn up over the heel and ankle."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The opening stretches first and the fabric is drawn up after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The foot goes into the opening, not through the fabric.",
+      "fail": "It goes through the fabric; or the sock passes through the foot; or the hands pass through."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The sock stretches around the foot and follows its shape.",
+      "fail": "It does not stretch; or grows huge; or the foot changes shape."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The knit stretches and recovers.",
+      "fail": "It is rigid; or tears; or melts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It moves only as it is pulled.",
+      "fail": "It climbs by itself; or slides off; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One sock and one foot keep their number.",
+      "fail": "The sock duplicates; or the foot detaches; or they merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sock's colour and the background stay the same.",
+      "fail": "The sock changes colour; or the foot changes; or the background rearranges."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0300",
+  "caption": "Soap bubbles drift past a balloon that has been rubbed on wool, and they curve toward the balloon and cling to it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A balloon that has been rubbed on wool."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Soap bubbles drift past the balloon."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bubbles curve toward the balloon."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The bubbles cling to the balloon."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bubbles are drifting through the air before they near the balloon."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drift comes first and the curve and cling follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Bubbles change course toward the balloon only when they come near it; bubbles far from the balloon drift straight on; none curves away from it.",
+      "fail": "A bubble curves away from the balloon; or bubbles far across the room swerve toward it; or a bubble changes course with the balloon nowhere near; or bubbles circle the balloon in the air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Bubbles that reach the balloon stick to its surface or pop on it; those stuck stay where they land.",
+      "fail": "A bubble reaches the balloon and bounces off to drift on; or hangs a gap from the balloon without touching; or stuck bubbles slide about on the balloon; or bubbles pass through the balloon and out the other side."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Away from the balloon the bubbles drift and sink slowly; none rise steadily away or hang fixed in the air.",
+      "fail": "Bubbles rise steadily to the ceiling with nothing blowing them; or hang fixed in the air; or fall like stones."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bubbles are thin films that wobble, cling as a dome and pop into nothing; the balloon keeps its round shape.",
+      "fail": "A bubble bounces like a rubber ball; or keeps its shape after popping; or the balloon dents deeply and stays dented; or a bubble passes into the balloon as a solid ball."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon; bubbles vanish only by popping; none appear from nowhere in mid-air near the balloon; the balloon passes through nothing.",
+      "fail": "Bubbles appear from nowhere beside the balloon; or a bubble vanishes without popping in mid-drift; or the balloon duplicates or vanishes; or the balloon passes through a wall or table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour and the room stay the same.",
+      "fail": "The balloon changes colour or size; or the room's contents rearrange; or the bubbles change colour."
+    }
+  ],
+  "note": "Who blows the bubbles or holds the balloon is not judged."
+}

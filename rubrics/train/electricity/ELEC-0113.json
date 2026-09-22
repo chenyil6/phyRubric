@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0113",
+  "caption": "A downed power line lies in a wet street, and it sparks and jumps where its broken end touches the ground.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A power line lies down in a wet street."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its broken end touches the ground."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Sparks flash at the point of contact."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The cable end jumps or twitches."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The street is wet."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The sparks and the jumps come in bursts rather than steadily."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The sparks flash in bursts at the broken end where it meets the ground, each burst brief and gone; they stay at the contact point.",
+      "fail": "The sparks travel down the street along the ground away from the cable end; or the cable's whole length glows; or a spark stays lit at one spot for the rest of the clip; or sparks appear from an intact part of the cable away from the broken end."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The cable end twitches or jumps with each burst and lies still between bursts; the rest of the cable moves only where dragged by the end.",
+      "fail": "The cable end jumps while no spark is flashing and no burst has just ended; or the cable slithers along the street steadily like a snake; or the end jumps up and hangs in the air; or the cable moves away from the sparks while the sparks stay behind."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Spark fragments fly out and fall to the wet ground, going dark within a short distance; the cable end falls back after each jump.",
+      "fail": "Sparks rise steadily and gather above the cable; or hang in the air; or lie glowing on the ground for the rest of the clip; or the cable end stays in the air after a jump."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The wet street mirrors each burst briefly around the contact point.",
+      "fail": "The sparks flash while the wet street around them stays as dark as before; or a reflection lies far from the cable end; or the reflection stays lit after the burst is gone."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cable with one broken end; it stays a continuous cable and passes through nothing.",
+      "fail": "The cable splits into more pieces; or a second broken end appears; or the cable passes into the street surface; or the cable vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cable's colour, the street markings and the surroundings stay the same.",
+      "fail": "The cable changes colour or thickness; or the street markings change; or buildings or cars around change."
+    }
+  ]
+}

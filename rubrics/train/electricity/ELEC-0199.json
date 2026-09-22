@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0199",
+  "caption": "A balloon rubbed on a sweater is held over a bowl of sugar, and a fine dusting of sugar jumps up to the balloon.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A balloon is rubbed on a sweater."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A bowl of sugar."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The balloon is held over the bowl."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A fine dusting of sugar jumps up to the balloon."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Only a fine dusting lifts; the bulk of the sugar stays in the bowl."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rub comes first, then the hold, then the sugar jumps."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The sugar lies still until the balloon is close above it, then the finest grains leap up to the balloon; grains lift only beneath the balloon and stop when it is taken away.",
+      "fail": "Sugar leaps before the balloon is brought near; or grains lift from parts of the bowl far from the balloon; or the whole bowl of sugar stirs; or grains keep leaping after the balloon is well away."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The grains that lift cling to the balloon's underside; the bulk of the sugar stays in the bowl; any grain that lets go falls back into the bowl.",
+      "fail": "Grains hover in the air between bowl and balloon without touching either; or the whole heap rises out of the bowl; or a grain that lets go drifts upward or sideways; or grains climb past the balloon and continue up."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The balloon is a light elastic shell that keeps its round shape; the sugar is loose grains that lift as separate specks.",
+      "fail": "The balloon keeps a deep dent after the hand leaves; or stretches out like taffy; or the sugar lifts as a solid lump; or the sugar flows up like liquid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Each grain moves straight up from the sugar's surface to the balloon and stops on it.",
+      "fail": "Grains fly past the balloon and off; or circle the balloon in the air; or bounce off and back several times; or grains move away from the balloon."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon and one bowl; the grains on the balloon came from the bowl; the balloon passes through nothing.",
+      "fail": "Sugar multiplies on the balloon; or grains vanish in mid-air; or the balloon passes into the bowl; or the bowl's sugar level jumps or the bowl vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour, the bowl and the sugar's colour stay the same.",
+      "fail": "The balloon changes colour or size; or the bowl changes; or the sugar changes colour."
+    }
+  ]
+}

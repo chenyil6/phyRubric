@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0073",
+  "caption": "A ladle of hot broth is poured over cold noodles in a bowl, and a puff of steam rises from the bowl.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bowl of noodles."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Hot broth is poured over them from a ladle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A puff of steam rises from the bowl."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The broth flows down around the noodles."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The puff thins after the pour."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the steam follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The broth falls downward from the ladle into the bowl and spreads around the noodles while the steam rises.",
+      "fail": "The broth travels upward from the ladle; or the steam sinks over the bowl's rim and pools on the table; or the broth climbs the bowl's wall and stays above its level; or the steam pours downward from the ladle."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The steam appears where the hot broth lands and the puff thins after the pour, while the bowl's level only rises during it.",
+      "fail": "Steam rises from the bowl before the broth reaches it; or the puff grows steadily after the pour has stopped; or the steam runs back into the bowl; or the level drops while broth still pours in."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The pour has an effect: the noodles are pushed and wetted where the stream lands and the bowl fills.",
+      "fail": "The stream enters and the noodles stay dry and unmoved; or the level rises with no stream reaching the bowl; or the noodles float dry on top of the broth."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The broth is a thin liquid that falls as a stream and finds its level, the noodles are limp strands that shift and soak, and the steam is a soft cloud.",
+      "fail": "The stream falls as a rigid rod; or the broth stands in a heap above the rim; or the noodles stay stiff and rigid in the hot broth; or the steam holds a fixed rigid shape."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ladle and one bowl; the broth goes from ladle to bowl and nowhere else.",
+      "fail": "Broth appears in the bowl with no stream reaching it; or the stream passes through the bowl's wall; or noodles appear or vanish; or a second bowl appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bowl's pattern, the table and the noodles' colour stay the same.",
+      "fail": "The bowl's pattern changes; or the table's setting rearranges; or the noodles change colour."
+    }
+  ]
+}

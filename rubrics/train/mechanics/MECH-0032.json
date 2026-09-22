@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0032",
+  "caption": "A white cue ball rolls straight into a red ball sitting still on a pool table; the red ball rolls away and the cue ball stops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A white cue ball and a red ball are on a pool table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cue ball rolls into the red ball, which is still before contact."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "After contact the red ball rolls away and the cue ball is stopped or nearly stopped."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The cue ball approaches on a straight path."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The moving ball is white and the struck ball is red."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The red ball is set in motion by the contact: it starts moving at the moment the cue ball reaches it, not before and not without it.",
+      "fail": "The cue ball touches the red ball and the red ball does not move; or the red ball starts rolling before the cue ball arrives; or the cue ball stops short of the red ball and the red ball rolls away anyway."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "After a head-on hit the red ball leaves along the cue ball's line of approach and the cue ball's speed drops sharply, so the red ball is the faster of the two afterwards.",
+      "fail": "The red ball leaves at a sharp angle or back toward the cue ball after a square hit; or the cue ball keeps rolling at its previous speed after the hit; or both balls move off together at the same speed in the same direction."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Once moving, each ball rolls straight and slows gradually; a ball at rest stays at rest until struck.",
+      "fail": "A ball curves or changes direction on the open cloth with nothing touching it; or speeds up on its own; or a stopped ball starts rolling again untouched."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The balls are hard and round: the contact is a brief click and each ball keeps its shape.",
+      "fail": "A ball dents or flattens at the contact; or the balls stick together and travel as a pair; or a ball wobbles like jelly."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two balls remain two balls; neither passes into the other or through the table.",
+      "fail": "The balls overlap or pass through each other; or a ball vanishes, splits or a third ball appears; or a ball sinks into the cloth."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balls keep their colours and the table markings stay put.",
+      "fail": "The cue ball turns red or the red ball turns white; or the balls swap colours after contact; or table spots and lines shift between frames."
+    }
+  ]
+}

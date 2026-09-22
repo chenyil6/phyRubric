@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0152",
+  "caption": "A dry sponge is dropped into a basin of water; it floats, darkens as it soaks up water, and settles lower.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dry sponge is dropped into a basin of water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It floats."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It darkens as it soaks up water."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It settles lower."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sponge is dry and light-coloured before the drop."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first, then the float, then the darkening and settling."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The darkening spreads from the wet side and only spreads, and the sponge sinks gradually as it fills.",
+      "fail": "It sinks instantly like a stone; or it stays dry and high; or it lightens again."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The sponge is soft and porous: it soaks and sags.",
+      "fail": "Water beads off it like wax; or it dissolves; or it stays rigid."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It floats at the surface, part above water, and sits lower as it fills.",
+      "fail": "It floats above the surface; or hovers mid-water; or rises as it soaks."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Ripples spread at the drop.",
+      "fail": "There is no disturbance on entry; or ripples appear before it lands; or the water stays glassy."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sponge keeps its number.",
+      "fail": "The sponge vanishes or a second appears; or it turns into another object; or it passes through the basin."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The basin and the background stay the same.",
+      "fail": "The basin changes colour; or the water changes colour; or the background rearranges."
+    }
+  ]
+}

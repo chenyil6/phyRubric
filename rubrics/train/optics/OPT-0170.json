@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0170",
+  "caption": "A firework bursts high in the night sky, and for a moment the rooftops below are lit.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A firework bursts high in the night sky."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "For a moment the rooftops below are lit."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The light comes from above."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The ground is lit only briefly."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The rooftops brighten at the burst and dim as it fades, lit from above.",
+      "fail": "They stay lit after the burst fades; or brighten before it; or are lit from below."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The light is a brief burst that fades.",
+      "fail": "It stays bright; or flickers on and off; or brightens after the burst."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The sparks spread and fall.",
+      "fail": "They rise indefinitely; or hang; or fall upward."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The rooftops take the burst's colour for the instant.",
+      "fail": "They are a different colour from the burst; or change colour permanently; or are white under a coloured burst."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The rooftops keep their number.",
+      "fail": "A building vanishes; or appears; or the burst becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The skyline stays the same.",
+      "fail": "Buildings rearrange; or change shape; or the sky changes abruptly."
+    }
+  ]
+}

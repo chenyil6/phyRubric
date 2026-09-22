@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0181",
+  "caption": "Bacon strips laid in a hot pan begin to sizzle, and the strips shrink and curl at the edges.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Bacon strips lie in a hot pan."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The strips shrink."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Their edges lift and buckle."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Fat pools around them."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strips are flat and straight at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The shrinking and curling come after the strips are in the pan."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The strips go from limp flat slices to stiffer buckled ones that hold their curl, and the fat that leaves them is a thin liquid.",
+      "fail": "A strip stays perfectly flat and limp while shrunken and glossy; or a strip melts away entirely into the fat; or the fat stands as a dome beside the strips; or a strip stretches longer as it cooks."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The shrinking and curling only advance and the strips do not flatten out or grow again.",
+      "fail": "A curled strip flattens out and lengthens again in the hot pan; or the strips shrink and grow in turn; or a strip's curl eases while the pan stays hot; or the fat draws back into the strips."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Each strip stays one strip that buckles and ripples along its length, keeping its two ends.",
+      "fail": "A strip splits into separate pieces with nothing cutting it; or the strips fuse into one sheet; or a strip rolls into a solid tube with no seam; or a strip turns into another object."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The fat runs to the pan's low places and pools there, and the strips stay in the pan.",
+      "fail": "The fat climbs the pan's wall and stays; or a strip lifts off the pan and hangs; or the fat gathers on top of a strip and stays; or the fat runs uphill."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The strips keep their number in the pan and none appears or vanishes.",
+      "fail": "A strip vanishes; or a new strip appears in the pan; or two strips merge into one; or a strip passes through the pan's floor."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the hob and the surroundings stay the same.",
+      "fail": "The pan changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ],
+  "note": "The bacon browning as it cooks is chemistry and is not judged."
+}

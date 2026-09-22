@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0066",
+  "caption": "A desk fan with a bent blade is switched on, and the whole fan wobbles visibly on its base as the blades spin.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A desk fan stands on a surface."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The fan is switched on: the blades start to spin."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The whole fan wobbles on its base."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "One blade is bent, visible while the fan is still."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The switch-on comes first and the wobble follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The fan is still before the switch and wobbles only while the blades spin.",
+      "fail": "The fan wobbles before the blades turn; or wobbles while the blades are plainly stopped; or slides across the desk in a smooth glide."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "While the blades spin the fan wobbles in a steady rhythm, and the wobble ends when the blades stop.",
+      "fail": "The blades spin fast and the fan stands dead still for the whole clip; or the blades stop and the wobble goes on unchanged; or the wobble comes in irregular fits with long still spells while the blades spin steadily."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The fan stays on its base; if it walks to the edge it falls.",
+      "fail": "The fan lifts off the desk; or tips and hangs at an angle unsupported; or rises."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cage and base are rigid; the blades are rigid and the bent one stays bent.",
+      "fail": "The cage flexes like cloth; or the base bends; or the bent blade straightens itself while spinning."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One fan; the blades keep their count and stay inside the cage.",
+      "fail": "A second fan appears; or the fan vanishes; or a blade passes through the cage; or the blades change count."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fan's colour, its cage pattern and the wall behind stay the same.",
+      "fail": "The fan changes colour; or the cage changes pattern; or the wall behind changes."
+    }
+  ]
+}

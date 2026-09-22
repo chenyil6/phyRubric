@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0056",
+  "caption": "In a garden at dusk, the solar lights along the path flicker on one after another.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A garden path lined with solar lights, at dusk."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lights come on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They come on one after another, not all at once."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sky is dim: dusk, not full daylight or full night."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Each light flickers or fades in as it comes on."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each light, once on, lights the path and plants around it; the lights come on while the sky is already dim.",
+      "fail": "A light glows while the ground around it stays as dark as before; or the ground brightens while the light stays dark; or the lights come on in bright daylight with the sky full sun; or a light comes on and the rest never do to the end of the clip."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, each light stays lit for the rest of the clip; the number of lit lamps only grows.",
+      "fail": "A light goes out again after coming on; or lights flicker on and off repeatedly; or all the lights go out at once; or the sky brightens back to daylight."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lights stay in their places along the path; plants sway only in the breeze; nothing moves as the lights come on.",
+      "fail": "A light moves or tips as it comes on; or plants jump at the light; or the path shifts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The lit lights are the same lamps seen dark in the same places along the path.",
+      "fail": "Lit points appear where no lamp stood; or a lamp seen dark is gone once the others are lit; or lamps multiply; or lamps change place along the path."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The lamps, path and plants keep their shapes; nothing passes through anything.",
+      "fail": "A lamp changes shape or merges with a plant; or the path changes route; or a lamp sinks into the ground; or plants turn into other objects."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lamps' housings, the path's surface and the plants keep their colours apart from the light and the dusk.",
+      "fail": "A housing changes colour; or the path changes surface; or the plants change colour rather than brightness."
+    }
+  ],
+  "note": "The lights coming on without anyone touching them is the caption's event: the trigger is the dusk, not a hand."
+}

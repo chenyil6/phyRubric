@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0221",
+  "caption": "A rolled-up rug is given a push and unrolls across a wooden floor, and the rug lies flat.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A rolled-up rug is on a wooden floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is given a push."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It unrolls across the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The rug lies flat."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The push comes first, then the unrolling, then the rug lies flat."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The roll travels in the direction of the push, slows, and stops when the rug runs out.",
+      "fail": "It rolls back toward the push; or keeps rolling past the rug's end; or stops dead mid-rug with nothing in its way."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The roll gets thinner as it travels and the unrolled part lies flat behind it.",
+      "fail": "The roll stays thick; or the rug rolls back up; or the unrolled part curls up."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It moves only after the push.",
+      "fail": "It unrolls before the push; or re-rolls; or slides sideways."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "It lies on the floor, not through it.",
+      "fail": "It passes through the floor; or the layers run into one another; or it floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One rug keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rug's pattern and the floor stay the same.",
+      "fail": "The pattern changes; or the floorboards shift; or the room rearranges."
+    }
+  ]
+}

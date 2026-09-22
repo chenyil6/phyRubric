@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0044",
+  "caption": "A helicopter hovers low over a field, and the surface of a pond beneath it shivers into fine ripples.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A helicopter hovers low over a field."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A pond lies beneath it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pond surface shows fine ripples."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The ripples are a fine shiver, not large waves."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The helicopter hovers in place rather than flying past."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Ripples cover the pond while the helicopter is overhead; the water is calm before it arrives and settles after it leaves.",
+      "fail": "The helicopter hangs overhead for a spell and the pond stays glassy; or the ripples are strongest with the helicopter far off and vanish as it comes close; or the pond keeps rippling unchanged long after the helicopter has flown out of view."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The ripples are a fine trembling spreading outward from beneath the helicopter; the water stays in the pond.",
+      "fail": "The pond surface tilts as a whole; or water rises out of the pond; or one ring spreads from a point as if a stone were dropped; or the ripples travel as parallel waves from one shore."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The helicopter's rotor turns while it hangs in the air.",
+      "fail": "The rotor blades are sharp and motionless while the helicopter stays aloft; or the helicopter jumps from one spot to another; or it drifts upward with its rotor stopped."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Grass or reeds around the pond bend away from the helicopter and thrash while it is overhead.",
+      "fail": "The grass stands motionless while the pond shivers; or bends toward the helicopter; or the grass thrashes while the pond stays glassy.",
+      "precondition": "Grass or reeds stand near the pond."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One helicopter; the pond keeps its shape; the helicopter passes through nothing.",
+      "fail": "A second helicopter appears; or the helicopter vanishes; or it passes through trees or wires; or the pond vanishes or changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The helicopter's colour and markings, the field and the pond's colour stay the same.",
+      "fail": "The helicopter changes colour or markings; or the field's features shift; or the pond changes colour."
+    }
+  ]
+}

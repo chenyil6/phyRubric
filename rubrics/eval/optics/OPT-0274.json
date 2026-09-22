@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0274",
+  "caption": "A goldfish swims around a round bowl, and seen through the curved glass it appears to swell and shrink as it passes the curve.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A goldfish swims around a round bowl."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Seen through the curved glass it appears to swell and shrink as it passes the curve."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The fish keeps its true size and shape."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The fish keeps its true size and shape; the swell and shrink are appearances through the curve.",
+      "fail": "The fish actually changes size; or changes shape; or splits."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The size change happens only through the curved glass and water.",
+      "fail": "The fish is unchanged through the curve; or changes seen from above the water; or the bowl is opaque."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The fish stays inside the water.",
+      "fail": "It passes through the glass; or swims out; or appears outside."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bowl is rigid and the water level.",
+      "fail": "The bowl warps; or the water tilts and holds; or goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One fish and one bowl.",
+      "fail": "A second fish appears; or the fish vanishes; or the bowl duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fish's colour and the bowl stay the same.",
+      "fail": "The fish changes colour; or the bowl changes shape; or the table changes."
+    }
+  ],
+  "note": "The fish is self-driven; only the view through the curve is judged."
+}

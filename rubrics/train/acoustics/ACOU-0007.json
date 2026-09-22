@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0007",
+  "caption": "A struck tuning fork is dipped into a glass of water, and the water sprays up where the prongs touch it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tuning fork and a glass of water are present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The fork is lowered so that its prongs touch the water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Water sprays up where the prongs meet the surface."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The fork has been struck: a strike is seen, or the prongs are blurred or shivering before they reach the water."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spray comes from the point where the prongs touch, not from elsewhere on the surface."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The prongs reach the water first and the spray follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The water surface is flat until the prongs touch it; spray and ripples burst out at the point of contact and only there.",
+      "fail": "The surface ripples or spits before the prongs reach it; or spray rises from a part of the surface the prongs are not touching; or the prongs enter the water and the surface stays flat around them; or the water sprays while the fork is held above the surface."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spraying lasts only while the prongs are in the water and dies down as the fork's shiver fades; when the fork is lifted the spray stops and the surface settles.",
+      "fail": "Spray continues from the surface after the fork is lifted clear; or the disturbed surface never settles though the fork is out of the water; or the surface is calm while the prongs are in and erupts once they are out; or the spray grows stronger the longer the prongs stay in."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Droplets thrown up fall back onto the surface, the glass or the table; the water level in the glass stays where it is.",
+      "fail": "Droplets hang in the air; or rise and drift away upward; or water climbs the prongs above the surface and stays there."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fork stays a rigid metal fork and the glass a rigid vessel; the water behaves as a liquid, breaking into drops and ripples.",
+      "fail": "The prongs bend or splay apart as they enter the water; or the water surface bulges and holds its shape like jelly; or the glass wall flexes; or the prongs leave a hole in the water that stays open."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One fork and one glass; the fork passes through the water surface only and through nothing solid; nothing appears or vanishes.",
+      "fail": "The prongs pass through the glass wall or its base; or a second fork or glass appears; or the fork vanishes while the glass is still in view; or the fork gains or loses a prong."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass's shape and tint, the fork's finish and the table around them stay the same.",
+      "fail": "The glass changes tint or shape; or the fork changes colour; or items on the table shift without being touched."
+    }
+  ],
+  "note": "The strike may happen before the clip begins; S4 fails only when neither a strike nor a shivering fork is seen. The sound of the fork is not judged."
+}

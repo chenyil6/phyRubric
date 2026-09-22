@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0230",
+  "caption": "Three apples are dropped one by one into an empty cloth bag, and the bag sags and bulges.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An empty cloth bag is held open."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Apples are dropped into it one by one."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bag sags and bulges."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Three apples are dropped in."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Each drop comes before the sag it causes."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The bag hangs lower and bulges more with each apple, and the apples stay inside.",
+      "fail": "The bag is unchanged after apples go in; or an apple falls through the cloth; or an apple appears outside."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The apples fall into the bag and sit at the bottom, and the bag hangs down.",
+      "fail": "Apples float in the bag; or the bag rises; or the bag bulges at the top."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bulges match the apples' size and the cloth drapes.",
+      "fail": "The bag is rigid; or the bulges are the wrong size; or the cloth stretches like elastic."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The sag only increases as apples are added.",
+      "fail": "The bag lifts as apples go in; or the bulges disappear; or it sags before any apple."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One bag and the apples keep their number.",
+      "fail": "The bag duplicates; or an apple vanishes in mid-air; or an apple turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag's colour and the background stay the same.",
+      "fail": "The bag changes colour; or the apples change colour; or the background rearranges."
+    }
+  ]
+}

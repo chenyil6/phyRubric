@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0137",
+  "caption": "A slice is cut out of a round birthday cake and lifted onto a plate, leaving a wedge-shaped gap in the cake.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A round birthday cake is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A slice is cut out of it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The slice is lifted onto a plate."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A wedge-shaped gap is left in the cake."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The gap is wedge-shaped."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The cut comes first, then the lift, then the gap remains."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The gap matches the slice removed and appears as the slice lifts.",
+      "fail": "The gap is there before the cut; or the slice lifts and the cake is whole; or the gap does not match the slice."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The gap stays open and the cake does not close up.",
+      "fail": "The gap closes; or a second slice appears from nothing; or the slice vanishes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cake is soft: crumbs fall and frosting smears, and the slice holds its shape on the plate.",
+      "fail": "The cake shatters; or it flows like liquid; or the slice bends like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The slice rests on the plate and crumbs fall.",
+      "fail": "The slice floats; or crumbs rise; or the slice hangs in the air."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One cake and one slice keep their number, and the knife passes through nothing but the cake.",
+      "fail": "The knife passes through the plate; or a second cake appears; or the slice turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cake's frosting and the candles stay the same.",
+      "fail": "The frosting changes colour; or the candles rearrange; or the table changes."
+    }
+  ]
+}

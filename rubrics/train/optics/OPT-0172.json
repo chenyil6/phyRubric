@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0172",
+  "caption": "A car drives past a house at night, and its headlights sweep across the front windows, lighting the curtains for a moment.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car drives past a house at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its headlights sweep across the front windows."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The curtains are lit for a moment."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The light is gone once the car has passed."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light moves along the wall in the direction the car travels and is gone once the car has passed.",
+      "fail": "The wall stays lit; or the light moves the opposite way; or it is there with no car."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The light moves only as the car moves.",
+      "fail": "It moves with the car stopped; or jumps; or lingers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The lit patch is a soft sweep, not a hard shape.",
+      "fail": "It is a sharp square; or splits; or is a spot that stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The car travels steadily past.",
+      "fail": "It jumps position; or reverses; or stops with no cause."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and one house.",
+      "fail": "A second car appears; or the house vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The house and the curtains stay the same.",
+      "fail": "The curtains change colour rather than brightness; or the house changes; or the street rearranges."
+    }
+  ]
+}

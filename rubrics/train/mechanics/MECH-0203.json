@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0203",
+  "caption": "A girl rides a kick scooter along a path, pushing off the ground with one foot and gliding between pushes.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A girl rides a kick scooter along a path."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "She pushes off the ground with one foot."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The scooter glides between pushes."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "One foot stays on the board."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Each push comes first and the glide follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The scooter speeds up on each kick and coasts, slowing gently, between them.",
+      "fail": "It speeds up between kicks with both feet on the board; or stops dead between kicks; or moves from rest with no kick."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "One foot stays on the board while the other kicks, and the legs bend at the joints.",
+      "fail": "Both feet leave the board while it moves on; or a leg bends mid-shin; or a leg detaches."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The kicking foot touches the path and the wheels stay on the ground.",
+      "fail": "The foot passes through the path; or the scooter floats; or the foot kicks air well above the ground and she speeds up."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "She stays upright over the board.",
+      "fail": "She leans far over and does not fall; or she floats; or she sinks."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Her limbs keep their number and stay attached, and one scooter stays one scooter.",
+      "fail": "A limb detaches; or the scooter duplicates; or she merges with the scooter."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Her clothing, the scooter and the path stay the same.",
+      "fail": "Her clothing changes colour; or the scooter changes; or the path rearranges."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Gait, posture, style and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

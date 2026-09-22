@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0283",
+  "caption": "A lantern is lit in a dark barn, and the nearby hay and beams brighten while the far end stays in shadow.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lantern is lit in a dark barn."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The nearby hay and beams brighten."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The far end stays in shadow."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Shadows fall away from the lantern."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Brightness is greatest near the lantern and falls off with distance, and the far end stays dark.",
+      "fail": "The far end is as bright as the near; or the near hay stays dark; or the light comes from elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The light is warm and the hay and beams keep their colours under it.",
+      "fail": "Objects change colour rather than brightness; or the light is a different colour; or the barn changes colour."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Shadows fall away from the lantern.",
+      "fail": "They point toward it; or in several directions; or there are none."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lit area stays put with the lantern still.",
+      "fail": "It wanders; or flickers wildly; or the lantern moves by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lantern.",
+      "fail": "A second appears; or it vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The barn and its contents stay the same.",
+      "fail": "Hay bales move; or the beams change; or the lantern changes shape."
+    }
+  ],
+  "note": "Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

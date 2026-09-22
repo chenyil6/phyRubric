@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0159",
+  "caption": "A flashlight pointed at a wall is swung up to the ceiling, and the lit spot leaves the wall and appears on the ceiling.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flashlight is pointed at a wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is swung up to the ceiling."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lit spot leaves the wall and appears on the ceiling."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wall goes dark once the beam has left it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The spot travels up the wall and onto the ceiling continuously with the beam, and the wall goes dark once the beam has left.",
+      "fail": "The spot jumps; or the wall stays lit; or the spot stays on the wall while the beam is on the ceiling."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The spot moves only as the flashlight swings.",
+      "fail": "It drifts with the flashlight still; or moves before the swing; or flickers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The spot is one patch that stretches as the beam grazes the corner.",
+      "fail": "It splits; or is a sharp square; or keeps a fixed shape across the corner."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The spot moves the same way the beam swings.",
+      "fail": "It moves the opposite way; or crosswise; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One flashlight and one spot.",
+      "fail": "A second spot appears; or the flashlight vanishes; or the spot becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wall and the ceiling stay the same.",
+      "fail": "The wall changes colour; or the ceiling changes; or the flashlight changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged. Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

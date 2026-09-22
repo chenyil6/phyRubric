@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0283",
+  "caption": "A tall blade of grass blows against the wire of an electric fence, and a tiny spark clicks at the contact each time it touches.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An electric fence wire."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A tall blade of grass blows against the wire."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A tiny spark appears at the contact each time the grass touches."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The grass touches more than once as it blows."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Each spark comes as the grass meets the wire, not while it hangs clear."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "A spark appears exactly at the point where the grass meets the wire, each time it touches, and is gone; while the grass hangs clear there is none.",
+      "fail": "The grass touches the wire and no spark appears at any touch to the end of the clip; or sparks appear while the grass hangs clear of the wire; or the spark appears at a place on the wire away from the grass; or the spark glows on between touches."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The grass moves only in the wind, swaying to and from the wire; the wire stays still; the grass is not thrown by the spark.",
+      "fail": "The grass is flung away from the wire at each spark; or the wire sways with nothing touching it; or the grass moves toward the wire against the wind of the other grass; or the grass stands still while sparks appear."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The sparks repeat with each touch and each is brief; the grass does not catch fire or char and the wire does not glow.",
+      "fail": "The grass catches fire; or the grass blackens and shrivels; or the wire glows along its length; or a spark stays lit."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The grass is a limp blade that bends in the wind; the wire is a taut strand between posts.",
+      "fail": "The grass stands rigid like a rod; or the wire sags and swings like rope; or the grass stretches; or the wire bends where the grass touches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One wire and one blade of grass in contact; the grass stays rooted; nothing passes through the wire or vanishes.",
+      "fail": "The grass passes through the wire; or the grass detaches and floats; or a second wire appears; or the blade of grass vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The grass's colour, the wire and the posts stay the same.",
+      "fail": "The grass changes colour; or the wire changes thickness; or the posts move."
+    }
+  ],
+  "note": "The click is sound and is not judged. The wind is invisible; the grass swaying is not causeless motion."
+}

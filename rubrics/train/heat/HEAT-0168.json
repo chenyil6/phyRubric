@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0168",
+  "caption": "A heat gun is aimed at the loose plastic wrap around a gift basket, and the wrap tightens and shrinks snugly around the basket.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Loose plastic wrap surrounds a gift basket."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A heat gun is aimed at the wrap."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The wrap tightens."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The wrap shrinks snugly around the basket."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The wrap is loose and wrinkled at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The heating comes first and the tightening follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The wrap is a thin film that pulls smooth and taut where the heat plays and holds that shape, and the basket keeps its shape under it.",
+      "fail": "The wrap stays loose and wrinkled while glossy and pulling; or the wrap melts into holes and runs; or the wrap stretches looser as it is heated; or the basket collapses as the wrap tightens."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The tightening only advances where the heat has played and tightened wrap stays tight.",
+      "fail": "A tightened area goes slack again with nothing cooling it; or the wrap tightens and loosens in turn; or the wrap tightens on a part the gun has not reached; or the wrinkles come back where the gun has passed."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The wrap tightens where the gun is aimed and stays loose where it is not.",
+      "fail": "The whole wrap tightens at once while the gun plays on one spot; or the wrap tightens on the far side from the gun while the near side stays loose; or the gun plays on the wrap and it stays loose and wrinkled to the end of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The basket and its contents stay put and the wrap moves only as it shrinks or as the gun's air pushes it.",
+      "fail": "The basket slides or tips with nothing touching it; or the contents rearrange inside the basket; or the wrap billows away from the basket and stays out; or the basket lifts off the table."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One basket in one wrap; the wrap stays one sheet and the contents keep their number.",
+      "fail": "The wrap splits into separate sheets; or a second basket appears; or an item in the basket vanishes; or the wrap passes through the basket's side."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The basket's weave, its contents and the surroundings stay the same.",
+      "fail": "The basket's weave changes pattern; or an item in the basket changes colour; or the background changes between frames."
+    }
+  ]
+}

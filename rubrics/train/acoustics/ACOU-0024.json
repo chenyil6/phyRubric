@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0024",
+  "caption": "The thin elastic cord of a paddle ball toy is plucked, and the cord blurs and the ball bounces lightly before both go still.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A paddle ball toy: a paddle, an elastic cord and a ball joined to it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cord is plucked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cord blurs."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The ball bounces and then both cord and ball go still."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bounce is light: small bobs on the cord, not a wild swing."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pluck comes first; the blur and bounce follow, then stillness."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The cord and the ball are at rest until the fingers pluck the cord; the blur and the ball's bobbing begin at the pluck and only then.",
+      "fail": "The ball is already bobbing before the hand reaches the cord; or the cord blurs while the hand is well away; or the cord is plucked and neither cord nor ball moves; or the ball starts bobbing again after both have gone still with nothing touching them."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The cord's blur narrows and the ball's bobs shrink steadily until both are still.",
+      "fail": "The ball's bobs grow after the pluck; or the ball keeps bobbing at the same height for the whole clip; or the ball stops dead in mid-bob."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord stretches and recoils as elastic, staying joined to paddle and ball; the ball stays a round rubber ball.",
+      "fail": "The cord goes rigid like a rod; or stretches out and hangs long and slack afterwards; or the ball squashes flat and stays flat."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The ball hangs down from the cord or rests on the surface beneath it; each bob returns it to the same rest position.",
+      "fail": "The ball hovers with the cord slack beneath it; or rises and stays up; or comes to rest at a different height or place from where it started while the paddle has not moved."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One paddle, one cord and one ball, joined throughout; nothing passes through anything.",
+      "fail": "The ball detaches from the cord; or a second ball appears; or the cord passes through the paddle or the ball; or the toy vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The paddle's colour and print, the ball's colour and the surroundings stay the same.",
+      "fail": "The paddle's print changes; or the ball changes colour or size; or the background changes."
+    }
+  ],
+  "note": "The caption does not say whether the paddle is held up or lying down; P4 reads the ball's rest position from the clip."
+}

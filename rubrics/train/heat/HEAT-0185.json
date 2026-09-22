@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0185",
+  "caption": "A pat of cold butter is placed in the centre of a hot pancake on the griddle, and it slides and glides across the surface as it melts.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pancake cooks on a griddle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A pat of butter is placed in its centre."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pat slides across the pancake."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The pat shrinks as it melts."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pat leaves a glossy trail."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The placing comes first and the sliding follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The pat glides on the film of melted butter under it and slows as it shrinks, moving only where the surface slopes or the griddle is tilted.",
+      "fail": "The pat darts across a level pancake with nothing touching it; or it climbs back to the centre by itself; or it stops dead and sets off again from rest; or it spins fast on the spot."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The pat only shrinks while it slides and the melt only spreads; it does not firm up again on the hot pancake.",
+      "fail": "The pat regains its square edges; or the trail draws back into the pat; or the butter sets solid again on the pancake; or the pat alternates between larger and smaller."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pat and the melt run downhill across the pancake and off its edge onto the griddle where it slopes.",
+      "fail": "The melt climbs uphill across the pancake; or the pat slides up a slope with nothing pushing it; or melted butter lifts off the pancake; or the melt gathers above the pat on a sloping surface."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The pat leaves a wet glossy trail where it has passed and the pancake's surface there looks soaked.",
+      "fail": "The pat slides across and the pancake behind it stays dry and matt; or a glossy trail appears on a part of the pancake the pat never crossed; or the pat shrinks while no film shows under or behind it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pat on one pancake; the butter goes only from the pat into the trail.",
+      "fail": "The pat grows; or a second pat appears; or the pat vanishes while still large; or butter appears on the griddle with none running there."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The griddle, the pancake's edge and the surroundings stay the same.",
+      "fail": "The griddle changes colour; or the pancake changes shape apart from cooking; or items around the griddle rearrange."
+    }
+  ],
+  "note": "The pancake browning as it cooks is chemistry and is not judged."
+}

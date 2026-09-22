@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0148",
+  "caption": "A phone lying face-up on a table in a dark room lights up, and its glow lights the objects around it from below.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A phone lies face-up on a table in a dark room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It lights up."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its glow lights the objects around it from below."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The objects are lit on the sides facing the screen."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The objects are lit on the sides facing the screen and the glow changes when the screen's picture changes.",
+      "fail": "They are lit from above; or the glow is unchanged when the picture changes; or the far side of the room is lit."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The glow takes the screen's colour.",
+      "fail": "It is a different colour from the screen; or it is white with a coloured screen; or it changes colour with the screen steady."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The glow stops when the screen turns off.",
+      "fail": "The objects stay lit with the screen dark; or lit before it lights; or the glow moves with the phone still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The glow is a soft spread from the screen.",
+      "fail": "It is a sharp beam; or it splits; or it is a geometric shape."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One phone and the objects around it.",
+      "fail": "A second phone appears; or an object vanishes; or the glow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The objects and the table stay the same.",
+      "fail": "An object changes colour rather than brightness; or moves; or the table changes."
+    }
+  ],
+  "note": "Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

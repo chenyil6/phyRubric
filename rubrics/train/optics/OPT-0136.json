@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0136",
+  "caption": "A clear glass of water is held up in front of a doorway, and the doorway seen through it appears flipped left-to-right and squeezed thin.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A clear glass of water is held up in front of a doorway."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The doorway seen through it appears flipped left-to-right and squeezed thin."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The image shifts as the glass moves."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The room seen around the glass is normal."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The flipped, narrowed image appears only through the water and the room around the glass is normal.",
+      "fail": "The room around the glass is flipped; or the doorway through the glass is unchanged; or the image is upside down."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The image shifts as the glass moves.",
+      "fail": "It stays fixed while the glass moves; or it shifts with the glass still; or it shows a different room."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The glass is rigid and the water level.",
+      "fail": "The glass bends; or the water tilts and holds; or goes opaque."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The glass moves only with the hand.",
+      "fail": "It floats; or slides; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass and one doorway.",
+      "fail": "The glass duplicates; or the doorway vanishes; or the hand passes through the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The doorway and the room stay the same.",
+      "fail": "The door changes colour; or the room rearranges; or the glass changes shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

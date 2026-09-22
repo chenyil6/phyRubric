@@ -1,0 +1,80 @@
+{
+  "id": "ACOU-0009",
+  "caption": "A large cymbal is struck, and the cymbal wobbles on its stand and its edge blurs before it steadies.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A large cymbal on a stand."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cymbal is struck."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cymbal wobbles on its stand and its edge blurs."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The cymbal steadies."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cymbal stays seated on its stand through the wobble."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is strike, wobble, steady."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The cymbal hangs still on its stand until the stick reaches it; the wobble and the edge blur begin at the strike and only then.",
+      "fail": "The cymbal is already rocking or blurred before the stick arrives; or wobbles while the stick is well away; or is hit and stays rigidly still; or steadies and starts wobbling again with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The wobble is largest right after the strike and shrinks steadily; the edge blur narrows until the rim is sharp and still.",
+      "fail": "The wobble grows after the strike with no second hit; or holds the same size for the whole clip; or the cymbal stops dead from a large wobble."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cymbal stays a rigid metal disc that tilts and rocks as a whole about the stand's tip.",
+      "fail": "The cymbal folds or creases; or the stick sinks into the metal; or a dent appears where the stick lands and stays; or the rim curls."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The cymbal wobbles about the stand's tip, staying centred on it and tilting one way then the other; the stand stays put.",
+      "fail": "The cymbal slides off the stand's tip; or spins round and round like a plate; or lifts clear of the stand and hangs in the air; or the stand's base slides across the floor."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cymbal, one stand and one stick; the stick passes through nothing and the cymbal stays one disc.",
+      "fail": "The stick passes through the cymbal; or the cymbal splits or a second cymbal appears; or the stand vanishes; or the cymbal changes into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cymbal's finish and lathing, the stand's colour and the background stay the same.",
+      "fail": "The cymbal changes colour or finish; or the stand's height changes between frames; or the background changes."
+    }
+  ]
+}

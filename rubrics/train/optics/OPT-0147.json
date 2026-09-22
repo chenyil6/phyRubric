@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0147",
+  "caption": "A refrigerator door is opened in a dark kitchen, and light from inside the fridge spills out across the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A refrigerator stands in a dark kitchen."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its door is opened."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Light from inside spills out across the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The light widens as the door opens."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light appears as the door opens, widens with the door, and lights the floor in front of it.",
+      "fail": "Light spills with the door shut; or the floor stays dark with the door open; or the light is behind the fridge."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The lit area grows as the door swings wider and would shrink as it closes.",
+      "fail": "It shrinks as the door opens; or is full width before the door moves; or flickers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lit area moves only with the door.",
+      "fail": "It drifts with the door still; or appears before the door moves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The lit area is a wedge on the floor spreading from the door.",
+      "fail": "It is a round spot; or it is on the ceiling only; or it splits."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One fridge and one door.",
+      "fail": "A second door appears; or the fridge vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The kitchen and the fridge stay the same.",
+      "fail": "The fridge changes colour; or the kitchen rearranges; or the light changes colour."
+    }
+  ],
+  "note": "Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

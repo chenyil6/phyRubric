@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0132",
+  "caption": "A length of cotton fabric is torn along a snipped edge, and it rips into two pieces.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A length of fabric has a snip at its edge."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is torn from the snip."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It rips into two pieces."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The fabric is cotton."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tear comes first and the two pieces follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The rip runs in a line following the weave as it is pulled, with threads fraying at the edges.",
+      "fail": "The fabric stretches like rubber without tearing; or it shatters; or it tears in a jagged curve unlike a weave."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The tear advances with the pull and does not run ahead of it.",
+      "fail": "The tear runs ahead of the pull; or the fabric is pulled and does not tear; or it is in two before the pull."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The two pieces stay separate.",
+      "fail": "They rejoin; or a third piece appears; or the fabric is whole again."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Loose ends of fabric hang down.",
+      "fail": "They float; or rise; or hang out sideways unsupported."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One length of fabric becomes two pieces, and the hands do not pass through it.",
+      "fail": "The hands pass through the fabric; or a second length appears; or the fabric turns into another material."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fabric's colour and pattern stay the same on both pieces.",
+      "fail": "One piece changes colour; or the pattern changes; or the background rearranges."
+    }
+  ]
+}

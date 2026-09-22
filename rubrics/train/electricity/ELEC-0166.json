@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0166",
+  "caption": "A magnetic hook is hung on the side of a steel filing cabinet and a coat hung on it, and the hook holds.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A steel filing cabinet with a flat vertical side."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnetic hook is placed on the side of the cabinet."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A coat is hung on the hook."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The hook stays on the cabinet with the coat hanging from it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hook is on the cabinet's vertical side, not its top."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is hook placed, coat hung, hook holds."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Once let go, the hook stays where it was placed on the vertical side, touching the steel, and keeps its place when the coat's weight comes onto it.",
+      "fail": "The hook drops when released; or slides down the side, before or after the coat is hung; or stands off the steel with a gap between; or wanders across the side."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The coat hangs downward from the hook, its weight pulling straight down; if anything gives way, hook and coat fall to the floor.",
+      "fail": "The coat hangs out sideways or rises from the hook; or floats when let go; or the coat's loop hangs in the air below the hook without touching it; or the hook comes off the cabinet and stays in the air."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The coat is cloth: it drapes from the hook in folds, swings when let go and settles; the hook stays rigid and the cabinet's side stays flat.",
+      "fail": "The coat stands stiff and flat like a board; or stretches downward like elastic; or the hook bends under the coat; or the cabinet's side dents around the hook."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The coat swings only when handled and comes to rest; the hook does not move after release; the cabinet stays put.",
+      "fail": "The coat, hanging still, starts swinging with nothing touching it; or the hook rotates or jumps to a new spot; or the cabinet slides or tips."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One hook, one coat and one cabinet; the hook's base rests on the steel without sinking in; the coat does not pass through the hook or the cabinet.",
+      "fail": "The hook sinks into the cabinet's side; or the coat passes through the hook and stays hung; or a second hook or coat appears; or the coat vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cabinet's colour and drawer fronts, the hook's colour and the coat's colour stay the same.",
+      "fail": "The coat changes colour; or the drawer handles change; or the hook changes shape or colour."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0279",
+  "caption": "A candle burns behind a full round wine glass, and seen through the glass the flame appears tiny and upside down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A candle burns behind a full round wine glass."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Seen through the glass the flame appears tiny and upside down."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The tiny flame flickers in step with the real flame."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flame seen past the glass is upright and normal."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The inverted small flame appears only through the liquid-filled part of the glass; past the glass the flame is upright and normal.",
+      "fail": "The flame is inverted past the glass; or upright through it; or a different flame appears."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The tiny flame flickers in step with the real flame.",
+      "fail": "It flickers out of time; or is steady while the real flame flickers; or flickers with the real flame out."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The real flame points upward.",
+      "fail": "It points down or sideways in still air; or detaches; or floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The glass is rigid and the liquid level.",
+      "fail": "The glass bends; or the liquid tilts and holds; or goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One candle and one glass.",
+      "fail": "A second candle appears; or the glass vanishes; or the candle passes through the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candle, the wine and the glass stay the same.",
+      "fail": "The candle changes colour; or the wine changes colour; or the glass changes shape."
+    }
+  ]
+}

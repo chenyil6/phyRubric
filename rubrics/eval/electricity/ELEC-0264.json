@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0264",
+  "caption": "A power cut hits a restaurant, and every light and the neon sign in the window go dark at once while the candles on the tables keep burning.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A restaurant with electric lights on and a neon sign in the window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Candles burn on the tables."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Every electric light and the neon sign go dark at once."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The candles keep burning."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lights and the sign go dark at the same moment."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is lit, cut, dark with candles burning."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Every electric light and the sign go dark at the same instant; the candle flames carry on unchanged.",
+      "fail": "A lamp stays lit after the others are dark; or the sign goes dark before or after the lamps; or the candles go out with the lights; or the candle flames flare or jump at the cut."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The room's contents are the same before and after the cut: the same tables, chairs, candles and lamps in the same places, dark rather than gone.",
+      "fail": "Candles appear or vanish between lit and dark frames; or tables or chairs appear or vanish; or the sign vanishes rather than going dark; or a lamp changes place."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once dark, the lights and sign stay dark; if power returns they come back together.",
+      "fail": "A lamp comes back on alone; or the sign flickers on and off; or the lights return while the sign stays dark to the end; or the candles go out one by one after the cut."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "With the lamps dark the room's light comes from the candles: warm pools around each flame and dimness between.",
+      "fail": "The room stays as bright with every lamp dark; or the candles burn with no glow around them; or light stays pooled under a dark lamp; or the room brightens as the lamps go out."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Tables, chairs, lamps and the sign keep their shapes; nothing passes through a wall or table.",
+      "fail": "A lamp or the sign changes shape; or a chair merges with a table; or an object passes through a wall; or the candles turn into lamps."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tablecloths, the walls and the sign's tube colours stay the same apart from brightness.",
+      "fail": "The tablecloths change colour rather than brightness; or the walls change colour; or the sign's lettering changes."
+    }
+  ],
+  "note": "People at the tables, if any, are not judged."
+}

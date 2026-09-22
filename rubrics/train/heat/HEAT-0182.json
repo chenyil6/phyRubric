@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0182",
+  "caption": "A hairdryer is aimed at a bent plastic pipe, and the pipe softens enough to be straightened by hand and holds its new shape when cool.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bent plastic pipe."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A hairdryer is aimed at the bend."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pipe softens at the heated spot."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The pipe is straightened by hand."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pipe holds its new shape."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The heating comes first, then the bending, then the holding."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The pipe goes from stiff to bendable at the heated spot and back to stiff as it cools, keeping its round section.",
+      "fail": "The pipe stays stiff and springs back as soon as the hands let go; or the pipe runs off as a liquid; or the pipe stretches like elastic while being straightened; or the pipe shatters at the bend."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The pipe holds the new shape once it has cooled and does not return to its old bend.",
+      "fail": "The pipe springs back to its old bend after the hands let go and it has cooled; or the pipe bends further on its own; or the new shape and the old bend alternate; or the pipe softens again with the dryer off and away."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The pipe bends only where the dryer has played and stays stiff elsewhere.",
+      "fail": "The pipe bends at a point the dryer never reached; or the pipe bends along its whole length while the dryer plays on one spot; or the dryer plays on the pipe and it stays as stiff as before to the end of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pipe rests on its support and its free end hangs or is held; it does not rise.",
+      "fail": "The pipe lifts off the bench and hangs in the air; or the softened part bends upward with nothing lifting it; or the pipe floats toward the dryer; or the free end rises with the hands gone."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pipe; it stays one piece and keeps its length apart from the bending.",
+      "fail": "The pipe breaks into two pieces; or a second pipe appears; or the pipe vanishes; or the pipe passes through the bench."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pipe's colour, the dryer and the bench stay the same.",
+      "fail": "The pipe changes colour; or the dryer changes shape; or items on the bench rearrange."
+    }
+  ],
+  "note": "The hands are kept because the straightening is the caption's action; they are otherwise not judged."
+}

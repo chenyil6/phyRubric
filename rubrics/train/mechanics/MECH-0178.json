@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0178",
+  "caption": "A gust of wind hits a dandelion clock standing in a meadow, and the seeds detach and drift away.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dandelion clock stands in a meadow."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A gust of wind hits it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The seeds detach."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The seeds drift away."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The gust comes first, then the seeds detach, then they drift."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Seeds leave in the direction of the wind and drift slowly, sinking gradually.",
+      "fail": "They fly against the wind; or shoot off fast like grains; or drift in different directions from one another on one gust."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The stalk is left bare where seeds left, and the seeds do not return or regrow.",
+      "fail": "Seeds return to the head; or the head refills; or the head stays full while seeds fly."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Seeds leave when the gust arrives.",
+      "fail": "They leave with the grass still; or the head stays intact through a gust that bends the grass; or they leave before the gust."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The seeds float slowly downward as they drift.",
+      "fail": "They rise steadily; or hang still; or drop like stones."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One dandelion keeps its stalk, and the seeds are its own.",
+      "fail": "The stalk vanishes; or a second head appears; or the seeds turn into other objects."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The meadow and the surroundings stay the same.",
+      "fail": "The grass changes colour; or the meadow rearranges; or the stalk changes."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0117",
+  "caption": "A sheet of newspaper is laid over a campfire, and the paper catches, curls, blackens, and falls apart into ash.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A campfire with flames is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A sheet of newspaper is laid over it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The paper catches fire."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The paper curls and blackens."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The paper falls apart into ash or flakes."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is laid, catches, curls and blackens, breaks apart."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The burn advances outward from where flame first touches the paper; burnt areas stay black and the paper only shrinks and darkens.",
+      "fail": "Blackened paper turns white again; or the paper grows back or uncurls to flat; or the flame front retreats leaving unburnt paper behind; or the fire starts from a spot no flame reached."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Flames on the paper point upward; light flakes may lift in the hot air, but heavier pieces and ash settle down into the fire.",
+      "fail": "Flames point downward; or the whole sheet lifts off the fire and hangs above it; or pieces of paper fall upward away from the fire in still air."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Burning paper curls, blackens and thins; it does not melt into liquid or drip.",
+      "fail": "The paper melts and runs like plastic; or stays flat and white while flames sit on it; or turns to ash without ever blackening or curling."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Where the paper covers the fire the flames respond: they lick around and through it, and smoke rises from it.",
+      "fail": "The paper sits on the flames with no darkening, smoke or flame reaching it; or flames pass through the sheet leaving it untouched."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The sheet and the fire keep their identity: the paper only shrinks, the logs stay the logs; nothing appears or vanishes abruptly.",
+      "fail": "The paper vanishes in a single step while still whole; or a second sheet appears; or ash appears far from the paper; or logs appear, vanish or pass through each other."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The newsprint pattern, the logs and the surroundings stay consistent apart from the burning.",
+      "fail": "The print on the unburnt part changes; or the logs rearrange; or the ground changes between frames."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0257",
+  "caption": "The light switch of a bathroom that also powers the extractor fan is flipped, and the fan blades spin up as the light comes on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bathroom with a light and an extractor fan."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The light switch is flipped."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The light comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The fan blades spin up."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The light is off and the fan still before the flip."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The fan starts as the light comes on, not long before or after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light comes on and the fan starts together at the moment the switch is flipped, and only then.",
+      "fail": "The switch is flipped and neither responds to the end of the clip; or the light comes on while the fan stays still to the end; or the fan runs while the light stays dark to the end; or the fan starts before the switch moves."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Before the flip the fan is still; afterwards it runs steadily and does not stop, start or reverse on its own.",
+      "fail": "The fan stops and restarts with the switch untouched; or turns slowly by itself before the flip; or reverses direction; or the fan grille rattles off."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once on, the light stays lit and the fan keeps running while the switch stays on.",
+      "fail": "The light goes out again with the switch on; or flickers; or the switch flips back by itself; or the fan winds down to a stop with the switch on."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light lights the bathroom: the walls and fittings brighten from the fixture.",
+      "fail": "The fixture glows while the room stays as dark as before; or the room brightens while the fixture stays dark; or the light comes from a place other than the fixture."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One light and one fan; both stay fixed in place; the hand passes through nothing.",
+      "fail": "The fan drops from the wall or ceiling; or a second fan or light appears; or the hand passes into the wall; or the fixture vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tiles, the fittings and the fan's grille stay the same apart from brightness.",
+      "fail": "The tiles change colour rather than brightness; or the grille changes pattern; or fittings move."
+    }
+  ],
+  "note": "The fan may be behind a grille; it is judged from visible blade motion or blur behind the grille."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0151",
+  "caption": "A cloud slides across the sun over a picnic table, and the whole scene dims.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A picnic table is in sunlight."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A cloud slides across the sun."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The whole scene dims."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Sharp shadows soften as the cloud moves in."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The dimming affects everything at once and the sharp shadows soften.",
+      "fail": "Only part of the scene dims; or the shadows stay sharp; or the scene brightens."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The dimming is gradual and follows the cloud.",
+      "fail": "It is instant; or it flickers; or it brightens while the cloud still covers the sun."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The cloud moves steadily and nothing on the table moves.",
+      "fail": "The cloud jumps; or objects on the table move; or the shadows swing round."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "Colours stay the same, only dimmer.",
+      "fail": "Objects change colour; or the grass changes colour; or the sky changes abruptly."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One table and its objects.",
+      "fail": "An object vanishes; or appears; or the table duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The table setting stays the same.",
+      "fail": "Items rearrange; or the table changes; or the surroundings change."
+    }
+  ]
+}

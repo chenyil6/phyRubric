@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0120",
+  "caption": "A dry log is tossed onto a campfire, and a burst of sparks flies up into the night.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A campfire burns."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A log is tossed onto the fire."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A burst of sparks flies up."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flames climb around the new log."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sparks go dark as they rise."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The toss comes first and the sparks follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sparks rise with the hot air above the fire, drift and go dark.",
+      "fail": "The sparks fall straight to the ground and lie there glowing; or sink below the fire; or hang still in the air; or travel downward from the fire into the ground."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The sparks leave the fire where the log lands, spread outward as they rise and their paths curve with the rising air.",
+      "fail": "The sparks rise in straight parallel lines with no spread; or fly out from a point away from where the log landed; or all turn together at the same instant as if steered; or race ahead of the rising smoke and stop dead."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The burst comes at the moment the log lands and then eases, and each spark only fades.",
+      "fail": "The sparks burst before the log lands; or a spark brightens again after fading; or the burst grows steadily with nothing added; or the burst stops and starts again with the fire untouched."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The log's landing shows: the fire's logs shift, the flames are pushed aside and then climb around the new log.",
+      "fail": "The log lands and the fire is unchanged, with the flames steady and the logs unmoved; or the flames are pushed aside before the log arrives; or the log rests on the flames without touching the wood beneath."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One log is added and the fire's logs keep their number; sparks come from the fire and go dark rather than vanishing at a stroke while bright.",
+      "fail": "The log vanishes on landing; or a second log appears in the air; or a log passes through another log; or sparks appear in the sky far from the fire with none rising there."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fire's stones, the ground and the surroundings stay the same.",
+      "fail": "The stones around the fire rearrange; or the ground changes texture; or the background changes between frames."
+    }
+  ]
+}

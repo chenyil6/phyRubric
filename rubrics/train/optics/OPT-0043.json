@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0043",
+  "caption": "A leaf is held up against the sun, and its shadow falls on the ground below.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A leaf is held up against the sun."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its shadow falls on the ground below."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The shadow has the leaf's outline."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow moves when the leaf moves."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the surface below, away from the sun, and moves when the leaf moves.",
+      "fail": "It lies toward the sun; or stays still while the leaf moves; or it is missing in sunlight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow has the leaf's outline.",
+      "fail": "It is a different shape; or splits; or it is a plain blob unlike the leaf."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move on its own.",
+      "fail": "It drifts with the leaf still; or moves before the leaf."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow is joined to the shadow of the hand or stem holding the leaf.",
+      "fail": "The leaf's shadow floats with no shadow of what holds it; or it is separated from the hand's shadow."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One leaf and one shadow.",
+      "fail": "A second leaf or shadow appears; or the leaf vanishes; or the shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The leaf's colour and the ground stay the same, and the shadow stays dark.",
+      "fail": "The leaf changes colour; or the shadow turns coloured; or the ground changes."
+    }
+  ],
+  "note": "The hand holding the leaf is the minimal trigger; the person is not judged."
+}

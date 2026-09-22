@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0065",
+  "caption": "A robot vacuum finishes cleaning and drives onto its charging dock, and a charging light on the dock comes on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A robot vacuum on a floor, and its charging dock."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The robot drives onto the dock and comes to rest against it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A light on the dock comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The robot is driving about the floor before it heads to the dock."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The light is on the dock, not on the robot."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is drive, dock, light."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The dock light is off while the robot is away and comes on when the robot comes to rest against the dock, and only then.",
+      "fail": "The robot sits on the dock and the light stays off; or the light is on while the robot is still crossing the floor; or the light comes on as the robot passes by without stopping at the dock."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once the robot is seated the light stays on for the rest of the clip while the robot stays on the dock.",
+      "fail": "The light goes out again with the robot still seated on the dock; or the robot leaves the dock and the light stays lit; or the light shifts from the dock to a spot on the robot."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The robot rolls across the floor on its wheels and comes to rest with its front against the dock.",
+      "fail": "The robot lifts off the floor as it nears the dock; or rides up on top of the dock; or slides sideways with its body facing away from its direction of travel."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The dock stays in place on the floor as the robot arrives; nothing else in the room moves.",
+      "fail": "The dock slides or turns by itself before the robot reaches it; or the dock jumps to a new spot; or furniture or rugs shift as the robot docks."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One robot and one dock; the robot keeps its body and does not pass into the dock or the wall.",
+      "fail": "The robot vanishes or a second robot appears; or the robot merges into the dock; or the robot passes through the wall or a piece of furniture; or the dock changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The floor pattern, the robot's colour and the dock's shape stay the same.",
+      "fail": "The robot changes colour; or the floor pattern changes; or the dock light moves to a different place on the dock."
+    }
+  ],
+  "note": "The robot is a self-driven machine: its turning, slowing and stopping are not causeless motion. 'Finishes cleaning' is read as the robot driving on the floor before it heads to the dock."
+}

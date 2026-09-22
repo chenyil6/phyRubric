@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0067",
+  "caption": "A pager on vibrate goes off on a nightstand and rattles against the wood.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pager lies on a wooden nightstand."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pager goes off: its screen lights or it begins to shiver."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It rattles against the wood: it shivers and hops in place."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "It stays on the nightstand."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "It lies still first and the rattling begins during the clip."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The pager moves only while it visibly shivers and is still otherwise.",
+      "fail": "The pager slides while lying perfectly still; or keeps moving after the shiver has stopped; or moves in one smooth glide with no shiver."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Other small loose objects on the nightstand tremble in the same bursts as the pager.",
+      "fail": "A coin, pen or pair of glasses beside it lies dead still while the pager rattles hard; or the other object rattles while the pager is still; or the two rattle at different moments.",
+      "precondition": "Other small loose objects lie on the nightstand."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pager stays flat on the nightstand; at the edge it would fall.",
+      "fail": "The pager hovers; or stands up on end; or rises."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wood and the pager stay rigid.",
+      "fail": "The wood ripples; or the pager bends; or the pager leaves a groove in the wood."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pager; it does not pass into the wood, duplicate or vanish.",
+      "fail": "A second pager appears; or it vanishes; or sinks into the wood; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pager's colour, its screen and the lamp beside it stay the same.",
+      "fail": "The pager changes colour; or its screen shows different content at random; or the lamp beside it changes."
+    }
+  ]
+}

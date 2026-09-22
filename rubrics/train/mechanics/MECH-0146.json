@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0146",
+  "caption": "Olive oil is poured into a glass of water, and the oil gathers in a layer floating on top of the water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass of water is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Olive oil is poured into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The oil gathers into a layer floating on top of the water."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pour comes first and the layer forms after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The oil sinks briefly in blobs as it lands and then rises to the surface, ending on top.",
+      "fail": "The oil settles at the bottom; or it sinks and stays under; or the water rises above the oil."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "Oil and water stay separate, with blobs and a clear boundary and no mixing.",
+      "fail": "The oil dissolves into the water; or it turns into a solid; or it foams up like soap."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The oil layer thickens while pouring and holds.",
+      "fail": "The layer shrinks with oil still pouring; or the oil goes back into the bottle; or the layer is there before the pour."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The stream falls as a thin liquid thread.",
+      "fail": "The oil pours as a rigid rod; or as beads that bounce; or as a powder."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass, and oil comes only from the pour.",
+      "fail": "Oil appears in the glass with no stream; or the glass duplicates; or oil passes through the glass wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass, the bottle and the background stay the same.",
+      "fail": "The oil changes colour; or the glass changes shape; or the background rearranges."
+    }
+  ]
+}

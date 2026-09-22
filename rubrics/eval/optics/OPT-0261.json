@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0261",
+  "caption": "A bird lands on the edge of a car's side mirror, and its reflection appears in the glass and moves in step with it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bird lands on the edge of a car's side mirror."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its reflection appears in the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The reflection moves in step with the bird."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection is mirrored."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection appears the moment the bird is in front of the mirror and moves at the same instant as the bird.",
+      "fail": "It lags; or appears before the bird arrives; or stays after the bird flies off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "There is one bird and one reflection, and the reflection stays in the glass.",
+      "fail": "A second bird appears; or the reflection steps out; or the bird vanishes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image of the bird.",
+      "fail": "It is a different bird; or not mirrored; or upside down."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mirror is rigid: the reflection is undistorted.",
+      "fail": "It ripples; or warps; or bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The bird keeps its wings and shape.",
+      "fail": "A wing detaches; or the bird splits; or merges with the mirror."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plumage and the car stay the same.",
+      "fail": "The plumage changes; or the car changes colour; or the mirror housing changes."
+    }
+  ],
+  "note": "Self-driven animal: where it goes is not judged. Only the reflection's relation to it is."
+}

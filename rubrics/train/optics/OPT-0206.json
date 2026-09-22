@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0206",
+  "caption": "Yellow and red watercolour are dripped onto a wet sheet of paper, and where they run together an orange band forms.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wet sheet of paper is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Yellow and red watercolour are dripped onto it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They run together."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "An orange band forms where they meet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pure colours remain at the edges."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The orange forms only where the two colours meet and spreads as they bleed; it does not retreat.",
+      "fail": "The orange shrinks; or the colours separate again; or orange appears where they have not met."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The mix is orange, and the pure yellow and red remain at the edges.",
+      "fail": "The mix is a colour other than orange; or the pure colours change; or the whole sheet turns one colour at once."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Wet watercolour bleeds and feathers on the paper.",
+      "fail": "It stays as hard-edged blobs; or beads up and rolls; or the paper stays dry."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The drops fall onto the paper and the paint runs where the paper slopes.",
+      "fail": "The drops rise; or the paint runs uphill; or the drops hang."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet.",
+      "fail": "It duplicates; or vanishes; or paint appears from nowhere."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The paper and the table stay the same.",
+      "fail": "The paper changes shape; or the table changes; or the dropper changes."
+    }
+  ]
+}

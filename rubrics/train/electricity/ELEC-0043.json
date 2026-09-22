@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0043",
+  "caption": "The plug of a lit table lamp is pulled out of the wall socket, and the lamp goes out.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A table lamp is lit."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its plug is in a wall socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The plug is pulled out of the socket."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The lamp goes out."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "A cord connects the lamp to the plug."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is lit, plug pulled, out."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lamp goes dark at the moment the plug leaves the socket, and only then.",
+      "fail": "The plug is out and the lamp still shines; or the lamp goes out before the plug moves; or the lamp goes out with the plug still seated."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once unplugged the lamp stays dark; it does not relight while the plug is out.",
+      "fail": "The lamp comes back on while the plug is out; or flickers between lit and dark; or keeps glowing for the rest of the clip after being unplugged."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light the lamp cast disappears with it: the shade darkens and the surfaces it lit go dimmer.",
+      "fail": "The bulb goes dark while its light on the table and wall stays; or the room brightens as the lamp goes out; or the shade keeps glowing with the bulb dark."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord follows the plug: it slackens and drops when pulled free and stays attached at both ends.",
+      "fail": "The cord stretches like elastic; or stands rigid in the air after the plug is out; or floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp, one cord, one plug and one socket; the plug leaves the socket whole and nothing passes through the wall or table.",
+      "fail": "The plug vanishes or a second plug appears; or the plug passes through the wall; or the socket moves; or the cord splits or detaches; or the lamp changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lamp's shade colour and the room stay the same apart from the light.",
+      "fail": "The shade changes colour rather than brightness; or the wall changes; or the socket's design changes."
+    }
+  ]
+}

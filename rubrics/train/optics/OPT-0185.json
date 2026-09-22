@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0185",
+  "caption": "A crystal chandelier catches afternoon sunlight, and little flecks of rainbow light scatter across the walls and ceiling.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A crystal chandelier hangs in afternoon sunlight."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Little flecks of rainbow light scatter across the walls and ceiling."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The flecks move when the chandelier sways."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "They vanish when the sun is blocked."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flecks appear only while the sun hits the crystals and vanish when the sun is blocked.",
+      "fail": "They are there with the sun blocked; or the crystals are in sun with no flecks; or the flecks are on the sun side only."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The flecks move only when the chandelier sways.",
+      "fail": "They dance with the chandelier still; or stay put while it sways; or flicker in steady sun."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The flecks are rainbow-coloured.",
+      "fail": "They are all white; or a single colour; or they change colour with nothing moving."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The flecks are many small spots.",
+      "fail": "They merge into one flood; or are large squares; or a single spot."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One chandelier.",
+      "fail": "A second appears; or it vanishes; or a fleck becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room stays the same.",
+      "fail": "Furniture rearranges; or the walls change; or the chandelier changes shape."
+    }
+  ]
+}

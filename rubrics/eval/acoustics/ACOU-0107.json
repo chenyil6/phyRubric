@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0107",
+  "caption": "A pinch of chalk dust lies on a large cymbal; the cymbal is struck once and the dust flies up in a puff.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A large cymbal with a pinch of chalk dust on it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cymbal is struck once."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dust flies up in a puff."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The strike is a single hit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike comes first and the puff follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The dust is still until the strike and lifts at the blow.",
+      "fail": "Dust lifts before the stick reaches the cymbal; or puffs with the stick held away; or the stick lands and the dust stays put."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The blow lifts the dust and sets the cymbal wobbling on its stand; the dust then drifts down.",
+      "fail": "The stick lands, the dust flies and the cymbal stays perfectly rigid with no wobble; or the dust settles back into its exact original pinch; or the dust puffs up and is then drawn back down onto the cymbal into a heap."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The dust cloud drifts and sinks.",
+      "fail": "The dust cloud rises steadily out of view like smoke; or hangs frozen in the air; or falls as a solid lump."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cymbal is a rigid disc and the stick rebounds from it.",
+      "fail": "The stick sinks into the cymbal; or the cymbal ripples like cloth; or bends and stays bent."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cymbal, one stick; the stick does not pass through the cymbal.",
+      "fail": "A second cymbal appears; or the stick passes through the cymbal; or the cymbal vanishes; or the dust turns into a solid object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cymbal's colour, the stand and the dust's colour stay the same.",
+      "fail": "The cymbal changes colour; or the stand changes; or the dust changes colour."
+    }
+  ]
+}

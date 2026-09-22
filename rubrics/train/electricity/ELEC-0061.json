@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0061",
+  "caption": "A glowing electric heater is unplugged, and the orange glow of its elements fades to dark.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An electric heater with elements glowing orange."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The heater is unplugged."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The glow fades to dark."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The elements are glowing before the pull."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is glowing, unplug, fading."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow begins to fade after the plug leaves the socket, not before; any fan stops at once.",
+      "fail": "The plug is out and the elements stay at full glow to the end of the clip; or the glow fades before the plug moves; or the glow fades with the plug still seated; or the fan runs on with the plug out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fade runs one way, from bright orange through dull red toward dark, and never brightens again; it is gradual, not a switch-off.",
+      "fail": "The elements brighten after unplugging; or go dark and return; or pulse; or the glow goes out instantly like a lamp and the elements show no dull red."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The whole element follows the same one-way fade; the glow does not skip about.",
+      "fail": "One part of an element goes dark while another brightens; or the glow moves along the element like a travelling light; or a dark element relights."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord follows the plug: it slackens and drops once the plug is free; the heater stays put.",
+      "fail": "The cord stretches like elastic; or stands rigid in the air after the plug is out; or the heater is dragged over by the pull."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One heater, one cord, one plug, one socket; the elements keep their shape; the plug leaves the socket whole.",
+      "fail": "An element vanishes rather than going dark; or the plug passes through the wall; or the cord splits; or the heater changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The heater's casing, the grille and the room stay the same apart from the glow.",
+      "fail": "The casing changes colour; or the grille pattern changes; or the room's contents rearrange."
+    }
+  ],
+  "note": "How fast the glow fades and how far it has faded by the end are not judged, only that it fades one way after the pull."
+}

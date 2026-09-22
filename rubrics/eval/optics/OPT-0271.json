@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0271",
+  "caption": "A straw stands in a glass holding a layer of oil floating on water, and it looks bent twice, once at the oil's surface and again at the boundary between oil and water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A straw stands in a glass holding a layer of oil floating on water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It looks bent twice: at the oil's surface and at the oil-water boundary."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The part above the liquid is unchanged."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Both kinks vanish when the straw is lifted out."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The straw itself is straight; both kinks are appearances that vanish out of the liquid.",
+      "fail": "The straw is physically bent when out; or a kink stays at a fixed point on the straw as it is raised; or the straw flexes."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Both kinks sit exactly at the two liquid surfaces.",
+      "fail": "A kink is away from a surface; or there is only one kink with two plain boundaries; or the straw looks straight through both layers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The oil floats on the water with a level boundary.",
+      "fail": "The oil is below the water; or the layers mix; or the boundary tilts and holds."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The straw moves only with the hand.",
+      "fail": "It rises by itself; or slides; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One straw and one glass.",
+      "fail": "The straw duplicates; or the glass vanishes; or the straw passes through the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The straw and the glass stay the same.",
+      "fail": "The straw changes colour; or the glass changes shape; or the table changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

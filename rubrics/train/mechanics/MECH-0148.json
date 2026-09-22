@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0148",
+  "caption": "A jar of honey is tipped over a slice of toast, and the honey flows out in a slow thick ribbon onto the toast.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A jar of honey is tipped over a slice of toast."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Honey flows out of the jar."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It lands on the toast."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flow is a slow thick ribbon."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tip comes first and the flow follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The ribbon is unbroken and thick, piling up and spreading slowly on the toast; it does not pour thin and fast like water.",
+      "fail": "It pours thin and fast like water; or it comes out as beads that bounce; or it comes out as a solid stick."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The ribbon falls straight down from the jar's lip to the toast.",
+      "fail": "It curves upward or sideways; or it flows back into the jar; or it hangs without reaching the toast."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The pile on the toast grows while pouring and only spreads.",
+      "fail": "The pile shrinks with honey still pouring; or it is there before the jar tips; or it jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The jar's tilt produces the flow: honey comes out only while the jar is tipped.",
+      "fail": "Honey pours from an upright jar; or the jar is tipped and nothing comes out; or the ribbon continues after the jar is righted.",
+      "precondition": "The jar's tilt is visible in the clip."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One jar, and honey comes only from it.",
+      "fail": "Honey appears on the toast with no ribbon; or the jar duplicates; or honey passes through the jar wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The honey's colour, the jar and the plate stay the same.",
+      "fail": "The honey changes colour; or the jar changes shape; or the plate rearranges."
+    }
+  ]
+}

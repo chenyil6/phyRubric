@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0036",
+  "caption": "A garden hose sprays an arc of water in the evening sun, and the shadow of the arc falls on the soil beside it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A garden hose sprays an arc of water in the evening sun."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The shadow of the arc falls on the soil beside it."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The shadow follows the curve of the stream."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow flickers as the water moves."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow follows the curve of the stream and lands on the side away from the sun.",
+      "fail": "It lies toward the sun; or it is a straight line under a curved stream; or it is missing in sunlight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the arc's shape and flickers as the water moves.",
+      "fail": "It is rigid and unflickering while the water plainly moves; or it is a different shape; or it splits into unrelated pieces."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow moves only as the stream moves and would vanish if the tap were closed.",
+      "fail": "It moves with the stream steady; or it stays after the water stops; or it appears before the water."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The stream arcs and falls, and the shadow lies on the soil.",
+      "fail": "The stream curves upward; or the shadow stands up off the soil; or the water hangs."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One hose and one stream with its shadow.",
+      "fail": "A second stream appears; or the shadow becomes solid; or water appears from nowhere."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hose and the garden stay the same, and the shadow stays dark.",
+      "fail": "The hose changes colour; or the shadow turns coloured; or the garden rearranges."
+    }
+  ]
+}

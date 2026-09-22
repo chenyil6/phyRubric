@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0165",
+  "caption": "An hourglass is turned over on a desk, and sand runs from the top chamber into the bottom one.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An hourglass stands on a desk."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is turned over."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Sand runs from the top chamber into the bottom one."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The turn comes first and the flow follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The top empties and the bottom fills steadily, and the flow never reverses or stops midway.",
+      "fail": "The flow reverses; or it stops with sand left above; or the bottom fills before the flip."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The sand runs down through the neck in a thin stream and builds a cone below.",
+      "fail": "Sand rises; or hangs in the neck; or the cone builds on the ceiling of the chamber."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The stream is thin and steady and the cone slumps at the sides.",
+      "fail": "Sand pours as a lump; or as liquid with a flat surface; or the cone is a column."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The hourglass stays put after the flip.",
+      "fail": "It slides; or tips; or sand flows with the hourglass still upright and full below."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One hourglass, and the sand keeps its total.",
+      "fail": "Sand appears from nowhere; or vanishes; or the hourglass duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hourglass's frame, the sand's colour and the desk stay the same.",
+      "fail": "The frame changes; or the sand changes colour; or the desk rearranges."
+    }
+  ]
+}

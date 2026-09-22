@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0065",
+  "caption": "A large bell in a tower is rung by a rope, and it swings back and forth with the clapper striking it on each swing.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A large bell hangs in a tower."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A rope pulls it: the rope moves."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bell swings back and forth."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The clapper strikes the bell on each swing."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Each pull of the rope precedes a swing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The bell swings about its pivot as the rope moves; the rope and the bell move together.",
+      "fail": "The bell swings while the rope hangs slack and still for the whole clip; or the bell swings sideways across its pivot; or spins around its vertical axis; or the rope moves and the bell hangs dead still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "While the rope is pulled the arcs hold or grow; once the pulling stops the arcs shrink.",
+      "fail": "The arcs grow with the rope hanging slack; or the bell stops dead at the top of a swing; or the clapper stays pinned to the centre of the bell throughout while the bell swings."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bell hangs below its pivot with its mouth down at rest; the clapper hangs down inside it.",
+      "fail": "The bell rests tilted with nothing holding it; or the clapper hangs upward; or the bell rises above its pivot and stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The clapper swings inside the bell, hits the rim and falls back.",
+      "fail": "The clapper hangs frozen against one side for the whole swing; or strikes the outside of the bell; or leaves the bell and swings outside it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bell with one clapper; a continuous rope; nothing passes through the bell or the beams.",
+      "fail": "A second bell appears; or the clapper vanishes; or the clapper passes through the bell wall; or the rope passes through the wheel or beams."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bell's colour, the tower stones and the rope stay the same.",
+      "fail": "The bell changes colour; or the tower stones shift; or the rope changes colour."
+    }
+  ],
+  "note": "Whoever pulls the rope is a trigger and is not judged."
+}

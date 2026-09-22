@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0263",
+  "caption": "A tin can lying on its side and a wooden block are given the same shove across a floor; the can rolls far while the block stops within a short distance.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tin can lying on its side and a wooden block are on a floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Both are given a shove."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The can rolls far."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The block stops within a short distance."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shove is the same for both."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The shove comes first and the two outcomes follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Both start together, the block slows quickly and stops, and the can rolls on much further.",
+      "fail": "The block goes further than the can; or both stop together; or the can stops dead."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Neither speeds up or changes direction on its own.",
+      "fail": "One speeds up; or curves; or restarts."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Both stay on the floor.",
+      "fail": "One floats; or sinks; or lifts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The can rolls, turning, and the block slides without turning.",
+      "fail": "The block rolls like a can; or the can slides without turning; or the can squashes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One can and one block keep their number.",
+      "fail": "One duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The can, the block and the floor stay the same.",
+      "fail": "The can changes label; or the block changes; or the floor rearranges."
+    }
+  ]
+}

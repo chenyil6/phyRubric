@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0076",
+  "caption": "An aquarium pump is plugged into the wall, and bubbles start rising from the air stone in the tank.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An aquarium tank with water and an air stone in it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pump's plug is pushed into a wall socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Bubbles rise from the air stone."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "No bubbles rise before the plug goes in."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is plug in, then bubbles."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Bubbles begin at the air stone when the plug seats in the socket, and only then.",
+      "fail": "The plug is in and no bubbles come from the stone; or bubbles stream before the plug reaches the socket; or bubbles appear elsewhere in the tank while the stone gives none."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Before plugging in the water is still with no bubbles; afterwards the stream runs continuously while the plug stays in.",
+      "fail": "Bubbles start and stop with the plug seated and untouched; or the water surface churns before any bubble rises; or the air tubing whips about by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Bubbles rise from the stone to the surface and break there; none sink or hover.",
+      "fail": "Bubbles sink toward the gravel; or hang still in the water; or run back down into the stone."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Where the stream reaches the surface the water ripples, and plants in the stream sway with it.",
+      "fail": "The stream reaches the surface and the surface directly above the stone stays glassy still; or ripples appear far from the stream while the surface above it is still; or plants far from the stream sway while those in it stay rigid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tank, one air stone, one plug; bubbles form at the stone; the tank's glass stays whole.",
+      "fail": "Bubbles appear from nowhere in mid-water away from the stone; or the air stone vanishes or a second one appears; or water passes through the glass; or the plug passes into the wall beside the socket."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The gravel, decorations and the tank's frame stay the same.",
+      "fail": "The gravel changes colour; or decorations move or change; or the air stone changes shape."
+    }
+  ],
+  "note": "Fish are self-driven and are not judged."
+}

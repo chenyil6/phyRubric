@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0149",
+  "caption": "One bar magnet is pushed toward the like end of another lying on a table, and the second magnet slides away from the first.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two bar magnets, one lying on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "One magnet is pushed toward the like end of the other."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The second magnet slides away from the first."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pushed magnet is moved by hand; the other is not touched."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The approach comes first and the sliding away follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The free magnet lies still until the other is close, moves away only while the other approaches, and stops once the gap is large enough or the other stops.",
+      "fail": "The free magnet moves while the other is still far away; or keeps sliding to the end of the clip after the other has stopped; or moves before the other has begun to approach; or slides about with the pushed magnet held still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The free magnet slides straight away along the line joining the two, on the table surface, and may turn end for end but does not move toward the other.",
+      "fail": "The free magnet moves toward the pushed one and sticks; or slides off sideways at right angles to the approach; or lifts off the table; or moves away and then comes back and joins."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Other items on the table stay still; the table does not move.",
+      "fail": "Other items slide as the magnet approaches; or the table shifts; or the pushed magnet is pushed back into the hand."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Both bars stay rigid and keep their shape; the table surface stays flat.",
+      "fail": "A bar bends or squashes; or the table dents; or a bar stretches."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two bars throughout; neither vanishes, duplicates or passes through the other or the table.",
+      "fail": "A third bar appears; or a bar vanishes; or one bar passes through the other; or a bar sinks into the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bars' colours and pole markings and the table stay the same.",
+      "fail": "A bar changes colour; or its pole markings swap; or the table surface changes."
+    }
+  ],
+  "note": "The free magnet turning end for end and then snapping onto the other is the expected behaviour when the like poles are not kept aligned; it is not a violation."
+}

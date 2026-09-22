@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0164",
+  "caption": "A lighter is struck in a dark garage and held up, and the small flame lights the nearby tools and bench.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lighter is struck in a dark garage."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is held up."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The small flame lights the nearby tools and bench."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Only things near the flame are visible."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The light flickers."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Only things near the flame are visible, lit from the flame's direction.",
+      "fail": "The far wall is as bright as the bench; or the near tools stay dark; or the light comes from elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The light is warm and flickers with the flame.",
+      "fail": "It is steady white; or a different colour; or the tools change colour rather than brightness."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lit area moves only with the lighter and would go out when it closes.",
+      "fail": "It drifts with the lighter still; or stays lit after the flame is out; or appears before the strike."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flame points upward.",
+      "fail": "It points down or sideways in still air; or detaches; or floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lighter and one flame.",
+      "fail": "A second flame appears; or the lighter vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bench and tools stay the same.",
+      "fail": "Tools rearrange; or the bench changes; or the lighter changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

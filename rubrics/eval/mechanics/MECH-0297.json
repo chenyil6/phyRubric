@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0297",
+  "caption": "A coin is pushed under the edge of a rug, and when the rug is lifted the coin lies where it was pushed.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A coin is pushed under the edge of a rug."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The rug is lifted."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The coin lies where it was pushed."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The push comes first, then the lift, then the coin is seen."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The coin is hidden while covered and is the same coin, in that spot, when the rug is lifted.",
+      "fail": "It is gone; or a different coin; or it is elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The coin is not visible through the rug.",
+      "fail": "It shows through the rug; or passes through the rug; or the rug passes through the coin."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The coin moves only when pushed.",
+      "fail": "It slides alone; or jumps; or moves under the rug by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The coin lies flat on the floor.",
+      "fail": "It floats; or stands on edge; or rises into the rug."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One coin and one rug keep their number.",
+      "fail": "The coin duplicates; or the rug vanishes; or the coin turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rug's pattern and the floor stay the same.",
+      "fail": "The pattern changes; or the floor changes; or the room rearranges."
+    }
+  ]
+}

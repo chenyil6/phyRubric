@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0288",
+  "caption": "Sheets of paper are slid one at a time under a fridge magnet, and after several sheets the magnet loses its grip and slides down the door.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A fridge magnet on a fridge door."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Sheets of paper are slid one at a time under the magnet."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "After several sheets the magnet loses its grip and slides down the door."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The magnet holds through the first sheets."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sheets go in one at a time, not as a stack."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The magnet holds the first sheets against the door and gives way only when the stack has grown thick; it does not hold no matter how thick the stack.",
+      "fail": "The magnet drops at the first sheet; or holds every sheet to the end of the clip however thick the stack; or the magnet slides while no new sheet is being added and the stack is still thin; or the stack stays up after the magnet has slid off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "When the magnet loses grip it slides downward along the door or drops; it does not move up or sideways.",
+      "fail": "The magnet slides up the door; or moves sideways along the door; or floats away from the door; or slides down and then rises back."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The sheets are paper: they slide in flat, bend slightly and hang as a stack; the magnet stays a hard piece.",
+      "fail": "The sheets stand rigid like boards; or stretch; or the magnet squashes; or the paper flows into the door."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The magnet stays still between sheets; the fridge door does not move; other items on the door stay put.",
+      "fail": "The magnet creeps while no sheet is being slid; or other magnets on the door drop; or the door swings open; or the sheets slide out by themselves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One magnet on the outside of the door with the sheets between; nothing sinks into or passes through the door.",
+      "fail": "The magnet sinks into the door; or a sheet passes through the door or the magnet; or a second magnet appears; or the sheets vanish."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The magnet's colour and design, the door and the sheets stay the same.",
+      "fail": "The magnet changes colour or shape; or the door changes colour; or the sheets change size."
+    }
+  ],
+  "note": "How many sheets it takes is not judged, only that the magnet holds at first and gives way later."
+}

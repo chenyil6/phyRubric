@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0163",
+  "caption": "A lit candle is carried down a dark staircase, and the light on the walls travels with the candle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lit candle is carried down a dark staircase."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The light on the walls travels with the candle."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The light flickers with the flame."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The walls darken behind as the candle moves on."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The walls are brightest near the flame and darken behind as the candle moves on.",
+      "fail": "The light stays put while the candle moves; or walls stay lit behind; or light appears ahead."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The lit area moves only with the candle and flickers only with the flame.",
+      "fail": "It drifts with the candle still; or pulses with a steady flame; or jumps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flame points upward.",
+      "fail": "It points down or sideways in still air; or detaches; or floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Shadows on the walls point away from the flame.",
+      "fail": "They point toward it; or in several directions; or there are none."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One candle and one flame.",
+      "fail": "A second flame appears; or the candle vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The staircase stays the same.",
+      "fail": "The steps change; or the walls change colour rather than brightness; or the candle changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0062",
+  "caption": "A soft ball is tossed in a gentle arc across a lawn and lands in a laundry basket standing on the grass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A soft ball is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A laundry basket stands on grass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ball is tossed and travels through the air toward the basket."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The ball lands in the basket."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The toss is a gentle lob in an arc, not a hard throw."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The setting is a lawn."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "In flight the ball follows one smooth curve that rises, peaks and falls; its sideways motion keeps going in the same direction until it lands.",
+      "fail": "The ball flies in a straight line at constant height; or hangs at the top of its arc; or changes direction midway with nothing touching it; or stops and then continues."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "After the peak the ball descends, and once in the basket it stays down.",
+      "fail": "The ball rises again after starting to fall; or bobs up out of the basket with nothing pushing it; or drifts sideways over the basket without descending."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The soft ball rebounds little: it may flex on impact and settle; the basket stays rigid and at most rocks.",
+      "fail": "The ball bounces back out as high as it came in; or the ball flattens and stays flat; or the basket crumples or ripples like cloth under the ball."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The basket stays still until the ball arrives.",
+      "fail": "The basket slides or rocks before the ball reaches it; or moves toward the ball as if to catch it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball, one basket; both keep their shape and identity, and the ball passes through neither the basket wall nor the ground.",
+      "fail": "The ball vanishes in flight or a second ball appears; or the ball turns into another object; or it passes through the basket wall or the ground."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball keeps its colour and size in flight; the basket and lawn stay unchanged.",
+      "fail": "The ball changes colour or size while in the air; or the basket changes pattern; or the lawn changes texture."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0262",
+  "caption": "A dog trots along a jetty over a still lake, and its upside-down reflection trots beneath it in the water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog trots along a jetty over a still lake."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its upside-down reflection trots beneath it in the water."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflection is joined to the jetty's reflection at the waterline."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection blurs only where a ripple passes."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection moves with the dog and blurs only where a ripple passes.",
+      "fail": "It stays still while the dog trots; or is blurred on flat water; or sharp across plain ripples."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is inverted and joined to the jetty's reflection at the waterline.",
+      "fail": "It is upright; or detached from the jetty's reflection; or a different dog."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It moves with the dog still; or drifts across the lake."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid: ripples pass and fade.",
+      "fail": "It is rigid; or ripples freeze; or the water leaps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One dog and one reflection; the reflection stays on the water.",
+      "fail": "A second dog appears; or the reflection rises off the water; or the dog vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dog's coat and the jetty stay the same.",
+      "fail": "The coat changes; or the jetty changes; or the water changes colour."
+    }
+  ],
+  "note": "Self-driven animal: where it goes is not judged. Only the reflection's relation to it is."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0041",
+  "caption": "A dog walks between a campfire and a tent at night, and a huge shadow of the dog sweeps across the tent wall.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A campfire burns at night beside a tent."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A dog walks between the fire and the tent."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A huge shadow of the dog sweeps across the tent wall."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow is larger than the dog."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shadow flickers with the flames."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow is on the tent side away from the fire and moves as the dog moves.",
+      "fail": "It is on the fire side; or it stays still while the dog walks; or it is missing with the fire lit."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the dog's outline, larger than the dog and flickering with the flames.",
+      "fail": "It is a different animal's shape; or smaller than the dog; or rigid and unflickering while the flames plainly move."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The shadow moves the opposite way to the dog across the tent wall as the dog approaches the fire.",
+      "fail": "It moves the same way; or stays put; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move except with the dog and the flames.",
+      "fail": "It sweeps with the dog still and the flames steady; or it moves before the dog."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One dog, one fire and one shadow.",
+      "fail": "A second dog or shadow appears; or the dog vanishes; or the shadow becomes solid; or the dog passes through the tent."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dog's coat and the tent stay the same, and the shadow stays dark.",
+      "fail": "The coat changes colour; or the shadow turns coloured; or the tent changes."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the shadow's relation to it is."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0176",
+  "caption": "A magnetic pickup tool is lowered into an engine bay toward a dropped nut, and the nut clicks onto its tip and is lifted out.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An engine bay with a nut lying loose in it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnetic pickup tool is lowered toward the nut."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The nut attaches to the tool's tip."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The tool is lifted out of the bay with the nut on its tip."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The nut is a single small nut."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is lower, attach, lift out."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The nut lies still until the tip is close to it, then moves to the tip; it does not move while the tip is elsewhere.",
+      "fail": "The nut slides or jumps while the tip is still high above it or off to one side; or the nut hops before the tool enters the bay; or the nut moves away from the tip as it approaches."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Once on the tip the nut hangs from it in contact and rises with the tool, staying attached through the lift unless pulled off.",
+      "fail": "The nut hangs in the air below the tip without touching it; or rises ahead of the tip; or drops off during the lift with nothing touching it; or floats up out of the bay on its own."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Hoses, cables and engine parts stay still as the tool passes; only the nut responds; once out, the nut stays put on the tip.",
+      "fail": "Hoses or cables sway toward the tool with nothing touching them; or an engine part shifts as the tool passes; or the nut turns or slides about on the tip after the tool is out."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The nut and the tool's tip stay hard and keep their shape; the nut sits on the tip's face or edge as a separate piece.",
+      "fail": "The nut squashes or stretches as it meets the tip; or the tip droops under the nut; or the tool's shaft stretches longer as it is raised."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One nut and one tool; the nut is lifted out whole, outside the tool and the engine parts; nothing vanishes.",
+      "fail": "The nut vanishes from the tip during the lift; or a second nut appears on the tip; or the tool passes through a hose or engine part; or the nut sinks into the tip."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The engine bay's parts, hoses and colours and the tool's colour stay the same.",
+      "fail": "Hoses change colour or route; or engine parts change shape; or the tool changes colour or length."
+    }
+  ]
+}

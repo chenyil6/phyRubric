@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0177",
+  "caption": "A balloon is rubbed on a wool sweater and pressed against a wall, and it stays stuck to the wall when released.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A balloon is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is rubbed against a wool sweater."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It is pressed against a wall."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It stays on the wall after being released."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sweater is woolly or knitted."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is rub, press, release, stays."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "After release the balloon stays against the wall unsupported; if it lets go it slides or peels down, it does not launch off.",
+      "fail": "The balloon falls the instant it is released; or drifts away from the wall or up to the ceiling with nothing lifting it; or hangs a gap away from the wall."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "If the balloon comes off it moves downward, sliding along or falling from the wall; the sweater and hands obey gravity.",
+      "fail": "The balloon comes off and moves upward or sideways along the wall; or hangs in mid-air away from the wall; or the sweater floats."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The balloon is a light elastic shell: it dents slightly where pressed and springs back.",
+      "fail": "The balloon keeps a deep dent after the hand leaves; or stretches out like taffy; or the wall surface dents under it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The balloon moves only when handled: it is still on the wall after release, small drifts aside, and does not slide around or spin.",
+      "fail": "The balloon travels across the wall by itself; or spins in place while stuck; or jumps to a different spot on the wall."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon; it passes through nothing and does not duplicate or vanish; the hand keeps its fingers.",
+      "fail": "The balloon passes into the wall; or a second balloon appears; or it vanishes or turns into another object; or fingers pass through the balloon."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour and the wall stay the same; the sweater keeps its colour and pattern.",
+      "fail": "The balloon changes colour or size, slight dents aside; or the wall changes; or the sweater changes pattern."
+    }
+  ],
+  "note": "An air-filled balloon is implied: a helium balloon would float without being rubbed and pressed, so a balloon that rises away from the wall fails P1."
+}

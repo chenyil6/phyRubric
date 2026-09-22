@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0135",
+  "caption": "An old-fashioned knife switch is thrown closed, and a small arc snaps at the contacts as they close.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An old-fashioned knife switch with a hinged blade and contacts."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The switch is thrown closed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A small arc snaps at the contacts as they close."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The arc is at the contacts, not on the handle."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The blade closes first and the arc comes as it meets the contacts."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The arc is a brief flash at the contacts at the moment of closing, and is gone; the switch stays closed.",
+      "fail": "The arc glows on between the contacts after the switch is closed; or an arc appears while the blade is still far from the contacts; or the switch springs back open by itself; or the arc appears at the handle or the base."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One switch with one blade and its contacts; the parts stay attached; the arc leaves nothing behind.",
+      "fail": "The blade vanishes or a second blade appears; or a contact vanishes; or a glowing dot stays on the contacts after the flash; or the switch changes shape."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "A device wired to the switch comes on as the switch closes and stays on while it is closed.",
+      "fail": "The device comes on before the blade reaches the contacts; or the switch is closed and the device stays off to the end of the clip; or the device comes on and goes off again with the switch closed and untouched.",
+      "precondition": "A lamp or other device wired to the switch is in view."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The blade swings about its hinge in one motion down onto the contacts and stays there.",
+      "fail": "The blade bends as it swings; or slides sideways off its hinge; or bounces up and down on the contacts several times; or the base moves as the blade is thrown."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The blade seats between the contact jaws from outside; the hand passes through nothing; the switch stays on its base.",
+      "fail": "The blade passes through the contacts or the base; or fingers pass through the handle; or the switch sinks into the board; or the blade merges with the contacts."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The switch's metal and base colours, the board and the wiring stay the same.",
+      "fail": "The base changes colour; or the wiring changes route; or the blade changes shape or length."
+    }
+  ]
+}

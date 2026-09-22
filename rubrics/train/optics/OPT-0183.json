@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0183",
+  "caption": "A garden hose sprays a fine mist with the sun behind it, and a small rainbow appears in the spray.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A garden hose sprays a fine mist."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sun is behind it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A small rainbow appears in the spray."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rainbow disappears when the water is turned off."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The rainbow appears within the mist while the spray runs and is not on the ground or in dry air.",
+      "fail": "It is on the ground; or in dry air beside the spray; or the spray runs in sunlight with no rainbow."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The rainbow exists only with the mist and would vanish when the water is turned off.",
+      "fail": "It stays with the water off; or appears before the spray; or two rainbows appear from one spray."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The rainbow shows the spectrum's order in a band.",
+      "fail": "It is a single colour; or the colours are in random order; or it changes colours."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The mist drifts and falls.",
+      "fail": "It rises indefinitely; or hangs; or falls upward."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One hose and one spray.",
+      "fail": "A second hose appears; or the spray comes from nowhere; or the rainbow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The garden and the hose stay the same.",
+      "fail": "The garden rearranges; or the hose changes colour; or the sky changes abruptly."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0254",
+  "caption": "The touch panel of an induction hob is tapped, and the ring's indicator light comes on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An induction hob with a touch panel."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The panel is tapped."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A ring's indicator light comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The indicator is dark before the tap."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, tap, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The indicator lights at the moment the fingertip touches the panel, and only then.",
+      "fail": "The panel is tapped and the indicator stays dark; or the indicator is lit before the touch; or it comes on with the hand away from the panel; or a different ring's indicator lights instead."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the indicator stays on steadily until the panel is tapped again.",
+      "fail": "The indicator goes out with nothing touching the panel; or flickers; or cycles through symbols with the hand withdrawn; or lights and goes out at once."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The hob and anything on it stay still as the panel is tapped.",
+      "fail": "A pan on the hob slides or rattles at the tap; or the hob shifts; or the panel's symbols move across the glass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The indicator's glow is small and sits at its ring's marker on the glass.",
+      "fail": "The glow appears away from any ring marker; or the whole glass lights up; or the ring itself glows red like a coil."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One hob with its glass top whole; the finger touches the glass and passes through nothing.",
+      "fail": "The finger passes into the glass; or the hob changes shape; or a pan sinks into the glass; or a second hob appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hob's glass, its printed markings and the counter stay the same apart from the light.",
+      "fail": "The markings change layout; or the glass changes colour; or the counter's contents rearrange."
+    }
+  ]
+}

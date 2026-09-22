@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0135",
+  "caption": "A shop display is seen through a window streaked with rain, and the mannequins appear smeared where the water runs.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A shop display is seen through a window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The window is streaked with rain."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mannequins appear smeared where the water runs."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The mannequins are clear through dry parts of the glass."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The smearing follows the water tracks and the mannequins are clear through dry glass.",
+      "fail": "The whole pane is smeared; or the tracks leave the view sharp; or the smear is where no water runs."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The smear moves downward with the water.",
+      "fail": "The tracks are still while the smear moves; or the smear moves up; or the water runs with the smear fixed."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The rain runs down the glass.",
+      "fail": "It runs up; or hangs; or runs sideways on a vertical pane."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The mannequins stay still.",
+      "fail": "They move; or turn; or a mannequin vanishes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The mannequins keep their number.",
+      "fail": "One vanishes; or appears; or two merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The display and the frame stay the same.",
+      "fail": "The clothes change colour; or the frame changes; or the shop rearranges."
+    }
+  ]
+}

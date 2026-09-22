@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0190",
+  "caption": "A car brakes on a rain-wet street at night, and red light from its brake lights spreads over the wet road behind it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car is on a rain-wet street at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It brakes."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Red light from its brake lights spreads over the wet road behind it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The glow lies behind the car, not in front."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The glow on the road is red and lies behind the car.",
+      "fail": "It is white; or lies in front; or is a colour the lights do not show."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow appears when the lights come on and would disappear when they go off.",
+      "fail": "It is there with the lights off; or the lights are on with no glow; or it stays after they go off."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The road is wet: the glow shimmers where puddles ripple and is absent where dry.",
+      "fail": "It is a sharp mirror image on rough tarmac; or shows on dry patches; or the water is rigid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The glow moves only with the car.",
+      "fail": "It drifts with the car stopped; or flickers with steady lights; or moves ahead of the car."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and its two brake lights.",
+      "fail": "A light vanishes; or a third appears; or the car duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car and the street stay the same.",
+      "fail": "The car changes colour; or the street rearranges; or the buildings change."
+    }
+  ]
+}

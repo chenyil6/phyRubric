@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0023",
+  "caption": "A ball bounces on a sunny court, and its shadow on the ground meets the ball at each bounce and separates as it rises.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ball bounces on a sunny court."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its shadow on the ground meets the ball at each bounce."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shadow separates from the ball as it rises."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow stays on the ground throughout."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow stays on the ground under the ball's path, and the ball touches its shadow only at each bounce.",
+      "fail": "The shadow rises with the ball; or the two swap places; or the shadow is missing in flight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Each bounce is lower than the last and the ball comes down each time.",
+      "fail": "A bounce is higher than the one before; or the ball hangs; or it bounces sideways off flat ground."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the ball's round outline.",
+      "fail": "It is a different shape; or splits; or streaks."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side away from the sun.",
+      "fail": "It lies toward the sun; or switches sides during the bounces; or it is missing in sunlight."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one shadow.",
+      "fail": "A second ball or shadow appears; or the ball vanishes; or the shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and the court stay the same, and the shadow stays dark.",
+      "fail": "The ball changes colour; or the shadow turns coloured; or the court lines shift."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0184",
+  "caption": "A ray of sunlight hits a glass prism on a windowsill, and a band of rainbow colours appears on the wall.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass prism sits on a windowsill."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A ray of sunlight hits it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A band of rainbow colours appears on the wall."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The band moves when the prism is turned."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The band lies on the side away from the sun."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The coloured band appears on the side away from the sun and would disappear if the prism were removed.",
+      "fail": "It is on the sun side; or there with no prism; or the prism is in sunlight with no band."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The band moves only when the prism is turned.",
+      "fail": "It drifts with the prism still; or stays put while the prism turns; or flickers in steady sun."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The band shows the spectrum's order.",
+      "fail": "It is a single colour; or the order is random; or it changes colours with the prism steady."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The band is one elongated strip.",
+      "fail": "It splits into several; or is a round spot; or floods the wall."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One prism and one band.",
+      "fail": "A second prism appears; or the band becomes solid; or the prism vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sill and the wall stay the same.",
+      "fail": "The sill changes; or the wall changes colour; or the prism changes shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

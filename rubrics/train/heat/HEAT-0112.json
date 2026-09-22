@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0112",
+  "caption": "Chunks of dry ice are dropped into a punch bowl of water, and thick white fog boils up, spills over the rim and sinks toward the table.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Chunks of dry ice are dropped into a bowl of water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Thick white fog boils up out of the bowl."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The fog spills over the rim."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The fog sinks toward the table."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The water in the bowl bubbles."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is drop, fog, spill."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The fog rises out of the bowl, pours over the rim, falls down the outside and spreads along the table, thinning as it goes.",
+      "fail": "The fog drifts up to the ceiling like steam and does not fall; or hangs above the bowl without spilling; or shoots upward in a plume and stays high; or rises from the table back into the bowl."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog keeps coming while the dry ice is in the water and what has left keeps moving away and fading.",
+      "fail": "The fog runs back into the bowl; or a puff retreats over the rim; or the fog boils up before the dry ice reaches the water; or the fog thickens steadily after the chunks have gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The water shows the dry ice working: it bubbles and churns around the chunks and the fog rises from there.",
+      "fail": "The water is glassy still while thick fog pours off it; or the fog rises from a part of the bowl with no chunk in it; or the chunks sit in the water with no bubbles and no fog at all."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fog is a dense low cloud that pours, spreads and fades, and the chunks stay hard lumps that shrink.",
+      "fail": "The fog holds a fixed rigid shape; or pools as a liquid with a flat surface; or a chunk melts into a clear liquid on the surface; or the fog breaks into solid lumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bowl; the chunks that go in are the chunks in the water and they shrink rather than vanishing at a stroke.",
+      "fail": "A chunk vanishes in a single frame while still large; or new chunks appear with none dropped; or a chunk passes through the bowl's wall; or the water's level jumps with nothing added."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bowl's pattern, the table and the punch's colour stay the same.",
+      "fail": "The bowl changes pattern; or the table's setting rearranges; or the punch changes colour."
+    }
+  ],
+  "note": "Dry ice fog sinks; that is what this caption asks for and it is not a violation."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0282",
+  "caption": "A model train runs over a stretch of dirty track, and tiny sparks flicker under its wheels.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A model train on a track."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The train runs over a stretch of track."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Tiny sparks flicker under its wheels."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sparks are under the wheels, at rail level."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The train is moving when the sparks appear."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The sparks appear only under the moving wheels and only on the dirty stretch; none appear while the train stands still or on clean track.",
+      "fail": "Sparks flicker under a train that is standing still; or sparks appear on the track where no wheel is; or sparks appear along the whole route with no dirty stretch; or sparks keep flickering after the train has passed."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each spark is at a wheel's contact with the rail, brief and gone; the train keeps running through the sparks.",
+      "fail": "The sparks appear on the train's roof or body away from the wheels; or a spark stays lit at one spot; or the whole rail glows; or the train stops dead as each spark appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any spark fragments fall to the track bed and go dark within a short distance.",
+      "fail": "Sparks rise and gather above the train; or hang in the air; or lie glowing on the track for the rest of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The train follows the track on its wheels, its carriages in line.",
+      "fail": "The train leaves the rails and runs across the table; or floats above the track; or carriages separate and run at different speeds; or the train jumps ahead between frames."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One train with its carriages on one track; nothing appears, vanishes or passes through the track.",
+      "fail": "A carriage vanishes or appears; or a second train appears; or the train passes through the track or scenery; or carriages merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The train's livery, the track and the scenery stay the same.",
+      "fail": "The train changes colour; or the track changes layout between frames; or the scenery rearranges."
+    }
+  ],
+  "note": "Which stretch of track is dirty is read from where the sparks appear; a stretch that looks the same as the rest is not a violation."
+}

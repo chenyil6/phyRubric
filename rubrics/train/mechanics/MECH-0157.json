@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0157",
+  "caption": "A girl sucks on a straw standing in a glass of juice, and the juice climbs the straw into her mouth while the level in the glass goes down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A straw stands in a glass of juice and a girl sucks on it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Juice climbs the straw."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Juice reaches her mouth."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The level in the glass goes down."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The suck comes first and the climb follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Juice rises in the straw only while she sucks and drops back when she stops.",
+      "fail": "The straw is full with no sucking; or she sucks and the straw stays empty; or the juice keeps rising after she stops."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The glass level falls as she drinks, and juice leaves only via the straw.",
+      "fail": "The level stays put while she drinks; or it rises; or juice vanishes from the glass with the straw empty."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The level in the glass stays flat and horizontal.",
+      "fail": "It tilts; or domes up; or the juice climbs the glass wall."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The juice is a liquid: it moves as a column in the straw and sloshes slightly.",
+      "fail": "It moves as a rigid rod; or as beads; or as a solid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One glass, one straw and one girl keep their number.",
+      "fail": "The straw passes through the glass; or a second straw appears; or the girl merges with the glass."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The juice's colour, the glass and her clothing stay the same.",
+      "fail": "The juice changes colour; or the glass changes; or her clothing changes."
+    }
+  ],
+  "note": "The girl is kept because her mouth is the pump. Her expression is not judged."
+}

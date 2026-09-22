@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0175",
+  "caption": "Heat rises from a barbecue grill on a summer afternoon, and the view of the fence behind it wavers in the shimmering air.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A barbecue grill."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The air above the grill shimmers."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The fence behind wavers where it is seen through the shimmer."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shimmer is strongest just above the grill."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shimmer fades with height."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The fence stands steady where it is not seen through the shimmer."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The shimmer rises from the grill and fades with height; it does not flow downward.",
+      "fail": "The shimmer flows down the grill's sides and pools on the ground; or sinks below the grill; or pours downward through the grill's bars; or hangs as a fixed band without rising."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The shimmer keeps rising while the grill is hot and the wavering keeps moving upward, easing as the grill cools.",
+      "fail": "The shimmer runs back down into the grill; or the wavering freezes into a fixed pattern; or the shimmer thickens steadily long after the fire is out; or a waver retreats toward the grill."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Only the part of the fence seen through the rising air wavers and the rest stands steady.",
+      "fail": "The whole fence wavers including parts seen well away from the shimmer; or the fence stands perfectly steady behind a strong shimmer; or the shimmer sits over a cold part of the yard while the air above the grill is still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The grill and the fence stay put; only the air above the grill moves.",
+      "fail": "The fence's boards shift or lean; or the grill slides with nothing touching it; or the grill's lid swings by itself; or objects beside the grill jump."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One grill and one fence; the fence keeps its boards and the grill its parts.",
+      "fail": "A fence board vanishes; or a new board appears; or the grill's lid vanishes; or the fence changes into a wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fence's colour, the grill's body and the yard stay the same.",
+      "fail": "The fence changes colour; or the grill changes colour; or items in the yard rearrange."
+    }
+  ]
+}

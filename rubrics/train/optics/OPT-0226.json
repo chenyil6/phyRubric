@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0226",
+  "caption": "A concert's lights switch from blue to red, and the white smoke over the stage changes from blue to red at the same instant.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "White smoke hangs over a concert stage."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lights switch from blue to red."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The smoke changes from blue to red at the same instant."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Unlit smoke is grey."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The smoke shows the colour of whatever light is on it and unlit smoke is grey.",
+      "fail": "The smoke is white under coloured lights; or glows with the lights off; or is a colour the lights do not show."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The smoke changes colour at the same instant as the lights.",
+      "fail": "It changes before the lights; or long after; or the lights change and the smoke does not."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The smoke is diffuse and drifts.",
+      "fail": "It is a solid shape; or rigid; or it drops like liquid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The smoke drifts slowly and does not jump.",
+      "fail": "It jumps; or whips about in still air; or vanishes at once."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One stage and its lights.",
+      "fail": "The stage duplicates; or the lights vanish; or the smoke becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stage and the set stay the same.",
+      "fail": "The set rearranges; or the stage changes; or the lights change shape."
+    }
+  ]
+}

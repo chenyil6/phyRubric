@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0068",
+  "caption": "A baseball is struck high into the outfield and comes down onto the grass far from where it was hit.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A baseball is struck."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It goes high into the outfield."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It comes down onto the grass."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "It lands far from where it was hit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hit comes first, then the flight, then the landing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The ball follows one long smooth arc, its forward motion continuing until it lands.",
+      "fail": "The ball flies flat at a constant height; or it hangs at the top; or it changes direction in mid-air with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It slows near the top and then falls steadily to the grass.",
+      "fail": "The ball rises again after starting to fall; or it levels off and glides; or it drops straight down from the peak with no forward travel."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing touches the ball in flight.",
+      "fail": "The ball speeds up in mid-air; or it jinks sideways; or it stops and restarts."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ball hits the grass and bounces or rolls low, flattening the grass.",
+      "fail": "The ball bounces higher than its flight; or it sinks into the ground; or it splashes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball is in play throughout.",
+      "fail": "The ball vanishes in flight or a second one appears; or it turns into another object; or it passes through the ground."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball, the field markings and the outfield stay the same.",
+      "fail": "The ball changes colour in flight; or the field lines shift between frames; or the outfield wall rearranges."
+    }
+  ]
+}

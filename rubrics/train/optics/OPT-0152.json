@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0152",
+  "caption": "Heavy curtains in a dim bedroom are pulled open, and daylight floods in and brightens the room.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Heavy curtains hang in a dim bedroom."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They are pulled open."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Daylight floods in and brightens the room."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The brightest part is nearest the window."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light enters through the widening gap and the room brightens as the curtains open, brightest nearest the window.",
+      "fail": "The room is bright with the curtains shut; or stays dim with them open; or the far wall is brightest."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The brightening follows the curtains.",
+      "fail": "The room brightens before the curtains move; or with them still; or it dims as they open."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The lit area grows as the gap widens.",
+      "fail": "It shrinks; or is full before the curtains move; or flickers."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The curtains are cloth that gathers as it is drawn.",
+      "fail": "They are rigid; or float; or pass through the rail."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One window and its curtains.",
+      "fail": "A second window appears; or a curtain vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room stays the same.",
+      "fail": "Furniture rearranges; or the walls change colour; or the curtains change colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

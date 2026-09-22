@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0019",
+  "caption": "A ball rolls through the shadow of a signpost on a sunny pavement, and the post's shadow slides over the ball as it passes.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ball rolls along a sunny pavement."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It passes through the shadow of a signpost."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The post's shadow slides over the ball as it passes."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The ball's own shadow continues on the ground beyond."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The post's shadow appears on the ball's surface while the ball is inside it and slides off as the ball leaves.",
+      "fail": "The ball stays fully lit inside the post's shadow; or the dark band stays on the ball after it has passed; or the band appears before the ball reaches the shadow."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The post's shadow on the ground is unchanged by the ball passing through it.",
+      "fail": "The post's shadow bends or moves as the ball passes; or it vanishes; or it follows the ball."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The ball's own shadow continues on the ground on the side away from the sun.",
+      "fail": "The ball has no shadow in sunlight; or its shadow lies toward the sun; or its shadow vanishes inside the post's shadow and does not return."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The ball rolls straight and slows gently.",
+      "fail": "It curves; or speeds up; or stops and restarts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball, one post and its shadow.",
+      "fail": "A second ball appears; or the post vanishes; or the ball passes through the post; or a shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and the pavement stay the same, and the shadows stay dark.",
+      "fail": "The ball changes colour; or a shadow turns coloured; or the pavement changes."
+    }
+  ]
+}

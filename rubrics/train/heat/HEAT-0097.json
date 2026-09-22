@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0097",
+  "caption": "A camera is carried from an air-conditioned lobby out into humid summer heat, and its lens fogs up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A camera is carried from indoors out into the open air."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The camera's lens fogs up."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The lens is clear while still indoors."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The air outside reads as hot and humid."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fogging comes after stepping outside."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog appears once the camera is outside and then clears as it warms; it does not appear while the camera is still indoors.",
+      "fail": "The lens is fogged while still inside; or the fog appears, clears and appears again with the camera held still outside; or the fog thickens after the lens has cleared; or the fog appears before the camera has moved."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The change is a haze on the lens glass: the view through it blurs where the haze lies and comes back as it clears.",
+      "fail": "The camera's body changes colour rather than the lens; or the haze lies on the lens barrel and not on the glass; or the view through the lens changes to a different scene as the fog clears; or the lens turns a colour instead of hazing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any drops that gather on the lens run downward on the glass.",
+      "fail": "A drop runs up the lens; or a drop leaves the lens and rises; or water gathers along the lens's top edge and stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The fog lies on the glass and nothing else appears or vanishes behind it.",
+      "fail": "Objects seen through the fogged lens are missing when it clears; or new objects appear behind the fog; or the fog detaches from the lens and drifts as a cloud; or the lens vanishes behind the fog."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One camera with one lens; the camera keeps its shape and nothing passes through the glass.",
+      "fail": "The lens vanishes; or a second lens appears on the body; or a hand passes through the lens; or the camera changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The camera's body, its markings and the surroundings stay the same.",
+      "fail": "The body changes colour; or the markings change; or the surroundings change between frames."
+    }
+  ]
+}

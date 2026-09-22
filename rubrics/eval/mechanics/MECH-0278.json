@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0278",
+  "caption": "A sheet of paper is fed into a shredder, and it comes out the bottom as a bundle of thin strips.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sheet of paper is fed into the top of a shredder."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is drawn in."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Strips come out of the bottom."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sheet goes in first and the strips come out after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The sheet is drawn in at the top and strips emerge below as it passes.",
+      "fail": "Strips emerge before the sheet enters; or the sheet goes in and nothing comes out; or strips come out the top."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The sheet does not reappear whole and the strips are from that sheet.",
+      "fail": "The sheet is whole again; or strips appear from nowhere; or the sheet vanishes with no strips."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The strips hang and fall.",
+      "fail": "They rise; or float; or stand out rigidly."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The strips are flexible paper.",
+      "fail": "They are rigid; or melt; or tear randomly."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One shredder keeps its shape.",
+      "fail": "It duplicates; or turns into another object; or the paper merges with it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shredder and the paper stay the same.",
+      "fail": "The shredder changes; or the paper changes colour; or the room rearranges."
+    }
+  ]
+}

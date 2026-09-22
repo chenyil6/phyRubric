@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0173",
+  "caption": "A magnet is dropped into a bowl of dry rice mixed with steel ball bearings and pulled out again, and the bearings cling to it while the rice falls away.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bowl of dry rice with steel ball bearings mixed through it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnet is dropped into the bowl."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The magnet is pulled out again."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Bearings cling to the magnet as it comes out while rice falls away."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rice is dry, loose grains."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is drop in, pull out, bearings on the magnet."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the magnet rises out of the rice, bearings that touched it come up clinging to its surface while the rice grains fall off.",
+      "fail": "The magnet comes out bare with bearings lying at the surface where it was; or rice grains hang from the magnet's bare surface in the air; or bearings rise out of the rice alongside the magnet without touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The bearings on the magnet are bearings from the bowl; rice and bearings keep their number and kind, neither appearing, vanishing nor turning into the other.",
+      "fail": "The bearings on the magnet multiply as it rises; or bearings vanish from the magnet in the air with nothing falling; or rice grains turn into bearings or bearings into rice; or the bowl's contents jump in level or empty out."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Rice carried up with the magnet falls back down into the bowl; bearings hang on the magnet's underside and sides; a bearing that comes off drops.",
+      "fail": "Rice grains rise or hover after leaving the magnet; or a bearing that comes off drifts sideways or upward; or grains stream down from the magnet and then curve back up."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The rice behaves as loose grains: the magnet sinks in and parts it, the surface is disturbed where the magnet entered, and grains pour off the magnet in streams.",
+      "fail": "The rice surface is unmarked after the magnet has been in and out; or the rice lifts as one solid slab; or the grains stretch or smear like a paste."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One magnet and one bowl; the magnet enters the rice, not the bowl's wall; the bowl keeps its shape and the hand passes through nothing.",
+      "fail": "The magnet passes through the bowl's bottom or side; or the bowl changes shape; or a second magnet appears; or the hand passes through the bowl's rim."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bowl's colour, the magnet's colour and shape and the rice's colour stay the same.",
+      "fail": "The bowl changes colour or pattern; or the magnet changes shape between entering and emerging; or the rice changes colour."
+    }
+  ]
+}

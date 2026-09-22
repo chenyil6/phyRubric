@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0164",
+  "caption": "A hot oven door is opened, and the air above the opening shimmers and wavers.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An oven door is opened."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The air above the opening shimmers."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shimmer wavers."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shimmer is strongest just above the opening."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shimmer fades with height."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The opening comes first and the shimmer follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The shimmer rises out of the oven's mouth and fades with height; it does not flow down toward the floor.",
+      "fail": "The shimmer flows down the oven door and pools on the floor; or sinks below the opening; or pours downward out of the oven; or hangs as a fixed band without rising."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The shimmer appears as the door opens and eases as the oven cools, and the wavering keeps moving upward and outward.",
+      "fail": "The shimmer appears before the door has moved; or runs back into the oven; or thickens steadily after the door has been shut; or the wavering freezes into a fixed pattern."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shimmer sits above the open mouth and things seen through it waver, while the view away from the mouth stays steady.",
+      "fail": "The shimmer appears above a closed part of the oven; or the view through the shimmer stays perfectly steady; or the whole room wavers while the shimmer sits over the mouth; or the shimmer appears with the door still shut."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The oven and the things around it stay put; only the air above the mouth moves.",
+      "fail": "The door swings further open or shuts by itself; or items on the hob jump as the door opens; or the oven shifts; or the racks inside slide out by themselves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One oven with one door; the contents of the oven are the same as the door opens.",
+      "fail": "Food in the oven appears or vanishes; or a rack vanishes; or the door passes through the oven's frame; or the oven changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The oven's front, its controls and the kitchen stay the same.",
+      "fail": "The oven changes colour; or the controls rearrange; or items in the kitchen rearrange."
+    }
+  ]
+}

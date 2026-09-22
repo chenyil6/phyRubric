@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0031",
+  "caption": "A picture frame hanging on a wall comes loose from its nail and falls to the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A picture frame hangs on a wall from a nail."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It comes loose from the nail."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It falls to the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The frame comes loose first and the fall follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The frame hangs as long as the nail holds it and starts to move only once it is free of the nail.",
+      "fail": "The frame falls while still hooked over the nail; or its wire leaves the nail and the frame stays hanging in place; or the frame slides down the wall with the nail still through its wire."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Once free the frame drops down along the wall and reaches the floor.",
+      "fail": "The frame drifts outward away from the wall as it falls; or it stops in the air part way down; or it rises up the wall."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "It tips or slews as it comes off, turns as it drops, and ends lying or leaning at the foot of the wall.",
+      "fail": "The frame stays perfectly level all the way down and lands standing upright; or it swings back up the wall after hitting the floor; or it rebounds higher than the nail it fell from."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The frame stays rigid as it lands and the wall stays solid where it brushes past.",
+      "fail": "The frame bends like cloth as it falls; or it bounces off the floor like a ball and stays up in the air; or the wall dents inward where the frame touches it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One frame on one nail keeps its shape and passes through nothing.",
+      "fail": "The frame vanishes on the way down or a second one appears; or the frame passes through the wall or the floor; or it turns into another object as it falls."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The picture inside the frame, the wall and the room stay the same.",
+      "fail": "The picture inside changes to a different image; or the wall changes colour; or the furniture in the room rearranges between frames."
+    }
+  ]
+}

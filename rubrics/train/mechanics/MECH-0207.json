@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0207",
+  "caption": "A pigeon flies in and lands on a park railing.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pigeon flies in toward a railing."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It lands on the railing."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The setting is a park."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flight comes first and the landing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It flares its wings to slow, extends its legs, and grips the rail; it does not stop dead in mid-air.",
+      "fail": "It stops dead in the air and drops; or lands before reaching the rail; or passes through the rail."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Its wings flap and fold at the joints, its legs extend, and it keeps two wings and two legs.",
+      "fail": "A wing detaches; or the wings bend like rubber along the feathers; or a third leg appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Once landed it stays on the rail.",
+      "fail": "It hovers above the rail without flapping; or rises after landing without flapping; or sinks through the rail."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "Its feet grip the top of the rail.",
+      "fail": "Its feet pass through the rail; or the rail passes through the bird; or it sits inside the rail."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One pigeon keeps its shape and stays one bird.",
+      "fail": "It splits into two; or merges with the rail; or turns into another bird."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pigeon's plumage and the railing stay the same.",
+      "fail": "The plumage changes colour; or the railing changes; or the park rearranges."
+    }
+  ],
+  "note": "The pigeon is self-driven: its approach and timing are its own. Only the body's integrity and the landing are judged."
+}

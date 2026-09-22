@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0110",
+  "caption": "A dog waits alone in a parked car on a cold evening, and the windows fog up from the inside as it pants.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog sits alone in a parked car."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The car's windows fog up."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The fog is on the inside of the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The fog grows while the dog pants."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fog is thickest near the dog and toward the top of the glass."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The setting reads as a cold evening."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog only thickens while the dog breathes in the shut car and does not clear on its own.",
+      "fail": "The fog clears while the car stays shut and the dog keeps panting; or the fog thins and thickens in turn; or the windows are fogged before the dog has breathed; or the fog retreats to the window edges while the car stays shut."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The haze lies on the inner face of the glass, thickest nearest the dog, and the outer face stays clear.",
+      "fail": "The fog forms on the outside of the windows; or both faces fog equally; or the fog is thickest on the window furthest from the dog; or the car's paint changes rather than the glass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Drops that gather in the fog run downward on the inner face of the glass.",
+      "fail": "A drop runs up the glass; or a drop leaves the glass and rises; or water gathers along a window's top edge and stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fog is a fine haze that beads and streaks, and the glass stays rigid and clear.",
+      "fail": "The fog stands off the glass as a thick crust; or the fog peels away as a film; or the glass flexes; or the haze turns opaque white like paint."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One dog in one car; the dog keeps its body and the car its windows, and nothing passes through the glass.",
+      "fail": "The dog gains or loses a limb; or a second dog appears; or the dog passes through a window; or a window vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dog's coat, the car's interior and the street outside stay the same.",
+      "fail": "The coat changes colour or pattern; or the seats change colour; or the street outside changes between frames."
+    }
+  ],
+  "note": "The dog is an animal and its movements are not judged; it is kept because its breath is the moisture's source."
+}

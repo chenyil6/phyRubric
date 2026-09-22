@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0057",
+  "caption": "A coin stands balanced on the hood of a car idling roughly, and it jitters and topples over.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A coin stands on its edge on a car's hood."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The coin jitters."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The coin topples over and lies flat."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The car is stationary."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The jitter comes first and the topple follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "While standing, the coin trembles in place on the hood.",
+      "fail": "The coin slides across the hood in a smooth glide while standing; or leaps up off the hood; or shifts from place to place with no tremble between."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The topple is one way: the coin falls flat and stays flat.",
+      "fail": "The coin falls flat and rights itself; or stops leaning at an angle and stays leaning with nothing touching it; or lies flat and then stands up on its edge again."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The coin falls downward onto the hood; on a sloping hood it may slide down.",
+      "fail": "The coin falls upward; or hovers above the hood; or slides up the hood's slope after landing."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The coin and the hood stay rigid.",
+      "fail": "The coin bends; or the hood dents under the coin; or the hood ripples like cloth."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One coin, one car; the coin does not pass into the hood.",
+      "fail": "A second coin appears; or the coin vanishes; or it sinks into the hood; or the car changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The coin's face and size and the car's paint stay the same.",
+      "fail": "The coin changes size or face; or the car changes colour; or the hood's reflections change with nothing moving."
+    }
+  ]
+}

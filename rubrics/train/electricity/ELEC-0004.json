@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0004",
+  "caption": "A flashlight lying on a table and pointed at a wall is switched on, and a bright spot appears on the wall.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flashlight lies on a table, pointed at a wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flashlight is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A bright spot appears on the wall."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wall is unlit by the flashlight before the switch."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is off, switch, spot on the wall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The spot appears on the wall at the moment the switch is pressed, and only then; it lies where the flashlight points.",
+      "fail": "The switch is pressed and the wall stays as before; or the spot is on the wall before the switch is touched; or the spot appears on a part of the wall the flashlight does not point at; or the lens glows while the wall stays dark."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the spot stays steady on the wall for the rest of the clip while the flashlight lies still.",
+      "fail": "The spot goes out again by itself; or flickers; or the spot wanders across the wall while the flashlight lies still; or the spot grows and shrinks with the flashlight untouched."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lit lens and the spot appear together; the beam's path lights any dust or objects between them, and the spot is brightest at its centre.",
+      "fail": "The lens is dark while the spot is on the wall; or the spot is lit while the lens stays dark; or an object placed in the beam casts no shadow on the wall."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The flashlight stays where it lies as it is switched on, apart from a small nudge from the hand; nothing else on the table moves.",
+      "fail": "The flashlight rolls or slides across the table with nothing touching it; or lifts off the table; or other items on the table shift at the switch."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One flashlight and one spot; the flashlight keeps its shape; the hand passes through nothing.",
+      "fail": "A second flashlight or a second spot appears; or the flashlight vanishes; or the hand passes through the flashlight; or the wall changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The flashlight's colour, the table and the wall's colour stay the same apart from the light.",
+      "fail": "The flashlight changes colour; or the wall changes colour rather than brightness; or the table's contents rearrange."
+    }
+  ]
+}

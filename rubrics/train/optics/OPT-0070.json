@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0070",
+  "caption": "A lamp beside a dark window is switched on at night, and the reflection of the lamp and the room appears in the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lamp stands beside a dark window at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The reflection of the lamp and the room appears in the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection is mirrored."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lamp comes on first and the reflection appears with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection appears with the lamp and would fade if the lamp were turned off.",
+      "fail": "The reflection is there with the lamp off; or the lamp comes on and no reflection appears; or the reflection remains after the lamp goes off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image of the lamp and room, at the same height across the glass.",
+      "fail": "It is a different room; or upside down; or a rotated copy rather than mirrored."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It slides across the glass; or shifts while the room is still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The glass is flat and rigid: the reflection is undistorted.",
+      "fail": "The glass ripples; or the reflection warps; or the window bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp and one reflection; the reflection stays in the glass.",
+      "fail": "A second lamp appears in the room; or the reflection comes out of the glass; or the lamp vanishes; or the lamp passes into the window."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lamp, the room and the window frame stay the same.",
+      "fail": "The lamp changes colour; or the frame changes; or the room rearranges."
+    }
+  ]
+}

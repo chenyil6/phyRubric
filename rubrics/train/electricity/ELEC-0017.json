@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0017",
+  "caption": "A hairdryer resting on a counter with ribbons tied to its nozzle is switched on, and the ribbons stream out in the airflow.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hairdryer rests on a counter with ribbons tied to its nozzle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The hairdryer is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ribbons stream out in the airflow."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The ribbons hang slack before the switch."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is slack, switch, streaming."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The ribbons lift and stream away from the nozzle at the moment the switch is moved, and only then.",
+      "fail": "The switch is moved and the ribbons hang slack to the end of the clip; or the ribbons stream before the switch is touched; or the ribbons stream while the dryer lies untouched; or the ribbons blow toward the nozzle."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "While the dryer runs the ribbons keep streaming and fluttering in the same direction; they drop slack only if the dryer is switched off.",
+      "fail": "The ribbons fall slack while the dryer is still on; or stream and drop repeatedly with the switch untouched; or stiffen into a fixed shape; or the switch moves back by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The ribbons stream away from the nozzle along the direction it points, rippling along their length.",
+      "fail": "The ribbons stream sideways or backward from the nozzle; or stand straight up from a nozzle pointing along the counter; or each ribbon streams in a different direction."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The dryer stays where it rests as it runs, apart from a small shift; other items on the counter stay put unless in the airflow.",
+      "fail": "The dryer slides or spins across the counter; or lifts into the air; or items behind the dryer blow away; or light items in the airflow stay perfectly still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One dryer with its ribbons tied on; the ribbons stay attached to the nozzle; the dryer keeps its shape.",
+      "fail": "Ribbons detach and fly off; or ribbons appear or vanish; or a second dryer appears; or the dryer changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dryer's colour, the ribbons' colours and the counter stay the same.",
+      "fail": "The dryer changes colour; or a ribbon changes colour or length; or the counter's contents rearrange."
+    }
+  ]
+}

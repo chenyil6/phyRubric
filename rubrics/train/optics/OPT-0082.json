@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0082",
+  "caption": "A coin is dropped into a fountain whose still water reflects the sky, and rings spread out that break up the reflected clouds.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A fountain's still water reflects the sky."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A coin is dropped into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Rings spread out."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The rings break up the reflected clouds."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The coin lands first and the rings follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The rings start where the coin enters and distort the reflected sky as they pass.",
+      "fail": "Rings start elsewhere; or the reflection stays sharp through the rings; or rings appear before the coin lands."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The rings spread outward and fade, and the image settles when the surface is still again.",
+      "fail": "Rings run inward; or they hold their shape; or the image never settles on still water."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The coin sinks.",
+      "fail": "It floats; or hangs; or comes back up."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The reflected sky is the sky's image, inverted, and the clouds' shapes return unchanged when the water settles.",
+      "fail": "A different sky appears in the water; or the reflection is upright where it should be inverted; or the reflected clouds change shape while the real sky is unchanged."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One coin and one fountain.",
+      "fail": "A second coin appears; or the coin vanishes in the air; or the reflection becomes solid; or the coin passes through the basin."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fountain and the sky stay the same.",
+      "fail": "The fountain changes; or the sky changes abruptly; or the surroundings rearrange."
+    }
+  ]
+}

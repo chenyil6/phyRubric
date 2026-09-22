@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0299",
+  "caption": "A marble is dropped into the top of a long cardboard tube standing upright, and it comes out of the bottom and rolls away.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A long cardboard tube stands upright."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A marble is dropped into the top."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It comes out of the bottom."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It rolls away."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drop comes first, then the exit, then the roll."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The same marble comes out, and nothing exits before it enters.",
+      "fail": "A different marble exits; or two marbles; or one exits before one has entered."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It falls through and exits the bottom after a short delay.",
+      "fail": "It exits the top; or hangs inside; or rises."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "It is hidden inside and does not show through the wall.",
+      "fail": "It shows through; or passes through the wall; or the tube passes through it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It rolls away and slows.",
+      "fail": "It curves; or speeds up; or restarts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One marble and one tube keep their shape.",
+      "fail": "The marble turns into another object; or the tube changes shape; or they merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The marble's colour and the tube stay the same.",
+      "fail": "The marble changes colour; or the tube changes; or the background rearranges."
+    }
+  ]
+}

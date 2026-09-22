@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0299",
+  "caption": "A sealed, half-crushed plastic water bottle is dropped into a bowl of hot water, and its crushed sides push back out until the bottle is round.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sealed half-crushed plastic bottle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bottle is dropped into a bowl of hot water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The crushed sides push outward."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The bottle ends round and taut."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bottle floats."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the pushing out follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The dents move outward until the bottle's walls are round and taut, and the bottle stays one bottle of the same size.",
+      "fail": "The dents press in further instead of pushing out; or new dents appear elsewhere on the bottle; or the bottle swells far beyond its original size; or the bottle turns into another shape such as a cube."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The change runs one way in the hot water: the dents only come out and do not press back in.",
+      "fail": "A dent pushes out and then presses back in while the bottle stays in the hot water; or the dents come and go in turn; or the dents push out before the bottle reaches the water; or the walls ripple back and forth."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bottle floats at the surface, bobbing, and the water stays level in the bowl.",
+      "fail": "The bottle sinks to the bowl's floor and stays; or hangs motionless in mid-water; or rises out of the water and hangs above it; or the water's surface tilts and stays tilted with the bowl level."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The drop has an effect: the water splashes and ripples where the bottle lands and the bottle is wetted.",
+      "fail": "The bottle enters and the surface stays glassy; or the water ripples before the bottle reaches it; or the bottle stays dry while floating; or the dents push out while the bottle is still in the air above the water."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bottle and one bowl; the bottle stays sealed in the water and nothing passes through the bowl.",
+      "fail": "The bottle vanishes; or a second bottle appears; or water passes into the sealed bottle through its wall; or the bottle passes through the bowl's wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bottle's label, its cap and the bowl stay the same.",
+      "fail": "The label changes; or the cap changes colour; or the bowl changes pattern."
+    }
+  ]
+}

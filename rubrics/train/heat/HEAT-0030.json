@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0030",
+  "caption": "A wedge of cheese sits under the heating element of a raclette grill, and the face nearest the element softens, sags and drips.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wedge of cheese sits under a grill's heating element."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The face nearest the element softens and goes glossy."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "That face sags."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Cheese drips from the wedge."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The far side of the wedge stays firm."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The softening comes first and the dripping follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The softening only advances on the face toward the element and the sag only deepens; the cheese does not stiffen again under the heat.",
+      "fail": "The sagging face pulls back up into a flat firm face; or a drip retreats into the wedge; or the softened face turns matt and firm again under the element; or the wedge alternates between sagging and firm."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The softened cheese sags downward and drips fall from the wedge's lowest point onto what is below.",
+      "fail": "The cheese sags upward toward the element; or a drip climbs the wedge; or a drop leaves the wedge and hangs in the air; or melted cheese gathers on the wedge's top face and stays there."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The change is strongest on the face toward the element and least on the side away from it.",
+      "fail": "The face away from the element sags while the face toward it stays firm; or the whole wedge softens evenly while the element is plainly on one side; or the wedge drips while its surface stays matt and dry."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The softening cheese is a thick liquid that stretches and drips slowly and the rest of the wedge stays a firm solid with a cut edge.",
+      "fail": "The melted cheese runs as thin as water; or the whole wedge slumps as one soft lump; or the softened face stretches into a strand that snaps back like elastic; or the cheese shatters dry."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One wedge; the cheese goes only from the wedge to what lies below.",
+      "fail": "The wedge grows; or a second wedge appears; or the wedge vanishes while still whole; or cheese appears on the plate with no drip reaching it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The grill's frame, the plate and the surroundings stay the same.",
+      "fail": "The grill changes shape; or the plate changes pattern; or items around the grill rearrange."
+    }
+  ],
+  "note": "Browning of the cheese's surface is chemistry and is not judged."
+}

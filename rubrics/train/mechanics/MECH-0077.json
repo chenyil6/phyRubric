@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0077",
+  "caption": "A rubber ball is dropped from shoulder height onto a concrete driveway and bounces several times before rolling away.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A rubber ball is dropped from about shoulder height."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It lands on a concrete driveway."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It bounces several times."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It rolls away."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The ball is dropped rather than thrown."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first, then the bounces, then the roll."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each bounce is lower than the one before, none higher than the drop, and the bounces get quicker as they shrink.",
+      "fail": "A bounce is higher than the one before it; or the bounces stay the same height; or the ball stops dead on first contact with no bounce."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The ball comes down straight from the hand and bounces close to vertical, drifting only a little before rolling.",
+      "fail": "The ball shoots off sideways at the first bounce on the flat concrete; or it reverses direction between bounces; or it jinks in mid-air."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It falls quicker as it drops, and after each bounce it comes down again.",
+      "fail": "The ball hangs at the top of a bounce; or it rises after the last bounce; or it floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ball squashes briefly at each contact and springs back round, and the concrete stays unmarked.",
+      "fail": "The ball stays flat after a bounce; or it sinks into the concrete; or it splashes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball is there throughout.",
+      "fail": "The ball vanishes or a second one appears; or it turns into another object; or it passes through the driveway."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball's colour and the driveway stay the same.",
+      "fail": "The ball changes colour or size; or the driveway's cracks shift between frames; or the surroundings rearrange."
+    }
+  ]
+}

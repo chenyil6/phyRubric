@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0171",
+  "caption": "A desk lamp is turned to point at the wall, and the wall brightens while the desk beneath it goes dim.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A desk lamp lights a desk."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is turned to point at the wall."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The wall brightens."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The desk beneath goes dim."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The turn comes first and the light moves with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lit area moves with the lamp head: the wall brightens and the desk dims.",
+      "fail": "Both stay as they were; or the desk brightens; or the wall stays dark with the lamp on it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The lit area moves only as the lamp turns.",
+      "fail": "It drifts with the lamp still; or moves before the turn; or flickers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The lit area is one soft pool.",
+      "fail": "It splits; or is a sharp square; or floods the room."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Shadows point away from the lamp head.",
+      "fail": "They point toward it; or in several directions; or there are none."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp.",
+      "fail": "A second lamp appears; or it vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The desk and the wall stay the same.",
+      "fail": "The wall changes colour rather than brightness; or the desk changes; or the lamp changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged. Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

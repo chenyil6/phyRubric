@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0122",
+  "caption": "A loaded toolbox is set down on top of a large cardboard box in a garage, and the box caves in under it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A large cardboard box stands in a garage."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A toolbox is set down on top of it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The box caves in under the toolbox."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The toolbox is loaded and heavy."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The toolbox is set down first and the caving follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The top folds in and the sides buckle as the weight lands; the box does not hold like a stool.",
+      "fail": "The box holds the toolbox up unchanged; or it flattens completely in an instant like paper; or it shatters like glass."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The caving progresses as the weight settles and stays caved.",
+      "fail": "The box caves before the toolbox touches it; or it springs back up while the toolbox is on it; or it caves and uncaves."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The toolbox sinks down with the collapsing top and stays there.",
+      "fail": "The toolbox floats above; or it rises; or it tips off and hangs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The box stays where it is.",
+      "fail": "It slides; or jumps; or moves before the toolbox arrives."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One box and one toolbox keep their number.",
+      "fail": "The box vanishes or a second appears; or the toolbox passes through the box; or the box turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The box's printing, the toolbox and the garage stay the same.",
+      "fail": "The printing changes; or the toolbox changes colour; or the garage rearranges."
+    }
+  ]
+}

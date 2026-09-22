@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0057",
+  "caption": "A hand mirror is tilted downward, and the reflection in it shifts from the ceiling to the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hand mirror is held up."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is tilted downward."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The reflection in it shifts from the ceiling to the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tilt comes first and the view shifts with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The scene in the mirror sweeps smoothly as the mirror tilts and shows what lies in the direction the mirror faces.",
+      "fail": "The view stays the same as the mirror tilts; or it shows the ceiling with the mirror facing down; or it jumps."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The view changes only while the mirror moves.",
+      "fail": "It sweeps with the mirror still; or it changes before the tilt; or it keeps moving after the tilt stops."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The reflected room matches the real room, mirrored.",
+      "fail": "It shows a different room; or it is not mirrored; or objects appear in it that are not in the room."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The mirror is flat and rigid: the view is undistorted.",
+      "fail": "The surface ripples; or the view warps; or the mirror bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One mirror in one hand.",
+      "fail": "The mirror duplicates or vanishes; or the hand passes through it; or the reflection becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mirror's frame and the room stay the same.",
+      "fail": "The frame changes; or the room rearranges; or the hand changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

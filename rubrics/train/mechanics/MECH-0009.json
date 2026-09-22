@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0009",
+  "caption": "A serving cart carrying a tray of full water glasses is pushed forward and stopped short, and the water sloshes forward and spills.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A serving cart carries a tray of full water glasses."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cart is pushed forward and then stopped short."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water sloshes forward."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The water spills."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Several glasses stand on the tray rather than a single one."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The cart stops first, then the slosh, then the spill."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The water surfaces lie level while the cart rolls steadily and surge at the moment it is stopped.",
+      "fail": "The water sloshes while the cart is rolling at a steady speed; or it surges with no stop visible; or it keeps sloshing long after the cart is still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The surge carries the water toward the front of the cart, the way it was moving, and over the forward rims.",
+      "fail": "The water surges toward the back of the cart when it stops; or it climbs evenly around every rim; or it lifts straight up out of the glasses."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water tilts as one connected surface, slops over the rim and runs down the outside of the glass onto the tray.",
+      "fail": "A water surface stays flat and rigid while its glass is plainly lurching; or water leaves a glass as a solid lump that keeps its shape; or the spill gathers into balls that roll off the tray."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Spilled water runs down the outsides of the glasses and pools on the tray, dripping over its edge.",
+      "fail": "Spilled water climbs the outside of a glass; or a spill floats above the tray; or the puddle gathers on top of a glass."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The glasses keep their number and shape and water leaves them only over the rim.",
+      "fail": "A glass vanishes or a new one appears on the tray; or water passes through the wall of a glass; or a glass merges with the tray; or the water level in a glass rises while it is spilling."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glasses, the tray and the cart keep their colour and arrangement apart from the slosh.",
+      "fail": "The tray changes colour; or the glasses change size or pattern; or the cart's shelves rearrange between frames."
+    }
+  ]
+}

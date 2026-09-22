@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0115",
+  "caption": "A knife is pressed against a spinning sharpening wheel, and a stream of sparks flies off the blade's edge.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sharpening wheel spins."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A knife is pressed against the wheel."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A stream of sparks flies off the blade's edge."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sparks come from where the blade meets the wheel."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Contact comes first and the sparks follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The sparks leave the contact point along the direction the wheel's rim is moving, in one stream, and curve downward as they fly.",
+      "fail": "Sparks radiate equally in all directions from the contact; or the stream points opposite to the rim's motion; or the stream's direction jumps about while the knife and wheel are steady."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Sparks that fly far arc downward and go out; none rise or hover.",
+      "fail": "Sparks rise steadily and gather above the wheel; or hang in the air; or lie on the bench glowing like lamps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Sparks appear only while the blade is on the wheel and stop when it lifts off.",
+      "fail": "Sparks stream while the blade is clear of the wheel; or continue after the knife has been withdrawn; or sparks flow back toward the wheel."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "Sparks are transient: each fades in flight and none accumulate; the knife and wheel keep their number.",
+      "fail": "Sparks persist as fixed bright dots; or a glowing pile builds on the floor; or sparks appear from a point away from the contact; or a second knife appears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The blade's edge touches the wheel's surface and stays outside the wheel; knife and wheel keep their shape.",
+      "fail": "The blade sinks into the wheel; or the wheel passes through the blade; or the blade bends like rubber; or the wheel changes shape while spinning."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The knife's handle, the wheel's colour and the bench stay the same.",
+      "fail": "The handle changes colour; or the wheel changes colour or size; or the bench contents rearrange."
+    }
+  ]
+}

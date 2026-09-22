@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0027",
+  "caption": "A wax crayon lies on a hot skillet, and it softens, slumps, and melts into a coloured pool.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A skillet."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A wax crayon lies on the skillet."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The crayon softens and slumps."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The crayon melts into a pool."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pool is the same colour as the crayon."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The softening comes first and the pool follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The crayon only softens, slumps and shrinks while the pool grows; it does not firm up again on the pan.",
+      "fail": "The crayon straightens or regains its round shape; or the pool draws back into the crayon; or the wax sets into a solid stick again in the pan; or the crayon alternates between stiff and slumped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The crayon is a soft solid that bends and sags from the side touching the metal and the melt is a thin liquid that spreads.",
+      "fail": "The crayon shatters into dry pieces; or the pool stands as a rigid dome; or the crayon stretches like elastic; or the melt moves as a solid slab across the pan."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The crayon sags downward onto the pan and the pool spreads outward and downhill across it.",
+      "fail": "The crayon bends upward with nothing lifting it; or the pool climbs the pan's wall and stays; or melted wax lifts off the pan; or the pool gathers uphill of the crayon on a tilted pan."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The crayon melts where it touches the metal: it goes glossy underneath first and the pool spreads from beneath it.",
+      "fail": "The crayon melts from its top face while its underside stays matt and sharp; or a pool spreads on a part of the pan the crayon never touched; or the crayon slumps while the pan around it stays dry."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One crayon; the wax goes only into the pool.",
+      "fail": "The crayon grows; or a second crayon appears; or the crayon vanishes while still whole; or wax appears across the pan with none flowing there."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pool keeps the crayon's colour, and the pan's finish and the surroundings stay the same.",
+      "fail": "The pool is a different colour from the crayon; or the pan changes colour; or items around the pan rearrange."
+    }
+  ]
+}

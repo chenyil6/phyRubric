@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0132",
+  "caption": "A horse's iron shoe strikes a stone on a path in the dusk, and a spark flashes under the hoof.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A horse walks on a path in the dusk."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "One hoof strikes a stone."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A spark flashes under the hoof."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The horse wears iron shoes."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike comes first and the spark follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spark is a brief flash at the instant the shoe strikes the stone, and is gone; nothing glows before or after.",
+      "fail": "The spark glows on under the hoof after it has lifted; or a spark appears while the hoof is in the air; or the stone glows after the strike; or sparks flash on steps where the hoof lands on soft ground."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One horse with four hooves; the stone stays where it is; the spark leaves nothing behind.",
+      "fail": "A glowing dot stays on the path after the strike; or the stone vanishes or appears from nowhere; or a hoof vanishes or a fifth appears; or a second horse appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any spark fragments fly out from under the hoof and fall to the path, going dark within a short distance.",
+      "fail": "Sparks rise and gather above the horse; or hang in the air; or lie glowing on the path for the rest of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The hoof comes down onto the stone, bears weight and lifts again as the horse walks on; the stone stays put or skids a little.",
+      "fail": "The hoof passes through the stone; or the stone flies far off as if kicked hard while the hoof merely lands; or the hoof stops in mid-air above the stone and the spark flashes anyway."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One horse with its legs, head and tail throughout; the horse passes through nothing.",
+      "fail": "The horse gains or loses a leg; or its body changes shape; or the horse passes through a fence or tree; or the horse merges with its shadow."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The horse's coat colour, its tack and the path stay the same.",
+      "fail": "The coat changes colour or pattern; or the tack changes; or the path changes surface."
+    }
+  ],
+  "note": "The horse is an animal; its gait is not judged. The horse is kept because the shoe striking the stone is the caption's physics."
+}

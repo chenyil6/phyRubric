@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0213",
+  "caption": "A paper map is unfolded on the hood of a car and smoothed flat.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A folded paper map is on the hood of a car."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is unfolded."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It is smoothed flat."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The unfolding comes first and the smoothing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The map opens along its existing creases and gets larger as it opens without changing its total size.",
+      "fail": "It opens with no creases; or grows beyond its folded panels; or shrinks."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "It lies flat only where pressed and springs up slightly at the folds.",
+      "fail": "It is a rigid plate; or stretches; or snaps flat by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It opens only as the hands move it.",
+      "fail": "It opens by itself; or refolds itself; or slides off the hood."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The panels lie on the hood, not through it.",
+      "fail": "The map passes through the hood; or the hands pass through the map; or a panel passes through another."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One map keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The map's printing and the car stay the same.",
+      "fail": "The printing changes; or the car changes colour; or the background rearranges."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged."
+}

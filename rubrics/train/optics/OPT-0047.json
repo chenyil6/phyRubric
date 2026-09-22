@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0047",
+  "caption": "A cat walks along the base of a sunlit wall, and its shadow walks along the wall beside it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cat walks along the base of a sunlit wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its shadow walks along the wall beside it."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The shadow's paws are at ground level."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow lies on the side away from the sun."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow on the wall keeps pace with the cat, its paws at ground level.",
+      "fail": "It lags or leads; or its paws float up the wall; or it is still while the cat walks."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the cat's outline, legs moving in step.",
+      "fail": "It is a different animal's shape; or its legs are still; or it splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side away from the sun.",
+      "fail": "It lies toward the sun; or switches sides; or it is missing in sunlight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move on its own.",
+      "fail": "It moves with the cat sitting; or drifts along the wall by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cat and one shadow.",
+      "fail": "A second cat or shadow appears; or the cat vanishes; or the shadow becomes solid; or the cat passes through the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cat's markings and the wall stay the same, and the shadow stays dark.",
+      "fail": "The markings change; or the shadow turns coloured; or the wall changes."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the shadow's relation to it is."
+}

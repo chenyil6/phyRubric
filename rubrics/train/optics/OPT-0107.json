@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0107",
+  "caption": "A cat moves behind a frosted glass door, and only a blurred shape of it is visible through the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cat moves behind a frosted glass door."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Only a blurred shape of it is visible through the glass."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The blur moves as the cat moves."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The blur sharpens as the cat comes closer to the glass."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Only a blur is seen; details never become clear through the frosting.",
+      "fail": "The cat is sharp through the frosted glass; or the blur is a different shape from a cat; or the blur has crisp edges."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The blur moves as the cat moves and sharpens as it nears the glass.",
+      "fail": "The blur stays still while the cat moves; or it sharpens as the cat moves away; or it moves with no cat."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The cat does not appear on the near side while the blur is behind the glass.",
+      "fail": "The cat appears in the room; or two blurs appear for one cat; or the blur vanishes while the cat is plainly behind the glass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The cat stays behind the door.",
+      "fail": "It passes through the glass; or the door passes through it; or it appears inside the pane."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One cat stays one cat.",
+      "fail": "It splits; or turns into another animal; or merges with the door."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The door and the frosting stay the same.",
+      "fail": "The frosting clears; or the door changes; or the room changes."
+    }
+  ],
+  "note": "The cat is self-driven; only the frosted view is judged."
+}

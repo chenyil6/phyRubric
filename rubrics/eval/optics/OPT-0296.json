@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0296",
+  "caption": "A white ball on a white table is lit by a red lamp from the left and a blue lamp from the right, and it casts a blue-tinted shadow on one side and a red-tinted shadow on the other.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A white ball is on a white table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A red lamp lights it from the left and a blue lamp from the right."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It casts a blue-tinted shadow on one side and a red-tinted shadow on the other."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The ball looks magenta-white where both lights fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The shadow cast by blocking the red lamp is lit only by the blue lamp and looks blue, and vice versa.",
+      "fail": "Both shadows are grey; or the shadows have swapped colours; or a shadow is a colour neither lamp gives."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each coloured shadow lies away from its own lamp, and switching off one lamp would remove its shadow's colour.",
+      "fail": "A shadow lies toward its lamp; or both shadows are on the same side; or a shadow keeps its colour with its lamp off."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "Each shadow keeps the ball's round outline.",
+      "fail": "A shadow is a different shape; or splits; or the two merge into one."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The ball and the lamps stay put.",
+      "fail": "The ball rolls; or a lamp moves by itself; or a shadow drifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and two lamps.",
+      "fail": "The ball duplicates; or a lamp vanishes; or a shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The table and the room stay the same.",
+      "fail": "The table changes; or the room rearranges; or the ball changes size."
+    }
+  ]
+}

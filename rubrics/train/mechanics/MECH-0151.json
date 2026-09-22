@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0151",
+  "caption": "Several ice cubes are dropped into a glass of soda, and the cubes bob up and float near the surface.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass of soda is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Several ice cubes are dropped in."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cubes bob up and float near the surface."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Several cubes rather than one."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drop comes first and the floating follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The cubes splash, dip below, and come back up to float with their tops just above the surface.",
+      "fail": "The cubes sink to the bottom and stay; or they hang mid-glass; or they float entirely above the soda."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The soda level rises as the cubes go in, and fizz bubbles rise.",
+      "fail": "The level drops; or stays unchanged; or the soda is rigid."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The bobbing dies down and the cubes settle.",
+      "fail": "They bob harder; or they jump out; or they spin."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The cubes stay cubes.",
+      "fail": "Cubes merge; or dissolve instantly; or turn into another object."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The cubes keep their number and the glass stays one glass.",
+      "fail": "A cube vanishes or a new one appears; or the glass duplicates; or a cube passes through the glass wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The soda's colour and the glass stay the same.",
+      "fail": "The soda changes colour; or the glass changes shape; or the background rearranges."
+    }
+  ]
+}

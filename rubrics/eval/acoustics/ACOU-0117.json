@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0117",
+  "caption": "A mechanical metronome is set going, and its pendulum swings from side to side with each tick.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A mechanical metronome."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is set going: a hand releases or starts the pendulum."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pendulum swings from side to side."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The swing is steady and repeated."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The start comes first and the swinging follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The pendulum is still before the start, then swings about its pivot at the base while the body stays still.",
+      "fail": "The pendulum swings before it is started; or the body rocks or walks across the table; or the weight slides up or down the rod on its own; or the rod bends mid-swing."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "While running, the swing keeps a steady width and reverses at each end.",
+      "fail": "The arcs shrink to a stop with nothing touching the metronome; or grow wider and wider; or the pendulum pauses in mid-swing and then continues; or it stops dead at one side with nothing touching it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The pendulum passes the centre at speed and slows toward each end; both sides mirror each other.",
+      "fail": "The pendulum moves in jerks; or jumps from one side to the other without passing the centre; or swings in a circle rather than side to side."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The rod, the weight and the body are rigid.",
+      "fail": "The rod bends; or the body flexes; or the weight changes shape."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One metronome with one pendulum; nothing passes through the case.",
+      "fail": "A second pendulum appears; or the pendulum vanishes; or passes through the case; or the metronome turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The case's colour, the scale markings and the weight's colour stay the same.",
+      "fail": "The case changes colour; or the scale markings change; or the weight changes colour."
+    }
+  ],
+  "note": "The hand that starts it is a trigger and is not judged."
+}

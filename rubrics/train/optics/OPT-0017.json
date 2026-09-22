@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0017",
+  "caption": "A flock of birds flies over a sunlit field, and their shadows race across the grass below them.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flock of birds flies over a sunlit field."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Their shadows race across the grass below them."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "Each bird has a shadow."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadows move together with the flock."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each shadow moves at the same speed and direction as its bird.",
+      "fail": "The shadows lag or lead; or move the opposite way; or stay still while the birds fly."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "There are as many shadows as birds, and none appears where no bird passes.",
+      "fail": "Shadows appear with no bird above; or there are more shadows than birds; or shadows persist after the birds have gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadows are offset toward the side away from the sun.",
+      "fail": "They lie toward the sun; or directly below with a plainly low sun; or in different directions for one flock."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadows do not move on their own.",
+      "fail": "A shadow moves while its bird hovers; or the shadows scatter while the flock holds together."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The birds keep their wings and the shadows keep bird shapes.",
+      "fail": "A bird loses a wing; or a shadow becomes a solid object; or shadows merge into one blob under a spread flock."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The field and the birds stay the same, and the shadows stay dark.",
+      "fail": "The field changes; or the shadows turn coloured; or the birds change colour."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the shadow's relation to it is."
+}

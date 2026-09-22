@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0012",
+  "caption": "An ice cube is flicked onto a hot skillet, and it skitters around and shrinks as it melts.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A skillet."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "An ice cube is flicked onto the skillet."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cube slides about on the surface."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The cube shrinks."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Steam or a wet film shows at the cube's edge."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The flick comes first and the sliding and shrinking follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The cube only shrinks and rounds off while it is on the hot pan.",
+      "fail": "The cube grows; or regains a sharp corner; or freezes into a clear block again; or alternates between smaller and larger."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The cube glides and spins because it was flicked and because it rides on its own steam; its path bends only where it meets the pan's slope or wall.",
+      "fail": "The cube darts off at a new angle with nothing touching it and no wall met; or stops dead and sets off again from rest; or climbs the pan's wall and hangs there; or moves against the flick before touching anything."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The cube turns only into water and steam, and the shrinking cube is the cube that was flicked.",
+      "fail": "The cube vanishes in a single frame while still large; or a second cube appears; or the cube splits into pieces that are each as big as the cube was; or water appears far across the pan with no cube reaching there."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cube stays a hard solid that skids without deforming, and the melt it leaves is a thin film lying on the pan's surface.",
+      "fail": "The cube smears like butter as it slides; or flattens into a pancake; or the melt stands as a dome on the pan; or the cube bounces off the pan like a ball."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The cube stays on top of the pan's surface and nothing passes through the pan.",
+      "fail": "The cube sinks into the pan's metal; or passes through the pan's wall; or the pan changes shape; or the cube passes through the pan's handle."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The skillet's finish and the hob around it stay the same.",
+      "fail": "The skillet changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ]
+}

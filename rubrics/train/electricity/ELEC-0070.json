@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0070",
+  "caption": "A lamp is plugged into a socket and the socket switched on at the wall, and the lamp lights.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lamp with a cord and plug, and a wall socket with its own switch."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The plug is pushed into the socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The socket switch is turned on."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The lamp lights."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The switch is on the socket at the wall, not on the lamp."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is plug in, switch on, lamp lights."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lamp stays dark after the plug goes in and lights when the socket switch is turned on, and only then.",
+      "fail": "The lamp lights as the plug goes in with the switch untouched; or the switch is turned and the lamp stays dark; or the lamp is lit before the plug reaches the socket."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once lit the lamp stays lit steadily while the switch stays on.",
+      "fail": "The lamp goes out again with the switch still on; or switches between lit and dark; or the socket switch flips back by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lamp's light reaches its surroundings: the shade glows and nearby surfaces brighten, with shadows pointing away from the lamp.",
+      "fail": "The bulb glows while the shade and the surface beneath stay as dark as before; or the surroundings brighten while the lamp stays dark; or the light comes from a place other than the lamp."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord hangs in a slack curve from the plug to the lamp and stays attached at both ends.",
+      "fail": "The cord stands rigid between plug and lamp; or stretches like elastic as the plug is pushed in; or floats above the floor."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp, one plug, one socket with one switch; the plug enters the socket rather than the wall; fingers stay outside the wall.",
+      "fail": "The plug passes into the wall beside the socket; or a second plug or lamp appears; or the socket switch vanishes or moves; or the lamp changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lamp's shade colour, the wall and the socket design stay the same apart from the light.",
+      "fail": "The shade changes colour rather than brightness; or the wall changes colour; or the socket changes shape."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0155",
+  "caption": "A struck match stands upright in a holder and burns down, the flame creeping down the stick as the burnt part above it blackens and curls.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A struck match stands upright in a holder."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flame moves down the stick."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The part of the stick above the flame is blackened."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The blackened part curls."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flame shrinks as it nears the base."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The burnt part stays black."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flame only travels downward along the stick and the wood it has passed stays black.",
+      "fail": "The flame climbs back up the stick; or a blackened part turns back to pale wood; or the flame jumps to a new place on the stick; or the burnt part straightens and lightens."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The burnt stick stays a thin stick that blackens and bends and does not turn into another material.",
+      "fail": "The burnt stick melts and drips; or the stick turns into another object; or the burnt part swells into a lump; or the stick stretches longer as it burns."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flame points upward from the burning point whatever the stick's angle, and ash falls.",
+      "fail": "The flame points downward from the burning point; or hangs below the stick; or ash rises and stays aloft; or the flame lies flat against the stick with nothing blowing it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The flame is at the boundary between the black part and the pale part and moves with it.",
+      "fail": "The flame burns in the middle of the pale part with black wood beyond it; or the flame burns above the blackened part on fresh wood; or the black part grows while the flame stays fixed at the head; or the flame burns with no blackening behind it at all."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One match in one holder; the match shortens only by burning and stays in the holder.",
+      "fail": "A second flame appears on the stick; or a new match appears in the holder; or the flame detaches and floats; or the match passes through the holder."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The holder, the surface it stands on and the surroundings stay the same.",
+      "fail": "The holder changes shape; or the surface changes pattern; or the background changes between frames."
+    }
+  ]
+}

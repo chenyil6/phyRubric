@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0119",
+  "caption": "An overloaded power drill is run hard, and small sparks flicker through the vents on its motor housing.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A power drill is running."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The drill is run hard: it is pressed into work or held under load."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Small sparks flicker through the vents on its motor housing."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sparks are inside the housing, seen through the vent slots."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sparks flicker while the drill runs."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The sparks are visible only inside the vents while the motor runs, flickering; they stop when the trigger is released and the motor winds down.",
+      "fail": "Sparks keep flickering in the vents after the trigger is released and the chuck has stopped; or sparks come out of the housing and fly across the room; or the vents glow steadily like a lamp; or sparks appear at the chuck rather than the vents."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One drill with its vents in fixed places; the sparks leave nothing behind.",
+      "fail": "Glowing dots stay on the housing after the motor stops; or the vents change number or place; or a second drill appears; or the drill vanishes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any spark fragment that escapes the vents falls and goes dark within a short distance.",
+      "fail": "Escaping sparks rise and gather above the drill; or hang in the air; or lie glowing on the bench for the rest of the clip.",
+      "precondition": "Sparks are seen leaving the vents."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The chuck and bit spin about the drill's axis while the trigger is held; the drill body is held steady.",
+      "fail": "The bit wobbles off its axis or bends while turning; or the chuck turns while the bit stays still; or the whole drill body spins with the bit."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The drill keeps its shape; the housing stays whole and the bit passes only into the work.",
+      "fail": "The housing melts or bulges; or the bit passes through the work and the bench beneath as if through air; or the drill changes shape; or a hand passes through the drill."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The drill's colour and markings and the bench stay the same.",
+      "fail": "The drill changes colour; or its markings change; or items on the bench rearrange."
+    }
+  ]
+}

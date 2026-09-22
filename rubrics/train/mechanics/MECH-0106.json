@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0106",
+  "caption": "A crane cable is hooked to a steel beam lying on the ground; the crane lifts, the cable tightens, and the beam rises off the ground.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A crane cable is hooked to a steel beam lying on the ground."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The crane lifts."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cable tightens."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The beam rises off the ground."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lift comes first, then the tight cable, then the rising beam."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The cable straightens first and the beam leaves the ground only after that.",
+      "fail": "The beam rises before the cable is tight; or the cable is tight and the beam stays down while the hook rises; or the beam rises with the cable slack."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The beam hangs straight below the hook, level or tilting toward its heavier end, and does not swing far.",
+      "fail": "The beam hangs off to one side of the hook; or it rises above the hook; or it floats up ahead of the cable."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cable stays straight and taut while the beam hangs and does not stretch.",
+      "fail": "The cable sags with the beam hanging; or it stretches; or it bends sharply."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The beam moves only as the crane lifts and stops when the lift stops.",
+      "fail": "The beam rises on its own; or keeps rising after the crane stops; or swings wildly with nothing touching it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One beam, one cable and one crane keep their number.",
+      "fail": "The beam vanishes or a second appears; or the cable passes through the beam; or the beam turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The beam, the cable and the site stay the same.",
+      "fail": "The beam changes colour or length; or the cable changes; or the site rearranges."
+    }
+  ]
+}

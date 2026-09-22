@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0098",
+  "caption": "A bucket full of water is hauled up out of a well on a rope.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bucket hangs in a well on a rope."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The rope is pulled."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bucket rises up out of the well."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bucket is full of water."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The rope hangs straight down to the bucket and stays taut while pulled, and the bucket rises only as fast as rope is taken in.",
+      "fail": "The rope goes slack while the bucket rises; or the rope stretches; or the bucket rises faster than the rope is taken in."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The bucket hangs below the rope, swinging gently, with the water level in it and any slop running down.",
+      "fail": "The bucket rises on its own with the rope slack; or it hangs sideways; or water rises out of the bucket."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bucket rises only while the rope is pulled and stops when the pull stops.",
+      "fail": "The bucket rises with no pull; or it keeps rising after the pull stops; or it descends while being pulled."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water slops and settles, and the bucket stays rigid.",
+      "fail": "The water stays a rigid block; or the bucket bends; or water floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bucket and one rope keep their number.",
+      "fail": "The bucket vanishes or a second appears; or the rope passes through the bucket's handle; or the bucket turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bucket, the rope and the well stay the same.",
+      "fail": "The bucket changes colour; or the rope changes; or the well's stonework rearranges."
+    }
+  ]
+}

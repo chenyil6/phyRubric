@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0019",
+  "caption": "Boiling sugar syrup is drizzled from a spoon into a bowl of ice water, and the syrup hardens instantly into brittle golden threads.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bowl of ice water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Syrup is drizzled from a spoon into the water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The syrup hardens in the water."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The hardened syrup forms threads."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The threads look brittle and golden."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drizzle comes first and the hardening follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each thread sets as it enters the water and keeps the shape it fell in; set threads stay set.",
+      "fail": "A set thread softens and runs again in the cold water; or a thread dissolves away into the water; or a thread flattens and spreads on the bowl's floor after setting; or threads join back into a running stream."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The syrup is a thick liquid falling from the spoon and a rigid brittle solid in the water: the threads hold their curls and snap rather than bend.",
+      "fail": "The threads bend and sway like string in the water; or stretch when lifted; or the syrup spreads as a cloud through the water; or the threads stay soft and squash together into a lump."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The syrup falls downward from the spoon into the water and the threads then sink or hang below the surface.",
+      "fail": "The stream travels upward from the spoon; or a thread rises out of the water; or a thread hangs in the air between spoon and water; or the syrup climbs the spoon."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The water shows the syrup arriving: the surface dimples and ripples where the stream lands and the ice shifts.",
+      "fail": "The stream enters and the surface stays glassy; or the water ripples before the stream reaches it; or the ice at the surface stays fixed as the stream pours through it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The threads in the water are the syrup that fell; the bowl and spoon keep their shape.",
+      "fail": "Threads appear in the water with none falling there; or a thread vanishes; or the syrup passes through the bowl's wall; or a second spoon appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bowl, the spoon and the ice stay the same.",
+      "fail": "The bowl changes colour; or the spoon changes shape; or a thread changes colour after setting."
+    }
+  ]
+}

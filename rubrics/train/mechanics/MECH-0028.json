@@ -1,0 +1,82 @@
+{
+  "id": "MECH-0028",
+  "caption": "A diver stands at the end of a high platform, bends her knees, jumps off, and falls into the pool.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A diver stands at the end of a high platform."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "She bends her knees."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "She jumps off."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "She falls into the pool."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pool is visible below the platform."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The knee bend comes first, then the jump, then the fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "She rises briefly off the platform and then falls quicker and quicker toward the water.",
+      "fail": "She slows down on the way to the water; or she hangs in the air below the platform; or she keeps rising from the platform to the top of the frame."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The jump carries her out from the platform, her path curves over into the fall, and she comes down clear of the platform.",
+      "fail": "She drops straight down against the face of the platform after plainly jumping outward; or she travels backward over the platform in mid-air; or she moves further out the lower she gets, as if pushed."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Once she leaves the platform nothing but the fall changes her course.",
+      "fail": "She changes direction in mid-air with nothing touching her; or she stops in mid-fall and hangs there; or she gathers speed upward."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Where she enters the water it splashes up and rings spread out from the entry point.",
+      "fail": "She enters the water and the surface stays flat; or the splash rises before she reaches the surface; or she passes into the water leaving no ripple at all.",
+      "precondition": "She reaches the water within the clip."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One diver keeps her limbs, her number and her shape, and she does not pass into the platform.",
+      "fail": "A limb stretches, detaches or vanishes; or she passes through the platform; or a second figure appears on the platform."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Her swimsuit, the platform and the pool surroundings stay the same.",
+      "fail": "Her swimsuit changes colour in mid-air; or the platform changes shape between frames; or the stands behind the pool rearrange."
+    }
+  ],
+  "note": "Biomechanics scene: the diver's body is what shows the fall. Technique, form and entry style are not judged; only the direction and order of the motion."
+}

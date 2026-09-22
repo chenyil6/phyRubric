@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0062",
+  "caption": "A toaster is unplugged while its coils are glowing, and the coils fade and the lever pops up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toaster with its coils glowing."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The toaster is unplugged."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The coils fade."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The lever pops up."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The coils are glowing before the pull."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is glowing, unplug, fading, lever up."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The coils begin to fade after the plug leaves the socket, not before, and the lever releases.",
+      "fail": "The plug is out and the coils stay at full glow to the end of the clip; or the coils fade before the plug moves; or the coils fade with the plug still seated; or the lever stays down and the coils stay glowing with the plug out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The glow fades one way, from bright through dull red toward dark, and never returns; the lever, once up, stays up.",
+      "fail": "The coils brighten after the pull; or go dark and relight; or the lever pops up and drops back down by itself; or the glow goes out instantly with no dull red."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The lever moves straight up its slot and stops at the top; any bread rises with the carriage and stops.",
+      "fail": "The lever moves down; or shoots up and out of the toaster; or moves sideways; or the bread flies out of the slots and up into the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord follows the plug: it slackens and drops once the plug is free; the toaster stays put.",
+      "fail": "The cord stretches like elastic; or stands rigid in the air after the plug is out; or the toaster is dragged across the counter by the pull."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One toaster, one cord, one plug, one socket; the coils and lever keep their shape; the plug leaves the socket whole.",
+      "fail": "A coil vanishes rather than going dark; or the plug passes through the wall; or the cord splits; or the toaster changes shape; or bread appears from nowhere."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The toaster's casing, the lever and the counter stay the same apart from the glow.",
+      "fail": "The casing changes colour; or the lever changes shape or place; or the counter's contents rearrange."
+    }
+  ],
+  "note": "How fast the coils fade is not judged, only that they fade one way after the pull. Whether bread is in the toaster is not required."
+}

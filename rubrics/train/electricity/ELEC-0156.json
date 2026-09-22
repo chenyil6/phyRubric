@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0156",
+  "caption": "A screwdriver with a magnetic tip is held to a loose screw, and the screw clings to the tip and is lifted away.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A screwdriver and a loose screw."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The screwdriver's tip is held to the screw."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The screw clings to the tip."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The screw is lifted away on the tip."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The screw is loose and not in a hole when picked up."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is tip to screw, cling, lift."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "When the tip touches the screw's head the screw stays on the tip, hanging from it as the driver is lifted and moved, and does not fall until placed or pulled off.",
+      "fail": "The tip touches the screw and the screw stays behind as the driver lifts; or the screw drops off during the lift with nothing touching it; or the screw hangs a gap from the tip; or the screw stays on the tip while the driver is pushed through it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The screw hangs from the tip in contact with it, its head at the tip; if it comes off it falls downward.",
+      "fail": "The screw hangs in the air below the tip without touching it; or floats up along the shaft; or a screw that comes off drifts sideways or upward; or the screw stands out from the tip pointing upward with no support."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The screw moves only with the driver; other screws or parts nearby stay still.",
+      "fail": "The screw hops to the tip from far away; or other screws slide toward the driver; or the screw turns on the tip by itself; or the driver moves with no hand on it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The screw and the tip stay hard and keep their shape; the screw sits on the tip as a separate piece.",
+      "fail": "The screw squashes or bends on the tip; or the tip droops under the screw; or the shaft stretches as it is raised."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One screw on one driver; the screw does not sink into the tip, vanish or duplicate.",
+      "fail": "The screw vanishes from the tip during the lift; or a second screw appears on the tip; or the screw sinks into the shaft; or the driver passes through the workpiece."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The driver's handle colour, the screw's size and the surface beneath stay the same.",
+      "fail": "The handle changes colour; or the screw changes size or type; or the surface changes."
+    }
+  ]
+}

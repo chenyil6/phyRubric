@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0108",
+  "caption": "A cold metal railing on a humid summer morning is covered in fine droplets, and a finger drags through them leaving a clear line.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A metal railing is covered in fine droplets."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A finger drags through the droplets."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A clear line is left where the finger passed."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The droplets around the line stay in place."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drag comes first and the line follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The line is clear where the finger wiped and the droplets away from it stay in place.",
+      "fail": "The droplets vanish from the untouched parts of the railing as the line is drawn; or droplets appear on a part of the railing the finger has just wiped; or the whole railing clears at the drag; or droplets appear where the finger has not been."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The cleared line stays clear while the railing stays cold, or beads slowly back in; it does not fill in at a stroke.",
+      "fail": "The line fills back in at once behind the finger; or the line clears and beads and clears again with nothing touching it; or the line widens on its own after the finger has gone; or the droplets march back into the line as a front."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The water the finger pushes runs downward or gathers as drops that hang under the rail.",
+      "fail": "The pushed water runs up the railing; or a drop leaves the railing and rises; or the water gathers along the railing's top and stands as a dome; or the pushed water hangs in the air beside the rail."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The droplets behave as water on metal: they merge where the finger sweeps them together and then hang or run, and the railing stays rigid.",
+      "fail": "The droplets overlap without merging where the finger sweeps them; or the droplets jump about on the railing; or the railing's metal dents where the finger drags; or the water sets as frost on a summer morning."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One railing; it keeps its shape and the finger passes along its surface, not through it.",
+      "fail": "The finger passes into the railing; or the railing bends; or a second railing appears; or the railing vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The railing's paint away from the line and the surroundings stay the same.",
+      "fail": "The railing changes colour; or its paint's pattern changes; or the background changes between frames."
+    }
+  ]
+}

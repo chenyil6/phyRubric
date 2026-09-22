@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0292",
+  "caption": "A magnet swinging on a string over a steel tray dips low on one swing and snaps down onto the tray, stopping dead.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A magnet swings on a string over a steel tray."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "On one swing the magnet dips low toward the tray."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The magnet snaps down onto the tray."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The magnet stops dead on the tray."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The magnet swings freely before the dip."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is swinging, dip, snap, stopped."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The magnet swings freely while high above the tray; it is pulled down only when it comes close to the steel; once on the tray it stays stuck and still.",
+      "fail": "The magnet is pulled to the tray from high up; or stops in mid-swing far from the tray; or slides about on the tray after landing; or lifts off the tray again with nothing pulling it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the magnet comes close it is drawn sharply onto the tray and stops on contact; it does not bounce off.",
+      "fail": "The magnet bounces off the tray and swings on; or hangs a gap above the tray without touching; or lands on the tray and slides off its edge; or dips close and swings away untouched."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The string hangs taut from its anchor while the magnet swings and goes slack once the magnet is on the tray; the tray stays on the table.",
+      "fail": "The string stays taut and straight with the magnet on the tray below the anchor's reach; or the string stands rigid in the air; or the tray lifts toward the magnet; or the magnet rises above its anchor."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The swing is an arc about the anchor until the magnet is drawn down; the pull is toward the tray.",
+      "fail": "The magnet swings in a straight line; or the anchor moves with the magnet; or the magnet is drawn sideways away from the tray; or the swing widens with nothing pushing it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One magnet on one string and one tray; the magnet stays on the string; nothing sinks into the tray or vanishes.",
+      "fail": "The magnet detaches from the string in mid-air; or sinks into the tray; or a second magnet appears; or the tray vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The magnet's colour, the string and the tray stay the same.",
+      "fail": "The magnet changes colour or shape; or the tray changes colour; or the string changes length between swings."
+    }
+  ],
+  "note": "Who set the magnet swinging is not judged; the swing already under way is the caption's setup."
+}

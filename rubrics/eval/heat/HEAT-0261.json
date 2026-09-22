@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0261",
+  "caption": "Vegetables are tossed in a wok over a high flame, and a cloud of steam rises with each toss.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Vegetables are tossed in a wok over a flame."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Steam rises from the wok."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Each toss releases a fresh burst of steam."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The steam thins above the wok."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tossing comes first and each burst follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam leaves the wok going up and spreads and thins, and the vegetables fall back into the wok.",
+      "fail": "The steam pours down the wok's sides and pools on the hob; or sinks below the wok; or a vegetable rises out of the wok and hangs above it; or the steam hangs as a fixed shape without rising."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Each burst comes with a toss and then eases, and the steam that has left keeps moving away.",
+      "fail": "A burst comes before the toss; or the plume runs back into the wok; or a puff retreats to the food; or the bursts keep growing with no further toss."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The tossed vegetables leave the wok along its swing, arc up and fall back into it.",
+      "fail": "The vegetables leave the wok against the swing; or they stop dead at the top of the arc; or they rise and keep climbing out of view; or they land outside the wok with the wok held under them."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The burst comes from the hot food and pan where the vegetables land back, and the vegetables look wet or glossy.",
+      "fail": "The steam pours from a part of the hob away from the wok; or the vegetables are tossed and no steam appears at all; or the steam bursts from an empty part of the wok while the food sits at its other side."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The vegetables in the wok are the vegetables that were tossed and they keep their number.",
+      "fail": "A vegetable vanishes in mid-air; or new vegetables appear with none added; or a vegetable passes through the wok's wall; or two pieces merge into one."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wok, the hob and the surroundings stay the same.",
+      "fail": "The wok changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ],
+  "note": "Who tosses the wok is not judged. The vegetables browning as they cook is chemistry and is not judged."
+}

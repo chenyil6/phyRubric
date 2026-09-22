@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0006",
+  "caption": "The headlight knob on a car's dashboard is turned, and the headlights come on and the dashboard dials light up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car's dashboard with a headlight knob."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The knob is turned."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The headlights come on."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The dashboard dials light up."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The headlights and the dials are dark before the turn."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark, turn, both lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The headlights and the dashboard dials come on together at the moment the knob turns, and only then.",
+      "fail": "The knob is turned and the headlights stay dark; or the dials stay dark while the headlights come on; or the headlights come on before the knob moves; or the dials light up well before the headlights."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the headlights and dials stay lit while the knob stays in its on position.",
+      "fail": "The headlights go off again with the knob untouched; or the dials flicker on and off; or the knob turns back by itself; or the headlights dim back to dark."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The headlights light the road or wall ahead of the car: the ground in front brightens with two beams from the front of the car.",
+      "fail": "The headlights glow while the ground ahead stays as dark as before; or the ground ahead brightens while the lamps stay dark; or the lit patch lies behind or beside the car.",
+      "precondition": "The view ahead of the car is visible."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The car stays still as the knob is turned; nothing on the dashboard moves apart from the knob and the needles.",
+      "fail": "The car rolls or rocks at the turn; or the steering wheel turns by itself; or the wipers sweep; or the needles spin round the dials."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One dashboard with its knob and dials in fixed places; the hand passes through nothing.",
+      "fail": "Dials appear or vanish; or the knob moves along the dashboard; or the hand passes through the dashboard; or a second steering wheel appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dashboard's colours and the layout of its controls stay the same apart from the lighting.",
+      "fail": "The dashboard changes colour rather than brightness; or the dial markings change; or the trim changes."
+    }
+  ]
+}

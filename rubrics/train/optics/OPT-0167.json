@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0167",
+  "caption": "A flashlight shines through cupped fingers, and the fingers glow red where the light passes through them.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flashlight shines through cupped fingers."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The fingers glow red where the light passes through them."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The light beyond the hand is dim."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow appears where the flesh is thin and would disappear when the flashlight is turned off.",
+      "fail": "The fingers glow with the light off; or the thick palm glows and the thin fingers do not; or the glow is elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The glow is red.",
+      "fail": "It is white or blue; or it changes colour with a steady light; or the fingers change colour when the light is off."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light beyond the hand is dim compared with the glow.",
+      "fail": "The room beyond is fully lit; or the beam passes through the hand unhindered; or the wall behind is brighter than the fingers."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The hand and flashlight move only as the person moves them.",
+      "fail": "They float; or the flashlight moves by itself; or the glow moves with both still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One hand and one flashlight.",
+      "fail": "A second hand appears; or a finger vanishes; or the hand passes through the lens."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room stays the same.",
+      "fail": "The walls change; or the flashlight changes; or the room rearranges."
+    }
+  ],
+  "note": "The hand is the object the light passes through; the person is not judged."
+}

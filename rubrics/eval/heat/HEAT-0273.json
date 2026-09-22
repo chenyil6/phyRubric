@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0273",
+  "caption": "The inside of a tent wall is covered in dew at dawn; the wall is tapped and drops rain down inside the tent.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "The inside of a tent wall is covered in dew."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The wall is tapped."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Drops rain down inside the tent."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The drops land on the groundsheet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drops cling in place before the tap."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The wall is drier where the drops fell from."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The drops hang on the wall until the tap, then run together and fall straight down onto the groundsheet.",
+      "fail": "The drops fall upward off the wall; or the drops run up the wall as it is tapped; or the drops fly out sideways and stay in the air; or the drops fall and then rise back to the wall."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The drops fall where the wall was tapped and the wall there is left drier, while drops on untapped parts stay.",
+      "fail": "The drops fall from a part of the wall the tap never reached; or the wall is tapped and no drop moves at all; or the whole wall sheds its dew at one tap on one spot; or the wall is just as wet after the drops have fallen from it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The drops only gather and fall; the wall does not bead up again where they left with nothing wetting it.",
+      "fail": "The wall beads up again where the drops fell with nothing wetting it; or drops that have fallen come back onto the wall; or the drops grow and shrink in turn; or the dew spreads over the dry patch as a front."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The drops behave as water on fabric: rounded, merging when they touch and soaking the groundsheet where they land, and the wall is limp cloth that gives under the tap.",
+      "fail": "Touching drops overlap without merging; or drops bounce off the groundsheet like beads and stay round; or the tent wall stays rigid like a board under the tap; or the drops set as frost on the fabric."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tent; the drops come off its wall and land inside, and nothing passes through the fabric.",
+      "fail": "Drops pass through the tent wall from outside; or a drop vanishes in mid-air; or the groundsheet stays bone dry where drops landed; or the tent changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tent's fabric colour, the groundsheet and the gear inside stay the same.",
+      "fail": "The fabric changes colour; or the groundsheet changes pattern; or the gear inside rearranges."
+    }
+  ],
+  "note": "Who taps the wall is not judged."
+}

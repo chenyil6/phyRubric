@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0015",
+  "caption": "A spinning top is set going on a wooden table and left alone; it spins for a while, starts to wobble, and finally topples over.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A spinning top is set going on a wooden table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It spins for a while."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It starts to wobble."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It topples over."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The top is left alone once it is spinning."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The spinning comes first, then the wobble, then the fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spin slows steadily and the wobble grows wider as it slows, ending in the topple.",
+      "fail": "The top spins faster as time passes; or the wobble shrinks and the top rights itself; or the top comes to rest still standing upright."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The top keeps spinning with nothing touching it and changes only by slowing down.",
+      "fail": "The top is driven across the table with nothing touching it; or it reverses the way it spins; or it starts spinning again after it has fallen."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The top leans further as the wobble grows and comes down onto its side on the table.",
+      "fail": "The top leans right over and hangs there without falling; or it tips upward off the table; or it falls through the table top."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The top stays rigid while it spins and lands, and the table stays flat and solid under its tip.",
+      "fail": "The top bends or squashes as it wobbles; or it flows like liquid where it lands; or the table surface dips under the spinning tip."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One top on one table keeps its shape throughout.",
+      "fail": "The top vanishes or a second one appears; or it turns into another object as it falls; or a part of it comes away while it spins."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The top's colours, the table's grain and the surroundings stay the same.",
+      "fail": "The top changes colour as it spins; or the grain of the table shifts between frames; or objects around the table rearrange."
+    }
+  ]
+}

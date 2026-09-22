@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0050",
+  "caption": "A heavy cast-iron pan is dropped onto a stovetop, and the lids of neighbouring pots rattle for a moment.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stovetop with pots that have lids on."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A heavy cast-iron pan is dropped onto the stovetop."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lids of the neighbouring pots rattle."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pan is dropped rather than set down: it falls the last stretch."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rattle is brief."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pan lands first and the lids rattle after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The lids are still until the pan lands and begin rattling at the impact.",
+      "fail": "Lids rattle while the pan is still in the air; or the pan lands and the lids stay dead still; or lids start rattling again after settling with no second impact."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The rattle dies away and the lids come to rest seated on their pots.",
+      "fail": "The rattle grows after the impact; or keeps going unchanged to the end of the clip; or a lid freezes in mid-hop above its pot."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pan falls down onto the stove and stays; lids that hop fall back.",
+      "fail": "The pan hangs in the air before landing; or a lid lifts off and stays up; or the pan lands and then rises again."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pan, the stovetop and the lids stay rigid.",
+      "fail": "The pan bends or splashes like a liquid; or the stovetop ripples; or a lid bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The pots and lids keep their count; one pan; nothing passes through the stovetop.",
+      "fail": "A pot or lid appears or vanishes; or the pan passes through the stovetop; or the pan and a pot merge; or the pan vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pots' colours, the stove knobs and the pan's size stay the same.",
+      "fail": "Pots change colour; or the stove knobs change; or the pan changes size."
+    }
+  ],
+  "note": "The hand that drops the pan is a trigger and is not judged."
+}

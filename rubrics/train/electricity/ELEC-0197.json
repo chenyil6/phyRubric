@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0197",
+  "caption": "A nylon jacket is pulled off a hanger in a dark closet, and faint flickers of light run across the fabric.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A nylon jacket on a hanger in a dark closet."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The jacket is pulled off the hanger."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Faint flickers of light run across the fabric."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The closet is dark."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flickers come while the jacket moves, not while it hangs still."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flickers appear only as the jacket moves against itself or the hanger, and each is gone at once; while the jacket is still there is no glow.",
+      "fail": "The jacket glows steadily like a lamp; or flickers keep running across it after it has been laid still; or a flicker stays lit at one spot; or the fabric glows before it is touched."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "One jacket and one hanger; the flickers leave nothing behind on the fabric.",
+      "fail": "Glowing dots stay on the jacket after a flicker; or a second jacket appears; or the hanger vanishes; or the flickers detach and float in the closet."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The jacket is light slippery cloth: it slides off the hanger, folds and swings, and hangs in folds when held.",
+      "fail": "The jacket stays a rigid shape as it comes off; or stretches like elastic; or hangs in the air as a fixed shape; or flows like liquid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The flickers are small: they brighten only the fabric right around them and not the closet.",
+      "fail": "The closet lights up with each flicker as if a lamp came on; or the flickers throw shadows across the clothes; or the flickers stay lit and light the closet."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The jacket comes off the hanger over its shoulders, not through it; the hanger stays on the rail; nothing passes through anything.",
+      "fail": "The jacket passes through the hanger or the rail; or the hanger detaches and floats; or the jacket merges with the clothes beside it; or the rail changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jacket's colour, the hanger and the other clothes stay the same apart from the flickers.",
+      "fail": "The jacket changes colour; or the other clothes rearrange; or the hanger changes shape."
+    }
+  ],
+  "note": "Who pulls the jacket is not judged."
+}

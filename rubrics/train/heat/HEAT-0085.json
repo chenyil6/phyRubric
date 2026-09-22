@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0085",
+  "caption": "A cold bottle of soda has just been taken out of the fridge on a hot day, and beads of water form on the outside of the bottle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bottle of soda is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Beads of water form on the outside of the bottle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bottle reads as cold and just out of the fridge: an open fridge, chill haze or frost on the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The setting is a hot day: sun, outdoors or a warm room."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bottle is a soda bottle with a label and cap."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The condensation builds: a haze, then droplets that grow and multiply; the bottle's surface gets wetter, never drier, while it is out.",
+      "fail": "The droplets shrink or vanish while the bottle sits; or the surface fogs and clears repeatedly; or the beading reduces over the clip."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Droplets that grow large enough run downward, leaving trails; water gathers at the bottom of the bottle or on the surface beneath.",
+      "fail": "A drop runs upward or sideways along the bottle; or water collects on top of the cap; or a drop leaves the bottle and floats."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The water appears only on the outside of the cold bottle, as beads on the surface.",
+      "fail": "Beads form on the inside of the bottle or on the table away from the bottle; or drops detach and drift off into the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The beads behave as water on glass or plastic: they stay round, merge when they touch, and run as streaks.",
+      "fail": "Touching drops overlap without merging; or drops jump about on the surface; or the beads turn to hard frost while the bottle sweats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One bottle keeps its shape and cap; nothing passes through it.",
+      "fail": "The bottle changes shape; or a second bottle appears or the bottle vanishes; or the cap comes off by itself; or the liquid inside passes through the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The label, cap colour and soda colour stay the same; the background stays put.",
+      "fail": "The label text or colour changes; or the soda changes colour; or background objects shift."
+    }
+  ]
+}

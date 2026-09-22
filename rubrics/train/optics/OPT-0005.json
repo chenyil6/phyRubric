@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0005",
+  "caption": "A pair of hands held in a flashlight beam pointed at a wall forms a bird shape, and a bird-shaped shadow appears on the wall.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pair of hands is held in a flashlight beam pointed at a wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The hands form a bird shape."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A bird-shaped shadow appears on the wall."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow is larger than the hands."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The hands are shaped first and the shadow appears with them."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow matches the outline of the hands and changes the instant the fingers move.",
+      "fail": "The shadow is a different shape from the hands; or it stays fixed while the fingers move; or it changes while the hands are still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow appears only where the beam hits the wall, on the far side of the hands from the flashlight.",
+      "fail": "It appears outside the lit patch; or between the hands and the flashlight; or with the flashlight off."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move on its own.",
+      "fail": "It drifts across the wall with the hands still; or it flaps by itself; or it moves before the hands."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The shadow is one connected dark shape, larger than the hands, with a soft edge.",
+      "fail": "It splits into pieces unrelated to the fingers; or it is smaller than the hands; or it has a hard geometric outline unlike the hands."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two hands and one shadow; the hands keep their fingers and nothing passes through the wall.",
+      "fail": "A finger vanishes or an extra appears; or a second shadow appears under one beam; or the hands pass through the wall; or the shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wall and the flashlight stay the same, and the shadow stays dark.",
+      "fail": "The wall changes colour; or the shadow turns coloured; or the flashlight changes."
+    }
+  ],
+  "note": "The hands are the object casting the shadow; the person is not judged."
+}

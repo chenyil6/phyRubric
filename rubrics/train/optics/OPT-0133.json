@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0133",
+  "caption": "A stone is dropped into a clear stream and sinks, its image wavering with the current until it rests on the bed.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A stone is dropped into a clear stream."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It sinks."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its image wavers with the current."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It rests on the bed."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drop comes first, then the sink, then the rest."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The stone's actual path is a steady sink; only its image wavers.",
+      "fail": "The stone swerves; or it changes shape; or it splits."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It sinks to the bed and stays there.",
+      "fail": "It floats; or hangs; or drifts away downstream while sinking straight in a still pool."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The stone is visible through the moving water throughout.",
+      "fail": "The water hides it; or it vanishes; or a different stone appears."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid and flows.",
+      "fail": "It is rigid; or flows uphill; or freezes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One stone.",
+      "fail": "It duplicates; or vanishes; or passes through the bed."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stream bed and the stone stay the same.",
+      "fail": "The bed rearranges; or the stone changes colour; or the banks change."
+    }
+  ]
+}

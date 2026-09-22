@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0021",
+  "caption": "A hand reaches across a table toward a lamp, and the shadow of the arm sweeps across the table on the far side of the lamp from the arm.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lamp stands on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A hand reaches across the table toward it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shadow of the arm sweeps across the table on the far side of the lamp from the arm."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The arm moves first and the shadow follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The arm's shadow lies away from the lamp and moves as the arm moves.",
+      "fail": "It is cast toward the lamp; or it stays still while the arm moves; or it moves the opposite way."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the arm's outline with the hand at its end.",
+      "fail": "It is a different shape; or the hand is missing from it; or it splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move on its own.",
+      "fail": "It moves with the arm still; or it moves before the arm; or it lingers after the arm is withdrawn."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the table and stretches longer the closer the arm comes to the lamp.",
+      "fail": "It floats above the table; or it shrinks as the arm nears the lamp; or it is missing with the lamp on."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp, one arm and one shadow; the hand passes through nothing.",
+      "fail": "The hand passes through the lamp; or a second shadow appears; or the shadow becomes solid; or a finger vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lamp and the table stay the same, and the shadow stays dark.",
+      "fail": "The lamp changes; or the shadow turns coloured; or the table changes."
+    }
+  ],
+  "note": "The arm is the object casting the shadow; the person is not judged."
+}

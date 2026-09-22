@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0084",
+  "caption": "The tall thin tower on top of a sandcastle is tapped with a plastic shovel, and the tower crumbles and slides down the side of the castle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sandcastle has a tall thin tower on top."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The tower is tapped with a plastic shovel."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The tower crumbles."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The sand slides down the side of the castle."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shovel is plastic."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The tap comes first, then the crumble, then the slide."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The sand breaks into loose grains and clumps rather than tipping over as a rigid piece.",
+      "fail": "The tower tips over whole and lands intact; or it bends; or it stays standing after the tap with only a dent."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Loose sand falls and slides downward over the castle's side and piles at the base.",
+      "fail": "Sand rises; or hangs in the air; or slides up the side."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The crumbling begins at the tap, where the shovel lands.",
+      "fail": "The tower crumbles before the shovel touches it; or the shovel taps and nothing happens for the rest of the clip; or the base crumbles while the tapped top stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The rest of the castle stays put apart from where the sliding sand runs over it.",
+      "fail": "The whole castle collapses from one tap on the tower; or the castle ripples like liquid; or the sliding sand bounces like balls."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One castle and one shovel, and sand comes only from the tower.",
+      "fail": "The tower reappears; or a second tower appears; or the shovel passes through the castle; or the sand vanishes mid-slide."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sand's colour, the castle and the beach stay the same.",
+      "fail": "The sand changes colour; or the castle's other parts change shape between frames; or the beach rearranges."
+    }
+  ]
+}

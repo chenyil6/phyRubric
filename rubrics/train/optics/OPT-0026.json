@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0026",
+  "caption": "A pigeon lands on a sunny square, and as it touches down its shadow on the paving joins it at its feet.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pigeon lands on a sunny square."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its shadow is on the paving."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shadow joins the bird at its feet as it touches down."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow is on the ground before the bird lands."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow is on the ground before the bird lands, and the two meet at the moment of landing.",
+      "fail": "The shadow appears only after landing; or they meet before the feet touch; or the shadow rises to meet the bird."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The bird comes down onto the paving and stays.",
+      "fail": "It hovers just above; or bounces back up; or sinks into the paving."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the bird's outline, wings folding as the bird's fold.",
+      "fail": "It is a different shape; or its wings stay spread while the bird's fold; or it splits."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side away from the sun.",
+      "fail": "It lies toward the sun; or switches sides; or it is missing in sunlight."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pigeon and one shadow.",
+      "fail": "A second bird or shadow appears; or the bird vanishes; or the shadow becomes solid; or a wing detaches."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plumage and the paving stay the same, and the shadow stays dark.",
+      "fail": "The plumage changes; or the shadow turns coloured; or the paving changes."
+    }
+  ],
+  "note": "Self-driven animal: where it goes and how it moves are not judged. Only the shadow's relation to it is."
+}

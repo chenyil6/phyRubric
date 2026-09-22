@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0023",
+  "caption": "Salt is sprinkled on the bars of a marimba; a mallet runs across the bars and the salt jumps off each bar in turn.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A marimba with salt on its bars."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A mallet runs across the bars in a sweep."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The salt jumps off the bars."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The salt is sprinkled: grains are scattered over several bars, not heaped on one."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The mallet sweeps across several bars rather than striking a single one."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The salt leaves each bar as the mallet reaches it, in the order the mallet travels."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Salt on each bar lies still until the mallet reaches that bar and jumps only as that bar is struck; bars ahead of the mallet keep their salt still.",
+      "fail": "Salt jumps off bars the mallet has not yet reached; or all the bars' salt jumps at once at the first stroke; or the mallet passes over a bar and its salt stays put; or salt jumps while the mallet is held clear of the bars."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The salt leaves the bars in the order the mallet travels and does not return; grains that have left a bar settle in the gaps, on the frame or on the floor.",
+      "fail": "Salt leaves the bars in the opposite order to the mallet's travel; or grains settle back onto the bar they left; or salt goes on hopping on every bar for the whole clip after the sweep."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Grains that jump fall back down into the gaps, onto the frame or onto the floor.",
+      "fail": "Grains hang in the air above the bars; or drift upward; or grains that fell between bars rise back onto a bar."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bars are rigid slabs: the mallet skips across them and each bar stays in its cradle.",
+      "fail": "The mallet sinks into a bar; or bars bend under the sweep; or a bar lifts out of its cradle and stays up."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The bars keep their count and order; the mallet passes through nothing; salt only leaves the bars and never appears anew.",
+      "fail": "Bars change count or merge; or the mallet passes through a bar; or salt appears on a bar after the mallet has cleared it; or the mallet duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bars' colours and lettering, the frame and resonators, and the mallet head stay the same.",
+      "fail": "A bar changes colour; or the lettering changes; or the frame or resonators change; or the mallet head changes colour."
+    }
+  ],
+  "note": "The sprinkling may happen before the clip; S4 is decided on how the salt lies on the bars. The speed of the sweep is not judged."
+}

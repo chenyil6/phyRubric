@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0044",
+  "caption": "Two rubber balls rolled toward each other across a gym floor meet off-centre and glance away from each other in new directions.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two rubber balls roll toward each other across a gym floor."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They meet off-centre."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They glance away from each other in new directions."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Both balls change direction, not just one."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The approach comes first and the change of direction follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Both balls change direction at the instant they touch, move apart from the point of contact, and each is slower than before.",
+      "fail": "A ball changes course before the two touch; or the balls touch and both carry on in their old directions; or a ball leaves the contact quicker than it arrived."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The balls meet at their surfaces and stay outside each other.",
+      "fail": "The balls pass through each other; or they overlap and come out the other side; or they merge into a single ball at the contact."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "After an off-centre meeting the two leave on different lines and spread apart.",
+      "fail": "The balls stick together and roll on as a pair; or both leave along exactly the line one of them came in on; or each comes straight back the way it came after a glancing touch."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "On the open floor each ball rolls in a straight line and slows gradually.",
+      "fail": "A ball curves on the open floor with nothing touching it; or a ball gathers speed as it rolls; or a stopped ball sets off again untouched."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two balls stay two balls on the floor.",
+      "fail": "A ball vanishes at the contact or a third appears; or a ball passes through the floor; or a ball turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balls' colours, the gym floor and the markings stay the same.",
+      "fail": "A ball changes colour at the contact; or the two balls swap colours; or the floor markings shift between frames."
+    }
+  ]
+}

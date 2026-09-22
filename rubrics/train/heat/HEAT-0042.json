@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0042",
+  "caption": "A cube of jelly sits on a plate resting over a pan of steaming water, and it slumps and melts into a puddle.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cube of jelly sits on a plate."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The plate rests over a pan of steaming water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cube slumps: its corners round off and it sinks lower."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A puddle spreads out from the cube."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Steam rises from the pan."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The slumping comes first and the puddle follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The cube only slumps and shrinks while the puddle grows, and nothing firms up again over the steam.",
+      "fail": "The cube regains a sharp corner or its height; or the puddle draws back into the cube; or the jelly sets firm again on the hot plate; or the cube alternates between firmer and softer."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The cube loses its flat faces and straight edges from the bottom and edges first and becomes a low glossy mound and then a puddle.",
+      "fail": "The cube keeps its sharp corners while glossy and flowing; or the cube shrinks evenly and stays a smaller cube throughout; or the cube's top rounds off while its base keeps sharp corners; or the cube turns into another shape such as a ball with its corners intact."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The cube sinks downward onto the plate and the puddle spreads outward and settles level in the plate's well.",
+      "fail": "The cube rises off the plate; or the puddle climbs the plate's rim and stays above it; or jelly lifts off the plate and hangs; or the puddle gathers on the cube's top."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The jelly is a wobbling soft solid that slumps and stretches and the melt is a thin liquid of the same colour that levels.",
+      "fail": "The jelly shatters into dry pieces; or the melt runs as a thick paste that keeps its ridges; or the cube bounces on the plate like rubber and keeps its shape; or the melt sets a skin that holds its shape when the plate is tilted."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cube on one plate; the jelly goes only into the puddle.",
+      "fail": "The cube grows; or a second cube appears; or the cube vanishes while still whole; or jelly appears past the plate's rim with none crossing it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jelly's colour, the plate's pattern and the pan stay the same.",
+      "fail": "The jelly changes colour; or the plate's pattern changes; or the pan moves on the hob by itself."
+    }
+  ]
+}

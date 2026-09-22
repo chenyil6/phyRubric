@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0065",
+  "caption": "A geyser in a national park erupts, sending a column of boiling water and steam high into the air before it falls back.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A geyser vent in the ground."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A column of water and steam rises from the vent."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The column reaches high into the air."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The water falls back around the vent."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Steam drifts away above the column."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The rise comes first and the fall follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The water rises from the vent, slows as it climbs and falls back down around the vent, while the steam keeps rising and drifting.",
+      "fail": "The water keeps climbing out of view without slowing or falling; or the fallen water travels upward from the ground; or the steam sinks and pools around the vent; or the column hangs at a fixed height without rising or falling."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The drops leave the vent going up and follow arcs that bend over and come down, spreading as they go.",
+      "fail": "The drops climb in straight lines and stop dead at the top; or the column bends sideways and stays level with nothing blowing it; or the drops return along the line they rose on and re-enter the vent; or the spray gathers into a rising ball."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The eruption builds and then eases, and water that has fallen back stays down.",
+      "fail": "Fallen water rises back into the column with no fresh eruption; or the column's height jumps up and down in steps; or the eruption stops and restarts in the same instant."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water breaks into spray and drops as it rises and splashes where it lands; the steam is a soft cloud that spreads.",
+      "fail": "The column stays a rigid rod of water; or the spray holds a fixed shape in the air; or the steam turns into solid lumps; or the fallen water lies as a heap above the ground."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One vent; the water comes out of it and falls back to the ground around it.",
+      "fail": "Water appears in the air away from the column; or a second column rises from bare ground; or the column vanishes at a stroke while still high; or the vent moves across the ground."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ground around the vent, its mineral crust and the background stay the same.",
+      "fail": "The crust changes colour; or the ground's shape changes between frames; or the hills behind change."
+    }
+  ]
+}

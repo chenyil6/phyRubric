@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0196",
+  "caption": "A sheet of bubble wrap is unrolled on a table, and small bits of dust and fluff jump onto it from the table.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A roll of bubble wrap on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The wrap is unrolled along the table."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Bits of dust and fluff jump onto the wrap from the table."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The dust and fluff are small light specks."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The unrolling comes first and the specks jump after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The specks lie still until the wrap is unrolled close to them, then move to the plastic only when it is near; specks far from the wrap stay put; once on the wrap they stay.",
+      "fail": "Specks jump before the wrap has been unrolled toward them; or specks far across the table stream to the wrap; or specks crawl about on the wrap after landing; or specks jump off the wrap with nothing touching them."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Specks on the wrap cling to the plastic and stay; any that come loose fall back to the table.",
+      "fail": "Specks hover above the wrap without touching it; or a loose speck drifts upward; or specks rise off the table and float past the wrap; or fluff stands upright away from the plastic."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wrap is a flexible plastic sheet with rows of bubbles: it unrolls, lies flat or in gentle curves and keeps its bubbles.",
+      "fail": "The wrap stands rigid like a board as it unrolls; or stretches like elastic; or the bubbles flatten or vanish as it unrolls; or the sheet flows like liquid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Each speck moves along the line from its spot to the nearest part of the wrap and stops on it.",
+      "fail": "A speck flies past the wrap and off the table; or specks circle in the air above the wrap; or specks bounce off and back several times; or specks move away from the wrap."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One roll of wrap; the specks on the wrap are the specks from the table; nothing appears, vanishes or passes through the table.",
+      "fail": "Specks multiply on the wrap; or specks vanish in mid-air; or the roll duplicates; or the wrap passes through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wrap's colour, the table's surface and the surroundings stay the same.",
+      "fail": "The wrap changes colour; or the table changes pattern; or the surroundings rearrange."
+    }
+  ],
+  "note": "Who unrolls the wrap is not judged."
+}

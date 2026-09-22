@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0284",
+  "caption": "A small blowtorch is played over charcoal in a barbecue, and the coals begin to glow where the flame touches them.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A blowtorch is played over charcoal in a barbecue."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The coals begin to glow where the flame touches them."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The glow spreads to neighbouring coals."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The flame points where the torch points."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The coals are black before the torch reaches them."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The torch comes first and the glow follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow appears only where the torch is aimed and spreads from there to the coals beside it.",
+      "fail": "The coals glow before the torch reaches them; or the torch plays on a coal and it stays black to the end of the clip; or the glow appears on the far side of the bed from the torch; or the whole bed glows at once while the torch plays on one spot."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The glow only spreads and brightens and does not go out where it has caught.",
+      "fail": "A glowing coal goes black again while the torch plays nearby; or the glow spreads and then retreats; or the glow brightens and dims in turn; or the ash gathers back into black charcoal."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The torch's flame points where it is aimed and any smoke or sparks from the coals rise.",
+      "fail": "The flame droops downward as the torch is tilted up; or the smoke sinks into the barbecue and pools; or sparks fall through the grate and lie glowing below; or the flame hangs below the nozzle."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The coals stay hard lumps that glow and crust with ash, and the torch stays a rigid tool.",
+      "fail": "A coal melts or flows under the flame; or the coals swell as they glow; or the torch's nozzle melts; or the ash holds a rigid shape when the coals shift."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One torch and one bed of coals; the coals keep their number and stay in the barbecue.",
+      "fail": "A coal vanishes leaving no ash; or new coals appear with none added; or a coal passes through the grate and out below; or a second torch appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The barbecue's body, the grate and the surroundings stay the same.",
+      "fail": "The barbecue changes colour; or the grate changes spacing; or items around the barbecue rearrange."
+    }
+  ]
+}

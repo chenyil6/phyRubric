@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0005",
+  "caption": "A taut rubber band stretched between two nails is flicked, and the band blurs and hums before going still.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A rubber band is stretched between two nails."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The band is flicked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The band blurs: it vibrates visibly."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The band goes still again, a sharp line."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The band is taut, a straight line between the nails, before the flick."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is flick, blur, stillness."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The band is a sharp, still line until the finger reaches it; it blurs at the flick and only then, and does not start again by itself.",
+      "fail": "The band is already fuzzy before the finger arrives; or blurs while the finger is still well away from it; or stays a sharp line as the finger snaps it; or goes still and blurs again with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fuzzy band is widest right after the flick and only narrows until the band is a line again.",
+      "fail": "The fuzzy band widens again after it has begun to narrow; or keeps the same width for the whole clip; or goes from a wide blur to a sharp line in a single instant with no narrowing in between."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The band vibrates as a stretched elastic between two fixed ends: the blur lies between the nails, widest near the middle, and both ends stay looped on their nails.",
+      "fail": "The band slips off a nail; or the blur is widest at a nail and absent in the middle; or the band sags and hangs slack between the nails; or the band stretches longer and stays stretched."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The nails and the board or wall they stand in stay fixed; only the band moves.",
+      "fail": "A nail bends or leans with the flick; or a nail slides along the board; or the board or wall behind the band ripples."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One band and two nails throughout; the band stays one loop and passes through nothing.",
+      "fail": "A second band appears; or the band splits into two strands; or the band passes through a nail or through the finger; or a nail vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The band's colour, the nail heads and the board behind stay the same.",
+      "fail": "The band changes colour; or the nail heads change shape; or the board's grain or colour changes."
+    }
+  ],
+  "note": "The hum is inaudible in the frames and is not judged; the blur is its visible sign."
+}

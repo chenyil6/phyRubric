@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0111",
+  "caption": "A car's defroster is switched on against a windshield fogged from the inside, and a clear patch spreads upward from the vents.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A windshield is fogged on the inside."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The defroster is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A clear patch appears just above the dashboard vents."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The clear patch grows upward and outward."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fog is thick before the switch."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The clearing comes after the switch."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The clear area only grows outward from the vents and glass that has cleared stays clear while the defroster runs.",
+      "fail": "Fog grows back on glass that had cleared while the defroster runs; or the clear patch shrinks; or the glass clears and fogs in turn; or the fog thickens while the defroster runs."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The clearing starts just above the vents and spreads from there, and it starts after the switch.",
+      "fail": "The clearing starts at the windshield's top and works down; or the whole windshield clears at once with no spreading edge; or the glass clears before the defroster is switched on; or the clearing starts in a corner far from any vent."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Drops in the fog that grow large enough run downward on the inner face of the glass.",
+      "fail": "A drop runs up the windshield; or a drop leaves the glass and rises; or water gathers along the glass's top edge and stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fog is a fine haze that thins evenly at the clearing edge, and the glass stays a rigid clear pane.",
+      "fail": "The fog peels away as a film; or the fog slides down the glass as a sheet; or the haze turns opaque white like paint; or the glass flexes as it clears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One windshield; what is seen through the cleared glass is the scene outside the car.",
+      "fail": "Objects outside appear or vanish as the glass clears; or a second windshield appears; or the windshield changes shape; or the dashboard vents vanish."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dashboard, the vents and the view outside stay the same apart from the clearing.",
+      "fail": "The dashboard changes colour; or the vents change layout; or the scene outside jumps to a different place."
+    }
+  ]
+}

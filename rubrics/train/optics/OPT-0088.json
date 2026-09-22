@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0088",
+  "caption": "A pair of sunglasses lies on a table facing a lamp, and the lamp shows as two small images in the lenses.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pair of sunglasses lies on a table facing a lamp."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The lamp shows as two small images in the lenses."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The images are curved to the lenses."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The images show the lamp, not what is behind the glasses."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The images show the lamp and would move if the lamp or glasses moved.",
+      "fail": "They show something behind the glasses; or they are missing with the lamp on; or they show a different lamp."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "There are two images, one per lens, each curved to its lens.",
+      "fail": "There is one image or three; or they are flat; or they are larger than the lenses."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The images do not move with the lamp and glasses still.",
+      "fail": "They drift across the lenses; or flicker with a steady lamp."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The lenses are rigid.",
+      "fail": "They ripple; or bend; or go opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pair of glasses and one lamp.",
+      "fail": "The glasses duplicate; or the lamp vanishes; or an image becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glasses, the lamp and the table stay the same.",
+      "fail": "The frames change colour; or the lamp changes; or the table changes."
+    }
+  ]
+}

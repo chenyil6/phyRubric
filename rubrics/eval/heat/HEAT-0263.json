@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0263",
+  "caption": "A hot bath is being run, and steam rises from the falling water and fills the bathroom.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Water runs from a tap into a bath."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Steam rises from the falling water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Steam rises from the bath's surface."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The steam collects near the ceiling."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bath's level rises."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The water falls while the steam rises."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The water falls downward from the tap into the bath while the steam rises from both the stream and the surface and gathers high in the room.",
+      "fail": "The water travels upward from the tap; or the steam sinks to the floor and pools; or the steam pours downward from the tap; or the steam gathers under the bath."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The bath's level only rises while the tap runs and the steam keeps leaving upward.",
+      "fail": "The level drops while the tap still runs; or the steam runs back into the bath; or a puff retreats to the surface; or water climbs back up the stream into the tap."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The pour has an effect in the bath: the surface churns where the stream lands and the level rises, and the mirror or tiles may fog.",
+      "fail": "The stream enters and the surface stays glassy with the level unchanged; or the level rises with no stream reaching the bath; or the surface churns in a corner the stream never reaches."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is a thin liquid that falls as a continuous stream, splashes and finds its level, and the steam is a soft cloud that spreads and fades.",
+      "fail": "The stream falls as a rigid rod; or the water stands in a heap above the bath's rim; or the steam holds a fixed rigid shape; or the stream breaks into solid lumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bath and one tap; the water goes from the tap into the bath and nowhere else.",
+      "fail": "Water appears in the bath with no stream reaching it; or the level jumps; or the water passes through the bath's wall; or a second tap appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bath's enamel, the taps and the bathroom stay the same.",
+      "fail": "The bath changes colour; or the taps change shape; or the tiles change pattern."
+    }
+  ]
+}

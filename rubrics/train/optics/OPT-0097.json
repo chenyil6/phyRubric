@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0097",
+  "caption": "A drinking straw is placed into a glass of water, and it looks bent where it enters the water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass of water is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A drinking straw is placed into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The straw appears bent or broken at the waterline."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The glass is clear enough to see the straw below the surface."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bend appears once the straw is in the water, not before."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The apparent break in the straw sits exactly at the water surface: above it the straw is seen directly, below it the submerged part appears shifted or magnified through the water.",
+      "fail": "The straw looks perfectly continuous with no offset at the waterline; or the kink sits above or below the water surface rather than at it; or the straw bends where it passes through air only."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The straw itself stays straight and rigid: the bend is an appearance that stays at the waterline as the straw or water moves, and is absent out of the water.",
+      "fail": "The straw is physically kinked or curved when lifted out; or the kink stays at a fixed point on the straw as the straw is raised or lowered; or the straw flexes like rubber."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water surface is level and settles; the glass is rigid and transparent; the submerged straw is seen through the water.",
+      "fail": "The water surface stays tilted or humped; or the glass warps; or the water turns opaque and hides the straw."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The straw stays where it is placed, resting against the rim or the bottom; the glass stays put.",
+      "fail": "The straw slides or rotates by itself; or hovers without touching glass or water; or the glass moves on its own."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One straw, one glass; the straw does not pass through the glass wall and neither duplicates or vanishes.",
+      "fail": "The straw passes through the glass wall; or a second straw appears; or the straw vanishes below the surface; or the glass changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The straw's stripes and colour and the glass's shape stay the same above and below the waterline, apart from the optical shift.",
+      "fail": "The straw changes colour underwater; or its stripe pattern changes; or the table or background shifts."
+    }
+  ]
+}

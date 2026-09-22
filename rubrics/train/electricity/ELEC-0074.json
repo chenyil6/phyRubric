@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0074",
+  "caption": "A power cut hits a kitchen, and the fridge hum stops, the oven clock goes blank and the ceiling light goes out all at once.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A kitchen with its ceiling light lit and an oven whose clock display is lit."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The ceiling light goes out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The oven clock goes blank."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "A fridge is in view."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The light and the clock go off at the same moment."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The ceiling light and the oven clock go dark at the same moment.",
+      "fail": "The light goes out and the clock stays lit to the end of the clip; or the clock goes blank while the light stays on; or the light goes out first and the clock goes blank only later; or a lit display on the fridge stays lit after the light and clock have gone dark."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The kitchen's contents are the same before and after the cut: the same fridge, oven and furniture in the same places, whether seen dim or lit again.",
+      "fail": "Items on the counters appear or vanish between the lit and dark frames; or the fridge or oven changes place; or a lit window or lamp appears in the dark that was not there before."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "When the ceiling light goes out the room darkens with it: light from the fixture leaves the walls and floor, and whatever light remains comes from windows or sources present before.",
+      "fail": "The fixture goes dark while the room stays as bright; or the room darkens while the fixture still glows; or light stays pooled under the dark fixture."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once off, the light and the clock stay off; if power returns they come back together.",
+      "fail": "The light comes back while the clock stays blank to the end of the clip; or the clock comes back while the light stays out; or the light switches on and off repeatedly while the clock stays blank."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The fridge, oven, cabinets and fixture keep their shapes; the fixture stays on the ceiling and nothing passes through a wall or counter.",
+      "fail": "The fixture drops or vanishes rather than going dark; or an appliance or cabinet changes shape; or a hand or object passes through a counter or wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Wall and cabinet colours and the items on the counters stay the same apart from brightness.",
+      "fail": "Cabinets change colour rather than brightness; or the oven's control layout changes; or items on the counter change colour."
+    }
+  ],
+  "note": "The fridge hum is sound and is not judged; the fridge counts only through any lit display or indicator it has. The moment of the cut is read from the light and the clock going dark."
+}

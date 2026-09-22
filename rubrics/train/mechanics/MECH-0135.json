@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0135",
+  "caption": "A bar of chocolate is broken along its grooves into separate pieces.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bar of chocolate with grooves is held."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is broken."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It breaks into separate pieces."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The break runs along the grooves."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bending comes first and the break follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The bar snaps cleanly along a groove where it is bent; it does not bend without breaking.",
+      "fail": "It bends like rubber; or it crumbles; or it melts."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The pieces stay separate and together make up the bar.",
+      "fail": "They stick back together; or a piece appears from nothing; or the bar is whole again."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The break follows the groove where the bar is bent.",
+      "fail": "It breaks across a square; or it is bent with no break; or it breaks before bending."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Dropped pieces fall.",
+      "fail": "They float; or rise; or hang."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One bar becomes its pieces, and the hands do not pass through it.",
+      "fail": "The hands pass through the bar; or a second bar appears; or the chocolate turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The chocolate's colour and wrapper stay the same.",
+      "fail": "The chocolate changes colour; or the wrapper changes; or the background rearranges."
+    }
+  ]
+}

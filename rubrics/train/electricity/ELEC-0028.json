@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0028",
+  "caption": "The button on a bicycle's rear light is pressed, and it begins to blink red.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bicycle's rear light."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The button on the light is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The light begins to blink red."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The light is dark before the press."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, press, blinking."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The blinking starts at the moment the button is pressed, and only then.",
+      "fail": "The button is pressed and the light stays dark to the end of the clip; or the light blinks before the press; or the light comes on with nothing touching it; or the light glows steadily without blinking."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once started, the light blinks at a steady rhythm for the rest of the clip and does not stop by itself.",
+      "fail": "The blinking stops with the button untouched; or the rhythm changes abruptly; or the light switches to steady on; or the blinking fades out."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Each blink lights the surface near the lamp: the mudguard, tyre or ground behind the bicycle glows red with each flash.",
+      "fail": "The lamp blinks while the surface beside it stays as dark as before; or the surface glows while the lamp is dark; or the glow on the surface is a different colour from the lamp.",
+      "precondition": "The light is close to a surface that could show its glow."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bicycle stays where it stands as the button is pressed; the wheels do not turn.",
+      "fail": "The bicycle rolls or tips at the press; or a wheel turns by itself; or the light swings on its mount."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One rear light on one bicycle; the light stays on its mount; the finger passes through nothing.",
+      "fail": "A second light appears; or the light detaches and floats; or the finger passes through the light; or the bicycle changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bicycle's frame colour, the light's housing and the background stay the same apart from the blinking.",
+      "fail": "The frame changes colour; or the light's housing changes shape; or the blink changes colour from red."
+    }
+  ]
+}

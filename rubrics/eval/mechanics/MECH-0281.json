@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0281",
+  "caption": "The plug of a full bathtub is pulled, and as the water drains a swirling whirlpool forms over the drain.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A full bathtub has its plug pulled."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The water drains."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A swirling whirlpool forms over the drain."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The plug comes out first and the whirlpool forms after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The level falls steadily and a dimple over the drain deepens into a funnel that grows as the water gets shallower.",
+      "fail": "The level rises; or the funnel shrinks as the water gets lower; or it drains and then refills."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The spin is at the drain, and the water does not spin without draining.",
+      "fail": "It spins with the plug in; or spins away from the drain; or the whole tub churns."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The water goes down the drain.",
+      "fail": "It goes up; or out over the rim; or floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The surface is liquid, dimpling into a funnel.",
+      "fail": "It is rigid; or beads; or is solid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tub keeps its shape and the drain stays where it is.",
+      "fail": "The drain moves; or the tub duplicates; or water appears from nowhere."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tub and the bathroom stay the same.",
+      "fail": "The tub changes colour; or the tiles change; or the room rearranges."
+    }
+  ]
+}

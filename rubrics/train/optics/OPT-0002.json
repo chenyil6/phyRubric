@@ -1,0 +1,80 @@
+{
+  "id": "OPT-0002",
+  "caption": "A riderless skateboard rolls past a streetlamp at night, and its shadow swings around it as it passes under the light.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A skateboard with no rider is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It rolls along the ground."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A lit streetlamp stands nearby and it is night."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The skateboard's shadow is visible and changes as the board passes the lamp."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The board passes close to or under the lamp."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The scene is dark apart from the lamp light."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow lies on the side of the board away from the lamp: behind it while approaching, short beneath it under the lamp, stretching ahead once past.",
+      "fail": "The shadow points toward the lamp; or stays fixed on one side of the board as it passes; or the shadow does not move with the board; or no shadow is cast under a lit lamp."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The board rolls in a straight line at a steady, gently slowing pace.",
+      "fail": "The board speeds up on the flat with nothing pushing it; or turns or reverses by itself; or hops."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the board's outline, deck and wheels, and stays attached at the wheels.",
+      "fail": "The shadow detaches from the wheels; or has a different shape from the board; or splits into two shadows under one lamp."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow moves only as the board moves; the lamp stays lit and steady.",
+      "fail": "The shadow swings while the board is stationary; or the lamp goes out or moves; or the shadow changes length with the board standing still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One board with its wheels and one shadow; nothing appears, vanishes or passes through the pavement.",
+      "fail": "The board vanishes or duplicates; or a rider appears from nowhere; or wheels vanish; or the board passes through the lamp post."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The deck's colour and graphics, the lamp and the street stay the same.",
+      "fail": "The deck changes colour; or the lamp changes colour; or the street markings shift."
+    }
+  ]
+}

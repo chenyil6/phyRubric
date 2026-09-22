@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0039",
+  "caption": "The wall button for an outdoor floodlight is pressed, and the yard lights up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An outdoor yard at night with a floodlight, and a wall button."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The button is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The yard lights up."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The yard is dark before the press."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is dark, press, lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The floodlight comes on at the press, and only then, and the yard brightens with it.",
+      "fail": "The button is pressed and the yard stays dark; or the yard is lit before the press; or the floodlight comes on with nothing touching the button; or the floodlight glows while the yard stays as dark as before."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once on, the floodlight stays lit and the yard stays lit for the rest of the clip.",
+      "fail": "The floodlight goes out again by itself; or flickers; or dims back to dark; or the button presses itself again."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light comes from the floodlight: the ground and objects nearest it are brightest and shadows point away from it.",
+      "fail": "The yard is lit evenly with no brighter side; or shadows point toward the floodlight; or the light comes from a place other than the fixture."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing in the yard moves at the press; the fixture stays fixed to its mount.",
+      "fail": "Garden furniture or plants jump at the press; or the fixture swings; or a gate opens by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One floodlight and one button; the yard's contents are the same before and after; the hand passes through nothing.",
+      "fail": "Objects appear or vanish between dark and lit frames; or a second floodlight appears; or the hand passes into the wall; or the fixture vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wall's colour, the fixture and the yard's contents stay the same apart from brightness.",
+      "fail": "The wall changes colour rather than brightness; or the fixture changes shape; or the plants change colour."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0309",
+  "caption": "A ping-pong ball is served, arcs over the net, bounces once on the far side of the table, and drops off the end.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ping-pong ball is served."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It arcs over the net."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It bounces once on the far side of the table."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It drops off the end of the table."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The serve comes first, then the net, then the bounce, then the drop."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It follows a smooth arc, bounces lower than its flight, and falls off the edge.",
+      "fail": "It bounces higher than it came; or hovers; or changes direction in the air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "It goes over the net, not through it.",
+      "fail": "It passes through the net; or through the table; or the table passes through it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It falls after the peak and off the edge.",
+      "fail": "It rises; or hangs; or floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The light ball bounces crisply.",
+      "fail": "It stays flat; or sticks; or melts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ball and the table stay the same.",
+      "fail": "The ball changes colour; or the net changes; or the table rearranges."
+    }
+  ]
+}

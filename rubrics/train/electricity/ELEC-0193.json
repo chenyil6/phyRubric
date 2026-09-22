@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0193",
+  "caption": "The sleeve of a wool sweater brushes past a hanging plastic shower curtain, and the curtain clings to the sleeve and follows it for a moment.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A plastic shower curtain hangs from its rail."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sleeve of a wool sweater brushes past the curtain."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The curtain clings to the sleeve."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The curtain follows the sleeve for a moment."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sweater is wool: knitted, fuzzy."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The brush comes first; the cling and follow come after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The curtain hangs still until the sleeve touches it; where it touched, it lifts toward the sleeve and trails after it briefly, then swings back and settles; the rest of the curtain moves only as it is pulled.",
+      "fail": "The curtain swings toward the sleeve before the sleeve has reached it; or keeps following the sleeve across the room at a distance; or a part of the curtain far from the sleeve lifts toward it; or the curtain keeps swinging hard long after the sleeve is gone."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As the sleeve moves on, the curtain where it touched stays pressed to the sleeve for a moment and is drawn after it before letting go.",
+      "fail": "The curtain falls away from the sleeve the instant contact ends with no trailing; or the curtain hangs a gap away from the sleeve while following; or the curtain leans away from the sleeve as it passes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The curtain is a thin flexible sheet hanging in folds: it lifts, drapes over the sleeve and swings back under its own weight; the rail stays fixed.",
+      "fail": "The curtain lifts as a rigid flat board; or stretches out like elastic; or stays hanging in the air in the shape the sleeve left; or the rail bends."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The curtain hangs down from its rings; once released it swings back to hanging straight.",
+      "fail": "The curtain rises toward the ceiling; or hangs out sideways with nothing near it after the sleeve is gone; or the curtain floats off its rail."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The curtain stays on its rail and passes through neither the sleeve nor the bath; the sleeve passes through nothing.",
+      "fail": "The sleeve passes through the curtain; or the curtain passes through the bath's edge or the wall; or the curtain detaches from the rail and hangs in the air; or the curtain merges with the sleeve."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The curtain's colour and pattern, the sweater's colour and the bathroom stay the same.",
+      "fail": "The curtain changes colour or pattern; or the sweater changes colour; or bathroom fittings change."
+    }
+  ],
+  "note": "The person wearing the sweater is kept because the sleeve charges the curtain; their movements are not judged."
+}

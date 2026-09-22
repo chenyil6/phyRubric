@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0143",
+  "caption": "A sheet of paper lies over a paperclip, and a magnet is moved across the top of the paper; the clip follows the magnet under the paper.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A paperclip lies under a sheet of paper."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnet is moved across the top of the paper."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The clip follows the magnet beneath the paper."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The clip stays under the paper the whole time."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The magnet's movement comes first and the clip follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The clip moves only where and when the magnet above it moves, staying beneath it, and stops when the magnet stops.",
+      "fail": "The clip moves in a different direction from the magnet; or keeps moving after the magnet has stopped; or stays still while the magnet passes over it; or the clip sets off before the magnet has begun to move."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The paper stays between magnet and clip: the clip is seen through or under the paper and never comes up through it; the magnet stays on top.",
+      "fail": "The clip passes up through the paper and sits on the magnet; or the magnet sinks through the paper; or the clip and magnet are seen touching with no paper between; or the clip passes through the table."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The paper is a flat flexible sheet: it lifts slightly or ripples where the clip drags beneath it and lies flat again.",
+      "fail": "The paper stays perfectly rigid like a board while the clip drags under it; or stretches like rubber; or tears where the clip moves; or the paper flows like liquid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The paper stays on the table as the magnet moves, apart from small drags; other items on the table do not move.",
+      "fail": "The paper slides across the table with the magnet; or lifts off the table; or other items on the table shift as the magnet passes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One magnet, one clip, one sheet; nothing appears, vanishes or merges.",
+      "fail": "A second clip or magnet appears; or the clip vanishes; or clip and magnet fuse into one object; or the paper duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The magnet's colour, the paper's colour and the table stay the same.",
+      "fail": "The magnet changes colour or shape; or the paper changes colour or size; or the table surface changes."
+    }
+  ],
+  "note": "The clip may be hidden by the paper for parts of the clip; P1 is judged on the moments when its position beneath the paper can be seen."
+}

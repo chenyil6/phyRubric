@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0125",
+  "caption": "A live wire brushes against a metal bracket, and a bright spark flashes and leaves a black mark.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wire and a metal bracket."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The wire brushes against the bracket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A bright spark flashes at the contact."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A black mark is left on the metal where the spark was."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The wire touches the bracket first and the spark follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spark is a brief flash at the point where the wire meets the bracket, and is gone; neither wire nor bracket glows afterwards.",
+      "fail": "The wire glows on after the flash; or the spark stays lit at the contact for the rest of the clip; or a spark appears while the wire is clear of the bracket; or the flash appears at a place away from where the wire touches."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The black mark appears at the contact point at the flash and stays there, unchanged, for the rest of the clip.",
+      "fail": "The mark appears before the spark; or fades away or vanishes after appearing; or appears at a place away from the contact; or spreads over the bracket after the flash."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any spark fragments fall from the contact point and go dark within a short distance; any smoke rises.",
+      "fail": "Sparks rise and gather above the bracket; or hang in the air; or lie glowing below for the rest of the clip; or smoke sinks and pools."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wire is flexible and bends where it brushes; the bracket is rigid and keeps its shape.",
+      "fail": "The wire stands rigid like a rod and stays where it is pushed; or the bracket bends like rubber where the wire touches; or the bracket melts or drips at the spark."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The wire touches the bracket's surface and stays outside it; nothing passes through anything and nothing vanishes.",
+      "fail": "The wire passes into or through the bracket; or the bracket vanishes; or a second wire appears; or the wire's end detaches and floats."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The wire's insulation colour, the bracket's finish away from the mark and the background stay the same.",
+      "fail": "The insulation changes colour; or the bracket changes colour away from the mark; or the background rearranges."
+    }
+  ]
+}

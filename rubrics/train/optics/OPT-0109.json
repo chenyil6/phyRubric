@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0109",
+  "caption": "A patterned card is seen through a round fishbowl, and the pattern appears stretched and warped through the bowl; as the card is moved the warp changes.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A patterned card is seen through a round fishbowl."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pattern appears stretched and warped through the bowl."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The card is moved."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The warp changes."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pattern is normal seen past the bowl's edge."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The distortion appears only through the water-filled bowl and changes as the card moves.",
+      "fail": "The pattern is warped beside the bowl; or unwarped through it; or the warp stays fixed as the card moves."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The card and its pattern are unchanged; the warp is an appearance.",
+      "fail": "The card bends; or the pattern changes; or a different pattern appears through the bowl."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bowl is rigid and the water level.",
+      "fail": "The bowl warps; or the water tilts and holds; or the water goes opaque."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bowl stays put and the card moves only with the hand.",
+      "fail": "The bowl slides; or the card moves by itself; or the image shifts with both still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bowl and one card.",
+      "fail": "The bowl duplicates; or the card vanishes; or the card passes through the bowl."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The card's colours and the table stay the same.",
+      "fail": "The card changes colour; or the table changes; or the bowl changes shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

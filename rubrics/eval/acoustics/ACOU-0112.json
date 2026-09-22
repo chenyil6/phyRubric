@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0112",
+  "caption": "A cement mixer rumbles beside a garden wall, and pebbles on the wall's top shiver and shift.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cement mixer beside a garden wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Pebbles lie on top of the wall."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pebbles shiver and shift."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The mixer is running: its drum turns."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pebbles stay on the wall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The pebbles move only while the drum turns and are still when it is stopped.",
+      "fail": "Pebbles shift while the drum is plainly still; or keep shifting after the drum has stopped; or slide along the wall in one smooth glide."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "While the mixer runs, the pebbles tremble and end up in a new arrangement.",
+      "fail": "The drum turns for the whole clip and the pebbles sit frozen; or the pebbles return to their exact starting spots after moving; or pebbles far from the mixer shift while those nearest it sit still."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Pebbles stay on the wall top; any that leave it fall.",
+      "fail": "A pebble hovers; or rises; or a pebble that leaves the wall floats sideways."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pebbles and the wall are rigid; the drum turns on its frame.",
+      "fail": "The wall ripples; or pebbles squash; or the drum wobbles off its frame and stays there."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The pebbles keep their count; one mixer; nothing passes into the wall.",
+      "fail": "Pebbles appear from nowhere; or vanish; or sink into the wall; or the mixer duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mixer's colour, the wall's stones and the pebbles' colour stay the same.",
+      "fail": "The mixer changes colour; or the wall's stones change; or the pebbles change colour."
+    }
+  ]
+}

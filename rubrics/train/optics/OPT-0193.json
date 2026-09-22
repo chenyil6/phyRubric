@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0193",
+  "caption": "A sheet of red plastic is held up in front of the camera, and everything seen through it looks red.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sheet of red plastic is held up in front of the camera."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Everything seen through it looks red."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The scene beyond its edges is normal."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tint vanishes when the plastic is lowered."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "Only the view through the plastic is tinted red; beyond its edges the scene is normal.",
+      "fail": "The whole scene is red; or the view through the plastic is normal; or the tint is a different colour."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The tint moves with the plastic and would vanish when it is lowered.",
+      "fail": "It stays put while the plastic moves; or remains after it is lowered; or appears before it is raised."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The scene through the plastic is the same scene, tinted, not a different picture.",
+      "fail": "A different scene appears; or objects appear that are not there; or the image is mirrored."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The plastic is a thin flexible sheet.",
+      "fail": "It is rigid glass; or it flows; or it tears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet.",
+      "fail": "It duplicates; or vanishes; or the hand passes through it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The scene stays the same.",
+      "fail": "It rearranges; or objects move; or the sheet changes colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

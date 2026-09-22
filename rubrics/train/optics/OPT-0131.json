@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0131",
+  "caption": "A clear glass bottle of water is held sideways in front of a lit sign, and the letters seen through the bottle appear stretched.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A clear glass bottle of water is held sideways in front of a lit sign."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The letters seen through the bottle appear stretched."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The stretch changes as the bottle turns."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sign itself is unchanged."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The stretching happens only where the sign is seen through the water-filled bottle and changes as the bottle turns.",
+      "fail": "Letters beside the bottle are stretched; or letters through it are unchanged; or the stretch stays fixed as the bottle turns."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The sign itself is unchanged.",
+      "fail": "The sign's letters change; or it moves; or a different sign appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The bottle is rigid and the water level inside it.",
+      "fail": "The bottle bends; or the water tilts and holds; or goes opaque."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bottle moves only with the hand.",
+      "fail": "It floats; or turns by itself; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bottle and one sign.",
+      "fail": "The bottle duplicates; or the sign vanishes; or the hand passes through the bottle."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sign's colours and the bottle stay the same.",
+      "fail": "The sign changes colour; or the bottle changes shape; or the background changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

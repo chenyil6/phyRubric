@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0025",
+  "caption": "A drone hovers over a sunlit parking lot and then flies to one side, and its small shadow on the asphalt moves with it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A drone hovers over a sunlit parking lot."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It flies to one side."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its small shadow on the asphalt moves with it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow shows the shape of the drone's arms."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The drone moves first and the shadow follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow stays beneath the drone, offset away from the sun, and moves when the drone moves.",
+      "fail": "It stays still while the drone flies; or moves the opposite way; or lies toward the sun."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadow shows the drone's arms and body.",
+      "fail": "It is a plain blob unlike the drone; or a different shape; or it splits."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadow does not move on its own.",
+      "fail": "It moves with the drone hovering still; or it drifts across the asphalt by itself."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The shadow lies on the ground; the drone stays in the air while its rotors run.",
+      "fail": "The shadow rises off the ground; or the drone drops with the rotors running; or it climbs while descending."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One drone and one shadow.",
+      "fail": "A second drone or shadow appears; or the drone vanishes; or the shadow becomes solid; or an arm detaches."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The drone's colour and the lot stay the same, and the shadow stays dark.",
+      "fail": "The drone changes colour; or the shadow turns coloured; or the lot markings shift."
+    }
+  ]
+}

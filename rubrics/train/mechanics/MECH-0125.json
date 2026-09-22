@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0125",
+  "caption": "A bowstring is drawn back and released, and the arrow flies off toward the target.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An arrow is on a bow with the string drawn back."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The string is released."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The arrow flies off toward the target."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "A target is visible ahead."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The release comes first and the flight follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The bow limbs flex as the string is drawn and spring back on release, the string going from a V to straight.",
+      "fail": "The limbs stay rigid; or they stay bent after release; or the string stretches like elastic."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The arrow leaves at the instant of release, not before, point-first along the line of aim.",
+      "fail": "The arrow leaves before the string is released; or it stays on the string after release; or it flies tail-first or sideways."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The arrow flies in one line after release.",
+      "fail": "It jinks; or stops in the air; or curves back."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The arrow's path dips slightly over distance, and anything dropped falls.",
+      "fail": "The arrow curves upward; or hangs in the air; or rises."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One arrow and one bow keep their number.",
+      "fail": "The arrow vanishes or a second appears; or the bow vanishes; or the arrow turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bow, the arrow and the range stay the same.",
+      "fail": "The bow changes colour; or the arrow changes; or the target moves."
+    }
+  ]
+}

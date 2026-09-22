@@ -1,0 +1,77 @@
+{
+  "id": "MECH-0001",
+  "caption": "Two passengers sit in the back seat of a car when it brakes hard, and both are thrown forward against their seat belts.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two passengers sit in the back seat of a car."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The car brakes hard: the view outside slows sharply or the car pitches, and the passengers react."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Both passengers pitch forward against their seat belts."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Seat belts are visible across the passengers."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lurch follows the braking rather than preceding it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The passengers' forward lurch begins with the braking and only then; before it they sit at rest relative to the seat.",
+      "fail": "The passengers pitch forward while the car is still cruising steadily; or they lurch with no braking visible at all; or one lurches long after the other under the same braking."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The lurch is toward the front of the car, the belts arrest it, and afterwards the passengers settle back into the seat.",
+      "fail": "The passengers are thrown backward into the seat or sideways; or they keep travelling forward past where the belt holds them; or they are flung out of the seat entirely."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The belts behave as inextensible straps: they go taut across the body, hold, and go slack again only as the passenger settles back.",
+      "fail": "A belt stretches far out like a rubber band; or hangs slack while the passenger is plainly pressing into it; or the belt goes rigid and stands away from the body."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Loose objects and hanging items in the cabin swing or slide forward at the same moment as the passengers.",
+      "fail": "Loose objects stay put or slide backward while the passengers pitch forward; or they move before the passengers do.",
+      "precondition": "Loose objects or hanging items are visible inside the car."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Passengers, belts and seats keep their number and shape and nothing passes through anything.",
+      "fail": "A passenger merges with the seat or with the other passenger; or a belt passes through a body; or a limb appears, vanishes or detaches; or a head passes through the headrest."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Clothing colours, the car interior and the view through the windows stay consistent apart from the braking.",
+      "fail": "A passenger's clothing changes colour; or the seat pattern changes; or the outside scene jumps to a different place."
+    }
+  ],
+  "note": "Inertia scene: the people are kept because their bodies are what shows the lurch. Facial expressions, seating posture and how hard the brake is applied are not judged; only when and which way the bodies move."
+}

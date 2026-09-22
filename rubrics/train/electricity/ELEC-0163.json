@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0163",
+  "caption": "A magnet is brought near a compass, and the needle swings to point at the magnet.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A compass with a visible needle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnet is brought near the compass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The needle swings round to point at the magnet."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "It is the magnet that moves toward the compass, not the compass toward the magnet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The approach comes first and the needle's swing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The needle rests until the magnet comes near, then turns as the magnet approaches; while the magnet is held still the needle settles and stays.",
+      "fail": "The needle spins or swings while the magnet is far off and not moving; or keeps turning after the magnet has stopped and the needle has already settled once; or the compass housing turns while the needle stays fixed to it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "With the magnet near, the needle lines up along the line from its pivot to the magnet, one end toward it, and turns to follow the magnet as it moves round.",
+      "fail": "The needle keeps its old heading as the magnet arrives beside the compass; or settles across the line to the magnet rather than along it; or turns the opposite way to the magnet as the magnet circles the compass."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The needle stays one straight rigid bar turning about its centre pivot.",
+      "fail": "The needle bends or curls as it turns; or turns about one of its ends; or slides off the pivot across the dial."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The compass housing and the dial markings stay put; the needle alone turns; other items on the table stay still.",
+      "fail": "The dial markings rotate along with the needle; or the compass housing lifts off the table; or paper or plastic items on the table shift as the magnet passes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One magnet and one compass with one needle; the magnet stays outside the compass.",
+      "fail": "A second needle appears; or the needle vanishes; or the magnet passes into the compass housing; or the magnet duplicates or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dial's markings, the magnet's colour and the table stay the same.",
+      "fail": "The dial's letters change or move; or the magnet changes colour or shape; or the table surface changes."
+    }
+  ],
+  "note": "Either end of the needle may point at the magnet; which end is not judged."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0282",
+  "caption": "A birthday cake with lit candles is carried across a room, and the flames lean backward as it moves and stand up when it is set down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cake with lit candles is carried across a room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flames lean backward as the cake moves."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cake is set down."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flames stand up again."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "All the flames lean the same way."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The flames flicker as the cake moves."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The flames trail opposite to the cake's direction of travel while it moves and return to upright once it stops.",
+      "fail": "The flames lean forward in the direction the cake is travelling; or the flames stay leaning after the cake is set down; or the flames lean while the cake stands still; or each flame leans a different way at the same moment."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "With the cake still the flames point upward from their wicks and the wax pools at each candle's top.",
+      "fail": "A flame points downward with the cake still; or a flame hangs below its wick; or melted wax climbs a candle's side; or the flames lie flat while the cake stands still and nothing moves."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The flames stay alight through the carrying unless blown out, and once out a candle stays out.",
+      "fail": "A candle goes out and relights by itself; or a flame shrinks to nothing and returns with each step; or every flame goes out as the cake is set down gently; or a wick's glow brightens into a flame with nothing touching it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The flames are soft tongues that stretch and waver and the candles stay upright in the cake's icing.",
+      "fail": "A flame holds a fixed rigid shape as it leans; or a candle bends with the movement; or a candle sinks into the icing and stays sunk; or a flame breaks into solid pieces."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The candles keep their number and places in the cake and each keeps one wick and one flame.",
+      "fail": "A flame separates from its wick and floats; or a second flame appears on one wick; or a candle vanishes; or a new candle appears in the cake."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cake's icing, the candles' colours and the room stay the same.",
+      "fail": "The icing changes colour or pattern; or a candle changes colour; or items in the room rearrange."
+    }
+  ],
+  "note": "Whoever carries the cake is not judged."
+}

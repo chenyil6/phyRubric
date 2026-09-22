@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0172",
+  "caption": "A plastic soda bottle is left too close to a campfire, and the near side shrivels and caves in.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A plastic bottle stands near a campfire."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The side facing the fire shrivels."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "That side caves inward."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The far side keeps its shape."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bottle is smooth at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The shrivelling comes first and the caving follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The plastic on the fire side goes soft, wrinkles and pulls inward, keeping its plastic look, while the rest stays a rigid bottle.",
+      "fail": "The bottle shatters into pieces; or the whole bottle runs into a puddle at once; or the fire side stays perfectly smooth while caving deeply; or the bottle stretches upward like taffy."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The caving only deepens on the fire side and the caved side does not pop back out.",
+      "fail": "The caved side pops back out to smooth while the bottle stays by the fire; or the caving deepens and eases in turn; or the far side caves while the fire side stays smooth; or the shrivelling appears before the bottle is near the fire."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The change is strongest on the side toward the fire and least on the far side.",
+      "fail": "The far side shrivels while the fire side stays smooth; or the bottle shrivels evenly all round while the fire is plainly on one side; or the bottle caves in at its base while its fire-facing wall stays smooth."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bottle stays standing or topples downward as it softens, and its contents stay in it and lie level.",
+      "fail": "The bottle rises off the ground; or the bottle leans further and further over without falling; or the contents climb the bottle's wall and stay; or the bottle floats toward the fire."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bottle; it keeps its cap and label and does not pass through the ground.",
+      "fail": "The bottle vanishes; or a second bottle appears; or the cap passes into the bottle; or the bottle sinks into the ground."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bottle's label, the fire's stones and the surroundings stay the same.",
+      "fail": "The label's printing changes; or the stones rearrange; or the background changes between frames."
+    }
+  ],
+  "note": "Smoke or discolouring from the melting plastic is chemistry and is not judged."
+}

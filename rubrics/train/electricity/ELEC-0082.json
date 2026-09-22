@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0082",
+  "caption": "Lightning flashes inside a bank of dark clouds over a city, and the clouds glow for a moment and then go dark.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A city skyline under a dark sky."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A bank of dark clouds above it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A flash lights the clouds from within."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The clouds go dark again."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The glow is inside or among the clouds, not a bolt to the ground."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The city lights stay as they were."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The glow is brief: the clouds light up and then return to dark; flashes may repeat but each ends.",
+      "fail": "The clouds stay lit for the rest of the clip; or the glow brightens steadily without ending; or the sky turns to daylight."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The glow comes from within or behind the clouds: their undersides and edges brighten with their texture revealed.",
+      "fail": "The flash lights the city streets while the clouds stay dark; or the glow is a flat wash over the whole frame with no cloud structure."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The cloud bank and skyline are unchanged by the flash: the same clouds and the same buildings, revealed and then hidden.",
+      "fail": "Buildings appear or vanish between dark and lit frames; or the cloud shapes differ between the lit frame and the dark ones; or the skyline moves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "City lights stay steady through the flash; clouds drift only slowly.",
+      "fail": "City lights blink out at the flash or all change at once; or the clouds jump or swirl at the flash; or the buildings sway."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The skyline and clouds keep their shape; nothing passes through a building.",
+      "fail": "A building changes shape; or the clouds turn into solid objects; or lightning passes through a building and lights its interior like a lamp; or the city duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The colour of the night sky and the city lights is consistent before and after.",
+      "fail": "The sky changes colour permanently after the flash; or windows change lit pattern all at once; or the clouds change colour when not lit."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0137",
+  "caption": "A blowtorch heats a copper pipe, and the flame roars out of the nozzle in a blue cone.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A blowtorch is aimed at a copper pipe."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A flame comes out of the torch's nozzle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flame is a blue cone."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The pipe darkens where the flame plays on it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flame comes and goes with the torch's valve."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The flame points where the torch is aimed."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flame points where the torch points, comes and goes with the valve, and the pipe changes only where it plays.",
+      "fail": "The flame is alight before the valve is opened; or the valve is opened and no flame appears; or the pipe darkens on a side the flame never reaches; or the flame plays on the pipe and the pipe stays bright and unchanged to the end of the clip."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The flame leaves the nozzle along its axis as a cone that holds its direction as the torch moves and bends only where it meets the pipe.",
+      "fail": "The flame streams out at right angles to the nozzle; or lags behind as the torch swings and catches up later; or curls back onto the torch's body; or the cone points at the pipe while the nozzle points away."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flame keeps its direction whatever way the torch is tilted and does not fall.",
+      "fail": "The flame droops downward as the torch is tilted up; or falls off the nozzle and lands; or hangs below the nozzle in still air; or rises straight up while the nozzle points sideways."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The pipe stays a rigid tube that darkens and may glow where it is heated, and the torch stays a rigid tool.",
+      "fail": "The pipe sags or bends where the flame plays with nothing bending it; or the pipe itself drips away as a liquid; or the torch's nozzle melts; or the pipe swells up."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One torch and one pipe; the flame stays at the nozzle and the pipe stays one piece.",
+      "fail": "A second flame appears away from the nozzle; or the flame detaches and floats; or the pipe splits in two with nothing cutting it; or the torch vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The torch's body, the bench and the pipe away from the heated patch stay the same.",
+      "fail": "The torch changes colour; or the bench's contents rearrange; or the pipe changes colour away from where the flame plays."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0259",
+  "caption": "A scoop of sorbet is set on a waffle fresh off the iron, and it slumps and runs into the squares.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A scoop of sorbet sits on a waffle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The scoop softens and sinks."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Coloured liquid fills the waffle's squares."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Liquid runs off the waffle's edge."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The waffle is fresh off the iron."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The softening comes first and the running follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The scoop only softens, sinks and shrinks while the liquid spreads; it does not firm up again on the hot waffle.",
+      "fail": "The scoop regains a firm round shape; or the liquid draws back into the scoop; or the sorbet freezes hard again on the hot waffle; or the scoop alternates between firmer and softer."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The melt runs downward into the waffle's squares, fills them and runs off its lowest edge.",
+      "fail": "The melt climbs out of a square and over a ridge uphill; or the liquid gathers on the waffle's ridges and stays; or a drip leaves the waffle and rises; or the melt runs up the scoop's side."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The sorbet is a soft wet solid that slumps and sheds a thin coloured liquid, and the waffle stays a crisp grid that softens only where soaked.",
+      "fail": "The waffle melts or sags with the sorbet; or the melt runs as a thick paste that keeps ridges; or the scoop shatters into dry crumbs; or the melt sets into a spike standing out from the waffle."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The melt comes from the softening scoop and wets what it passes: the waffle darkens where the liquid runs.",
+      "fail": "Liquid fills the squares while the scoop above stays hard-edged and dry; or the waffle stays dry where liquid has run; or liquid appears in a square with none running into it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One scoop on one waffle; the sorbet goes only from the scoop into the squares and off the edge.",
+      "fail": "The scoop grows; or a second scoop appears; or the scoop vanishes while still whole; or liquid appears on the plate with none running off the waffle."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sorbet's colour, the waffle's pattern and the plate stay the same.",
+      "fail": "The sorbet changes colour; or the waffle's grid changes pattern; or the plate changes shape."
+    }
+  ]
+}

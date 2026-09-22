@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0037",
+  "caption": "Two lamps light a statue on a table from different sides, and the statue casts two shadows in different directions.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A statue stands on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Two lamps light it from different sides."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The statue casts two shadows in different directions."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Each shadow points away from one lamp."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each shadow points away from one lamp, and the two lie in different directions.",
+      "fail": "Both shadows lie on the same side; or a shadow points toward its lamp; or there is only one shadow under two lamps."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "There are exactly two shadows for two lamps, and if a lamp is switched off its shadow vanishes while the other remains.",
+      "fail": "A third shadow appears; or a shadow remains with its lamp off; or both vanish when one lamp goes off."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "Each shadow keeps the statue's outline.",
+      "fail": "A shadow is a different shape; or one splits; or the two merge into one blob while the lamps are plainly on different sides."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadows do not move with the statue and lamps still.",
+      "fail": "A shadow drifts by itself; or swings round with nothing moving; or changes length."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One statue and two lamps.",
+      "fail": "The statue duplicates or vanishes; or a lamp vanishes; or a shadow becomes solid; or the statue passes through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The statue, the lamps and the table stay the same, and the shadows stay dark.",
+      "fail": "The statue changes colour; or a shadow turns coloured; or the table changes."
+    }
+  ]
+}

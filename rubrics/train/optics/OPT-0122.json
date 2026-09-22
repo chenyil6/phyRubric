@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0122",
+  "caption": "A clear glass marble is held up in front of a lamp, and the room appears tiny and warped inside the marble.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A clear glass marble is held up in front of a lamp."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The room appears tiny and warped inside the marble."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The image moves as the marble moves."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The room around the marble is normal."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The small distorted image is inside the marble and the room around it is normal.",
+      "fail": "The image is outside the marble; or the room around it is warped; or the marble is opaque."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The image moves as the marble moves.",
+      "fail": "It stays fixed while the marble moves; or it moves with the marble still; or it shows a different room."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The marble moves only with the hand.",
+      "fail": "It floats; or rolls by itself; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The marble is rigid glass.",
+      "fail": "It bends; or melts; or ripples."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One marble and one lamp.",
+      "fail": "The marble duplicates; or the lamp vanishes; or the hand passes through the marble."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lamp and the room stay the same.",
+      "fail": "The lamp changes; or the room rearranges; or the marble changes colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

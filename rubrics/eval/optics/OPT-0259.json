@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0259",
+  "caption": "A spotlight is swung across a statue on a plinth, and the statue's shadow on the backdrop swings the opposite way.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A statue stands on a plinth in front of a backdrop."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A spotlight is swung across it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The statue's shadow on the backdrop swings the opposite way."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The light moves first and the shadow follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The shadow moves only as the light moves.",
+      "fail": "It swings with the light still; or before the light; or keeps swinging after."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow moves opposite to the light's movement and always falls away from the spotlight.",
+      "fail": "It moves the same way as the light; or falls toward the spotlight; or stays fixed while the light swings."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The shadow keeps the statue's outline, stretching when the light is low and shrinking when overhead.",
+      "fail": "It is a different shape; or one length throughout; or splits."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The statue stays still.",
+      "fail": "It turns; or slides; or lifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One statue, one spotlight and one shadow.",
+      "fail": "A second shadow appears; or the statue vanishes; or the shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The statue and the backdrop stay the same, and the shadow stays dark.",
+      "fail": "The statue changes colour; or the shadow turns coloured; or the backdrop changes."
+    }
+  ]
+}

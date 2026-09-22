@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0094",
+  "caption": "Two large dogs each grab an end of a slack rope toy lying on the grass and pull; the rope goes taut and the middle knot moves toward the stronger dog.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two large dogs are present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A rope toy with a knot in the middle lies slack on the grass at the start."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Each dog takes hold of one end of the rope."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The dogs pull and the rope goes taut."
+    },
+    {
+      "id": "S5",
+      "weight": "core",
+      "check": "The knot moves toward one of the dogs."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The setting is grass outdoors."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The rope transmits pull only when taut: it straightens between the two mouths first, and only then does the knot travel, toward the dog that is gaining ground.",
+      "fail": "The knot slides along a rope that is still slack; or the rope lengthens like elastic as the dogs back away; or the taut rope sags in the middle while both dogs are plainly pulling."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each dog's pull has a visible effect: the rope is drawn straight between them, and a dog that backs away drags the rope and the other dog's head with it.",
+      "fail": "Both dogs pull and the rope stays slack on the grass; or a dog backs away and its rope end stays where it was; or the knot moves toward the dog that is being dragged."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Once taut the rope moves as one piece: the knot and both ends move the same way when the winning dog backs up.",
+      "fail": "The knot moves one way while the rope ends move the other; or one end moves while the rope between stays fixed; or the rope moves before either dog does."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Slack parts of the rope hang or lie on the grass; the taut rope runs straight between the mouths and sags only when the pull eases.",
+      "fail": "A slack loop of rope hangs in the air with nothing holding it; or the rope floats up off the grass before the dogs pull."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One rope with one knot and two dogs; the rope stays a single continuous piece and passes through nothing.",
+      "fail": "The rope splits into two ropes or gains a second knot; or an end passes through a dog's head or the rope through itself; or a dog vanishes or duplicates; or the knot disappears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rope's colours and the dogs' coats stay the same.",
+      "fail": "The rope changes colour or texture; or the knot changes size; or a dog's coat changes pattern between frames."
+    }
+  ],
+  "note": "The dogs are self-driven: how hard they pull, which one wins and their footing are not judged. Only the rope's response to the pull is."
+}

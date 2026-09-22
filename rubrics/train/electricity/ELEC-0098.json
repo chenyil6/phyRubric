@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0098",
+  "caption": "A lightning bolt strikes a lone tree on a golf course, and the tree's trunk splits with a shower of splinters.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lone tree on a golf course."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lightning bolt strikes the tree."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The trunk splits."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Splinters fly from the trunk."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bolt ends at the tree, not beside it."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The bolt comes first, the split and splinters follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The bolt and flash are brief; the split happens at the flash and remains; the trunk does not glow afterwards and the split does not close.",
+      "fail": "The bolt stands as a steady lit line for the rest of the clip; or the trunk splits before the bolt arrives; or the split closes and the trunk knits back together; or the trunk glows like an ember for the rest of the clip; or splinters fly back into the trunk."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The trunk splits as wood: it cracks along its length into fibrous pieces that stay stiff; pieces knocked off fly outward as solid fragments.",
+      "fail": "The trunk bends or folds like rubber; or flows or melts at the strike; or the wood shatters into powder like glass; or the split edges stretch like taffy."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The splinters fly out from the trunk and fall to the ground, arcing downward; loose pieces come to rest on the grass.",
+      "fail": "Splinters rise and hang in the air; or fall upward; or stop in mid-air; or drift sideways without dropping."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The flash lights the tree, the fairway and the cloud undersides during the bolt.",
+      "fail": "The bolt is visible while the tree and fairway stay as dark as before; or the fairway lights up while no bolt is present; or the ground is lit far from the tree while the tree's surroundings stay dark."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tree, split or whole; the pieces that fly off come from the trunk; the course and its features are the same before and after.",
+      "fail": "The tree vanishes or a second tree appears; or splinters appear in the air from nowhere; or the tree turns into a different object; or the bolt passes through the tree into the ground as a lit line."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The grass, the sky and the tree's foliage keep their colours apart from the flash and the damage.",
+      "fail": "The grass changes colour; or the sky turns to daylight after the flash; or the foliage changes colour rather than brightness."
+    }
+  ]
+}

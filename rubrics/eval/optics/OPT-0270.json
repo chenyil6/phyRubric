@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0270",
+  "caption": "A car with a glossy black bonnet drives under a bridge, and the sky reflected in the bonnet is replaced by the dark underside of the bridge and then by sky again.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car with a glossy black bonnet drives under a bridge."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sky reflected in the bonnet is replaced by the dark underside of the bridge."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Sky returns as the car emerges."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The change happens exactly as the car passes beneath."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection changes exactly as the car passes beneath the bridge and back into the open, showing what is above the car.",
+      "fail": "The bonnet keeps reflecting sky under the bridge; or shows the bridge before reaching it; or shows what is ahead rather than above."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The reflection changes only with the car's position.",
+      "fail": "It flickers with the car stopped; or changes with no bridge; or jumps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The reflected sky and bridge are mirror images, stretched by the bonnet's curve.",
+      "fail": "A different scene appears; or the reflection is sharp and flat on a curved bonnet; or it is upside down."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The car travels steadily under and out.",
+      "fail": "It jumps position; or reverses; or stops with no cause."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and one bridge.",
+      "fail": "A second car appears; or the bridge vanishes; or the car passes through a pier."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's paint and the road stay the same.",
+      "fail": "The paint changes colour; or the road rearranges; or the bridge changes."
+    }
+  ]
+}

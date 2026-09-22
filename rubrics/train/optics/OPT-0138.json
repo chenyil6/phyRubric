@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0138",
+  "caption": "A car's side window is fogged from the inside, blurring the passing city; a patch is wiped clear.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car's side window is fogged from the inside."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The passing city is blurred through it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A patch is wiped clear."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The view is sharp through the patch and blurred elsewhere."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The view is blurred everywhere except where the patch is wiped, and there it is sharp.",
+      "fail": "The whole window clears from one wipe; or the wiped patch stays blurred; or a clear patch appears where nothing was wiped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The patch stays clear while wiped and does not fog again instantly.",
+      "fail": "It fogs over the instant the hand leaves; or it clears further by itself; or it flickers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The city outside does not change and slides past.",
+      "fail": "The city changes; or freezes; or a different view appears in the patch."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The fog is a film the hand smears.",
+      "fail": "It is a solid coating; or it peels; or the hand passes through the glass."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One window and one hand.",
+      "fail": "The window duplicates; or a second hand appears; or the fog becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car interior stays the same.",
+      "fail": "The door panel changes; or the frame changes; or the seats change."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

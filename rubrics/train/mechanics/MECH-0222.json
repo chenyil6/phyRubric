@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0222",
+  "caption": "A letter is folded into thirds and slid into an envelope.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A letter is held."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is folded into thirds."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It is slid into an envelope."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The folding comes first and the sliding in follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The paper creases at the folds and becomes a smaller rectangle that fits the envelope.",
+      "fail": "It stays full size; or grows; or folds into a different shape."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The letter goes into the opening, not through the envelope's face.",
+      "fail": "It passes through the face; or the hands pass through the envelope; or the envelope passes through the letter."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The paper creases sharply and lies flat.",
+      "fail": "It is rubbery; or a rigid plate; or it tears."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "It moves only as the hands move it.",
+      "fail": "It folds itself; or slides in by itself; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One letter and one envelope keep their number.",
+      "fail": "The letter duplicates; or the envelope vanishes; or the letter turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The paper and the envelope stay the same.",
+      "fail": "The paper changes colour; or the envelope changes; or the background rearranges."
+    }
+  ],
+  "note": "The hands are kept as the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0045",
+  "caption": "A loud speaker plays a rising bass tone next to a tray of sand, and the sand grains jump and shift into patterns.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A speaker stands next to a tray of sand."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sand grains jump."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The grains gather into patterns: lines, ridges or patches."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The tray holds a thin loose layer of sand."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The jumping comes first and the patterns form from it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The grains hop in place; the tray stays put and the sand stays in it.",
+      "fail": "The tray slides or spins across the table; or all the sand slides to one side as if the tray were tilted; or sand rises and hangs above the tray."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The pattern builds up from the hopping: grains collect into lines or heaps that stay once the hopping stops.",
+      "fail": "A pattern appears fully formed in one step with no hopping before it; or a pattern forms and then dissolves back to even sand while the grains are still; or the pattern slides as a whole across the tray like a picture."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Grains fall back into the tray after each hop.",
+      "fail": "Grains hang in the air; or float upward; or grains that leave the tray come back up into it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The grains stay separate and the tray stays rigid.",
+      "fail": "The sand flows like a liquid with a sloshing level surface; or fuses into a solid sheet; or the tray flexes like cloth."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The sand keeps its amount, allowing for grains leaving the tray; one speaker, one tray.",
+      "fail": "Sand appears from nowhere on the tray; or the sand vanishes; or the speaker duplicates; or the tray sinks into the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The speaker's colour, the tray's colour and the sand's colour stay the same.",
+      "fail": "The speaker changes colour or shape; or the tray changes colour; or the sand changes colour."
+    }
+  ]
+}

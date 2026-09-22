@@ -1,0 +1,76 @@
+{
+  "id": "HEAT-0055",
+  "caption": "Steam rises from a manhole cover on a city street on a cold morning.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A manhole cover sits in a street."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Steam comes up through the cover."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The steam rises."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The setting reads as cold: bare trees, frost or winter clothing."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The steam drifts and thins as it rises."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam leaves the cover going up, spreading and thinning; it may lean with a breeze but it does not sink.",
+      "fail": "The steam flows along the street like water; or pools in the gutter; or sinks back into the cover's holes; or hangs as a fixed shape without rising or drifting."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The plume moves outward and away from the cover, and puffs that have left keep going.",
+      "fail": "The plume runs back into the cover; or a puff retreats toward the holes; or steam appears high above the street and drifts down into the cover; or steam appears in the air away from the cover and drifts toward it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The steam comes up through the cover's holes or its rim rather than out of the road's solid surface.",
+      "fail": "The steam rises from solid asphalt away from the cover; or the cover is clear and steam appears above it with nothing leaving it; or the steam rises from a wall or a parked car instead."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The steam is a soft cloud that spreads, waves and fades; the cover stays a rigid iron plate.",
+      "fail": "The steam holds a fixed rigid shape; or pours like a liquid; or the cover lifts and hangs in the air; or the steam turns into solid lumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cover in one road; the cover stays in its seat and nothing passes through the road.",
+      "fail": "The cover vanishes; or a second cover appears; or the cover passes down through the road; or the road's surface opens up."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The road markings, the kerb and the buildings stay the same.",
+      "fail": "The road markings change; or the kerb changes shape; or the buildings behind change between frames."
+    }
+  ],
+  "note": "The wind is often invisible; the plume leaning as it rises is not a violation."
+}

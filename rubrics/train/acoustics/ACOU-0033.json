@@ -1,0 +1,76 @@
+{
+  "id": "ACOU-0033",
+  "caption": "A subway train roars through a station, and a hanging sign on the platform trembles on its chains.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A subway platform with a sign hanging on chains."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A train passes through the station."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sign trembles on its chains."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The train passes through without stopping."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sign is not already trembling before the train appears."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The sign hangs still while the platform is quiet and begins to tremble as the train enters.",
+      "fail": "The sign trembles while the train is not yet in view and the platform is quiet; or the train passes and the sign hangs dead still; or the trembling starts only after the train has fully left.",
+      "precondition": "The train is in view at some point."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The trembling builds, peaks and dies away in one arc: after its strongest point it only weakens until the sign hangs still.",
+      "fail": "The trembling weakens and then strengthens again with no train in view; or stops dead in a tilted pose with the chains slack; or the sign is trembling in one frame and hanging still in the next."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The chains stay taut with the sign hanging below its fixing points; the tremble is a small swing about the hanging point.",
+      "fail": "The chains go slack while the sign stays up; or the sign rises toward the ceiling; or it hangs sideways from a taut chain."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The sign panel is rigid and the chains flex only at their links.",
+      "fail": "The sign panel bends or ripples; or the chains stretch; or the chains pass through the sign."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sign on its chains; the train's carriages keep their count; nothing passes through a pillar or the platform.",
+      "fail": "A second sign appears; or the sign vanishes; or the train passes through a pillar or the platform edge; or carriages appear or vanish mid-train."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The sign's lettering, the platform tiles and posters stay the same.",
+      "fail": "The sign's lettering changes; or the tiles or posters change; or the chains change length."
+    }
+  ]
+}

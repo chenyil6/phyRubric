@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0268",
+  "caption": "A dog drinks from a still pond, and its reflection breaks into ripples where its tongue touches the water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog drinks from a still pond."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its reflection breaks into ripples where its tongue touches the water."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflection is sharp until the tongue touches."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection settles when the dog stops."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection is sharp until the tongue touches, fragments where ripples spread, and settles when the dog stops.",
+      "fail": "It is broken before the tongue touches; or stays sharp through the ripples; or never settles on still water."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is inverted and the same dog.",
+      "fail": "It is upright; or a different dog; or a rotated copy."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid: ripples spread from the tongue and fade.",
+      "fail": "It is rigid; or ripples freeze; or ripples start away from the tongue."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It moves with the dog still; or drifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One dog and one reflection; the reflection stays on the water.",
+      "fail": "A second dog appears; or the reflection rises off the water; or the dog vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dog's coat and the pond stay the same.",
+      "fail": "The coat changes; or the pond changes colour; or the bank rearranges."
+    }
+  ],
+  "note": "Self-driven animal: where it goes is not judged. Only the reflection's relation to it is."
+}

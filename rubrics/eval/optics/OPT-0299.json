@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0299",
+  "caption": "A shiny DVD is tilted in sunlight, and rainbow bands slide across the wall as it turns.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A shiny DVD is tilted in sunlight."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Rainbow bands slide across the wall as it turns."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The bands vanish when the disc is turned away or the sun is covered."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wall itself stays white."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The bands move as the disc tilts and only then.",
+      "fail": "They slide with the disc still; or stay put while the disc turns; or flicker in steady sun."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bands appear only while the sun hits the disc and would vanish when the disc is turned away or the sun covered.",
+      "fail": "They are there with no sun; or the disc is in sun with no bands; or they remain with the disc turned away."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The bands are rainbow-coloured and the wall stays white.",
+      "fail": "They are a single colour; or white; or the wall changes colour."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The bands are curved streaks.",
+      "fail": "They are a single round spot; or sharp squares; or flood the wall."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One disc.",
+      "fail": "It duplicates; or vanishes; or a band becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room stays the same.",
+      "fail": "The room rearranges; or the wall changes; or the disc changes shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

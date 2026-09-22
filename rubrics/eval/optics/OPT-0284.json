@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0284",
+  "caption": "The flap of a lit tent is unzipped from inside at night, and lantern light spills out onto the grass in a triangle that widens as the flap opens.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lit tent's flap is unzipped from inside at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lantern light spills out onto the grass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lit triangle widens as the flap opens."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The grass beside the tent stays dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The lit patch appears only once the flap parts and lies in front of the doorway, fading with distance.",
+      "fail": "Light is on the grass with the flap shut; or the patch is beside the tent; or it is even to its far edge."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The patch grows with the opening.",
+      "fail": "It shrinks as the flap opens; or is full width before the flap moves; or flickers."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The patch changes only as the flap moves.",
+      "fail": "It grows with the flap still; or before the zip; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The patch is a triangle spreading from the doorway.",
+      "fail": "It is a round spot; or splits; or is on the tent's roof."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tent and one lantern.",
+      "fail": "A second tent appears; or the lantern vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tent and the grass stay the same.",
+      "fail": "The tent changes colour; or the grass changes; or the flap changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

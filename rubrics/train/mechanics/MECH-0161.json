@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0161",
+  "caption": "A bucket packed with damp sand is turned upside down on the beach and lifted off, leaving a bucket-shaped sand tower standing.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bucket packed with damp sand is turned upside down on the beach."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bucket is lifted off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A bucket-shaped sand tower stands."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sand is damp."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lift comes first and the tower stands after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The tower keeps the bucket's shape with edges crumbling slightly as the bucket comes away.",
+      "fail": "It slumps into a heap; or it flows like liquid; or it stays stuck in the bucket."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The tower is one solid shape that mirrors the bucket.",
+      "fail": "It splits into pieces as the bucket lifts; or it changes shape after the bucket is gone; or it grows."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Loose sand falls down around the base.",
+      "fail": "Sand rises; or hangs; or the tower lifts with the bucket and hangs."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The tower stays where it was formed.",
+      "fail": "It slides; or tips over with nothing touching it; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bucket and one tower keep their number.",
+      "fail": "The tower vanishes or a second appears; or the bucket passes through the tower; or the tower turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bucket's colour and the beach stay the same.",
+      "fail": "The bucket changes colour; or the sand changes colour; or the beach rearranges."
+    }
+  ]
+}

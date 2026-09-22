@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0002",
+  "caption": "The wall switch in a lit hallway is flipped down, and the ceiling light goes off.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wall switch in a hallway; the hallway is lit at the start."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The switch is flipped."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ceiling light goes off."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The hallway goes dark."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is lit, flip, off."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light goes off at the moment the switch moves, and only then.",
+      "fail": "The switch moves and the light stays on; or the light goes off before the switch is touched; or it goes off long after with nothing else happening."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once off, the light stays off for the rest of the clip; the hallway stays as dark as the loss of that light makes it.",
+      "fail": "The light comes back on by itself; or flickers between on and off; or the hallway brightens again with no other source."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The illumination disappears with the fixture: the walls and floor under it go dimmer and its shadows vanish.",
+      "fail": "The fixture goes dark while the hallway stays as bright; or the hallway darkens while the fixture still glows; or light remains pooled on the floor under a dark fixture."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing else changes at the flip.",
+      "fail": "Objects move or doors open when the switch is flipped; or the switch moves back by itself; or the fixture swings."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One switch and one light, both staying in place; the hand does not pass through the wall.",
+      "fail": "A second switch appears; or the fixture vanishes rather than going dark; or the hand passes into the wall; or doors appear or vanish in the dark."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hallway keeps its colours and contents apart from brightness.",
+      "fail": "Walls change colour; or pictures change; or the fixture changes shape."
+    }
+  ]
+}

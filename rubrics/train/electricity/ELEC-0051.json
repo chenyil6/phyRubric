@@ -1,0 +1,77 @@
+{
+  "id": "ELEC-0051",
+  "caption": "The cord of a running hairdryer is pulled out of the socket, and the dryer falls silent and stops blowing.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hairdryer runs: its blower is on."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its cord is pulled out of the socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dryer stops blowing."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The dryer's switch stays on."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is running, pull, stopped."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The blowing stops at the moment the plug leaves the socket, and only then, even though the switch is still on.",
+      "fail": "The plug is out and the dryer blows on to the end of the clip; or the dryer stops before the plug moves; or the dryer stops with the plug still seated; or the airflow stops but the heating element glows on."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once unplugged the dryer stays stopped; it does not start again while the plug is out.",
+      "fail": "The dryer starts blowing again with the plug out; or blows in bursts after the pull; or the plug jumps back into the socket; or the switch moves by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Anything in the airflow flutters while the dryer runs and settles once it stops.",
+      "fail": "Hair or ribbons stream after the plug is out; or nothing in front of the nozzle moves while the dryer runs; or the flutter blows toward the nozzle.",
+      "precondition": "Hair, ribbons or other light items are in the airflow."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cord follows the plug: it slackens and drops once the plug is free and stays attached at both ends.",
+      "fail": "The cord stretches like elastic; or stands rigid in the air after the plug is out; or floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One dryer, one cord, one plug, one socket; the plug leaves the socket whole; nothing passes through the wall.",
+      "fail": "The plug vanishes or a second plug appears; or the plug passes through the wall; or the cord splits or detaches; or the dryer changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dryer's colour, the cord and the room stay the same.",
+      "fail": "The dryer changes colour; or the cord changes colour; or the room's contents rearrange."
+    }
+  ],
+  "note": "The dryer falling silent is sound and is not judged; stopping is read from the airflow's effect or the fan blur ending."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0060",
+  "caption": "A skateboarder rolling along a flat path lowers his back foot and drags it on the ground, and the board slows and comes to a stop.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A skateboarder rolls along a flat path."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "He lowers his back foot to the ground."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "He drags the foot along the ground."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The board slows and comes to a stop."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "It is the back foot that is lowered."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The foot touches down first and the slowing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The slowing begins when the foot touches the ground and goes on while it drags.",
+      "fail": "The board keeps its speed while the foot plainly drags; or the board slows before the foot reaches the ground; or the foot drags and the board speeds up."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The board keeps a straight line as it slows and stops smoothly with the rider still on it.",
+      "fail": "The board veers sharply while the foot drags; or it stops dead with a jolt and throws the rider; or it rolls backward after stopping."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing else acts on the board, and once stopped it stays stopped.",
+      "fail": "The board slows with the foot never touching the ground; or it sets off again after stopping; or it speeds up on the flat with no push."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The dragging foot stays on the ground and the board stays on its wheels.",
+      "fail": "The foot hovers above the ground while the board slows; or the board lifts off the path; or the rider floats above the board."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The rider and the board keep their number and shape, and nothing passes through anything.",
+      "fail": "The foot passes through the deck or the ground; or a limb detaches or vanishes; or the board passes through the path."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rider's clothing, the board and the path stay the same.",
+      "fail": "The rider's clothing changes colour; or the board's deck changes graphic; or the path's surface changes between frames."
+    }
+  ],
+  "note": "Friction scene: the rider is kept because his foot is the brake. Stance, style and how he balances are not judged; only when the foot touches down and how the board's speed responds."
+}

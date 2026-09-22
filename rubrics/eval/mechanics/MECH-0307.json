@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0307",
+  "caption": "A wooden crate rests on a board that is slowly tilted up at one end; the crate stays put as the slope grows, then suddenly slides down to the bottom.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wooden crate rests on a board."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The board is slowly tilted up at one end."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The crate stays put as the slope grows."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It suddenly slides down to the bottom."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tilt comes first, then the wait, then the slide."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "It does not move at shallow angles and starts sliding all at once when the slope is steep.",
+      "fail": "It creeps at every angle; or slides on a level board; or slides uphill."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It speeds up on the way down and stops at the bottom.",
+      "fail": "It slows on the way down; or stops mid-slope; or floats."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "It slides straight down the board.",
+      "fail": "It goes sideways; or spins; or goes off the side."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The crate and the board stay rigid.",
+      "fail": "The crate bends; or the board sags; or the crate squashes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One crate and one board keep their number.",
+      "fail": "The crate duplicates; or vanishes; or the board turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The crate and the board stay the same.",
+      "fail": "The crate changes colour; or the board changes; or the background rearranges."
+    }
+  ]
+}

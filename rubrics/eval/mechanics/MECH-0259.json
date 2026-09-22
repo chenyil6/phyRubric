@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0259",
+  "caption": "A cue ball is struck into a tight triangle of balls on a pool table, and the balls scatter across the table in all directions.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tight triangle of balls sits on a pool table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A cue ball is struck into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The balls scatter across the table in all directions."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The strike comes first and the scatter follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The balls move only after being struck, spreading outward from the impact.",
+      "fail": "They move before; or are struck and stay; or scatter from a different point."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The cue ball slows sharply and the struck balls spread outward.",
+      "fail": "The cue ball keeps its speed; or the balls move as a block; or balls fly back through the cue ball."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "No ball overlaps another.",
+      "fail": "Balls overlap; or pass through each other; or sink into the cloth."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Each ball rolls straight and slows.",
+      "fail": "A ball curves; or speeds up; or restarts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The balls keep their number.",
+      "fail": "A ball vanishes; or a new one appears; or balls merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balls' colours and the table stay the same.",
+      "fail": "Colours swap; or the cloth changes; or the table rearranges."
+    }
+  ]
+}

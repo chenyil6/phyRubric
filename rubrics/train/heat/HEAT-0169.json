@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0169",
+  "caption": "Sausages sizzle in a hot pan, and one of them splits open along its side with a pop.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Sausages lie in a hot pan."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "One sausage splits along its side."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The split gapes open."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Juices escape from the split."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The other sausages stay whole."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The split does not close again."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The split only opens wider and stays open, and the juices only leave.",
+      "fail": "The split closes and the skin is whole again; or the split narrows; or the juices draw back into the sausage; or the split opens and shuts in turn."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The skin stays a casing that bursts along a line and gapes, and the sausage keeps being one sausage.",
+      "fail": "The sausage melts and drips; or the skin stretches like rubber and stays whole while gaping; or the sausage splits into two whole sausages; or the sausage turns into another object."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The juices run down the sausage into the pan and gather at its low places, and the sausages rest in the pan.",
+      "fail": "The juices climb up the sausage; or a drop leaves the sausage and rises; or a sausage lifts off the pan and hangs; or the juices gather on the sausage's top and stay."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The sausages shift only as the pan is moved, as they split or as the fat spits.",
+      "fail": "A sausage slides across the pan with the pan still and no split; or a sausage rolls uphill; or the sausages line themselves up in a row; or a sausage spins fast on the spot."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The sausages keep their number in the pan and none appears or vanishes.",
+      "fail": "A sausage vanishes; or a new sausage appears in the pan; or two sausages merge into one; or a sausage passes through the pan's floor."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the hob and the surroundings stay the same.",
+      "fail": "The pan changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ],
+  "note": "The pop is sound and is not judged. The sausages browning as they cook is chemistry and is not judged."
+}

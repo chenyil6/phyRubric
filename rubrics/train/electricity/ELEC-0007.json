@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0007",
+  "caption": "A glowing bulb is unscrewed from a table lamp, and it goes dark as it comes loose.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A table lamp with its bulb glowing."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bulb is unscrewed from the socket."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bulb goes dark as it comes loose."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bulb is turned in the socket before it comes out."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is glowing, turning, dark, out."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bulb goes dark at the moment it comes loose in the socket, and only then; the lamp's own switch is not touched.",
+      "fail": "The bulb is fully out of the socket and still glowing; or the bulb goes dark before it has been turned; or the bulb goes dark with the hand not yet on it; or the bulb relights once out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once dark, the bulb stays dark while it is out of the socket.",
+      "fail": "The bulb glows in the hand away from the lamp; or flickers on and off as it is withdrawn; or the socket glows after the bulb is out."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The light the lamp cast disappears with the bulb: the shade darkens and the surfaces it lit go dimmer.",
+      "fail": "The bulb is dark while its light on the table and wall stays; or the shade keeps glowing with the bulb out; or the room brightens as the bulb goes dark."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The bulb turns about its axis in the socket and rises out of it along that axis; the lamp stays put.",
+      "fail": "The bulb comes straight out without turning; or slides sideways out of the socket; or the lamp turns with the bulb; or the lamp lifts off the table."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One bulb leaves one socket whole; the bulb, socket and shade keep their shapes; fingers pass through nothing.",
+      "fail": "The bulb passes through the shade or the lamp's body; or a second bulb appears in the socket; or the bulb changes shape or splits; or fingers pass through the bulb."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shade's colour, the lamp's base and the table stay the same apart from the light.",
+      "fail": "The shade changes colour rather than brightness; or the base changes shape; or the table's contents rearrange."
+    }
+  ]
+}

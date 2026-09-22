@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0291",
+  "caption": "A steel paperclip hangs on a thread, and as a magnet is brought near it the clip swings toward the magnet and hangs at an angle in the air.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A steel paperclip hangs on a thread."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnet is brought near the clip."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The clip swings toward the magnet."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The clip hangs at an angle in the air, leaning toward the magnet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The thread stays taut with the clip at its end."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The approach comes first and the lean follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The clip hangs straight until the magnet is close, leans toward it more as it approaches, follows it as it moves and swings back to vertical when the magnet is taken away.",
+      "fail": "The clip swings while the magnet is far off and still; or leans away from the magnet; or stays leaning after the magnet has been taken well away; or swings to and fro with the magnet held still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The clip hangs from the thread, which stays taut from its anchor to the clip; the lean is toward the magnet and the thread points from the anchor to the clip.",
+      "fail": "The thread goes slack while the clip hangs in the air; or the clip rises above its anchor; or the clip floats with the thread curving; or the clip hangs at an angle with no magnet near."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The clip moves along an arc about the thread's anchor; if it reaches the magnet it stops on it.",
+      "fail": "The clip moves in a straight line off its arc; or the anchor point moves with the clip; or the clip reaches the magnet and bounces off repeatedly; or the thread stretches to let the clip reach."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The thread is a limp line that stays straight under the clip's weight; the clip stays a rigid bent wire.",
+      "fail": "The thread stands rigid like a rod; or stretches like elastic; or the clip bends as it leans; or the thread curls."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One clip on one thread and one magnet; the clip stays on the thread; nothing appears, vanishes or passes into the magnet.",
+      "fail": "The clip detaches from the thread and hangs in the air; or a second clip appears; or the clip sinks into the magnet; or the thread splits."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The clip's colour, the thread and the magnet stay the same.",
+      "fail": "The clip changes shape or colour; or the thread changes colour or length; or the magnet changes shape."
+    }
+  ],
+  "note": "Who holds the magnet is not judged."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0277",
+  "caption": "A plank on a sawhorse is sawn through, and the cut end drops to the ground as the saw comes through.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A plank rests on a sawhorse."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is sawn through."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cut end drops to the ground as the saw comes through."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sawing comes first and the drop follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The kerf deepens with each stroke, sawdust falls, and the piece parts only when the saw is through.",
+      "fail": "It parts before the saw is through; or the saw passes with no cut; or the cut appears elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The two pieces stay two.",
+      "fail": "They rejoin; or a third piece appears; or the plank is whole again."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The cut end falls and the sawdust falls.",
+      "fail": "They float; or rise; or hang."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wood is rigid and splinters.",
+      "fail": "It bends; or melts; or shatters like glass."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One saw and one plank keep their number.",
+      "fail": "The saw passes through the hand; or the plank duplicates; or the saw vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The plank and the sawhorse stay the same.",
+      "fail": "The wood changes colour; or the sawhorse changes; or the background rearranges."
+    }
+  ]
+}

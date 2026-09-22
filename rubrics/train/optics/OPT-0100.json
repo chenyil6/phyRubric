@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0100",
+  "caption": "Rain streams down a window, and the trees outside seen through the wet glass wobble and blur where the water runs.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Rain streams down a window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Trees outside are seen through the wet glass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The view wobbles and blurs where the water runs."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The distortion moves downward with the drops."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The view is distorted only along the running water and clear elsewhere.",
+      "fail": "The whole pane is blurred with only a few tracks; or the tracks leave the view sharp; or the blur is where no water runs."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The trees themselves are unchanged; only their image wobbles along the tracks.",
+      "fail": "The trees bend; or a different scene appears in a track; or the trees change shape between tracks."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The water runs downward and the distortion moves with it.",
+      "fail": "Water runs up the glass; or the tracks are still while blur moves; or drops hang without moving."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid running in tracks and the glass is rigid.",
+      "fail": "The water is rigid; or the glass ripples; or the drops bounce."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One window and the trees outside.",
+      "fail": "A tree vanishes; or a second window appears; or the water becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The frame and the trees' colours stay the same.",
+      "fail": "The frame changes; or the trees change colour; or the room changes."
+    }
+  ]
+}

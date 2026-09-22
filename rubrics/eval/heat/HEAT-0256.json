@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0256",
+  "caption": "Chocolate sprinkles are scattered over hot buttered toast, and they soften and smear into dark streaks.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Chocolate sprinkles are scattered over hot buttered toast."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The sprinkles soften and lose their hard edges."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sprinkles smear into dark streaks."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sprinkles go glossy where they touch the toast."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sprinkles are separate hard grains at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The softening comes first and the smearing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Each sprinkle loses its stick shape from the bottom up and spreads into a low streak, and neighbouring streaks may join.",
+      "fail": "A sprinkle keeps its sharp stick shape while glossy and spread; or a sprinkle's edges sharpen as it melts; or a sprinkle turns into a hard bead that stays whole; or the sprinkles rise into standing spikes."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The softening only advances and the streaks do not harden into grains again on the hot toast.",
+      "fail": "A streak draws back into a hard sprinkle; or the sprinkles set firm and matt again on the hot toast; or the sprinkles alternate between hard and soft; or a streak's edges pull inward and it stands taller."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The melted chocolate spreads into the toast's surface and runs to its low places and off its edge.",
+      "fail": "A streak climbs the toast's crust and stays; or melted chocolate lifts off the toast; or a streak runs uphill on a tilted slice; or the chocolate gathers on the crust's high rim and stays."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The sprinkles soften where they touch the hot toast, going glossy from underneath, and the toast's surface darkens where they lie.",
+      "fail": "A sprinkle softens on its upper side while its underside stays matt and hard; or a streak appears on a part of the toast no sprinkle touched; or the sprinkles soften while the toast stays pale and dry under them."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The sprinkles on the toast are the sprinkles that were scattered; none appears or vanishes.",
+      "fail": "A sprinkle vanishes; or new sprinkles appear on the toast; or a streak grows with nothing added; or a sprinkle passes through the toast."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The toast's crust, the plate and the surroundings stay the same.",
+      "fail": "The toast's crust changes shape; or the plate changes pattern; or items around the plate rearrange."
+    }
+  ]
+}

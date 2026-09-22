@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0195",
+  "caption": "A fleece blanket is lifted out of the dryer, and a dryer sheet clings to its underside and rides along as the blanket is carried.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dryer with its door open."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A fleece blanket is lifted out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A dryer sheet clings to the blanket's underside."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The dryer sheet rides along as the blanket is carried."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The dryer sheet is a thin flat sheet, not a sock or other garment."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The lift comes first and the clinging sheet shows as the blanket is carried."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The dryer sheet stays pressed against the blanket's underside, hanging on with nothing else holding it, as the blanket is lifted and carried; it comes off only when peeled.",
+      "fail": "The sheet drops off on its own as the blanket is lifted; or hangs a gap away from the blanket; or slides down the blanket and falls; or the sheet stays in the air where the blanket was when it is carried on."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The blanket hangs down from the arms; the dryer sheet clings to the fabric even on the underside; once peeled free and let go, the sheet falls.",
+      "fail": "The peeled sheet floats or rises; or the blanket stands out sideways from the arms; or the sheet climbs up the blanket; or the sheet hangs below the blanket without touching it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The blanket is soft fleece that drapes in folds; the dryer sheet is a thin limp sheet that lies flat against it and wrinkles.",
+      "fail": "The blanket stands stiff like a board; or the sheet holds a flat rigid shape away from the fabric; or the sheet stretches like elastic when peeled; or the blanket flows like liquid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Clothes left in the dryer stay still; the dryer stays put; the sheet moves only with the blanket.",
+      "fail": "Clothes in the drum rearrange as the blanket is lifted; or the dryer door swings by itself; or the sheet crawls across the blanket by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One blanket and one dryer sheet; the sheet is a separate item on the blanket's surface; nothing merges, vanishes or passes through anything.",
+      "fail": "The sheet merges into the blanket; or a second sheet appears; or the sheet vanishes rather than being peeled; or the blanket passes through the dryer door."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blanket's colour and pattern, the sheet's colour and the dryer stay the same.",
+      "fail": "The blanket changes colour; or the sheet changes colour or becomes a different item; or the dryer changes."
+    }
+  ]
+}

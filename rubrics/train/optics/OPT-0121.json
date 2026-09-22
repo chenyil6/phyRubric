@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0121",
+  "caption": "A garden is seen through a pane of old wavy glass, and the plants seem to bend and shift as the camera moves.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A garden is seen through a pane of old wavy glass."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The camera moves."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The plants seem to bend and shift."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Through a flat pane beside it the view is undistorted."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The plants stay still; the distortion changes with the viewpoint.",
+      "fail": "The plants sway with no wind; or they change shape; or a different garden appears."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The distortion changes only as the camera moves.",
+      "fail": "The view wobbles with the camera still; or it stays fixed as the camera moves; or the glass ripples."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Through a flat pane beside it the view is undistorted.",
+      "fail": "The flat pane distorts too; or the wavy pane is undistorted; or both are opaque."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The glass is rigid.",
+      "fail": "It flows; or bends; or shatters untouched."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One window and one garden.",
+      "fail": "A second window appears; or a plant vanishes; or the glass becomes solid opaque."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The frame and the garden's colours stay the same.",
+      "fail": "The frame changes; or the plants change colour; or the room changes."
+    }
+  ]
+}

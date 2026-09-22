@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0157",
+  "caption": "A camera flash fires in a dim hall, and the whole room is lit for an instant.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dim hall is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A camera flash fires."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The whole room is lit for an instant."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The room returns to dim immediately."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is a single brief burst and the room returns to dim immediately.",
+      "fail": "The room stays lit; or brightens gradually; or flashes repeatedly with one press."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Everything facing the camera is lit and shadows point away from it.",
+      "fail": "Only part of the room lights; or shadows point toward the camera; or the far side is lit and the near dark."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing else changes brightness.",
+      "fail": "Another light comes on; or the room dims before the flash; or the lit area moves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "Colours stay the same, only brighter for the instant.",
+      "fail": "Objects change colour; or the flash is coloured; or the walls change."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The room's objects keep their number.",
+      "fail": "An object vanishes; or appears; or the camera duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hall stays the same.",
+      "fail": "Furniture rearranges; or the walls change; or the camera changes."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0170",
+  "caption": "A handful of seed is scattered across bare soil with a sweeping throw, and the seeds land spread over a wide patch.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A handful of seed is thrown with a sweeping motion over bare soil."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The seeds land spread over a wide patch."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The throw is a sweep rather than a drop."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The throw comes first and the landing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Seeds fan out through the air in an arc during the sweep.",
+      "fail": "They fly back at the thrower; or all go to a single spot; or hang in the air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The seeds drop onto the soil and stay.",
+      "fail": "They hang; or rise; or bounce high."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Seeds are tiny separate grains that scatter, not a stream or a clump.",
+      "fail": "They fly as one lump; or as a rope; or as liquid."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Seeds move only from the throw, and once landed they stay.",
+      "fail": "They move before the throw; or hop after landing; or drift."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Seeds come only from the hand.",
+      "fail": "Seeds appear with no throw; or vanish in mid-air; or multiply."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The soil and the surroundings stay the same.",
+      "fail": "The soil changes colour; or the field rearranges; or the hand changes."
+    }
+  ],
+  "note": "The hand is kept as the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0133",
+  "caption": "A car with a dragging exhaust pipe drives down a road at night, and sparks trail behind it where the pipe scrapes the asphalt.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car drives along a road at night."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its exhaust pipe hangs down and drags on the road."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Sparks trail behind the car where the pipe scrapes the asphalt."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sparks come from the pipe's contact point, low at the back of the car."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The scrape comes first and the sparks trail after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The sparks stream backward from the contact point along the road, opposite to the car's motion, low over the surface, and die out along the way.",
+      "fail": "Sparks fly ahead of the car; or spray equally in all directions; or the trail moves along with the car as a fixed cloud; or the trail lies off to one side while the car runs straight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Sparks are transient and leave nothing on the road; one car with one dragging pipe.",
+      "fail": "Glowing dots stay on the road behind the car for the rest of the clip; or a glowing line remains along the road; or the pipe vanishes or duplicates; or a second car appears from nowhere."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Sparks appear only while the pipe touches the road and stop when it lifts or the car stops.",
+      "fail": "Sparks continue after the car has stopped; or sparks trail from a pipe that is clearly off the road; or sparks flow back into the pipe."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Sparks that lift off the road arc back down and go dark; none rise or hover.",
+      "fail": "Sparks rise steadily and gather above the car; or hang in the air; or climb up the car's back."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The pipe scrapes the road's surface; the car stays whole and passes through nothing.",
+      "fail": "The pipe sinks into the asphalt; or the car passes through another vehicle or a barrier; or the pipe detaches and floats; or the car changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and lights, the road markings and the roadside stay the same.",
+      "fail": "The car changes colour; or its lights change layout; or the road markings change."
+    }
+  ],
+  "note": "The car is a driven vehicle; its speed and steering are not judged."
+}

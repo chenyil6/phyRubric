@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0205",
+  "caption": "A couple dances a slow waltz around a living room, holding each other.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two people dance together in a living room."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They hold each other."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They move around the room."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The pace is slow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "Their bodies stay separate and do not pass through one another.",
+      "fail": "They pass through each other; or merge; or one's arm passes through the other's body."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "They step in time with their feet on the floor, their limbs bend at the joints, and each keeps their own limbs.",
+      "fail": "A limb detaches; or a limb bends mid-bone; or the pair share a limb."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "They stay upright with their weight over their feet.",
+      "fail": "They float; or lean impossibly without falling; or sink into the floor."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "They move together as a pair, turning.",
+      "fail": "One jumps position between frames; or they move in opposite directions while holding on; or they slide with their feet planted."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two people stay two.",
+      "fail": "A third appears; or one vanishes; or they merge into one."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Their clothing and the room stay the same.",
+      "fail": "Clothing changes colour; or the furniture rearranges; or the room changes."
+    }
+  ],
+  "note": "Biomechanics scene: the body is the physics. Gait, posture, style and skill are not judged; only that limbs stay attached, bend at joints, keep ground contact and pass through nothing."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0165",
+  "caption": "Wet chicken pieces are dropped into a pan of hot oil, and the oil spits and crackles violently for a moment.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pan of hot oil."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Wet chicken pieces are dropped into the oil."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The oil spits: droplets fly up and out."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The spitting eases."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pieces look wet as they go in."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the spitting follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spitting starts as the wet pieces touch the oil, is fiercest at first and then eases.",
+      "fail": "The oil spits before the pieces reach it; or the spitting grows steadily for the rest of the clip; or the spitting stops and then starts again with nothing added; or the oil lies glassy still as the wet pieces enter."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The droplets leave the oil's surface where the pieces landed, fly up and out along arcs and fall back onto the pan or the hob.",
+      "fail": "The droplets rise and hang in the air; or fly out in straight lines and stop dead; or leave the pan from a spot no piece landed in; or curve back into the oil along the line they left on."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pieces sink or ride in the oil, the thrown droplets arc down again and any steam rises.",
+      "fail": "A piece rises out of the oil and hangs above it; or the droplets keep climbing out of view; or the steam sinks over the rim and pools on the hob; or the oil climbs the pan's wall and stays above its level."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The oil is a thin liquid that bursts into fine droplets and foam and closes round the pieces, and the pieces stay firm.",
+      "fail": "The oil sets solid as the pieces enter; or a piece melts away into the oil; or the droplets hold their shape as solid beads on the hob; or the foam stands as a rigid dome above the pan."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The pieces in the pan are the pieces that were dropped and the oil stays in the pan.",
+      "fail": "A piece vanishes; or new pieces appear with none added; or oil passes through the pan's wall; or the oil's level jumps with nothing added."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the hob and the oil's colour stay the same.",
+      "fail": "The pan changes colour; or the oil changes colour; or items around the hob rearrange."
+    }
+  ],
+  "note": "The chicken browning as it cooks is chemistry and is not judged."
+}

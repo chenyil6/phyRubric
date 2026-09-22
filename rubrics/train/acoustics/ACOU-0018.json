@@ -1,0 +1,81 @@
+{
+  "id": "ACOU-0018",
+  "caption": "The top of a large empty cardboard box is thumped, and the lid panel bounces and quivers before settling.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A large cardboard box with its lid panel on top."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The top of the box is thumped by a hand or fist."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lid panel bounces and quivers."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The lid settles."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The thump lands on the top of the box, not on a side."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The thump comes first; the bounce and quiver follow, then the settling."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The lid panel is still until the hand lands; it dips and rebounds at the thump and only then.",
+      "fail": "The panel is already quivering before the hand arrives; or quivers while the hand is held away from it; or the hand thumps and the panel stays rigid; or the panel starts quivering again after settling with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The first dip is the deepest and each later flex is smaller until the panel lies flat and still.",
+      "fail": "The quiver grows after the thump; or holds the same size for the whole clip; or the panel stops dead in mid-bounce."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The lid flexes as stiff card: it dents in under the hand and springs back; the side walls stay upright.",
+      "fail": "The hand's dent stays pressed in after the hand lifts; or the panel ripples like cloth; or a side wall caves in and stays; or the lid tears."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The box stays where it is; the sides barely move and the box does not slide or rock.",
+      "fail": "The box slides across the floor at the thump; or rocks up onto one edge; or the sides bulge and quiver while the lid stays still."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One box; the hand passes through nothing and the box stays one piece.",
+      "fail": "The hand passes into the lid; or the lid vanishes or a second lid appears; or the box collapses flat and re-forms; or the box changes into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The box's printing and tape, and the floor and surroundings stay the same.",
+      "fail": "The box's label or printing changes; or the tape moves or vanishes; or the floor changes."
+    }
+  ],
+  "note": "'Empty' cannot be seen through a closed lid and is not judged."
+}

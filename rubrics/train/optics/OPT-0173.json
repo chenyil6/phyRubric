@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0173",
+  "caption": "A lamp with a coloured shade is switched on, and the shade glows while the desk below is lit through its open bottom.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lamp has a coloured shade."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The shade glows."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The desk below is lit through the open bottom."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The brightest spot is directly beneath the shade."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shade glows evenly with the bulb inside and the brightest spot is directly beneath.",
+      "fail": "The shade stays dark with the lamp on; or the brightest spot is far to one side; or the desk stays dark."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The glow through the shade is the shade's colour and the desk below is lit whiter.",
+      "fail": "The shade glows a different colour; or the desk is the shade's colour; or the glow changes colour."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The light would stop when the lamp is off and the lit area stays put.",
+      "fail": "The shade glows with the lamp off; or the lit area wanders; or flickers."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The lit area below is a round pool.",
+      "fail": "It is a sharp square; or splits; or is on the ceiling only."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One lamp.",
+      "fail": "A second lamp appears; or it vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The desk and the room stay the same.",
+      "fail": "The desk changes; or the room rearranges; or the shade changes shape."
+    }
+  ],
+  "note": "Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

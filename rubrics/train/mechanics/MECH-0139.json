@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0139",
+  "caption": "An axe swung down onto a log standing on end on a chopping block splits it into two pieces that fall apart to the sides.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A log stands on end on a chopping block."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "An axe is swung down onto it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The log splits into two pieces."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The pieces fall apart to the sides."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The log stands on end before the blow."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The blow comes first, then the split, then the halves fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The split starts where the blade bites and runs down the log with a rough grain face.",
+      "fail": "The axe passes through with no effect; or the log squashes; or the split is a clean smooth cut."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The halves fall away only after the blow lands, outward to the sides.",
+      "fail": "The halves fall before the blow; or both fall to the same side; or they fly upward."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The halves fall to the ground, and the axe stays in the block or is lifted.",
+      "fail": "The halves hang in the air; or rise; or the axe floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The chopping block stays put.",
+      "fail": "It slides; or jumps; or the log moves before the blow."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One log becomes two pieces and one axe keeps its number.",
+      "fail": "A third piece appears; or a half vanishes; or the axe vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The log's bark, the axe and the yard stay the same.",
+      "fail": "The bark changes; or the axe changes; or the yard rearranges."
+    }
+  ],
+  "note": "The person swinging is kept because the swing is the physics. Technique is not judged."
+}

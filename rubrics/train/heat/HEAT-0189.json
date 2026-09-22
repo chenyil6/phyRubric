@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0189",
+  "caption": "An egg is cracked into a hot frying pan, and the clear white turns opaque white from the edges inward.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An egg is cracked into a hot frying pan."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The white spreads in the pan."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The white turns from clear to opaque."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The change spreads from the edges inward."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The yolk stays yellow and domed."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The cracking comes first and the whitening follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The whitening only advances inward and the set white does not turn clear again.",
+      "fail": "A set white part turns clear again in the hot pan; or the whitening spreads and then retreats; or the whole raw egg slides about the pan as one piece before any of it has set; or the change starts at the yolk and works outward to the pan's edge."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The change from clear to opaque happens in the white where it touches the hot pan, and the yolk stays yellow and domed.",
+      "fail": "The yolk turns white while the white stays clear; or the pan's surface changes colour rather than the egg; or the white is opaque before the egg is cracked; or the white goes opaque all at once with no spreading edge."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The white spreads outward and downhill over the pan's floor and the yolk sits on it.",
+      "fail": "The white climbs the pan's wall and stays; or the yolk rises off the white and hangs; or the white runs uphill; or the yolk sinks through the white and out below the pan."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The raw white is a thin runny liquid that spreads, the set white is a soft solid that holds its shape, and the yolk stays a soft dome.",
+      "fail": "The raw white stands as a rigid dome as it is poured; or the set white runs off a tilted pan as a liquid; or the yolk shatters; or the set white stretches like elastic."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One egg in one pan; the white and yolk stay one each and the shell stays outside.",
+      "fail": "A second yolk appears; or the yolk vanishes; or the white passes through the pan's floor; or a shell piece falls into the pan and vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the hob and the shell stay the same.",
+      "fail": "The pan changes colour; or its handle changes shape; or items around the hob rearrange."
+    }
+  ],
+  "note": "The white turning opaque is the caption's asserted outcome; the chemistry of it is not judged, only that the change runs one way and starts where the egg meets the pan."
+}

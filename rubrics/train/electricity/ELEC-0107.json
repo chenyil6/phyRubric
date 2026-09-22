@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0107",
+  "caption": "A robotic welding arm touches down on a steel car body on an assembly line, and a shower of bright sparks bursts from the joint and falls to the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A robotic welding arm is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A steel car body sits on an assembly line."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The arm's tip touches down on the body."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "A shower of sparks bursts from the contact point."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sparks fall toward the floor."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Contact comes first and the sparks follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Sparks appear only while the tip is in contact and issue from the contact point; when the tip lifts they stop.",
+      "fail": "Sparks appear before the tip touches; or continue streaming after the tip has lifted; or come from a point other than the joint; or sparks flow back into the joint."
+    },
+    {
+      "id": "P2",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Sparks fly out from the joint along arcs that bend downward and go dark before or when they reach the floor.",
+      "fail": "Sparks rise steadily and collect above the joint; or hang in the air; or lie on the floor still glowing like lamps for the rest of the clip; or curve upward after leaving the joint."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "Sparks are short-lived: each fades within a short flight, and the number in the air rises with the burst and falls when it ends.",
+      "fail": "Sparks persist as permanent bright dots; or a pile of glowing sparks builds on the floor; or sparks appear in mid-air far from the joint."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The car body sits still on the line, or moves steadily with it; only the arm moves.",
+      "fail": "The body jumps or shifts at the touch; or the line surges; or the body slides away from the arm."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The arm's tip touches the surface and stays outside the metal; arm and body keep their shape and number.",
+      "fail": "The tip sinks into or passes through the car body; or a second arm appears; or the body changes shape; or a car part vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car body's colour, the arm's markings and the factory background stay the same.",
+      "fail": "The body panel changes colour; or the arm changes colour; or the background machines rearrange."
+    }
+  ]
+}

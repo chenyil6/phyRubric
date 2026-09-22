@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0041",
+  "caption": "The button on a coffee machine is pressed, and a light comes on and coffee begins to drip into the cup.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A coffee machine with a cup beneath its spout."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The button is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A light on the machine comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Coffee begins to drip into the cup."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The light is dark and the spout dry before the press."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is press, light, then dripping."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light comes on at the press and the coffee begins to flow shortly after; neither happens before the press.",
+      "fail": "The button is pressed and the light stays dark; or coffee drips before the button is touched; or the light comes on and no coffee appears to the end of the clip; or the coffee flows with the light dark to the end."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once started, the light stays on and the coffee keeps flowing while the machine runs; the cup fills and does not empty.",
+      "fail": "The light goes out with coffee still flowing; or the flow stops and restarts with the button untouched; or the cup's level falls while coffee still drips in; or coffee flows back up into the spout."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The coffee falls straight down from the spout into the cup and pools at the bottom.",
+      "fail": "The coffee arcs sideways past the cup with nothing deflecting it; or rises from the spout; or hangs in the air; or the cup's surface tilts with the cup level."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The cup and the machine stay where they are as the coffee flows.",
+      "fail": "The cup slides or spins under the spout by itself; or the machine shifts at the press; or the cup lifts to the spout."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One machine, one spout, one cup; the coffee enters the cup through its open top; the finger passes through nothing.",
+      "fail": "Coffee passes through the cup's side; or a second cup appears; or the cup vanishes or changes shape; or the finger passes into the machine."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The machine's colour, the cup's colour and the counter stay the same apart from the light.",
+      "fail": "The machine changes colour; or the cup changes colour or size; or the counter's contents rearrange."
+    }
+  ]
+}

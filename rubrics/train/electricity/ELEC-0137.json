@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0137",
+  "caption": "A lathe cuts a spinning steel bar, and glowing chips and sparks curl off the tool and drop into the tray.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lathe with a steel bar spinning in it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A cutting tool is against the bar."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Glowing chips and sparks come off the tool."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "They drop into the tray below."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The chips curl as they come off."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The cut comes first and the chips and sparks follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The chips and sparks fall downward from the cutting point into the tray, arcing as they go.",
+      "fail": "Chips or sparks rise from the tool and gather above the lathe; or hang in the air; or drift sideways without dropping; or chips climb up the bar."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Chips and sparks appear only while the tool is cutting, and the glowing chips darken as they cool in the tray; nothing goes back to glowing.",
+      "fail": "Chips come off while the tool is clear of the bar; or continue after the bar has stopped spinning; or chips in the tray brighten from dark to glowing; or chips flow back onto the bar."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The chips are material removed from the bar: they pile up in the tray and none vanish in mid-air; the bar stays one bar, thinner where cut.",
+      "fail": "Chips vanish before reaching the tray; or the pile in the tray shrinks while chips keep arriving; or the bar grows thicker as it is cut; or a second bar appears."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The chips leave the tool along the bar's direction of spin, curling away from the cutting edge.",
+      "fail": "Chips fly against the direction of spin; or spray equally in all directions; or leave from a point on the bar away from the tool."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The tool cuts into the bar's surface; the bar stays held in the chuck and the lathe keeps its shape.",
+      "fail": "The tool passes through the bar leaving it unmarked; or the bar passes through the chuck; or the tool bends like rubber; or the lathe changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lathe's colour, the bar's uncut surface and the tray stay the same.",
+      "fail": "The lathe changes colour; or the bar's uncut part changes finish; or the tray changes shape or place."
+    }
+  ],
+  "note": "Glowing chips are the expected look of hot metal; their colour and count are not judged."
+}

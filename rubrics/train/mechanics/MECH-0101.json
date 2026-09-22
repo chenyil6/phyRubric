@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0101",
+  "caption": "A fishing line goes tight as a fish takes the bait, and the rod, resting in a holder on the bank, bends toward the water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A fishing rod rests in a holder on a bank with its line in the water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The line goes tight."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The rod bends toward the water."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rod is in a holder rather than held."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The line tightens first and the bend follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The bend appears as the line tightens, curving toward where the line enters the water, and straightens if the line goes slack.",
+      "fail": "The rod bends away from the water; or it bends while the line hangs slack; or it stays straight with the line plainly taut."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The tight line runs straight from the tip to the water and the rod tip dips.",
+      "fail": "The line hangs in a loose curve while the rod is bent; or the line is taut and the rod tip does not move; or the rod bends before the line moves."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The rod stays in its holder and the holder stays put.",
+      "fail": "The rod leaps out of the holder with nothing pulling; or the holder slides; or the rod bends and unbends in a steady rhythm with no change in the line."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "A slack line droops, and the rod's bend is downward toward the water.",
+      "fail": "The line rises up from the tip; or slack line floats; or the rod bends upward."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One rod, one line and one holder keep their number.",
+      "fail": "The rod vanishes or a second appears; or the line passes through the rod; or the holder disappears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rod, the holder and the bank stay the same.",
+      "fail": "The rod changes colour; or the holder changes; or the bank rearranges."
+    }
+  ]
+}

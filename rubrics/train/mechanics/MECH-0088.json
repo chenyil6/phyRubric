@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0088",
+  "caption": "A hardback book is pushed slowly toward the edge of a table until it tips over the edge and falls to the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hardback book lies on a table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is pushed slowly toward the edge."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It tips over the edge."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It falls to the floor."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The push is slow rather than a shove."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The push comes first, then the tip, then the fall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The book stays flat and still while most of it is supported, and tips only once most of its length is past the edge.",
+      "fail": "The book falls while barely overhanging; or it hangs far out over the edge without tipping; or it lifts off the table."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It turns over the edge as it goes and lands below it.",
+      "fail": "It drifts off flat without turning; or it flies outward from the table; or it lands back on the table."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The book moves only while pushed and stays where it lands.",
+      "fail": "It slides on its own before or after the push; or it sets off again on the floor; or it moves back from the edge untouched."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The hard cover stays rigid and the pages may fan, and the floor takes the impact.",
+      "fail": "The book bends like rubber; or it bounces high; or it passes into the floor."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One book is there throughout.",
+      "fail": "The book vanishes or a second one appears; or it turns into another object; or it passes through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The book's cover, the table and the floor stay the same.",
+      "fail": "The cover changes colour or design; or the table changes between frames; or the floor rearranges."
+    }
+  ]
+}

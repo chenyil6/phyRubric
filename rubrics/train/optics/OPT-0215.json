@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0215",
+  "caption": "Sunset light through a window falls on a white cat, and its fur takes on an orange glow.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A white cat sits by a window."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Sunset light falls on it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its fur takes on an orange glow."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The glow is on the side facing the window."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The fur looks orange only where the sunset's light reaches and while it is on.",
+      "fail": "The fur is orange with the sunset off; or stays white under the orange light; or turns a different colour from the light."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens at the same instant as the sunset and is confined to where its light falls.",
+      "fail": "The fur changes before the sunset; or long after; or surfaces the light cannot reach change too."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The cat's shape and fur texture show in orange, not as a colour change of the fur itself.",
+      "fail": "The fur is orange on the side away from the window; or the cat is flat orange with no shading; or the cat changes shape."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves; only the light changes.",
+      "fail": "The fur moves; or the sunset moves by itself; or the lit area wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sunset and one fur.",
+      "fail": "A second sunset appears; or the fur vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fur's shape and the surroundings stay the same.",
+      "fail": "The fur changes shape; or the surroundings rearrange; or the sunset changes shape."
+    }
+  ],
+  "note": "The cat is self-driven; only the light on it is judged."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0217",
+  "caption": "A car wash's foaming brushes turn from white to blue when the blue soap is sprayed on, and rinse back to white under clear water.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car wash's foaming brushes are white."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Blue soap is sprayed on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They turn blue."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "They rinse back to white under clear water."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The soap comes first, then the blue, then the rinse."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The colour spreads with the soap and washes out with the rinse water running downward.",
+      "fail": "The brushes turn blue before the soap arrives; or stay blue through the rinse; or turn white before the rinse."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The brushes are the soap's blue while soaped and white when rinsed.",
+      "fail": "They turn a different colour; or stay white under blue soap; or are blue with no soap."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The rinse water runs down the brushes.",
+      "fail": "It runs up; or hangs; or floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The brushes are soft strands that hold foam and drip.",
+      "fail": "They are rigid rods; or the foam is solid; or the strands melt."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The brushes keep their number.",
+      "fail": "A brush vanishes; or appears; or the soap becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car wash and the car stay the same.",
+      "fail": "The car changes colour; or the bay changes; or the brushes change shape."
+    }
+  ]
+}

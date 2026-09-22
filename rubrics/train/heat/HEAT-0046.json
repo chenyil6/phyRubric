@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0046",
+  "caption": "A kettle on a stove is at the boil, steam pours from the spout, and the lid rattles.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A kettle sits on a stove."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Steam comes out of the spout."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The lid rattles: a small repeated movement on its seat."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The kettle is a stovetop kettle with a spout and a lid."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The burner or stove is visible under the kettle."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Steam leaves the spout and rises, spreading and thinning as it goes up.",
+      "fail": "Steam sinks toward the stove or pools on the counter; or stays as a dense cloud that does not thin; or streams straight sideways with no draught visible."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The steam keeps coming and the plume moves outward from the spout; puffs that have left keep moving away.",
+      "fail": "The plume runs back into the spout; or a puff retreats toward the kettle; or steam appears in the air far from the spout and drifts toward it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The lid's rattle goes with the boil: it lifts and drops on its seat while steam issues, and steam may puff from under it.",
+      "fail": "The lid moves with no steam anywhere; or the lid lifts and stays up; or the lid rattles while the kettle is off the stove."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The kettle itself stays put on the burner; only the lid and the steam move.",
+      "fail": "The kettle slides, rocks or turns on the burner with nothing touching it; or the spout swings."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One kettle with one lid and one spout; the lid stays attached and nothing passes through the kettle body.",
+      "fail": "A second spout or lid appears; or the lid passes through the kettle wall; or the kettle changes shape or vanishes; or steam comes through the closed lid's body rather than round its edge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The kettle's colour and the stove's knobs stay the same.",
+      "fail": "The kettle changes colour or material; or the stove's burners change position; or the wall behind changes."
+    }
+  ]
+}

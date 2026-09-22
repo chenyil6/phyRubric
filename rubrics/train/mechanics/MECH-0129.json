@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0129",
+  "caption": "A ripe tomato is sliced into rounds on a cutting board with a sharp knife.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tomato is on a cutting board."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A knife slices it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The tomato is cut into rounds."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Several slices are made rather than one."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The slices are rounds cut across the tomato."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Each stroke separates one slice where the blade passes, and the tomato gets shorter.",
+      "fail": "The tomato is cut ahead of the blade; or the blade passes and the tomato stays whole; or slices appear with no stroke."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "Juice and seeds leak onto the board, the flesh is soft, and each slice falls or is pushed aside.",
+      "fail": "The tomato is dry and rigid like wood; or the slice stays fused in place; or the tomato splashes like water."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The slices stay separate and the tomato does not regrow.",
+      "fail": "Slices rejoin; or a slice vanishes; or the tomato grows back."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Cut slices topple onto the board.",
+      "fail": "They rise; or hang; or float."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One tomato and one knife keep their number, and the blade passes through nothing but the tomato.",
+      "fail": "The knife passes through the board; or a second tomato appears; or the knife vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tomato's colour, the knife and the board stay the same.",
+      "fail": "The tomato changes colour; or the knife changes; or the board rearranges."
+    }
+  ],
+  "note": "The hand on the knife is kept as the minimal trigger; the person is not judged."
+}

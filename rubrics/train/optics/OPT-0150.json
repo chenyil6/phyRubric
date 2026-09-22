@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0150",
+  "caption": "A dimmer knob is turned slowly, and the ceiling lights fade from bright to a dim glow.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dimmer knob is turned slowly."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The ceiling lights fade from bright to a dim glow."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The brightness follows the knob smoothly."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The brightness follows the knob, down when turned down.",
+      "fail": "The lights stay bright; or brighten as the knob is turned down; or change with the knob still."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fade is smooth and does not jump or reverse on its own.",
+      "fail": "It jumps; or flickers; or brightens again with the knob steady."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing else in the room changes brightness.",
+      "fail": "A lamp elsewhere changes; or daylight changes; or the lit area moves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "The light dims without changing colour.",
+      "fail": "It turns a different colour; or changes to another kind of light; or the walls change colour."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The lights keep their number.",
+      "fail": "A light vanishes; or appears; or the knob duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The room stays the same.",
+      "fail": "The furniture rearranges; or the ceiling changes; or the knob changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged. Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

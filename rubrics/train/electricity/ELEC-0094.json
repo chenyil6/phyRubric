@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0094",
+  "caption": "A dog lying in a hallway jumps up as a lightning flash lights the windows and the house shakes with thunder.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog lies in a hallway."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lightning flash lights the windows."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dog jumps up."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "A window or windows are in view in the hallway."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flash comes first and the dog jumps after it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is brief: the windows and the hallway brighten and return to their earlier light; flashes may repeat but each ends.",
+      "fail": "The hallway stays bright to the end of the clip after the flash; or brightens steadily without ending; or the flash fades in slowly; or the windows stay lit while the hallway is dark again."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light enters through the windows: the windows are the brightest part, the walls and floor near them brighten most, and shadows of the frames fall away from the windows during the flash.",
+      "fail": "The hallway brightens evenly while the windows stay as they were; or the light comes from the far end of the hallway with the windows dark; or the window frames' shadows point toward the windows."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The flash moves nothing but the dog: furniture, pictures, doors and rugs stay put.",
+      "fail": "Pictures, furniture or doors shift at the flash; or the rug slides; or the dog is lifted off the floor without its legs pushing."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The dog rises by pushing off with its legs and lands back on the floor, its body moving as one animal.",
+      "fail": "The dog rises straight up and hangs in the air; or slides across the floor without its legs moving; or lands and slides on with nothing pushing it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One dog with the same body, legs and tail throughout; the hallway's walls, doors and windows keep their shape and nothing passes through anything.",
+      "fail": "The dog gains or loses a leg or its head changes shape; or a second dog appears; or the dog passes through a wall or door; or a window changes shape or moves along the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dog's coat colour, the wall colours and the pictures stay the same apart from brightness.",
+      "fail": "The dog's coat changes colour or pattern; or the walls change colour; or pictures on the wall change."
+    }
+  ],
+  "note": "The dog is kept because its reaction is the caption's event; a dog starting to move is not causeless motion. Thunder is sound and the house 'shaking' is not judged."
+}

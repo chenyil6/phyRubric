@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0292",
+  "caption": "A hot-air popcorn machine is switched on, and popped kernels burst out of the chute into a bowl.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hot-air popcorn machine stands with its chute over a bowl."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The machine is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Popped kernels come out of the chute."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The popped pieces fall into the bowl."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flow stops when the machine is switched off."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Nothing comes out before the machine is switched on."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The pieces only come out while the machine runs and the bowl only fills; the flow stops when it is switched off.",
+      "fail": "Pieces come out before the machine is switched on; or the bowl empties while the machine still runs; or the flow stops and starts again with the switch untouched; or pieces travel back up the chute into the machine."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Each piece that leaves the chute is a large irregular white puff rather than a small hard grain, and unpopped kernels stay small and dark.",
+      "fail": "Small hard kernels are blown out as if popped; or a popped piece turns back into a smooth yellow kernel; or a piece swells gradually like a balloon rather than bursting; or the pieces come out as one continuous mass."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The popcorn in the bowl came out of the chute and none appears from nowhere.",
+      "fail": "Pieces appear in the bowl with none leaving the chute; or the pile in the bowl shrinks while pieces keep arriving; or a piece vanishes in mid-air; or a second chute appears."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pieces leave the chute, arc downward and land in the bowl or around it; they do not rise.",
+      "fail": "The pieces rise from the chute and stay aloft; or hang in the air between chute and bowl; or fall upward out of the bowl; or the pile gathers on the machine's top."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "One machine with one chute and one bowl; the pieces pass through the chute's mouth and nothing passes through the machine's shell or the bowl.",
+      "fail": "A piece passes out through the machine's shell; or a piece passes through the bowl's wall; or the chute passes into the bowl; or the machine changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The machine's body, the bowl and the counter stay the same.",
+      "fail": "The machine changes colour; or the bowl changes pattern; or items on the counter rearrange."
+    }
+  ]
+}

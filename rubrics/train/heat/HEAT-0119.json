@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0119",
+  "caption": "A match is struck against the side of its box, and it flares into a flame that settles to a steady burn.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A match is struck against the side of its box."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A flame appears at the match head."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flame flares up."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The flame settles to a steady burn."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The matchstick blackens behind the flame."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is strike, flare, steady burn."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flame appears at the head at the moment it scrapes the box and not before.",
+      "fail": "The flame appears before the head touches the box; or the head scrapes across the box and no flame appears at all; or the flame appears at the stick's far end; or the flame appears with the match held clear of the box."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flame flares and then settles to a steady burn, and the blackening behind it only spreads.",
+      "fail": "The flame settles and then flares up again with nothing added; or a blackened part of the stick turns back to pale wood; or the flame goes out and relights by itself; or the blackening retreats along the stick."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The flame points upward whatever way the match is held.",
+      "fail": "The flame points downward; or leans with the match rather than standing upright; or hangs below the head; or points along the stick toward the fingers whatever way is up."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The matchstick stays a stiff stick that blackens and curls where it has burnt, and the box stays a rigid box.",
+      "fail": "The stick melts and drips; or stays pale and straight where the flame has passed; or the box catches and vanishes at once; or the stick stretches as it burns."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One match and one box; the match shortens only by burning and the box keeps its shape.",
+      "fail": "A second flame appears on the stick; or the match vanishes while still long; or the flame detaches from the match and floats; or the box changes into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The box's label, the hand and the background stay the same.",
+      "fail": "The box's label changes; or the background changes between frames; or the unburnt part of the stick changes colour."
+    }
+  ],
+  "note": "The hand is kept because striking is the caption's action; it is otherwise not judged."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0016",
+  "caption": "A wet umbrella is flicked sharply and stopped short, and the water drops fly off the tip and keep going in the direction of the flick.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wet umbrella is flicked sharply."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flick is stopped short."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Water drops fly off the tip."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The drops carry on the way the flick was heading."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The umbrella is visibly wet before the flick."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The flick and its stop come first, then the drops leave the tip."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The drops leave at the moment the umbrella is stopped, neither before the flick begins nor long after it ends.",
+      "fail": "Drops fly off while the umbrella is being held still; or they leave before the flick starts; or they keep streaming off long after the umbrella has stopped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Each drop leaves along the direction the tip was travelling and holds that direction as it flies.",
+      "fail": "The drops follow the umbrella back as it is stopped; or they spray out equally in every direction from the tip; or they hang beside the umbrella without moving away."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Once free, the drops curve downward and fall toward the ground.",
+      "fail": "A drop climbs steadily after leaving the tip; or a drop hangs still in the air; or the drops hold a flat line all the way to the edge of the frame."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water leaves as rounded drops or a fine spray, shed from the surface of the fabric.",
+      "fail": "The water leaves as a rigid shard that keeps its shape; or drops stretch into long threads that stay joined to the tip; or the fabric looks dry while water is plainly flying off it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The umbrella keeps its shape and water leaves it only by flying off it.",
+      "fail": "The umbrella vanishes or turns into another object; or drops appear in the air away from the umbrella; or a rib passes through the fabric."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The umbrella's colour and panels and the background stay the same.",
+      "fail": "The umbrella changes colour during the flick; or its panels change pattern; or the background rearranges between frames."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0071",
+  "caption": "A paint shaker at a hardware store is switched on, and the paint can clamped in it blurs with the shaking.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A paint shaker machine with a paint can clamped in it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The machine is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The can blurs with the shaking."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The can is sharp before the machine starts."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The switch-on comes first and the blur follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The can and its clamp shake together while the machine's body stays put.",
+      "fail": "The can shakes while the clamp holding it stays sharp and still; or the can blurs before the switch is thrown; or the machine glides across the floor; or the can shakes loose and floats."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Once on, the can blurs; once off, it is sharp again.",
+      "fail": "The machine is switched on and the can stays sharp and still for the rest of the clip; or the machine is switched off and the blur continues unchanged; or the blur comes and goes while nothing at the machine changes."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The can and the clamp are rigid; the blur is motion, not a change of shape.",
+      "fail": "The can bends or crumples; or stretches taller; or the clamp arms flex like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The can is held by the clamp; if the clamp opens the can drops.",
+      "fail": "The clamp opens and the can hangs in place; or the can rises out of the clamp; or the machine lifts off the floor."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One can, one machine; the can does not pass through the clamp.",
+      "fail": "A second can appears; or the can vanishes; or passes through the clamp; or the machine changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The can's label, the machine's colour and the shelves behind stay the same.",
+      "fail": "The can's label changes; or the machine changes colour; or the shelves behind change."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0239",
+  "caption": "A car drives along a road, passes behind a parked truck, and reappears on the far side of it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car drives along a road."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It passes behind a parked truck."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It reappears on the far side of the truck."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The disappearance comes first and the reappearance follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "It is the same car, and it does not show through the truck.",
+      "fail": "A different car emerges; or two cars; or the car appears elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It is hidden for a time consistent with its speed and the truck's length and emerges at the same speed and heading.",
+      "fail": "It emerges instantly; or after far too long; or emerges going back."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The car is not visible through the truck.",
+      "fail": "It shows through; or passes through the truck; or the truck passes through the car."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The parked truck stays still.",
+      "fail": "The truck moves; or vanishes; or the road changes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One car and one truck keep their shape.",
+      "fail": "The car turns into another vehicle; or the truck changes shape; or the car merges with the truck."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and the street stay the same.",
+      "fail": "The car changes colour; or the truck changes colour; or the street rearranges."
+    }
+  ]
+}

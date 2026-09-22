@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0158",
+  "caption": "Magnetic tiles are stacked one onto another, and each tile clicks onto the last and the tower stands.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Magnetic tiles."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The tiles are stacked one onto another."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Each tile clicks onto the last."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The stacked tower stands."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tiles are flat pieces stacked face to face or edge to edge."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Each tile is placed after the one before it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "As each tile nears the stack it is drawn over the last small gap into place and stays there; the stack holds together as it is built and if lifted.",
+      "fail": "A tile stops a gap short of the stack and rests there; or slides off after touching; or the stack falls apart when a tile is added; or the stack is lifted and the lower tiles stay behind."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The tower stands on the table under its own weight; a tile that is knocked loose falls downward.",
+      "fail": "The tower floats above the table; or a tile hovers beside the stack without touching; or a loose tile rises; or the tower leans far past its base and stands."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Tiles move only in the hand and over the last small gap; once placed they stay put and the tower does not shift by itself.",
+      "fail": "A tile jumps to the stack from far away; or tiles rearrange themselves after placing; or the tower slides across the table; or a placed tile spins in place."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The tiles are rigid flat pieces that keep their shape; they meet face to face without deforming.",
+      "fail": "A tile bends or flexes; or tiles squash together; or a tile stretches; or the tiles flow into one another."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The tiles in the tower are the tiles that were placed, one at a time; none appear from nowhere, vanish or merge; the tower does not pass through the table.",
+      "fail": "Tiles appear in the tower that were not placed; or a tile vanishes; or two tiles merge into one thick piece; or the tower sinks into the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tiles' colours and shapes and the table stay the same.",
+      "fail": "A tile changes colour once placed; or a tile changes shape; or the table changes."
+    }
+  ],
+  "note": "The click is sound and is not judged."
+}

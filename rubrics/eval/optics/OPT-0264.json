@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0264",
+  "caption": "A phone lying on a coffee table lights up, and its glowing reflection appears in the dark television screen facing it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A phone lies on a coffee table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It lights up."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its glowing reflection appears in the dark television screen facing it."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection is dimmer than the phone."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The phone lights first and the reflection appears with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection appears at the instant the phone lights and would disappear when it goes dark.",
+      "fail": "It appears before the phone lights; or stays after it goes dark; or the phone lights and no reflection appears."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Nothing appears in the screen before the phone lights, and there is one reflection.",
+      "fail": "A glow is in the screen before; or two reflections; or the reflection comes out of the screen."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The reflection is a mirror image of the phone, dimmer.",
+      "fail": "It is brighter than the phone; or a different shape; or not mirrored."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The phone and the screen stay put.",
+      "fail": "The phone slides; or the screen turns; or the reflection drifts."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One phone and one television.",
+      "fail": "A second phone appears; or the television vanishes; or the phone passes into the screen."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The table and the room stay the same.",
+      "fail": "The table changes; or the room rearranges; or the television changes."
+    }
+  ]
+}

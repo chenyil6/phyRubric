@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0268",
+  "caption": "The safety key is pulled from a running treadmill, and the belt slows and stops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A treadmill with its belt running."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The safety key is pulled out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The belt slows and stops."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The key is on a cord or clip that comes away from the console."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is running, key out, slowing, stopped."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The belt begins to slow when the key comes out, not before, and comes to rest; the console's display changes or goes dark with it.",
+      "fail": "The key is out and the belt runs on to the end of the clip; or the belt slows before the key is touched; or the belt slows with the key still in place; or the display shows the belt running after it has stopped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The slowing runs one way; once stopped the belt does not move again while the key is out.",
+      "fail": "The belt starts again with the key out; or speeds up after the pull; or reverses direction; or jerks in place after stopping."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The belt's surface moves as one sheet over the deck in one direction until it stops.",
+      "fail": "The belt surface moves in patches at different speeds; or slides sideways off the deck; or the rollers turn while the belt stays still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The key's cord goes slack once the key is out and hangs from the key or the clip.",
+      "fail": "The cord stretches like elastic; or stands rigid in the air; or the key floats; or the cord pulls the console over."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One treadmill, one belt, one key; the key leaves its socket whole; nothing passes through the console.",
+      "fail": "The key vanishes or a second key appears; or the key passes through the console; or the belt splits; or the treadmill changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The treadmill's colour, the console layout and the room stay the same apart from the display.",
+      "fail": "The treadmill changes colour; or the console's buttons rearrange; or the room's contents change."
+    }
+  ],
+  "note": "Who pulls the key is not judged. Whether anyone is on the belt is not required."
+}

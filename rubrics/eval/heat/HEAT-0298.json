@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0298",
+  "caption": "A pan straight from the stove is set down on a thin plastic cutting board, and the board warps and its edges lift.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pan is set down on a thin plastic cutting board."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The board warps under the pan."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The board's edges lift."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Some of the warp stays after the pan is removed."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The board is flat at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The setting down comes first and the warping follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The board is a thin plastic sheet that softens where the pan sits, bends around it and keeps its plastic look.",
+      "fail": "The board shatters into pieces; or the board runs into a puddle; or the board stays perfectly flat while its edges are plainly lifted; or the board stretches like elastic."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The warp only deepens while the pan sits there and some of it remains after the pan is lifted.",
+      "fail": "The board springs perfectly flat again the moment the pan is lifted; or the warp deepens and eases in turn; or the board warps before the pan is set down; or the board's edges lift and settle repeatedly with the pan still on it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The board sags downward where the pan's weight presses and its free edges lift upward off the counter.",
+      "fail": "The board bulges upward under the pan; or the board's edges curl downward through the counter; or the board lifts off the counter as a whole and hangs; or the pan rises off the board."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The warp forms where the hot pan rests and the board away from it stays flat.",
+      "fail": "The board warps at a corner the pan never touched; or the pan sits on the board and it stays dead flat to the end of the clip; or the whole board warps evenly while the pan covers one part; or the counter warps rather than the board."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pan on one board; the board stays one sheet and the pan keeps its shape.",
+      "fail": "The board splits into separate pieces; or a second board appears; or the pan sinks through the board; or the pan vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The board's colour, the pan's finish and the counter stay the same.",
+      "fail": "The board changes colour; or the pan changes colour; or items on the counter rearrange."
+    }
+  ],
+  "note": "Smoke or smell from the hot plastic is chemistry and is not judged."
+}

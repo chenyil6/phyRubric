@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0187",
+  "caption": "A spoonful of turmeric is stirred into a pot of white rice, and the rice turns yellow where the spice is mixed in.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot of white rice is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A spoonful of turmeric is stirred into it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The rice turns yellow where the spice is mixed in."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Streaks even out with stirring."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spoon goes in first and the colour follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The yellow spreads from the spoon through the rice as it is stirred, streaks evening out and never gathers back; coloured areas stay coloured.",
+      "fail": "The rice returns to its original colour where it was yellow; or the yellow gathers back into the spoon; or the yellow appears before the spoon arrives."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The result is yellow, and un-reached rice keeps its original colour.",
+      "fail": "The rice turns a colour other than yellow; or the un-reached rice changes; or the yellow is darker than the spoon itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The rice behaves as it should: streaks and swirls where stirred or spread, settling where it flows.",
+      "fail": "The rice is rigid and unmarked; or it flows like water when it is a paste; or it bounces like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The rice moves only where stirred or where the yellow flows.",
+      "fail": "The rice swirls by itself; or the yellow spreads faster than stirring or flow carries it; or the container moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The amount of rice stays the same and the container keeps its shape.",
+      "fail": "The container fills or empties on its own; or a second container appears; or the spoon passes through the container."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The container and the background stay the same.",
+      "fail": "The container changes colour; or the background rearranges; or the tool changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

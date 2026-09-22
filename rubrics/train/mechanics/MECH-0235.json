@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0235",
+  "caption": "A dog walks into its doghouse and a moment later pokes its head back out of the doorway.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dog walks into its doghouse."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A moment later it pokes its head out of the doorway."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The dog is out of sight between going in and looking out."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The entry comes first and the head comes out after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "It is the same dog, and it is out of sight while inside.",
+      "fail": "A different dog looks out; or two dogs; or the dog appears outside while it is inside."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The head comes out through the doorway only, not through the walls or the roof.",
+      "fail": "The head comes through a wall; or the body through the roof; or the house passes through the dog."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The dog keeps its shape.",
+      "fail": "The head is detached; or its size changes; or it turns into another animal."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The doghouse stays put.",
+      "fail": "It slides; or lifts; or shakes with no dog inside."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One dog and one doghouse keep their number.",
+      "fail": "The dog splits; or the doghouse duplicates; or the dog merges with the house."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The dog's coat and the doghouse stay the same.",
+      "fail": "The coat changes pattern; or the doghouse changes colour; or the yard rearranges."
+    }
+  ],
+  "note": "The dog is self-driven: when it looks out is its own. Only permanence and the doorway are judged."
+}

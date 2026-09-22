@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0097",
+  "caption": "A kite tied by its string to a fence post is lifted by a steady wind, and the string pulls taut from the post up to the kite.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A kite is tied by a string to a fence post."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The kite is lifted into the air by the wind."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The string is taut from the post up to the kite."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wind is steady and the kite holds rather than diving."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lift comes first and the taut string follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The string runs in a shallow taut curve from post to kite and does not hang slack while the kite flies.",
+      "fail": "The string droops in loose loops while the kite is up; or it stretches; or it runs straight down from the kite to the ground with the kite still flying."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The kite is above the post with the string climbing from post to kite, and a slack string falls.",
+      "fail": "The kite is below the post with the string taut; or the string curves upward away from the kite; or the kite rises straight up and stays overhead with no lean downwind."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The string tugs at the post, and the post or the knot shows the pull.",
+      "fail": "The kite flies with the string not attached to anything; or the string is attached but the kite drifts away with it trailing; or the post pulls out of the ground."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The kite bobs and shifts with the wind but stays at the string's end and does not dart against the wind.",
+      "fail": "The kite flies upwind of the post; or it swoops in circles unrelated to the string; or it hovers with the string slack."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One kite, one string and one post keep their number.",
+      "fail": "The kite vanishes or a second appears; or the string passes through the post; or the kite turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The kite's colours, the string and the fence stay the same.",
+      "fail": "The kite changes colour or shape; or the string changes; or the fence rearranges."
+    }
+  ]
+}

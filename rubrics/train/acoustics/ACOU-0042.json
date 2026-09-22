@@ -1,0 +1,77 @@
+{
+  "id": "ACOU-0042",
+  "caption": "A powerful motorcycle revs its engine at a kerb, and the leaves of a potted plant on the pavement beside it quiver.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A motorcycle stands at a kerb."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A potted plant stands on the pavement beside it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The plant's leaves quiver."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The motorcycle is revved: a hand on the throttle, an exhaust puff or the bike's own shudder marks it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The motorcycle stays in place; it does not ride off."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The leaves tremble on their stems while the pot and the base of the stem stay fixed.",
+      "fail": "The pot slides along the pavement; or the whole plant bends over and stays bent; or leaves float away from the plant; or the leaves keep their exact pose frozen while the pot itself trembles."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The leaves quiver while the bike shudders or puffs exhaust and settle when it calms.",
+      "fail": "The bike shudders for a spell and the leaves stay frozen; or the leaves quiver hard while the bike sits with no shudder and no exhaust puff; or the leaves start before the bike shows any sign of running.",
+      "precondition": "The motorcycle's shudder or its exhaust puffs are visible."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Leaves hang from their stems and the pot rests on the ground; anything that comes free falls.",
+      "fail": "A leaf that comes free rises; or the pot lifts; or the plant hangs upward."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The leaves flex as thin leaves and the stems bend; the pot is rigid.",
+      "fail": "The pot flexes like rubber; or the leaves swing as stiff boards; or the stems stretch."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bike, one plant; leaves do not multiply.",
+      "fail": "A second plant appears; or the plant vanishes; or the bike passes through the kerb; or leaves multiply in one frame."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bike's colour, the pot's pattern and the leaves' colour stay the same.",
+      "fail": "The bike changes colour; or the pot changes pattern; or the leaves change colour."
+    }
+  ],
+  "note": "A rider on the bike is a trigger and is not judged."
+}

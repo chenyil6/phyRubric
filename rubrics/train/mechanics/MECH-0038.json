@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0038",
+  "caption": "A car in a parking lot rolls slowly forward, bumps into the back of a parked car, and stops.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car rolls slowly forward in a parking lot."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It bumps into the back of a parked car."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It stops at the contact."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The other car is parked and still before the bump."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The roll comes first and the bump and stop follow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The rolling car stops at the bumper it meets, and the parked car rocks or is nudged forward at that same moment.",
+      "fail": "The rolling car stops short of the parked car and the parked car rocks anyway; or the parked car moves before the contact; or the rolling car holds its speed through the contact."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "At this rolling pace the bumpers meet with little damage and both bodies keep their shape.",
+      "fail": "Either car crumples deeply at the contact; or a bumper stretches like rubber; or a car body folds up as though struck at speed."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The two cars stay outside one another and above the tarmac.",
+      "fail": "The rolling car passes into the parked car's body; or the bumpers overlap and the panels run into each other; or a car sinks into the tarmac at the contact."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The parked car stays still until it is struck and settles again afterwards.",
+      "fail": "The parked car rolls away before anything touches it; or it keeps rolling away after the light nudge without slowing; or it moves backward into the rolling car."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two cars keep their number and shape through the bump.",
+      "fail": "A car vanishes at the contact or a third appears; or a car turns into a different model; or a wheel comes away and hangs in mid-air."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cars' colours, the lot markings and the background stay the same.",
+      "fail": "A car changes colour at the contact; or the bay lines shift between frames; or the cars parked further off rearrange."
+    }
+  ]
+}

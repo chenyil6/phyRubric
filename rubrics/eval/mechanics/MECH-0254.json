@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0254",
+  "caption": "The cord holding a hanging flowerpot on a porch snaps, and the pot falls and breaks on the boards below.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flowerpot hangs from a cord on a porch."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cord snaps."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The pot falls."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It breaks on the boards below."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The snap comes first, then the fall, then the break."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The pot drops straight down the moment the cord parts, speeding up.",
+      "fail": "It hovers; or falls sideways; or slows as it falls."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "It breaks on impact with soil spilling, not before, and does not bounce whole.",
+      "fail": "It breaks in mid-air; or bounces whole; or squashes like dough."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The cord is what held it, and the cord end swings free afterward.",
+      "fail": "The pot falls with the cord intact; or the cord snaps and the pot hangs; or the cord vanishes."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "One pot, its soil and its pieces.",
+      "fail": "The pot vanishes; or two pots fall; or soil appears from nowhere."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The pot does not pass through the boards.",
+      "fail": "It passes through the boards; or the boards pass through it; or it merges with the porch."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot's colour and the porch stay the same.",
+      "fail": "The pot changes colour; or the plant changes; or the porch rearranges."
+    }
+  ]
+}

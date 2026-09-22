@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0260",
+  "caption": "A chocolate bunny stands on a plate under a bright heat lamp, and its ears soften, droop and bend over.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A chocolate bunny stands on a plate under a heat lamp."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The parts nearest the lamp go glossy and soften."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ears droop."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The ears bend over."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bunny is upright with straight ears at the start."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The softening comes first and the drooping follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The softening and drooping only advance while the lamp is on; the bunny does not stand back up or firm up again.",
+      "fail": "A drooped ear stands back up while the lamp is on; or the ears droop and straighten in turn; or the chocolate sets firm and matt again under the lamp; or the bunny regains a shape it had lost."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The bunny stays one chocolate figure whose ears bend and sag while the rest of it keeps its shape longer.",
+      "fail": "The bunny keeps sharp straight ears while glossy and plainly bent over; or the whole bunny collapses into a puddle in a single frame; or the bunny turns into another figure; or an ear detaches and stays a whole ear."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The ears bend downward under their own weight and any drip runs down the bunny to the plate.",
+      "fail": "An ear bends upward toward the lamp; or a drip climbs the bunny; or melted chocolate gathers on the bunny's head and stays; or an ear lifts away and hangs in the air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The change is strongest on the parts nearest the lamp and least on the side away from it.",
+      "fail": "The side away from the lamp softens while the near side stays firm; or the bunny softens evenly all over while the lamp is plainly on one side; or the ears droop while their surface stays matt and dry."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bunny on one plate; the chocolate goes only from the bunny onto the plate.",
+      "fail": "The bunny grows; or a second bunny appears; or the bunny vanishes while still whole; or chocolate appears on the plate with no run reaching it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bunny's colour, the plate and the surroundings stay the same.",
+      "fail": "The bunny changes colour; or the plate changes shape; or items around the plate rearrange."
+    }
+  ]
+}

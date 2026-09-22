@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0312",
+  "caption": "A backpack is hooked to a bungee cord hanging from a beam and let go; the cord stretches, the pack bounces back up, and it bobs up and down before settling.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A backpack is hooked to a bungee cord hanging from a beam."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is let go."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cord stretches."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The pack bounces back up."
+    },
+    {
+      "id": "S5",
+      "weight": "core",
+      "check": "It bobs up and down before settling."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The release comes first, then the stretch, then the bounces."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The cord lengthens as the pack drops and shortens as it rises, and it does not go slack while the pack hangs.",
+      "fail": "The cord is rigid; or slack while the pack hangs; or it snaps."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Each bounce is smaller than the last and the pack never rises above the point where it was released.",
+      "fail": "It rises above the release point; or the bounces grow; or it swings far sideways."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing touches it after the release.",
+      "fail": "It is pushed; or restarts after settling; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pack hangs below the beam.",
+      "fail": "It rises above the beam; or floats; or hangs sideways."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pack and one cord keep their number.",
+      "fail": "The pack duplicates; or the cord vanishes; or the pack turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pack and the beam stay the same.",
+      "fail": "The pack changes colour; or the beam changes; or the room rearranges."
+    }
+  ]
+}

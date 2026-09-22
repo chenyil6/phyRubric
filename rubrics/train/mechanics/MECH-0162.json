@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0162",
+  "caption": "A bag of rice slips off a kitchen counter, splits open on the floor, and rice grains scatter across the floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bag of rice slips off a kitchen counter."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It splits open on the floor."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Rice grains scatter across the floor."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The fall comes first, then the split, then the scatter."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The grains spray outward from the split as the bag hits and spread into a wide scatter.",
+      "fail": "They stay in a bag shape; or bounce back into the bag; or flow like liquid."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The rice on the floor is the rice from the bag, and the bag stays split.",
+      "fail": "The bag reseals; or rice appears from nowhere; or the bag stays full while rice covers the floor."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bag falls and the grains fall and settle.",
+      "fail": "Grains rise; or hang; or the bag floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Grains skitter along the floor away from the impact and stop.",
+      "fail": "They gather themselves into a pile; or move as one block; or set off again after stopping."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One bag keeps its number, and it does not pass through the floor.",
+      "fail": "The bag duplicates; or it passes through the floor; or it turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bag's printing and the kitchen floor stay the same.",
+      "fail": "The printing changes; or the floor pattern shifts; or the kitchen rearranges."
+    }
+  ]
+}

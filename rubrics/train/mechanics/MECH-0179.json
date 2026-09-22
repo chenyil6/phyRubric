@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0179",
+  "caption": "A desk fan is switched on next to a loose stack of papers, and the top sheets lift and scatter across the desk and floor.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A desk fan stands next to a loose stack of papers."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The fan is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The top sheets lift."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Sheets scatter across the desk and floor."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The stack is loose."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The switch comes first, then the lift, then the scatter."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Sheets move only after the fan starts.",
+      "fail": "Sheets fly before the fan is on; or the fan runs and nothing moves; or sheets keep flying after the fan is off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Sheets fly away from the fan.",
+      "fail": "They fly toward the fan; or sideways across the airflow; or straight up and hover."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The top sheets go first and the bottom sheets stay longer.",
+      "fail": "Bottom sheets fly first; or the whole stack lifts as one; or sheets restack themselves."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Sheets fall to the desk or floor and settle.",
+      "fail": "They hang; or rise to the ceiling; or float."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The sheets keep their number and the fan stays one fan.",
+      "fail": "Sheets multiply; or vanish; or the fan duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The fan, the desk and the room stay the same.",
+      "fail": "The fan changes colour; or the desk rearranges; or the papers change printing."
+    }
+  ]
+}

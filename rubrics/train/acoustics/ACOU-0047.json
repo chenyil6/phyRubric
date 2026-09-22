@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0047",
+  "caption": "A phone on vibrate buzzes on a glass table, and a spoon lying next to it rattles against the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A phone and a spoon lie side by side on a glass table."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The phone buzzes: it shivers in place."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The spoon rattles against the glass: it trembles or hops."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The spoon lies close to the phone."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spoon moves while the phone buzzes, not before."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The spoon moves only while the phone shivers and lies still between buzzes.",
+      "fail": "The spoon rattles while the phone is plainly still; or goes on rattling after the phone has stopped; or slides away in one smooth glide with no tremble."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "While the phone shivers, the spoon beside it trembles too, and the phone itself creeps or turns a little rather than staying pinned.",
+      "fail": "The phone shivers for a spell and the spoon lies dead still; or the phone's shiver stops and starts while the spoon's rattle runs on unchanged; or the spoon's rattle is strongest when the phone's shiver is weakest."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The spoon returns to the glass after each hop and stays on the table.",
+      "fail": "The spoon hovers; or rises; or the phone lifts off the glass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The glass table is rigid and the spoon is rigid.",
+      "fail": "The glass ripples like water; or the spoon bends; or the phone flexes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One phone, one spoon; nothing passes through the glass.",
+      "fail": "A second spoon appears; or the phone vanishes; or the spoon sinks into the glass; or the phone and spoon merge."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The phone's case, the spoon's shape and the table edge stay the same.",
+      "fail": "The phone changes colour; or the spoon changes shape; or the table's edge changes."
+    }
+  ]
+}

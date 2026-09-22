@@ -1,0 +1,82 @@
+{
+  "id": "ACOU-0016",
+  "caption": "A stretched washing line is plucked, and the line blurs along its length and slowly sharpens.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A washing line stretched between two supports."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The line is plucked."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The line blurs along its length."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The blur sharpens back to a line."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The line is taut before the pluck, not sagging loose."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is pluck, blur, sharpening."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The line is a sharp, still line until the hand pulls it; the blur begins at the pluck and only then.",
+      "fail": "The line is already blurred before the hand reaches it; or blurs while the hand is well away; or the hand pulls and releases and the line stays sharp; or the line sharpens and blurs again with nothing touching it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The blur is widest right after the release and only narrows until the line is sharp.",
+      "fail": "The blur widens again after it has begun to narrow; or holds the same width for the whole clip; or the line snaps from blur to sharp in one instant with no narrowing."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The line vibrates between its two fixed ends: the blur is a band between the supports and both ends stay attached.",
+      "fail": "The line comes loose from a support; or the blur is at the supports and absent in the middle; or the line stretches and hangs slack afterwards; or a support bends inward with the pluck."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Clothes and pegs on the line sway a little as the line vibrates, hanging down from it, and settle as the line stills.",
+      "fail": "The clothes stay rigidly still while the line beside them blurs; or swing up above the line; or a peg slides along the line by itself; or the clothes swing in growing arcs.",
+      "precondition": "Clothes or pegs hang on the line."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One line between the same supports; the line passes through nothing and nothing on it appears or vanishes.",
+      "fail": "The line splits into two; or passes through the hand or a peg; or a support vanishes; or clothes appear on or vanish from the line."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The line's colour, the supports and the garden or yard behind stay the same.",
+      "fail": "The line changes colour; or a support changes shape or colour; or the ground or sky behind changes."
+    }
+  ],
+  "note": "The caption does not say the line carries washing; P4 is judged only when clothes or pegs are on it. 'Slowly' is not judged as a rate."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0308",
+  "caption": "A pumpkin is launched from a catapult on a field, arcs high over the grass, and smashes on the ground far away.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pumpkin is launched from a catapult."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It arcs high over the grass."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It smashes on the ground far away."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The launch comes first, then the arc, then the smash."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It rises, slows near the top of its arc, and falls faster toward the ground.",
+      "fail": "It flies flat; or hovers; or changes direction in the air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "It breaks apart only when it lands, not in the air, and does not bounce whole.",
+      "fail": "It breaks in the air; or bounces whole; or squashes and stays."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The pieces fall and scatter low.",
+      "fail": "They rise; or hang; or float."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The catapult arm swings and then stops.",
+      "fail": "The pumpkin leaves before the arm moves; or the arm passes through the pumpkin; or the arm keeps swinging round."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pumpkin becomes its pieces.",
+      "fail": "It duplicates in flight; or vanishes; or is whole again."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The catapult and the field stay the same.",
+      "fail": "The catapult changes; or the field rearranges; or the pumpkin changes colour in flight."
+    }
+  ]
+}

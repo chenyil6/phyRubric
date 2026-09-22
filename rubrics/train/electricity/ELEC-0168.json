@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0168",
+  "caption": "The two ends of a bracelet with a magnetic clasp are brought close on a table, and they jump together and hold.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bracelet lies on a table with its two ends apart."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The two ends are brought close together."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ends jump together and join."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The joined ends hold together."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bracelet has a clasp at its ends: it is the end pieces that meet."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is apart, brought close, jump together, hold."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The ends lie still until they are brought close; the jump happens only when the two clasp pieces are next to each other.",
+      "fail": "The ends creep toward each other before either is touched or moved; or the bracelet moves along the table with no hand on it; or the joined ends spring apart with nothing pulling on them."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Over the last small gap the clasp pieces snap into contact and stay pressed together; if the bracelet is lifted it hangs as a closed loop.",
+      "fail": "The ends stop with a gap between them and stay that way; or touch and then slide apart on the table; or the clasp opens as the bracelet is lifted with nothing pulling on it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The jump is along the line joining the two clasp pieces, toward each other, and they meet face to face.",
+      "fail": "One end jumps away from the other; or an end darts sideways past its partner; or the ends slide toward and away from each other several times before joining."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The band bends as a chain or strap and lies on the table; the clasp pieces stay hard and keep their shape as they meet.",
+      "fail": "The band stands rigid off the table like a bar; or stretches like elastic as an end is drawn along; or a clasp piece flattens as it meets its partner."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bracelet with two ends; the ends join by touching and remain two pieces; the hand passes through nothing.",
+      "fail": "The two ends merge into a single piece with no seam; or the bracelet splits into more pieces; or an end vanishes; or the fingers pass through the bracelet."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bracelet's colour, its links and clasp shape and the table surface stay the same.",
+      "fail": "The bracelet changes colour; or the links change pattern; or the table surface changes."
+    }
+  ]
+}

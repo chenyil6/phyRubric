@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0066",
+  "caption": "A flat stone is thrown sideways low over a calm lake, and it skips across the surface several times before sinking.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A flat stone is thrown low over a lake."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It skips across the surface."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It sinks."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "It skips several times rather than once."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lake is calm before the stone arrives."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The skipping comes first and the sinking follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Each hop is shorter and lower than the one before, all along one line.",
+      "fail": "A hop is higher or longer than the one before it; or the stone turns sharply between hops; or it comes back toward the thrower."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Between hops the stone comes down to the water, and at the end it goes under and stays under.",
+      "fail": "The stone floats on the surface; or it rises after a hop and keeps rising; or it comes back up after sinking."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Each touch leaves a splash and a ring of ripples spreading outward.",
+      "fail": "The stone touches the water and leaves no mark; or ripples appear where the stone never touched; or the ripples run inward."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The splashes fall back and settle, and the stone stays a rigid flat stone.",
+      "fail": "A splash hangs in the air; or the water surface stays rigid like glass under the stone; or the stone bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One stone is thrown and nothing else appears on the water.",
+      "fail": "The stone vanishes in mid-air or a second one appears; or it turns into another object; or it passes through the water without a splash and reappears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stone, the lake's colour and the far shore stay the same.",
+      "fail": "The stone changes colour or size in flight; or the lake changes colour between frames; or the far shore rearranges."
+    }
+  ]
+}

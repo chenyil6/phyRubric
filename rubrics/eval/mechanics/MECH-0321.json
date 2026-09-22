@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0321",
+  "caption": "A car speeds past a pile of dry leaves at the roadside, and the leaves are whirled up in its wake and settle again behind it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pile of dry leaves lies at a roadside."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A car speeds past."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The leaves are whirled up in its wake."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "They settle again behind it."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The car passes first, then the leaves lift, then they settle."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The leaves lift only as the car passes.",
+      "fail": "They lift before the car arrives; or with no car; or keep swirling long after it has gone."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "They drift back down after the car has passed.",
+      "fail": "They rise indefinitely; or hang; or float away."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "They swirl in the direction the car travelled.",
+      "fail": "They fly against it; or only straight up; or crosswise."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "They flutter and tumble.",
+      "fail": "They are rigid; or move as balls; or as one sheet."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car keeps its number and the leaves are the pile's.",
+      "fail": "The car duplicates; or leaves appear from nowhere; or the car passes through the pile."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and the roadside stay the same.",
+      "fail": "The car changes colour; or the roadside rearranges; or the leaves change colour."
+    }
+  ]
+}

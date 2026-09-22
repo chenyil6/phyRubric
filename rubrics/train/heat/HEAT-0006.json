@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0006",
+  "caption": "A glowing red-hot metal ball is set on top of a large block of ice, and the ice melts around it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A block of ice."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A glowing metal ball is set on top of the block."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The ice melts around the ball."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The ball glows red at the start."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Steam or mist shows at the contact."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The ball is placed first and the melting follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The hollow under the ball only deepens and the ball settles into it; meltwater gathers there and the ice does not close back over.",
+      "fail": "The hollow fills back in; or the ball rises out of it with nothing lifting it; or the meltwater freezes around the glowing ball; or the ice surface returns to smooth and dry."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "Away from the contact the ice stays a hard solid and may crack sharply; at the contact it turns to water; the ball keeps its round rigid shape.",
+      "fail": "The block sags or bends like wax; or the ice flows as a soft lump; or the ball squashes or spreads; or the whole block turns to slush at once while the ball touches one spot."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The ball's glow only fades while it sits in the ice.",
+      "fail": "The ball's glow brightens as it melts in; or it goes dark and glows again; or the glow spreads out into the ice around it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The ball settles downward into the ice, meltwater runs down the block's sides and pools below, and any steam rises.",
+      "fail": "The ball climbs the block or hangs above its hollow; or meltwater runs up the block's side; or the steam sinks and pools on the ground."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ball and one block; the block only loses matter and the ball stays whole.",
+      "fail": "The ball vanishes; or a second ball appears; or the block grows; or the ball passes out through the block's base leaving it whole above; or water appears on the block far from the ball with no melt running there."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ice's look away from the contact and the surface under the block stay the same.",
+      "fail": "The ice turns a colour; or the ground under the block changes texture away from the water; or the block's frosted look changes all over at once."
+    }
+  ],
+  "note": "The ball may sink out of sight into the block; it is then judged by the hollow and the meltwater."
+}

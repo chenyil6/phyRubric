@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0024",
+  "caption": "Hot bacon fat is poured into a glass jar straight from the fridge, and the fat begins to set where it touches the cold glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass jar that reads as cold: frost or condensation on it."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Hot fat is poured into the jar."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The fat begins to set where it touches the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Solid white fat forms at the jar's walls."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The poured fat is clear and runny."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is pour, set at the walls, spread inward."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The setting runs one way: the white grows from the cold glass inward and the fat's surface stops sloshing.",
+      "fail": "The white creeps back to the glass leaving the fat clear again; or the set fat turns runny with nothing heating it; or the white appears in the middle first and works out to the glass; or the fat sets and melts in turn."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The change from clear to white happens in the fat itself, at the cold glass, and spreads through it.",
+      "fail": "The jar's glass turns white rather than the fat; or the white appears in the pan before the fat is poured; or the white fades back to clear while the jar is still cold; or the label on the jar changes rather than the fat."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The fat falls downward into the jar and lies level in it, its surface flat while the jar stands upright.",
+      "fail": "The fat climbs the jar's wall above its level and stays; or the stream travels upward from the pan; or the fat's surface tilts and stays tilted with the jar upright; or fat lifts out of the jar's mouth."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The hot fat is a thin liquid that pours and sloshes and the set fat is a soft opaque solid that keeps its shape when the jar is moved.",
+      "fail": "The set fat sloshes when the jar is tilted; or the fat sets into a glassy solid that cracks; or the fat stretches like dough as it is poured; or the liquid fat stands in a heap above its level."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One jar and one pour; the fat that goes in stays in.",
+      "fail": "The fat's level drops with none poured out; or fat appears in the jar with none pouring in; or the fat passes through the jar's wall; or a second jar appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jar's label, the pan and the counter stay the same.",
+      "fail": "The label changes; or the pan changes shape; or items on the counter rearrange."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0065",
+  "caption": "A balloon on a string turns slowly in an elevator with mirrored walls, and its reflections turn with it in every wall.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A balloon on a string turns slowly in an elevator."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The elevator has mirrored walls."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its reflections turn with it in every wall."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "All the reflections move at the same instant."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Each reflection is mirrored relative to its wall."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "All reflections move at the same instant as the balloon.",
+      "fail": "A reflection lags; or one turns while the balloon is still; or one stays still while the balloon turns."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "Each reflection is a mirror image relative to its own wall, and none turns a different way.",
+      "fail": "A reflection turns the wrong way; or one is a different colour; or one is upside down."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflections do not move on their own.",
+      "fail": "A reflection drifts across its wall; or shifts while the balloon hangs still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The walls are flat and rigid: the reflections are undistorted.",
+      "fail": "A wall ripples; or a reflection warps; or a wall bends."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon and one reflection per wall.",
+      "fail": "A second balloon appears in the elevator; or a reflection steps out of its wall; or the balloon vanishes; or the string passes through a wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour and the elevator stay the same.",
+      "fail": "The balloon changes colour; or the walls change; or the string changes."
+    }
+  ],
+  "note": "Mirror geometry: each point of the image lies directly across the mirror surface from the real point, so the image is a mirror copy, not a rotated one."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0147",
+  "caption": "Two toy train cars with magnetic couplers are pushed together, and they snap together and roll as one.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two toy train cars on a track or floor, apart."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cars are pushed together."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Their couplers snap together."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The joined cars roll as one."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The couplers meet end to end."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is push, snap, roll together."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "Over the last small gap the couplers pull together and the cars stay joined; when one is moved the other follows without a gap opening.",
+      "fail": "The cars stop with a gap between the couplers and stay that way; or the couplers touch and drift apart; or one car is moved and the other stays behind; or the cars part while rolling with nothing pulling them."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The cars move only when pushed or pulled along; once joined they stop together and stay still.",
+      "fail": "A car sets off by itself before it is pushed; or the joined pair keeps rolling and stops and starts on its own; or a car slides sideways off the line; or the cars spring apart."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The cars roll on their wheels along the track or floor in one line, the following car tracking the leading one.",
+      "fail": "The cars lift off the track; or the second car swings out and rolls beside the first while joined; or a car reverses while the other goes on; or the wheels stay still while the cars slide."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cars are rigid toys that keep their shape as they meet; the couplers stay small hard fittings.",
+      "fail": "A car squashes or bends at the meeting; or the couplers stretch like rubber; or the cars flex as they roll."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two cars throughout, joined but separate; nothing merges, vanishes or passes through anything.",
+      "fail": "The two cars merge into one long car; or a third car appears; or a car vanishes; or one car passes through the other."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cars' colours and markings and the track stay the same.",
+      "fail": "A car changes colour; or its markings change; or the track changes route."
+    }
+  ]
+}

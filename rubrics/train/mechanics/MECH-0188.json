@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0188",
+  "caption": "A puff of breath blows out the candles on a birthday cake, and thin wisps of smoke rise from the wicks.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Lit candles stand on a birthday cake."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A puff of breath is blown at them."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The candles go out."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Wisps of smoke rise from the wicks."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The puff comes first, then the flames go out, then the smoke."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flames lean away from the breath and go out during it.",
+      "fail": "The flames stay upright during the puff; or go out before the puff; or lean toward the breath."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once out the candles stay out, and the smoke follows the flame.",
+      "fail": "The candles relight on their own; or smoke rises before a flame is out; or a flame comes back from the smoke."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The smoke rises upward.",
+      "fail": "It sinks; or hangs; or flows sideways with no draught."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The smoke is thin wisps that thin out.",
+      "fail": "It is a solid rope; or a liquid; or a dense blob that holds its shape."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The candles keep their number and the cake stays one cake.",
+      "fail": "A candle vanishes; or a new one appears; or the cake changes into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cake's frosting and the candles stay the same.",
+      "fail": "The frosting changes colour; or the candles rearrange; or the table changes."
+    }
+  ],
+  "note": "The breath is kept as the trigger; the person blowing is not judged."
+}

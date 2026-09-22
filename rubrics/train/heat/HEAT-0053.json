@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0053",
+  "caption": "Eggs boil in a pot on a stove, rattling against each other as the water bubbles around them.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pot of water sits on a hob."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Eggs sit in the water."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Bubbles rise around the eggs."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The eggs jostle against each other."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The eggs stay at the pot's bottom."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "Steam rises above the pot."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The eggs move only as the bubbling water pushes them: they knock and shift while the water churns and settle when it calms.",
+      "fail": "An egg darts across the pot with the water still; or an egg spins fast on the spot with nothing turning it; or the eggs jostle in water with no bubbles rising; or an egg jumps out of the water."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The boil keeps up while the eggs knock: bubbles keep arriving from below and steam keeps leaving.",
+      "fail": "The bubbling stops and then starts again by itself; or the steam runs back into the pot; or bubbles sink from the surface to the eggs; or the surface goes glassy still while bubbles stream below it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The eggs rest low in the pot and the bubbles and steam rise.",
+      "fail": "An egg rises out of the water and hangs above it; or an egg hangs motionless in mid-water; or bubbles sink toward the pot's floor; or the steam sinks and pools around the pot."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The eggs are hard-shelled solids that knock and rebound off each other and the pot, and the water closes round them.",
+      "fail": "An egg squashes where it strikes another; or an egg's shell bends; or the eggs merge into one lump; or the water holds a dent around an egg like a solid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The eggs keep their number and stay in the pot; nothing appears or vanishes.",
+      "fail": "An egg vanishes; or a new egg appears; or an egg passes through the pot's wall; or two eggs merge into one."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pot, the hob and the eggs' shells stay the same.",
+      "fail": "The pot changes colour; or an egg's shell changes colour; or the hob's knobs move by themselves."
+    }
+  ],
+  "note": "The rattle is sound and is not judged; the jostling is read from the eggs' visible knocking."
+}

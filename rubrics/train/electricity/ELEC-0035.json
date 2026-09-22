@@ -1,0 +1,82 @@
+{
+  "id": "ELEC-0035",
+  "caption": "The switch on a wall-mounted heater is flipped, and its indicator light comes on and its fan starts.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A heater mounted on a wall, with a switch."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The switch is flipped."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Its indicator light comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Its fan starts."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The light is off and the fan still before the flip."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is flip, then light and fan together."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light comes on and the fan starts together at the moment the switch is flipped, and only then.",
+      "fail": "The switch is flipped and neither light nor fan responds to the end of the clip; or the light comes on while the fan stays still to the end; or the fan runs while the light stays dark; or the fan starts before the switch moves."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Before the flip the fan is still; afterwards it runs steadily and does not stop, start or reverse on its own.",
+      "fail": "The fan stops and restarts with the switch untouched; or turns slowly by itself before the flip; or reverses direction; or the heater rocks on the wall."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Light items in the heater's airflow flutter once the fan runs and are still before.",
+      "fail": "Curtains or paper near the outlet flutter before the fan starts; or nothing in the airflow moves while the fan runs; or the flutter blows toward the heater.",
+      "precondition": "Light items such as curtains, paper or tassels are in front of the heater's outlet."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once on, the light stays lit and the fan keeps running while the switch stays on.",
+      "fail": "The light goes out again with the switch on; or flickers; or the switch flips back by itself; or the fan slows to a stop with the switch on."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One heater fixed to the wall; it keeps its shape and place; the hand passes through nothing.",
+      "fail": "The heater drops off the wall or moves along it; or a second heater appears; or the hand passes into the heater; or the grille changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The heater's colour, its grille and the wall stay the same apart from the light.",
+      "fail": "The heater changes colour; or the grille pattern changes; or the wall changes colour."
+    }
+  ],
+  "note": "The fan may be hidden behind the grille; it is judged from visible blade motion or the movement of items in its airflow."
+}

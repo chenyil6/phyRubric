@@ -1,0 +1,65 @@
+{
+  "id": "OPT-0252",
+  "caption": "Steam rises from a kettle spout in a sunlit kitchen, and a faint, shifting shadow of the plume drifts on the wall behind it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Steam rises from a kettle spout in a sunlit kitchen."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A faint, shifting shadow of the plume drifts on the wall behind it."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The shadow is fainter than the kettle's own shadow."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadow is on the side of the plume away from the window and moves and thins as the steam does.",
+      "fail": "It is on the sunlit side; or stays still while the steam moves; or it is as dark as the kettle's shadow."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The shadow moves only as the steam moves.",
+      "fail": "It drifts with the steam still; or moves before the plume; or lingers after the steam has gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The steam rises.",
+      "fail": "It sinks; or hangs; or flows sideways with no draught."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The shadow is a soft shifting wisp like the plume.",
+      "fail": "It is a hard-edged shape; or splits into unrelated pieces; or is a solid block."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One kettle and one plume.",
+      "fail": "A second kettle appears; or the plume comes from nowhere; or the shadow becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The kettle and the wall stay the same, and the shadow stays dark.",
+      "fail": "The kettle changes colour; or the shadow turns coloured; or the wall changes."
+    }
+  ]
+}

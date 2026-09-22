@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0180",
+  "caption": "A red stage light is switched on over a white curtain, and the curtain turns red under the light.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A white curtain hangs on a stage."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A red stage light is switched on over it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The curtain turns red under the light."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The switch comes first and the colour follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The curtain looks red only where the light's light reaches and while it is on.",
+      "fail": "The curtain is red with the light off; or stays white under the red light; or turns a different colour from the light."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The change happens at the same instant as the light and is confined to where its light falls.",
+      "fail": "The curtain changes before the light; or long after; or surfaces the light cannot reach change too."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The curtain's folds show as darker and lighter red, not as colour changes.",
+      "fail": "The folds are a different colour; or the curtain is flat red with no shading; or the folds vanish."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves; only the light changes.",
+      "fail": "The curtain moves; or the light moves by itself; or the lit area wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One light and one curtain.",
+      "fail": "A second light appears; or the curtain vanishes; or the light becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The curtain's shape and the surroundings stay the same.",
+      "fail": "The curtain changes shape; or the surroundings rearrange; or the light changes shape."
+    }
+  ]
+}

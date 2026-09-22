@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0138",
+  "caption": "Two pieces of flint are struck together in the dark, and a tiny spark jumps between them.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two pieces of flint, held in the dark."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The pieces are struck together."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A tiny spark jumps between them."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The scene is dark before the strike."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The strike comes first and the spark follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The spark appears at the point of impact at the instant of the strike, and is gone; nothing glows before or after.",
+      "fail": "The spark glows on between the pieces after the strike; or a spark appears while the pieces are apart and still; or a piece of flint glows after the strike; or the spark drifts away as a lit point."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "Two pieces of flint throughout; the spark leaves nothing behind.",
+      "fail": "A third piece appears or a piece vanishes; or a glowing dot stays in the air after the spark; or the pieces merge into one; or the spark leaves a lit trail."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Any spark fragments fall from the strike point and go dark within a short distance.",
+      "fail": "Sparks rise and gather above the hands; or hang in the air; or lie glowing on the ground for the rest of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "During the spark the hands and the flint nearest to it brighten briefly; the rest stays dark.",
+      "fail": "The spark is visible while the hands and flint around it stay as dark as before; or the whole scene lights up as if a lamp came on; or the surroundings stay lit after the spark is gone."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The pieces meet at their surfaces and rebound or stop; neither passes through the other or through the hands.",
+      "fail": "One piece passes through the other; or a piece passes through a hand; or the flints melt or bend; or a piece vanishes at the strike."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The flints' colour and shape and the dark background stay the same.",
+      "fail": "A flint changes colour or shape between strikes; or the background rearranges; or the hands change."
+    }
+  ],
+  "note": "The hands are kept because striking is the caption's action; how they hold the flint is not judged."
+}

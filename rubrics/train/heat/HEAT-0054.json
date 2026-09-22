@@ -1,0 +1,75 @@
+{
+  "id": "HEAT-0054",
+  "caption": "A steam iron is pressed onto a shirt on an ironing board, and puffs of steam rise from around the iron.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A shirt lies on an ironing board."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "An iron is pressed onto the shirt."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Puffs of steam rise from around the iron."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The fabric under the iron flattens."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The steam comes while the iron is on the fabric."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam rises from the iron's edges, spreading and thinning as it climbs.",
+      "fail": "The steam pours downward through the board; or sinks and pools on the floor; or hangs as a fixed shape without rising; or streams straight sideways with nothing blowing it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The steam comes out while the iron is on the fabric and from around its plate, and the fabric flattens where the iron has passed.",
+      "fail": "Steam puffs while the iron stands well clear of the shirt; or the iron passes over a crease and the fabric behind it is unchanged; or the steam comes from the board rather than the iron; or a crease flattens where the iron has not been."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The creases only drop out along the iron's path, and flattened fabric stays flat.",
+      "fail": "A crease comes back on fabric the iron has just passed over; or the fabric wrinkles more where the iron has been; or the creases drop out all over the shirt while the iron sits in one place."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The shirt is cloth that presses flat under the plate and darkens where it is damp; the iron is a rigid solid.",
+      "fail": "The shirt stays board-stiff and keeps its creases under the plate; or the fabric stretches like elastic under the iron; or the iron's plate bends; or the shirt sticks to the plate and lifts with it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The iron rests on top of the shirt and the shirt on the board; nothing passes through anything.",
+      "fail": "The iron sinks into the board; or the iron passes through the shirt; or a second iron appears; or the board changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The shirt's colour and pattern away from the press, the board's cover and the room stay the same.",
+      "fail": "The shirt changes colour; or the board's cover changes pattern; or items in the room rearrange."
+    }
+  ]
+}

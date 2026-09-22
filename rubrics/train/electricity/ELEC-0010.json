@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0010",
+  "caption": "The button on an electric kettle is pressed, and a small light on the kettle comes on and the switch stays down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An electric kettle with a button or switch."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The button is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A small light on the kettle comes on."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The switch stays down after the press."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The light is dark before the press."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark, press, lit with the switch down."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light comes on at the moment the switch goes down, and only then; while the switch is down the light stays on.",
+      "fail": "The switch is down and the light stays dark; or the light is lit before the switch is touched; or the light comes on with the switch still up; or the switch goes down and springs back up at once with the light staying on."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The switch stays down and the light stays lit for the rest of the clip; if the switch pops up, the light goes out with it.",
+      "fail": "The light goes out with the switch still down; or the switch pops up and the light stays lit; or the light flickers on and off; or the switch goes up and down by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Any steam from the spout appears only after the switch is down and grows from there.",
+      "fail": "Steam pours from the spout before the button is pressed; or steam appears and shrinks back into the spout; or steam rises from the base rather than the spout.",
+      "precondition": "Steam is visible."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The kettle stays on its base as the button is pressed; the base and counter stay still.",
+      "fail": "The kettle slides or lifts off its base at the press; or the base moves by itself; or items on the counter jump."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One kettle on one base; the kettle keeps its shape with the lid on; the finger passes through nothing.",
+      "fail": "A second kettle appears; or the kettle vanishes; or the finger passes into the kettle; or the kettle's spout or handle moves or vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The kettle's colour, the base and the counter stay the same apart from the light.",
+      "fail": "The kettle changes colour; or the switch moves to a different place on the kettle; or items on the counter change."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0022",
+  "caption": "Autumn leaves come loose from a tree on a still afternoon and drift down to settle on the lawn.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Leaves come loose from a tree."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They drift down through the air."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "They settle on the lawn."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The afternoon is still: the tree and the grass are not being blown about."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The leaves come loose first and the drifting down follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Every leaf ends lower than it started, fluttering and turning on the way but never climbing back toward the branch.",
+      "fail": "A leaf rises back up toward the branches; or a leaf hangs still in mid-air; or a leaf travels upward out of the frame."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The leaves fall slowly, swinging from side to side, each one on its own path.",
+      "fail": "The leaves drop straight and fast like stones; or they all fall together as one rigid sheet; or a leaf gathers speed until it streaks downward."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Leaves come away from the tree and stay put once they are on the lawn; on a still afternoon nothing sweeps them about.",
+      "fail": "A settled leaf lifts off the lawn again with nothing touching it; or leaves are driven sideways as if in a gale while the tree stands still; or a leaf turns sharply in the open air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The leaves stay thin and flexible, curling and turning in the air and lying flat on the grass.",
+      "fail": "A leaf stays rigid like a board for its whole fall; or a leaf bounces off the lawn like a ball; or a leaf shatters where it lands."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The leaves keep their number: none appear in mid-air and none disappear.",
+      "fail": "Leaves appear in the air with no branch above them; or a falling leaf vanishes before reaching the lawn; or a leaf passes through a branch or through the ground."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The leaves' colours, the tree and the lawn stay the same.",
+      "fail": "A leaf changes colour as it falls; or the tree's foliage changes colour between frames; or the lawn behind rearranges."
+    }
+  ]
+}

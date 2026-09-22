@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0126",
+  "caption": "A metal snuffer is lowered over a candle flame, and the flame dies and smoke curls out from under the snuffer.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A lit candle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A metal snuffer is lowered over the flame."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flame goes out."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Smoke curls out from under the snuffer."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The snuffer covers the flame."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is lowered, out, smoke."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flame goes out once the snuffer covers it and does not keep burning under the cap.",
+      "fail": "The flame burns on under the closed snuffer; or the flame goes out before the snuffer reaches it; or the flame goes out with the snuffer still held well clear; or the flame relights while the snuffer is still over it."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The smoke escapes under the snuffer's rim and rises, and it rises from the wick when the snuffer is lifted.",
+      "fail": "The smoke sinks down the candle and pools on the table; or pours downward through the candle; or hangs as a fixed shape without rising; or runs back into the wick."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Once out the flame stays out; the wick may glow briefly and then darkens.",
+      "fail": "The flame relights by itself after the snuffer is lifted; or flickers back and forth between lit and out; or the wick's glow brightens after the flame has gone; or smoke rises from the wick while the flame still burns at full size."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The snuffer stays a rigid metal cap on its handle, the candle keeps its shape, and the smoke is a fine thread that waves.",
+      "fail": "The snuffer bends or melts over the flame; or the candle's body sags as the snuffer comes down; or the smoke holds a fixed rigid shape; or the snuffer sticks to the candle and lifts it."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One candle with one wick and one snuffer; the flame does not detach or split.",
+      "fail": "The flame separates from the wick and floats; or a second flame or candle appears; or the snuffer passes through the candle; or the wick vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The candle's colour, the holder and the table stay the same.",
+      "fail": "The candle changes colour; or the holder moves or vanishes; or the table's pattern changes."
+    }
+  ]
+}

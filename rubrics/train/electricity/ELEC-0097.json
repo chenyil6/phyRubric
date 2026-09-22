@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0097",
+  "caption": "Lightning flashes over a park during heavy rain, and for an instant every falling raindrop is lit against the dark.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A park in heavy rain, dark."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lightning flashes over the park."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "For an instant the falling raindrops are lit against the dark."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The rain is heavy: many drops or streaks fill the frame."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The scene is dark again after the flash."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flash is brief: the rain and the park brighten and return to dark; flashes may repeat but each ends.",
+      "fail": "The park stays lit for the rest of the clip after the flash; or the light brightens steadily; or the flash fades in slowly; or the sky turns to daylight."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "During the flash the raindrops show as bright streaks or specks across the frame and the wet ground and leaves glint; between flashes they are dim.",
+      "fail": "The sky flashes while the rain stays as dim as before; or the rain is lit brightly while the sky and ground stay dark; or the raindrops stay lit after the sky is dark; or the wet ground stays dull while the rain and sky are lit."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The rain falls downward, as streaks slanting at most with the wind, before, during and after the flash.",
+      "fail": "The rain rises or hangs still; or the streaks change direction at the flash; or the drops slant one way while the trees bend the other; or rain falls upward from the ground."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The trees, benches, paths and lamps of the park are the same across dark and lit frames.",
+      "fail": "Trees or benches appear or vanish between dark and lit frames; or paths change route; or lamp posts move; or a person appears at the flash."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Trees, benches and lamp posts keep their shapes; nothing passes through anything; any bolt seen ends in the air or at the ground, not inside a tree lit like a lamp.",
+      "fail": "A tree changes shape or merges with another; or a bolt passes through a tree and lights its interior; or a bench morphs into another object; or the ground turns into open water."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The park's colours are consistent before and after: the flash whitens the scene only briefly.",
+      "fail": "The grass or trees change colour permanently after the flash; or the sky changes colour permanently; or the path changes colour."
+    }
+  ]
+}

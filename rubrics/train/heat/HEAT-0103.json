@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0103",
+  "caption": "A hot dishwasher is opened and the steam that escapes fogs the cool kitchen window above the sink.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A dishwasher is opened."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Steam escapes from the machine."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The steam reaches a window above the sink."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The window fogs."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fog forms where the rising steam meets the glass."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is opening, steam, fog."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam rises from the open machine toward the window and the fog's drops run downward on the glass.",
+      "fail": "The steam sinks to the floor while the window fogs anyway; or a drop runs up the window; or the steam pours downward out of the machine; or water gathers along the window's top and stays."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The fog builds while the steam keeps reaching the glass and then clears; it does not form before the door opens.",
+      "fail": "The window is fogged before the door has moved; or the fog clears while steam still reaches the glass; or the fog thins and thickens in turn; or the fog thickens after the machine has been shut and the steam has gone."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The fog forms on the cool window where the steam reaches it and not on the warm dishwasher.",
+      "fail": "The dishwasher's own door fogs while the window stays clear; or the fog forms in a part of the window the steam never reaches; or the steam reaches the glass and it stays clear and bright to the end of the clip."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The steam is a soft cloud that spreads and fades and the fog on the glass is a fine haze that beads.",
+      "fail": "The steam holds a fixed rigid shape; or the fog stands off the glass as a thick crust; or the steam pours like a liquid into the sink; or the haze turns opaque white like paint."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One window in one frame; what is seen through the clear glass is the same before and after.",
+      "fail": "The window changes size; or a second window appears; or objects seen through the glass are missing once it clears; or the frame vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The window frame, the sink and the units stay the same.",
+      "fail": "The frame changes colour; or the sink's taps change shape; or the units change."
+    }
+  ]
+}

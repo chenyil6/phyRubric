@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0234",
+  "caption": "A large dog stands behind a floor-length curtain, and the curtain bulges where it stands with its paws showing beneath the hem.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A floor-length curtain hangs."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It bulges where a dog stands behind it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The dog's paws show beneath the hem."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The dog is large."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "solidity",
+      "expect": "The bulge matches the dog's body, and the dog does not show through the fabric.",
+      "fail": "The dog shows through; or passes through the curtain; or the curtain passes through the dog."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The bulge moves when the dog moves, the paws stay beneath the hem, and the dog does not appear elsewhere.",
+      "fail": "The bulge stays while the paws walk away; or the dog appears beside the curtain while the bulge remains; or the paws vanish with the bulge present."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The curtain hangs down with its hem at the floor.",
+      "fail": "It floats; or the hem rises; or it hangs sideways."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cloth drapes over the dog.",
+      "fail": "It is rigid; or stretches; or tears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One dog and one curtain keep their number.",
+      "fail": "Two sets of paws appear; or the curtain duplicates; or the dog turns into another animal."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The curtain's colour and the room stay the same.",
+      "fail": "The curtain changes colour; or the floor changes; or the room rearranges."
+    }
+  ],
+  "note": "The dog is self-driven: its movements are its own. Only occlusion and the curtain's response are judged."
+}

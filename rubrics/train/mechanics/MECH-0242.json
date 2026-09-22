@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0242",
+  "caption": "A loaded toolbox resting on a crushed cardboard box in a garage is lifted away, and the box stays crumpled.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toolbox rests on a crushed cardboard box in a garage."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The toolbox is lifted away."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The box stays crumpled."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The box is already crushed at the start."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lift comes first and the box stays as it was."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The box keeps its caved-in top and buckled sides after the weight is gone.",
+      "fail": "It springs back to shape; or it collapses further with nothing on it; or it re-inflates slowly."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The cardboard holds its creases: the box is crumpled, neither torn to shreds nor rigid.",
+      "fail": "The box turns out rigid and un-dented when the toolbox lifts; or it shreds; or it flows."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The box stays where it is.",
+      "fail": "It slides; or lifts with the toolbox; or jumps."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The toolbox rises only as it is lifted, and the box stays on the floor.",
+      "fail": "The toolbox floats; or the box rises; or the toolbox drops back."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One box and one toolbox keep their number.",
+      "fail": "The box vanishes or a second appears; or the toolbox passes through the box; or the box turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The box's printing, the toolbox and the garage stay the same.",
+      "fail": "The printing changes; or the toolbox changes colour; or the garage rearranges."
+    }
+  ]
+}

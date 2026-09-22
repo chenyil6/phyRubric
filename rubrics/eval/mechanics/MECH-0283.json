@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0283",
+  "caption": "A tray of dry rice is tilted to one side, and the rice slides to the low edge and piles up there while the high side clears.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A tray of dry rice is tilted to one side."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The rice slides to the low edge."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It piles up there."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The high side clears."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tilt comes first and the slide follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The grains flow downhill as a sheet and collect against the low rim.",
+      "fail": "They move uphill; or stay spread evenly on the tilted tray; or float."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The flow starts once the tilt is steep enough and not before.",
+      "fail": "It slides on a level tray; or slides before the tilt; or keeps flowing with the tray level again."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The grains flow and pile at a slope.",
+      "fail": "They flow flat like liquid; or move as a solid block; or bounce like balls."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The pile only grows on the low side while tilted.",
+      "fail": "It shrinks; or redistributes; or appears before the tilt."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One tray keeps its number and the rice its total.",
+      "fail": "Rice appears from nowhere; or vanishes; or the tray duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The tray and the rice stay the same.",
+      "fail": "The tray changes colour; or the rice changes colour; or the background rearranges."
+    }
+  ]
+}

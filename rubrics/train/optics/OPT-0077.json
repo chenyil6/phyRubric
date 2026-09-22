@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0077",
+  "caption": "A flashlight is pointed at a mirror on the wall, and a spot of light appears on the opposite wall.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A mirror hangs on a wall."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A flashlight is pointed at it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A spot of light appears on the opposite wall."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The spot moves when the flashlight is angled."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The spot vanishes when the beam leaves the mirror."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The spot appears when the beam hits the mirror and vanishes when the beam leaves it.",
+      "fail": "The spot is there with the beam off the mirror; or the beam hits the mirror and no spot appears; or the spot remains after the beam has left."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The spot moves the opposite way when the flashlight is angled, as a reflected beam does.",
+      "fail": "It moves the same way as the flashlight; or stays still while the flashlight turns; or jumps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The spot does not move on its own.",
+      "fail": "It slides with the flashlight still; or flickers with the beam steady."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The spot is one bright patch with a soft edge.",
+      "fail": "It splits into several under one beam; or it is a sharp geometric shape; or it floods the room."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One flashlight, one mirror and one spot.",
+      "fail": "A second spot appears; or the mirror duplicates; or the spot becomes solid; or the beam passes through the wall."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The walls and the mirror frame stay the same.",
+      "fail": "A wall changes colour; or the frame changes; or the room rearranges."
+    }
+  ]
+}

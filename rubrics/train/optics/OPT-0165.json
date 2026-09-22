@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0165",
+  "caption": "A cinema's house lights dim before the film starts, and the seats fade from view until only the screen glows.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cinema's house lights are on."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They dim before the film starts."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The seats fade from view."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Only the screen glows."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The dimming is gradual."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The dimming is gradual and the seats go dark until only the screen glows.",
+      "fail": "The lights snap off; or brighten again; or the seats stay visible with the lights out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The screen's light on the front rows changes with the picture.",
+      "fail": "The front rows are lit with the screen dark; or stay dark with a bright screen; or are lit from behind."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "Nothing moves in the hall.",
+      "fail": "Seats move; or the screen shifts; or the lit area wanders."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "attribute_drift",
+      "expect": "Colours dim without changing hue.",
+      "fail": "The seats change colour; or the walls change; or the light turns another colour."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The seats keep their number.",
+      "fail": "Seats vanish; or appear; or the screen duplicates."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hall stays the same.",
+      "fail": "The rows rearrange; or the screen changes size; or the curtains change."
+    }
+  ],
+  "note": "Illumination: the on/off causality of electric lights belongs to Electricity; here only where the light goes once it exists is judged."
+}

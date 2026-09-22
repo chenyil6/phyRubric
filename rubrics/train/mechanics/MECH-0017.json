@@ -1,0 +1,77 @@
+{
+  "id": "MECH-0017",
+  "caption": "A family sits in the back seat of a car as it takes a sharp bend on a country road, and all of them lean toward the outside of the bend.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A family sits in the back seat of a car."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The car takes a sharp bend on a country road."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "All of them lean toward the outside of the bend."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The country road and its bend are visible through the windows."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The car enters the bend first and the lean follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "They sit upright while the road runs straight, lean as the car enters the bend, and come back upright as it straightens.",
+      "fail": "They lean while the car is travelling straight; or they lean with no bend visible outside; or they stay leaning long after the road has straightened."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Everyone leans the same way, away from the inside of the curve, for as long as the car is turning.",
+      "fail": "One passenger leans into the bend while the others lean out; or they are thrown forward or backward as the car turns; or one of them leans before the car begins to turn."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "They stay seated with their weight on the seat while they lean.",
+      "fail": "A passenger lifts off the seat and floats; or a passenger rises up along the seat back; or a head goes up through the roof."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Loose and hanging items in the cabin swing the same way at the same moment.",
+      "fail": "A hanging item swings toward the inside of the bend; or loose objects stay still while the passengers are plainly leaning; or they swing before the car begins to turn.",
+      "precondition": "Loose or hanging items are visible inside the car."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The passengers, the seats and the belts keep their number and shape.",
+      "fail": "A passenger merges with a neighbour or with the seat; or a limb detaches or an extra one appears; or a head passes through the window."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Clothing colours, the car interior and the view outside stay consistent apart from the turn.",
+      "fail": "A passenger's clothing changes colour; or the seat covers change pattern; or the landscape outside jumps to a different place."
+    }
+  ],
+  "note": "Inertia scene: the passengers are kept because their bodies are what show the lean. Expressions, posture and how sharp the bend is are not judged; only when and which way they move."
+}

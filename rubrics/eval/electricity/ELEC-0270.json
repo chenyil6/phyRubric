@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0270",
+  "caption": "A lightning bolt strikes a hilltop radio mast, and the mast is outlined in a bright flash.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A radio mast on a hilltop."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A lightning bolt strikes the mast."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The mast is outlined in a bright flash."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The bolt ends at the mast's tip."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is bolt, flash, dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The bolt and the flash on the mast are brief and gone; the mast returns to its unlit look and stays so.",
+      "fail": "The bolt stands as a steady lit line for the rest of the clip; or the mast glows on after the bolt is gone; or the flash travels slowly down the mast; or the flash fades in slowly."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The mast, its guy wires and the hilltop are the same before and after the strike.",
+      "fail": "The mast vanishes or bends after the strike; or a second mast appears; or a guy wire vanishes or appears; or the mast changes place between dark and lit frames."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The bolt is a jagged, branching line whose main channel ends at the mast's tip.",
+      "fail": "The bolt is a straight beam or a smooth arc; or a wide glowing tube; or it ends in mid-air beside the mast while the mast lights up; or it strikes the mast's base with the tip untouched."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The flash lights the surroundings: the hilltop and cloud undersides brighten during the bolt, from the bolt's direction.",
+      "fail": "The bolt is visible while the hilltop stays as dark as before; or the valley below is lit while the hilltop around the mast stays dark; or the hilltop brightens with no bolt present."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The bolt ends at the mast and does not pass through it into the ground; the mast stays a solid structure.",
+      "fail": "The bolt continues below the mast as a lit line under the ground; or the mast becomes transparent; or the mast melts or bends like rubber; or the hilltop splits."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The mast's colour, the hilltop and the sky keep their colours apart from the flash.",
+      "fail": "The mast changes colour; or the hilltop changes colour; or the sky turns to daylight after the flash."
+    }
+  ]
+}

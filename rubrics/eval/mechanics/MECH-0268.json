@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0268",
+  "caption": "A ladder leaning at too shallow an angle against a garden wall slides out at its feet and falls flat to the ground.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ladder leans against a garden wall at a shallow angle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its feet slide out."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It falls flat to the ground."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The angle is shallow."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The feet slide first and the fall follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The feet slip away from the wall first and the top slides down as the angle flattens, with nothing else touching it.",
+      "fail": "The top moves first with the feet fixed; or the ladder is pushed; or the feet slide toward the wall."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "It does not stay propped once the feet move, and it lands flat.",
+      "fail": "It stays propped after the feet slide; or falls toward or over the wall; or hangs mid-fall."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "It falls away from the wall along its own line.",
+      "fail": "It falls sideways; or upward; or rotates about its middle."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The ladder is rigid and clatters.",
+      "fail": "It bends; or bounces high; or breaks into pieces."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One ladder keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ladder and the wall stay the same.",
+      "fail": "The ladder changes; or the wall changes; or the garden rearranges."
+    }
+  ]
+}

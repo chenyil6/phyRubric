@@ -1,0 +1,75 @@
+{
+  "id": "MECH-0271",
+  "caption": "A marionette is lifted off the stage by its control bar, and the strings go taut and the puppet's limbs hang from them.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A marionette lies on a stage with its control bar."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bar is lifted."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The strings go taut."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The puppet's limbs hang from the strings."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lift comes first, then the taut strings, then the hanging limbs."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The strings straighten as the bar lifts, the limbs rise only when their strings tighten, and the strings go slack when the puppet is set down.",
+      "fail": "Limbs rise with slack strings; or the strings stretch; or they stay taut with the puppet on the stage and the bar low."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The limbs hang down from the strings, dangling.",
+      "fail": "They stand out sideways; or the puppet rises above the bar; or the limbs float."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The puppet moves only as the bar moves.",
+      "fail": "It moves by itself; or jumps; or the bar moves and the puppet does not."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The limbs stay attached at their joints.",
+      "fail": "A limb detaches; or a string passes through the puppet; or the puppet duplicates."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One puppet and one bar keep their number.",
+      "fail": "The puppet duplicates; or vanishes; or the bar turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The puppet's costume and the stage stay the same.",
+      "fail": "The costume changes; or the stage changes; or the strings change colour."
+    }
+  ]
+}

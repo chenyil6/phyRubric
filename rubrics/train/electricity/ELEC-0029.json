@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0029",
+  "caption": "The green start button on a conveyor belt is pressed, and the belt begins to move.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A conveyor belt with a green start button."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The green button is pressed."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The belt begins to move."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The belt is still before the press."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is still, press, moving."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The belt starts to move at the moment the button is pressed, and only then, and carries anything on it along.",
+      "fail": "The button is pressed and the belt stays still to the end of the clip; or the belt moves before the press; or the belt moves with the button untouched; or the belt moves while items on it stay in place."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Before the press nothing on the belt or its frame moves; afterwards the belt runs steadily in one direction and nothing else in the scene starts moving on its own.",
+      "fail": "The belt stops and restarts with nothing pressed; or reverses direction; or other machines in the scene start moving at the press; or items on the belt slide against the belt's direction."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The belt's surface moves as one continuous sheet over its rollers in one direction; items on it ride along at the belt's speed.",
+      "fail": "The belt surface moves in patches at different speeds; or an item on the belt races ahead of the belt or lags behind while resting on it; or the rollers turn while the belt stays still; or the belt surface moves sideways off its rollers."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The belt is a flexible band that bends round its rollers and lies flat between them; the frame stays rigid.",
+      "fail": "The belt stands rigid off its rollers; or ripples like water; or the frame bends as the belt starts; or the belt stretches visibly."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One belt on one frame; items on the belt keep their number and pass through nothing; the finger passes through nothing.",
+      "fail": "Items on the belt appear or vanish; or an item sinks into the belt; or the belt splits; or the finger passes into the control panel."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The belt's colour, the frame and the button's colour stay the same.",
+      "fail": "The belt changes colour; or the frame changes; or the button changes colour or place."
+    }
+  ]
+}

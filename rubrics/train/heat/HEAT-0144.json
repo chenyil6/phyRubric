@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0144",
+  "caption": "A wooden skewer is dropped into the grill's coals and catches fire.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wooden skewer is dropped into a grill's coals."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The skewer catches fire where it touches the coals."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The flame runs along the skewer."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The skewer blackens and shrinks behind the flame."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The skewer is pale wood before it catches."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The drop comes first and the catching follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The flame only advances along the skewer from where it caught, and the blackened part stays black.",
+      "fail": "A blackened part of the skewer turns back to pale wood; or the flame front retreats leaving unburnt wood behind it; or the skewer catches at a point no coal touched; or the skewer grows longer as it burns."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The skewer shrinks to ash rather than vanishing at a stroke, and the coals keep their number.",
+      "fail": "The skewer vanishes in a single frame while still long; or a second skewer appears; or a coal vanishes leaving no ash; or the skewer passes through the grate and out below whole."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flame points upward from the skewer, the skewer rests on the coals, and ash settles down.",
+      "fail": "The flame points downward under the skewer; or the skewer lifts off the coals and hangs in the air; or the ash rises and stays aloft; or the flame hangs below the coals."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The skewer catches where it touches the coals and the wood there chars first.",
+      "fail": "The skewer catches at its far end away from the coals; or the skewer lies on glowing coals and stays pale and unmarked to the end of the clip; or the flame appears in the air beside the skewer with a gap to the wood."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The skewer stays a straight stick as it chars and the coals stay lumps; nothing turns into anything else.",
+      "fail": "The skewer melts and drips; or the skewer turns into another object; or the coals merge into one smooth mass; or the skewer bends into a ring."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The grate, the coals' bed and the surroundings stay the same.",
+      "fail": "The grate changes spacing; or the coals rearrange away from the skewer; or the background changes between frames."
+    }
+  ]
+}

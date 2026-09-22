@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0174",
+  "caption": "A cat digs in a litter box with its front paws, flinging litter backward and leaving a hollow.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A cat digs in a litter box with its front paws."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Litter is flung backward."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A hollow is left where it digs."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The digging is with the front paws."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The digging comes first and the hollow forms after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "Litter is flung in small showers in the direction of the paw strokes, backward.",
+      "fail": "It is flung forward; or up and out of the box in a fountain; or no litter moves."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "Litter is loose grains that scatter and fall, and the hollow has sloping sides.",
+      "fail": "It clumps into one mass; or flows like liquid; or the hollow has vertical walls."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Flung litter falls back.",
+      "fail": "It hangs; or rises; or floats."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The hollow forms where the paws dig.",
+      "fail": "It forms elsewhere; or there is no hollow; or the hollow is there before the digging."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One cat keeps its limbs and shape.",
+      "fail": "A paw detaches; or a second cat appears; or the cat passes through the box."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cat's markings and the box stay the same.",
+      "fail": "The markings change; or the box changes; or the room rearranges."
+    }
+  ],
+  "note": "The cat is self-driven: its digging is its own. Only the litter's behaviour is judged."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0298",
+  "caption": "A bus drives behind a tall building and emerges from the other side a moment later.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bus drives along a street."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It passes behind a tall building."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It emerges from the other side."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The disappearance comes first and the emergence follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "It is the same bus, and it does not show through the building.",
+      "fail": "A different bus emerges; or two buses; or the bus appears elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "It is hidden for a time matching its speed and the building's width and reappears at the same speed and heading.",
+      "fail": "It emerges instantly; or after far too long; or emerges going back."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "The bus is not visible through the building.",
+      "fail": "It shows through; or passes through the building; or the building passes through the bus."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The building stays still.",
+      "fail": "It moves; or vanishes; or the street changes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One bus and one building keep their shape.",
+      "fail": "The bus turns into another vehicle; or the building changes shape; or the bus merges with it."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bus's colours and the street stay the same.",
+      "fail": "The bus changes colour; or the building changes; or the street rearranges."
+    }
+  ]
+}

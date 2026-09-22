@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0166",
+  "caption": "A row of paper lanterns hanging in a garden is lit one by one, and each glows as its candle is lit.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A row of paper lanterns hangs in a garden."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "They are lit one by one."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Each glows as its candle is lit."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "Unlit lanterns stay dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "A lantern glows only after its candle is lit and lights the leaves nearest to it.",
+      "fail": "A lantern glows before it is lit; or stays dark after; or the leaves far away brighten more than the near ones."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The lanterns keep their number and each is lit once.",
+      "fail": "A lantern vanishes; or appears; or one glows in two places."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "Lit lanterns stay lit.",
+      "fail": "One goes out on its own; or flickers off and on; or dims as the next is lit."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lanterns hang still and sway only if touched.",
+      "fail": "They swing wildly untouched; or float up; or one moves along the row."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "Each lantern keeps its shape.",
+      "fail": "One changes shape; or merges with its neighbour; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lanterns' colours and the garden stay the same.",
+      "fail": "A lantern changes colour; or the garden rearranges; or the string changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

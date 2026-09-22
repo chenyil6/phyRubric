@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0050",
+  "caption": "A steam wand is pushed into a jug of milk, and the milk hisses, swirls, and rises in the jug as foam.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A jug of milk."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A steam wand is pushed into the milk."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The milk swirls."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The milk rises in the jug as foam."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Vapour shows at the jug's mouth."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The wand goes in first and the foam rises after."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The foam builds from the milk's surface while the wand runs and stays up when the wand stops; the level only rises.",
+      "fail": "The foam sinks back while the wand still runs; or the level drops as the foam builds; or the foam builds and collapses in turn; or the foam rises before the wand is in the milk."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The milk is a liquid that swirls and takes on a thick bubbly head holding soft peaks.",
+      "fail": "The milk stays a flat mirror while the wand runs in it; or the foam stands as rigid spikes that keep their shape when the jug is shaken; or the milk sets solid; or the foam pours off the top like water."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The foam sits on top of the milk, the milk stays in the jug, and the vapour rises from the mouth.",
+      "fail": "The foam gathers under the milk at the jug's floor; or milk climbs out of the jug and hangs above it; or the vapour sinks and pools around the jug; or the foam lifts off the milk as a separate cloud."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The milk swirls only while the wand runs and settles when it stops; the jug stays where it is held.",
+      "fail": "The milk swirls with the wand out of it and still; or the swirl speeds up after the wand stops; or the jug spins with nothing turning it; or the milk churns before the wand enters."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One jug and one wand; the milk stays in the jug and nothing appears or vanishes.",
+      "fail": "Milk passes through the jug's wall; or the jug's contents jump in level with nothing added; or a second wand appears; or the jug changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jug's metal, the wand and the surroundings stay the same.",
+      "fail": "The jug changes colour; or the wand changes shape; or the machine behind changes."
+    }
+  ]
+}

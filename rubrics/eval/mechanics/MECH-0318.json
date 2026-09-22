@@ -1,0 +1,71 @@
+{
+  "id": "MECH-0318",
+  "caption": "An empty glass bottle is pushed neck-first under the water in a sink, and water flows in while a stream of bubbles escapes from the neck.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An empty glass bottle is pushed neck-first under the water in a sink."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Water flows in."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A stream of bubbles escapes from the neck."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The push under comes first and the filling follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Water rises inside the bottle while air leaves, and it fills only as fast as the air escapes.",
+      "fail": "It fills instantly; or stays empty under water; or empties again."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The bubbles climb to the surface.",
+      "fail": "They sink; or hang; or go sideways."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid and the bubbles wobble.",
+      "fail": "It is rigid; or the bubbles are solid; or the water beads."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The bottle stays where it is held.",
+      "fail": "It floats away; or jumps; or spins."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bottle keeps its number.",
+      "fail": "It duplicates; or vanishes; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bottle and the sink stay the same.",
+      "fail": "The bottle changes colour; or the sink changes; or the kitchen rearranges."
+    }
+  ],
+  "note": "The hand is kept as the minimal trigger; the person is not judged."
+}

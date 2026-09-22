@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0212",
+  "caption": "Blue drops are added to a glass of yellow lemonade and swirled, and the drink turns green.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A glass of yellow lemonade is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Blue drops are added."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It is swirled."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The drink turns green."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Green appears where the blue meets the yellow and spreads."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The green spreads from the drops through the lemonade where the blue meets the yellow, until the whole glass is green and never gathers back; coloured areas stay coloured.",
+      "fail": "The lemonade returns to its original colour where it was green; or the green gathers back into the drops; or the green appears before the drops arrives."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The result is green, and un-reached lemonade keeps its original colour.",
+      "fail": "The lemonade turns a colour other than green; or the un-reached lemonade changes; or the green is darker than the drops itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The lemonade behaves as it should: streaks and swirls where stirred or spread, settling where it flows.",
+      "fail": "The lemonade is rigid and unmarked; or it flows like water when it is a paste; or it bounces like rubber."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The lemonade moves only where stirred or where the green flows.",
+      "fail": "The lemonade swirls by itself; or the green spreads faster than stirring or flow carries it; or the container moves."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The amount of lemonade stays the same and the container keeps its shape.",
+      "fail": "The container fills or empties on its own; or a second container appears; or the drops passes through the container."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The container and the background stay the same.",
+      "fail": "The container changes colour; or the background rearranges; or the tool changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

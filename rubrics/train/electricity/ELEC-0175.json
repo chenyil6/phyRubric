@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0175",
+  "caption": "A magnetic letter is stuck to a fridge and holds; the same letter is stuck to the wooden cupboard next to it and falls off.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A fridge and a wooden cupboard side by side."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A magnetic letter is pressed to the fridge and holds when let go."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The same letter is pressed to the wooden cupboard."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The letter falls off the cupboard."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "One and the same letter is used on both surfaces."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The fridge comes first and the cupboard second."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "On the fridge the letter stays where it is placed after the hand withdraws; on the wood it leaves the surface as the hand lets go.",
+      "fail": "The letter drops or slides down the fridge after release; or stays on the wooden cupboard with nothing holding it; or hangs a gap away from either surface."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "Leaving the cupboard, the letter falls straight down and lands on the floor or counter below.",
+      "fail": "The letter moves upward or sideways as it leaves the cupboard; or halts in mid-air; or lands below and then rises back toward the cupboard."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "On the fridge the letter stays still once placed and comes off only when the hand takes it; neither door moves by itself.",
+      "fail": "The letter creeps across or turns on the fridge after release; or comes off the fridge with no hand near it; or the fridge door or the cupboard door swings on its own."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The fallen letter may bounce or tumble on landing and then comes to rest.",
+      "fail": "The letter bounces higher on each bounce; or slides along the floor toward the fridge with nothing pushing it; or starts moving again after coming to rest."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One letter throughout, the same shape on both surfaces; it sinks into neither door and does not vanish.",
+      "fail": "A second letter appears so that one is on the fridge while another is on the cupboard; or the letter changes into a different letter; or it sinks into a door; or it vanishes instead of falling."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The letter's colour, the other magnets on the fridge and the cupboard's grain stay the same.",
+      "fail": "The letter changes colour between surfaces; or other fridge magnets move or vanish; or the cupboard changes colour."
+    }
+  ]
+}

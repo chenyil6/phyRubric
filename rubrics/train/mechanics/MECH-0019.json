@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0019",
+  "caption": "A hammer resting on the top of a ladder is knocked off and falls to the ground.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A hammer rests on the top of a ladder."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It is knocked off the ladder."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It falls to the ground."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The knock comes first and the fall follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The hammer goes downward from the top of the ladder, falling quicker the further it drops, and reaches the ground.",
+      "fail": "The hammer drifts sideways away from the ladder as it falls; or it hangs in the air after leaving the top; or it rises after being knocked off."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The hammer lies still on the ladder until it is knocked, and once on the ground it stays there.",
+      "fail": "The hammer sets off before anything reaches it; or it slides off the top with nothing touching it; or it moves again after settling on the ground."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The hammer meets the ground and comes to rest there, clattering or bouncing low before it settles.",
+      "fail": "The hammer comes to rest in mid-air short of the ground; or it carries on down past the ground line; or the ground it lands on shows no disturbance at all where a heavy tool struck it."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The hammer stays a rigid head on a rigid handle, and the ground takes the impact.",
+      "fail": "The hammer bends or squashes where it lands; or it bounces high off a hard floor like a rubber ball; or it sinks into a hard floor as if into mud."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One hammer and one ladder keep their number and shape, and neither passes through the other.",
+      "fail": "The hammer vanishes on the way down or a second one appears; or it passes through a rung of the ladder; or it turns into another tool as it falls."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The hammer's colour, the ladder and the surroundings stay the same.",
+      "fail": "The hammer changes colour or size; or the ladder changes its number of rungs between frames; or the background rearranges."
+    }
+  ]
+}

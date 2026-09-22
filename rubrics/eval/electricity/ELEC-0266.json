@@ -1,0 +1,76 @@
+{
+  "id": "ELEC-0266",
+  "caption": "A remote-control boat slows and stops in the middle of a pond as its battery runs flat.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A remote-control boat on a pond."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The boat slows."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The boat stops in the middle of the pond."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The boat is moving under its own power at the start: a wake or bow wave shows."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is moving, slowing, stopped."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The boat loses speed gradually and comes to a stop; it does not speed up again.",
+      "fail": "The boat runs at full speed to the end of the clip; or speeds up again after slowing; or stops and sets off again under power; or the boat stops dead in an instant with its wake vanishing at once."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "Once stopped the boat drifts only slowly with the water; it does not dart off or turn sharply by itself.",
+      "fail": "The stopped boat darts forward or backward; or spins in place; or moves against the ripples with nothing driving it; or drifts fast across the pond."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "As it slows the boat keeps its heading and its wake dies away behind it; the bow wave flattens.",
+      "fail": "The boat turns sharply as it slows with nothing steering; or reverses; or the wake persists behind a stopped boat; or the wake runs ahead of the boat."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The boat floats level on the surface throughout; it does not sink or lift.",
+      "fail": "The boat sinks lower as it slows; or lifts out of the water; or tips over with nothing pushing it; or the water heaps around a still boat."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One boat on one pond; the boat keeps its hull and fittings; nothing passes through the water's surface or vanishes.",
+      "fail": "The boat vanishes or a second boat appears; or the boat passes through a reed bed or the bank; or the hull changes shape; or the boat sinks through the surface without any water entering."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The boat's colours and the pond's surroundings stay the same.",
+      "fail": "The boat changes colour; or its fittings change; or the surroundings rearrange."
+    }
+  ],
+  "note": "Whoever holds the controller is out of view and is not judged; how quickly the boat slows is not judged."
+}

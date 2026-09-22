@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0056",
+  "caption": "A bicycle is turned upside down, its front wheel is given a spin, and the wheel keeps spinning for a while before stopping.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bicycle stands upside down on its saddle and handlebars."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its front wheel is given a spin."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The wheel keeps spinning after the hand leaves it."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The wheel comes to a stop."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "It is the front wheel that is spun."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The spin comes first, then the wheel runs on, then it stops."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "After the spin the wheel slows steadily, turning the same way throughout, until it stops.",
+      "fail": "The wheel speeds up on its own; or it reverses direction as it slows; or it slows and then picks up again."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The wheel turns because of the one spin and comes to rest only by slowing down.",
+      "fail": "The wheel stops the instant the hand leaves it; or it starts turning again after stopping; or it is already turning before anything touches it."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The wheel stays a rigid round rim turning about its hub.",
+      "fail": "The rim wobbles out of round as it turns; or the spokes bend; or the tyre stretches."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bicycle stays resting upside down on its saddle and handlebars.",
+      "fail": "The bicycle rights itself with nothing touching it; or it lifts off the ground; or it slides across the floor while the wheel spins."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bicycle with its two wheels keeps its number and shape.",
+      "fail": "A wheel vanishes or a third one appears; or the wheel passes through the fork; or the bicycle turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bicycle's frame colour, the wheel and the surroundings stay the same.",
+      "fail": "The frame changes colour; or the spinning wheel changes size; or the floor beneath rearranges between frames."
+    }
+  ]
+}

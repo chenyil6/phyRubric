@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0216",
+  "caption": "A red plastic cup is placed upside down over a phone's white flashlight, and the cup glows red and throws a red circle onto the ceiling.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A phone's white flashlight is on."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A red plastic cup is placed upside down over it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The cup glows red."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It throws a red circle onto the ceiling."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cup goes on first and the glow appears with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The glow and the circle are the cup's red.",
+      "fail": "They are white; or a different colour; or the ceiling circle is white while the cup glows red."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The glow and the circle appear when the cup covers the light and would vanish when it is lifted or the light is off.",
+      "fail": "They are there before the cup; or remain after it is lifted; or the cup covers the light and nothing glows."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The circle is one round patch on the ceiling.",
+      "fail": "It splits; or is a sharp square; or it is on the wall."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The cup and phone stay put.",
+      "fail": "The cup slides; or the phone moves; or the circle wanders."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One cup and one phone.",
+      "fail": "The cup duplicates; or the phone vanishes; or the light passes through the table."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The table and the room stay the same.",
+      "fail": "The table changes; or the room rearranges; or the cup changes shape."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0116",
+  "caption": "Sunlight passes through a clear glass of water on a table, and a bright patch of light appears on the table on the far side of the glass.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A clear glass of water stands on a table in sunlight."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Sunlight passes through it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A bright patch of light appears on the table on the far side of the glass."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The patch moves when the glass is moved."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bright patch lies on the side of the glass away from the sun and would disappear if the glass were taken away.",
+      "fail": "It lies on the sun side; or it is there with no glass; or the glass is in sunlight and no patch appears."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The patch moves only when the glass moves.",
+      "fail": "It drifts with the glass still; or it stays put while the glass is moved; or it flickers in steady sun."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "shape_identity",
+      "expect": "The patch is one bright shape roughly the glass's footprint.",
+      "fail": "It splits into several; or it is a sharp geometric shape unlike the glass; or it floods the table."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The glass is rigid and the water level.",
+      "fail": "The glass bends; or the water tilts and holds; or the water goes opaque."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One glass and one patch.",
+      "fail": "A second glass appears; or the patch becomes solid; or the glass vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The glass and the table stay the same.",
+      "fail": "The glass changes shape; or the table changes; or the water changes colour."
+    }
+  ]
+}

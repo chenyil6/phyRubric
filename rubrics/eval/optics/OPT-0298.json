@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0298",
+  "caption": "A red umbrella is opened in bright sun, and the ground and objects beneath it take on a red tint.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A red umbrella is opened in bright sun."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The ground and objects beneath it take on a red tint."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The ground outside the shade keeps its normal colour."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The umbrella opens first and the tint appears with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The red tint appears only in the umbrella's shade and the ground outside keeps its normal colour.",
+      "fail": "The tint is outside the shade; or the shade is plain grey with no tint; or the tint is a different colour."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The tint appears only after the umbrella opens and would disappear when it closes.",
+      "fail": "It is there before the umbrella opens; or remains after closing; or the umbrella opens and no tint appears."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shade lies on the side away from the sun.",
+      "fail": "It lies toward the sun; or directly beneath under a low sun; or it is missing in sunlight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The canopy opens as taut fabric on ribs.",
+      "fail": "It is rigid like a plate; or floats off; or tears."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One umbrella.",
+      "fail": "It duplicates; or vanishes; or the shade becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The umbrella and the surroundings stay the same.",
+      "fail": "The canopy changes colour; or the ground changes; or the objects rearrange."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

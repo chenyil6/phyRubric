@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0095",
+  "caption": "Steam from a kettle rises against a kitchen cabinet door, and the door beads with water that runs down.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A kettle gives off steam."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The steam rises against a cabinet door."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The door beads with water."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The water runs down the door."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The beads form where the steam meets the door."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The steaming comes first and the beading follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam rises to the door and the water on it runs downward in drips toward the counter.",
+      "fail": "A run travels up the door; or the steam sinks from the kettle to the counter; or water gathers along the door's top edge and stays; or a drip leaves the door and rises."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The beading only builds while the steam keeps arriving, and runs only advance downward.",
+      "fail": "The door dries while steam still plays on it; or the beads grow and shrink in turn; or the door is wet before any steam reaches it; or a run retreats up the door."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The water forms on the door where the steam reaches it and not on the hot kettle itself.",
+      "fail": "Beads form on the kettle's hot body while the door stays dry; or the door beads in a place the steam never reaches; or the steam plays on the door and it stays dry to the end of the clip; or the door beads evenly all over while the plume hits one spot."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The beads behave as water on a painted surface: rounded, merging when they touch and running as streaks, and the door stays a rigid panel.",
+      "fail": "Touching drops overlap without merging; or drops jump about on the door; or the door's paint bubbles and peels as the water runs; or the beads turn to frost on the warm door."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The door keeps its flat panel shape on its hinges and the kettle keeps its shape; nothing passes through either.",
+      "fail": "The door bends or bows; or a second door appears; or water passes through the door into the cabinet; or the kettle changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The door's colour and handle, the kettle and the counter stay the same.",
+      "fail": "The door changes colour; or the handle changes shape; or items on the counter rearrange."
+    }
+  ]
+}

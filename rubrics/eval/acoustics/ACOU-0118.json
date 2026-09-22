@@ -1,0 +1,75 @@
+{
+  "id": "ACOU-0118",
+  "caption": "A sewing machine runs at speed, and its needle bar blurs up and down while the table beneath it trembles.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A sewing machine on a table, running."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The needle bar blurs up and down."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The table trembles."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The speed is high: the needle is a blur."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The trembling happens while the needle moves."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The needle bar moves straight up and down in its housing and the table trembles only while the machine runs.",
+      "fail": "The needle bar wanders sideways out of its housing; or the table trembles while the needle is sharp and still; or the trembling goes on after the machine has stopped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "While the needle blurs, the machine body and the table tremble; when the needle stops they are still.",
+      "fail": "The needle blurs at speed and the machine body and table stand dead still; or the needle stops and its blur remains; or the hand wheel is sharp and still while the needle blurs."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The machine rests on the table.",
+      "fail": "The machine lifts; or tilts and hangs; or rises."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The needle and table are rigid; the blur is motion, not bending.",
+      "fail": "The needle bends; or the table top ripples like water; or the machine body flexes."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One machine with one needle; nothing passes into the table.",
+      "fail": "A second needle appears; or the needle vanishes; or the machine sinks into the table; or turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The machine's colour, the table pattern and the thread stay the same.",
+      "fail": "The machine changes colour; or the table pattern changes; or the thread changes colour."
+    }
+  ]
+}

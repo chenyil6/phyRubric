@@ -1,0 +1,76 @@
+{
+  "id": "MECH-0071",
+  "caption": "A jogger comes to a wide puddle on a path, jumps over it, and lands on the far side.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A jogger runs along a path toward a wide puddle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The jogger jumps over the puddle."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The jogger lands on the far side."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The puddle is wide enough to need a jump rather than a step."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The run-up comes first, then the jump, then the landing."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The jogger follows one shallow arc from take-off to landing, the running speed carrying across the puddle.",
+      "fail": "The jogger rises straight up and comes down on the near side; or hangs in the air; or changes direction in mid-air."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "After the peak the jogger comes down and lands on the far side.",
+      "fail": "The jogger hovers over the puddle; or rises again after starting down; or lands and bounces up high."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The run carries into the jump, and after landing the jogger runs on or stops by taking steps.",
+      "fail": "The jogger slides forward on landing with feet planted; or is carried backward after landing; or speeds up in mid-air."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The legs swing forward for the landing and bend as the feet take the weight, and the path takes the landing.",
+      "fail": "The jogger lands stiff as a board; or sinks into the path on landing; or the path ripples under the landing."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One jogger keeps limbs, number and shape, and does not pass through the ground.",
+      "fail": "A limb stretches, detaches or vanishes; or the jogger passes through the path; or a second figure appears."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The jogger's clothing, the puddle and the path stay the same.",
+      "fail": "The clothing changes colour; or the puddle moves along the path between frames; or the surroundings rearrange."
+    }
+  ],
+  "note": "Biomechanics scene: the jogger is kept because the body is the projectile. Running form is not judged; only the arc and the order of take-off, flight and landing."
+}

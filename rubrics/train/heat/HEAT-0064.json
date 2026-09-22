@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0064",
+  "caption": "A pan of water on a stove is at a boil, and the burner is turned off; the bubbling dies down and only faint steam remains.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pan of boiling water sits on a hob."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The burner is turned off."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The bubbling dies down."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Faint steam still rises afterwards."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The bubbling is vigorous before the knob is turned."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is boiling, knob turned, bubbling eased."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The bubbling begins to ease after the knob is turned, and not before.",
+      "fail": "The bubbling eases before the knob is touched; or the knob is turned and the water churns as hard as before to the end of the clip; or the boil grows after the knob is turned off; or the churn stops before the hand reaches the knob."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The easing runs one way: the churn dies down and the water does not come back to a rolling boil with the burner off.",
+      "fail": "The water returns to a rolling boil with the burner off; or the bubbling eases and surges in turn; or the churn stops in a single frame with the surface instantly flat; or the steam thickens after the burner is off."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The remaining bubbles rise to the surface and the faint steam rises above the pan.",
+      "fail": "Bubbles sink from the surface downward; or the steam sinks over the rim and pools on the hob; or the steam pours downward from the pan; or bubbles hang still in the water."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water settles as a liquid: the surface goes from churning to shifting to nearly flat and finds its level.",
+      "fail": "The surface holds its churned shape frozen in place; or the water stands in a heap above its level; or the water sets solid; or the surface keeps a fixed pattern of peaks after the churn has stopped."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One pan of water on one hob; the water stays in the pan.",
+      "fail": "Water passes through the pan's wall; or the level jumps up with nothing added; or a second pan appears; or the pan changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The pan, the burner and the surroundings stay the same.",
+      "fail": "The pan changes colour; or the burner's knob moves by itself; or items around the hob rearrange."
+    }
+  ],
+  "note": "How quickly the boil dies down is not judged, only that it eases after the knob is turned and does not return."
+}

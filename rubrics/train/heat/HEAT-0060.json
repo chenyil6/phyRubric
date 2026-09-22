@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0060",
+  "caption": "Water is ladled onto the hot stones of a sauna, and a burst of steam rises off the stones with a hiss.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Hot stones sit in a sauna."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Water is ladled onto the stones."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A burst of steam rises off the stones."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "A ladle is the water's source."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The steam fills the space above the stones."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The pour comes first and the steam follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The steam leaves the stones going up and fills the space above them, spreading and thinning.",
+      "fail": "The steam pours down off the stones and pools on the floor; or sinks below the stones; or hangs as a fixed shape without rising; or streams straight down from the ladle."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The burst comes when the water lands and then eases, and the plume moves outward and away.",
+      "fail": "The steam bursts before the water reaches the stones; or the plume runs back into the stones; or a puff retreats toward the stones; or the burst grows steadily with no more water poured."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The water that lands turns to steam rather than staying pooled on the hot stones.",
+      "fail": "The poured water lies in a pool on the stones and stays; or water runs off the stones as a stream and gathers below; or the water goes with no steam appearing; or steam appears above the stones with no water poured."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water falls as a thin liquid and the steam is a soft cloud that spreads and fades; the stones stay hard where no water fell.",
+      "fail": "The water bounces off the stones as a solid lump; or the steam holds a fixed rigid shape; or the stones sag or crumble as the water lands; or the steam pours like a liquid."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The stones keep their number and shapes in their basket and the ladle stays a ladle.",
+      "fail": "A stone vanishes; or a stone changes into another object; or the stones merge into one lump; or the ladle passes through the stones."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The stones' colour away from the water, the basket and the room's wood stay the same.",
+      "fail": "The stones change colour where no water fell; or the basket changes shape; or the wood panelling changes pattern."
+    }
+  ],
+  "note": "The hiss is sound and is not judged. Who ladles the water is not judged."
+}

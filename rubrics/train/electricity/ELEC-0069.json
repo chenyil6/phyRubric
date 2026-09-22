@@ -1,0 +1,81 @@
+{
+  "id": "ELEC-0069",
+  "caption": "A charger already plugged into the wall is connected to a laptop, and the small light on the connector comes on.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A laptop is present."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A charger cable with a connector at its free end."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The connector is pushed into the laptop."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The small light on the connector comes on."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The charger's other end is already plugged into the wall."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is connect, then light."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The connector light is dark while the connector is loose and comes on when it seats in the laptop's port, and only then.",
+      "fail": "The connector is seated and its light stays dark; or the light is lit while the connector is still away from the laptop; or the laptop's own charging light comes on while the connector's light stays dark."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once seated the light stays on while the connector stays in the port.",
+      "fail": "The light goes out again with the connector still seated; or switches between lit and dark while the connector is untouched; or the connector backs out of the port by itself."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The screen's battery indicator changes to charging when the connector seats and not before.",
+      "fail": "The screen shows a charging symbol before the connector reaches the port; or the screen goes dark as the connector seats; or the screen's picture changes to a different one at the moment of connecting.",
+      "precondition": "The laptop's screen is on and facing the viewer."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cable hangs slack from the connector in a curve and stays attached to it.",
+      "fail": "The cable stands rigid in the air; or stretches like elastic as the connector is moved; or floats above the desk."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One laptop and one connector on one cable; the connector enters the port rather than the laptop's body; fingers stay outside the laptop.",
+      "fail": "The connector passes into the laptop's side away from the port; or a second connector or cable appears; or the connector vanishes; or the laptop changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The laptop's colour, the cable's colour and the desk stay the same apart from the light.",
+      "fail": "The laptop changes colour; or the cable changes colour or thickness; or the port moves along the laptop's side."
+    }
+  ]
+}

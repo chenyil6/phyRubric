@@ -1,0 +1,80 @@
+{
+  "id": "HEAT-0036",
+  "caption": "A bottle of water taken from a very cold freezer while still liquid is tapped against a table, and the water inside turns to slush from the top down within seconds.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A bottle of clear liquid water."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The bottle is tapped against a table."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The water turns to slush."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The slush spreads through the bottle."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The water is clear before the tap."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The tap comes first and the freezing follows."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The freezing only spreads: the cloudy front advances through the liquid and the frozen part stays frozen.",
+      "fail": "A cloudy area turns clear again; or the front retreats to where it started; or the water clears and clouds in turn; or the whole bottle clouds at once before the tap."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The water goes from a liquid that sloshes to a slush that holds its shape and no longer sloshes; the bottle stays a rigid bottle.",
+      "fail": "The frozen water sloshes freely when the bottle is tilted; or the slush pours out as a thin liquid; or the bottle collapses inward as the water freezes; or the slush turns into a clear hard block with no cloudiness."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The water is clear and still until the bottle is struck, and the change begins at that moment.",
+      "fail": "The water clouds before the bottle is struck; or the bottle is struck and the liquid stays clear and sloshing to the end of the clip; or the clouding begins and stops before the tap lands."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The bottle stays where it is put and the slush stays inside it; the liquid's surface stays level while the bottle is upright.",
+      "fail": "The bottle lifts off the table; or the water's surface tilts and stays tilted with the bottle upright; or slush rises out of the bottle's neck with the cap on."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One bottle; the water inside stays the same water and neither appears nor vanishes.",
+      "fail": "The water's level jumps; or a second bottle appears; or the slush passes through the bottle's wall; or the bottle vanishes."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The bottle's label and cap and the table stay the same.",
+      "fail": "The label changes; or the cap changes colour; or the table's surface changes pattern."
+    }
+  ]
+}

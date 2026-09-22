@@ -1,0 +1,81 @@
+{
+  "id": "HEAT-0130",
+  "caption": "A match is set to a pile of dry leaves, and the fire spreads across the pile with smoke rising from it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A pile of dry leaves."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A match is set to the pile."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "Flames spread across the pile."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Leaves blacken and shrink."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "Smoke rises from the pile."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The flames spread outward from where the match touched."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The burn advances outward from the lit spot and burnt leaves stay black and shrunken.",
+      "fail": "Blackened leaves turn green or pale again; or the flame front retreats leaving unburnt leaves behind it; or the fire starts at a spot no flame reached; or ash gathers back into whole leaves."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "gravity_direction",
+      "expect": "The flames point upward from the pile and the smoke rises, while ash and burnt fragments settle down.",
+      "fail": "The flames point downward into the ground; or the smoke sinks and pools around the pile; or burnt fragments rise steadily and stay aloft; or the flames hang below the pile."
+    },
+    {
+      "id": "P3",
+      "severity": "core",
+      "type": "permanence_count",
+      "expect": "The leaves in the pile are the leaves that burn: they shrink to ash rather than vanishing at a stroke, and none appear.",
+      "fail": "The pile vanishes in a single frame while still whole; or new leaves appear on the burning pile; or a leaf vanishes leaving no ash; or the pile grows as it burns."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "Where the flames reach, the leaves darken, curl and smoke, and leaves the flames have not reached stay dry and pale.",
+      "fail": "Leaves far from the flames blacken while those in the flames stay pale; or the flames pass over leaves and leave them green and flat; or smoke rises from a part of the pile with no flame or char."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "The pile stays a pile of leaves that burns down and the ground below stays ground.",
+      "fail": "The leaves turn into another material as they burn; or the ground opens up under the pile; or a second pile appears already burning; or the flames pass through the ground."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The ground around the pile and the surroundings stay the same.",
+      "fail": "The ground changes texture away from the fire; or the background changes between frames; or the unburnt leaves change colour."
+    }
+  ],
+  "note": "Who strikes the match is not judged."
+}

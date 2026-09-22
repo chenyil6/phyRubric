@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0261",
+  "caption": "Batteries are slid into a toy keyboard whose power switch is already on, and its keys light up.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A toy keyboard with its power switch on and a battery compartment open."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Batteries are slid into the compartment."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The keys light up."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The keys are dark before the batteries are in."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is batteries in, then keys lit."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The keys light once the batteries are seated, and only then.",
+      "fail": "The batteries are in and the keys stay dark to the end of the clip; or the keys are lit before the batteries reach the keyboard; or the keys light with the batteries lying loose; or the keys light while a battery is still half out."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "Once lit, the keys stay lit for the rest of the clip.",
+      "fail": "The keys go dark again with the batteries in; or flicker; or light and go out repeatedly; or the batteries slide back out by themselves."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "Each battery slides into its slot along the slot's length and seats with a stop.",
+      "fail": "A battery enters through the keyboard's casing away from the compartment; or floats into place; or seats and then pops out by itself; or two batteries occupy one slot."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The keyboard stays put as the batteries go in; its keys do not press themselves.",
+      "fail": "The keyboard slides or lifts; or keys go down by themselves; or the compartment lid snaps shut on its own."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The batteries enter the compartment and are seen there; none passes through the casing; fingers pass through nothing.",
+      "fail": "A battery passes through the casing; or a battery vanishes in the hand; or an extra battery appears; or the keyboard changes shape."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The keyboard's colours and key layout stay the same apart from the light.",
+      "fail": "The keyboard changes colour; or keys change layout; or the batteries change size or label."
+    }
+  ]
+}

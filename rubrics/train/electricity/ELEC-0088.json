@@ -1,0 +1,75 @@
+{
+  "id": "ELEC-0088",
+  "caption": "Lightning flashes outside an empty parked car in a rainstorm, and the inside of the car lights up through the rain-streaked windows for an instant.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A parked car with its interior in view and no one inside."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Rain streaks the windows."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "A flash from outside lights the interior for an instant."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The car is stationary: the scene outside the windows does not move past."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The interior is dim before and after the flash."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The brightening is brief: the cabin lights up and returns to dim; flashes may repeat but each ends.",
+      "fail": "The cabin stays lit to the end of the clip after the flash; or brightens steadily; or the dashboard or dome light comes on at the flash and stays on; or the flash fades in slowly."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The light enters through the windows: the glass is the brightest part, surfaces facing the windows brighten most, and pillars and seat backs throw shadows away from the windows.",
+      "fail": "The cabin brightens evenly with no direction; or the windows stay dark while the cabin lights up; or the light comes from inside the car with the windows unchanged; or shadows point toward the windows."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Rain runs down the windows and falls past them downward.",
+      "fail": "Streaks on the glass run upward; or the water on the glass flows toward the roof; or rain outside rises or hangs still."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The car and its contents stay still at the flash: nothing inside moves and the car does not rock.",
+      "fail": "Items inside shift at the flash; or the steering wheel turns by itself; or a door opens; or the car rocks at the instant of the flash."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "The cabin's contents are the same before, during and after: the same seats, mirror, dashboard and items; the flash reveals what was there.",
+      "fail": "Items appear or vanish between dim and lit frames; or a person appears in a seat; or the dashboard changes layout; or a window changes shape or place."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The seats' colours, the dashboard and the view outside keep their colours apart from brightness.",
+      "fail": "The seats change colour rather than brightness; or the dashboard changes colour; or the scene outside the windows jumps to a different place."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0276",
+  "caption": "Lightning flashes over a wet street at night, and the sky and the wet road brighten for an instant while the streetlamps burn steadily throughout.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wet street at night with streetlamps lit."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Lightning flashes over the street."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The sky and the wet road brighten for an instant."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The streetlamps burn steadily throughout."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The road looks wet: shiny or with puddles."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is dark, flash, dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The flash lights the road and sky together: the wet surface and puddles mirror the lit sky during the flash and darken with it.",
+      "fail": "The sky flashes while the wet road stays as dark as before; or the road brightens while the sky stays dark; or the road's reflection stays lit after the sky is dark; or the reflection appears before the sky flashes."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The streetlamps keep their steady glow through the flash, neither brightening nor going out; nothing in the street moves at the flash.",
+      "fail": "A streetlamp goes out at the flash; or the lamps brighten with the flash; or all the lamps change together; or parked cars or bins shift at the flash."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The flash is brief: sky and road return to dark; flashes may repeat but each ends.",
+      "fail": "The sky stays lit for the rest of the clip; or brightens steadily; or the flash fades in slowly; or the sky turns to daylight."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "permanence_count",
+      "expect": "The buildings, lamps, cars and puddles are the same across dark and lit frames.",
+      "fail": "Buildings or cars appear or vanish between frames; or lamp posts move; or puddles appear or vanish; or a lamp post duplicates."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "solidity",
+      "expect": "The street stays a street: puddles are thin water on a solid surface; buildings keep their shape; nothing passes through anything.",
+      "fail": "A puddle swallows an object; or a building changes shape; or a bolt passes through a building and lights its inside; or the road ripples like open water."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The lamps' colour, the buildings and the road markings stay the same apart from brightness.",
+      "fail": "The lamps change colour; or the buildings change colour; or the road markings change."
+    }
+  ]
+}

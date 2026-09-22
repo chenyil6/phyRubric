@@ -1,0 +1,70 @@
+{
+  "id": "OPT-0073",
+  "caption": "A car drives along a canal-side road, and its reflection travels upside down on the water beside it.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A car drives along a canal-side road."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Its reflection travels upside down on the water beside it."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The reflection keeps pace with the car."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The reflection is missing where reeds or a boat break the surface."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The reflection keeps pace with the car and is missing where reeds or a boat break the surface.",
+      "fail": "It lags; or stays still while the car moves; or it shows across reeds as if they were not there."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The reflection is inverted, the car's shape hanging down from the bank.",
+      "fail": "It is upright; or a different vehicle; or it is far from the bank's line."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The reflection does not move on its own.",
+      "fail": "It moves with the car stopped; or drifts along the canal."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is liquid: the reflection wavers with the surface.",
+      "fail": "It is rigid and sharp on a plainly rippled surface; or it wavers on glassy water; or the water flows uphill."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One car and one reflection; the reflection stays on the water.",
+      "fail": "A second car appears; or the reflection rises off the water; or the car vanishes; or the car drives into the canal."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The car's colour and the canal bank stay the same.",
+      "fail": "The car changes colour; or the bank rearranges; or the reeds change."
+    }
+  ]
+}

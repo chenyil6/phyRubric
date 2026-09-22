@@ -1,0 +1,76 @@
+{
+  "id": "OPT-0196",
+  "caption": "Blue paint is dabbed onto a wet patch of yellow watercolour, and the colours bleed into each other making green where they meet.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wet patch of yellow watercolour is on paper."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "Blue paint is dabbed onto it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The colours bleed into each other."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "Green forms where they meet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pure colours remain farther from the join."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "process_direction",
+      "expect": "The green forms along the boundary and widens as the paint spreads; it does not retreat.",
+      "fail": "The green shrinks; or the colours separate again; or green appears where the paints have not met."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The mix is green, and the pure yellow and blue remain at the edges.",
+      "fail": "The mix is a colour other than green; or the pure colours change; or the whole patch turns one colour at once."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "Wet watercolour bleeds and feathers on the paper.",
+      "fail": "It stays as hard-edged blobs; or beads up and rolls; or the paper stays dry."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The paint spreads only where wet and where dabbed.",
+      "fail": "It jumps across dry paper; or the paper moves; or the brush moves by itself."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One sheet and one brush.",
+      "fail": "The sheet duplicates; or the brush vanishes; or paint appears from nowhere."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The paper and the table stay the same.",
+      "fail": "The paper changes shape; or the table changes; or the brush changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "MECH-0295",
+  "caption": "A wet paper towel is laid over the top of an upright bottle, and it drapes and clings to the bottle's shape.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A wet paper towel is laid over the top of an upright bottle."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "It drapes down."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It clings to the bottle's shape."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The towel is wet."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "It folds over the shoulders and hangs along the sides, clinging.",
+      "fail": "It stays flat like a lid; or slides off; or is rigid."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "It shows the shape beneath and keeps its own size.",
+      "fail": "The bottle's shape changes; or the towel grows; or it shrinks."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "It hangs down.",
+      "fail": "It rises; or floats; or stands out sideways."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "solidity",
+      "expect": "It lies on the bottle, not through it.",
+      "fail": "It passes through; or the bottle passes through it; or the hands pass through."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One towel and one bottle keep their number.",
+      "fail": "The towel duplicates; or the bottle vanishes; or the towel turns into another object."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The towel and the bottle stay the same.",
+      "fail": "The towel changes colour; or the bottle changes; or the background rearranges."
+    }
+  ]
+}

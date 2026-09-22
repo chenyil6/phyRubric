@@ -1,0 +1,66 @@
+{
+  "id": "OPT-0153",
+  "caption": "A match is struck in a dark cave, and the flame lights the rock walls around it for a moment.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A match is struck in a dark cave."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The flame lights the rock walls around it for a moment."
+    },
+    {
+      "id": "S3",
+      "weight": "minor",
+      "check": "The far reaches stay dark."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The nearby walls brighten with a warm flicker and the far reaches stay dark.",
+      "fail": "The far walls are as bright as the near; or the near walls stay dark; or the light comes from elsewhere."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "attribute_drift",
+      "expect": "The light is warm and flickers with the flame.",
+      "fail": "It is a steady white; or a different colour; or the walls change colour rather than brightness."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "process_direction",
+      "expect": "The light fades as the match burns down.",
+      "fail": "It brightens as the match burns; or stays constant; or goes out and returns."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "The flame points upward.",
+      "fail": "It points down or sideways in still air; or detaches; or floats."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One match and one flame.",
+      "fail": "A second flame appears; or the match vanishes; or the flame becomes solid."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The rock and the cave stay the same.",
+      "fail": "The rock changes shape; or the cave rearranges; or the match changes."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

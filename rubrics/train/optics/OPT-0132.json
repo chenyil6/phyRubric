@@ -1,0 +1,71 @@
+{
+  "id": "OPT-0132",
+  "caption": "A patch of a wet window is wiped dry with a cloth, and the view through the patch becomes sharp.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A window is wet."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "A patch is wiped dry with a cloth."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The view through the patch becomes sharp."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The view outside the patch stays blurred."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The clear patch matches the wiped area and the view outside it stays blurred by the water.",
+      "fail": "The whole pane clears from one wipe; or the wiped patch stays blurred; or a clear patch appears where nothing was wiped."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The outside scene does not change.",
+      "fail": "The scene changes; or a different view appears in the patch; or the glass warps."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The water is a film the cloth removes.",
+      "fail": "It is a solid coating; or it reforms instantly; or the cloth passes through the glass."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The cloth moves only with the hand.",
+      "fail": "It wipes by itself; or floats; or jumps."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One window and one cloth.",
+      "fail": "The window duplicates; or the cloth vanishes; or the cloth passes through the pane."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The frame and the room stay the same.",
+      "fail": "The frame changes; or the room rearranges; or the cloth changes colour."
+    }
+  ],
+  "note": "The hand is the minimal trigger; the person is not judged."
+}

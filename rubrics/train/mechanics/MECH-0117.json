@@ -1,0 +1,80 @@
+{
+  "id": "MECH-0117",
+  "caption": "An inflated balloon is squeezed between two palms; it flattens between the hands and bulges out at the sides, then rounds out again when the hands let go.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "An inflated balloon is held between two palms."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The palms squeeze it."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "It flattens between the hands."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "It bulges out at the sides."
+    },
+    {
+      "id": "S5",
+      "weight": "core",
+      "check": "It rounds out again when the hands let go."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The squeeze comes first, then the flatten and bulge, then the release."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "material_response",
+      "expect": "The balloon flattens where pressed and bulges where not, keeping roughly the same overall size, and rounds out on release.",
+      "fail": "It stays flat after the hands open; or it shrinks as if deflating while squeezed; or it does not deform at all."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "It stays one balloon and does not pass through the hands or burst.",
+      "fail": "The hands pass through the balloon; or it bursts and reforms; or it splits into two balloons."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The balloon changes only while the hands act and is still afterward.",
+      "fail": "It pulsates on its own; or flies off; or deforms before the hands close."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "gravity_direction",
+      "expect": "Released, it stays in the hands or drops slowly.",
+      "fail": "It shoots away like a jet; or rises steadily to the ceiling with nothing holding it; or hangs in mid-air away from the hands."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One balloon keeps its number.",
+      "fail": "The balloon vanishes or a second appears; or it turns into another object; or it merges with a hand."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The balloon's colour and the background stay the same.",
+      "fail": "The balloon changes colour; or the hands change; or the background rearranges."
+    }
+  ]
+}

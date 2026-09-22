@@ -1,0 +1,75 @@
+{
+  "id": "OPT-0022",
+  "caption": "A ceiling fan is switched on under a bright bulb, and the spinning blades throw moving shadows across the room.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A ceiling fan is under a bright bulb."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The fan is switched on."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "The spinning blades throw moving shadows across the room."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadows sweep as fast as the blades."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The fan starts first and the shadows move with it."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "The shadows sweep around as fast as the blades and stop when the fan stops.",
+      "fail": "The shadows are still while the blades turn; or they keep sweeping after the fan stops; or they sweep before the fan starts."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "shape_identity",
+      "expect": "The shadows are blade shapes, one per blade, radiating from the fan's centre.",
+      "fail": "There are more shadows than blades; or they are unrelated shapes; or they merge into a solid disc while the blades are plainly separate."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "The shadows appear on the surfaces below and beside the fan, away from the bulb.",
+      "fail": "They appear on the ceiling above the bulb; or on the bulb side of the blades; or they are missing with the bulb on."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "causeless_motion",
+      "expect": "The shadows move only while the blades turn, and the bulb stays steady.",
+      "fail": "The shadows sweep with the blades still; or the bulb flickers or moves; or the shadows change with nothing moving."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "One fan with its blades and one bulb.",
+      "fail": "A blade vanishes; or a second fan appears; or a shadow becomes solid; or the fan detaches."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The blades' colour and the room stay the same, and the shadows stay dark.",
+      "fail": "The blades change colour; or the shadows turn coloured; or the room rearranges."
+    }
+  ]
+}

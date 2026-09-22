@@ -1,0 +1,81 @@
+{
+  "id": "MECH-0006",
+  "caption": "A woman is jogging on a treadmill when the belt stops abruptly, and she lurches forward and grabs the handrails.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "A woman is jogging on a treadmill."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The belt stops abruptly."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "She lurches forward."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "She grabs the handrails."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "She is running rather than standing still before the belt stops."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The belt stops first, then the lurch, then the grab."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "She holds her place on the belt while it runs, and her lurch begins at the moment the belt stops.",
+      "fail": "She lurches forward while the belt is still running at speed; or she is thrown with no change in the belt visible; or she drifts along the stopped belt with nothing driving her."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "trajectory_momentum",
+      "expect": "The lurch carries her forward, the way she was running, onto the handrails, and she settles once she has caught them.",
+      "fail": "She is thrown backward off the rear of the treadmill when the belt stops; or she is thrown sideways off the deck; or she keeps sliding forward past the rails and off the front."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "missing_consequence",
+      "expect": "She catches herself on the rails: her hands reach them, close on them, and her forward motion ends there.",
+      "fail": "Her hands pass over the rails and she carries on forward; or she stops in mid-lurch before reaching the rails with nothing holding her; or the rails travel forward with her."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The rails and the frame stay rigid under her weight and the belt lies flat on the deck.",
+      "fail": "A handrail bends or bows as she grabs it; or the frame wobbles like rubber; or the belt lifts off the deck in a wave."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "shape_identity",
+      "expect": "One runner and one treadmill keep their number and shape, and nothing passes through anything.",
+      "fail": "Her hand passes through a handrail; or a limb detaches, vanishes or a second one appears; or she sinks into the deck; or the treadmill turns into another machine."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "Her clothing, the treadmill's console and the room behind stay the same.",
+      "fail": "Her clothing changes colour; or the console moves to the other side of the frame; or the room behind rearranges between frames."
+    }
+  ],
+  "note": "Inertia scene: the runner is kept because her body is what carries the momentum. Her running form and how fast she was jogging are not judged; only when and which way she is thrown."
+}

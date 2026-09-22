@@ -1,0 +1,80 @@
+{
+  "id": "ELEC-0289",
+  "caption": "Two toy train cars are pushed together end to end and their magnetic couplers push apart; one car is turned around and the couplers snap together.",
+  "sa": [
+    {
+      "id": "S1",
+      "weight": "core",
+      "check": "Two toy train cars with magnetic couplers."
+    },
+    {
+      "id": "S2",
+      "weight": "core",
+      "check": "The cars are pushed together end to end and the couplers push apart."
+    },
+    {
+      "id": "S3",
+      "weight": "core",
+      "check": "One car is turned around."
+    },
+    {
+      "id": "S4",
+      "weight": "core",
+      "check": "The couplers snap together."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The same two cars are used throughout."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is push apart, turn, snap together."
+    }
+  ],
+  "pc": [
+    {
+      "id": "P1",
+      "severity": "core",
+      "type": "causeless_motion",
+      "expect": "The cars move only when pushed or turned by hand and over the last small gap; while far apart nothing happens; once joined they stay joined and still.",
+      "fail": "A car moves while the other is still far away; or the joined pair drifts apart; or a car slides about after being set down; or the cars spring apart after joining with nothing pulling them."
+    },
+    {
+      "id": "P2",
+      "severity": "core",
+      "type": "missing_consequence",
+      "expect": "In the first orientation the couplers separate over the last gap; after one car is turned they pull together over that gap and stay joined.",
+      "fail": "The couplers join in the first orientation; or after the turn they stop with a gap and stay that way; or they touch and slide apart after the turn; or the cars join and separate repeatedly."
+    },
+    {
+      "id": "P3",
+      "severity": "major",
+      "type": "trajectory_momentum",
+      "expect": "The pushed-apart car slides straight back along the line of the track; the snap is along that line and the cars meet coupler to coupler.",
+      "fail": "A car flies off sideways when pushed apart; or the cars jump together from far away; or a car lifts off the track; or the cars meet side to side."
+    },
+    {
+      "id": "P4",
+      "severity": "major",
+      "type": "material_response",
+      "expect": "The cars are rigid toys that keep their shape; the couplers stay small hard fittings.",
+      "fail": "A car squashes or bends; or the couplers stretch like rubber; or the cars flex as they roll."
+    },
+    {
+      "id": "P5",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Two cars throughout, joined but separate at the end; nothing merges, vanishes or passes through anything.",
+      "fail": "The two cars merge into one; or a third car appears; or a car vanishes during the turn; or one car passes through the other."
+    },
+    {
+      "id": "P6",
+      "severity": "minor",
+      "type": "attribute_drift",
+      "expect": "The cars' colours and markings and the track stay the same.",
+      "fail": "A car changes colour or markings; or the turned car becomes a different car; or the track changes."
+    }
+  ]
+}
