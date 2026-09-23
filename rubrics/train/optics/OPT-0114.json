@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "Coins lie on the bottom of a clear fountain."
+      "check": "Coins lie on the bottom of a fountain."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The coins are visible through the water throughout."
+      "check": "The fountain is clear."
     }
   ],
   "pc": [

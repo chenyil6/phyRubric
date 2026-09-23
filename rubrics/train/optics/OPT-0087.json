@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A soap bubble drifts past a bright window."
+      "check": "A soap bubble drifts past a window."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "A tiny reflection of the window curves across the bubble's surface."
+      "check": "A reflection of the window curves across the bubble's surface."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflection moves across the bubble as it drifts."
+      "check": "The window is bright."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection vanishes when the bubble pops."
+      "check": "The reflection is tiny."
     }
   ],
   "pc": [

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A straight stick is lowered into a clear pond."
+      "check": "A stick is lowered into a pond."
     },
     {
       "id": "S2",
@@ -15,12 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The apparent bend is at the surface."
+      "check": "The stick is straight out of the water."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The stick is straight when lifted out."
+      "check": "The pond is clear."
     }
   ],
   "pc": [

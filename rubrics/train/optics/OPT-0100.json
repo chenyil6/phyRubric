@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "Trees outside are seen through the wet glass."
+      "check": "Trees outside are seen through the glass."
     },
     {
       "id": "S3",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The distortion moves downward with the drops."
+      "check": "The distortion is along the running water, not everywhere."
     }
   ],
   "pc": [

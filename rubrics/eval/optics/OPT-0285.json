@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A car with its headlights on turns a corner at night."
+      "check": "A car with its headlights on turns a corner."
     },
     {
       "id": "S2",
@@ -15,7 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "Each parked car brightens as the beams cross it and darkens after."
+      "check": "It is night."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The parked cars form a row of several cars."
     }
   ],
   "pc": [

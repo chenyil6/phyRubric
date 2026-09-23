@@ -20,12 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The lid's jumps come with the puffs of steam."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The rattling stops when the heat is turned down."
+      "check": "The lid stays on the pot throughout; it is not removed."
     }
   ],
   "pc": [

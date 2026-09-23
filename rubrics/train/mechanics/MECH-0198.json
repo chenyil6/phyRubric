@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A horse gallops across an open field."
+      "check": "A horse runs across an open field."
     },
     {
       "id": "S2",

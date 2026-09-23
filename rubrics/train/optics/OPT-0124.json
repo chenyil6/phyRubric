@@ -15,7 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The view moves continuously."
+      "check": "The view is from inside a train carriage."
     }
   ],
   "pc": [

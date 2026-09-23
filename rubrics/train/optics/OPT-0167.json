@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A flashlight shines through cupped fingers."
+      "check": "A flashlight shines through fingers."
     },
     {
       "id": "S2",
@@ -15,7 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The light beyond the hand is dim."
+      "check": "The fingers are cupped."
     }
   ],
   "pc": [

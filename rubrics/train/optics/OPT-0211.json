@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A stage has a white set and curtains."
+      "check": "A stage has a set and curtains."
     },
     {
       "id": "S2",
@@ -15,15 +15,20 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "The set and curtains all look yellow at once."
+      "check": "The set and curtains look yellow."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Shadowed folds stay darker."
+      "check": "The set and curtains are white before the light."
     },
     {
       "id": "S5",
+      "weight": "minor",
+      "check": "The change is all at once."
+    },
+    {
+      "id": "S6",
       "weight": "minor",
       "check": "The light comes first and the colour changes with it."
     }

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A coin lies at the bottom of an empty clear jug."
+      "check": "A coin lies at the bottom of an empty jug."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The effect grows as the water deepens."
+      "check": "The jug is clear."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pour comes first and the apparent lift comes with it."
     }
   ],
   "pc": [

@@ -10,17 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "It is fading as the rain moves away and the sky clears."
+      "check": "It is fading."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The rainbow keeps its arc shape while visible."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The rainbow is opposite the sun."
+      "check": "The rain is moving away and the sky is clearing."
     }
   ],
   "pc": [

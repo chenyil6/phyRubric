@@ -20,12 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The strip hangs still when it is held away from the radiator."
+      "check": "The strip is held above the radiator, not beside it."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The strip rises rather than hanging straight down."
+      "check": "The lift is upward."
     }
   ],
   "pc": [

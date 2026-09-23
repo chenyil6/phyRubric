@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A paper screen stands in a dark room."
+      "check": "A paper screen stands in a room."
     },
     {
       "id": "S2",
@@ -15,12 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "A soft glow travels across the screen with it."
+      "check": "A glow travels across the screen with it."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The glow flickers with the candle."
+      "check": "The room is dark."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The glow is soft."
     }
   ],
   "pc": [

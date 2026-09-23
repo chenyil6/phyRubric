@@ -5,22 +5,27 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "The sun comes out from behind a cloud over a beach."
+      "check": "The sun comes out from behind a cloud."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "The sand and sea brighten all at once."
+      "check": "The sand and sea brighten."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "Sharp shadows appear."
+      "check": "The scene is a beach."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "It would dim again when the next cloud passes."
+      "check": "The brightening is all at once, not part by part."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sun emerges first and the brightening comes with it."
     }
   ],
   "pc": [

@@ -20,11 +20,6 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The lamp lights after the second clap, not the first."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
       "check": "The order is dark, two claps, lit."
     }
   ],

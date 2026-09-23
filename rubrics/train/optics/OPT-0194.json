@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A tub of clear water is present."
+      "check": "A tub of water is present."
     },
     {
       "id": "S2",
@@ -25,7 +25,12 @@
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The bath bomb fizzes as the colour spreads."
+      "check": "The water is clear before the drop."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is drop, billow, whole bath purple."
     }
   ],
   "pc": [

@@ -15,12 +15,12 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "Its dark silhouette appears on the screen over the slides."
+      "check": "Its silhouette appears on the screen over the slides."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The silhouette moves with the balloon."
+      "check": "The silhouette is dark."
     },
     {
       "id": "S5",

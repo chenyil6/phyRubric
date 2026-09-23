@@ -10,12 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The text seen through the lenses appears slightly larger than the text around the frames."
+      "check": "The text seen through the lenses appears larger than the text around the frames."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The enlargement moves with the glasses."
+      "check": "The enlargement is slight."
     }
   ],
   "pc": [

@@ -10,17 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "Its reflection travels upside down on the water beside it."
+      "check": "Its reflection travels on the water beside it."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflection keeps pace with the car."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The reflection is missing where reeds or a boat break the surface."
+      "check": "The reflection is upside down."
     }
   ],
   "pc": [

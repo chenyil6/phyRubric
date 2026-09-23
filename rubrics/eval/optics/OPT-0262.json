@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A dog trots along a jetty over a still lake."
+      "check": "A dog trots along a jetty over a lake."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "Its upside-down reflection trots beneath it in the water."
+      "check": "Its reflection trots beneath it in the water."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflection is joined to the jetty's reflection at the waterline."
+      "check": "The lake is still."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection blurs only where a ripple passes."
+      "check": "The reflection is upside down."
     }
   ],
   "pc": [

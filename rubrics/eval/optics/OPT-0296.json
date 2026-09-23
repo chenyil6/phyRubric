@@ -5,12 +5,12 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A white ball is on a white table."
+      "check": "A ball is on a table."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "A red lamp lights it from the left and a blue lamp from the right."
+      "check": "A red lamp lights it from one side and a blue lamp from the other."
     },
     {
       "id": "S3",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The ball looks magenta-white where both lights fall."
+      "check": "The ball and the table are white."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The red lamp is on the left and the blue lamp on the right."
     }
   ],
   "pc": [

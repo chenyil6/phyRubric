@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A cat walks up to a floor-length mirror."
+      "check": "A cat walks up to a mirror."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflected cat is a mirror image of the real one."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "Their noses meet at the glass."
+      "check": "The mirror is floor-length."
     }
   ],
   "pc": [

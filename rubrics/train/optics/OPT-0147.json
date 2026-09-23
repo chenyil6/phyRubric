@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A refrigerator stands in a dark kitchen."
+      "check": "A refrigerator stands in a kitchen."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The light widens as the door opens."
+      "check": "The kitchen is dark."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The door opens first and the light spills with it."
     }
   ],
   "pc": [

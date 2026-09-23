@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "Two identical white vases stand in a dark room."
+      "check": "Two vases stand in a dark room."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The far vase would brighten if moved toward the lamp."
+      "check": "The vases are identical and white."
     }
   ],
   "pc": [

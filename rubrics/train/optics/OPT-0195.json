@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "Snow falls under an orange streetlamp."
+      "check": "Snow falls under a streetlamp."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The tint fades with distance from the lamp."
+      "check": "The streetlamp is orange."
     }
   ],
   "pc": [

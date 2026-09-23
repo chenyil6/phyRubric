@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A ball is thrown across a sunlit yard."
+      "check": "A ball is thrown across a yard."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The throw comes first and the shadow tracks the flight."
+      "check": "The yard is sunlit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The throw comes first and the meeting at the landing comes last."
     }
   ],
   "pc": [

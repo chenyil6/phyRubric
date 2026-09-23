@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A white lamp lights a room."
+      "check": "A lamp lights a room."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The scarf glows from within."
+      "check": "The lamp is white before the scarf."
     },
     {
       "id": "S5",

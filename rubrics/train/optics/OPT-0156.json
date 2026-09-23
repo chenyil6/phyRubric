@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A laser pointer's red dot is on a projected slide."
+      "check": "A laser pointer's dot is on a projected slide."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The dot appears only while the button is pressed and disappears when released."
+      "check": "The dot is red."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The pointer moves first and the dot moves with it."
     }
   ],
   "pc": [

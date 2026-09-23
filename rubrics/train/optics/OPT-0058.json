@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection is gone wherever the cloth hangs and visible where it does not."
+      "check": "The cloth goes on first and the reflection disappears with it."
     }
   ],
   "pc": [

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A steel saucepan on a counter."
+      "check": "A saucepan on a counter."
     },
     {
       "id": "S2",
@@ -19,18 +19,13 @@
     },
     {
       "id": "S4",
-      "weight": "core",
-      "check": "The magnet stays on the pan when released."
+      "weight": "minor",
+      "check": "The saucepan is steel."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The magnet is moved by hand until the last gap, then jumps on its own."
-    },
-    {
-      "id": "S6",
-      "weight": "minor",
-      "check": "The order is approach, jump, hold."
+      "check": "The order is approach, jump, click on."
     }
   ],
   "pc": [

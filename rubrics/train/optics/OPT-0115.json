@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A clear plastic ruler is laid over a line of text."
+      "check": "A plastic ruler is laid over a line of text."
     },
     {
       "id": "S2",
@@ -15,7 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "There is at most a slight shift at the ruler's edges."
+      "check": "The ruler is clear plastic."
     }
   ],
   "pc": [

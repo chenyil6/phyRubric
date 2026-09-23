@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A glass of red wine stands on a white tablecloth."
+      "check": "A glass of red wine stands on a tablecloth."
     },
     {
       "id": "S2",
@@ -20,12 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The patch lies on the side away from the sun."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The patch moves when the glass moves."
+      "check": "The tablecloth is white."
     }
   ],
   "pc": [

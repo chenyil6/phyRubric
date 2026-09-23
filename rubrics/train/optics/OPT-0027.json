@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "The curtains of a sunny window are pulled open."
+      "check": "The curtains of a window are pulled open."
     },
     {
       "id": "S2",
@@ -15,7 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The bars of the frame's shadow match the frame's layout."
+      "check": "The window is sunny."
     },
     {
       "id": "S4",

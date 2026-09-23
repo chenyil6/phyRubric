@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A candle burns between two facing mirrors."
+      "check": "A candle burns between two mirrors."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The copies get smaller and dimmer further along the line."
+      "check": "The mirrors face each other."
     }
   ],
   "pc": [

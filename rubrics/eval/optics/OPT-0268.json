@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A dog drinks from a still pond."
+      "check": "A dog drinks from a pond."
     },
     {
       "id": "S2",
@@ -15,12 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflection is sharp until the tongue touches."
+      "check": "The pond is still."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection settles when the dog stops."
+      "check": "The tongue touches first and the ripples follow."
     }
   ],
   "pc": [

@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "Seen through the bricks it appears as a broken row of warped pieces."
+      "check": "Seen through the bricks it appears as a broken row of pieces."
     },
     {
       "id": "S3",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The ball looks whole and normal past the open edge of the wall."
+      "check": "The pieces are warped."
     }
   ],
   "pc": [

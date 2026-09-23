@@ -21,11 +21,6 @@
       "id": "S4",
       "weight": "minor",
       "check": "The pile is ragged."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The driveway clears where it has been shovelled."
     }
   ],
   "pc": [

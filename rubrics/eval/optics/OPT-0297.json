@@ -5,12 +5,12 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A white delivery van drives along a street."
+      "check": "A delivery van drives along a street."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "It passes from beneath orange sodium lamps to beneath white LED lamps."
+      "check": "It passes from beneath orange lamps to beneath white lamps."
     },
     {
       "id": "S3",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The colour changes as it passes from one kind of lamp to the next."
+      "check": "The van is white."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is amber first, white after."
     }
   ],
   "pc": [

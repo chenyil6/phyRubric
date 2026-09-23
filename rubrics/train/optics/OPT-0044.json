@@ -10,22 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The morning sun is on its left."
-    },
-    {
-      "id": "S3",
-      "weight": "core",
       "check": "Its shadow runs along the ground on its right."
     },
     {
-      "id": "S4",
+      "id": "S3",
       "weight": "minor",
-      "check": "The shadow stays attached at the wheels."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The shadow moves with the car."
+      "check": "The morning sun is on the car's left."
     }
   ],
   "pc": [

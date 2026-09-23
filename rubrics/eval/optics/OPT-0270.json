@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A car with a glossy black bonnet drives under a bridge."
+      "check": "A car drives under a bridge."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The change happens exactly as the car passes beneath."
+      "check": "The bonnet is glossy black."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is sky, bridge underside, sky again."
     }
   ],
   "pc": [

@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "A magnetic letter is pressed to the fridge and holds when let go."
+      "check": "A magnetic letter is stuck to the fridge and holds there."
     },
     {
       "id": "S3",

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A ball rolls along a sunny pavement."
+      "check": "A ball rolls along a pavement."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The ball's own shadow continues on the ground beyond."
+      "check": "The pavement is sunny."
     }
   ],
   "pc": [

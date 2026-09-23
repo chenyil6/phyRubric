@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A rowing boat drifts across a clear shallow bay in sunshine."
+      "check": "A rowing boat drifts across a shallow bay."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "Its shadow slides along the sandy bottom beneath it."
+      "check": "Its shadow slides along the bottom beneath it."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The shadow keeps the boat's outline."
+      "check": "The bay is clear and in sunshine."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow lies on the side away from the sun."
+      "check": "The bottom is sandy."
     }
   ],
   "pc": [

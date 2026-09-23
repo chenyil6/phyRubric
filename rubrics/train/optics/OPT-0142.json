@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "A dark wall is present."
+      "check": "A wall is present."
     },
     {
       "id": "S3",
@@ -20,12 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The flashlight turns or moves during the sweep."
+      "check": "The wall is dark apart from the spot."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The spot is a bright patch with a soft edge, brighter at its centre."
+      "check": "The flashlight is swept: it turns or moves during the clip."
     }
   ],
   "pc": [

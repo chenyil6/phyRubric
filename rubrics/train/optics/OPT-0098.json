@@ -25,12 +25,7 @@
     {
       "id": "S5",
       "weight": "minor",
-      "check": "There are several goldfish, orange in colour."
-    },
-    {
-      "id": "S6",
-      "weight": "minor",
-      "check": "The tank is transparent on the side facing the viewer."
+      "check": "There are several goldfish."
     }
   ],
   "pc": [

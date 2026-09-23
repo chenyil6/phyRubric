@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A car approaches from behind a parked car."
+      "check": "A car approaches a parked car from behind."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The image leaves the mirror as the car draws alongside."
+      "check": "The image appears first and grows after."
     }
   ],
   "pc": [

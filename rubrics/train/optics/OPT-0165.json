@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "They dim before the film starts."
+      "check": "They dim."
     },
     {
       "id": "S3",
@@ -25,7 +25,7 @@
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The dimming is gradual."
+      "check": "The dimming comes first and the seats fade with it."
     }
   ],
   "pc": [

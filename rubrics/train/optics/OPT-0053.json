@@ -14,13 +14,8 @@
     },
     {
       "id": "S3",
-      "weight": "core",
-      "check": "The reflection is upside down."
-    },
-    {
-      "id": "S4",
       "weight": "minor",
-      "check": "The reflection appears only within the puddle's edges."
+      "check": "The reflection is upside down."
     }
   ],
   "pc": [

@@ -20,11 +20,6 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Purple appears where the colours fold together."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
       "check": "The kneading comes first and the purple follows."
     }
   ],

@@ -10,17 +10,22 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "Its lights are turned up gradually."
+      "check": "Its lights are turned up."
     },
     {
       "id": "S3",
       "weight": "core",
-      "check": "The set becomes visible piece by piece as the brightness rises."
+      "check": "The set becomes visible as the brightness rises."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Shadows appear away from the lamps."
+      "check": "The lights come up gradually."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The set appears piece by piece."
     }
   ],
   "pc": [

@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "A spoonful of matcha powder is stirred in."
+      "check": "Matcha powder is stirred in."
     },
     {
       "id": "S3",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Green swirls spread from the spoon and even out."
+      "check": "The powder is a spoonful."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The stir comes first and the colour follows."
     }
   ],
   "pc": [

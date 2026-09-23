@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A bathroom window is fogged after a shower."
+      "check": "A bathroom window is fogged."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The view stays clear while the glass is dry."
+      "check": "The dryer blows first and the sharpening follows."
     }
   ],
   "pc": [

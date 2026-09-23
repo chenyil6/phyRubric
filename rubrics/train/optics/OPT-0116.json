@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A clear glass of water stands on a table in sunlight."
+      "check": "A glass of water stands on a table in sunlight."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The patch moves when the glass is moved."
+      "check": "The glass is clear."
     }
   ],
   "pc": [

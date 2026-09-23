@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A smart bulb lights a room with a white ceiling."
+      "check": "A bulb lights a room."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Surfaces the bulb does not reach are unchanged."
+      "check": "The ceiling is white before the switch."
     },
     {
       "id": "S5",

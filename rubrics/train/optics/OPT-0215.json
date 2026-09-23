@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A white cat sits by a window."
+      "check": "A cat sits by a window."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The glow is on the side facing the window."
+      "check": "The cat is white."
     }
   ],
   "pc": [

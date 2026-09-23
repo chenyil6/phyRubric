@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A car's side window is fogged from the inside."
+      "check": "A car's side window is fogged."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The view is sharp through the patch and blurred elsewhere."
+      "check": "The fog is on the inside of the window."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The blurred view comes first and the clear patch after."
     }
   ],
   "pc": [

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A rainbow appears in the mist at the foot of a waterfall on a sunny day."
+      "check": "A rainbow appears in the mist at the foot of a waterfall."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The rainbow sits within the mist opposite the sun."
+      "check": "The day is sunny before the cloud."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cloud comes first and the fade follows."
     }
   ],
   "pc": [

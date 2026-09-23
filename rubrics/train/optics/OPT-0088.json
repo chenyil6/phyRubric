@@ -10,17 +10,17 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The lamp shows as two small images in the lenses."
+      "check": "The lamp shows as images in the lenses."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The images are curved to the lenses."
+      "check": "There are two images, one in each lens."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The images show the lamp, not what is behind the glasses."
+      "check": "The images are small."
     }
   ],
   "pc": [

@@ -20,11 +20,6 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The glow is brightest where the flashlight is nearest the cloth."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
       "check": "The switch comes first and the glow follows."
     }
   ],

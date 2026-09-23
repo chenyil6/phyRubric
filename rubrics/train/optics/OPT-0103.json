@@ -5,17 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "The tiles on the floor of a clear pool are seen through the water."
+      "check": "The tiles on the floor of a pool are seen through the water."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "Their grid wavers slightly with the surface."
+      "check": "Their grid wavers with the surface."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The tiles are visible throughout."
+      "check": "The pool is clear."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The wavering is slight."
     }
   ],
   "pc": [

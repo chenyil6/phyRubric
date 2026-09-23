@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A patch of wet red paint is on a wall."
+      "check": "A patch of red paint is on a wall."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The untouched red stays red."
+      "check": "The red paint is wet."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The roller passes first and the pink streak follows."
     }
   ],
   "pc": [

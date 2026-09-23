@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A car approaches from behind another car."
+      "check": "A car approaches another car from behind."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The image is seen behind, not ahead."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The image grows as the car closes in."
+      "check": "The mirror is the rear-view mirror inside the car ahead, not a side mirror."
     }
   ],
   "pc": [

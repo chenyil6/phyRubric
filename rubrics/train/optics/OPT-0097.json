@@ -20,12 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The glass is clear enough to see the straw below the surface."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The bend appears once the straw is in the water, not before."
+      "check": "The straw goes in first and the bend appears after."
     }
   ],
   "pc": [

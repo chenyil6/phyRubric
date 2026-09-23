@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A person carries a full bucket of water in one hand."
+      "check": "A person carries a bucket of water in one hand."
     },
     {
       "id": "S2",

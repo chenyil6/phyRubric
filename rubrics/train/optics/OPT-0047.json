@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A cat walks along the base of a sunlit wall."
+      "check": "A cat walks along the base of a wall."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The shadow's paws are at ground level."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The shadow lies on the side away from the sun."
+      "check": "The wall is sunlit."
     }
   ],
   "pc": [

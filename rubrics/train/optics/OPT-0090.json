@@ -20,12 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The image is mirrored."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The ring slides out of view when the angle changes."
+      "check": "The order is open, angle, ring appears."
     }
   ],
   "pc": [

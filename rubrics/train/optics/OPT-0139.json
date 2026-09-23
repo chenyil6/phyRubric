@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The line returns to one straight line when the glass is lifted."
+      "check": "The glass is placed first and the break appears with it."
     }
   ],
   "pc": [

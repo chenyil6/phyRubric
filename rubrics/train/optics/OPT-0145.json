@@ -5,17 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A lighthouse beam sweeps around in the night."
+      "check": "A lighthouse beam sweeps around."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "It lights up the sea and cliffs in turn as it passes."
+      "check": "It lights up the sea and cliffs as it passes."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The beam rotates steadily."
+      "check": "It is night."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The sea and the cliffs are lit in turn, one after the other."
     }
   ],
   "pc": [

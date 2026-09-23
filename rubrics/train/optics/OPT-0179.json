@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "A drop of red food colouring is added to it."
+      "check": "Red food colouring is added to it."
     },
     {
       "id": "S3",
@@ -25,7 +25,7 @@
     {
       "id": "S5",
       "weight": "minor",
-      "check": "Red streaks appear first and blend toward an even pink."
+      "check": "The colouring is a single drop."
     },
     {
       "id": "S6",

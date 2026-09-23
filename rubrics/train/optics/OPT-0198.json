@@ -25,7 +25,12 @@
     {
       "id": "S5",
       "weight": "minor",
-      "check": "Green streaks spread with each stir and even out."
+      "check": "Only a little colouring is added."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The order is pour, stir, pale green."
     }
   ],
   "pc": [

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A phone lies face-up on a table in a dark room."
+      "check": "A phone lies on a table in a room."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The objects are lit on the sides facing the screen."
+      "check": "The phone lies face-up."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The room is dark."
     }
   ],
   "pc": [

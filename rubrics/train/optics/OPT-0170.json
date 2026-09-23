@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A firework bursts high in the night sky."
+      "check": "A firework bursts in the night sky."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "For a moment the rooftops below are lit."
+      "check": "The rooftops below are lit."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The light comes from above."
+      "check": "The burst is high."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The ground is lit only briefly."
+      "check": "The rooftops are lit only for a moment."
     }
   ],
   "pc": [

@@ -5,22 +5,17 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A car drives past an office building with a glass front."
+      "check": "A car drives past an office building."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "The car's reflection glides across the windows."
+      "check": "The car's reflection glides across the building's windows."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflection is mirrored."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The reflection disappears where the glass ends."
+      "check": "The building has a glass front."
     }
   ],
   "pc": [

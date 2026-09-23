@@ -14,13 +14,8 @@
     },
     {
       "id": "S3",
-      "weight": "core",
-      "check": "The reflection is mirrored."
-    },
-    {
-      "id": "S4",
       "weight": "minor",
-      "check": "The reflection stops when the pendulum stops."
+      "check": "The reflection is mirrored."
     }
   ],
   "pc": [

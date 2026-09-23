@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A dog sits in front of a glossy black oven door."
+      "check": "A dog sits in front of an oven door."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection is dimmer than the real dog."
+      "check": "The oven door is glossy black."
     }
   ],
   "pc": [

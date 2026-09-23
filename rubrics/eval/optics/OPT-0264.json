@@ -15,12 +15,12 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "Its glowing reflection appears in the dark television screen facing it."
+      "check": "Its glowing reflection appears in the television screen facing it."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection is dimmer than the phone."
+      "check": "The television screen is dark."
     },
     {
       "id": "S5",

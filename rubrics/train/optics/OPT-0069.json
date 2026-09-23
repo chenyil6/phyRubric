@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A hand mirror is in a sunny doorway."
+      "check": "A hand mirror is in a doorway."
     },
     {
       "id": "S2",
@@ -15,12 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "A patch of sunlight dances across the shaded room."
+      "check": "A patch of sunlight dances across the room."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The patch vanishes when the mirror is turned from the sun."
+      "check": "The doorway is sunny and the room is shaded."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The tilt comes first and the patch moves with it."
     }
   ],
   "pc": [

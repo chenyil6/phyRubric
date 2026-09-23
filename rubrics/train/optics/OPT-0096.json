@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A red ball rolls along a hallway of polished steel panels."
+      "check": "A ball rolls along a hallway of polished steel panels."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "A blurry reflection rolls alongside in each panel."
+      "check": "A reflection rolls alongside in each panel."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The copies vanish at the gaps between panels."
+      "check": "The ball is red."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Each copy is mirrored and slightly warped."
+      "check": "The reflection is blurry."
     }
   ],
   "pc": [

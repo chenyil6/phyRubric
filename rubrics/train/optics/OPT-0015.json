@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A ball rolls along a sunlit pavement."
+      "check": "A ball rolls along a pavement."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow is visible only while the ball is in the sun."
+      "check": "The pavement is sunlit before the shade."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The ball enters the shade first and the shadow disappears with it."
     }
   ],
   "pc": [

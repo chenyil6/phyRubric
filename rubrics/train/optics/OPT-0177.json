@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "An underwater torch is in murky water."
+      "check": "An underwater torch is in the water."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The water behind stays dark."
+      "check": "The water is murky."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The switch comes first and the cone appears with it."
     }
   ],
   "pc": [

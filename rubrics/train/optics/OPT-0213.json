@@ -5,12 +5,12 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A white van is parked outside a tattoo shop."
+      "check": "A van is parked outside a shop."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "The shop's red neon sign shines on its wet side."
+      "check": "The shop's red neon sign shines on its side."
     },
     {
       "id": "S3",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The van is white where the sign's light does not reach."
+      "check": "The van is white."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The van's side is wet."
     }
   ],
   "pc": [

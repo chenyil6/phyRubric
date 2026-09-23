@@ -5,17 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "Steam rises from a kettle spout in a sunlit kitchen."
+      "check": "Steam rises from a kettle spout."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "A faint, shifting shadow of the plume drifts on the wall behind it."
+      "check": "A shadow of the plume drifts on the wall behind it."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The shadow is fainter than the kettle's own shadow."
+      "check": "The kitchen is sunlit."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shadow is faint and shifting."
     }
   ],
   "pc": [

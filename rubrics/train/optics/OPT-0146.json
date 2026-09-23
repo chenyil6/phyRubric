@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A remote-controlled car crosses a dark stage."
+      "check": "A remote-controlled car crosses a stage."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The rest of the stage stays dark."
+      "check": "The stage is dark."
     }
   ],
   "pc": [

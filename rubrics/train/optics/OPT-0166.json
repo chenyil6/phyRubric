@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "They are lit one by one."
+      "check": "They are lit."
     },
     {
       "id": "S3",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Unlit lanterns stay dark."
+      "check": "The lanterns are lit one by one, not all at once."
     }
   ],
   "pc": [

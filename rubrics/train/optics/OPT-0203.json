@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Streaks of the two shades blend with each stroke."
+      "check": "The two shades are visibly different before whisking."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The whisking comes first and the uniform colour follows."
     }
   ],
   "pc": [

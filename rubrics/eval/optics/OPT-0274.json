@@ -5,17 +5,17 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A goldfish swims around a round bowl."
+      "check": "A goldfish swims around a bowl."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "Seen through the curved glass it appears to swell and shrink as it passes the curve."
+      "check": "Seen through the glass it appears to swell and shrink as it passes the curve."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The fish keeps its true size and shape."
+      "check": "The bowl is round with curved glass."
     }
   ],
   "pc": [

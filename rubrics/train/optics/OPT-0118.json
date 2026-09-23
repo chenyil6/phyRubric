@@ -10,17 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The street outside appears as many tiny warped pictures within the drops."
+      "check": "The street outside appears as pictures within the drops."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The pictures move as the drops run down."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The view between the drops is normal."
+      "check": "The pictures are tiny and warped, and there are many of them."
     }
   ],
   "pc": [

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A flag flutters on a pole in the sun."
+      "check": "A flag flutters on a pole."
     },
     {
       "id": "S2",
@@ -15,12 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The shadow moves in time with the cloth."
+      "check": "The flag is in the sun."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow stops when the flag hangs still."
+      "check": "The flag is on a pole."
     }
   ],
   "pc": [

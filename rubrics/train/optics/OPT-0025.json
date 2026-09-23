@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A drone hovers over a sunlit parking lot."
+      "check": "A drone hovers over a parking lot."
     },
     {
       "id": "S2",
@@ -15,15 +15,20 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "Its small shadow on the asphalt moves with it."
+      "check": "Its shadow on the asphalt moves with it."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow shows the shape of the drone's arms."
+      "check": "The lot is sunlit."
     },
     {
       "id": "S5",
+      "weight": "minor",
+      "check": "The shadow is small."
+    },
+    {
+      "id": "S6",
       "weight": "minor",
       "check": "The drone moves first and the shadow follows."
     }

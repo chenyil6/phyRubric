@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A patterned card is seen through a round fishbowl."
+      "check": "A patterned card is seen through a fishbowl."
     },
     {
       "id": "S2",
@@ -25,7 +25,12 @@
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The pattern is normal seen past the bowl's edge."
+      "check": "The bowl is round."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The card moves first and the warp changes with it."
     }
   ],
   "pc": [

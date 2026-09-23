@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A basin of hot soapy water holds white shirts."
+      "check": "A basin of water holds white shirts."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shirts nearest the sock take on a faint pink tinge."
+      "check": "The water is hot and soapy."
     },
     {
       "id": "S5",

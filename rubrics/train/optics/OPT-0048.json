@@ -15,17 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "Sharp shadows of the tent poles appear on the canvas."
+      "check": "Shadows of the tent poles appear on the canvas."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadows appear as the lantern brightens."
+      "check": "The shadows are sharp."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The shadows fall away from the lantern."
+      "check": "The lantern brightens first and the shadows appear with it."
     }
   ],
   "pc": [

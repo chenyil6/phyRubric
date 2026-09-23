@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A shiny DVD is tilted in sunlight."
+      "check": "A DVD is tilted in sunlight."
     },
     {
       "id": "S2",
@@ -15,12 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The bands vanish when the disc is turned away or the sun is covered."
+      "check": "The disc is shiny."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The wall itself stays white."
+      "check": "The tilt comes first and the bands slide with it."
     }
   ],
   "pc": [

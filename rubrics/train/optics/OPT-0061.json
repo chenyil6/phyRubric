@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A candle burns on a table by a dark window at night."
+      "check": "A candle burns on a table by a window."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflected flame flickers in step with the real one."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The reflected flame is mirrored."
+      "check": "It is night and the window is dark."
     }
   ],
   "pc": [

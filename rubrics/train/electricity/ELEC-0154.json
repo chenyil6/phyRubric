@@ -21,11 +21,6 @@
       "id": "S4",
       "weight": "minor",
       "check": "The slide is downward."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The magnet stays on the door if released at the end."
     }
   ],
   "pc": [

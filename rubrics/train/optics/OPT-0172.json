@@ -15,12 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "The curtains are lit for a moment."
+      "check": "The curtains are lit."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The light is gone once the car has passed."
+      "check": "The curtains are lit only for a moment."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The sweep comes first and the lighting comes with it."
     }
   ],
   "pc": [

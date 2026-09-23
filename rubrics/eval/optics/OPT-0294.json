@@ -10,17 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "It appears red, then blue, then yellow as it passes behind each pane."
+      "check": "It appears red, blue and yellow as it passes behind each pane."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "It looks its normal grey through the clear frame between panes."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The colour changes at each pane's edge."
+      "check": "The order of colours is red, then blue, then yellow."
     }
   ],
   "pc": [

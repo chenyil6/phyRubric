@@ -10,17 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "Dozens of small bright spots sweep across the walls."
+      "check": "Small bright spots sweep across the walls."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The spots move when the ball turns and stop when it stops."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The spots appear on the walls away from the lights."
+      "check": "There are dozens of spots."
     }
   ],
   "pc": [

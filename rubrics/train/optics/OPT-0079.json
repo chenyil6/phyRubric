@@ -5,12 +5,12 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A checkerboard card is reflected in the bowl of a shiny spoon."
+      "check": "A checkerboard card is reflected in the bowl of a spoon."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "The spoon turns slowly."
+      "check": "The spoon turns."
     },
     {
       "id": "S3",
@@ -20,10 +20,15 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection is small and warped by the curve."
+      "check": "The spoon is shiny."
     },
     {
       "id": "S5",
+      "weight": "minor",
+      "check": "The spoon turns slowly."
+    },
+    {
+      "id": "S6",
       "weight": "minor",
       "check": "The spoon turns first and the pattern shifts with it."
     }

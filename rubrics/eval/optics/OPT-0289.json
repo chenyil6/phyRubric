@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A train runs through a tunnel with its headlight on."
+      "check": "A train runs through a tunnel."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The far end is not lit until the beam reaches it."
+      "check": "The train's headlight is on."
     }
   ],
   "pc": [

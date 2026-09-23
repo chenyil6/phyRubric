@@ -10,22 +10,17 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "It is in sunlight."
+      "check": "A round shadow appears on the ground beneath it."
     },
     {
       "id": "S3",
-      "weight": "core",
-      "check": "A round shadow appears on the ground beneath it."
+      "weight": "minor",
+      "check": "The umbrella is in sunlight."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow appears as the umbrella opens."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The shadow moves when the umbrella is tilted."
+      "check": "The umbrella opens first and the shadow appears with it."
     }
   ],
   "pc": [

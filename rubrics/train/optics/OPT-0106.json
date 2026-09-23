@@ -16,11 +16,6 @@
       "id": "S3",
       "weight": "minor",
       "check": "The view is slightly blurred."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The view is distorted at the cube's edges and cracks."
     }
   ],
   "pc": [

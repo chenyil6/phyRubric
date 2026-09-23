@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A heron stands in shallow water on a still morning."
+      "check": "A heron stands in shallow water."
     },
     {
       "id": "S2",
@@ -25,7 +25,12 @@
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The reflection is sharp when the bird is still."
+      "check": "The morning is still."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The step comes first and the ripples follow."
     }
   ],
   "pc": [

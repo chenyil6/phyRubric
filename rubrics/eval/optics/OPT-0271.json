@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A straw stands in a glass holding a layer of oil floating on water."
+      "check": "A straw stands in a glass holding oil and water."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "It looks bent twice: at the oil's surface and at the oil-water boundary."
+      "check": "It looks bent at the oil's surface."
     },
     {
       "id": "S3",
-      "weight": "minor",
-      "check": "The part above the liquid is unchanged."
+      "weight": "core",
+      "check": "It looks bent again at the boundary between oil and water."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Both kinks vanish when the straw is lifted out."
+      "check": "The oil floats as a layer on top of the water."
     }
   ],
   "pc": [

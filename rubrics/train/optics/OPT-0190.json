@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A car is on a rain-wet street at night."
+      "check": "A car is on a street."
     },
     {
       "id": "S2",
@@ -15,12 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "Red light from its brake lights spreads over the wet road behind it."
+      "check": "Red light from its brake lights spreads over the road behind it."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The glow lies behind the car, not in front."
+      "check": "The street is rain-wet and it is night."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The braking comes first and the red glow follows."
     }
   ],
   "pc": [

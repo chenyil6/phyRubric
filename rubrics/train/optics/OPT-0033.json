@@ -5,12 +5,12 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A robot vacuum travels the length of a corridor."
+      "check": "A robot vacuum travels along a corridor."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "The corridor is lit by a single ceiling light."
+      "check": "The corridor is lit by a ceiling light."
     },
     {
       "id": "S3",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow is ahead before the light and behind after."
+      "check": "There is a single ceiling light."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The vacuum travels the corridor's length."
     }
   ],
   "pc": [

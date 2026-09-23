@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A party light lights a room with white walls."
+      "check": "A party light lights a room."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Things in the light's shadow stay unchanged."
+      "check": "The walls are white before the switch."
     },
     {
       "id": "S5",

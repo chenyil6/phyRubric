@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflection is faint over the goods on display behind the glass."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The reflection is mirrored."
+      "check": "The reflection is faint, over goods on display behind the glass."
     }
   ],
   "pc": [

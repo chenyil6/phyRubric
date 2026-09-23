@@ -15,12 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The rocks look nearer and larger through the mask."
+      "check": "The rocks are blurred before the mask is lowered."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The view blurs again when the mask is lifted out."
+      "check": "The mask goes under first and the sharp view follows."
     }
   ],
   "pc": [

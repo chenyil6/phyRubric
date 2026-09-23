@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "An upside-down bicycle's front wheel is spun in front of a wall lit by a lamp."
+      "check": "A bicycle's front wheel is spun in front of a wall."
     },
     {
       "id": "S2",
@@ -15,10 +15,15 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The rim's shadow stays put while the spokes' shadows move."
+      "check": "The bicycle is upside down."
     },
     {
       "id": "S4",
+      "weight": "minor",
+      "check": "The wall is lit by a lamp."
+    },
+    {
+      "id": "S5",
       "weight": "minor",
       "check": "The spin comes first and the whirl follows."
     }

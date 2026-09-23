@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A dimmer knob is turned slowly."
+      "check": "A dimmer knob is turned."
     },
     {
       "id": "S2",
@@ -15,7 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The brightness follows the knob smoothly."
+      "check": "The knob is turned slowly."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The turn comes first and the fade follows."
     }
   ],
   "pc": [

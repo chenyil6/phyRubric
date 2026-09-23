@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A cat is in front of a shiny chrome kettle."
+      "check": "A cat is in front of a kettle."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection is warped by the curve of the kettle."
+      "check": "The kettle is shiny chrome."
     }
   ],
   "pc": [

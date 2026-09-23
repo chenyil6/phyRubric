@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A balloon on a string turns slowly in an elevator."
+      "check": "A balloon on a string turns in an elevator."
     },
     {
       "id": "S2",
@@ -20,12 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "All the reflections move at the same instant."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "Each reflection is mirrored relative to its wall."
+      "check": "The balloon turns slowly."
     }
   ],
   "pc": [

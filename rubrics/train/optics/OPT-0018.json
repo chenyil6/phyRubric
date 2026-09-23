@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A kite flies high over a beach in the sun."
+      "check": "A kite flies over a beach."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "Its small shadow moves across the sand."
+      "check": "Its shadow moves across the sand as the kite sways."
     },
     {
       "id": "S3",
-      "weight": "core",
-      "check": "The shadow moves as the kite sways."
+      "weight": "minor",
+      "check": "The kite is high and in the sun."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow is far from the kite itself."
+      "check": "The shadow is small."
     }
   ],
   "pc": [

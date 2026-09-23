@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A laser pointer's beam enters a tank of slightly milky water at an angle."
+      "check": "A laser pointer's beam enters a tank of water."
     },
     {
       "id": "S2",
@@ -15,12 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The beam is straight in the air and straight in the water."
+      "check": "The water is slightly milky."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The kink moves with the entry point."
+      "check": "The beam enters at an angle, not straight down."
     }
   ],
   "pc": [

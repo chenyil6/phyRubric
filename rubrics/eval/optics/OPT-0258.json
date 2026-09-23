@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A cat sits on a sunny fence."
+      "check": "A cat sits on a fence."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow separates during the jump and rejoins at the paws on landing."
+      "check": "The fence is sunny."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The cat sits first and jumps after."
     }
   ],
   "pc": [

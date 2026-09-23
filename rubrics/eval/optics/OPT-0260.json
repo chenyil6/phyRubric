@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A hot-air balloon drifts low over a field in the morning sun."
+      "check": "A hot-air balloon drifts low over a field."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "Its huge shadow glides across the crops below."
+      "check": "Its shadow glides across the crops below."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The shadow is stretched by the low light."
+      "check": "It is morning sun."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow lies on the side away from the sun."
+      "check": "The shadow is huge."
     }
   ],
   "pc": [

@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "A spoonful of turmeric is stirred into it."
+      "check": "Turmeric is stirred into it."
     },
     {
       "id": "S3",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Streaks even out with stirring."
+      "check": "The turmeric is a spoonful."
     },
     {
       "id": "S5",

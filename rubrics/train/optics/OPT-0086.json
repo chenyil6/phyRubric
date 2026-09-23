@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A car's side mirror is adjusted from inside."
+      "check": "A car's side mirror is adjusted."
     },
     {
       "id": "S2",
@@ -15,12 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The view stops changing when the adjustment stops."
+      "check": "The adjustment is made from inside the car."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The mirror shows the scene behind the car."
+      "check": "The order of the sweep is sky first, road last."
     }
   ],
   "pc": [

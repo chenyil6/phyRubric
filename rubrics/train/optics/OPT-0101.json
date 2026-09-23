@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A magnifying glass is moved over a page of small print."
+      "check": "A magnifying glass is moved over a page of print."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "The letters under the lens appear much larger."
+      "check": "The letters under the lens appear larger."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The print outside the lens stays small."
+      "check": "The print is small."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The enlarged letters shift as the lens moves."
+      "check": "The enlargement is strong: the letters look much larger."
     }
   ],
   "pc": [

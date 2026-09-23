@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A pigeon lands on a sunny square."
+      "check": "A pigeon lands on a square."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow is on the ground before the bird lands."
+      "check": "The square is sunny."
     }
   ],
   "pc": [

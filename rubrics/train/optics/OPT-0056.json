@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A robot vacuum is in front of a floor-length mirror."
+      "check": "A robot vacuum is in front of a mirror."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection's turn is simultaneous with the real one."
+      "check": "The mirror is floor-length."
     }
   ],
   "pc": [

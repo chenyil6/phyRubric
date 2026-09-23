@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A white marble statue stands in a garden at night."
+      "check": "A statue stands in a garden."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "It returns to white when the light is off."
+      "check": "The statue is white marble."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "It is night."
     }
   ],
   "pc": [

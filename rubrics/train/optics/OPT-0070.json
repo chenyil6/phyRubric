@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A lamp stands beside a dark window at night."
+      "check": "A lamp stands beside a window."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection is mirrored."
+      "check": "It is night and the window is dark."
     },
     {
       "id": "S5",

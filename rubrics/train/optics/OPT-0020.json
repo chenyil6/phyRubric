@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A bicycle is parked at night."
+      "check": "A bicycle is parked."
     },
     {
       "id": "S2",
@@ -15,12 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "A long shadow of the bicycle stretches down the road ahead of it."
+      "check": "A shadow of the bicycle stretches down the road ahead of it."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow changes as the car approaches and passes."
+      "check": "It is night."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shadow is long."
     }
   ],
   "pc": [

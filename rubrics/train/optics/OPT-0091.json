@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A neon sign glows above a rain-soaked street at night."
+      "check": "A neon sign glows above a street."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "Its coloured reflection streaks down the wet pavement toward the viewer."
+      "check": "Its reflection streaks down the wet pavement toward the viewer."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflection has the same colours as the sign."
+      "check": "It is night and the street is rain-soaked."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection fades where the pavement is dry."
+      "check": "The reflection is coloured."
     }
   ],
   "pc": [

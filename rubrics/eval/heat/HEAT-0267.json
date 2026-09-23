@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A pot of jam boils on a stove."
+      "check": "A pot of jam boils."
     },
     {
       "id": "S2",
@@ -15,17 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "Thick bubbles rise and burst slowly."
+      "check": "Thick bubbles rise and burst."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The foam climbs while the heat is on."
+      "check": "The pot is on a stove."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The foam sinks back when the pot is pulled off the heat."
+      "check": "The boil comes first and the foaming follows."
     }
   ],
   "pc": [

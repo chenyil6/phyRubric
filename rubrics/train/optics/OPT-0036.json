@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A garden hose sprays an arc of water in the evening sun."
+      "check": "A garden hose sprays water."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "The shadow of the arc falls on the soil beside it."
+      "check": "The shadow of the spray falls on the soil beside it."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The shadow follows the curve of the stream."
+      "check": "It is evening sun."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow flickers as the water moves."
+      "check": "The spray is an arc."
     }
   ],
   "pc": [

@@ -5,32 +5,27 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A skateboard with no rider is present."
+      "check": "A skateboard with no rider rolls along the ground."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "It rolls along the ground."
+      "check": "A lit streetlamp stands nearby."
     },
     {
       "id": "S3",
       "weight": "core",
-      "check": "A lit streetlamp stands nearby and it is night."
+      "check": "The skateboard's shadow swings around it as the board passes under the light."
     },
     {
       "id": "S4",
-      "weight": "core",
-      "check": "The skateboard's shadow is visible and changes as the board passes the lamp."
+      "weight": "minor",
+      "check": "It is night."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The board passes close to or under the lamp."
-    },
-    {
-      "id": "S6",
-      "weight": "minor",
-      "check": "The scene is dark apart from the lamp light."
+      "check": "The board passes under or close beneath the lamp."
     }
   ],
   "pc": [

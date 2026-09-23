@@ -10,22 +10,17 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The lawn is in sunlight."
+      "check": "The dog's shadow is visible on the grass."
     },
     {
       "id": "S3",
       "weight": "core",
-      "check": "The dog's shadow is visible on the grass."
-    },
-    {
-      "id": "S4",
-      "weight": "core",
       "check": "The shadow runs along beside the dog."
     },
     {
-      "id": "S5",
+      "id": "S4",
       "weight": "minor",
-      "check": "The shadow touches the dog at its paws."
+      "check": "The lawn is sunlit."
     }
   ],
   "pc": [

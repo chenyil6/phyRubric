@@ -20,12 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The band moves when the prism is turned."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The band lies on the side away from the sun."
+      "check": "The sunlight hits the prism first and the band appears with it."
     }
   ],
   "pc": [

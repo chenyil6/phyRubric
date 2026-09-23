@@ -10,17 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The room appears tiny and warped inside the marble."
+      "check": "The room appears inside the marble."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The image moves as the marble moves."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The room around the marble is normal."
+      "check": "The image is tiny and warped."
     }
   ],
   "pc": [

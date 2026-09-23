@@ -5,22 +5,17 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A seagull walks across a wet beach at low tide."
+      "check": "A seagull walks across a wet beach."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "Its reflection shows beneath it on the thin sheet of water."
+      "check": "Its reflection shows beneath it on the sheet of water."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflection appears only where the sand is covered by water."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The reflection breaks up in the bird's footprints."
+      "check": "It is low tide and the water is a thin sheet."
     }
   ],
   "pc": [

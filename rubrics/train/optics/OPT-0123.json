@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "Tongs reach in from the open back."
+      "check": "Tongs reach into the counter."
     },
     {
       "id": "S3",
@@ -20,12 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The pastry lifted is the one that was seen."
+      "check": "The tongs enter from the open back."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The tongs enter from behind, not through the pane."
+      "check": "The reach comes first and the lift follows."
     }
   ],
   "pc": [

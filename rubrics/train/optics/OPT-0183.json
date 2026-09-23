@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A garden hose sprays a fine mist."
+      "check": "A garden hose sprays a mist."
     },
     {
       "id": "S2",
@@ -15,12 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "A small rainbow appears in the spray."
+      "check": "A rainbow appears in the spray."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The rainbow disappears when the water is turned off."
+      "check": "The mist is fine."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The rainbow is small."
     }
   ],
   "pc": [

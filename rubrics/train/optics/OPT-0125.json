@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A coin is dropped into a tall clear vase of water."
+      "check": "A coin is dropped into a tall vase of water."
     },
     {
       "id": "S2",
@@ -14,18 +14,8 @@
     },
     {
       "id": "S3",
-      "weight": "core",
-      "check": "It sinks to the bottom."
-    },
-    {
-      "id": "S4",
       "weight": "minor",
-      "check": "The coin is visible through the glass."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The apparent shift is at the waterline."
+      "check": "The vase is tall and clear."
     }
   ],
   "pc": [

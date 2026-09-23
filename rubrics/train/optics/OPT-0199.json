@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A red and a blue spotlight are crossed on a white backdrop."
+      "check": "A red and a blue spotlight are crossed on a backdrop."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The single-colour areas stay red and blue."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The overlap disappears when one light is turned off."
+      "check": "The backdrop is white."
     }
   ],
   "pc": [

@@ -25,12 +25,12 @@
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The flame appears at the brightest spot."
+      "check": "The blowing is gentle."
     },
     {
       "id": "S6",
       "weight": "minor",
-      "check": "The glow eases when the blowing stops."
+      "check": "The order is blow, brighter glow, flame."
     }
   ],
   "pc": [

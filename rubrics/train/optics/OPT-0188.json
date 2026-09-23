@@ -20,11 +20,6 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The streaks become uniform with more mixing."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
       "check": "The colours are separate first, then swirled, then pink."
     }
   ],

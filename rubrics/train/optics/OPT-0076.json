@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The head is turned from side to side."
+      "check": "The head is turned."
     },
     {
       "id": "S3",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection wears the same hat."
+      "check": "The turning is from side to side."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The head turns first and the reflection turns with it."
     }
   ],
   "pc": [

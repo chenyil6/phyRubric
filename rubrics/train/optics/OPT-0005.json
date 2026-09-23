@@ -20,11 +20,6 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow is larger than the hands."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
       "check": "The hands are shaped first and the shadow appears with them."
     }
   ],

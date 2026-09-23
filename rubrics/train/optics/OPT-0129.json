@@ -5,17 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "The view is from under the clear sea."
+      "check": "The view is from under the sea."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "The underside of a boat shows as a wavering dark shape through the surface."
+      "check": "The underside of a boat shows as a wavering shape through the surface."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The shape steadies as the water calms."
+      "check": "The sea is clear."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The shape is dark."
     }
   ],
   "pc": [

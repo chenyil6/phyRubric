@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A lit tent's flap is unzipped from inside at night."
+      "check": "A tent's flap is unzipped."
     },
     {
       "id": "S2",
@@ -15,12 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "The lit triangle widens as the flap opens."
+      "check": "The lit patch widens as the flap opens."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The grass beside the tent stays dark."
+      "check": "It is night and the tent is lit from inside."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lit patch is a triangle."
     }
   ],
   "pc": [

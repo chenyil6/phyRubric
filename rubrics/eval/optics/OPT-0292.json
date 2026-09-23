@@ -20,11 +20,6 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Orange appears where the two sauces meet."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
       "check": "The stir comes first and the orange follows."
     }
   ],

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A garden is seen through a pane of old wavy glass."
+      "check": "A garden is seen through a pane of glass."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Through a flat pane beside it the view is undistorted."
+      "check": "The glass is old and wavy."
     }
   ],
   "pc": [

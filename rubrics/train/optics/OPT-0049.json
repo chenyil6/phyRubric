@@ -25,12 +25,12 @@
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The reflection raises the arm that corresponds to the robot's raised arm: the one directly across the mirror from it."
+      "check": "The robot raises its right arm."
     },
     {
       "id": "S6",
       "weight": "minor",
-      "check": "The robot reads as a toy robot: blocky and mechanical."
+      "check": "The reflection's raised arm is on the opposite side from the robot's."
     }
   ],
   "pc": [

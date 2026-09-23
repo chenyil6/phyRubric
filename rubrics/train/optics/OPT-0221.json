@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A clear-cut crystal pendant is turned in sunlight."
+      "check": "A crystal pendant is turned in sunlight."
     },
     {
       "id": "S2",
@@ -15,7 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The sparkles disappear when the pendant is put down or the sun goes in."
+      "check": "The pendant is clear-cut crystal."
     }
   ],
   "pc": [

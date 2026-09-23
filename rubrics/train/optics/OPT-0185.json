@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A crystal chandelier hangs in afternoon sunlight."
+      "check": "A crystal chandelier hangs in sunlight."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "Little flecks of rainbow light scatter across the walls and ceiling."
+      "check": "Flecks of rainbow light scatter across the walls and ceiling."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The flecks move when the chandelier sways."
+      "check": "It is afternoon sunlight."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "They vanish when the sun is blocked."
+      "check": "The flecks are little."
     }
   ],
   "pc": [

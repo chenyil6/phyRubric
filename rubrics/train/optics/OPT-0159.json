@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The wall goes dark once the beam has left it."
+      "check": "The swing comes first and the spot moves with it."
     }
   ],
   "pc": [

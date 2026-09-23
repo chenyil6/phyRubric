@@ -5,12 +5,12 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A red laser dot is on a white wall."
+      "check": "A red laser dot is on a wall."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "It is moved onto a green plant."
+      "check": "It is moved onto a plant."
     },
     {
       "id": "S3",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The dot stays red wherever it lands."
+      "check": "The wall is white and the plant is green."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The move comes first and the dot fades after."
     }
   ],
   "pc": [

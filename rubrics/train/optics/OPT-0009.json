@@ -20,12 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow has a soft edge."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The grass brightens again once the shadow has passed."
+      "check": "The shadow arrives first and the darkening comes with it."
     }
   ],
   "pc": [

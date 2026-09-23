@@ -15,17 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "A soft red glow falls on the white wall behind it."
+      "check": "A red glow falls on the wall behind it."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The glow is on the side away from the window."
+      "check": "The wall is white."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The glow moves with the balloon."
+      "check": "The glow is soft."
     }
   ],
   "pc": [

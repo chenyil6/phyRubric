@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "Morning sun shines through red curtains."
+      "check": "Sun shines through red curtains."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "The white bedroom walls take on a red tint."
+      "check": "The bedroom walls take on a red tint."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The tint is strongest where the light through the curtain falls."
+      "check": "It is morning sun."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The walls are white where ordinary light reaches them."
+      "check": "The walls are white."
     }
   ],
   "pc": [

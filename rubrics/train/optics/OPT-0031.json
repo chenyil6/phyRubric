@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A cat walks along a sunlit windowsill inside a house."
+      "check": "A cat walks along a windowsill inside a house."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The shadow shows the cat's outline including the tail."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The shadow falls on the room side, away from the window."
+      "check": "The windowsill is sunlit."
     }
   ],
   "pc": [

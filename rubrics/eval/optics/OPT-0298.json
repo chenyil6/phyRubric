@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A red umbrella is opened in bright sun."
+      "check": "An umbrella is opened."
     },
     {
       "id": "S2",
@@ -15,10 +15,15 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The ground outside the shade keeps its normal colour."
+      "check": "The umbrella is red."
     },
     {
       "id": "S4",
+      "weight": "minor",
+      "check": "The sun is bright."
+    },
+    {
+      "id": "S5",
       "weight": "minor",
       "check": "The umbrella opens first and the tint appears with it."
     }

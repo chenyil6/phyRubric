@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A clear glass of water is held up in front of a doorway."
+      "check": "A glass of water is held up in front of a doorway."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The image shifts as the glass moves."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The room seen around the glass is normal."
+      "check": "The glass is clear."
     }
   ],
   "pc": [

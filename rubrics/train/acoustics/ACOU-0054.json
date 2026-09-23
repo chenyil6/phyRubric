@@ -20,12 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The motion is slow creeping in small jerks, not one glide."
+      "check": "The motion is slow creeping."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The shivering is under way when the creeping starts; the phone does not move first and buzz later."
+      "check": "The buzzing starts first and the creeping follows."
     }
   ],
   "pc": [

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A lantern is lit in a dark barn."
+      "check": "A lantern is lit in a barn."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Shadows fall away from the lantern."
+      "check": "The barn is dark before the lantern is lit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The lighting comes first and the brightening follows."
     }
   ],
   "pc": [

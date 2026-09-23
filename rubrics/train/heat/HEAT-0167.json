@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A paper pinwheel is held above a lit candle."
+      "check": "A paper pinwheel is held above a candle."
     },
     {
       "id": "S2",
@@ -14,21 +14,16 @@
     },
     {
       "id": "S3",
-      "weight": "core",
-      "check": "The pinwheel stops when it is moved away from the candle."
-    },
-    {
-      "id": "S4",
       "weight": "minor",
       "check": "The candle is lit."
     },
     {
-      "id": "S5",
+      "id": "S4",
       "weight": "minor",
       "check": "The pinwheel is still before it is brought over the flame."
     },
     {
-      "id": "S6",
+      "id": "S5",
       "weight": "minor",
       "check": "The bringing over comes first and the spinning follows."
     }

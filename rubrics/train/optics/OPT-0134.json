@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "A clear glass beaker of water is placed in front of it."
+      "check": "A glass beaker of water is placed in front of it."
     },
     {
       "id": "S3",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The change vanishes when the beaker is emptied or moved."
+      "check": "The beaker is clear glass."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The beaker is placed first and the shift appears with it."
     }
   ],
   "pc": [

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A tall wooden lifeguard chair stands on a beach."
+      "check": "A lifeguard chair stands on a beach."
     },
     {
       "id": "S2",
@@ -15,12 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "Its long shadow stretches across the sand in front of it."
+      "check": "Its shadow stretches across the sand in front of it."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow is longer than the chair is tall."
+      "check": "The chair is tall and wooden."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The shadow is long."
     }
   ],
   "pc": [

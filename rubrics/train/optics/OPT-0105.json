@@ -10,12 +10,17 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The tiny pixels under the drop appear magnified."
+      "check": "The pixels under the drop appear magnified."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The screen beyond the drop is unchanged."
+      "check": "The pixels are tiny."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The drop lands first and the magnified pixels are seen after."
     }
   ],
   "pc": [

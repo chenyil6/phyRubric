@@ -10,17 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "Only a blurred shape of it is visible through the glass."
+      "check": "A blurred shape of it is visible through the glass."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The blur moves as the cat moves."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The blur sharpens as the cat comes closer to the glass."
+      "check": "Only the blurred shape is visible; no sharp detail of the cat shows through."
     }
   ],
   "pc": [

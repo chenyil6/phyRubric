@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A shopping trolley rolls along an aisle under a convex security mirror."
+      "check": "A shopping trolley rolls along an aisle under a security mirror."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "Its small curved reflection slides across the mirror."
+      "check": "Its reflection slides across the mirror."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflection is much smaller than the trolley and bulges with the curve."
+      "check": "The mirror is convex."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection leaves the mirror when the trolley leaves its view."
+      "check": "The reflection is small and curved."
     }
   ],
   "pc": [

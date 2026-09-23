@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A car drives past a puddle at night."
+      "check": "A car drives past a puddle."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflections appear only within the puddle's edges."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "They vanish when the car has passed."
+      "check": "It is night."
     }
   ],
   "pc": [

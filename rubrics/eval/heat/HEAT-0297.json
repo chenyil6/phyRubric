@@ -15,17 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "The papadum expands."
+      "check": "The papadum expands, roughly doubling in size."
     },
     {
       "id": "S4",
-      "weight": "core",
-      "check": "The papadum keeps its puffed shape when lifted out."
+      "weight": "minor",
+      "check": "The oil is hot: it sizzles or bubbles."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The oil bubbles around it."
+      "check": "The puffing happens within seconds."
     },
     {
       "id": "S6",

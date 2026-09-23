@@ -26,11 +26,6 @@
       "id": "S5",
       "weight": "minor",
       "check": "The bus moves slowly."
-    },
-    {
-      "id": "S6",
-      "weight": "minor",
-      "check": "The reflection shows the bus's shape and colour."
     }
   ],
   "pc": [

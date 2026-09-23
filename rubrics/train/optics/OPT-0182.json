@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "A piece of blue cellophane is taped over it."
+      "check": "A piece of cellophane is taped over it."
     },
     {
       "id": "S3",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The spot goes white again when the film is removed."
+      "check": "The cellophane is blue."
     },
     {
       "id": "S5",

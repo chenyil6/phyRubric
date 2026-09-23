@@ -10,17 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "A faint reflection slides beneath it on the ice."
+      "check": "A reflection slides beneath it on the ice."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflection is inverted and dim."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The reflection disappears where the ice is scratched or snow-covered."
+      "check": "The reflection is faint."
     }
   ],
   "pc": [

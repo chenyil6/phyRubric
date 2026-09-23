@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A dog walks through an office with motion-sensor lights."
+      "check": "A dog walks through an office with ceiling lights."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Each panel's patch of floor brightens as it lights."
+      "check": "The lights respond to the dog's movement: no one touches a switch."
     }
   ],
   "pc": [

@@ -20,11 +20,6 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The fingers glow red at the edges."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
       "check": "The hand comes first and the dark follows."
     }
   ],

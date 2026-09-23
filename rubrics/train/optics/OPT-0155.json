@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A headlamp is worn in a dark cave."
+      "check": "A headlamp is worn in a cave."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The wall the lamp turns away from goes dark."
+      "check": "The cave is dark."
     }
   ],
   "pc": [

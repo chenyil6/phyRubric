@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A white piano stands on a stage."
+      "check": "A piano stands on a stage."
     },
     {
       "id": "S2",
@@ -20,12 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The piano is white where the beam does not reach."
+      "check": "The piano is white."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "It returns to white when the filter is removed."
+      "check": "The spotlight is aimed first and the blue follows."
     }
   ],
   "pc": [

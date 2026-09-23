@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A car enters a tunnel on a sunny day."
+      "check": "A car enters a tunnel."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The light takes on the tunnel lamps' colour."
+      "check": "The day is sunny outside."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The order is bright, dim, then tunnel-lit."
     }
   ],
   "pc": [

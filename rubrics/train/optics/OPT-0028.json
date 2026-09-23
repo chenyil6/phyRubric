@@ -20,12 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The dark shape is much larger than the hand."
+      "check": "The shape covers only part of the picture, not all of it."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The dark shape disappears when the hand is withdrawn."
+      "check": "The hand goes in front of the lens first and the dark shape appears with it."
     }
   ],
   "pc": [

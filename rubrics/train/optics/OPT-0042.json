@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A bus passes a row of parked cars on a sunny street."
+      "check": "A bus passes a row of parked cars."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "Its shadow slides over the cars one after another."
+      "check": "Its shadow slides over the cars."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The shadow darkens each car as it passes."
+      "check": "The street is sunny."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow moves at the bus's speed."
+      "check": "The shadow passes over the cars one after another, not all at once."
     }
   ],
   "pc": [

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A single lit candle is present."
+      "check": "A lit candle is present in a room."
     },
     {
       "id": "S2",
@@ -25,12 +25,12 @@
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The light flickers gently with the flame."
+      "check": "There is a single candle."
     },
     {
       "id": "S6",
       "weight": "minor",
-      "check": "There are objects near the candle for it to light."
+      "check": "There are objects near the candle."
     }
   ],
   "pc": [

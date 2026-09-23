@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A garage door is shut in the morning."
+      "check": "A garage door is shut."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The rear of the garage brightens last."
+      "check": "It is morning."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The door starts rising first and the light moves in after."
     }
   ],
   "pc": [

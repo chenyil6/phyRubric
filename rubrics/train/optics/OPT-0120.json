@@ -20,12 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The face beside the jar is normal."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The stretch changes as the jar moves."
+      "check": "The jar goes in front first and the stretch appears with it."
     }
   ],
   "pc": [

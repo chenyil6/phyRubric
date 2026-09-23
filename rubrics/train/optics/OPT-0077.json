@@ -20,12 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The spot moves when the flashlight is angled."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The spot vanishes when the beam leaves the mirror."
+      "check": "The flashlight is aimed first and the spot appears with it."
     }
   ],
   "pc": [

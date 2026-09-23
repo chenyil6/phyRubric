@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The view outside the patch stays blurred."
+      "check": "The wipe comes first and the sharp view follows."
     }
   ],
   "pc": [

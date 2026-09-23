@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A mountain stands beside a still lake at dawn."
+      "check": "A mountain stands beside a lake."
     },
     {
       "id": "S2",
@@ -15,12 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The image meets the real mountain at the shoreline."
+      "check": "The lake is still."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The lake is still."
+      "check": "It is dawn."
     }
   ],
   "pc": [

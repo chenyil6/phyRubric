@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "Heavy curtains hang in a dim bedroom."
+      "check": "Curtains hang in a dim bedroom."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The brightest part is nearest the window."
+      "check": "The curtains are heavy."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The curtains open first and the brightening follows."
     }
   ],
   "pc": [

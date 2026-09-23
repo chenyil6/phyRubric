@@ -5,12 +5,12 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "The view is from inside a dim shop."
+      "check": "The view is from inside a shop."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "The open doorway to the sunlit street stands out as a bright rectangle."
+      "check": "The open doorway to the street stands out as a bright rectangle."
     },
     {
       "id": "S3",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "It grows darker deeper into the shop."
+      "check": "The shop is dim."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The street outside is sunlit."
     }
   ],
   "pc": [

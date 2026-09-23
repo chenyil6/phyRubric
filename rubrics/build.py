@@ -12,7 +12,9 @@ the data caption), sa, pc, note (optional). See rubrics/_policy.json for the ite
 Checks (errors): file/dir placement, caption matches data, allowed keys only, S1../P1.. sequential ids, valid
 weight/severity/type, non-empty texts, 2-7 SA items and 4-8 PC items, band reachability (>=2 core SA, >=1 minor SA,
 unconditional core+major+minor PC, fatal or second heavy unconditional PC), no duplicate fail text.
-Warnings: numeric thresholds, single-event fail text, vague wording (realistic, properly, ...), SA items that judge physics,\na declared violation_type on the data record not covered by any PC item's type.
+Warnings: numeric thresholds, single-event fail text, vague wording (realistic, properly, ...), SA items that judge physics,
+SA items that restate a PC expect (word overlap) or are hypothetical / conditional (would, if, when X - X not in the caption),
+a declared violation_type on the data record not covered by any PC item's type.
 
 The merged train.json / eval.json are products, not sources: records in data order with category and
 subcategory copied in from data. Do not edit them by hand.
@@ -41,6 +43,26 @@ PC_KEYS = {"id", "severity", "type", "expect", "fail", "precondition"}
 NUM = re.compile(r"\b\d+\s*(cm|mm|m|s|ms|sec|seconds?|deg|degrees|%|kg|g|ml|l|fps|x)\b", re.I)
 VAGUE = re.compile(r"\b(unrealistic(?:ally)?|implausibl[ey]|realistic(?:ally)?|plausibl[ey]|correctly|incorrectly|properly|appropriately|unnatural(?:ly)?|convincing(?:ly)?)\b", re.I)
 VAGUE_SA = re.compile(r"\b(physic\w*|realistic\w*|plausibl\w*|correct\w*|natural\w*)\b", re.I)
+HYPO_SA = re.compile(r"\b(would|if any|if (it|the|they|one|released|moved|switched|turned))\b", re.I)
+_STOP = set("a an the and or of to in on at by with from into onto over under through as is are it its they them their this that "
+            "there then while when after before only not no one two his her he she be been being".split())
+SA_PC_OVERLAP = 0.6  # Jaccard on content words between an SA check and a PC expect -> the SA item restates physics
+
+
+def _stem(w: str) -> str:
+    if w in ("lens", "glass", "grass", "bus", "gas"):
+        return w
+    if w.endswith("ies"):
+        return w[:-3] + "y"
+    if w.endswith("es") and w[:-2].endswith(("s", "x", "z", "ch", "sh")):
+        return w[:-2]
+    if w.endswith("s") and not w.endswith("ss"):
+        return w[:-1]
+    return w
+
+
+def _words(text: str) -> set[str]:
+    return {_stem(w) for w in re.findall(r"[a-z]+", text.lower()) if w not in _STOP and len(w) > 2}
 
 
 def branch(category: str) -> str:
@@ -129,9 +151,29 @@ def validate(rubric: dict, path: Path, data: dict[str, tuple[str, dict]]) -> tup
         vague = VAGUE.findall(str(x.get("expect", "")) + " " + fail_text)
         if vague:
             warns.append(f"{tag}/{xid}: vague wording {sorted(set(v.lower() for v in vague))} (name the visible event instead)")
+    cap_words = _words(rubric.get("caption", ""))
     for x in sa:
-        if VAGUE_SA.search(str(x.get("check", ""))):
-            warns.append(f"{tag}/{x.get('id', '?')}: SA check judges physics or quality; SA asks only whether the caption's content is shown")
+        check = str(x.get("check", ""))
+        xid = x.get("id", "?")
+        if VAGUE_SA.search(check):
+            warns.append(f"{tag}/{xid}: SA check judges physics or quality; SA asks only whether the caption's content is shown")
+        if HYPO_SA.search(check):
+            warns.append(f"{tag}/{xid}: SA check is hypothetical or conditional ('would' / 'if'); SA must be decidable on every clip")
+        cw = _words(check)
+        novel = cw - cap_words  # words the caption itself does not use
+        if cw and x.get("weight") == "minor" and len(novel) / len(cw) >= 0.5 and not re.search(r"comes first|follows|\border\b|\bthen\b", check, re.I):
+            for y in pc:
+                if y.get("type") == "permanence_count":
+                    continue  # "one X and one Y" templates overlap any stated count or object list
+                ew = _words(str(y.get("expect", "")))
+                if ew and len(cw & ew) / len(cw | ew) >= SA_PC_OVERLAP:
+                    warns.append(f"{tag}/{xid}: SA check restates {y.get('id', '?')}'s expect; SA states caption content, PC judges physics")
+                    break
+        m = re.search(r"\bwhen (.+?)(,|\.|;|$)", check, re.I)
+        if m:
+            ww = _words(m.group(1))
+            if ww and len(ww & cap_words) / len(ww) < 0.34:
+                warns.append(f"{tag}/{xid}: SA check depends on an event the caption does not state ('when {m.group(1).strip()}')")
 
     # Band reachability. SA: one minor can fail alone (4), one core alone (3), two cores (2).
     w = [x.get("weight") for x in sa]

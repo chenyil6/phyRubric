@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The line returns to normal when the glass is moved away."
+      "check": "The glass is set down first and the shift appears with it."
     }
   ],
   "pc": [

@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The wedge widens with the door."
+      "check": "The door opens first and the wedge spreads with it."
     }
   ],
   "pc": [

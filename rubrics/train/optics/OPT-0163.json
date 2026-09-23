@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A lit candle is carried down a dark staircase."
+      "check": "A lit candle is carried down a staircase."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The light flickers with the flame."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The walls darken behind as the candle moves on."
+      "check": "The staircase is dark."
     }
   ],
   "pc": [

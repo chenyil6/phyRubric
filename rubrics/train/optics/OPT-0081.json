@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The flash moves across the mirror with the car."
+      "check": "The car's headlights are on."
     }
   ],
   "pc": [

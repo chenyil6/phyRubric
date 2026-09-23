@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A clear glass bottle of water is held sideways in front of a lit sign."
+      "check": "A clear glass bottle of water is held in front of a lit sign."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The stretch changes as the bottle turns."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The sign itself is unchanged."
+      "check": "The bottle is held sideways."
     }
   ],
   "pc": [

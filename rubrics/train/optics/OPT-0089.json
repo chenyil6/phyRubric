@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A motorboat crosses a glassy lake at low speed."
+      "check": "A motorboat crosses a lake."
     },
     {
       "id": "S2",
@@ -15,12 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflection is broken only by the wake."
+      "check": "The lake is glassy and the boat moves at low speed."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection is attached at the waterline."
+      "check": "The reflection is broken only by the wake."
     }
   ],
   "pc": [

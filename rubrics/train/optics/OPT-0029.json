@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A fox trots toward a streetlamp at night."
+      "check": "A fox trots toward a streetlamp."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow shortens steadily as the fox approaches."
+      "check": "It is night."
     }
   ],
   "pc": [

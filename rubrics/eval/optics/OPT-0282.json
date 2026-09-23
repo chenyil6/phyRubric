@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A cat trots along a night street beneath a row of streetlamps."
+      "check": "A cat trots along a street beneath a row of streetlamps."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Its shadow points away from the nearest lamp and swaps sides as it passes beneath."
+      "check": "It is night."
     }
   ],
   "pc": [

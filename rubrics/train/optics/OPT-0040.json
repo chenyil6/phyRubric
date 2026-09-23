@@ -10,22 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "A lamp lights the wall."
-    },
-    {
-      "id": "S3",
-      "weight": "core",
       "check": "The pendulum's shadow on the wall swings with it."
     },
     {
-      "id": "S4",
+      "id": "S3",
       "weight": "minor",
-      "check": "The shadow moves in the same rhythm as the pendulum."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "When the pendulum stops the shadow stops."
+      "check": "The wall is lit by a lamp."
     }
   ],
   "pc": [

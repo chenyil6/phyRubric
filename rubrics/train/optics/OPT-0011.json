@@ -10,22 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The track is in sunlight."
-    },
-    {
-      "id": "S3",
-      "weight": "core",
       "check": "The tractor's shadow rolls along the ground beside it."
     },
     {
-      "id": "S4",
+      "id": "S3",
       "weight": "minor",
-      "check": "The shadow shows the wheels turning."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The shadow touches the tractor at the wheels."
+      "check": "The track is sunlit."
     }
   ],
   "pc": [

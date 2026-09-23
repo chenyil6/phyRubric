@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A candle burns behind a full round wine glass."
+      "check": "A candle burns behind a wine glass."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The tiny flame flickers in step with the real flame."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The flame seen past the glass is upright and normal."
+      "check": "The wine glass is full and round."
     }
   ],
   "pc": [

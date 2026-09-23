@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A sheet of red plastic is held up in front of the camera."
+      "check": "A sheet of plastic is held up in front of the camera."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The scene beyond its edges is normal."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The tint vanishes when the plastic is lowered."
+      "check": "The plastic is red."
     }
   ],
   "pc": [

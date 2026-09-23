@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The shadow has the leaf's outline."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The shadow moves when the leaf moves."
+      "check": "The leaf is held up, not lying on the ground."
     }
   ],
   "pc": [

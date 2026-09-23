@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "Yellow paint and blue paint sit side by side on a palette."
+      "check": "Yellow paint and blue paint sit on a palette."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Green appears where the two colours meet, streaky at first."
+      "check": "The two paints start side by side, as separate blobs."
     },
     {
       "id": "S5",

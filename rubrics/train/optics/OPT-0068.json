@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A wristwatch lies on a sunny table."
+      "check": "A wristwatch lies on a table."
     },
     {
       "id": "S2",
@@ -25,7 +25,12 @@
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The spot disappears when the angle is lost."
+      "check": "The table is sunny."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The turn comes first and the spot appears with it."
     }
   ],
   "pc": [

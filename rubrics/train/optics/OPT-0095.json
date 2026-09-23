@@ -10,17 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The garden outside appears faintly in the glass over the room behind it."
+      "check": "The garden outside appears in the glass over the room behind it."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflected garden shifts as the glass tilts."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The reflected garden is dim and mirrored."
+      "check": "The reflected garden is faint."
     }
   ],
   "pc": [

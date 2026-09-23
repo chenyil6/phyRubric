@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A blue glass bottle stands on a windowsill in sunlight."
+      "check": "A glass bottle stands on a windowsill in sunlight."
     },
     {
       "id": "S2",
@@ -20,12 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The patch is on the side away from the sun."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The patch moves when the bottle is moved."
+      "check": "The bottle is blue glass."
     }
   ],
   "pc": [

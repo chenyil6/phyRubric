@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "A lit candle is carried in a circle around it."
+      "check": "A lit candle is carried around it."
     },
     {
       "id": "S3",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow's length changes as the candle's distance changes."
+      "check": "The candle's path is a circle around the vase."
     },
     {
       "id": "S5",

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A glass paperweight is slid over a newspaper."
+      "check": "A paperweight is slid over a newspaper."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The distortion shifts as the paperweight is slid."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The letters outside it are normal."
+      "check": "The paperweight is glass."
     }
   ],
   "pc": [

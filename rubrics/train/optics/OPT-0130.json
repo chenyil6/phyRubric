@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "Vegetable pieces lie at the bottom of a pot of clear water."
+      "check": "Vegetable pieces lie at the bottom of a pot of water."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "They look still again when the stirring stops."
+      "check": "The water is clear."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The stirring comes first and the apparent movement comes with it."
     }
   ],
   "pc": [

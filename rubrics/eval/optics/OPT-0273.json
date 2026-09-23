@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A menu is slid under the clear glass top of a café table."
+      "check": "A menu is slid under the glass top of a café table."
     },
     {
       "id": "S2",
@@ -15,7 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "Only a faint reflection lies over it."
+      "check": "The glass top is clear."
     }
   ],
   "pc": [

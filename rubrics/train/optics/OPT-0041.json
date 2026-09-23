@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A campfire burns at night beside a tent."
+      "check": "A campfire burns beside a tent."
     },
     {
       "id": "S2",
@@ -15,17 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "A huge shadow of the dog sweeps across the tent wall."
+      "check": "A shadow of the dog sweeps across the tent wall."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow is larger than the dog."
+      "check": "It is night."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The shadow flickers with the flames."
+      "check": "The shadow is huge."
     }
   ],
   "pc": [

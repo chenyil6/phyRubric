@@ -5,12 +5,12 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A dry yellow stripe is on paper."
+      "check": "A yellow stripe is on paper."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "A stripe of translucent blue watercolour is painted over it."
+      "check": "A stripe of blue watercolour is painted over it."
     },
     {
       "id": "S3",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The yellow and blue outside the overlap keep their colours."
+      "check": "The yellow stripe is dry and the blue is translucent."
     }
   ],
   "pc": [

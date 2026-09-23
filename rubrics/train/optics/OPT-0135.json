@@ -5,22 +5,17 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A shop display is seen through a window."
+      "check": "A shop display with mannequins is seen through a window."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "The window is streaked with rain."
-    },
-    {
-      "id": "S3",
-      "weight": "core",
       "check": "The mannequins appear smeared where the water runs."
     },
     {
-      "id": "S4",
+      "id": "S3",
       "weight": "minor",
-      "check": "The mannequins are clear through dry parts of the glass."
+      "check": "The window is streaked with rain."
     }
   ],
   "pc": [

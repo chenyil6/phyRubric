@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The corner of a white paper towel is dipped into it."
+      "check": "The corner of a paper towel is dipped into it."
     },
     {
       "id": "S3",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The colour stops advancing when the towel is lifted out."
+      "check": "The towel is white."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The dip comes first and the creeping follows."
     }
   ],
   "pc": [

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A flashlight is pressed against the back of a large leaf in a dark room."
+      "check": "A flashlight is pressed against the back of a leaf."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The glow is brightest where the lens touches."
+      "check": "The room is dark."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The leaf is large."
     }
   ],
   "pc": [

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A sunlit glass door swings open."
+      "check": "A glass door swings open."
     },
     {
       "id": "S2",
@@ -15,7 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The glass panes cast little shadow while the frame casts a dark one."
+      "check": "The door is sunlit."
     },
     {
       "id": "S4",

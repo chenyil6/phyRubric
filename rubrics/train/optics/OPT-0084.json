@@ -20,12 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection is blurred elsewhere."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
-      "check": "The streak slowly fogs over again."
+      "check": "The wipe comes first and the reflection appears in the streak after."
     }
   ],
   "pc": [

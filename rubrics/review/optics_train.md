@@ -13,12 +13,12 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A wooden puppet on strings hangs in a window with sunlight coming through.
+- S1 [core] A puppet on strings hangs in a window.
 - S2 [core] The puppet's arm lifts as a string is pulled.
 - S3 [core] The puppet's shadow is visible on a wall.
 - S4 [core] The shadow's arm lifts too.
-- S5 [minor] The strings and their movement are visible.
-- S6 [minor] The shadow shows a recognisable puppet outline with head, body and arms.
+- S5 [minor] The window is sunny.
+- S6 [minor] The puppet is wooden.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -49,12 +49,11 @@
 **Declared violation types.** missing_consequence, trajectory_momentum
 
 **SA**
-- S1 [core] A skateboard with no rider is present.
-- S2 [core] It rolls along the ground.
-- S3 [core] A lit streetlamp stands nearby and it is night.
-- S4 [core] The skateboard's shadow is visible and changes as the board passes the lamp.
-- S5 [minor] The board passes close to or under the lamp.
-- S6 [minor] The scene is dark apart from the lamp light.
+- S1 [core] A skateboard with no rider rolls along the ground.
+- S2 [core] A lit streetlamp stands nearby.
+- S3 [core] The skateboard's shadow swings around it as the board passes under the light.
+- S4 [minor] It is night.
+- S5 [minor] The board passes under or close beneath the lamp.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -86,10 +85,9 @@
 
 **SA**
 - S1 [core] A dog runs across a lawn.
-- S2 [core] The lawn is in sunlight.
-- S3 [core] The dog's shadow is visible on the grass.
-- S4 [core] The shadow runs along beside the dog.
-- S5 [minor] The shadow touches the dog at its paws.
+- S2 [core] The dog's shadow is visible on the grass.
+- S3 [core] The shadow runs along beside the dog.
+- S4 [minor] The lawn is sunlit.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -160,8 +158,7 @@
 - S1 [core] A pair of hands is held in a flashlight beam pointed at a wall.
 - S2 [core] The hands form a bird shape.
 - S3 [core] A bird-shaped shadow appears on the wall.
-- S4 [minor] The shadow is larger than the hands.
-- S5 [minor] The hands are shaped first and the shadow appears with them.
+- S4 [minor] The hands are shaped first and the shadow appears with them.
 
 **PC**
 - P1 [core · shape_identity]
@@ -196,8 +193,8 @@
 **SA**
 - S1 [core] A projector shows slides on a screen.
 - S2 [core] A balloon drifts across the beam.
-- S3 [core] Its dark silhouette appears on the screen over the slides.
-- S4 [minor] The silhouette moves with the balloon.
+- S3 [core] Its silhouette appears on the screen over the slides.
+- S4 [minor] The silhouette is dark.
 - S5 [minor] The balloon enters the beam first and the silhouette appears with it.
 
 **PC**
@@ -229,10 +226,11 @@
 **Declared violation types.** missing_consequence, gravity_direction
 
 **SA**
-- S1 [core] A tall wooden lifeguard chair stands on a beach.
+- S1 [core] A lifeguard chair stands on a beach.
 - S2 [core] The sun is low behind it.
-- S3 [core] Its long shadow stretches across the sand in front of it.
-- S4 [minor] The shadow is longer than the chair is tall.
+- S3 [core] Its shadow stretches across the sand in front of it.
+- S4 [minor] The chair is tall and wooden.
+- S5 [minor] The shadow is long.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -301,8 +299,7 @@
 - S1 [core] A hillside is in sunlight.
 - S2 [core] The shadow of a cloud sweeps across it.
 - S3 [core] The grass darkens as the shadow passes.
-- S4 [minor] The shadow has a soft edge.
-- S5 [minor] The grass brightens again once the shadow has passed.
+- S4 [minor] The shadow arrives first and the darkening comes with it.
 
 **PC**
 - P1 [core · process_direction]
@@ -333,11 +330,12 @@
 **Declared violation types.** missing_consequence, gravity_direction
 
 **SA**
-- S1 [core] A frog sits on a sunlit stone.
-- S2 [core] It jumps straight up.
+- S1 [core] A frog sits on a stone.
+- S2 [core] It jumps up.
 - S3 [core] Its shadow stays on the stone.
 - S4 [core] The shadow separates from its feet while it is in the air.
-- S5 [minor] The gap closes when the frog lands.
+- S5 [minor] The stone is sunlit.
+- S6 [minor] The jump is straight up.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -371,10 +369,8 @@
 
 **SA**
 - S1 [core] A tractor drives along a field track.
-- S2 [core] The track is in sunlight.
-- S3 [core] The tractor's shadow rolls along the ground beside it.
-- S4 [minor] The shadow shows the wheels turning.
-- S5 [minor] The shadow touches the tractor at the wheels.
+- S2 [core] The tractor's shadow rolls along the ground beside it.
+- S3 [minor] The track is sunlit.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -405,10 +401,11 @@
 **Declared violation types.** missing_consequence, trajectory_momentum
 
 **SA**
-- S1 [core] A ball is thrown across a sunlit yard.
+- S1 [core] A ball is thrown across a yard.
 - S2 [core] The ball's shadow slides along the ground beneath it.
 - S3 [core] The shadow meets the ball where it lands.
-- S4 [minor] The throw comes first and the shadow tracks the flight.
+- S4 [minor] The yard is sunlit.
+- S5 [minor] The throw comes first and the meeting at the landing comes last.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -440,10 +437,9 @@
 
 **SA**
 - S1 [core] A patio umbrella is opened.
-- S2 [core] It is in sunlight.
-- S3 [core] A round shadow appears on the ground beneath it.
-- S4 [minor] The shadow appears as the umbrella opens.
-- S5 [minor] The shadow moves when the umbrella is tilted.
+- S2 [core] A round shadow appears on the ground beneath it.
+- S3 [minor] The umbrella is in sunlight.
+- S4 [minor] The umbrella opens first and the shadow appears with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -475,10 +471,10 @@
 
 **SA**
 - S1 [core] A car drives under a highway bridge.
-- S2 [core] The day is sunny.
-- S3 [core] The car's shadow disappears in the bridge's shade.
-- S4 [core] It reappears on the far side.
-- S5 [minor] The shadow vanishes when the car enters the shade and returns when it leaves.
+- S2 [core] The car's shadow disappears in the bridge's shade.
+- S3 [core] It reappears on the far side.
+- S4 [minor] The day is sunny.
+- S5 [minor] The order is shadow, no shadow under the bridge, shadow again.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -509,10 +505,11 @@
 **Declared violation types.** missing_consequence, permanence_count
 
 **SA**
-- S1 [core] A ball rolls along a sunlit pavement.
+- S1 [core] A ball rolls along a pavement.
 - S2 [core] It rolls into the shade of a building.
 - S3 [core] Its shadow disappears.
-- S4 [minor] The shadow is visible only while the ball is in the sun.
+- S4 [minor] The pavement is sunlit before the shade.
+- S5 [minor] The ball enters the shade first and the shadow disappears with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -544,9 +541,9 @@
 
 **SA**
 - S1 [core] A vase stands on a table.
-- S2 [core] A lit candle is carried in a circle around it.
+- S2 [core] A lit candle is carried around it.
 - S3 [core] The vase's shadow sweeps around the table opposite the candle.
-- S4 [minor] The shadow's length changes as the candle's distance changes.
+- S4 [minor] The candle's path is a circle around the vase.
 - S5 [minor] The candle moves first and the shadow follows.
 
 **PC**
@@ -578,10 +575,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A flock of birds flies over a sunlit field.
+- S1 [core] A flock of birds flies over a field.
 - S2 [core] Their shadows race across the grass below them.
-- S3 [minor] Each bird has a shadow.
-- S4 [minor] The shadows move together with the flock.
+- S3 [minor] The field is sunlit.
+- S4 [minor] There are several birds and several shadows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -614,10 +611,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A kite flies high over a beach in the sun.
-- S2 [core] Its small shadow moves across the sand.
-- S3 [core] The shadow moves as the kite sways.
-- S4 [minor] The shadow is far from the kite itself.
+- S1 [core] A kite flies over a beach.
+- S2 [core] Its shadow moves across the sand as the kite sways.
+- S3 [minor] The kite is high and in the sun.
+- S4 [minor] The shadow is small.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -648,10 +645,10 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A ball rolls along a sunny pavement.
+- S1 [core] A ball rolls along a pavement.
 - S2 [core] It passes through the shadow of a signpost.
 - S3 [core] The post's shadow slides over the ball as it passes.
-- S4 [minor] The ball's own shadow continues on the ground beyond.
+- S4 [minor] The pavement is sunny.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -682,10 +679,11 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A bicycle is parked at night.
+- S1 [core] A bicycle is parked.
 - S2 [core] A car's headlights light it from behind.
-- S3 [core] A long shadow of the bicycle stretches down the road ahead of it.
-- S4 [minor] The shadow changes as the car approaches and passes.
+- S3 [core] A shadow of the bicycle stretches down the road ahead of it.
+- S4 [minor] It is night.
+- S5 [minor] The shadow is long.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -752,10 +750,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A ceiling fan is under a bright bulb.
+- S1 [core] A ceiling fan is under a bulb.
 - S2 [core] The fan is switched on.
 - S3 [core] The spinning blades throw moving shadows across the room.
-- S4 [minor] The shadows sweep as fast as the blades.
+- S4 [minor] The bulb is bright.
 - S5 [minor] The fan starts first and the shadows move with it.
 
 **PC**
@@ -787,10 +785,10 @@
 **Declared violation types.** missing_consequence, trajectory_momentum
 
 **SA**
-- S1 [core] A ball bounces on a sunny court.
+- S1 [core] A ball bounces on a court.
 - S2 [core] Its shadow on the ground meets the ball at each bounce.
 - S3 [core] The shadow separates from the ball as it rises.
-- S4 [minor] The shadow stays on the ground throughout.
+- S4 [minor] The court is sunny.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -821,10 +819,11 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] An empty swing sways in the afternoon sun.
+- S1 [core] A swing sways in the sun.
 - S2 [core] Its shadow swings back and forth across the ground.
-- S3 [minor] The shadow stretches and shortens as the seat rises and falls.
-- S4 [minor] The swing moves first and the shadow follows in time.
+- S3 [minor] The swing is empty.
+- S4 [minor] It is afternoon sun.
+- S5 [minor] The swing moves first and the shadow follows in time.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -855,11 +854,12 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A drone hovers over a sunlit parking lot.
+- S1 [core] A drone hovers over a parking lot.
 - S2 [core] It flies to one side.
-- S3 [core] Its small shadow on the asphalt moves with it.
-- S4 [minor] The shadow shows the shape of the drone's arms.
-- S5 [minor] The drone moves first and the shadow follows.
+- S3 [core] Its shadow on the asphalt moves with it.
+- S4 [minor] The lot is sunlit.
+- S5 [minor] The shadow is small.
+- S6 [minor] The drone moves first and the shadow follows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -890,10 +890,10 @@
 **Declared violation types.** missing_consequence, gravity_direction
 
 **SA**
-- S1 [core] A pigeon lands on a sunny square.
+- S1 [core] A pigeon lands on a square.
 - S2 [core] Its shadow is on the paving.
 - S3 [core] The shadow joins the bird at its feet as it touches down.
-- S4 [minor] The shadow is on the ground before the bird lands.
+- S4 [minor] The square is sunny.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -926,9 +926,9 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] The curtains of a sunny window are pulled open.
+- S1 [core] The curtains of a window are pulled open.
 - S2 [core] The shadow of the window frame appears on the floor.
-- S3 [minor] The bars of the frame's shadow match the frame's layout.
+- S3 [minor] The window is sunny.
 - S4 [minor] The curtains open first and the pattern appears with them.
 
 **PC**
@@ -963,8 +963,8 @@
 - S1 [core] A projector shows a picture on a screen.
 - S2 [core] A hand is held in front of the lens.
 - S3 [core] A dark hand shape covers part of the picture on the screen.
-- S4 [minor] The dark shape is much larger than the hand.
-- S5 [minor] The dark shape disappears when the hand is withdrawn.
+- S4 [minor] The shape covers only part of the picture, not all of it.
+- S5 [minor] The hand goes in front of the lens first and the dark shape appears with it.
 
 **PC**
 - P1 [core · shape_identity]
@@ -997,10 +997,10 @@
 **Declared violation types.** missing_consequence, trajectory_momentum
 
 **SA**
-- S1 [core] A fox trots toward a streetlamp at night.
+- S1 [core] A fox trots toward a streetlamp.
 - S2 [core] Its shadow is behind it.
 - S3 [core] The shadow shrinks until the fox is directly under the light.
-- S4 [minor] The shadow shortens steadily as the fox approaches.
+- S4 [minor] It is night.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1033,10 +1033,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A flag flutters on a pole in the sun.
+- S1 [core] A flag flutters on a pole.
 - S2 [core] Its shadow flutters on the wall behind it.
-- S3 [minor] The shadow moves in time with the cloth.
-- S4 [minor] The shadow stops when the flag hangs still.
+- S3 [minor] The flag is in the sun.
+- S4 [minor] The flag is on a pole.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1067,10 +1067,9 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A cat walks along a sunlit windowsill inside a house.
+- S1 [core] A cat walks along a windowsill inside a house.
 - S2 [core] Its shadow moves across the floor of the room.
-- S3 [minor] The shadow shows the cat's outline including the tail.
-- S4 [minor] The shadow falls on the room side, away from the window.
+- S3 [minor] The windowsill is sunlit.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1140,10 +1139,11 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A robot vacuum travels the length of a corridor.
-- S2 [core] The corridor is lit by a single ceiling light.
+- S1 [core] A robot vacuum travels along a corridor.
+- S2 [core] The corridor is lit by a ceiling light.
 - S3 [core] Its shadow on the floor changes side as it passes beneath the light.
-- S4 [minor] The shadow is ahead before the light and behind after.
+- S4 [minor] There is a single ceiling light.
+- S5 [minor] The vacuum travels the corridor's length.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1245,10 +1245,10 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A garden hose sprays an arc of water in the evening sun.
-- S2 [core] The shadow of the arc falls on the soil beside it.
-- S3 [minor] The shadow follows the curve of the stream.
-- S4 [minor] The shadow flickers as the water moves.
+- S1 [core] A garden hose sprays water.
+- S2 [core] The shadow of the spray falls on the soil beside it.
+- S3 [minor] It is evening sun.
+- S4 [minor] The spray is an arc.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1282,7 +1282,7 @@
 - S1 [core] A statue stands on a table.
 - S2 [core] Two lamps light it from different sides.
 - S3 [core] The statue casts two shadows in different directions.
-- S4 [minor] Each shadow points away from one lamp.
+- S4 [minor] There are exactly two lamps and two shadows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1313,10 +1313,11 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A park bench stands beside a wall at dusk.
+- S1 [core] A park bench stands beside a wall.
 - S2 [core] The streetlights come on.
 - S3 [core] A shadow of the bench appears on the wall, away from the nearest light.
-- S4 [minor] The shadow appears only when the lights come on.
+- S4 [minor] It is dusk.
+- S5 [minor] The lights come on first and the shadow appears with them.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1347,10 +1348,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A horse trots across a sunlit paddock.
+- S1 [core] A horse trots across a paddock.
 - S2 [core] Its shadow trots along the grass beside it.
 - S3 [core] The shadow's legs move in step with the horse's.
-- S4 [minor] The shadow stays attached at the hooves.
+- S4 [minor] The paddock is sunlit.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1384,10 +1385,8 @@
 
 **SA**
 - S1 [core] A pendulum swings in front of a wall.
-- S2 [core] A lamp lights the wall.
-- S3 [core] The pendulum's shadow on the wall swings with it.
-- S4 [minor] The shadow moves in the same rhythm as the pendulum.
-- S5 [minor] When the pendulum stops the shadow stops.
+- S2 [core] The pendulum's shadow on the wall swings with it.
+- S3 [minor] The wall is lit by a lamp.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1418,11 +1417,11 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A campfire burns at night beside a tent.
+- S1 [core] A campfire burns beside a tent.
 - S2 [core] A dog walks between the fire and the tent.
-- S3 [core] A huge shadow of the dog sweeps across the tent wall.
-- S4 [minor] The shadow is larger than the dog.
-- S5 [minor] The shadow flickers with the flames.
+- S3 [core] A shadow of the dog sweeps across the tent wall.
+- S4 [minor] It is night.
+- S5 [minor] The shadow is huge.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1455,10 +1454,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A bus passes a row of parked cars on a sunny street.
-- S2 [core] Its shadow slides over the cars one after another.
-- S3 [minor] The shadow darkens each car as it passes.
-- S4 [minor] The shadow moves at the bus's speed.
+- S1 [core] A bus passes a row of parked cars.
+- S2 [core] Its shadow slides over the cars.
+- S3 [minor] The street is sunny.
+- S4 [minor] The shadow passes over the cars one after another, not all at once.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1491,8 +1490,7 @@
 **SA**
 - S1 [core] A leaf is held up against the sun.
 - S2 [core] Its shadow falls on the ground below.
-- S3 [minor] The shadow has the leaf's outline.
-- S4 [minor] The shadow moves when the leaf moves.
+- S3 [minor] The leaf is held up, not lying on the ground.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1526,10 +1524,8 @@
 
 **SA**
 - S1 [core] A car drives along a road.
-- S2 [core] The morning sun is on its left.
-- S3 [core] Its shadow runs along the ground on its right.
-- S4 [minor] The shadow stays attached at the wheels.
-- S5 [minor] The shadow moves with the car.
+- S2 [core] Its shadow runs along the ground on its right.
+- S3 [minor] The morning sun is on the car's left.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1560,10 +1556,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A tree sways in the wind on a sunny day.
+- S1 [core] A tree sways in the wind.
 - S2 [core] The pattern of leaf shadows on the ground beneath it shifts and dances.
-- S3 [minor] The pattern settles when the wind drops.
-- S4 [minor] The pattern lies on the ground away from the sun.
+- S3 [minor] The day is sunny.
+- S4 [minor] The shadows are a pattern of leaf shapes, not one solid shadow.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1597,7 +1593,7 @@
 - S1 [core] A lamppost stands on a pier.
 - S2 [core] It casts its shadow onto the water below.
 - S3 [core] The shadow rides the ripples.
-- S4 [minor] The shadow stays attached to the base of the post.
+- S4 [minor] There are ripples on the water.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1628,10 +1624,9 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A cat walks along the base of a sunlit wall.
+- S1 [core] A cat walks along the base of a wall.
 - S2 [core] Its shadow walks along the wall beside it.
-- S3 [minor] The shadow's paws are at ground level.
-- S4 [minor] The shadow lies on the side away from the sun.
+- S3 [minor] The wall is sunlit.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1666,9 +1661,9 @@
 **SA**
 - S1 [core] A lantern is inside a tent.
 - S2 [core] It is turned up to full brightness.
-- S3 [core] Sharp shadows of the tent poles appear on the canvas.
-- S4 [minor] The shadows appear as the lantern brightens.
-- S5 [minor] The shadows fall away from the lantern.
+- S3 [core] Shadows of the tent poles appear on the canvas.
+- S4 [minor] The shadows are sharp.
+- S5 [minor] The lantern brightens first and the shadows appear with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1703,8 +1698,8 @@
 - S2 [core] The robot raises one arm.
 - S3 [core] The robot's reflection is visible in the mirror.
 - S4 [core] The reflection raises an arm.
-- S5 [minor] The reflection raises the arm that corresponds to the robot's raised arm: the one directly across the mirror from it.
-- S6 [minor] The robot reads as a toy robot: blocky and mechanical.
+- S5 [minor] The robot raises its right arm.
+- S6 [minor] The reflection's raised arm is on the opposite side from the robot's.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1742,7 +1737,6 @@
 - S3 [core] The bus's reflection is visible in the windows.
 - S4 [core] The reflection moves along with the bus.
 - S5 [minor] The bus moves slowly.
-- S6 [minor] The reflection shows the bus's shape and colour.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1773,10 +1767,10 @@
 **Declared violation types.** shape_identity, missing_consequence
 
 **SA**
-- S1 [core] A mountain stands beside a still lake at dawn.
+- S1 [core] A mountain stands beside a lake.
 - S2 [core] An upside-down image of the mountain lies on the water.
-- S3 [minor] The image meets the real mountain at the shoreline.
-- S4 [minor] The lake is still.
+- S3 [minor] The lake is still.
+- S4 [minor] It is dawn.
 
 **PC**
 - P1 [core · shape_identity]
@@ -1807,10 +1801,9 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A cat walks up to a floor-length mirror.
+- S1 [core] A cat walks up to a mirror.
 - S2 [core] Another cat approaches it in the glass.
-- S3 [minor] The reflected cat is a mirror image of the real one.
-- S4 [minor] Their noses meet at the glass.
+- S3 [minor] The mirror is floor-length.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1845,8 +1838,7 @@
 **SA**
 - S1 [core] A pigeon walks past a puddle on a pavement.
 - S2 [core] Its reflection passes across the puddle.
-- S3 [core] The reflection is upside down.
-- S4 [minor] The reflection appears only within the puddle's edges.
+- S3 [minor] The reflection is upside down.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1879,10 +1871,9 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A car drives past an office building with a glass front.
-- S2 [core] The car's reflection glides across the windows.
-- S3 [minor] The reflection is mirrored.
-- S4 [minor] The reflection disappears where the glass ends.
+- S1 [core] A car drives past an office building.
+- S2 [core] The car's reflection glides across the building's windows.
+- S3 [minor] The building has a glass front.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1915,8 +1906,7 @@
 **SA**
 - S1 [core] A pendulum clock swings in front of a hallway mirror.
 - S2 [core] The reflected pendulum swings in time with it.
-- S3 [core] The reflection is mirrored.
-- S4 [minor] The reflection stops when the pendulum stops.
+- S3 [minor] The reflection is mirrored.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -1949,10 +1939,10 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A robot vacuum is in front of a floor-length mirror.
+- S1 [core] A robot vacuum is in front of a mirror.
 - S2 [core] It turns.
 - S3 [core] Its reflection turns with it in mirror image.
-- S4 [minor] The reflection's turn is simultaneous with the real one.
+- S4 [minor] The mirror is floor-length.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2024,7 +2014,7 @@
 - S1 [core] A wall mirror reflects the room.
 - S2 [core] A cloth is draped over it.
 - S3 [core] The reflection disappears behind the cloth.
-- S4 [minor] The reflection is gone wherever the cloth hangs and visible where it does not.
+- S4 [minor] The cloth goes on first and the reflection disappears with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2055,10 +2045,9 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A car approaches from behind another car.
+- S1 [core] A car approaches another car from behind.
 - S2 [core] Its image grows larger in the rear-view mirror of the car ahead.
-- S3 [minor] The image is seen behind, not ahead.
-- S4 [minor] The image grows as the car closes in.
+- S3 [minor] The mirror is the rear-view mirror inside the car ahead, not a side mirror.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2091,7 +2080,7 @@
 **SA**
 - S1 [core] A ball rolls out of a room past a wall mirror.
 - S2 [core] Its reflection leaves the mirror at the same time.
-- S3 [minor] Afterwards the mirror shows only the empty room.
+- S3 [minor] The mirror hangs on a wall.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2122,10 +2111,9 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A candle burns on a table by a dark window at night.
+- S1 [core] A candle burns on a table by a window.
 - S2 [core] A second flame appears in the glass beside the real one.
-- S3 [minor] The reflected flame flickers in step with the real one.
-- S4 [minor] The reflected flame is mirrored.
+- S3 [minor] It is night and the window is dark.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2156,10 +2144,10 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A luggage trolley is pushed across a polished marble lobby floor.
-- S2 [core] Its reflection moves upside down beneath it.
-- S3 [minor] The reflection meets the trolley at its wheels.
-- S4 [minor] The reflection is dimmer than the trolley.
+- S1 [core] A luggage trolley is pushed across a lobby floor.
+- S2 [core] Its reflection moves beneath it.
+- S3 [minor] The floor is polished marble.
+- S4 [minor] The reflection is upside down.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2190,10 +2178,10 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A duck paddles across a calm pond.
+- S1 [core] A duck paddles across a pond.
 - S2 [core] Its reflection glides along under it.
 - S3 [core] The reflection breaks up in the wake it leaves.
-- S4 [minor] The water ahead shows a clear image.
+- S4 [minor] The pond is calm.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2226,10 +2214,11 @@
 **Declared violation types.** missing_consequence, attribute_drift
 
 **SA**
-- S1 [core] Traffic lights hang above a wet street at night.
+- S1 [core] Traffic lights hang above a street.
 - S2 [core] They change from red to green.
 - S3 [core] Their reflections on the road change colour at the same moment.
-- S4 [minor] The reflections lie below the lights and stretch toward the viewer.
+- S4 [minor] The street is wet and it is night.
+- S5 [minor] The order is red first, green after.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2260,11 +2249,10 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A balloon on a string turns slowly in an elevator.
+- S1 [core] A balloon on a string turns in an elevator.
 - S2 [core] The elevator has mirrored walls.
 - S3 [core] Its reflections turn with it in every wall.
-- S4 [minor] All the reflections move at the same instant.
-- S5 [minor] Each reflection is mirrored relative to its wall.
+- S4 [minor] The balloon turns slowly.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2331,10 +2319,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A car approaches from behind a parked car.
+- S1 [core] A car approaches a parked car from behind.
 - S2 [core] Its image appears in the parked car's side mirror.
 - S3 [core] The image grows larger.
-- S4 [minor] The image leaves the mirror as the car draws alongside.
+- S4 [minor] The image appears first and grows after.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2365,11 +2353,12 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A wristwatch lies on a sunny table.
+- S1 [core] A wristwatch lies on a table.
 - S2 [core] It is turned so its face catches the sunlight.
 - S3 [core] A bright spot of light appears on the wall.
 - S4 [core] The spot slides as the watch turns.
-- S5 [minor] The spot disappears when the angle is lost.
+- S5 [minor] The table is sunny.
+- S6 [minor] The turn comes first and the spot appears with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2402,10 +2391,11 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A hand mirror is in a sunny doorway.
+- S1 [core] A hand mirror is in a doorway.
 - S2 [core] It is tilted.
-- S3 [core] A patch of sunlight dances across the shaded room.
-- S4 [minor] The patch vanishes when the mirror is turned from the sun.
+- S3 [core] A patch of sunlight dances across the room.
+- S4 [minor] The doorway is sunny and the room is shaded.
+- S5 [minor] The tilt comes first and the patch moves with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2438,10 +2428,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A lamp stands beside a dark window at night.
+- S1 [core] A lamp stands beside a window.
 - S2 [core] It is switched on.
 - S3 [core] The reflection of the lamp and the room appears in the glass.
-- S4 [minor] The reflection is mirrored.
+- S4 [minor] It is night and the window is dark.
 - S5 [minor] The lamp comes on first and the reflection appears with it.
 
 **PC**
@@ -2473,10 +2463,10 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A dog sits in front of a glossy black oven door.
+- S1 [core] A dog sits in front of an oven door.
 - S2 [core] It tilts its head.
 - S3 [core] Its reflection tilts its head the other way.
-- S4 [minor] The reflection is dimmer than the real dog.
+- S4 [minor] The oven door is glossy black.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2545,9 +2535,8 @@
 
 **SA**
 - S1 [core] A car drives along a canal-side road.
-- S2 [core] Its reflection travels upside down on the water beside it.
-- S3 [minor] The reflection keeps pace with the car.
-- S4 [minor] The reflection is missing where reeds or a boat break the surface.
+- S2 [core] Its reflection travels on the water beside it.
+- S3 [minor] The reflection is upside down.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2615,11 +2604,11 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A swan glides across a still lake at sunset.
+- S1 [core] A swan glides across a lake.
 - S2 [core] Its reflection glides beneath it.
 - S3 [core] The orange sky is behind both.
-- S4 [minor] The reflection is inverted and directly under the swan.
-- S5 [minor] The reflection breaks up only in the ripples the swan makes.
+- S4 [minor] The lake is still.
+- S5 [minor] It is sunset.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2653,9 +2642,10 @@
 
 **SA**
 - S1 [core] A hat is on a mannequin head in front of a shop mirror.
-- S2 [core] The head is turned from side to side.
+- S2 [core] The head is turned.
 - S3 [core] The reflection turns in mirror image.
-- S4 [minor] The reflection wears the same hat.
+- S4 [minor] The turning is from side to side.
+- S5 [minor] The head turns first and the reflection turns with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2691,8 +2681,7 @@
 - S1 [core] A mirror hangs on a wall.
 - S2 [core] A flashlight is pointed at it.
 - S3 [core] A spot of light appears on the opposite wall.
-- S4 [minor] The spot moves when the flashlight is angled.
-- S5 [minor] The spot vanishes when the beam leaves the mirror.
+- S4 [minor] The flashlight is aimed first and the spot appears with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2723,10 +2712,9 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A seagull walks across a wet beach at low tide.
-- S2 [core] Its reflection shows beneath it on the thin sheet of water.
-- S3 [minor] The reflection appears only where the sand is covered by water.
-- S4 [minor] The reflection breaks up in the bird's footprints.
+- S1 [core] A seagull walks across a wet beach.
+- S2 [core] Its reflection shows beneath it on the sheet of water.
+- S3 [minor] It is low tide and the water is a thin sheet.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2759,11 +2747,12 @@
 **Declared violation types.** shape_identity, missing_consequence
 
 **SA**
-- S1 [core] A checkerboard card is reflected in the bowl of a shiny spoon.
-- S2 [core] The spoon turns slowly.
+- S1 [core] A checkerboard card is reflected in the bowl of a spoon.
+- S2 [core] The spoon turns.
 - S3 [core] The reflected pattern stretches and shifts.
-- S4 [minor] The reflection is small and warped by the curve.
-- S5 [minor] The spoon turns first and the pattern shifts with it.
+- S4 [minor] The spoon is shiny.
+- S5 [minor] The spoon turns slowly.
+- S6 [minor] The spoon turns first and the pattern shifts with it.
 
 **PC**
 - P1 [core · shape_identity]
@@ -2797,9 +2786,8 @@
 
 **SA**
 - S1 [core] A puck slides across a frozen pond.
-- S2 [core] A faint reflection slides beneath it on the ice.
-- S3 [minor] The reflection is inverted and dim.
-- S4 [minor] The reflection disappears where the ice is scratched or snow-covered.
+- S2 [core] A reflection slides beneath it on the ice.
+- S3 [minor] The reflection is faint.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2833,7 +2821,7 @@
 - S1 [core] A shop has a mirrored sign.
 - S2 [core] A car passes the shop.
 - S3 [core] The car's headlights flash in the mirror as it goes by.
-- S4 [minor] The flash moves across the mirror with the car.
+- S4 [minor] The car's headlights are on.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2899,10 +2887,10 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A candle burns between two facing mirrors.
+- S1 [core] A candle burns between two mirrors.
 - S2 [core] A line of flames stretches away in both directions.
 - S3 [core] All the flames flicker together.
-- S4 [minor] The copies get smaller and dimmer further along the line.
+- S4 [minor] The mirrors face each other.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2938,8 +2926,7 @@
 - S1 [core] A mirror is steamed up.
 - S2 [core] A hand wipes a streak across it.
 - S3 [core] The room appears in the clear streak.
-- S4 [minor] The reflection is blurred elsewhere.
-- S5 [minor] The streak slowly fogs over again.
+- S4 [minor] The wipe comes first and the reflection appears in the streak after.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -2972,11 +2959,12 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A heron stands in shallow water on a still morning.
+- S1 [core] A heron stands in shallow water.
 - S2 [core] Its reflection stands upside down beneath it.
 - S3 [core] It steps forward.
 - S4 [core] The reflection ripples.
-- S5 [minor] The reflection is sharp when the bird is still.
+- S5 [minor] The morning is still.
+- S6 [minor] The step comes first and the ripples follow.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3009,10 +2997,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A car's side mirror is adjusted from inside.
+- S1 [core] A car's side mirror is adjusted.
 - S2 [core] The view in the mirror sweeps from the sky down to the road behind.
-- S3 [minor] The view stops changing when the adjustment stops.
-- S4 [minor] The mirror shows the scene behind the car.
+- S3 [minor] The adjustment is made from inside the car.
+- S4 [minor] The order of the sweep is sky first, road last.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3043,10 +3031,10 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A soap bubble drifts past a bright window.
-- S2 [core] A tiny reflection of the window curves across the bubble's surface.
-- S3 [minor] The reflection moves across the bubble as it drifts.
-- S4 [minor] The reflection vanishes when the bubble pops.
+- S1 [core] A soap bubble drifts past a window.
+- S2 [core] A reflection of the window curves across the bubble's surface.
+- S3 [minor] The window is bright.
+- S4 [minor] The reflection is tiny.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3078,9 +3066,9 @@
 
 **SA**
 - S1 [core] A pair of sunglasses lies on a table facing a lamp.
-- S2 [core] The lamp shows as two small images in the lenses.
-- S3 [minor] The images are curved to the lenses.
-- S4 [minor] The images show the lamp, not what is behind the glasses.
+- S2 [core] The lamp shows as images in the lenses.
+- S3 [minor] There are two images, one in each lens.
+- S4 [minor] The images are small.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3111,10 +3099,10 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A motorboat crosses a glassy lake at low speed.
+- S1 [core] A motorboat crosses a lake.
 - S2 [core] Its reflection travels with it.
-- S3 [minor] The reflection is broken only by the wake.
-- S4 [minor] The reflection is attached at the waterline.
+- S3 [minor] The lake is glassy and the boat moves at low speed.
+- S4 [minor] The reflection is broken only by the wake.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3148,8 +3136,7 @@
 - S1 [core] A compact mirror is opened.
 - S2 [core] It is angled toward a ring on a table.
 - S3 [core] The ring appears in the little mirror.
-- S4 [minor] The image is mirrored.
-- S5 [minor] The ring slides out of view when the angle changes.
+- S4 [minor] The order is open, angle, ring appears.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3182,10 +3169,10 @@
 **Declared violation types.** missing_consequence, attribute_drift
 
 **SA**
-- S1 [core] A neon sign glows above a rain-soaked street at night.
-- S2 [core] Its coloured reflection streaks down the wet pavement toward the viewer.
-- S3 [minor] The reflection has the same colours as the sign.
-- S4 [minor] The reflection fades where the pavement is dry.
+- S1 [core] A neon sign glows above a street.
+- S2 [core] Its reflection streaks down the wet pavement toward the viewer.
+- S3 [minor] It is night and the street is rain-soaked.
+- S4 [minor] The reflection is coloured.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3216,10 +3203,10 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A cat is in front of a shiny chrome kettle.
+- S1 [core] A cat is in front of a kettle.
 - S2 [core] It bats at its reflection.
 - S3 [core] The reflected paw bats back from inside the metal.
-- S4 [minor] The reflection is warped by the curve of the kettle.
+- S4 [minor] The kettle is shiny chrome.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3288,9 +3275,8 @@
 
 **SA**
 - S1 [core] A disco ball turns under stage lights.
-- S2 [core] Dozens of small bright spots sweep across the walls.
-- S3 [minor] The spots move when the ball turns and stop when it stops.
-- S4 [minor] The spots appear on the walls away from the lights.
+- S2 [core] Small bright spots sweep across the walls.
+- S3 [minor] There are dozens of spots.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3322,9 +3308,8 @@
 
 **SA**
 - S1 [core] A sheet of glass is held at an angle to a window.
-- S2 [core] The garden outside appears faintly in the glass over the room behind it.
-- S3 [minor] The reflected garden shifts as the glass tilts.
-- S4 [minor] The reflected garden is dim and mirrored.
+- S2 [core] The garden outside appears in the glass over the room behind it.
+- S3 [minor] The reflected garden is faint.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3357,10 +3342,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A red ball rolls along a hallway of polished steel panels.
-- S2 [core] A blurry reflection rolls alongside in each panel.
-- S3 [minor] The copies vanish at the gaps between panels.
-- S4 [minor] Each copy is mirrored and slightly warped.
+- S1 [core] A ball rolls along a hallway of polished steel panels.
+- S2 [core] A reflection rolls alongside in each panel.
+- S3 [minor] The ball is red.
+- S4 [minor] The reflection is blurry.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3394,8 +3379,7 @@
 - S1 [core] A glass of water is present.
 - S2 [core] A drinking straw is placed into it.
 - S3 [core] The straw appears bent or broken at the waterline.
-- S4 [minor] The glass is clear enough to see the straw below the surface.
-- S5 [minor] The bend appears once the straw is in the water, not before.
+- S4 [minor] The straw goes in first and the bend appears after.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3430,8 +3414,7 @@
 - S2 [core] Goldfish are inside it.
 - S3 [core] The fish are visible through the glass.
 - S4 [core] The fish swim: they move through the water.
-- S5 [minor] There are several goldfish, orange in colour.
-- S6 [minor] The tank is transparent on the side facing the viewer.
+- S5 [minor] There are several goldfish.
 
 **PC**
 - P1 [core · solidity]
@@ -3464,9 +3447,9 @@
 **Declared violation types.** missing_consequence, permanence_count
 
 **SA**
-- S1 [core] A bird hops across a lawn outside a clear window.
+- S1 [core] A bird hops across a lawn outside a window.
 - S2 [core] It is seen through the glass.
-- S3 [minor] The bird is fully visible and undistorted through the pane.
+- S3 [minor] The window is clear.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3500,9 +3483,9 @@
 
 **SA**
 - S1 [core] Rain streams down a window.
-- S2 [core] Trees outside are seen through the wet glass.
+- S2 [core] Trees outside are seen through the glass.
 - S3 [core] The view wobbles and blurs where the water runs.
-- S4 [minor] The distortion moves downward with the drops.
+- S4 [minor] The distortion is along the running water, not everywhere.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3533,10 +3516,10 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A magnifying glass is moved over a page of small print.
-- S2 [core] The letters under the lens appear much larger.
-- S3 [minor] The print outside the lens stays small.
-- S4 [minor] The enlarged letters shift as the lens moves.
+- S1 [core] A magnifying glass is moved over a page of print.
+- S2 [core] The letters under the lens appear larger.
+- S3 [minor] The print is small.
+- S4 [minor] The enlargement is strong: the letters look much larger.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3570,8 +3553,8 @@
 
 **SA**
 - S1 [core] A pair of reading glasses is slid across a menu.
-- S2 [core] The text seen through the lenses appears slightly larger than the text around the frames.
-- S3 [minor] The enlargement moves with the glasses.
+- S2 [core] The text seen through the lenses appears larger than the text around the frames.
+- S3 [minor] The enlargement is slight.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3604,9 +3587,10 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] The tiles on the floor of a clear pool are seen through the water.
-- S2 [core] Their grid wavers slightly with the surface.
-- S3 [minor] The tiles are visible throughout.
+- S1 [core] The tiles on the floor of a pool are seen through the water.
+- S2 [core] Their grid wavers with the surface.
+- S3 [minor] The pool is clear.
+- S4 [minor] The wavering is slight.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3640,7 +3624,7 @@
 - S1 [core] A card is printed with a straight vertical line.
 - S2 [core] A glass of water is set in front of it.
 - S3 [core] The line seen through the glass looks shifted and wider.
-- S4 [minor] The line returns to normal when the glass is moved away.
+- S4 [minor] The glass is set down first and the shift appears with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3674,8 +3658,9 @@
 
 **SA**
 - S1 [core] A drop of water lands on a phone screen.
-- S2 [core] The tiny pixels under the drop appear magnified.
-- S3 [minor] The screen beyond the drop is unchanged.
+- S2 [core] The pixels under the drop appear magnified.
+- S3 [minor] The pixels are tiny.
+- S4 [minor] The drop lands first and the magnified pixels are seen after.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3709,7 +3694,6 @@
 - S1 [core] A clear ice cube is held up to a window.
 - S2 [core] The scene outside is visible through the ice.
 - S3 [minor] The view is slightly blurred.
-- S4 [minor] The view is distorted at the cube's edges and cracks.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3743,9 +3727,8 @@
 
 **SA**
 - S1 [core] A cat moves behind a frosted glass door.
-- S2 [core] Only a blurred shape of it is visible through the glass.
-- S3 [minor] The blur moves as the cat moves.
-- S4 [minor] The blur sharpens as the cat comes closer to the glass.
+- S2 [core] A blurred shape of it is visible through the glass.
+- S3 [minor] Only the blurred shape is visible; no sharp detail of the cat shows through.
 
 **PC**
 - P1 [core · shape_identity]
@@ -3812,11 +3795,12 @@
 **Declared violation types.** shape_identity, missing_consequence
 
 **SA**
-- S1 [core] A patterned card is seen through a round fishbowl.
+- S1 [core] A patterned card is seen through a fishbowl.
 - S2 [core] The pattern appears stretched and warped through the bowl.
 - S3 [core] The card is moved.
 - S4 [core] The warp changes.
-- S5 [minor] The pattern is normal seen past the bowl's edge.
+- S5 [minor] The bowl is round.
+- S6 [minor] The card moves first and the warp changes with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3851,7 +3835,7 @@
 **SA**
 - S1 [core] The view is from under the water.
 - S2 [core] The wavering shapes of trees and a pool ladder show through the surface.
-- S3 [minor] The shapes steady when the water is calm.
+- S3 [minor] Both trees and a pool ladder are among the shapes.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3884,8 +3868,7 @@
 **SA**
 - S1 [core] Cakes are on display behind a bakery's front window.
 - S2 [core] They are clearly visible through the glass.
-- S3 [minor] A tram passes behind the camera, reflected faintly.
-- S4 [minor] Nothing is hidden by the pane.
+- S3 [minor] A tram passes behind the camera.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3916,10 +3899,11 @@
 **Declared violation types.** shape_identity, missing_consequence
 
 **SA**
-- S1 [core] A clear jug stands in front of a patterned tile wall.
+- S1 [core] A jug stands in front of a patterned tile wall.
 - S2 [core] Water is poured into it.
 - S3 [core] The pattern seen through the jug shifts as the water rises.
-- S4 [minor] The boundary of the shift is at the water level.
+- S4 [minor] The jug is clear.
+- S5 [minor] The pour comes first and the shift comes with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -3987,10 +3971,10 @@
 **Declared violation types.** shape_identity, causeless_motion
 
 **SA**
-- S1 [core] Coins lie on the bottom of a clear fountain.
+- S1 [core] Coins lie on the bottom of a fountain.
 - S2 [core] The surface ripples.
 - S3 [core] The coins appear to shimmer and shift.
-- S4 [minor] The coins are visible through the water throughout.
+- S4 [minor] The fountain is clear.
 
 **PC**
 - P1 [core · shape_identity]
@@ -4021,9 +4005,9 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A clear plastic ruler is laid over a line of text.
+- S1 [core] A plastic ruler is laid over a line of text.
 - S2 [core] The text is readable through the ruler.
-- S3 [minor] There is at most a slight shift at the ruler's edges.
+- S3 [minor] The ruler is clear plastic.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4056,10 +4040,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A clear glass of water stands on a table in sunlight.
+- S1 [core] A glass of water stands on a table in sunlight.
 - S2 [core] Sunlight passes through it.
 - S3 [core] A bright patch of light appears on the table on the far side of the glass.
-- S4 [minor] The patch moves when the glass is moved.
+- S4 [minor] The glass is clear.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4128,9 +4112,8 @@
 
 **SA**
 - S1 [core] Raindrops cover a window.
-- S2 [core] The street outside appears as many tiny warped pictures within the drops.
-- S3 [minor] The pictures move as the drops run down.
-- S4 [minor] The view between the drops is normal.
+- S2 [core] The street outside appears as pictures within the drops.
+- S3 [minor] The pictures are tiny and warped, and there are many of them.
 
 **PC**
 - P1 [core · shape_identity]
@@ -4163,8 +4146,8 @@
 **SA**
 - S1 [core] A snorkel mask is lowered under the water.
 - S2 [core] Blurred rocks below come into sharp view through the mask.
-- S3 [minor] The rocks look nearer and larger through the mask.
-- S4 [minor] The view blurs again when the mask is lifted out.
+- S3 [minor] The rocks are blurred before the mask is lowered.
+- S4 [minor] The mask goes under first and the sharp view follows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4200,8 +4183,7 @@
 - S1 [core] A printed face is on a poster.
 - S2 [core] A clear glass jar of water is held in front of it.
 - S3 [core] The eyes seen through the jar look stretched wide.
-- S4 [minor] The face beside the jar is normal.
-- S5 [minor] The stretch changes as the jar moves.
+- S4 [minor] The jar goes in front first and the stretch appears with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4234,10 +4216,10 @@
 **Declared violation types.** shape_identity, causeless_motion
 
 **SA**
-- S1 [core] A garden is seen through a pane of old wavy glass.
+- S1 [core] A garden is seen through a pane of glass.
 - S2 [core] The camera moves.
 - S3 [core] The plants seem to bend and shift.
-- S4 [minor] Through a flat pane beside it the view is undistorted.
+- S4 [minor] The glass is old and wavy.
 
 **PC**
 - P1 [core · shape_identity]
@@ -4269,9 +4251,8 @@
 
 **SA**
 - S1 [core] A clear glass marble is held up in front of a lamp.
-- S2 [core] The room appears tiny and warped inside the marble.
-- S3 [minor] The image moves as the marble moves.
-- S4 [minor] The room around the marble is normal.
+- S2 [core] The room appears inside the marble.
+- S3 [minor] The image is tiny and warped.
 
 **PC**
 - P1 [core · shape_identity]
@@ -4305,10 +4286,10 @@
 
 **SA**
 - S1 [core] A pastry is visible through a bakery's glass counter.
-- S2 [core] Tongs reach in from the open back.
+- S2 [core] Tongs reach into the counter.
 - S3 [core] They lift out the pastry.
-- S4 [minor] The pastry lifted is the one that was seen.
-- S5 [minor] The tongs enter from behind, not through the pane.
+- S4 [minor] The tongs enter from the open back.
+- S5 [minor] The reach comes first and the lift follows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4343,7 +4324,7 @@
 **SA**
 - S1 [core] A field slides past a train window.
 - S2 [core] It is clearly visible through the glass.
-- S3 [minor] The view moves continuously.
+- S3 [minor] The view is from inside a train carriage.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4374,11 +4355,9 @@
 **Declared violation types.** shape_identity, trajectory_momentum
 
 **SA**
-- S1 [core] A coin is dropped into a tall clear vase of water.
+- S1 [core] A coin is dropped into a tall vase of water.
 - S2 [core] The coin appears to jump sideways as it passes through the surface.
-- S3 [core] It sinks to the bottom.
-- S4 [minor] The coin is visible through the glass.
-- S5 [minor] The apparent shift is at the waterline.
+- S3 [minor] The vase is tall and clear.
 
 **PC**
 - P1 [core · shape_identity]
@@ -4409,10 +4388,9 @@
 **Declared violation types.** shape_identity, missing_consequence
 
 **SA**
-- S1 [core] A glass paperweight is slid over a newspaper.
+- S1 [core] A paperweight is slid over a newspaper.
 - S2 [core] The letters under it look swollen and bent.
-- S3 [minor] The distortion shifts as the paperweight is slid.
-- S4 [minor] The letters outside it are normal.
+- S3 [minor] The paperweight is glass.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4445,10 +4423,10 @@
 **Declared violation types.** process_direction, shape_identity
 
 **SA**
-- S1 [core] A bathroom window is fogged after a shower.
+- S1 [core] A bathroom window is fogged.
 - S2 [core] A hairdryer blows on the glass.
 - S3 [core] The view of the yard outside sharpens where the air blows.
-- S4 [minor] The view stays clear while the glass is dry.
+- S4 [minor] The dryer blows first and the sharpening follows.
 
 **PC**
 - P1 [core · process_direction]
@@ -4482,8 +4460,8 @@
 
 **SA**
 - S1 [core] A loupe is held over a ring.
-- S2 [core] The ring's details appear greatly enlarged through it.
-- S3 [minor] The rest of the ring and the desk look normal size.
+- S2 [core] The ring's details appear enlarged through it.
+- S3 [minor] The enlargement is great.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4516,9 +4494,10 @@
 **Declared violation types.** shape_identity, missing_consequence
 
 **SA**
-- S1 [core] The view is from under the clear sea.
-- S2 [core] The underside of a boat shows as a wavering dark shape through the surface.
-- S3 [minor] The shape steadies as the water calms.
+- S1 [core] The view is from under the sea.
+- S2 [core] The underside of a boat shows as a wavering shape through the surface.
+- S3 [minor] The sea is clear.
+- S4 [minor] The shape is dark.
 
 **PC**
 - P1 [core · shape_identity]
@@ -4549,10 +4528,11 @@
 **Declared violation types.** shape_identity, causeless_motion
 
 **SA**
-- S1 [core] Vegetable pieces lie at the bottom of a pot of clear water.
+- S1 [core] Vegetable pieces lie at the bottom of a pot of water.
 - S2 [core] The water is stirred.
 - S3 [core] The pieces seem to shift and swim.
-- S4 [minor] They look still again when the stirring stops.
+- S4 [minor] The water is clear.
+- S5 [minor] The stirring comes first and the apparent movement comes with it.
 
 **PC**
 - P1 [core · shape_identity]
@@ -4585,10 +4565,9 @@
 **Declared violation types.** shape_identity, missing_consequence
 
 **SA**
-- S1 [core] A clear glass bottle of water is held sideways in front of a lit sign.
+- S1 [core] A clear glass bottle of water is held in front of a lit sign.
 - S2 [core] The letters seen through the bottle appear stretched.
-- S3 [minor] The stretch changes as the bottle turns.
-- S4 [minor] The sign itself is unchanged.
+- S3 [minor] The bottle is held sideways.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4624,7 +4603,7 @@
 - S1 [core] A window is wet.
 - S2 [core] A patch is wiped dry with a cloth.
 - S3 [core] The view through the patch becomes sharp.
-- S4 [minor] The view outside the patch stays blurred.
+- S4 [minor] The wipe comes first and the sharp view follows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4693,9 +4672,10 @@
 
 **SA**
 - S1 [core] A ruled sheet is present.
-- S2 [core] A clear glass beaker of water is placed in front of it.
+- S2 [core] A glass beaker of water is placed in front of it.
 - S3 [core] The lines behind the beaker appear closer together and shifted.
-- S4 [minor] The change vanishes when the beaker is emptied or moved.
+- S4 [minor] The beaker is clear glass.
+- S5 [minor] The beaker is placed first and the shift appears with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4728,10 +4708,9 @@
 **Declared violation types.** shape_identity, missing_consequence
 
 **SA**
-- S1 [core] A shop display is seen through a window.
-- S2 [core] The window is streaked with rain.
-- S3 [core] The mannequins appear smeared where the water runs.
-- S4 [minor] The mannequins are clear through dry parts of the glass.
+- S1 [core] A shop display with mannequins is seen through a window.
+- S2 [core] The mannequins appear smeared where the water runs.
+- S3 [minor] The window is streaked with rain.
 
 **PC**
 - P1 [core · shape_identity]
@@ -4762,10 +4741,9 @@
 **Declared violation types.** shape_identity, missing_consequence
 
 **SA**
-- S1 [core] A clear glass of water is held up in front of a doorway.
+- S1 [core] A glass of water is held up in front of a doorway.
 - S2 [core] The doorway seen through it appears flipped left-to-right and squeezed thin.
-- S3 [minor] The image shifts as the glass moves.
-- S4 [minor] The room seen around the glass is normal.
+- S3 [minor] The glass is clear.
 
 **PC**
 - P1 [core · shape_identity]
@@ -4798,10 +4776,10 @@
 **Declared violation types.** shape_identity, missing_consequence
 
 **SA**
-- S1 [core] A straight stick is lowered into a clear pond.
+- S1 [core] A stick is lowered into a pond.
 - S2 [core] The underwater part appears to angle away from the part above the surface.
-- S3 [minor] The apparent bend is at the surface.
-- S4 [minor] The stick is straight when lifted out.
+- S3 [minor] The stick is straight out of the water.
+- S4 [minor] The pond is clear.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4834,10 +4812,11 @@
 **Declared violation types.** shape_identity, process_direction
 
 **SA**
-- S1 [core] A car's side window is fogged from the inside.
+- S1 [core] A car's side window is fogged.
 - S2 [core] The passing city is blurred through it.
 - S3 [core] A patch is wiped clear.
-- S4 [minor] The view is sharp through the patch and blurred elsewhere.
+- S4 [minor] The fog is on the inside of the window.
+- S5 [minor] The blurred view comes first and the clear patch after.
 
 **PC**
 - P1 [core · shape_identity]
@@ -4873,7 +4852,7 @@
 - S1 [core] A line is drawn on a piece of paper.
 - S2 [core] A glass of water is placed on it.
 - S3 [core] The line under the glass appears broken from the line outside it.
-- S4 [minor] The line returns to one straight line when the glass is lifted.
+- S4 [minor] The glass is placed first and the break appears with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4906,10 +4885,9 @@
 **Declared violation types.** missing_consequence, shape_identity
 
 **SA**
-- S1 [core] A pair of binoculars is held up to the camera toward a distant bird.
+- S1 [core] A pair of binoculars is held up to the camera toward a bird.
 - S2 [core] The bird appears large and close through the lenses.
-- S3 [minor] The bird seen beside the binoculars is small.
-- S4 [minor] The enlarged view follows where the binoculars point.
+- S3 [minor] The bird is distant.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -4980,10 +4958,10 @@
 
 **SA**
 - S1 [core] A lit flashlight is present.
-- S2 [core] A dark wall is present.
+- S2 [core] A wall is present.
 - S3 [core] The beam's bright spot is on the wall and slides along it.
-- S4 [minor] The flashlight turns or moves during the sweep.
-- S5 [minor] The spot is a bright patch with a soft edge, brighter at its centre.
+- S4 [minor] The wall is dark apart from the spot.
+- S5 [minor] The flashlight is swept: it turns or moves during the clip.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5014,12 +4992,12 @@
 **Declared violation types.** missing_consequence, attribute_drift
 
 **SA**
-- S1 [core] A single lit candle is present.
+- S1 [core] A lit candle is present in a room.
 - S2 [core] The room is dark and the candle is the only light.
 - S3 [core] Objects near the candle are lit by it.
 - S4 [core] The far wall stays dark.
-- S5 [minor] The light flickers gently with the flame.
-- S6 [minor] There are objects near the candle for it to light.
+- S5 [minor] There is a single candle.
+- S6 [minor] There are objects near the candle.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5053,8 +5031,7 @@
 - S1 [core] A flashlight is under a blanket.
 - S2 [core] It is switched on.
 - S3 [core] The blanket glows from inside where the light is.
-- S4 [minor] The glow is brightest where the flashlight is nearest the cloth.
-- S5 [minor] The switch comes first and the glow follows.
+- S4 [minor] The switch comes first and the glow follows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5087,9 +5064,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A lighthouse beam sweeps around in the night.
-- S2 [core] It lights up the sea and cliffs in turn as it passes.
-- S3 [minor] The beam rotates steadily.
+- S1 [core] A lighthouse beam sweeps around.
+- S2 [core] It lights up the sea and cliffs as it passes.
+- S3 [minor] It is night.
+- S4 [minor] The sea and the cliffs are lit in turn, one after the other.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5122,10 +5100,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A remote-controlled car crosses a dark stage.
+- S1 [core] A remote-controlled car crosses a stage.
 - S2 [core] A spotlight follows it.
 - S3 [core] The circle of light moves with the car.
-- S4 [minor] The rest of the stage stays dark.
+- S4 [minor] The stage is dark.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5158,10 +5136,11 @@
 **Declared violation types.** missing_consequence, process_direction
 
 **SA**
-- S1 [core] A refrigerator stands in a dark kitchen.
+- S1 [core] A refrigerator stands in a kitchen.
 - S2 [core] Its door is opened.
 - S3 [core] Light from inside spills out across the floor.
-- S4 [minor] The light widens as the door opens.
+- S4 [minor] The kitchen is dark.
+- S5 [minor] The door opens first and the light spills with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5194,10 +5173,11 @@
 **Declared violation types.** missing_consequence, attribute_drift
 
 **SA**
-- S1 [core] A phone lies face-up on a table in a dark room.
+- S1 [core] A phone lies on a table in a room.
 - S2 [core] It lights up.
 - S3 [core] Its glow lights the objects around it from below.
-- S4 [minor] The objects are lit on the sides facing the screen.
+- S4 [minor] The phone lies face-up.
+- S5 [minor] The room is dark.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5266,9 +5246,10 @@
 **Declared violation types.** missing_consequence, process_direction
 
 **SA**
-- S1 [core] A dimmer knob is turned slowly.
+- S1 [core] A dimmer knob is turned.
 - S2 [core] The ceiling lights fade from bright to a dim glow.
-- S3 [minor] The brightness follows the knob smoothly.
+- S3 [minor] The knob is turned slowly.
+- S4 [minor] The turn comes first and the fade follows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5304,7 +5285,7 @@
 - S1 [core] A picnic table is in sunlight.
 - S2 [core] A cloud slides across the sun.
 - S3 [core] The whole scene dims.
-- S4 [minor] Sharp shadows soften as the cloud moves in.
+- S4 [minor] The cloud comes first and the dimming follows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5335,10 +5316,11 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] Heavy curtains hang in a dim bedroom.
+- S1 [core] Curtains hang in a dim bedroom.
 - S2 [core] They are pulled open.
 - S3 [core] Daylight floods in and brightens the room.
-- S4 [minor] The brightest part is nearest the window.
+- S4 [minor] The curtains are heavy.
+- S5 [minor] The curtains open first and the brightening follows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5372,8 +5354,9 @@
 
 **SA**
 - S1 [core] A match is struck in a dark cave.
-- S2 [core] The flame lights the rock walls around it for a moment.
-- S3 [minor] The far reaches stay dark.
+- S2 [core] The flame lights the rock walls around it.
+- S3 [minor] The lighting lasts only a moment.
+- S4 [minor] The strike comes first and the lighting follows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5406,9 +5389,9 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A lantern is carried through a dark campsite.
+- S1 [core] A lantern is carried through a campsite.
 - S2 [core] The pool of light moves along the ground with it.
-- S3 [minor] The tents brighten as it passes and darken behind it.
+- S3 [minor] The campsite is dark.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5441,10 +5424,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A headlamp is worn in a dark cave.
+- S1 [core] A headlamp is worn in a cave.
 - S2 [core] It is turned from side to side.
 - S3 [core] The beam sweeps across the cave walls with each turn.
-- S4 [minor] The wall the lamp turns away from goes dark.
+- S4 [minor] The cave is dark.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5477,10 +5460,11 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A laser pointer's red dot is on a projected slide.
+- S1 [core] A laser pointer's dot is on a projected slide.
 - S2 [core] The pointer is moved.
 - S3 [core] The dot moves across the slide.
-- S4 [minor] The dot appears only while the button is pressed and disappears when released.
+- S4 [minor] The dot is red.
+- S5 [minor] The pointer moves first and the dot moves with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5515,8 +5499,9 @@
 **SA**
 - S1 [core] A dim hall is present.
 - S2 [core] A camera flash fires.
-- S3 [core] The whole room is lit for an instant.
-- S4 [minor] The room returns to dim immediately.
+- S3 [core] The whole room is lit.
+- S4 [minor] The lighting lasts only an instant.
+- S5 [minor] The flash comes first and the lighting comes with it.
 
 **PC**
 - P1 [core · process_direction]
@@ -5547,10 +5532,11 @@
 **Declared violation types.** missing_consequence, process_direction
 
 **SA**
-- S1 [core] A car enters a tunnel on a sunny day.
+- S1 [core] A car enters a tunnel.
 - S2 [core] The inside of the car dims.
 - S3 [core] The overhead tunnel lights take over.
-- S4 [minor] The light takes on the tunnel lamps' colour.
+- S4 [minor] The day is sunny outside.
+- S5 [minor] The order is bright, dim, then tunnel-lit.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5584,7 +5570,7 @@
 - S1 [core] A flashlight is pointed at a wall.
 - S2 [core] It is swung up to the ceiling.
 - S3 [core] The lit spot leaves the wall and appears on the ceiling.
-- S4 [minor] The wall goes dark once the beam has left it.
+- S4 [minor] The swing comes first and the spot moves with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5620,8 +5606,7 @@
 - S1 [core] A flashlight is on.
 - S2 [core] A hand is cupped over its front.
 - S3 [core] The beam is blocked and the room goes dark.
-- S4 [minor] The fingers glow red at the edges.
-- S5 [minor] The hand comes first and the dark follows.
+- S4 [minor] The hand comes first and the dark follows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5657,7 +5642,7 @@
 - S1 [core] A door leads from a lit hallway into a dark room.
 - S2 [core] The door is opened.
 - S3 [core] A wedge of light spreads across the floor as the door swings.
-- S4 [minor] The wedge widens with the door.
+- S4 [minor] The door opens first and the wedge spreads with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5690,10 +5675,10 @@
 **Declared violation types.** missing_consequence, attribute_drift
 
 **SA**
-- S1 [core] Two identical white vases stand in a dark room.
+- S1 [core] Two vases stand in a dark room.
 - S2 [core] A single lamp lights them from different distances.
 - S3 [core] The nearer one is lit far more brightly than the farther one.
-- S4 [minor] The far vase would brighten if moved toward the lamp.
+- S4 [minor] The vases are identical and white.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5726,10 +5711,9 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A lit candle is carried down a dark staircase.
+- S1 [core] A lit candle is carried down a staircase.
 - S2 [core] The light on the walls travels with the candle.
-- S3 [minor] The light flickers with the flame.
-- S4 [minor] The walls darken behind as the candle moves on.
+- S3 [minor] The staircase is dark.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5762,11 +5746,11 @@
 **Declared violation types.** missing_consequence, attribute_drift
 
 **SA**
-- S1 [core] A lighter is struck in a dark garage.
+- S1 [core] A lighter is struck in a garage.
 - S2 [core] It is held up.
-- S3 [core] The small flame lights the nearby tools and bench.
-- S4 [minor] Only things near the flame are visible.
-- S5 [minor] The light flickers.
+- S3 [core] The flame lights the nearby tools and bench.
+- S4 [minor] The garage is dark.
+- S5 [minor] The flame is small.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5800,10 +5784,10 @@
 
 **SA**
 - S1 [core] A cinema's house lights are on.
-- S2 [core] They dim before the film starts.
+- S2 [core] They dim.
 - S3 [core] The seats fade from view.
 - S4 [core] Only the screen glows.
-- S5 [minor] The dimming is gradual.
+- S5 [minor] The dimming comes first and the seats fade with it.
 
 **PC**
 - P1 [core · process_direction]
@@ -5837,9 +5821,9 @@
 
 **SA**
 - S1 [core] A row of paper lanterns hangs in a garden.
-- S2 [core] They are lit one by one.
+- S2 [core] They are lit.
 - S3 [core] Each glows as its candle is lit.
-- S4 [minor] Unlit lanterns stay dark.
+- S4 [minor] The lanterns are lit one by one, not all at once.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5872,9 +5856,9 @@
 **Declared violation types.** missing_consequence, attribute_drift
 
 **SA**
-- S1 [core] A flashlight shines through cupped fingers.
+- S1 [core] A flashlight shines through fingers.
 - S2 [core] The fingers glow red where the light passes through them.
-- S3 [minor] The light beyond the hand is dim.
+- S3 [minor] The fingers are cupped.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5908,9 +5892,10 @@
 
 **SA**
 - S1 [core] A stage is dark.
-- S2 [core] Its lights are turned up gradually.
-- S3 [core] The set becomes visible piece by piece as the brightness rises.
-- S4 [minor] Shadows appear away from the lamps.
+- S2 [core] Its lights are turned up.
+- S3 [core] The set becomes visible as the brightness rises.
+- S4 [minor] The lights come up gradually.
+- S5 [minor] The set appears piece by piece.
 
 **PC**
 - P1 [core · process_direction]
@@ -5943,10 +5928,11 @@
 **Declared violation types.** missing_consequence, attribute_drift
 
 **SA**
-- S1 [core] The view is from inside a dim shop.
-- S2 [core] The open doorway to the sunlit street stands out as a bright rectangle.
+- S1 [core] The view is from inside a shop.
+- S2 [core] The open doorway to the street stands out as a bright rectangle.
 - S3 [core] The floor near the door is lit.
-- S4 [minor] It grows darker deeper into the shop.
+- S4 [minor] The shop is dim.
+- S5 [minor] The street outside is sunlit.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -5977,10 +5963,10 @@
 **Declared violation types.** missing_consequence, process_direction
 
 **SA**
-- S1 [core] A firework bursts high in the night sky.
-- S2 [core] For a moment the rooftops below are lit.
-- S3 [minor] The light comes from above.
-- S4 [minor] The ground is lit only briefly.
+- S1 [core] A firework bursts in the night sky.
+- S2 [core] The rooftops below are lit.
+- S3 [minor] The burst is high.
+- S4 [minor] The rooftops are lit only for a moment.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -6050,8 +6036,9 @@
 **SA**
 - S1 [core] A car drives past a house at night.
 - S2 [core] Its headlights sweep across the front windows.
-- S3 [core] The curtains are lit for a moment.
-- S4 [minor] The light is gone once the car has passed.
+- S3 [core] The curtains are lit.
+- S4 [minor] The curtains are lit only for a moment.
+- S5 [minor] The sweep comes first and the lighting comes with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -6086,7 +6073,7 @@
 - S2 [core] It is switched on.
 - S3 [core] The shade glows.
 - S4 [core] The desk below is lit through the open bottom.
-- S5 [minor] The brightest spot is directly beneath the shade.
+- S5 [minor] The switch comes first and the glow follows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -6119,10 +6106,10 @@
 **Declared violation types.** missing_consequence, process_direction
 
 **SA**
-- S1 [core] A dog walks through an office with motion-sensor lights.
+- S1 [core] A dog walks through an office with ceiling lights.
 - S2 [core] The ceiling panels switch on ahead of it.
 - S3 [core] They go off behind it.
-- S4 [minor] Each panel's patch of floor brightens as it lights.
+- S4 [minor] The lights respond to the dog's movement: no one touches a switch.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -6155,10 +6142,11 @@
 **Declared violation types.** missing_consequence, process_direction
 
 **SA**
-- S1 [core] The last candle on a dinner table is lit.
+- S1 [core] A lit candle stands on a dinner table.
 - S2 [core] It is blown out.
 - S3 [core] The table falls into darkness.
-- S4 [minor] The room stays dark afterwards.
+- S4 [minor] It is the last candle: no other candle on the table is lit.
+- S5 [minor] The blow comes first and the darkness follows.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -6191,10 +6179,11 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A garage door is shut in the morning.
+- S1 [core] A garage door is shut.
 - S2 [core] It rolls up.
 - S3 [core] Daylight moves across the floor from the front to the back.
-- S4 [minor] The rear of the garage brightens last.
+- S4 [minor] It is morning.
+- S5 [minor] The door starts rising first and the light moves in after.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -6225,10 +6214,11 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] An underwater torch is in murky water.
+- S1 [core] An underwater torch is in the water.
 - S2 [core] It is switched on.
 - S3 [core] A cone of lit particles appears in front of it.
-- S4 [minor] The water behind stays dark.
+- S4 [minor] The water is murky.
+- S5 [minor] The switch comes first and the cone appears with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -6261,10 +6251,10 @@
 **Declared violation types.** attribute_drift, process_direction
 
 **SA**
-- S1 [core] Yellow paint and blue paint sit side by side on a palette.
+- S1 [core] Yellow paint and blue paint sit on a palette.
 - S2 [core] A brush stirs them together.
 - S3 [core] The mixture becomes green.
-- S4 [minor] Green appears where the two colours meet, streaky at first.
+- S4 [minor] The two paints start side by side, as separate blobs.
 - S5 [minor] The colours are separate first, then stirred, then green.
 
 **PC**
@@ -6297,10 +6287,10 @@
 
 **SA**
 - S1 [core] A container of white icing is present.
-- S2 [core] A drop of red food colouring is added to it.
+- S2 [core] Red food colouring is added to it.
 - S3 [core] The icing is stirred.
 - S4 [core] The icing turns pink.
-- S5 [minor] Red streaks appear first and blend toward an even pink.
+- S5 [minor] The colouring is a single drop.
 - S6 [minor] The order is drop, stir, pink.
 
 **PC**
@@ -6367,9 +6357,8 @@
 
 **SA**
 - S1 [core] Sunlight shines through a stained-glass window.
-- S2 [core] Coloured patches of light lie across the church floor.
-- S3 [minor] Each patch has the colour of the glass it came through.
-- S4 [minor] The patches lie on the side away from the window.
+- S2 [core] Patches of light lie across the church floor.
+- S3 [minor] The patches are coloured, not white.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -6401,9 +6390,9 @@
 
 **SA**
 - S1 [core] A flashlight is on.
-- S2 [core] A piece of blue cellophane is taped over it.
+- S2 [core] A piece of cellophane is taped over it.
 - S3 [core] The beam on the wall turns blue.
-- S4 [minor] The spot goes white again when the film is removed.
+- S4 [minor] The cellophane is blue.
 - S5 [minor] The film goes on first and the colour changes with it.
 
 **PC**
@@ -6437,10 +6426,11 @@
 **Declared violation types.** missing_consequence, permanence_count
 
 **SA**
-- S1 [core] A garden hose sprays a fine mist.
+- S1 [core] A garden hose sprays a mist.
 - S2 [core] The sun is behind it.
-- S3 [core] A small rainbow appears in the spray.
-- S4 [minor] The rainbow disappears when the water is turned off.
+- S3 [core] A rainbow appears in the spray.
+- S4 [minor] The mist is fine.
+- S5 [minor] The rainbow is small.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -6474,8 +6464,7 @@
 - S1 [core] A glass prism sits on a windowsill.
 - S2 [core] A ray of sunlight hits it.
 - S3 [core] A band of rainbow colours appears on the wall.
-- S4 [minor] The band moves when the prism is turned.
-- S5 [minor] The band lies on the side away from the sun.
+- S4 [minor] The sunlight hits the prism first and the band appears with it.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -6508,10 +6497,10 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A crystal chandelier hangs in afternoon sunlight.
-- S2 [core] Little flecks of rainbow light scatter across the walls and ceiling.
-- S3 [minor] The flecks move when the chandelier sways.
-- S4 [minor] They vanish when the sun is blocked.
+- S1 [core] A crystal chandelier hangs in sunlight.
+- S2 [core] Flecks of rainbow light scatter across the walls and ceiling.
+- S3 [minor] It is afternoon sunlight.
+- S4 [minor] The flecks are little.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -6578,9 +6567,9 @@
 
 **SA**
 - S1 [core] A pot of white rice is present.
-- S2 [core] A spoonful of turmeric is stirred into it.
+- S2 [core] Turmeric is stirred into it.
 - S3 [core] The rice turns yellow where the spice is mixed in.
-- S4 [minor] Streaks even out with stirring.
+- S4 [minor] The turmeric is a spoonful.
 - S5 [minor] The spoon goes in first and the colour follows.
 
 **PC**
@@ -6617,8 +6606,7 @@
 - S1 [core] Red and white paint sit on a paper plate.
 - S2 [core] A brush swirls them together.
 - S3 [core] The swirl turns pink.
-- S4 [minor] The streaks become uniform with more mixing.
-- S5 [minor] The colours are separate first, then swirled, then pink.
+- S4 [minor] The colours are separate first, then swirled, then pink.
 
 **PC**
 - P1 [core · process_direction]
@@ -6651,10 +6639,10 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A party light lights a room with white walls.
+- S1 [core] A party light lights a room.
 - S2 [core] It is switched from white to green.
 - S3 [core] The walls turn green.
-- S4 [minor] Things in the light's shadow stay unchanged.
+- S4 [minor] The walls are white before the switch.
 - S5 [minor] The switch comes first and the colour changes with it.
 
 **PC**
@@ -6686,10 +6674,11 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A car is on a rain-wet street at night.
+- S1 [core] A car is on a street.
 - S2 [core] It brakes.
-- S3 [core] Red light from its brake lights spreads over the wet road behind it.
-- S4 [minor] The glow lies behind the car, not in front.
+- S3 [core] Red light from its brake lights spreads over the road behind it.
+- S4 [minor] The street is rain-wet and it is night.
+- S5 [minor] The braking comes first and the red glow follows.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -6720,10 +6709,10 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] Morning sun shines through red curtains.
-- S2 [core] The white bedroom walls take on a red tint.
-- S3 [minor] The tint is strongest where the light through the curtain falls.
-- S4 [minor] The walls are white where ordinary light reaches them.
+- S1 [core] Sun shines through red curtains.
+- S2 [core] The bedroom walls take on a red tint.
+- S3 [minor] It is morning sun.
+- S4 [minor] The walls are white.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -6754,10 +6743,10 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A smart bulb lights a room with a white ceiling.
+- S1 [core] A bulb lights a room.
 - S2 [core] It is switched from white to purple.
 - S3 [core] The ceiling turns purple.
-- S4 [minor] Surfaces the bulb does not reach are unchanged.
+- S4 [minor] The ceiling is white before the switch.
 - S5 [minor] The switch comes first and the colour changes with it.
 
 **PC**
@@ -6789,10 +6778,9 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A sheet of red plastic is held up in front of the camera.
+- S1 [core] A sheet of plastic is held up in front of the camera.
 - S2 [core] Everything seen through it looks red.
-- S3 [minor] The scene beyond its edges is normal.
-- S4 [minor] The tint vanishes when the plastic is lowered.
+- S3 [minor] The plastic is red.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -6825,11 +6813,12 @@
 **Declared violation types.** process_direction, attribute_drift
 
 **SA**
-- S1 [core] A tub of clear water is present.
+- S1 [core] A tub of water is present.
 - S2 [core] A purple bath bomb is dropped in.
 - S3 [core] The colour billows out.
 - S4 [core] The whole bath turns purple.
-- S5 [minor] The bath bomb fizzes as the colour spreads.
+- S5 [minor] The water is clear before the drop.
+- S6 [minor] The order is drop, billow, whole bath purple.
 
 **PC**
 - P1 [core · process_direction]
@@ -6860,10 +6849,10 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] Snow falls under an orange streetlamp.
+- S1 [core] Snow falls under a streetlamp.
 - S2 [core] The snow on the ground beneath the lamp looks orange.
 - S3 [core] The snow farther away looks white.
-- S4 [minor] The tint fades with distance from the lamp.
+- S4 [minor] The streetlamp is orange.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -6898,7 +6887,7 @@
 - S2 [core] Blue paint is dabbed onto it.
 - S3 [core] The colours bleed into each other.
 - S4 [core] Green forms where they meet.
-- S5 [minor] The pure colours remain farther from the join.
+- S5 [minor] The dab comes first and the bleeding follows.
 
 **PC**
 - P1 [core · process_direction]
@@ -6931,11 +6920,10 @@
 **Declared violation types.** missing_consequence, attribute_drift
 
 **SA**
-- S1 [core] A glass of red wine stands on a white tablecloth.
+- S1 [core] A glass of red wine stands on a tablecloth.
 - S2 [core] Sunlight passes through it.
 - S3 [core] A red patch of light appears on the cloth beside the glass.
-- S4 [minor] The patch lies on the side away from the sun.
-- S5 [minor] The patch moves when the glass moves.
+- S4 [minor] The tablecloth is white.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -6970,7 +6958,8 @@
 - S2 [core] Green food colouring is poured in.
 - S3 [core] The batter is stirred.
 - S4 [core] The batter turns pale green.
-- S5 [minor] Green streaks spread with each stir and even out.
+- S5 [minor] Only a little colouring is added.
+- S6 [minor] The order is pour, stir, pale green.
 
 **PC**
 - P1 [core · process_direction]
@@ -7003,10 +6992,9 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A red and a blue spotlight are crossed on a white backdrop.
+- S1 [core] A red and a blue spotlight are crossed on a backdrop.
 - S2 [core] The area where they overlap glows purple.
-- S3 [minor] The single-colour areas stay red and blue.
-- S4 [minor] The overlap disappears when one light is turned off.
+- S3 [minor] The backdrop is white.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -7038,9 +7026,9 @@
 
 **SA**
 - S1 [core] A jar of yellow juice is present.
-- S2 [core] A white lamp is seen through it.
+- S2 [core] A lamp is seen through it.
 - S3 [core] The lamp looks yellow through the jar.
-- S4 [minor] Beside the jar the lamp looks white.
+- S4 [minor] The lamp is white.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -7073,9 +7061,10 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A pair of yellow-tinted sunglasses is held up in front of a white wall.
+- S1 [core] A pair of sunglasses is held up in front of a wall.
 - S2 [core] The wall looks yellow through the lenses.
-- S3 [minor] When the glasses are lowered the wall is white.
+- S3 [minor] The sunglasses are yellow-tinted.
+- S4 [minor] The wall is white.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -7111,7 +7100,7 @@
 - S1 [core] A jar of clean water is present.
 - S2 [core] A brush loaded with red paint is swirled through it.
 - S3 [core] The water turns pink and cloudy.
-- S4 [minor] The colour gets more even with each swirl.
+- S4 [minor] The swirl comes first and the pink follows.
 
 **PC**
 - P1 [core · process_direction]
@@ -7147,7 +7136,8 @@
 - S1 [core] Two shades of hair dye are squeezed into a bowl.
 - S2 [core] They are whisked together.
 - S3 [core] The mixture becomes one uniform colour.
-- S4 [minor] Streaks of the two shades blend with each stroke.
+- S4 [minor] The two shades are visibly different before whisking.
+- S5 [minor] The whisking comes first and the uniform colour follows.
 
 **PC**
 - P1 [core · process_direction]
@@ -7180,11 +7170,11 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A white piano stands on a stage.
+- S1 [core] A piano stands on a stage.
 - S2 [core] A theatre spotlight with a blue filter is aimed at it.
 - S3 [core] The piano turns blue under the beam.
-- S4 [minor] The piano is white where the beam does not reach.
-- S5 [minor] It returns to white when the filter is removed.
+- S4 [minor] The piano is white.
+- S5 [minor] The spotlight is aimed first and the blue follows.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -7215,11 +7205,10 @@
 **Declared violation types.** missing_consequence, attribute_drift
 
 **SA**
-- S1 [core] A blue glass bottle stands on a windowsill in sunlight.
+- S1 [core] A glass bottle stands on a windowsill in sunlight.
 - S2 [core] Sunlight passes through it.
 - S3 [core] A blue patch of light lies on the counter beside it.
-- S4 [minor] The patch is on the side away from the sun.
-- S5 [minor] The patch moves when the bottle is moved.
+- S4 [minor] The bottle is blue glass.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -7256,7 +7245,7 @@
 - S2 [core] Yellow and red watercolour are dripped onto it.
 - S3 [core] They run together.
 - S4 [core] An orange band forms where they meet.
-- S5 [minor] The pure colours remain at the edges.
+- S5 [minor] The drips come first and the running together follows.
 
 **PC**
 - P1 [core · process_direction]
@@ -7287,10 +7276,9 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A green glass is held up to the light in front of a white wall.
+- S1 [core] A green glass is held up to the light in front of a wall.
 - S2 [core] The wall looks green through it.
-- S3 [minor] The wall around the glass is white.
-- S4 [minor] The wall returns to white when the glass is lowered.
+- S3 [minor] The wall is white.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -7323,10 +7311,10 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A fountain's spray in a park is lit at night by coloured lamps.
+- S1 [core] A fountain's spray is lit by coloured lamps.
 - S2 [core] The falling water glows in the lamps' colours.
-- S3 [minor] The water changes colour when the lamps change.
-- S4 [minor] Unlit water is dark.
+- S3 [minor] It is night.
+- S4 [minor] The fountain is in a park.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -7397,7 +7385,7 @@
 - S1 [core] A sprinkler throws a fan of water in sunlight.
 - S2 [core] A rainbow forms in the spray.
 - S3 [core] The rainbow shifts as the sprinkler swings.
-- S4 [minor] The rainbow is inside the spray.
+- S4 [minor] The water forms a fan shape.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -7428,11 +7416,12 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A stage has a white set and curtains.
+- S1 [core] A stage has a set and curtains.
 - S2 [core] It floods with yellow light.
-- S3 [core] The set and curtains all look yellow at once.
-- S4 [minor] Shadowed folds stay darker.
-- S5 [minor] The light comes first and the colour changes with it.
+- S3 [core] The set and curtains look yellow.
+- S4 [minor] The set and curtains are white before the light.
+- S5 [minor] The change is all at once.
+- S6 [minor] The light comes first and the colour changes with it.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -7467,7 +7456,7 @@
 - S2 [core] Blue drops are added.
 - S3 [core] It is swirled.
 - S4 [core] The drink turns green.
-- S5 [minor] Green appears where the blue meets the yellow and spreads.
+- S5 [minor] The order is drops, swirl, green.
 
 **PC**
 - P1 [core · process_direction]
@@ -7500,10 +7489,11 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A white van is parked outside a tattoo shop.
-- S2 [core] The shop's red neon sign shines on its wet side.
+- S1 [core] A van is parked outside a shop.
+- S2 [core] The shop's red neon sign shines on its side.
 - S3 [core] The van's side glows pink-red.
-- S4 [minor] The van is white where the sign's light does not reach.
+- S4 [minor] The van is white.
+- S5 [minor] The van's side is wet.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -7534,10 +7524,11 @@
 **Declared violation types.** attribute_drift, process_direction
 
 **SA**
-- S1 [core] A patch of wet red paint is on a wall.
+- S1 [core] A patch of red paint is on a wall.
 - S2 [core] A roller of white paint is run over it.
 - S3 [core] It leaves a pink streak where they blend.
-- S4 [minor] The untouched red stays red.
+- S4 [minor] The red paint is wet.
+- S5 [minor] The roller passes first and the pink streak follows.
 
 **PC**
 - P1 [core · process_direction]
@@ -7570,10 +7561,10 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A white cat sits by a window.
+- S1 [core] A cat sits by a window.
 - S2 [core] Sunset light falls on it.
 - S3 [core] Its fur takes on an orange glow.
-- S4 [minor] The glow is on the side facing the window.
+- S4 [minor] The cat is white.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -7678,10 +7669,11 @@
 **Declared violation types.** attribute_drift, causeless_motion
 
 **SA**
-- S1 [core] A red laser dot is on a white wall.
-- S2 [core] It is moved onto a green plant.
+- S1 [core] A red laser dot is on a wall.
+- S2 [core] It is moved onto a plant.
 - S3 [core] The dot becomes hard to see.
-- S4 [minor] The dot stays red wherever it lands.
+- S4 [minor] The wall is white and the plant is green.
+- S5 [minor] The move comes first and the dot fades after.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -7714,10 +7706,10 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A white lamp lights a room.
+- S1 [core] A lamp lights a room.
 - S2 [core] A sheer red scarf is draped over it.
 - S3 [core] The room's light turns warm red.
-- S4 [minor] The scarf glows from within.
+- S4 [minor] The lamp is white before the scarf.
 - S5 [minor] The scarf goes on first and the light changes with it.
 
 **PC**
@@ -7752,9 +7744,10 @@
 
 **SA**
 - S1 [core] A cup of blue dye is present.
-- S2 [core] The corner of a white paper towel is dipped into it.
+- S2 [core] The corner of a paper towel is dipped into it.
 - S3 [core] The blue creeps up the towel.
-- S4 [minor] The colour stops advancing when the towel is lifted out.
+- S4 [minor] The towel is white.
+- S5 [minor] The dip comes first and the creeping follows.
 
 **PC**
 - P1 [core · process_direction]
@@ -7787,9 +7780,9 @@
 **Declared violation types.** missing_consequence, causeless_motion
 
 **SA**
-- S1 [core] A clear-cut crystal pendant is turned in sunlight.
+- S1 [core] A crystal pendant is turned in sunlight.
 - S2 [core] Coloured sparkles dance across the ceiling.
-- S3 [minor] The sparkles disappear when the pendant is put down or the sun goes in.
+- S3 [minor] The pendant is clear-cut crystal.
 
 **PC**
 - P1 [core · missing_consequence]
@@ -7857,10 +7850,10 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] A dry yellow stripe is on paper.
-- S2 [core] A stripe of translucent blue watercolour is painted over it.
+- S1 [core] A yellow stripe is on paper.
+- S2 [core] A stripe of blue watercolour is painted over it.
 - S3 [core] The overlap looks green.
-- S4 [minor] The yellow and blue outside the overlap keep their colours.
+- S4 [minor] The yellow stripe is dry and the blue is translucent.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -7895,9 +7888,9 @@
 **SA**
 - S1 [core] A red balloon is held up to a window.
 - S2 [core] Sunlight enters through it.
-- S3 [core] A soft red glow falls on the white wall behind it.
-- S4 [minor] The glow is on the side away from the window.
-- S5 [minor] The glow moves with the balloon.
+- S3 [core] A red glow falls on the wall behind it.
+- S4 [minor] The wall is white.
+- S5 [minor] The glow is soft.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -7931,9 +7924,10 @@
 
 **SA**
 - S1 [core] A glass of milk is present.
-- S2 [core] A spoonful of matcha powder is stirred in.
+- S2 [core] Matcha powder is stirred in.
 - S3 [core] The milk turns pale green.
-- S4 [minor] Green swirls spread from the spoon and even out.
+- S4 [minor] The powder is a spoonful.
+- S5 [minor] The stir comes first and the colour follows.
 
 **PC**
 - P1 [core · process_direction]
@@ -7966,10 +7960,10 @@
 **Declared violation types.** attribute_drift, missing_consequence
 
 **SA**
-- S1 [core] White smoke hangs over a concert stage.
+- S1 [core] Smoke hangs over a concert stage.
 - S2 [core] The lights switch from blue to red.
 - S3 [core] The smoke changes from blue to red at the same instant.
-- S4 [minor] Unlit smoke is grey.
+- S4 [minor] The order is blue first, red after.
 
 **PC**
 - P1 [core · attribute_drift]
@@ -8001,9 +7995,8 @@
 
 **SA**
 - S1 [core] A rainbow arches over a field.
-- S2 [core] It is fading as the rain moves away and the sky clears.
-- S3 [minor] The rainbow keeps its arc shape while visible.
-- S4 [minor] The rainbow is opposite the sun.
+- S2 [core] It is fading.
+- S3 [minor] The rain is moving away and the sky is clearing.
 
 **PC**
 - P1 [core · process_direction]

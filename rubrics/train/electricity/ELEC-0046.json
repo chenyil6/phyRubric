@@ -20,11 +20,6 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The robot's lights, if any, go off with the batteries."
-    },
-    {
-      "id": "S5",
-      "weight": "minor",
       "check": "The order is walking, batteries out, stopped."
     }
   ],

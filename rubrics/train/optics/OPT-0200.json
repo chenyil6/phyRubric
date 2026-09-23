@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "A white lamp is seen through it."
+      "check": "A lamp is seen through it."
     },
     {
       "id": "S3",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Beside the jar the lamp looks white."
+      "check": "The lamp is white."
     }
   ],
   "pc": [

@@ -5,22 +5,22 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A luggage trolley is pushed across a polished marble lobby floor."
+      "check": "A luggage trolley is pushed across a lobby floor."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "Its reflection moves upside down beneath it."
+      "check": "Its reflection moves beneath it."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The reflection meets the trolley at its wheels."
+      "check": "The floor is polished marble."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection is dimmer than the trolley."
+      "check": "The reflection is upside down."
     }
   ],
   "pc": [

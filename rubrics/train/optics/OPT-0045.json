@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A tree sways in the wind on a sunny day."
+      "check": "A tree sways in the wind."
     },
     {
       "id": "S2",
@@ -15,12 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The pattern settles when the wind drops."
+      "check": "The day is sunny."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The pattern lies on the ground away from the sun."
+      "check": "The shadows are a pattern of leaf shapes, not one solid shadow."
     }
   ],
   "pc": [

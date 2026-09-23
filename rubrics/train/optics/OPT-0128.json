@@ -10,12 +10,12 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The ring's details appear greatly enlarged through it."
+      "check": "The ring's details appear enlarged through it."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The rest of the ring and the desk look normal size."
+      "check": "The enlargement is great."
     }
   ],
   "pc": [

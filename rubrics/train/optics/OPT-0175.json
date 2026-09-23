@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "The last candle on a dinner table is lit."
+      "check": "A lit candle stands on a dinner table."
     },
     {
       "id": "S2",
@@ -20,7 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The room stays dark afterwards."
+      "check": "It is the last candle: no other candle on the table is lit."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The blow comes first and the darkness follows."
     }
   ],
   "pc": [

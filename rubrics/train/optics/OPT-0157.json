@@ -15,12 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "The whole room is lit for an instant."
+      "check": "The whole room is lit."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The room returns to dim immediately."
+      "check": "The lighting lasts only an instant."
+    },
+    {
+      "id": "S5",
+      "weight": "minor",
+      "check": "The flash comes first and the lighting comes with it."
     }
   ],
   "pc": [

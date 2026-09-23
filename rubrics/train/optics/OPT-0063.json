@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A duck paddles across a calm pond."
+      "check": "A duck paddles across a pond."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The water ahead shows a clear image."
+      "check": "The pond is calm."
     }
   ],
   "pc": [

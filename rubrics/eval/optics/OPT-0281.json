@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A lit lantern is lowered into a well on a rope."
+      "check": "A lantern is lowered into a well."
     },
     {
       "id": "S2",
@@ -15,7 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The wall above darkens as the lantern passes."
+      "check": "The lantern hangs from a rope."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The lantern is lit."
     }
   ],
   "pc": [

@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A fountain's spray in a park is lit at night by coloured lamps."
+      "check": "A fountain's spray is lit by coloured lamps."
     },
     {
       "id": "S2",
@@ -15,12 +15,12 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The water changes colour when the lamps change."
+      "check": "It is night."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Unlit water is dark."
+      "check": "The fountain is in a park."
     }
   ],
   "pc": [

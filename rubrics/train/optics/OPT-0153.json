@@ -10,12 +10,17 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The flame lights the rock walls around it for a moment."
+      "check": "The flame lights the rock walls around it."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The far reaches stay dark."
+      "check": "The lighting lasts only a moment."
+    },
+    {
+      "id": "S4",
+      "weight": "minor",
+      "check": "The strike comes first and the lighting follows."
     }
   ],
   "pc": [

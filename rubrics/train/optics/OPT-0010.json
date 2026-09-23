@@ -5,12 +5,12 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A frog sits on a sunlit stone."
+      "check": "A frog sits on a stone."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "It jumps straight up."
+      "check": "It jumps up."
     },
     {
       "id": "S3",
@@ -25,7 +25,12 @@
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The gap closes when the frog lands."
+      "check": "The stone is sunlit."
+    },
+    {
+      "id": "S6",
+      "weight": "minor",
+      "check": "The jump is straight up."
     }
   ],
   "pc": [

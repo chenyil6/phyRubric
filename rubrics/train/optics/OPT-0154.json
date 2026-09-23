@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A lantern is carried through a dark campsite."
+      "check": "A lantern is carried through a campsite."
     },
     {
       "id": "S2",
@@ -15,7 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The tents brighten as it passes and darken behind it."
+      "check": "The campsite is dark."
     }
   ],
   "pc": [

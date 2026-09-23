@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A ceiling fan is under a bright bulb."
+      "check": "A ceiling fan is under a bulb."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadows sweep as fast as the blades."
+      "check": "The bulb is bright."
     },
     {
       "id": "S5",

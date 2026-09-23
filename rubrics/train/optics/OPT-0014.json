@@ -10,22 +10,22 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "The day is sunny."
+      "check": "The car's shadow disappears in the bridge's shade."
     },
     {
       "id": "S3",
       "weight": "core",
-      "check": "The car's shadow disappears in the bridge's shade."
+      "check": "It reappears on the far side."
     },
     {
       "id": "S4",
-      "weight": "core",
-      "check": "It reappears on the far side."
+      "weight": "minor",
+      "check": "The day is sunny."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The shadow vanishes when the car enters the shade and returns when it leaves."
+      "check": "The order is shadow, no shadow under the bridge, shadow again."
     }
   ],
   "pc": [

@@ -20,12 +20,12 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The tiles look wet where the steam reaches them."
+      "check": "The steam comes from a hot shower."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The drops join before they run."
+      "check": "The beading comes first and the streaks follow."
     }
   ],
   "pc": [

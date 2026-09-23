@@ -5,20 +5,25 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A garden parasol is tilted in bright sun."
+      "check": "A garden parasol is tilted."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "Its round shadow slides across the patio."
+      "check": "Its shadow slides across the patio."
     },
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The shadow keeps roughly its round shape."
+      "check": "The sun is bright."
     },
     {
       "id": "S4",
+      "weight": "minor",
+      "check": "The shadow is round."
+    },
+    {
+      "id": "S5",
       "weight": "minor",
       "check": "The tilt comes first and the slide follows."
     }

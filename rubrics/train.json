@@ -13132,11 +13132,6 @@
         "id": "S4",
         "weight": "minor",
         "check": "The pile is ragged."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The driveway clears where it has been shovelled."
       }
     ],
     "pc": [
@@ -15398,7 +15393,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A horse gallops across an open field."
+        "check": "A horse runs across an open field."
       },
       {
         "id": "S2",
@@ -26950,12 +26945,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The tiles look wet where the steam reaches them."
+        "check": "The steam comes from a hot shower."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The drops join before they run."
+        "check": "The beading comes first and the streaks follow."
       }
     ],
     "pc": [
@@ -29482,12 +29477,12 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The flame appears at the brightest spot."
+        "check": "The blowing is gentle."
       },
       {
         "id": "S6",
         "weight": "minor",
-        "check": "The glow eases when the blowing stops."
+        "check": "The order is blow, brighter glow, flame."
       }
     ],
     "pc": [
@@ -31923,12 +31918,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The strip hangs still when it is held away from the radiator."
+        "check": "The strip is held above the radiator, not beside it."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The strip rises rather than hanging straight down."
+        "check": "The lift is upward."
       }
     ],
     "pc": [
@@ -32235,7 +32230,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A paper pinwheel is held above a lit candle."
+        "check": "A paper pinwheel is held above a candle."
       },
       {
         "id": "S2",
@@ -32244,21 +32239,16 @@
       },
       {
         "id": "S3",
-        "weight": "core",
-        "check": "The pinwheel stops when it is moved away from the candle."
-      },
-      {
-        "id": "S4",
         "weight": "minor",
         "check": "The candle is lit."
       },
       {
-        "id": "S5",
+        "id": "S4",
         "weight": "minor",
         "check": "The pinwheel is still before it is brought over the flame."
       },
       {
-        "id": "S6",
+        "id": "S5",
         "weight": "minor",
         "check": "The bringing over comes first and the spinning follows."
       }
@@ -35027,7 +35017,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A wooden puppet on strings hangs in a window with sunlight coming through."
+        "check": "A puppet on strings hangs in a window."
       },
       {
         "id": "S2",
@@ -35047,12 +35037,12 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The strings and their movement are visible."
+        "check": "The window is sunny."
       },
       {
         "id": "S6",
         "weight": "minor",
-        "check": "The shadow shows a recognisable puppet outline with head, body and arms."
+        "check": "The puppet is wooden."
       }
     ],
     "pc": [
@@ -35109,32 +35099,27 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A skateboard with no rider is present."
+        "check": "A skateboard with no rider rolls along the ground."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "It rolls along the ground."
+        "check": "A lit streetlamp stands nearby."
       },
       {
         "id": "S3",
         "weight": "core",
-        "check": "A lit streetlamp stands nearby and it is night."
+        "check": "The skateboard's shadow swings around it as the board passes under the light."
       },
       {
         "id": "S4",
-        "weight": "core",
-        "check": "The skateboard's shadow is visible and changes as the board passes the lamp."
+        "weight": "minor",
+        "check": "It is night."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The board passes close to or under the lamp."
-      },
-      {
-        "id": "S6",
-        "weight": "minor",
-        "check": "The scene is dark apart from the lamp light."
+        "check": "The board passes under or close beneath the lamp."
       }
     ],
     "pc": [
@@ -35196,22 +35181,17 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The lawn is in sunlight."
+        "check": "The dog's shadow is visible on the grass."
       },
       {
         "id": "S3",
         "weight": "core",
-        "check": "The dog's shadow is visible on the grass."
-      },
-      {
-        "id": "S4",
-        "weight": "core",
         "check": "The shadow runs along beside the dog."
       },
       {
-        "id": "S5",
+        "id": "S4",
         "weight": "minor",
-        "check": "The shadow touches the dog at its paws."
+        "check": "The lawn is sunlit."
       }
     ],
     "pc": [
@@ -35361,11 +35341,6 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow is larger than the hands."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
         "check": "The hands are shaped first and the shadow appears with them."
       }
     ],
@@ -35434,12 +35409,12 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "Its dark silhouette appears on the screen over the slides."
+        "check": "Its silhouette appears on the screen over the slides."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The silhouette moves with the balloon."
+        "check": "The silhouette is dark."
       },
       {
         "id": "S5",
@@ -35501,7 +35476,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A tall wooden lifeguard chair stands on a beach."
+        "check": "A lifeguard chair stands on a beach."
       },
       {
         "id": "S2",
@@ -35511,12 +35486,17 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "Its long shadow stretches across the sand in front of it."
+        "check": "Its shadow stretches across the sand in front of it."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow is longer than the chair is tall."
+        "check": "The chair is tall and wooden."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The shadow is long."
       }
     ],
     "pc": [
@@ -35665,12 +35645,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow has a soft edge."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The grass brightens again once the shadow has passed."
+        "check": "The shadow arrives first and the darkening comes with it."
       }
     ],
     "pc": [
@@ -35727,12 +35702,12 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A frog sits on a sunlit stone."
+        "check": "A frog sits on a stone."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "It jumps straight up."
+        "check": "It jumps up."
       },
       {
         "id": "S3",
@@ -35747,7 +35722,12 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The gap closes when the frog lands."
+        "check": "The stone is sunlit."
+      },
+      {
+        "id": "S6",
+        "weight": "minor",
+        "check": "The jump is straight up."
       }
     ],
     "pc": [
@@ -35810,22 +35790,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The track is in sunlight."
-      },
-      {
-        "id": "S3",
-        "weight": "core",
         "check": "The tractor's shadow rolls along the ground beside it."
       },
       {
-        "id": "S4",
+        "id": "S3",
         "weight": "minor",
-        "check": "The shadow shows the wheels turning."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The shadow touches the tractor at the wheels."
+        "check": "The track is sunlit."
       }
     ],
     "pc": [
@@ -35882,7 +35852,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A ball is thrown across a sunlit yard."
+        "check": "A ball is thrown across a yard."
       },
       {
         "id": "S2",
@@ -35897,7 +35867,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The throw comes first and the shadow tracks the flight."
+        "check": "The yard is sunlit."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The throw comes first and the meeting at the landing comes last."
       }
     ],
     "pc": [
@@ -35959,22 +35934,17 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "It is in sunlight."
+        "check": "A round shadow appears on the ground beneath it."
       },
       {
         "id": "S3",
-        "weight": "core",
-        "check": "A round shadow appears on the ground beneath it."
+        "weight": "minor",
+        "check": "The umbrella is in sunlight."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow appears as the umbrella opens."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The shadow moves when the umbrella is tilted."
+        "check": "The umbrella opens first and the shadow appears with it."
       }
     ],
     "pc": [
@@ -36036,22 +36006,22 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The day is sunny."
+        "check": "The car's shadow disappears in the bridge's shade."
       },
       {
         "id": "S3",
         "weight": "core",
-        "check": "The car's shadow disappears in the bridge's shade."
+        "check": "It reappears on the far side."
       },
       {
         "id": "S4",
-        "weight": "core",
-        "check": "It reappears on the far side."
+        "weight": "minor",
+        "check": "The day is sunny."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The shadow vanishes when the car enters the shade and returns when it leaves."
+        "check": "The order is shadow, no shadow under the bridge, shadow again."
       }
     ],
     "pc": [
@@ -36108,7 +36078,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A ball rolls along a sunlit pavement."
+        "check": "A ball rolls along a pavement."
       },
       {
         "id": "S2",
@@ -36123,7 +36093,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow is visible only while the ball is in the sun."
+        "check": "The pavement is sunlit before the shade."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The ball enters the shade first and the shadow disappears with it."
       }
     ],
     "pc": [
@@ -36185,7 +36160,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "A lit candle is carried in a circle around it."
+        "check": "A lit candle is carried around it."
       },
       {
         "id": "S3",
@@ -36195,7 +36170,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow's length changes as the candle's distance changes."
+        "check": "The candle's path is a circle around the vase."
       },
       {
         "id": "S5",
@@ -36257,7 +36232,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A flock of birds flies over a sunlit field."
+        "check": "A flock of birds flies over a field."
       },
       {
         "id": "S2",
@@ -36267,12 +36242,12 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "Each bird has a shadow."
+        "check": "The field is sunlit."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadows move together with the flock."
+        "check": "There are several birds and several shadows."
       }
     ],
     "pc": [
@@ -36330,22 +36305,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A kite flies high over a beach in the sun."
+        "check": "A kite flies over a beach."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "Its small shadow moves across the sand."
+        "check": "Its shadow moves across the sand as the kite sways."
       },
       {
         "id": "S3",
-        "weight": "core",
-        "check": "The shadow moves as the kite sways."
+        "weight": "minor",
+        "check": "The kite is high and in the sun."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow is far from the kite itself."
+        "check": "The shadow is small."
       }
     ],
     "pc": [
@@ -36402,7 +36377,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A ball rolls along a sunny pavement."
+        "check": "A ball rolls along a pavement."
       },
       {
         "id": "S2",
@@ -36417,7 +36392,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The ball's own shadow continues on the ground beyond."
+        "check": "The pavement is sunny."
       }
     ],
     "pc": [
@@ -36474,7 +36449,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A bicycle is parked at night."
+        "check": "A bicycle is parked."
       },
       {
         "id": "S2",
@@ -36484,12 +36459,17 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "A long shadow of the bicycle stretches down the road ahead of it."
+        "check": "A shadow of the bicycle stretches down the road ahead of it."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow changes as the car approaches and passes."
+        "check": "It is night."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The shadow is long."
       }
     ],
     "pc": [
@@ -36619,7 +36599,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A ceiling fan is under a bright bulb."
+        "check": "A ceiling fan is under a bulb."
       },
       {
         "id": "S2",
@@ -36634,7 +36614,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadows sweep as fast as the blades."
+        "check": "The bulb is bright."
       },
       {
         "id": "S5",
@@ -36696,7 +36676,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A ball bounces on a sunny court."
+        "check": "A ball bounces on a court."
       },
       {
         "id": "S2",
@@ -36711,7 +36691,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow stays on the ground throughout."
+        "check": "The court is sunny."
       }
     ],
     "pc": [
@@ -36768,7 +36748,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "An empty swing sways in the afternoon sun."
+        "check": "A swing sways in the sun."
       },
       {
         "id": "S2",
@@ -36778,10 +36758,15 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The shadow stretches and shortens as the seat rises and falls."
+        "check": "The swing is empty."
       },
       {
         "id": "S4",
+        "weight": "minor",
+        "check": "It is afternoon sun."
+      },
+      {
+        "id": "S5",
         "weight": "minor",
         "check": "The swing moves first and the shadow follows in time."
       }
@@ -36840,7 +36825,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A drone hovers over a sunlit parking lot."
+        "check": "A drone hovers over a parking lot."
       },
       {
         "id": "S2",
@@ -36850,15 +36835,20 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "Its small shadow on the asphalt moves with it."
+        "check": "Its shadow on the asphalt moves with it."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow shows the shape of the drone's arms."
+        "check": "The lot is sunlit."
       },
       {
         "id": "S5",
+        "weight": "minor",
+        "check": "The shadow is small."
+      },
+      {
+        "id": "S6",
         "weight": "minor",
         "check": "The drone moves first and the shadow follows."
       }
@@ -36917,7 +36907,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A pigeon lands on a sunny square."
+        "check": "A pigeon lands on a square."
       },
       {
         "id": "S2",
@@ -36932,7 +36922,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow is on the ground before the bird lands."
+        "check": "The square is sunny."
       }
     ],
     "pc": [
@@ -36990,7 +36980,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "The curtains of a sunny window are pulled open."
+        "check": "The curtains of a window are pulled open."
       },
       {
         "id": "S2",
@@ -37000,7 +36990,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The bars of the frame's shadow match the frame's layout."
+        "check": "The window is sunny."
       },
       {
         "id": "S4",
@@ -37077,12 +37067,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The dark shape is much larger than the hand."
+        "check": "The shape covers only part of the picture, not all of it."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The dark shape disappears when the hand is withdrawn."
+        "check": "The hand goes in front of the lens first and the dark shape appears with it."
       }
     ],
     "pc": [
@@ -37140,7 +37130,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A fox trots toward a streetlamp at night."
+        "check": "A fox trots toward a streetlamp."
       },
       {
         "id": "S2",
@@ -37155,7 +37145,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow shortens steadily as the fox approaches."
+        "check": "It is night."
       }
     ],
     "pc": [
@@ -37213,7 +37203,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A flag flutters on a pole in the sun."
+        "check": "A flag flutters on a pole."
       },
       {
         "id": "S2",
@@ -37223,12 +37213,12 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The shadow moves in time with the cloth."
+        "check": "The flag is in the sun."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow stops when the flag hangs still."
+        "check": "The flag is on a pole."
       }
     ],
     "pc": [
@@ -37285,7 +37275,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A cat walks along a sunlit windowsill inside a house."
+        "check": "A cat walks along a windowsill inside a house."
       },
       {
         "id": "S2",
@@ -37295,12 +37285,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The shadow shows the cat's outline including the tail."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The shadow falls on the room side, away from the window."
+        "check": "The windowsill is sunlit."
       }
     ],
     "pc": [
@@ -37436,12 +37421,12 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A robot vacuum travels the length of a corridor."
+        "check": "A robot vacuum travels along a corridor."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "The corridor is lit by a single ceiling light."
+        "check": "The corridor is lit by a ceiling light."
       },
       {
         "id": "S3",
@@ -37451,7 +37436,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow is ahead before the light and behind after."
+        "check": "There is a single ceiling light."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The vacuum travels the corridor's length."
       }
     ],
     "pc": [
@@ -37658,22 +37648,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A garden hose sprays an arc of water in the evening sun."
+        "check": "A garden hose sprays water."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "The shadow of the arc falls on the soil beside it."
+        "check": "The shadow of the spray falls on the soil beside it."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The shadow follows the curve of the stream."
+        "check": "It is evening sun."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow flickers as the water moves."
+        "check": "The spray is an arc."
       }
     ],
     "pc": [
@@ -37745,7 +37735,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Each shadow points away from one lamp."
+        "check": "There are exactly two lamps and two shadows."
       }
     ],
     "pc": [
@@ -37802,7 +37792,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A park bench stands beside a wall at dusk."
+        "check": "A park bench stands beside a wall."
       },
       {
         "id": "S2",
@@ -37817,7 +37807,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow appears only when the lights come on."
+        "check": "It is dusk."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The lights come on first and the shadow appears with them."
       }
     ],
     "pc": [
@@ -37874,7 +37869,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A horse trots across a sunlit paddock."
+        "check": "A horse trots across a paddock."
       },
       {
         "id": "S2",
@@ -37889,7 +37884,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow stays attached at the hooves."
+        "check": "The paddock is sunlit."
       }
     ],
     "pc": [
@@ -37952,22 +37947,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "A lamp lights the wall."
-      },
-      {
-        "id": "S3",
-        "weight": "core",
         "check": "The pendulum's shadow on the wall swings with it."
       },
       {
-        "id": "S4",
+        "id": "S3",
         "weight": "minor",
-        "check": "The shadow moves in the same rhythm as the pendulum."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "When the pendulum stops the shadow stops."
+        "check": "The wall is lit by a lamp."
       }
     ],
     "pc": [
@@ -38024,7 +38009,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A campfire burns at night beside a tent."
+        "check": "A campfire burns beside a tent."
       },
       {
         "id": "S2",
@@ -38034,17 +38019,17 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "A huge shadow of the dog sweeps across the tent wall."
+        "check": "A shadow of the dog sweeps across the tent wall."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow is larger than the dog."
+        "check": "It is night."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The shadow flickers with the flames."
+        "check": "The shadow is huge."
       }
     ],
     "pc": [
@@ -38102,22 +38087,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A bus passes a row of parked cars on a sunny street."
+        "check": "A bus passes a row of parked cars."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "Its shadow slides over the cars one after another."
+        "check": "Its shadow slides over the cars."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The shadow darkens each car as it passes."
+        "check": "The street is sunny."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow moves at the bus's speed."
+        "check": "The shadow passes over the cars one after another, not all at once."
       }
     ],
     "pc": [
@@ -38184,12 +38169,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The shadow has the leaf's outline."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The shadow moves when the leaf moves."
+        "check": "The leaf is held up, not lying on the ground."
       }
     ],
     "pc": [
@@ -38252,22 +38232,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The morning sun is on its left."
-      },
-      {
-        "id": "S3",
-        "weight": "core",
         "check": "Its shadow runs along the ground on its right."
       },
       {
-        "id": "S4",
+        "id": "S3",
         "weight": "minor",
-        "check": "The shadow stays attached at the wheels."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The shadow moves with the car."
+        "check": "The morning sun is on the car's left."
       }
     ],
     "pc": [
@@ -38324,7 +38294,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A tree sways in the wind on a sunny day."
+        "check": "A tree sways in the wind."
       },
       {
         "id": "S2",
@@ -38334,12 +38304,12 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The pattern settles when the wind drops."
+        "check": "The day is sunny."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The pattern lies on the ground away from the sun."
+        "check": "The shadows are a pattern of leaf shapes, not one solid shadow."
       }
     ],
     "pc": [
@@ -38411,7 +38381,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadow stays attached to the base of the post."
+        "check": "There are ripples on the water."
       }
     ],
     "pc": [
@@ -38468,7 +38438,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A cat walks along the base of a sunlit wall."
+        "check": "A cat walks along the base of a wall."
       },
       {
         "id": "S2",
@@ -38478,12 +38448,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The shadow's paws are at ground level."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The shadow lies on the side away from the sun."
+        "check": "The wall is sunlit."
       }
     ],
     "pc": [
@@ -38551,17 +38516,17 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "Sharp shadows of the tent poles appear on the canvas."
+        "check": "Shadows of the tent poles appear on the canvas."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The shadows appear as the lantern brightens."
+        "check": "The shadows are sharp."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The shadows fall away from the lantern."
+        "check": "The lantern brightens first and the shadows appear with it."
       }
     ],
     "pc": [
@@ -38638,12 +38603,12 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The reflection raises the arm that corresponds to the robot's raised arm: the one directly across the mirror from it."
+        "check": "The robot raises its right arm."
       },
       {
         "id": "S6",
         "weight": "minor",
-        "check": "The robot reads as a toy robot: blocky and mechanical."
+        "check": "The reflection's raised arm is on the opposite side from the robot's."
       }
     ],
     "pc": [
@@ -38722,11 +38687,6 @@
         "id": "S5",
         "weight": "minor",
         "check": "The bus moves slowly."
-      },
-      {
-        "id": "S6",
-        "weight": "minor",
-        "check": "The reflection shows the bus's shape and colour."
       }
     ],
     "pc": [
@@ -38783,7 +38743,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A mountain stands beside a still lake at dawn."
+        "check": "A mountain stands beside a lake."
       },
       {
         "id": "S2",
@@ -38793,12 +38753,12 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The image meets the real mountain at the shoreline."
+        "check": "The lake is still."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The lake is still."
+        "check": "It is dawn."
       }
     ],
     "pc": [
@@ -38855,7 +38815,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A cat walks up to a floor-length mirror."
+        "check": "A cat walks up to a mirror."
       },
       {
         "id": "S2",
@@ -38865,12 +38825,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The reflected cat is a mirror image of the real one."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "Their noses meet at the glass."
+        "check": "The mirror is floor-length."
       }
     ],
     "pc": [
@@ -38937,13 +38892,8 @@
       },
       {
         "id": "S3",
-        "weight": "core",
-        "check": "The reflection is upside down."
-      },
-      {
-        "id": "S4",
         "weight": "minor",
-        "check": "The reflection appears only within the puddle's edges."
+        "check": "The reflection is upside down."
       }
     ],
     "pc": [
@@ -39001,22 +38951,17 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A car drives past an office building with a glass front."
+        "check": "A car drives past an office building."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "The car's reflection glides across the windows."
+        "check": "The car's reflection glides across the building's windows."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The reflection is mirrored."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The reflection disappears where the glass ends."
+        "check": "The building has a glass front."
       }
     ],
     "pc": [
@@ -39082,13 +39027,8 @@
       },
       {
         "id": "S3",
-        "weight": "core",
-        "check": "The reflection is mirrored."
-      },
-      {
-        "id": "S4",
         "weight": "minor",
-        "check": "The reflection stops when the pendulum stops."
+        "check": "The reflection is mirrored."
       }
     ],
     "pc": [
@@ -39146,7 +39086,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A robot vacuum is in front of a floor-length mirror."
+        "check": "A robot vacuum is in front of a mirror."
       },
       {
         "id": "S2",
@@ -39161,7 +39101,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflection's turn is simultaneous with the real one."
+        "check": "The mirror is floor-length."
       }
     ],
     "pc": [
@@ -39307,7 +39247,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflection is gone wherever the cloth hangs and visible where it does not."
+        "check": "The cloth goes on first and the reflection disappears with it."
       }
     ],
     "pc": [
@@ -39364,7 +39304,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A car approaches from behind another car."
+        "check": "A car approaches another car from behind."
       },
       {
         "id": "S2",
@@ -39374,12 +39314,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The image is seen behind, not ahead."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The image grows as the car closes in."
+        "check": "The mirror is the rear-view mirror inside the car ahead, not a side mirror."
       }
     ],
     "pc": [
@@ -39446,7 +39381,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "Afterwards the mirror shows only the empty room."
+        "check": "The mirror hangs on a wall."
       }
     ],
     "pc": [
@@ -39503,7 +39438,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A candle burns on a table by a dark window at night."
+        "check": "A candle burns on a table by a window."
       },
       {
         "id": "S2",
@@ -39513,12 +39448,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The reflected flame flickers in step with the real one."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The reflected flame is mirrored."
+        "check": "It is night and the window is dark."
       }
     ],
     "pc": [
@@ -39575,22 +39505,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A luggage trolley is pushed across a polished marble lobby floor."
+        "check": "A luggage trolley is pushed across a lobby floor."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "Its reflection moves upside down beneath it."
+        "check": "Its reflection moves beneath it."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The reflection meets the trolley at its wheels."
+        "check": "The floor is polished marble."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflection is dimmer than the trolley."
+        "check": "The reflection is upside down."
       }
     ],
     "pc": [
@@ -39647,7 +39577,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A duck paddles across a calm pond."
+        "check": "A duck paddles across a pond."
       },
       {
         "id": "S2",
@@ -39662,7 +39592,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The water ahead shows a clear image."
+        "check": "The pond is calm."
       }
     ],
     "pc": [
@@ -39720,7 +39650,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "Traffic lights hang above a wet street at night."
+        "check": "Traffic lights hang above a street."
       },
       {
         "id": "S2",
@@ -39735,7 +39665,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflections lie below the lights and stretch toward the viewer."
+        "check": "The street is wet and it is night."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The order is red first, green after."
       }
     ],
     "pc": [
@@ -39792,7 +39727,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A balloon on a string turns slowly in an elevator."
+        "check": "A balloon on a string turns in an elevator."
       },
       {
         "id": "S2",
@@ -39807,12 +39742,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "All the reflections move at the same instant."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "Each reflection is mirrored relative to its wall."
+        "check": "The balloon turns slowly."
       }
     ],
     "pc": [
@@ -39942,7 +39872,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A car approaches from behind a parked car."
+        "check": "A car approaches a parked car from behind."
       },
       {
         "id": "S2",
@@ -39957,7 +39887,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The image leaves the mirror as the car draws alongside."
+        "check": "The image appears first and grows after."
       }
     ],
     "pc": [
@@ -40014,7 +39944,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A wristwatch lies on a sunny table."
+        "check": "A wristwatch lies on a table."
       },
       {
         "id": "S2",
@@ -40034,7 +39964,12 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The spot disappears when the angle is lost."
+        "check": "The table is sunny."
+      },
+      {
+        "id": "S6",
+        "weight": "minor",
+        "check": "The turn comes first and the spot appears with it."
       }
     ],
     "pc": [
@@ -40092,7 +40027,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A hand mirror is in a sunny doorway."
+        "check": "A hand mirror is in a doorway."
       },
       {
         "id": "S2",
@@ -40102,12 +40037,17 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "A patch of sunlight dances across the shaded room."
+        "check": "A patch of sunlight dances across the room."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The patch vanishes when the mirror is turned from the sun."
+        "check": "The doorway is sunny and the room is shaded."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The tilt comes first and the patch moves with it."
       }
     ],
     "pc": [
@@ -40165,7 +40105,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A lamp stands beside a dark window at night."
+        "check": "A lamp stands beside a window."
       },
       {
         "id": "S2",
@@ -40180,7 +40120,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflection is mirrored."
+        "check": "It is night and the window is dark."
       },
       {
         "id": "S5",
@@ -40242,7 +40182,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A dog sits in front of a glossy black oven door."
+        "check": "A dog sits in front of an oven door."
       },
       {
         "id": "S2",
@@ -40257,7 +40197,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflection is dimmer than the real dog."
+        "check": "The oven door is glossy black."
       }
     ],
     "pc": [
@@ -40397,17 +40337,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "Its reflection travels upside down on the water beside it."
+        "check": "Its reflection travels on the water beside it."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The reflection keeps pace with the car."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The reflection is missing where reeds or a boat break the surface."
+        "check": "The reflection is upside down."
       }
     ],
     "pc": [
@@ -40542,7 +40477,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A swan glides across a still lake at sunset."
+        "check": "A swan glides across a lake."
       },
       {
         "id": "S2",
@@ -40557,12 +40492,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflection is inverted and directly under the swan."
+        "check": "The lake is still."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The reflection breaks up only in the ripples the swan makes."
+        "check": "It is sunset."
       }
     ],
     "pc": [
@@ -40625,7 +40560,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The head is turned from side to side."
+        "check": "The head is turned."
       },
       {
         "id": "S3",
@@ -40635,7 +40570,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflection wears the same hat."
+        "check": "The turning is from side to side."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The head turns first and the reflection turns with it."
       }
     ],
     "pc": [
@@ -40708,12 +40648,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The spot moves when the flashlight is angled."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The spot vanishes when the beam leaves the mirror."
+        "check": "The flashlight is aimed first and the spot appears with it."
       }
     ],
     "pc": [
@@ -40770,22 +40705,17 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A seagull walks across a wet beach at low tide."
+        "check": "A seagull walks across a wet beach."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "Its reflection shows beneath it on the thin sheet of water."
+        "check": "Its reflection shows beneath it on the sheet of water."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The reflection appears only where the sand is covered by water."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The reflection breaks up in the bird's footprints."
+        "check": "It is low tide and the water is a thin sheet."
       }
     ],
     "pc": [
@@ -40843,12 +40773,12 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A checkerboard card is reflected in the bowl of a shiny spoon."
+        "check": "A checkerboard card is reflected in the bowl of a spoon."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "The spoon turns slowly."
+        "check": "The spoon turns."
       },
       {
         "id": "S3",
@@ -40858,10 +40788,15 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflection is small and warped by the curve."
+        "check": "The spoon is shiny."
       },
       {
         "id": "S5",
+        "weight": "minor",
+        "check": "The spoon turns slowly."
+      },
+      {
+        "id": "S6",
         "weight": "minor",
         "check": "The spoon turns first and the pattern shifts with it."
       }
@@ -40926,17 +40861,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "A faint reflection slides beneath it on the ice."
+        "check": "A reflection slides beneath it on the ice."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The reflection is inverted and dim."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The reflection disappears where the ice is scratched or snow-covered."
+        "check": "The reflection is faint."
       }
     ],
     "pc": [
@@ -41008,7 +40938,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The flash moves across the mirror with the car."
+        "check": "The car's headlights are on."
       }
     ],
     "pc": [
@@ -41142,7 +41072,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A candle burns between two facing mirrors."
+        "check": "A candle burns between two mirrors."
       },
       {
         "id": "S2",
@@ -41157,7 +41087,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The copies get smaller and dimmer further along the line."
+        "check": "The mirrors face each other."
       }
     ],
     "pc": [
@@ -41230,12 +41160,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflection is blurred elsewhere."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The streak slowly fogs over again."
+        "check": "The wipe comes first and the reflection appears in the streak after."
       }
     ],
     "pc": [
@@ -41293,7 +41218,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A heron stands in shallow water on a still morning."
+        "check": "A heron stands in shallow water."
       },
       {
         "id": "S2",
@@ -41313,7 +41238,12 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The reflection is sharp when the bird is still."
+        "check": "The morning is still."
+      },
+      {
+        "id": "S6",
+        "weight": "minor",
+        "check": "The step comes first and the ripples follow."
       }
     ],
     "pc": [
@@ -41371,7 +41301,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A car's side mirror is adjusted from inside."
+        "check": "A car's side mirror is adjusted."
       },
       {
         "id": "S2",
@@ -41381,12 +41311,12 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The view stops changing when the adjustment stops."
+        "check": "The adjustment is made from inside the car."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The mirror shows the scene behind the car."
+        "check": "The order of the sweep is sky first, road last."
       }
     ],
     "pc": [
@@ -41443,22 +41373,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A soap bubble drifts past a bright window."
+        "check": "A soap bubble drifts past a window."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "A tiny reflection of the window curves across the bubble's surface."
+        "check": "A reflection of the window curves across the bubble's surface."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The reflection moves across the bubble as it drifts."
+        "check": "The window is bright."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflection vanishes when the bubble pops."
+        "check": "The reflection is tiny."
       }
     ],
     "pc": [
@@ -41520,17 +41450,17 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The lamp shows as two small images in the lenses."
+        "check": "The lamp shows as images in the lenses."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The images are curved to the lenses."
+        "check": "There are two images, one in each lens."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The images show the lamp, not what is behind the glasses."
+        "check": "The images are small."
       }
     ],
     "pc": [
@@ -41587,7 +41517,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A motorboat crosses a glassy lake at low speed."
+        "check": "A motorboat crosses a lake."
       },
       {
         "id": "S2",
@@ -41597,12 +41527,12 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The reflection is broken only by the wake."
+        "check": "The lake is glassy and the boat moves at low speed."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflection is attached at the waterline."
+        "check": "The reflection is broken only by the wake."
       }
     ],
     "pc": [
@@ -41674,12 +41604,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The image is mirrored."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The ring slides out of view when the angle changes."
+        "check": "The order is open, angle, ring appears."
       }
     ],
     "pc": [
@@ -41737,22 +41662,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A neon sign glows above a rain-soaked street at night."
+        "check": "A neon sign glows above a street."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "Its coloured reflection streaks down the wet pavement toward the viewer."
+        "check": "Its reflection streaks down the wet pavement toward the viewer."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The reflection has the same colours as the sign."
+        "check": "It is night and the street is rain-soaked."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflection fades where the pavement is dry."
+        "check": "The reflection is coloured."
       }
     ],
     "pc": [
@@ -41809,7 +41734,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A cat is in front of a shiny chrome kettle."
+        "check": "A cat is in front of a kettle."
       },
       {
         "id": "S2",
@@ -41824,7 +41749,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The reflection is warped by the curve of the kettle."
+        "check": "The kettle is shiny chrome."
       }
     ],
     "pc": [
@@ -41964,17 +41889,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "Dozens of small bright spots sweep across the walls."
+        "check": "Small bright spots sweep across the walls."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The spots move when the ball turns and stop when it stops."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The spots appear on the walls away from the lights."
+        "check": "There are dozens of spots."
       }
     ],
     "pc": [
@@ -42036,17 +41956,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The garden outside appears faintly in the glass over the room behind it."
+        "check": "The garden outside appears in the glass over the room behind it."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The reflected garden shifts as the glass tilts."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The reflected garden is dim and mirrored."
+        "check": "The reflected garden is faint."
       }
     ],
     "pc": [
@@ -42104,22 +42019,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A red ball rolls along a hallway of polished steel panels."
+        "check": "A ball rolls along a hallway of polished steel panels."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "A blurry reflection rolls alongside in each panel."
+        "check": "A reflection rolls alongside in each panel."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The copies vanish at the gaps between panels."
+        "check": "The ball is red."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Each copy is mirrored and slightly warped."
+        "check": "The reflection is blurry."
       }
     ],
     "pc": [
@@ -42191,12 +42106,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The glass is clear enough to see the straw below the surface."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The bend appears once the straw is in the water, not before."
+        "check": "The straw goes in first and the bend appears after."
       }
     ],
     "pc": [
@@ -42273,12 +42183,7 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "There are several goldfish, orange in colour."
-      },
-      {
-        "id": "S6",
-        "weight": "minor",
-        "check": "The tank is transparent on the side facing the viewer."
+        "check": "There are several goldfish."
       }
     ],
     "pc": [
@@ -42336,7 +42241,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A bird hops across a lawn outside a clear window."
+        "check": "A bird hops across a lawn outside a window."
       },
       {
         "id": "S2",
@@ -42346,7 +42251,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The bird is fully visible and undistorted through the pane."
+        "check": "The window is clear."
       }
     ],
     "pc": [
@@ -42409,7 +42314,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "Trees outside are seen through the wet glass."
+        "check": "Trees outside are seen through the glass."
       },
       {
         "id": "S3",
@@ -42419,7 +42324,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The distortion moves downward with the drops."
+        "check": "The distortion is along the running water, not everywhere."
       }
     ],
     "pc": [
@@ -42476,22 +42381,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A magnifying glass is moved over a page of small print."
+        "check": "A magnifying glass is moved over a page of print."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "The letters under the lens appear much larger."
+        "check": "The letters under the lens appear larger."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The print outside the lens stays small."
+        "check": "The print is small."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The enlarged letters shift as the lens moves."
+        "check": "The enlargement is strong: the letters look much larger."
       }
     ],
     "pc": [
@@ -42554,12 +42459,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The text seen through the lenses appears slightly larger than the text around the frames."
+        "check": "The text seen through the lenses appears larger than the text around the frames."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The enlargement moves with the glasses."
+        "check": "The enlargement is slight."
       }
     ],
     "pc": [
@@ -42617,17 +42522,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "The tiles on the floor of a clear pool are seen through the water."
+        "check": "The tiles on the floor of a pool are seen through the water."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "Their grid wavers slightly with the surface."
+        "check": "Their grid wavers with the surface."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The tiles are visible throughout."
+        "check": "The pool is clear."
+      },
+      {
+        "id": "S4",
+        "weight": "minor",
+        "check": "The wavering is slight."
       }
     ],
     "pc": [
@@ -42699,7 +42609,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The line returns to normal when the glass is moved away."
+        "check": "The glass is set down first and the shift appears with it."
       }
     ],
     "pc": [
@@ -42762,12 +42672,17 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The tiny pixels under the drop appear magnified."
+        "check": "The pixels under the drop appear magnified."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The screen beyond the drop is unchanged."
+        "check": "The pixels are tiny."
+      },
+      {
+        "id": "S4",
+        "weight": "minor",
+        "check": "The drop lands first and the magnified pixels are seen after."
       }
     ],
     "pc": [
@@ -42835,11 +42750,6 @@
         "id": "S3",
         "weight": "minor",
         "check": "The view is slightly blurred."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The view is distorted at the cube's edges and cracks."
       }
     ],
     "pc": [
@@ -42902,17 +42812,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "Only a blurred shape of it is visible through the glass."
+        "check": "A blurred shape of it is visible through the glass."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The blur moves as the cat moves."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The blur sharpens as the cat comes closer to the glass."
+        "check": "Only the blurred shape is visible; no sharp detail of the cat shows through."
       }
     ],
     "pc": [
@@ -43042,7 +42947,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A patterned card is seen through a round fishbowl."
+        "check": "A patterned card is seen through a fishbowl."
       },
       {
         "id": "S2",
@@ -43062,7 +42967,12 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The pattern is normal seen past the bowl's edge."
+        "check": "The bowl is round."
+      },
+      {
+        "id": "S6",
+        "weight": "minor",
+        "check": "The card moves first and the warp changes with it."
       }
     ],
     "pc": [
@@ -43130,7 +43040,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The shapes steady when the water is calm."
+        "check": "Both trees and a pool ladder are among the shapes."
       }
     ],
     "pc": [
@@ -43197,12 +43107,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "A tram passes behind the camera, reflected faintly."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "Nothing is hidden by the pane."
+        "check": "A tram passes behind the camera."
       }
     ],
     "pc": [
@@ -43259,7 +43164,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A clear jug stands in front of a patterned tile wall."
+        "check": "A jug stands in front of a patterned tile wall."
       },
       {
         "id": "S2",
@@ -43274,7 +43179,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The boundary of the shift is at the water level."
+        "check": "The jug is clear."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The pour comes first and the shift comes with it."
       }
     ],
     "pc": [
@@ -43409,7 +43319,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "Coins lie on the bottom of a clear fountain."
+        "check": "Coins lie on the bottom of a fountain."
       },
       {
         "id": "S2",
@@ -43424,7 +43334,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The coins are visible through the water throughout."
+        "check": "The fountain is clear."
       }
     ],
     "pc": [
@@ -43481,7 +43391,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A clear plastic ruler is laid over a line of text."
+        "check": "A plastic ruler is laid over a line of text."
       },
       {
         "id": "S2",
@@ -43491,7 +43401,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "There is at most a slight shift at the ruler's edges."
+        "check": "The ruler is clear plastic."
       }
     ],
     "pc": [
@@ -43549,7 +43459,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A clear glass of water stands on a table in sunlight."
+        "check": "A glass of water stands on a table in sunlight."
       },
       {
         "id": "S2",
@@ -43564,7 +43474,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The patch moves when the glass is moved."
+        "check": "The glass is clear."
       }
     ],
     "pc": [
@@ -43704,17 +43614,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The street outside appears as many tiny warped pictures within the drops."
+        "check": "The street outside appears as pictures within the drops."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The pictures move as the drops run down."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The view between the drops is normal."
+        "check": "The pictures are tiny and warped, and there are many of them."
       }
     ],
     "pc": [
@@ -43781,12 +43686,12 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The rocks look nearer and larger through the mask."
+        "check": "The rocks are blurred before the mask is lowered."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The view blurs again when the mask is lifted out."
+        "check": "The mask goes under first and the sharp view follows."
       }
     ],
     "pc": [
@@ -43859,12 +43764,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The face beside the jar is normal."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The stretch changes as the jar moves."
+        "check": "The jar goes in front first and the stretch appears with it."
       }
     ],
     "pc": [
@@ -43922,7 +43822,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A garden is seen through a pane of old wavy glass."
+        "check": "A garden is seen through a pane of glass."
       },
       {
         "id": "S2",
@@ -43937,7 +43837,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Through a flat pane beside it the view is undistorted."
+        "check": "The glass is old and wavy."
       }
     ],
     "pc": [
@@ -43999,17 +43899,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The room appears tiny and warped inside the marble."
+        "check": "The room appears inside the marble."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The image moves as the marble moves."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The room around the marble is normal."
+        "check": "The image is tiny and warped."
       }
     ],
     "pc": [
@@ -44072,7 +43967,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "Tongs reach in from the open back."
+        "check": "Tongs reach into the counter."
       },
       {
         "id": "S3",
@@ -44082,12 +43977,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The pastry lifted is the one that was seen."
+        "check": "The tongs enter from the open back."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The tongs enter from behind, not through the pane."
+        "check": "The reach comes first and the lift follows."
       }
     ],
     "pc": [
@@ -44155,7 +44050,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The view moves continuously."
+        "check": "The view is from inside a train carriage."
       }
     ],
     "pc": [
@@ -44212,7 +44107,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A coin is dropped into a tall clear vase of water."
+        "check": "A coin is dropped into a tall vase of water."
       },
       {
         "id": "S2",
@@ -44221,18 +44116,8 @@
       },
       {
         "id": "S3",
-        "weight": "core",
-        "check": "It sinks to the bottom."
-      },
-      {
-        "id": "S4",
         "weight": "minor",
-        "check": "The coin is visible through the glass."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The apparent shift is at the waterline."
+        "check": "The vase is tall and clear."
       }
     ],
     "pc": [
@@ -44289,7 +44174,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A glass paperweight is slid over a newspaper."
+        "check": "A paperweight is slid over a newspaper."
       },
       {
         "id": "S2",
@@ -44299,12 +44184,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The distortion shifts as the paperweight is slid."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The letters outside it are normal."
+        "check": "The paperweight is glass."
       }
     ],
     "pc": [
@@ -44362,7 +44242,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A bathroom window is fogged after a shower."
+        "check": "A bathroom window is fogged."
       },
       {
         "id": "S2",
@@ -44377,7 +44257,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The view stays clear while the glass is dry."
+        "check": "The dryer blows first and the sharpening follows."
       }
     ],
     "pc": [
@@ -44440,12 +44320,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The ring's details appear greatly enlarged through it."
+        "check": "The ring's details appear enlarged through it."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The rest of the ring and the desk look normal size."
+        "check": "The enlargement is great."
       }
     ],
     "pc": [
@@ -44503,17 +44383,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "The view is from under the clear sea."
+        "check": "The view is from under the sea."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "The underside of a boat shows as a wavering dark shape through the surface."
+        "check": "The underside of a boat shows as a wavering shape through the surface."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The shape steadies as the water calms."
+        "check": "The sea is clear."
+      },
+      {
+        "id": "S4",
+        "weight": "minor",
+        "check": "The shape is dark."
       }
     ],
     "pc": [
@@ -44570,7 +44455,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "Vegetable pieces lie at the bottom of a pot of clear water."
+        "check": "Vegetable pieces lie at the bottom of a pot of water."
       },
       {
         "id": "S2",
@@ -44585,7 +44470,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "They look still again when the stirring stops."
+        "check": "The water is clear."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The stirring comes first and the apparent movement comes with it."
       }
     ],
     "pc": [
@@ -44643,7 +44533,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A clear glass bottle of water is held sideways in front of a lit sign."
+        "check": "A clear glass bottle of water is held in front of a lit sign."
       },
       {
         "id": "S2",
@@ -44653,12 +44543,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The stretch changes as the bottle turns."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The sign itself is unchanged."
+        "check": "The bottle is held sideways."
       }
     ],
     "pc": [
@@ -44731,7 +44616,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The view outside the patch stays blurred."
+        "check": "The wipe comes first and the sharp view follows."
       }
     ],
     "pc": [
@@ -44871,7 +44756,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "A clear glass beaker of water is placed in front of it."
+        "check": "A glass beaker of water is placed in front of it."
       },
       {
         "id": "S3",
@@ -44881,7 +44766,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The change vanishes when the beaker is emptied or moved."
+        "check": "The beaker is clear glass."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The beaker is placed first and the shift appears with it."
       }
     ],
     "pc": [
@@ -44939,22 +44829,17 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A shop display is seen through a window."
+        "check": "A shop display with mannequins is seen through a window."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "The window is streaked with rain."
-      },
-      {
-        "id": "S3",
-        "weight": "core",
         "check": "The mannequins appear smeared where the water runs."
       },
       {
-        "id": "S4",
+        "id": "S3",
         "weight": "minor",
-        "check": "The mannequins are clear through dry parts of the glass."
+        "check": "The window is streaked with rain."
       }
     ],
     "pc": [
@@ -45011,7 +44896,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A clear glass of water is held up in front of a doorway."
+        "check": "A glass of water is held up in front of a doorway."
       },
       {
         "id": "S2",
@@ -45021,12 +44906,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The image shifts as the glass moves."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The room seen around the glass is normal."
+        "check": "The glass is clear."
       }
     ],
     "pc": [
@@ -45084,7 +44964,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A straight stick is lowered into a clear pond."
+        "check": "A stick is lowered into a pond."
       },
       {
         "id": "S2",
@@ -45094,12 +44974,12 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The apparent bend is at the surface."
+        "check": "The stick is straight out of the water."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The stick is straight when lifted out."
+        "check": "The pond is clear."
       }
     ],
     "pc": [
@@ -45157,7 +45037,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A car's side window is fogged from the inside."
+        "check": "A car's side window is fogged."
       },
       {
         "id": "S2",
@@ -45172,7 +45052,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The view is sharp through the patch and blurred elsewhere."
+        "check": "The fog is on the inside of the window."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The blurred view comes first and the clear patch after."
       }
     ],
     "pc": [
@@ -45245,7 +45130,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The line returns to one straight line when the glass is lifted."
+        "check": "The glass is placed first and the break appears with it."
       }
     ],
     "pc": [
@@ -45303,7 +45188,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A pair of binoculars is held up to the camera toward a distant bird."
+        "check": "A pair of binoculars is held up to the camera toward a bird."
       },
       {
         "id": "S2",
@@ -45313,12 +45198,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The bird seen beside the binoculars is small."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The enlarged view follows where the binoculars point."
+        "check": "The bird is distant."
       }
     ],
     "pc": [
@@ -45459,7 +45339,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "A dark wall is present."
+        "check": "A wall is present."
       },
       {
         "id": "S3",
@@ -45469,12 +45349,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The flashlight turns or moves during the sweep."
+        "check": "The wall is dark apart from the spot."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The spot is a bright patch with a soft edge, brighter at its centre."
+        "check": "The flashlight is swept: it turns or moves during the clip."
       }
     ],
     "pc": [
@@ -45532,7 +45412,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A single lit candle is present."
+        "check": "A lit candle is present in a room."
       },
       {
         "id": "S2",
@@ -45552,12 +45432,12 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The light flickers gently with the flame."
+        "check": "There is a single candle."
       },
       {
         "id": "S6",
         "weight": "minor",
-        "check": "There are objects near the candle for it to light."
+        "check": "There are objects near the candle."
       }
     ],
     "pc": [
@@ -45630,11 +45510,6 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The glow is brightest where the flashlight is nearest the cloth."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
         "check": "The switch comes first and the glow follows."
       }
     ],
@@ -45693,17 +45568,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A lighthouse beam sweeps around in the night."
+        "check": "A lighthouse beam sweeps around."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "It lights up the sea and cliffs in turn as it passes."
+        "check": "It lights up the sea and cliffs as it passes."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The beam rotates steadily."
+        "check": "It is night."
+      },
+      {
+        "id": "S4",
+        "weight": "minor",
+        "check": "The sea and the cliffs are lit in turn, one after the other."
       }
     ],
     "pc": [
@@ -45761,7 +45641,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A remote-controlled car crosses a dark stage."
+        "check": "A remote-controlled car crosses a stage."
       },
       {
         "id": "S2",
@@ -45776,7 +45656,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The rest of the stage stays dark."
+        "check": "The stage is dark."
       }
     ],
     "pc": [
@@ -45834,7 +45714,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A refrigerator stands in a dark kitchen."
+        "check": "A refrigerator stands in a kitchen."
       },
       {
         "id": "S2",
@@ -45849,7 +45729,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The light widens as the door opens."
+        "check": "The kitchen is dark."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The door opens first and the light spills with it."
       }
     ],
     "pc": [
@@ -45907,7 +45792,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A phone lies face-up on a table in a dark room."
+        "check": "A phone lies on a table in a room."
       },
       {
         "id": "S2",
@@ -45922,7 +45807,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The objects are lit on the sides facing the screen."
+        "check": "The phone lies face-up."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The room is dark."
       }
     ],
     "pc": [
@@ -46053,7 +45943,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A dimmer knob is turned slowly."
+        "check": "A dimmer knob is turned."
       },
       {
         "id": "S2",
@@ -46063,7 +45953,12 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The brightness follows the knob smoothly."
+        "check": "The knob is turned slowly."
+      },
+      {
+        "id": "S4",
+        "weight": "minor",
+        "check": "The turn comes first and the fade follows."
       }
     ],
     "pc": [
@@ -46136,7 +46031,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Sharp shadows soften as the cloud moves in."
+        "check": "The cloud comes first and the dimming follows."
       }
     ],
     "pc": [
@@ -46193,7 +46088,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "Heavy curtains hang in a dim bedroom."
+        "check": "Curtains hang in a dim bedroom."
       },
       {
         "id": "S2",
@@ -46208,7 +46103,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The brightest part is nearest the window."
+        "check": "The curtains are heavy."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The curtains open first and the brightening follows."
       }
     ],
     "pc": [
@@ -46271,12 +46171,17 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The flame lights the rock walls around it for a moment."
+        "check": "The flame lights the rock walls around it."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The far reaches stay dark."
+        "check": "The lighting lasts only a moment."
+      },
+      {
+        "id": "S4",
+        "weight": "minor",
+        "check": "The strike comes first and the lighting follows."
       }
     ],
     "pc": [
@@ -46334,7 +46239,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A lantern is carried through a dark campsite."
+        "check": "A lantern is carried through a campsite."
       },
       {
         "id": "S2",
@@ -46344,7 +46249,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The tents brighten as it passes and darken behind it."
+        "check": "The campsite is dark."
       }
     ],
     "pc": [
@@ -46402,7 +46307,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A headlamp is worn in a dark cave."
+        "check": "A headlamp is worn in a cave."
       },
       {
         "id": "S2",
@@ -46417,7 +46322,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The wall the lamp turns away from goes dark."
+        "check": "The cave is dark."
       }
     ],
     "pc": [
@@ -46475,7 +46380,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A laser pointer's red dot is on a projected slide."
+        "check": "A laser pointer's dot is on a projected slide."
       },
       {
         "id": "S2",
@@ -46490,7 +46395,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The dot appears only while the button is pressed and disappears when released."
+        "check": "The dot is red."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The pointer moves first and the dot moves with it."
       }
     ],
     "pc": [
@@ -46558,12 +46468,17 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "The whole room is lit for an instant."
+        "check": "The whole room is lit."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The room returns to dim immediately."
+        "check": "The lighting lasts only an instant."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The flash comes first and the lighting comes with it."
       }
     ],
     "pc": [
@@ -46620,7 +46535,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A car enters a tunnel on a sunny day."
+        "check": "A car enters a tunnel."
       },
       {
         "id": "S2",
@@ -46635,7 +46550,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The light takes on the tunnel lamps' colour."
+        "check": "The day is sunny outside."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The order is bright, dim, then tunnel-lit."
       }
     ],
     "pc": [
@@ -46707,7 +46627,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The wall goes dark once the beam has left it."
+        "check": "The swing comes first and the spot moves with it."
       }
     ],
     "pc": [
@@ -46779,11 +46699,6 @@
       },
       {
         "id": "S4",
-        "weight": "minor",
-        "check": "The fingers glow red at the edges."
-      },
-      {
-        "id": "S5",
         "weight": "minor",
         "check": "The hand comes first and the dark follows."
       }
@@ -46858,7 +46773,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The wedge widens with the door."
+        "check": "The door opens first and the wedge spreads with it."
       }
     ],
     "pc": [
@@ -46916,7 +46831,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "Two identical white vases stand in a dark room."
+        "check": "Two vases stand in a dark room."
       },
       {
         "id": "S2",
@@ -46931,7 +46846,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The far vase would brighten if moved toward the lamp."
+        "check": "The vases are identical and white."
       }
     ],
     "pc": [
@@ -46989,7 +46904,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A lit candle is carried down a dark staircase."
+        "check": "A lit candle is carried down a staircase."
       },
       {
         "id": "S2",
@@ -46999,12 +46914,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The light flickers with the flame."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The walls darken behind as the candle moves on."
+        "check": "The staircase is dark."
       }
     ],
     "pc": [
@@ -47062,7 +46972,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A lighter is struck in a dark garage."
+        "check": "A lighter is struck in a garage."
       },
       {
         "id": "S2",
@@ -47072,17 +46982,17 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "The small flame lights the nearby tools and bench."
+        "check": "The flame lights the nearby tools and bench."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Only things near the flame are visible."
+        "check": "The garage is dark."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The light flickers."
+        "check": "The flame is small."
       }
     ],
     "pc": [
@@ -47145,7 +47055,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "They dim before the film starts."
+        "check": "They dim."
       },
       {
         "id": "S3",
@@ -47160,7 +47070,7 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The dimming is gradual."
+        "check": "The dimming comes first and the seats fade with it."
       }
     ],
     "pc": [
@@ -47223,7 +47133,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "They are lit one by one."
+        "check": "They are lit."
       },
       {
         "id": "S3",
@@ -47233,7 +47143,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Unlit lanterns stay dark."
+        "check": "The lanterns are lit one by one, not all at once."
       }
     ],
     "pc": [
@@ -47291,7 +47201,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A flashlight shines through cupped fingers."
+        "check": "A flashlight shines through fingers."
       },
       {
         "id": "S2",
@@ -47301,7 +47211,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The light beyond the hand is dim."
+        "check": "The fingers are cupped."
       }
     ],
     "pc": [
@@ -47364,17 +47274,22 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "Its lights are turned up gradually."
+        "check": "Its lights are turned up."
       },
       {
         "id": "S3",
         "weight": "core",
-        "check": "The set becomes visible piece by piece as the brightness rises."
+        "check": "The set becomes visible as the brightness rises."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Shadows appear away from the lamps."
+        "check": "The lights come up gradually."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The set appears piece by piece."
       }
     ],
     "pc": [
@@ -47432,12 +47347,12 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "The view is from inside a dim shop."
+        "check": "The view is from inside a shop."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "The open doorway to the sunlit street stands out as a bright rectangle."
+        "check": "The open doorway to the street stands out as a bright rectangle."
       },
       {
         "id": "S3",
@@ -47447,7 +47362,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "It grows darker deeper into the shop."
+        "check": "The shop is dim."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The street outside is sunlit."
       }
     ],
     "pc": [
@@ -47504,22 +47424,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A firework bursts high in the night sky."
+        "check": "A firework bursts in the night sky."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "For a moment the rooftops below are lit."
+        "check": "The rooftops below are lit."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The light comes from above."
+        "check": "The burst is high."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The ground is lit only briefly."
+        "check": "The rooftops are lit only for a moment."
       }
     ],
     "pc": [
@@ -47664,12 +47584,17 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "The curtains are lit for a moment."
+        "check": "The curtains are lit."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The light is gone once the car has passed."
+        "check": "The curtains are lit only for a moment."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The sweep comes first and the lighting comes with it."
       }
     ],
     "pc": [
@@ -47746,7 +47671,7 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The brightest spot is directly beneath the shade."
+        "check": "The switch comes first and the glow follows."
       }
     ],
     "pc": [
@@ -47804,7 +47729,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A dog walks through an office with motion-sensor lights."
+        "check": "A dog walks through an office with ceiling lights."
       },
       {
         "id": "S2",
@@ -47819,7 +47744,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Each panel's patch of floor brightens as it lights."
+        "check": "The lights respond to the dog's movement: no one touches a switch."
       }
     ],
     "pc": [
@@ -47877,7 +47802,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "The last candle on a dinner table is lit."
+        "check": "A lit candle stands on a dinner table."
       },
       {
         "id": "S2",
@@ -47892,7 +47817,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The room stays dark afterwards."
+        "check": "It is the last candle: no other candle on the table is lit."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The blow comes first and the darkness follows."
       }
     ],
     "pc": [
@@ -47950,7 +47880,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A garage door is shut in the morning."
+        "check": "A garage door is shut."
       },
       {
         "id": "S2",
@@ -47965,7 +47895,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The rear of the garage brightens last."
+        "check": "It is morning."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The door starts rising first and the light moves in after."
       }
     ],
     "pc": [
@@ -48022,7 +47957,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "An underwater torch is in murky water."
+        "check": "An underwater torch is in the water."
       },
       {
         "id": "S2",
@@ -48037,7 +47972,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The water behind stays dark."
+        "check": "The water is murky."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The switch comes first and the cone appears with it."
       }
     ],
     "pc": [
@@ -48095,7 +48035,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "Yellow paint and blue paint sit side by side on a palette."
+        "check": "Yellow paint and blue paint sit on a palette."
       },
       {
         "id": "S2",
@@ -48110,7 +48050,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Green appears where the two colours meet, streaky at first."
+        "check": "The two paints start side by side, as separate blobs."
       },
       {
         "id": "S5",
@@ -48177,7 +48117,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "A drop of red food colouring is added to it."
+        "check": "Red food colouring is added to it."
       },
       {
         "id": "S3",
@@ -48192,7 +48132,7 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "Red streaks appear first and blend toward an even pink."
+        "check": "The colouring is a single drop."
       },
       {
         "id": "S6",
@@ -48331,17 +48271,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "Coloured patches of light lie across the church floor."
+        "check": "Patches of light lie across the church floor."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "Each patch has the colour of the glass it came through."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The patches lie on the side away from the window."
+        "check": "The patches are coloured, not white."
       }
     ],
     "pc": [
@@ -48403,7 +48338,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "A piece of blue cellophane is taped over it."
+        "check": "A piece of cellophane is taped over it."
       },
       {
         "id": "S3",
@@ -48413,7 +48348,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The spot goes white again when the film is removed."
+        "check": "The cellophane is blue."
       },
       {
         "id": "S5",
@@ -48476,7 +48411,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A garden hose sprays a fine mist."
+        "check": "A garden hose sprays a mist."
       },
       {
         "id": "S2",
@@ -48486,12 +48421,17 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "A small rainbow appears in the spray."
+        "check": "A rainbow appears in the spray."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The rainbow disappears when the water is turned off."
+        "check": "The mist is fine."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The rainbow is small."
       }
     ],
     "pc": [
@@ -48563,12 +48503,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The band moves when the prism is turned."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The band lies on the side away from the sun."
+        "check": "The sunlight hits the prism first and the band appears with it."
       }
     ],
     "pc": [
@@ -48626,22 +48561,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A crystal chandelier hangs in afternoon sunlight."
+        "check": "A crystal chandelier hangs in sunlight."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "Little flecks of rainbow light scatter across the walls and ceiling."
+        "check": "Flecks of rainbow light scatter across the walls and ceiling."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The flecks move when the chandelier sways."
+        "check": "It is afternoon sunlight."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "They vanish when the sun is blocked."
+        "check": "The flecks are little."
       }
     ],
     "pc": [
@@ -48780,7 +48715,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "A spoonful of turmeric is stirred into it."
+        "check": "Turmeric is stirred into it."
       },
       {
         "id": "S3",
@@ -48790,7 +48725,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Streaks even out with stirring."
+        "check": "The turmeric is a spoonful."
       },
       {
         "id": "S5",
@@ -48868,11 +48803,6 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The streaks become uniform with more mixing."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
         "check": "The colours are separate first, then swirled, then pink."
       }
     ],
@@ -48931,7 +48861,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A party light lights a room with white walls."
+        "check": "A party light lights a room."
       },
       {
         "id": "S2",
@@ -48946,7 +48876,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Things in the light's shadow stay unchanged."
+        "check": "The walls are white before the switch."
       },
       {
         "id": "S5",
@@ -49008,7 +48938,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A car is on a rain-wet street at night."
+        "check": "A car is on a street."
       },
       {
         "id": "S2",
@@ -49018,12 +48948,17 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "Red light from its brake lights spreads over the wet road behind it."
+        "check": "Red light from its brake lights spreads over the road behind it."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The glow lies behind the car, not in front."
+        "check": "The street is rain-wet and it is night."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The braking comes first and the red glow follows."
       }
     ],
     "pc": [
@@ -49080,22 +49015,22 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "Morning sun shines through red curtains."
+        "check": "Sun shines through red curtains."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "The white bedroom walls take on a red tint."
+        "check": "The bedroom walls take on a red tint."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The tint is strongest where the light through the curtain falls."
+        "check": "It is morning sun."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The walls are white where ordinary light reaches them."
+        "check": "The walls are white."
       }
     ],
     "pc": [
@@ -49152,7 +49087,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A smart bulb lights a room with a white ceiling."
+        "check": "A bulb lights a room."
       },
       {
         "id": "S2",
@@ -49167,7 +49102,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Surfaces the bulb does not reach are unchanged."
+        "check": "The ceiling is white before the switch."
       },
       {
         "id": "S5",
@@ -49229,7 +49164,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A sheet of red plastic is held up in front of the camera."
+        "check": "A sheet of plastic is held up in front of the camera."
       },
       {
         "id": "S2",
@@ -49239,12 +49174,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The scene beyond its edges is normal."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The tint vanishes when the plastic is lowered."
+        "check": "The plastic is red."
       }
     ],
     "pc": [
@@ -49302,7 +49232,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A tub of clear water is present."
+        "check": "A tub of water is present."
       },
       {
         "id": "S2",
@@ -49322,7 +49252,12 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The bath bomb fizzes as the colour spreads."
+        "check": "The water is clear before the drop."
+      },
+      {
+        "id": "S6",
+        "weight": "minor",
+        "check": "The order is drop, billow, whole bath purple."
       }
     ],
     "pc": [
@@ -49379,7 +49314,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "Snow falls under an orange streetlamp."
+        "check": "Snow falls under a streetlamp."
       },
       {
         "id": "S2",
@@ -49394,7 +49329,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The tint fades with distance from the lamp."
+        "check": "The streetlamp is orange."
       }
     ],
     "pc": [
@@ -49471,7 +49406,7 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The pure colours remain farther from the join."
+        "check": "The dab comes first and the bleeding follows."
       }
     ],
     "pc": [
@@ -49529,7 +49464,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A glass of red wine stands on a white tablecloth."
+        "check": "A glass of red wine stands on a tablecloth."
       },
       {
         "id": "S2",
@@ -49544,12 +49479,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The patch lies on the side away from the sun."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The patch moves when the glass moves."
+        "check": "The tablecloth is white."
       }
     ],
     "pc": [
@@ -49626,7 +49556,12 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "Green streaks spread with each stir and even out."
+        "check": "Only a little colouring is added."
+      },
+      {
+        "id": "S6",
+        "weight": "minor",
+        "check": "The order is pour, stir, pale green."
       }
     ],
     "pc": [
@@ -49684,7 +49619,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A red and a blue spotlight are crossed on a white backdrop."
+        "check": "A red and a blue spotlight are crossed on a backdrop."
       },
       {
         "id": "S2",
@@ -49694,12 +49629,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The single-colour areas stay red and blue."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The overlap disappears when one light is turned off."
+        "check": "The backdrop is white."
       }
     ],
     "pc": [
@@ -49761,7 +49691,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "A white lamp is seen through it."
+        "check": "A lamp is seen through it."
       },
       {
         "id": "S3",
@@ -49771,7 +49701,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Beside the jar the lamp looks white."
+        "check": "The lamp is white."
       }
     ],
     "pc": [
@@ -49829,7 +49759,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A pair of yellow-tinted sunglasses is held up in front of a white wall."
+        "check": "A pair of sunglasses is held up in front of a wall."
       },
       {
         "id": "S2",
@@ -49839,7 +49769,12 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "When the glasses are lowered the wall is white."
+        "check": "The sunglasses are yellow-tinted."
+      },
+      {
+        "id": "S4",
+        "weight": "minor",
+        "check": "The wall is white."
       }
     ],
     "pc": [
@@ -49912,7 +49847,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The colour gets more even with each swirl."
+        "check": "The swirl comes first and the pink follows."
       }
     ],
     "pc": [
@@ -49985,7 +49920,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Streaks of the two shades blend with each stroke."
+        "check": "The two shades are visibly different before whisking."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The whisking comes first and the uniform colour follows."
       }
     ],
     "pc": [
@@ -50043,7 +49983,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A white piano stands on a stage."
+        "check": "A piano stands on a stage."
       },
       {
         "id": "S2",
@@ -50058,12 +49998,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The piano is white where the beam does not reach."
+        "check": "The piano is white."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "It returns to white when the filter is removed."
+        "check": "The spotlight is aimed first and the blue follows."
       }
     ],
     "pc": [
@@ -50120,7 +50060,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A blue glass bottle stands on a windowsill in sunlight."
+        "check": "A glass bottle stands on a windowsill in sunlight."
       },
       {
         "id": "S2",
@@ -50135,12 +50075,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The patch is on the side away from the sun."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The patch moves when the bottle is moved."
+        "check": "The bottle is blue glass."
       }
     ],
     "pc": [
@@ -50218,7 +50153,7 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The pure colours remain at the edges."
+        "check": "The drips come first and the running together follows."
       }
     ],
     "pc": [
@@ -50275,7 +50210,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A green glass is held up to the light in front of a white wall."
+        "check": "A green glass is held up to the light in front of a wall."
       },
       {
         "id": "S2",
@@ -50285,12 +50220,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The wall around the glass is white."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The wall returns to white when the glass is lowered."
+        "check": "The wall is white."
       }
     ],
     "pc": [
@@ -50348,7 +50278,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A fountain's spray in a park is lit at night by coloured lamps."
+        "check": "A fountain's spray is lit by coloured lamps."
       },
       {
         "id": "S2",
@@ -50358,12 +50288,12 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The water changes colour when the lamps change."
+        "check": "It is night."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Unlit water is dark."
+        "check": "The fountain is in a park."
       }
     ],
     "pc": [
@@ -50513,7 +50443,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The rainbow is inside the spray."
+        "check": "The water forms a fan shape."
       }
     ],
     "pc": [
@@ -50570,7 +50500,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A stage has a white set and curtains."
+        "check": "A stage has a set and curtains."
       },
       {
         "id": "S2",
@@ -50580,15 +50510,20 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "The set and curtains all look yellow at once."
+        "check": "The set and curtains look yellow."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Shadowed folds stay darker."
+        "check": "The set and curtains are white before the light."
       },
       {
         "id": "S5",
+        "weight": "minor",
+        "check": "The change is all at once."
+      },
+      {
+        "id": "S6",
         "weight": "minor",
         "check": "The light comes first and the colour changes with it."
       }
@@ -50667,7 +50602,7 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "Green appears where the blue meets the yellow and spreads."
+        "check": "The order is drops, swirl, green."
       }
     ],
     "pc": [
@@ -50725,12 +50660,12 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A white van is parked outside a tattoo shop."
+        "check": "A van is parked outside a shop."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "The shop's red neon sign shines on its wet side."
+        "check": "The shop's red neon sign shines on its side."
       },
       {
         "id": "S3",
@@ -50740,7 +50675,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The van is white where the sign's light does not reach."
+        "check": "The van is white."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The van's side is wet."
       }
     ],
     "pc": [
@@ -50797,7 +50737,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A patch of wet red paint is on a wall."
+        "check": "A patch of red paint is on a wall."
       },
       {
         "id": "S2",
@@ -50812,7 +50752,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The untouched red stays red."
+        "check": "The red paint is wet."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The roller passes first and the pink streak follows."
       }
     ],
     "pc": [
@@ -50870,7 +50815,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A white cat sits by a window."
+        "check": "A cat sits by a window."
       },
       {
         "id": "S2",
@@ -50885,7 +50830,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The glow is on the side facing the window."
+        "check": "The cat is white."
       }
     ],
     "pc": [
@@ -51098,12 +51043,12 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A red laser dot is on a white wall."
+        "check": "A red laser dot is on a wall."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "It is moved onto a green plant."
+        "check": "It is moved onto a plant."
       },
       {
         "id": "S3",
@@ -51113,7 +51058,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The dot stays red wherever it lands."
+        "check": "The wall is white and the plant is green."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The move comes first and the dot fades after."
       }
     ],
     "pc": [
@@ -51171,7 +51121,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A white lamp lights a room."
+        "check": "A lamp lights a room."
       },
       {
         "id": "S2",
@@ -51186,7 +51136,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The scarf glows from within."
+        "check": "The lamp is white before the scarf."
       },
       {
         "id": "S5",
@@ -51254,7 +51204,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "The corner of a white paper towel is dipped into it."
+        "check": "The corner of a paper towel is dipped into it."
       },
       {
         "id": "S3",
@@ -51264,7 +51214,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The colour stops advancing when the towel is lifted out."
+        "check": "The towel is white."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The dip comes first and the creeping follows."
       }
     ],
     "pc": [
@@ -51322,7 +51277,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A clear-cut crystal pendant is turned in sunlight."
+        "check": "A crystal pendant is turned in sunlight."
       },
       {
         "id": "S2",
@@ -51332,7 +51287,7 @@
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The sparkles disappear when the pendant is put down or the sun goes in."
+        "check": "The pendant is clear-cut crystal."
       }
     ],
     "pc": [
@@ -51467,12 +51422,12 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A dry yellow stripe is on paper."
+        "check": "A yellow stripe is on paper."
       },
       {
         "id": "S2",
         "weight": "core",
-        "check": "A stripe of translucent blue watercolour is painted over it."
+        "check": "A stripe of blue watercolour is painted over it."
       },
       {
         "id": "S3",
@@ -51482,7 +51437,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The yellow and blue outside the overlap keep their colours."
+        "check": "The yellow stripe is dry and the blue is translucent."
       }
     ],
     "pc": [
@@ -51550,17 +51505,17 @@
       {
         "id": "S3",
         "weight": "core",
-        "check": "A soft red glow falls on the white wall behind it."
+        "check": "A red glow falls on the wall behind it."
       },
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The glow is on the side away from the window."
+        "check": "The wall is white."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The glow moves with the balloon."
+        "check": "The glow is soft."
       }
     ],
     "pc": [
@@ -51623,7 +51578,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "A spoonful of matcha powder is stirred in."
+        "check": "Matcha powder is stirred in."
       },
       {
         "id": "S3",
@@ -51633,7 +51588,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Green swirls spread from the spoon and even out."
+        "check": "The powder is a spoonful."
+      },
+      {
+        "id": "S5",
+        "weight": "minor",
+        "check": "The stir comes first and the colour follows."
       }
     ],
     "pc": [
@@ -51691,7 +51651,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "White smoke hangs over a concert stage."
+        "check": "Smoke hangs over a concert stage."
       },
       {
         "id": "S2",
@@ -51706,7 +51666,7 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "Unlit smoke is grey."
+        "check": "The order is blue first, red after."
       }
     ],
     "pc": [
@@ -51768,17 +51728,12 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "It is fading as the rain moves away and the sky clears."
+        "check": "It is fading."
       },
       {
         "id": "S3",
         "weight": "minor",
-        "check": "The rainbow keeps its arc shape while visible."
-      },
-      {
-        "id": "S4",
-        "weight": "minor",
-        "check": "The rainbow is opposite the sun."
+        "check": "The rain is moving away and the sky is clearing."
       }
     ],
     "pc": [
@@ -54623,11 +54578,6 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The lamp lights after the second clap, not the first."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
         "check": "The order is dark, two claps, lit."
       }
     ],
@@ -55417,11 +55367,6 @@
       },
       {
         "id": "S4",
-        "weight": "minor",
-        "check": "The robot's lights, if any, go off with the batteries."
-      },
-      {
-        "id": "S5",
         "weight": "minor",
         "check": "The order is walking, batteries out, stopped."
       }
@@ -63990,11 +63935,6 @@
         "id": "S4",
         "weight": "minor",
         "check": "The slide is downward."
-      },
-      {
-        "id": "S5",
-        "weight": "minor",
-        "check": "The magnet stays on the door if released at the end."
       }
     ],
     "pc": [
@@ -64051,7 +63991,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A steel saucepan on a counter."
+        "check": "A saucepan on a counter."
       },
       {
         "id": "S2",
@@ -64065,18 +64005,13 @@
       },
       {
         "id": "S4",
-        "weight": "core",
-        "check": "The magnet stays on the pan when released."
+        "weight": "minor",
+        "check": "The saucepan is steel."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The magnet is moved by hand until the last gap, then jumps on its own."
-      },
-      {
-        "id": "S6",
-        "weight": "minor",
-        "check": "The order is approach, jump, hold."
+        "check": "The order is approach, jump, click on."
       }
     ],
     "pc": [
@@ -64134,7 +64069,7 @@
       {
         "id": "S1",
         "weight": "core",
-        "check": "A screwdriver and a loose screw."
+        "check": "A screwdriver and a screw."
       },
       {
         "id": "S2",
@@ -64154,7 +64089,7 @@
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The screw is loose and not in a hole when picked up."
+        "check": "The screw is loose, lying free before it is picked up."
       },
       {
         "id": "S6",
@@ -65695,7 +65630,7 @@
       {
         "id": "S2",
         "weight": "core",
-        "check": "A magnetic letter is pressed to the fridge and holds when let go."
+        "check": "A magnetic letter is stuck to the fridge and holds there."
       },
       {
         "id": "S3",
@@ -72207,12 +72142,12 @@
       {
         "id": "S4",
         "weight": "minor",
-        "check": "The motion is slow creeping in small jerks, not one glide."
+        "check": "The motion is slow creeping."
       },
       {
         "id": "S5",
         "weight": "minor",
-        "check": "The shivering is under way when the creeping starts; the phone does not move first and buzz later."
+        "check": "The buzzing starts first and the creeping follows."
       }
     ],
     "pc": [

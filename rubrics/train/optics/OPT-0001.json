@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A wooden puppet on strings hangs in a window with sunlight coming through."
+      "check": "A puppet on strings hangs in a window."
     },
     {
       "id": "S2",
@@ -25,12 +25,12 @@
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The strings and their movement are visible."
+      "check": "The window is sunny."
     },
     {
       "id": "S6",
       "weight": "minor",
-      "check": "The shadow shows a recognisable puppet outline with head, body and arms."
+      "check": "The puppet is wooden."
     }
   ],
   "pc": [

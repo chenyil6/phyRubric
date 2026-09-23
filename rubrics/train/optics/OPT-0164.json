@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A lighter is struck in a dark garage."
+      "check": "A lighter is struck in a garage."
     },
     {
       "id": "S2",
@@ -15,17 +15,17 @@
     {
       "id": "S3",
       "weight": "core",
-      "check": "The small flame lights the nearby tools and bench."
+      "check": "The flame lights the nearby tools and bench."
     },
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Only things near the flame are visible."
+      "check": "The garage is dark."
     },
     {
       "id": "S5",
       "weight": "minor",
-      "check": "The light flickers."
+      "check": "The flame is small."
     }
   ],
   "pc": [

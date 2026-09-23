@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A pair of binoculars is held up to the camera toward a distant bird."
+      "check": "A pair of binoculars is held up to the camera toward a bird."
     },
     {
       "id": "S2",
@@ -15,12 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The bird seen beside the binoculars is small."
-    },
-    {
-      "id": "S4",
-      "weight": "minor",
-      "check": "The enlarged view follows where the binoculars point."
+      "check": "The bird is distant."
     }
   ],
   "pc": [

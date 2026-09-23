@@ -26,13 +26,20 @@ image-quality language. Write with `json.dumps(obj, indent=2, ensure_ascii=False
 - One item per visible fact the caption requires: the objects, the action, the stated outcome.
   Nothing the caption does not say. Nothing about physics or quality; SA never asks "plausibly".
 - `core` = facts without which the clip is not this caption (the objects, the action, the outcome).
-  `minor` = qualifiers the caption states (once, slowly, a single hit, sunny, wooden) and the
-  ordering item.
+  `minor` = qualifiers the caption states (once, slowly, a single hit, sunny, wooden), stated counts
+  (two lamps, a row of cars), and the ordering item. A minor is never a physics expectation: it does
+  not restate any PC `expect` ("the shadow lies away from the sun", "the reflection is mirrored",
+  "the tint is confined to the beam"), is never hypothetical ("would dim if..."), and never depends
+  on an event the caption does not include ("vanishes when the light is switched off" for a caption
+  with no switching off). If the caption offers no qualifier, pull one out of a combined core item
+  (a "clear round bowl" gives core "bowl" + minor "round and clear") rather than inventing one.
+  build.py warns on word overlap with a PC expect and on would / if / when-X-not-in-caption.
 - Order: core items first, in the order the caption states them; then minor qualifiers; the ordering
   item last. When the caption names several sub-actions, each is its own item plus one item asking
   whether they happen in the caption's order ("The strike comes first and the jump follows").
-- 4-6 items. At least two core and one minor (build.py enforces). Every item must be decidable on any
-  clip: SA is never not_shown.
+- 3-6 items, following the caption: a two-fact caption with one qualifier is 3 items, a four-sub-action
+  caption is 4 core + minor + ordering = 6. At least two core and one minor (build.py enforces). Every item
+  must be decidable on any clip: SA is never not_shown.
 - A stated outcome ("the light comes on", "the grains jump") is an SA item. Whether what is shown is
   physically possible is PC's job; both can fail on one clip.
 
@@ -103,7 +110,8 @@ physics), what is deliberately not judged, or how the judge must read an ambigui
 ## Checklist before you finish an id
 
 - caption is a verbatim copy; file name equals id; ids S1..Sn, P1..Pn sequential.
-- SA: >=2 core, >=1 minor, ordering item last if the caption has several sub-actions, nothing the
+- SA: >=2 core, >=1 minor, no minor that restates a PC expect or hinges on would / if / an unstated event,
+  ordering item last if the caption has several sub-actions, nothing the
   caption did not say.
 - PC: declared violation_types covered; unconditional core + major + minor + fatal; fail clauses are
   concrete, "or"-joined, no magnitude, no unseen cause, no vague words; order core -> major -> fatal -> minor.

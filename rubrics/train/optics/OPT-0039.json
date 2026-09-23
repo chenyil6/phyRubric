@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A horse trots across a sunlit paddock."
+      "check": "A horse trots across a paddock."
     },
     {
       "id": "S2",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The shadow stays attached at the hooves."
+      "check": "The paddock is sunlit."
     }
   ],
   "pc": [

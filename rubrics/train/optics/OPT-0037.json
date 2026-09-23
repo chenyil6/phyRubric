@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "Each shadow points away from one lamp."
+      "check": "There are exactly two lamps and two shadows."
     }
   ],
   "pc": [

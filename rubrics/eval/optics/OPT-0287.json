@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A moth flutters through the beam of a projector in a dark hall."
+      "check": "A moth flutters through the beam of a projector."
     },
     {
       "id": "S2",
@@ -15,7 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "Its shadow appears on the screen while it is in the beam."
+      "check": "The hall is dark."
     }
   ],
   "pc": [

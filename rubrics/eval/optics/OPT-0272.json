@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "Each hanging drop shows a tiny upside-down image of the garden behind it."
+      "check": "Each hanging drop shows an image of the garden behind it."
     },
     {
       "id": "S3",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The image swells with the drop."
+      "check": "The image is tiny and upside down."
     }
   ],
   "pc": [

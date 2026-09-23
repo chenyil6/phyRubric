@@ -5,7 +5,7 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A bird hops across a lawn outside a clear window."
+      "check": "A bird hops across a lawn outside a window."
     },
     {
       "id": "S2",
@@ -15,7 +15,7 @@
     {
       "id": "S3",
       "weight": "minor",
-      "check": "The bird is fully visible and undistorted through the pane."
+      "check": "The window is clear."
     }
   ],
   "pc": [

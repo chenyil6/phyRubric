@@ -10,7 +10,7 @@
     {
       "id": "S2",
       "weight": "core",
-      "check": "Its reflection crosses the puddle upside down."
+      "check": "Its reflection crosses the puddle."
     },
     {
       "id": "S3",
@@ -20,7 +20,7 @@
     {
       "id": "S4",
       "weight": "minor",
-      "check": "The reflection appears only within the puddle."
+      "check": "The reflection is upside down."
     }
   ],
   "pc": [
