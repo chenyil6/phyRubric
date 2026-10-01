@@ -70,7 +70,14 @@
       "fail": "The snowball vanishes at a stroke while still large; or a second snowball appears on the glass; or the snowball passes through the glass; or the streak appears with no ball sliding down it."
     },
     {
-      "id": "P6",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Everything in view, named in the caption or not, keeps its number, identity and shape unless something visible acts on it, and nothing passes through anything else.",
+      "fail": "An object that nothing visible acts on appears from nothing; or vanishes while still in frame and not occluded; or duplicates or merges with another; or turns into a different object or a different shape between frames; or any object passes through another. Changes brought about by the caption's event or by a visible interaction, objects leaving the frame, and occlusion are not failures.",
+      "id": "P6"
+    },
+    {
+      "id": "P7",
       "severity": "minor",
       "type": "attribute_drift",
       "expect": "The window's frame, the view through the glass and the surroundings stay the same.",

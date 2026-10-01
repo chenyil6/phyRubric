@@ -60,7 +60,14 @@
       "fail": "The dog duplicates or vanishes; or a second shadow appears under one sun; or the shadow becomes a solid object; or the dog passes through a fence."
     },
     {
-      "id": "P6",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Everything in view, named in the caption or not, keeps its number, identity and shape unless something visible acts on it, and nothing passes through anything else.",
+      "fail": "An object that nothing visible acts on appears from nothing; or vanishes while still in frame and not occluded; or duplicates or merges with another; or turns into a different object or a different shape between frames; or any object passes through another. Changes brought about by the caption's event or by a visible interaction, objects leaving the frame, and occlusion are not failures.",
+      "id": "P6"
+    },
+    {
+      "id": "P7",
       "severity": "minor",
       "type": "attribute_drift",
       "expect": "The dog's coat and the lawn stay the same, and the shadow stays dark rather than coloured.",

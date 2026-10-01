@@ -5,30 +5,25 @@
     {
       "id": "S1",
       "weight": "core",
-      "check": "A match is struck against the side of its box."
+      "check": "A match is struck against its box."
     },
     {
       "id": "S2",
       "weight": "core",
-      "check": "A flame appears at the match head."
+      "check": "The flame flares up."
     },
     {
       "id": "S3",
       "weight": "core",
-      "check": "The flame flares up."
-    },
-    {
-      "id": "S4",
-      "weight": "core",
       "check": "The flame settles to a steady burn."
     },
     {
-      "id": "S5",
+      "id": "S4",
       "weight": "minor",
-      "check": "The matchstick blackens behind the flame."
+      "check": "The strike is against the side of the box."
     },
     {
-      "id": "S6",
+      "id": "S5",
       "weight": "minor",
       "check": "The order is strike, flare, steady burn."
     }
@@ -70,7 +65,14 @@
       "fail": "A second flame appears on the stick; or the match vanishes while still long; or the flame detaches from the match and floats; or the box changes into another object."
     },
     {
-      "id": "P6",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Everything in view, named in the caption or not, keeps its number, identity and shape unless something visible acts on it, and nothing passes through anything else.",
+      "fail": "An object that nothing visible acts on appears from nothing; or vanishes while still in frame and not occluded; or duplicates or merges with another; or turns into a different object or a different shape between frames; or any object passes through another. Changes brought about by the caption's event or by a visible interaction, objects leaving the frame, and occlusion are not failures.",
+      "id": "P6"
+    },
+    {
+      "id": "P7",
       "severity": "minor",
       "type": "attribute_drift",
       "expect": "The box's label, the hand and the background stay the same.",

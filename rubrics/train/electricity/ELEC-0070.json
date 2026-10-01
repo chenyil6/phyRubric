@@ -70,7 +70,14 @@
       "fail": "The plug passes into the wall beside the socket; or a second plug or lamp appears; or the socket switch vanishes or moves; or the lamp changes shape."
     },
     {
-      "id": "P6",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Everything in view, named in the caption or not, keeps its number, identity and shape unless something visible acts on it, and nothing passes through anything else.",
+      "fail": "An object that nothing visible acts on appears from nothing; or vanishes while still in frame and not occluded; or duplicates or merges with another; or turns into a different object or a different shape between frames; or any object passes through another. Changes brought about by the caption's event or by a visible interaction, objects leaving the frame, and occlusion are not failures.",
+      "id": "P6"
+    },
+    {
+      "id": "P7",
       "severity": "minor",
       "type": "attribute_drift",
       "expect": "The lamp's shade colour, the wall and the socket design stay the same apart from the light.",

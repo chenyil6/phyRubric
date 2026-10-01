@@ -77,7 +77,14 @@
       "fail": "The bolt continues below the tree as a lit line under the ground; or the tree becomes transparent with the bolt seen through it; or the trunk melts or flows; or the ground splits open and swallows the tree."
     },
     {
-      "id": "P7",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Everything in view, named in the caption or not, keeps its number, identity and shape unless something visible acts on it, and nothing passes through anything else.",
+      "fail": "An object that nothing visible acts on appears from nothing; or vanishes while still in frame and not occluded; or duplicates or merges with another; or turns into a different object or a different shape between frames; or any object passes through another. Changes brought about by the caption's event or by a visible interaction, objects leaving the frame, and occlusion are not failures.",
+      "id": "P7"
+    },
+    {
+      "id": "P8",
       "severity": "minor",
       "type": "attribute_drift",
       "expect": "The tree's foliage colour, the field and the sky keep their colours apart from the flash.",

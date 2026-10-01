@@ -70,7 +70,14 @@
       "fail": "A second comb or stream appears; or the water vanishes before reaching the basin; or the comb passes into the tap; or the tap changes shape."
     },
     {
-      "id": "P6",
+      "severity": "fatal",
+      "type": "permanence_count",
+      "expect": "Everything in view, named in the caption or not, keeps its number, identity and shape unless something visible acts on it, and nothing passes through anything else.",
+      "fail": "An object that nothing visible acts on appears from nothing; or vanishes while still in frame and not occluded; or duplicates or merges with another; or turns into a different object or a different shape between frames; or any object passes through another. Changes brought about by the caption's event or by a visible interaction, objects leaving the frame, and occlusion are not failures.",
+      "id": "P6"
+    },
+    {
+      "id": "P7",
       "severity": "minor",
       "type": "attribute_drift",
       "expect": "The comb's colour, the scarf and the basin stay the same.",

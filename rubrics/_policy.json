@@ -9,10 +9,19 @@
     "pc.type": "One of the ten violation_types in data/schema.json (permanence_count, shape_identity, solidity, causeless_motion, gravity_direction, trajectory_momentum, process_direction, missing_consequence, material_response, attribute_drift). It names the axis a FAIL on this item counts toward. Every violation_type declared on the data record should be covered by at least one PC item; build.py warns when it is not.",
     "note": "Optional. Author's remarks on edge cases, kept-person justification, or a caption ambiguity the judge must resolve a particular way."
   },
+  "universal_pc_item": {
+    "severity": "fatal",
+    "type": "permanence_count",
+    "expect": "Everything in view, named in the caption or not, keeps its number, identity and shape unless something visible acts on it, and nothing passes through anything else.",
+    "fail": "An object that nothing visible acts on appears from nothing; or vanishes while still in frame and not occluded; or duplicates or merges with another; or turns into a different object or a different shape between frames; or any object passes through another. Changes brought about by the caption's event or by a visible interaction, objects leaving the frame, and occlusion are not failures.",
+    "note": "Scene-wide L1 item present in every rubric, inserted right after the caption-specific fatal item and before the minor item (rubrics/add_universal_item.py). The caption-specific fatal item names the scene's objects; this one covers everything else in view. Scored like any fatal item (cap 1). Its stored type is permanence_count; for the violation-axis report, map the matched fail clause: appears/vanishes/duplicates/merges -> permanence_count, different object or shape -> shape_identity, passes through -> solidity. Added 2026-10-01 after the uncovered audit (teacher/review/train_blind_sonnet_distribution.md, section 11)."
+  },
   "labelling_instructions": [
     "Judge each item independently: pass / fail / not_shown.",
     "PC items are decided in three steps. (1) Is the situation the item refers to in the clip at all? Use expect to find the moment, region or event; if the precondition never happens, or none of the moments or regions the item refers to ever appear, the item is not_shown. not_shown means the situation is absent; it does not mean the correct behaviour failed to happen, and it does not mean uncertainty. (2) The situation is present: if any event listed in fail is seen, the item is fail, and the matching clause is named. The fail text is the only ground for a fail. (3) Otherwise pass, even if the correct behaviour is hard to confirm.",
     "Something that looks physically wrong but is covered by no fail clause does not fail any item. Record it separately (the teacher's `uncovered` list; a reviewer's margin note) so the rubric can be extended; the clip is then re-judged under the revised rubric. This is how rubric coverage is measured and improved, not by judging outside the rubric.",
+    "Before writing anything into `uncovered`, go through the fail clauses of every PC item once more. If a clause describes what you saw, that item is fail (with the clause as matched_fail) and the observation does not go into `uncovered`. `uncovered` is only for things no clause names.",
+    "End state present from the first frame: when the effect the caption describes (the lamp lit, the flames burning, the water already coloured, the shadow already there) is on screen from frame 0 and the action that should cause it never happens in the clip, the central event is absent. The SA item for the trigger fails; PC items whose expect is tied to the trigger moment are not_shown. Do not read a \"before the cause\" fail clause as covering this case; those clauses are for clips in which the cause does occur, later than the effect.",
     "PC is about the physics of WHAT YOU ACTUALLY SEE, not about what the caption asked for. If the video depicts something else entirely, that costs SA points, not PC points.",
     "not_shown means the item's precondition never occurs in the clip, or the moment or region it refers to is not visible. not_shown never raises and never lowers the score. SA items are never not_shown.",
     "An unseen cause is not a violation. Heat sources, the electrical supply, sound, wind, a puff of breath and the hand that let go are routinely invisible in plausible footage. Judge the visible effect, not the invisible cause.",
@@ -38,7 +47,12 @@
     "1": "no discernible relation to the caption"
   },
   "pc_scoring": {
-    "caps": {"fatal": 1, "core": 2, "major": 3, "minor": 4},
+    "caps": {
+      "fatal": 1,
+      "core": 2,
+      "major": 3,
+      "minor": 4
+    },
     "rule": "If nothing fails, PC = 5. Otherwise take the cap of the most severe failed item, then subtract 1 for each additional failed item of severity major or worse. Floor at 1. not_shown items are ignored.",
     "severity_meaning": {
       "fatal": "L1, core object principles: the situation is impossible as a whole. Matter through matter, objects appearing from nothing, vanishing, teleporting, splitting or merging, rigid things morphing or melting, gravity in the wrong direction.",
