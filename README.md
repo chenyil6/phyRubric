@@ -7,8 +7,8 @@ For each caption, PhyRubric constructs a caption-specific rubric *before any vid
 The framework is instantiated as **PhyRubric-Bench**, 245 captions spanning 34 categories across five physical domains (Mechanics, Heat, Optics, Electricity, Acoustics) with 2,433 labelled clips from 10 video generators, and scaled up to **PhyRubric-Train**, 947 captions with 3,788 labelled clips from 4 generators, on which we fine-tune the open-source **PhyRubric-Judge** (Qwen3-VL-8B-Instruct). Given only the caption and the clip, the judge outputs the SA score, whether the clip's physics can be assessed at all (`pc_assessable`, i.e. the central event actually happens), the PC score, and a timestamped reason.
 
 - Paper: *(link)*
-- Videos: [PhyRubric-Bench](https://huggingface.co/datasets/HF_USER/PhyRubric-Bench) (eval) · [PhyRubric-Train](https://huggingface.co/datasets/HF_USER/PhyRubric-Train) (train)
-- Judge weights: [PhyRubric-Judge](https://huggingface.co/HF_USER/PhyRubric-Judge) (LoRA adapter on Qwen3-VL-8B-Instruct)
+- Videos: [PhyRubric-Bench](https://huggingface.co/datasets/kittyhy/PhyRubric-Bench) (eval) · [PhyRubric-Train](https://huggingface.co/datasets/kittyhy/PhyRubric-Train) (train)
+- Judge weights: [PhyRubric-Judge](https://huggingface.co/kittyhy/PhyRubric-Judge) (LoRA adapter on Qwen3-VL-8B-Instruct)
 
 ## Environment
 
@@ -22,8 +22,8 @@ The framework is instantiated as **PhyRubric-Bench**, 245 captions spanning 34 c
 ```bash
 git clone https://github.com/chenyil6/phyRubric && cd phyRubric
 pip install ms-swift==4.5.3 decord qwen-vl-utils huggingface_hub
-huggingface-cli download HF_USER/PhyRubric-Bench --repo-type dataset --local-dir PhyRubric-Bench   # 2,433 eval clips, ~3 GB
-huggingface-cli download HF_USER/PhyRubric-Train --repo-type dataset --local-dir PhyRubric-Train   # 3,788 train clips, ~3 GB
+huggingface-cli download kittyhy/PhyRubric-Bench --repo-type dataset --local-dir PhyRubric-Bench   # 2,433 eval clips, ~3 GB
+huggingface-cli download kittyhy/PhyRubric-Train --repo-type dataset --local-dir PhyRubric-Train   # 3,788 train clips, ~3 GB
 ```
 
 All video paths in the repository are relative to its root (`./PhyRubric-Bench/<generator>/eval/<ID>.mp4`), so nothing else needs to be configured. Two optional checks after the download:
@@ -40,7 +40,7 @@ Every experiment is one script in `scripts/`; settings are passed as environment
 ### Evaluate the released judge on PhyRubric-Bench
 
 ```bash
-huggingface-cli download HF_USER/PhyRubric-Judge --local-dir models/PhyRubric-Judge
+huggingface-cli download kittyhy/PhyRubric-Judge --local-dir models/PhyRubric-Judge
 CKPT=models/PhyRubric-Judge RUN=judge bash scripts/infer.sh
 ```
 
