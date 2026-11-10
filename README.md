@@ -8,6 +8,7 @@ The framework is instantiated as **PhyRubric-Bench**, 245 captions spanning 34 c
 
 - Paper: *(link)*
 - Videos: [PhyRubric-Bench](https://huggingface.co/datasets/HF_USER/PhyRubric-Bench) (eval) · [PhyRubric-Train](https://huggingface.co/datasets/HF_USER/PhyRubric-Train) (train)
+- Judge weights: [PhyRubric-Judge](https://huggingface.co/HF_USER/PhyRubric-Judge) (LoRA adapter on Qwen3-VL-8B-Instruct, 175 MB)
 
 ## Environment
 
@@ -31,7 +32,16 @@ All video paths in the repository are relative to its root (`./PhyRubric-Bench/<
 python rubrics/build.py check              # validates the 1,192 rubrics
 python annotations/scoring.py --check      # recomputes every stored SA / PC from the item statuses
 MODEL=Qwen/Qwen3-VL-8B-Instruct OUT=runs/sft bash scripts/train_sft.sh          # train the judge
-CKPT=runs/sft/<run>/checkpoint-900 RUN=judge bash scripts/infer.sh             # score the eval split
+CKPT=runs/sft/<run>/checkpoint-900 RUN=judge bash scripts/infer.sh             # score the eval split with it
+```
+
+### Pretrained judge
+
+The released PhyRubric-Judge is a LoRA adapter; the base model `Qwen/Qwen3-VL-8B-Instruct` is downloaded by the inference engine.
+
+```bash
+huggingface-cli download HF_USER/PhyRubric-Judge --local-dir models/PhyRubric-Judge
+CKPT=models/PhyRubric-Judge RUN=judge bash scripts/infer.sh      # scores PhyRubric-Bench and prints the metrics
 ```
 
 ## Repository layout
