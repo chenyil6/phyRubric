@@ -8,7 +8,7 @@ The framework is instantiated as **PhyRubric-Bench**, 245 captions spanning 34 c
 
 - Paper: *(link)*
 - Videos: [PhyRubric-Bench](https://huggingface.co/datasets/HF_USER/PhyRubric-Bench) (eval) · [PhyRubric-Train](https://huggingface.co/datasets/HF_USER/PhyRubric-Train) (train)
-- Judge weights: [PhyRubric-Judge](https://huggingface.co/HF_USER/PhyRubric-Judge) (LoRA adapter on Qwen3-VL-8B-Instruct, 175 MB)
+- Judge weights: [PhyRubric-Judge](https://huggingface.co/HF_USER/PhyRubric-Judge) (LoRA adapter on Qwen3-VL-8B-Instruct)
 
 ## Environment
 
