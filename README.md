@@ -21,9 +21,9 @@ The framework is instantiated as **PhyRubric-Bench**, 245 captions spanning 34 c
 
 ```bash
 git clone https://github.com/chenyil6/phyRubric && cd phyRubric
-pip install ms-swift==4.5.3 decord qwen-vl-utils huggingface_hub
-huggingface-cli download kittyhy/PhyRubric-Bench --repo-type dataset --local-dir PhyRubric-Bench   # 2,433 eval clips, ~3 GB
-huggingface-cli download kittyhy/PhyRubric-Train --repo-type dataset --local-dir PhyRubric-Train   # 3,788 train clips, ~3 GB
+pip install ms-swift==4.5.3 decord qwen-vl-utils "huggingface_hub[cli]"
+hf download kittyhy/PhyRubric-Bench --repo-type dataset --local-dir PhyRubric-Bench   # 2,433 eval clips, ~3 GB
+hf download kittyhy/PhyRubric-Train --repo-type dataset --local-dir PhyRubric-Train   # 3,788 train clips, ~3 GB
 ```
 
 All video paths in the repository are relative to its root (`./PhyRubric-Bench/<generator>/eval/<ID>.mp4`), so nothing else needs to be configured. Two optional checks after the download:
@@ -40,7 +40,7 @@ Every experiment is one script in `scripts/`; settings are passed as environment
 ### Evaluate the released judge on PhyRubric-Bench
 
 ```bash
-huggingface-cli download kittyhy/PhyRubric-Judge --local-dir models/PhyRubric-Judge
+hf download kittyhy/PhyRubric-Judge --local-dir models/PhyRubric-Judge
 CKPT=models/PhyRubric-Judge RUN=judge bash scripts/infer.sh
 ```
 
