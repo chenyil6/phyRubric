@@ -26,23 +26,64 @@ huggingface-cli download HF_USER/PhyRubric-Bench --repo-type dataset --local-dir
 huggingface-cli download HF_USER/PhyRubric-Train --repo-type dataset --local-dir PhyRubric-Train   # 3,788 train clips, ~3 GB
 ```
 
-All video paths in the repository are relative to its root (`./PhyRubric-Bench/<generator>/eval/<ID>.mp4`), so nothing else needs to be configured.
+All video paths in the repository are relative to its root (`./PhyRubric-Bench/<generator>/eval/<ID>.mp4`), so nothing else needs to be configured. Two optional checks after the download:
 
 ```bash
 python rubrics/build.py check              # validates the 1,192 rubrics
 python annotations/scoring.py --check      # recomputes every stored SA / PC from the item statuses
-MODEL=Qwen/Qwen3-VL-8B-Instruct OUT=runs/sft bash scripts/train_sft.sh          # train the judge
-CKPT=runs/sft/<run>/checkpoint-900 RUN=judge bash scripts/infer.sh             # score the eval split with it
 ```
 
-### Pretrained judge
+## Usage
 
-The released PhyRubric-Judge is a LoRA adapter; the base model `Qwen/Qwen3-VL-8B-Instruct` is downloaded by the inference engine.
+Every experiment is one script in `scripts/`; settings are passed as environment variables (the full list is in each script's header). Checkpoints are looked up under `$PJ_MODELS` (default `models/`), outputs are written to `$PJ_RUNS` (default `runs/`).
+
+### Evaluate the released judge on PhyRubric-Bench
 
 ```bash
 huggingface-cli download HF_USER/PhyRubric-Judge --local-dir models/PhyRubric-Judge
-CKPT=models/PhyRubric-Judge RUN=judge bash scripts/infer.sh      # scores PhyRubric-Bench and prints the metrics
+CKPT=models/PhyRubric-Judge RUN=judge bash scripts/infer.sh
 ```
+
+`infer.sh` writes one JSON line per clip to `runs/judge/eval.shard0of1.jsonl` (greedy scores, soft scores, reason) and then prints the metrics against the gold labels (Spearman, AUROC, kappa, joint pass; per generator and pooled), saved to `runs/judge/eval_metrics.json`. The base model `Qwen/Qwen3-VL-8B-Instruct` is fetched from Hugging Face automatically; set `MODEL=/path/to/Qwen3-VL-8B-Instruct` to use a local copy.
+
+To split the 2,433 clips over several GPUs, run one shard per GPU and the summary once at the end:
+
+```bash
+CKPT=models/PhyRubric-Judge RUN=judge SHARD=0 SHARDS=4 bash scripts/infer.sh    # ... SHARD=1,2,3 on the other GPUs
+RUN=judge SUMMARY=1 bash scripts/infer.sh
+```
+
+The zero-shot base model is the same command without `CKPT`:
+
+```bash
+RUN=base8b bash scripts/infer.sh
+```
+
+### Train the judge
+
+```bash
+# LoRA-SFT of Qwen3-VL-8B-Instruct on data/sft_train.jsonl: 2 epochs, lr 1e-4, rank 16, one GPU
+MODEL=Qwen/Qwen3-VL-8B-Instruct OUT=runs/sft bash scripts/train_sft.sh
+
+# evaluate the result (the last checkpoint is checkpoint-900)
+CKPT=runs/sft/<run dir>/checkpoint-900 RUN=sft bash scripts/infer.sh
+
+# optional GRPO stage on top of the SFT adapter (rewards = agreement with the gold scores; needs vLLM)
+MODEL=Qwen/Qwen3-VL-8B-Instruct START=runs/sft/<run dir>/checkpoint-900 OUT=runs/grpo bash scripts/train_grpo.sh
+```
+
+`RESUME=1` on either training script continues from the latest checkpoint in `$OUT`; `MAX_STEPS=20` makes a smoke test.
+
+### Baselines
+
+```bash
+MODEL=videophy2 bash scripts/baseline_videophy.sh          # or videophy1; needs the official repo at $VIDEOPHY_CODE
+MODEL=videoscore2 bash scripts/baseline_videoscore.sh      # or videoscore1
+MODEL=Qwen/Qwen3-VL-235B-A22B-Instruct-FP8 TP=4 bash scripts/baseline_qwen235b.sh
+GCP_PROJECT=<project> MODEL=gemini-4-argon THINKING=LOW bash scripts/baseline_gemini.sh
+```
+
+The VideoPhy and VideoScore scripts expect the released checkpoints under `$PJ_MODELS` (`videocon_physics`, `videophy_2_auto`, `VideoScore-v1.1`, `VideoScore2`) and accept the same `SHARD` / `SHARDS` / `SUMMARY=1` variables as `infer.sh`. All baseline metrics are computed by `baselines/videophy_official_summary.py` with the same definitions as the judge's.
 
 ## Repository layout
 
