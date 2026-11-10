@@ -1,37 +1,31 @@
 # secrets
 .env
 
-# caches / bytecode
-.pjudge_cache/
+# python
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-# run artifacts & logs
+# videos: downloaded from Hugging Face into these two folders (each keeps only its README in git)
+PhyRubric-Bench/*
+PhyRubric-Train/*
+!PhyRubric-Bench/README.md
+!PhyRubric-Train/README.md
+*.mp4
+
+# model checkpoints, training / inference outputs, third-party rater code
+models/
 runs/
-results/
+third_party/
 *.log
 *.out
 *.err
 
-# generated videos / model weights / review pages
-gen_videos/outputs/
-gen_videos/logs/
-gen_videos/review/
-*.mp4
-models/
-
-# reference material & drafts (not for the repo)
-ref-prompts/
-ref-rubrics/
-data-zh/
-
-# editor / OS
+# editor / OS / tooling
 .vscode/
 .idea/
 .DS_Store
 .venv/
 venv/
-
-# Claude Code session state and worktrees
 .claude/
+core.*

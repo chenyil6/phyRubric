@@ -2,22 +2,21 @@
 """Validate, merge and render the rubric set.
 
     python rubrics/build.py check [--split train|eval] [--category Heat] [--ids ID ...]
-    python rubrics/build.py build                       # check everything, then write rubrics/train.json and rubrics/eval.json
     python rubrics/build.py review OUT.md [--split S] [--category C] [--ids ID ...]   # markdown for human review
 
 Layout: one JSON file per caption at rubrics/<split>/<branch>/<ID>.json, <branch> = lower-case category name
-(same as data/<split>/<branch>.json). The file name must equal the id. Fields: id, caption (verbatim copy of
+(same as captions/<split>/<branch>.json). The file name must equal the id. Fields: id, caption (verbatim copy of
 the data caption), sa, pc, note (optional). See rubrics/_policy.json for the item format and scoring rules.
 
 Checks (errors): file/dir placement, caption matches data, allowed keys only, S1../P1.. sequential ids, valid
 weight/severity/type, non-empty texts, 2-7 SA items and 4-8 PC items, band reachability (>=2 core SA, >=1 minor SA,
-unconditional core+major+minor PC, fatal or second heavy unconditional PC), no duplicate fail text.
+unconditional core+major+minor PC, fatal or second heavy unconditional PC), no duplicate fail text,
+the universal fatal item from _policy.json present once with its exact text.
 Warnings: numeric thresholds, single-event fail text, vague wording (realistic, properly, ...), SA items that judge physics,
 SA items that restate a PC expect (word overlap) or are hypothetical / conditional (would, if, when X - X not in the caption),
 a declared violation_type on the data record not covered by any PC item's type.
 
-The merged train.json / eval.json are products, not sources: records in data order with category and
-subcategory copied in from data. Do not edit them by hand.
+rubrics.build.load(split) returns {id: rubric} with the category filled in from the branch directory.
 """
 
 from __future__ import annotations
@@ -30,10 +29,11 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-DATA = ROOT.parent / "data"
-SCHEMA = json.loads((DATA / "schema.json").read_text())
-CATEGORIES = list(SCHEMA["subcategories"])
-TYPES = set(SCHEMA["violation_types"])
+DATA = ROOT.parent / "captions"
+CATEGORIES = ["Mechanics", "Heat", "Optics", "Electricity", "Acoustics"]
+TYPES = {"permanence_count", "shape_identity", "solidity", "causeless_motion", "gravity_direction",
+         "trajectory_momentum", "process_direction", "missing_consequence", "material_response", "attribute_drift"}
+UNIVERSAL = json.loads((ROOT / "_policy.json").read_text())["universal_pc_item"]
 SPLITS = ("train", "eval")
 SEVERITIES = ("fatal", "core", "major", "minor")
 WEIGHTS = ("core", "minor")
@@ -70,7 +70,7 @@ def branch(category: str) -> str:
 
 
 def load_data() -> dict[str, tuple[str, dict]]:
-    """id -> (split, record) for every caption in data/."""
+    """id -> (split, record) for every caption in captions/."""
     out: dict[str, tuple[str, dict]] = {}
     for split in SPLITS:
         for cat in CATEGORIES:
@@ -99,7 +99,7 @@ def validate(rubric: dict, path: Path, data: dict[str, tuple[str, dict]]) -> tup
     if path.stem != rid:
         errs.append(f"{tag}: file name does not match id {rid!r}")
     if rid not in data:
-        errs.append(f"{tag}: id {rid!r} not in data/")
+        errs.append(f"{tag}: id {rid!r} not in captions/")
         return errs, warns
     split, rec = data[rid]
     if path.parent.name != branch(rec["category"]) or path.parent.parent.name != split:
@@ -192,6 +192,11 @@ def validate(rubric: dict, path: Path, data: dict[str, tuple[str, dict]]) -> tup
     fails = [x.get("fail") for x in pc]
     if len(set(fails)) != len(fails):
         errs.append(f"{tag}: duplicate fail text")
+    uni = [k for k, x in enumerate(pc) if x.get("expect") == UNIVERSAL["expect"]]
+    if len(uni) != 1:
+        errs.append(f"{tag}: universal fatal item (policy universal_pc_item) {'missing' if not uni else 'present more than once'}; run rubrics/add_universal_item.py")
+    elif pc[uni[0]].get("severity") != UNIVERSAL["severity"] or pc[uni[0]].get("fail") != UNIVERSAL["fail"] or pc[uni[0]].get("type") != UNIVERSAL["type"]:
+        errs.append(f"{tag}: universal fatal item text/severity/type differs from _policy.json")
     # Presentation order (see _policy.json pc.order / sa): core -> major -> fatal -> minor; SA core before minor.
     sev = [x.get("severity") for x in pc]
     rank = {"core": 0, "major": 1, "fatal": 2, "minor": 3}
@@ -254,35 +259,19 @@ def check(split: str | None, category: str | None, ids: list[str] | None, quiet:
     return rubrics, not all_errs
 
 
-def build() -> int:
-    rubrics, ok = check(None, None, None)
-    if not ok:
-        print("not writing merged files: fix the errors first")
-        return 1
-    data = load_data()
-    by_id = {r["id"]: r for r in rubrics}
-    for split in SPLITS:
-        merged = []
-        for cat in CATEGORIES:
-            path = DATA / split / f"{branch(cat)}.json"
-            if not path.exists():
-                continue
-            for rec in json.loads(path.read_text()):
-                r = by_id.get(rec["id"])
-                if r is None:
-                    continue
-                out = {"id": r["id"], "category": rec["category"], "subcategory": rec["subcategory"], "caption": r["caption"], "sa": r["sa"], "pc": r["pc"]}
-                if r.get("note"):
-                    out["note"] = r["note"]
-                merged.append(out)
-        (ROOT / f"{split}.json").write_text(json.dumps(merged, ensure_ascii=False, indent=2) + "\n")
-        print(f"wrote {split}.json ({len(merged)} rubrics)")
-    return 0
+def load(split: str) -> dict[str, dict]:
+    """{id: rubric} for one split, read from the per-caption files; category comes from the branch directory."""
+    out = {}
+    for cat in CATEGORIES:
+        for path in sorted((ROOT / split / branch(cat)).glob("*.json")):
+            r = json.loads(path.read_text())
+            out[r["id"]] = {"id": r["id"], "category": cat, **{k: r[k] for k in ("caption", "sa", "pc", "note") if k in r}}
+    return out
 
 
 def render(rubrics: list[dict], data: dict[str, tuple[str, dict]]) -> str:
     lines = ["# Rubric review", ""]
-    lines.append(f"{len(rubrics)} rubrics. SA = caption adherence (core/minor); PC = physics (fatal/core/major/minor, each tagged with a violation type). Expectation is the hidden field from data/, shown for the reviewer only.")
+    lines.append(f"{len(rubrics)} rubrics. SA = caption adherence (core/minor); PC = physics (fatal/core/major/minor, each tagged with a violation type). Expectation is the hidden field from captions/, shown for the reviewer only.")
     lines.append("")
     order = {c: i for i, c in enumerate(CATEGORIES)}
     rubrics = sorted(rubrics, key=lambda r: (order[data[r["id"]][1]["category"]], r["id"]))
@@ -329,13 +318,10 @@ def main(argv: list[str]) -> int:
         p.add_argument("--split", choices=SPLITS)
         p.add_argument("--category", choices=CATEGORIES)
         p.add_argument("--ids", nargs="*")
-    sub.add_parser("build")
     args = ap.parse_args(argv)
     if args.cmd == "check":
         _, ok = check(args.split, args.category, args.ids)
         return 0 if ok else 1
-    if args.cmd == "build":
-        return build()
     if args.cmd == "review":
         rubrics, ok = check(args.split, args.category, args.ids, quiet=True)
         Path(args.out).write_text(render(rubrics, load_data()) + "\n")
