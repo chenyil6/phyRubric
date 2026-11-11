@@ -89,49 +89,28 @@ The VideoPhy and VideoScore scripts expect the released checkpoints under `$PJ_M
 
 ```
 phyRubric
-├── captions/                      the benchmark captions
-│   ├── train/<branch>.json        947 train captions, one file per branch (mechanics, heat, optics, electricity, acoustics)
-│   └── eval/<branch>.json         245 eval captions. Record: id, caption, category, subcategory, violation_types, expectation
-├── rubrics/                       one rubric per caption
-│   ├── train/<branch>/<ID>.json   SA items (id, weight core|minor, check) and PC items (id, severity, type, expect, fail)
-│   ├── eval/<branch>/<ID>.json
-│   ├── _policy.json               the rubric format and the scoring rule (how item statuses become SA / PC)
-│   └── build.py                   `check` validates every rubric; load(split) returns {id: rubric}
-├── annotations/                   gold labels, one file per generator
-│   ├── train/<generator>.json     3,788 clips: sa_score, pc_score, recognisable_attempt, clip_summary, uncovered,
-│   ├── eval/<generator>.json      2,433 clips  and items = [{id, status pass|fail|not_shown, evidence}]
-│   └── scoring.py                 the scoring rule in code; `--check` recomputes all stored scores from the items
-├── data/                          the labels in judge-training form (ms-swift "messages + videos" rows)
-│   ├── sft_train.jsonl            3,788 rows: system prompt, caption + <video>, target {sa_score, pc_assessable, pc_score, reason}
-│   ├── sft_val.jsonl              188 rows held out from the train captions (47 captions x 4 generators)
-│   ├── grpo_train.jsonl           the same prompts without the target, plus sa_gold / pc_gold / assess_gold for the rewards
-│   ├── grpo_val.jsonl
-│   ├── eval.jsonl                 2,433 rows: the eval split in the same form, used by every judge run
-│   └── system_prompt.txt          the judge's system prompt (the two scales in words; no rubric)
-├── judge/                         PhyRubric-Judge
-│   ├── infer.py                   runs the judge (base model or base + LoRA adapter) on data/eval.jsonl; greedy and soft scores
-│   ├── summary.py                 metrics of a run against the gold labels: Spearman, AUROC, kappa, joint pass, per generator
-│   ├── grpo_rewards.py            ms-swift reward plugin for GRPO: format, SA, PC and assessable agreement with the gold
-│   └── grpo_lora_dtype.py         ms-swift plugin that keeps LoRA weights in bf16 so a GRPO run can resume from a checkpoint
-├── baselines/                     the raters the judge is compared with
-│   ├── videophy_official.py       official VideoPhy-1 (VideoCon-Physics) and VideoPhy-2 (AutoEval) raters on the eval clips
-│   ├── videoscore_official.py     official VideoScore-v1.1 and VideoScore2 raters
-│   ├── videophy_official_summary.py   metrics of the raters above against the gold labels (same metrics as judge/summary.py)
-│   ├── qwen3vl_235b.py            zero-shot Qwen3-VL-235B-A22B-Instruct-FP8 through vLLM, same prompt and output as the judge
-│   └── gemini_judge.py            zero-shot Gemini through Vertex AI, same prompt; optional verbalised 1-5 distribution
-├── scripts/                       one shell script per experiment; settings are environment variables, see each header
-│   ├── train_sft.sh               LoRA-SFT of Qwen3-VL-8B-Instruct on data/sft_train.jsonl
-│   ├── train_grpo.sh              GRPO on top of the SFT adapter with the rewards in judge/grpo_rewards.py
-│   ├── infer.sh                   judge inference + summary (shardable over GPUs)
-│   ├── baseline_videophy.sh       VideoPhy-1 / VideoPhy-2 + metrics
-│   ├── baseline_videoscore.sh     VideoScore-v1.1 / VideoScore2 + metrics
-│   ├── baseline_qwen235b.sh       Qwen3-VL-235B + metrics
-│   └── baseline_gemini.sh         Gemini + output table
-├── PhyRubric-Bench/               the 2,433 eval videos, <generator>/eval/<ID>.mp4 (downloaded from Hugging Face)
-└── PhyRubric-Train/               the 3,788 train videos, <generator>/train/<ID>.mp4 (downloaded from Hugging Face)
+├── captions/                 captions: captions/<split>/<branch>.json
+├── rubrics/                  one rubric per caption: rubrics/<split>/<branch>/<ID>.json
+│   ├── _policy.json          rubric format and scoring rule
+│   └── build.py              `check` validates the rubrics; load(split) reads them
+├── annotations/              gold labels, one file per generator: annotations/<split>/<generator>.json
+│   └── scoring.py            SA / PC from the item statuses; `--check` verifies the stored scores
+├── data/                     judge-training rows (ms-swift format)
+│   ├── sft_train.jsonl, sft_val.jsonl      SFT
+│   ├── grpo_train.jsonl, grpo_val.jsonl    GRPO
+│   ├── eval.jsonl                          the eval split
+│   └── system_prompt.txt                   the judge's system prompt
+├── judge/                    PhyRubric-Judge
+│   ├── infer.py              inference
+│   ├── summary.py            metrics against the gold labels
+│   └── grpo_rewards.py, grpo_lora_dtype.py   ms-swift plugins for GRPO
+├── baselines/                VideoPhy-1/2, VideoScore-v1.1/2, Qwen3-VL-235B and Gemini raters, plus their metrics script
+├── scripts/                  one shell script per experiment (train_sft, train_grpo, infer, baseline_*)
+├── PhyRubric-Bench/          eval videos from Hugging Face: <generator>/eval/<ID>.mp4
+└── PhyRubric-Train/          train videos from Hugging Face: <generator>/train/<ID>.mp4
 ```
 
-Model checkpoints are read from `$PJ_MODELS` (default `models/`) and outputs are written to `$PJ_RUNS` (default `runs/`); both are ignored by git.
+Checkpoints are read from `$PJ_MODELS` (default `models/`) and outputs are written to `$PJ_RUNS` (default `runs/`); both are git-ignored.
 
 ## Citation
 
