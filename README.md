@@ -6,9 +6,9 @@ For each caption, PhyRubric constructs a caption-specific rubric *before any vid
 
 The framework is instantiated as **PhyRubric-Bench**, 245 captions spanning 34 categories across five physical domains (Mechanics, Heat, Optics, Electricity, Acoustics) with 2,433 labelled clips from 10 video generators, and scaled up to **PhyRubric-Train**, 947 captions with 3,788 labelled clips from 4 generators, on which we fine-tune the open-source **PhyRubric-Judge** (Qwen3-VL-8B-Instruct). Given only the caption and the clip, the judge outputs the SA score, whether the clip's physics can be assessed at all (`pc_assessable`, i.e. the central event actually happens), the PC score, and a timestamped reason.
 
-- Paper: *(link)*
-- Videos: [PhyRubric-Bench](https://huggingface.co/datasets/kittyhy/PhyRubric-Bench) (eval) · [PhyRubric-Train](https://huggingface.co/datasets/kittyhy/PhyRubric-Train) (train)
-- Judge weights: [PhyRubric-Judge](https://huggingface.co/kittyhy/PhyRubric-Judge) (LoRA adapter on Qwen3-VL-8B-Instruct)
+- 📄 Paper: [PhyRubric: Rubric-Grounded Diagnostic Evaluation of Physical Commonsense in Text-to-Video Generation](https://arxiv.org/abs/2611.13576)
+- 🎬 Videos: [PhyRubric-Bench](https://huggingface.co/datasets/kittyhy/PhyRubric-Bench) (eval) · [PhyRubric-Train](https://huggingface.co/datasets/kittyhy/PhyRubric-Train) (train)
+- 🤗 Judge weights: [PhyRubric-Judge](https://huggingface.co/kittyhy/PhyRubric-Judge) (LoRA adapter on Qwen3-VL-8B-Instruct)
 
 ## Environment
 
